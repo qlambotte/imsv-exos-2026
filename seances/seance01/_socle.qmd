@@ -18,19 +18,20 @@ Pour chaque lettre indiquée, dis son rôle dans l'expression entre guillements 
 
 Retourne à la théorie du cours : *Égalité et symboles : lire avant de calculer*.
 
-## Solution
-
-(a) **Inconnue** ($x = 5$). 
-(b) **Variable** (l'entrée de $f$, parcourt $\mathbb{R}$).
-(c) **Paramètre** ($m$ fixe la droite ; la variable est $x$).
-
-# Indice 2
+## Indice 2
 
 *Question à te poser.*
 
 Pour chaque lettre : cherche-t-on **sa** valeur (inconnue) ? décrit-elle **tous** les cas ou l'entrée
 d'une fonction (variable) ? ou **fixe**-t-elle un objet particulier tandis qu'une autre lettre varie
 (paramètre) ?
+## Solution
+
+(a) **Inconnue** ($x = 5$). 
+(b) **Variable** (l'entrée de $f$, parcourt $\mathbb{R}$).
+(c) **Paramètre** ($m$ fixe la droite ; la variable est $x$).
+
+
 
 ## Piège
 
@@ -64,7 +65,9 @@ s'il est **faux**). Si « ça dépend de la valeur d'une lettre » → prédicat
 
 ## Solution
 
-(a) **Proposition** (fausse). (b) **Prédicat** (dépend de $x$). (c) **Ni l'un ni l'autre** (un ordre).
+(a) **Proposition** (fausse). 
+(b) **Prédicat** (dépend de $x$). 
+(c) **Ni l'un ni l'autre** (un ordre).
 
 ## Piège
 
@@ -80,7 +83,7 @@ Relie chaque phrase (a–d) à sa traduction (1–4).
 |---|---|
 | **(a)** « −7 est un entier » | **(1)** $\mathbb{N} \subseteq \mathbb{Z}$ |
 | **(b)** « −7 est un entier **mais pas** naturel » | **(2)** $-7 \in \mathbb{Z}$ |
-| **(c)** « tout nombre naturel est un entier » | **(3)** $\forall n\in\mathbb{N},\ n\ge 0$ |
+| **(c)** « tout nombre naturel est un entier » | **(3)** $\forall\, n\in\mathbb{N},\ n\ge 0$ |
 | **(d)** « il n'existe pas d'entier naturel strictement négatif » | **(4)** $-7 \in \mathbb{Z}\setminus\mathbb{N}$ |
 :::
 
@@ -96,14 +99,14 @@ Retourne à la théorie du cours : *Ensembles : regrouper des objets*, *Formalis
 *Question à te poser.*
 
 Chaque phrase parle-t-elle d'un **élément** ($\in$) ou d'un **ensemble entier** ($\subseteq$) ?
-À quelle opération correspond « mais pas… » ? Et « il n'existe pas de… négatif », est-ce un $\forall$
+À quelle opération correspond « mais pas… » ? Et « il n'existe pas de… négatif », est-ce un $\forall\,$
 déguisé ?
 
 ## Solution
 
 **a–2**, **b–4**, **c–1**, **d–3**.
 ($-7\in\mathbb{Z}$ ; « entier mais pas naturel » = $\mathbb{Z}\setminus\mathbb{N}$ ; « tout nombre naturel est
-entier » = $\mathbb{N}\subseteq\mathbb{Z}$ ; « aucun naturel n'est $<0$ » = $\forall n\in\mathbb{N},\
+entier » = $\mathbb{N}\subseteq\mathbb{Z}$ ; « aucun naturel n'est $<0$ » = $\forall\, n\in\mathbb{N},\
 n\ge 0$.)
 
 ## Pièges
@@ -250,11 +253,11 @@ de vérité différente de l'implication.
 Pour les trois premières propositions : dire si elle est **vraie** ou **fausse**,
 puis écrire sa **négation**.
 
-(a) $\forall x\in\mathbb{R},\ x^2\ge 0$.
-(b) $\exists n\in\mathbb{N},\ n+2 = 5$.
-(c) $\forall x\in\mathbb{R},\ x^2 > 0$.
+(a) $\forall\, x\in\mathbb{R},\ x^2\ge 0$.
+(b) $\exists\, n\in\mathbb{N},\ n+2 = 5$.
+(c) $\forall\, x\in\mathbb{R},\ x^2 > 0$.
 (d) On note $\alpha(v,t)$ « le test $t$ détecte le variant $v$ ».
-Écris la **négation** de $\ \forall v,\ \exists t,\ \alpha(v,t)\ $ puis traduis-la en français.
+Écris la **négation** de $\ \forall\, v,\ \exists\, t,\ \alpha(v,t)\ $ puis traduis-la en français.
 :::
 
 ::: {.aides}
@@ -268,25 +271,25 @@ Retourne à la théorie du cours : *Formaliser l’inclusion*, *Nier une proposi
 
 *Question à te poser.*
 
-Pour nier : **échanger** $\forall$ et $\exists$, puis nier le prédicat. Négation de « $\ge$ » : « $<$ »
-; de « $=$ » : « $\ne$ » ; de « $>$ » : « $\le$ ». Pour (d) : que deviennent $\forall v$, **puis**
-$\exists t$, **puis** $\alpha$ ?
+Pour nier : **échanger** $\forall\,$ et $\exists\,$, puis nier le prédicat. Négation de « $\ge$ » : « $<$ »
+; de « $=$ » : « $\ne$ » ; de « $>$ » : « $\le$ ». Pour (d) : que deviennent $\forall\, v$, **puis**
+$\exists\, t$, **puis** $\alpha$ ?
 
 ## Solution
 
-(a) **Vraie**. Négation : $\exists x,\ x^2<0$ — **fausse**.
+(a) **Vraie**. Négation : $\exists\, x,\ x^2<0$ — **fausse**.
 
-(b) **Vraie** ($n=3$). Négation : $\forall n,\ n+2\ne 5$ — **fausse**.
+(b) **Vraie** ($n=3$). Négation : $\forall\, n,\ n+2\ne 5$ — **fausse**.
 
-(c) **Fausse** ($x=0$). Négation : $\exists x,\ x^2\le 0$ — **vraie** ($x=0$).
+(c) **Fausse** ($x=0$). Négation : $\exists\, x,\ x^2\le 0$ — **vraie** ($x=0$).
 
-(d) $\lnot(\forall v,\ \exists t,\ \alpha(v,t)) \equiv \exists v,\ \forall t,\ \lnot\alpha(v,t)$ :
+(d) $\lnot(\forall\, v,\ \exists\, t,\ \alpha(v,t)) \equiv \exists\, v,\ \forall\, t,\ \lnot\alpha(v,t)$ :
 « il existe un variant qu'**aucun** test ne détecte ».
 
 ## Pièges
 
 Nier en **gardant le même quantificateur** ; ou, en imbriqué (d), n'échanger qu'**un seul**
-quantificateur au lieu des deux (le second aussi doit basculer $\exists\to\forall$).
+quantificateur au lieu des deux (le second aussi doit basculer $\exists\,\to\forall\,$).
 
 :::
 :::
