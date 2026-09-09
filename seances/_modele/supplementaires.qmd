@@ -1,6 +1,5 @@
 ---
-title: "Exercices supplémentaires"
-subtitle: "Séance @@NN@@ · pour les rapides — facultatif, hors examen"
+title: "Exercices supplémentaires et de dépassement"
 filters:
   - ../../exercice.lua
 ---

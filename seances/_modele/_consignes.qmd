@@ -1,8 +1,5 @@
-**Notation.** $\lnot$ (non), $\land$ (et), $\lor$ (ou), $\Rightarrow$ (implique),
-$\Leftrightarrow$ (équivaut), $\forall,\exists,\in,\notin,\subseteq,\cup,\cap,\setminus,\times,
-\varnothing$.
-
 ::: {.callout-tip appearance="simple" title="À lire d'abord"}
-Cherche au brouillon **d'abord**. Ouvre les indices **dans l'ordre** (référence → question →
-étape → solution). La solution est le **dernier** recours.
+Cherche au brouillon **d'abord**. N'hésite pas à résoudre les exercices avec tes voisin.e.s. Ouvre
+les indices **dans l'ordre** (référence → question → étape → solution). La solution est le
+**dernier** recours.
 :::

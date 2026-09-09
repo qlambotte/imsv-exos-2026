@@ -1,8 +1,29 @@
 # Boîte à outils — méthodes {.unnumbered}
 
-Les méthodes institutionnalisées en fin de séance s'accumulent ici. Ce sont tes **outils d'examen**.
+Les méthodes institutionnalisées en fin de séance s'accumulent ici. Ce sont tes **outils
+d'examen**. Chaque méthode tient en **cinq cases** — jamais un paragraphe :
+
+- **Nom** — comment on l'appelle.
+- **Quand l'utiliser** — le *signal déclencheur* (« dès que tu vois… »).
+- **Étapes** — numérotées, une action par étape.
+- **Exemple minimal** — le plus petit cas qui la montre.
+- **Le piège** — la faute à ne pas refaire.
+
+::: {.callout-tip appearance="simple" title="Fabriquer une méthode toi-même"}
+Tu n'as rien à inventer : dans les corrections, l'**Indice 2** (« la question à te poser ») te
+donne les *étapes*, et le **Piège** te donne la case *piège*. Relis-les pour l'exercice concerné,
+et remplis le gabarit. La **[feuille à compléter (PDF)](../pdf/feuille-methodes.pdf)** est faite
+pour ça.
+:::
+
+Une méthode est **faite ensemble en séance** (ci-dessous, *Nier une proposition*). Pour les autres,
+seul le **signal** est visible ; les étapes, l'exemple et le piège sont **repliés** : construis
+d'abord, déplie ensuite pour te corriger.
 
 ## Nier une proposition logique {#sec-nier}
+
+**Quand l'utiliser.** Dès qu'on demande la **négation** d'un énoncé, surtout avec $\forall$,
+$\exists$, $\ge$, $=$…
 
 **But.** Passer d'une proposition à sa négation, mécaniquement, en poussant le $\lnot$ vers
 l'intérieur.
@@ -34,4 +55,64 @@ $\lnot\forall \to \exists\lnot$, puis $\lnot(P\Rightarrow Q)\equiv P\land\lnot Q
 ::: {.callout-warning collapse="true" title="Piège classique"}
 Garder le même quantificateur en niant, ou nier $>$ par $<$ (oubli de l'égalité : la négation de $>$
 est $\le$).
+:::
+
+## Traduire une phrase en langage formel {#sec-traduire}
+
+**Quand l'utiliser.** Dès qu'une phrase mêle « et / ou / si…alors / non », ou parle d'ensembles de
+nombres.
+
+::: {.callout-note collapse="true" title="Corrigé — étapes · exemple · piège"}
+**Étapes.** 1) repère le *connecteur* ou le *quantificateur* porteur ; 2) traduis chaque morceau
+(« mais » $=\land$, « négatif » $=\lnot$…) ; 3) vérifie le sens : *qui* implique *qui* ? un
+**élément** ($\in$) ou un **ensemble** ($\subseteq$) ?
+
+**Exemple.** « Le patient est malade mais son test est négatif » $=\ \varphi \land \lnot\psi$.
+
+**Piège.** Traduire « mais » autrement que par $\land$ ; inverser le sens de $\Rightarrow$ ;
+confondre $\in$ et $\subseteq$.
+:::
+
+## Décider l'appartenance à un intervalle {#sec-intervalle}
+
+**Quand l'utiliser.** « $x \in [a,b[$ ? » — toute question d'appartenance à un intervalle.
+
+::: {.callout-note collapse="true" title="Corrigé — étapes · exemple · piège"}
+**Étapes.** 1) crochet **fermé** = borne **incluse**, **ouvert** = **exclue** ; 2) une borne
+**infinie** est **toujours** ouverte ; 3) compare le nombre à chaque borne.
+
+**Exemple.** $7 \notin [3,7[$ (7 exclu) ; $-2 \in\ ]{-}\infty,\,-2]$ ($-2$ inclus).
+
+**Piège.** Confondre crochet fermé / ouvert ; croire qu'une borne infinie peut être incluse.
+:::
+
+## Réciproque, contraposée : laquelle est vraie ? {#sec-contraposee}
+
+**Quand l'utiliser.** On te donne $\varphi \Rightarrow \psi$ et on demande une implication
+« dérivée ».
+
+::: {.callout-note collapse="true" title="Corrigé — étapes · exemple · piège"}
+**Étapes.** 1) **réciproque** = on **échange** ($\psi \Rightarrow \varphi$) ; 2) **contraposée** =
+on **nie et on échange** ($\lnot\psi \Rightarrow \lnot\varphi$) ; 3) la **contraposée est
+équivalente** à l'implication ; la réciproque, non.
+
+**Exemple.** « multiple de 4 $\Rightarrow$ pair » : contraposée « impair $\Rightarrow$ non multiple
+de 4 » (vraie) ; réciproque « pair $\Rightarrow$ multiple de 4 » (fausse, $n=6$).
+
+**Piège.** Confondre réciproque et contraposée ; croire que la contraposée « peut être fausse ».
+:::
+
+## Exemple, contre-exemple ou preuve ? {#sec-preuve}
+
+**Quand l'utiliser.** On te propose un **argument** pour un énoncé « pour tout ».
+
+::: {.callout-note collapse="true" title="Corrigé — étapes · exemple · piège"}
+**Étapes.** 1) l'argument traite-t-il **un** cas ou **tous** les cas ? 2) un **exemple** n'établit
+**rien** ; 3) un **contre-exemple** (qui doit être **dans le domaine**) **réfute** ; une **preuve**
+(tous les cas) **établit**.
+
+**Exemple.** « 2 est premier et pair » réfute « tout premier est impair » ; « 3 est premier et
+impair » ne prouve rien.
+
+**Piège.** Prendre un exemple pour une preuve ; oublier qu'un seul contre-exemple suffit.
 :::

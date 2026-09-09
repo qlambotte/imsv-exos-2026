@@ -6,7 +6,7 @@ et **pas à l'examen**. Deux familles : **Renforcement** (mêmes savoir-faire qu
 
 ### Renforcement — le socle, un cran plus loin
 
-::: {.callout-caution .exo title="Exercice 9|Renforcement|2"}
+::: {.callout-caution .exo title="Exercice 9|Renforcement|2|O1"}
 **Variation d'un exercice du socle** (même savoir-faire, contexte/valeurs nouveaux)………
 :::
 
@@ -26,7 +26,7 @@ Un seul indice………
 
 ### Dépassement — un peu au-delà du programme
 
-::: {.callout-caution .exo title="Exercice 10|Dépassement|3"}
+::: {.callout-caution .exo title="Exercice 10|Dépassement|3|O2"}
 **Prolongement hors programme**………
 :::
 

@@ -38,7 +38,7 @@ Scanne ce code pour la **correction en libre-service** (coups de pouce gradués 
 
 {{< include _transfert.qmd >}}
 
-## Exercices supplémentaires
+## Exercices supplémentaires et de dépassement
 
 {{< include _supplementaires.qmd >}}
 

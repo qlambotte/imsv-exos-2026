@@ -3,6 +3,8 @@
 # fragments que le site :
 #   pdf/<seance>-enonces.pdf   → énoncés seuls (aides retirées)
 #   pdf/<seance>-complet.pdf   → énoncés + aides (coups de pouce + solutions)
+# et, si _offline.qmd existe, UN fichier HTML autonome (hors-ligne) :
+#   pdf/<seance>-offline.html  → tout le contenu + coups de pouce, sans réseau
 #
 # Usage :  ./build-pdf.sh [seance01]
 #
@@ -34,7 +36,25 @@ echo "→ version énoncés seuls"
 IMSV_ENONCES=1 quarto render "_pdf.qmd" --to typst --output "$SEANCE-enonces.pdf" >/dev/null
 
 mv -f "$SEANCE-complet.pdf" "$SEANCE-enonces.pdf" "$OUT/"
+
+# --- Version HTML « hors-ligne » : un seul fichier autonome (CSS/JS/maths embarqués) ---
+# Additif : n'affecte en rien les deux PDF ci-dessus. Ne tourne que si _offline.qmd existe.
+if [ -f "$DIR/_offline.qmd" ]; then
+  echo "→ version hors-ligne (HTML autonome)"
+  cp "$ROOT/theme.scss" .
+  # Hors-ligne : on retire l'@import Google Fonts pour zéro requête réseau ;
+  # les polices système prennent le relais. Le thème du SITE (theme.scss) n'est pas touché.
+  sed -i "/fonts\.googleapis\.com/d" theme.scss
+  mkdir -p _includes && cp "$ROOT/_includes/aides.html" _includes/
+  sed -i -e 's#\.\./\.\./theme\.scss#theme.scss#g' \
+         -e 's#\.\./\.\./exercice\.lua#exercice.lua#g' \
+         -e 's#\.\./\.\./_includes/aides\.html#_includes/aides.html#g' "_offline.qmd"
+  IMSV_ENONCES=0 quarto render "_offline.qmd" --to html --output "$SEANCE-offline.html" >/dev/null
+  mv -f "$SEANCE-offline.html" "$OUT/"
+fi
+
 cd "$ROOT"; rm -rf "$TMP"
 echo "OK :"
-echo "   $OUT/$SEANCE-enonces.pdf   (énoncés seuls)"
-echo "   $OUT/$SEANCE-complet.pdf   (énoncés + aides)"
+echo "   $OUT/$SEANCE-enonces.pdf    (énoncés seuls)"
+echo "   $OUT/$SEANCE-complet.pdf    (énoncés + aides)"
+[ -f "$OUT/$SEANCE-offline.html" ] && echo "   $OUT/$SEANCE-offline.html  (site hors-ligne, 1 fichier)"

@@ -1,0 +1,40 @@
+---
+title: "Séance 1 — corrections (hors-ligne)"
+subtitle: "IMSV · à consulter sans connexion — garde ce fichier"
+format:
+  html:
+    embed-resources: true
+    toc: true
+    toc-title: "Sur cette page"
+    toc-depth: 2
+    theme:
+      - cosmo
+      - ../../theme.scss
+    include-after-body:
+      - ../../_includes/aides.html
+    html-math-method: mathml
+filters:
+  - ../../exercice.lua
+---
+
+<!-- Version « tout-en-un, hors-ligne » : un seul fichier autonome (CSS/JS/maths
+     embarqués). Rendu par build-pdf.sh. Ouvre-le une fois téléchargé, wifi coupé. -->
+
+::: {.callout-tip appearance="simple"}
+**Fichier hors-ligne.** Tu peux couper le wifi : tout est déjà là (énoncés, coups de pouce,
+solutions). Les *coups de pouce* se déplient au clic, comme sur le site.
+:::
+
+{{< include _consignes.qmd >}}
+
+# Socle — exercices routiniers
+
+{{< include _socle.qmd >}}
+
+# Transfert — problèmes
+
+{{< include _transfert.qmd >}}
+
+# Exercices supplémentaires et de dépassement
+
+{{< include _supplementaires.qmd >}}

@@ -32,6 +32,9 @@ for d in seances/seance*/; do
   ./build-pdf.sh "$s" >/dev/null
 done
 
+echo "→ Feuille méthodes"
+./build-methodes.sh >/dev/null
+
 echo "→ Site"
 quarto render >/dev/null
 

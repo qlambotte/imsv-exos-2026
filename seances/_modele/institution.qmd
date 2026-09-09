@@ -15,13 +15,24 @@ l'examen.
 
 ## Auto-évaluation — coche ce que tu sais faire
 
-Sois honnête : c'est pour *toi*, pas pour une note.
+Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **trois objectifs**.
 
-- [ ] ……… ;
-- [ ] ……… ;
+**O1** — ……… .
+
+- [ ] ……… .
+- [ ] ……… .
+
+**O2** — ……… .
+
+- [ ] ……… .
+- [ ] ……… .
+
+**O3** — ……… .
+
+- [ ] ……… .
 - [ ] ……… .
 
 ::: {.callout-important appearance="simple"}
 Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la
-**remédiation**. Viens-y : c'est fait pour ça.
+**remédiation** (une séance chaque semaine pour reprendre les bases).
 :::

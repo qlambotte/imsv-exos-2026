@@ -9,15 +9,17 @@ subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
 
 {{< include _download.qmd >}}
 
-## Objectifs — ce que tu sais faire en sortant
+## Objectifs de la séance
 
-À la fin de cette séance, tu dois savoir :
+Ces objectifs sont repris du cours théorique (IMSV-@@NN@@). **Chaque exercice indique l'objectif
+qu'il travaille** — la pastille **O1 / O2 / O3** dans son en-tête.
 
-- ……… ;
-- ……… ;
-- ……… .
+- **O1** — ……… .
+- **O2** — ……… .
+- **O3** — ……… .
 
-Une grille d'auto-évaluation reprend ces points à la page [Institutionnalisation](institution.qmd).
+Une grille d'**auto-évaluation** sur ces objectifs t'attend à la page
+[Institutionnalisation](institution.qmd).
 
 ## Le parcours de la séance
 
@@ -29,7 +31,8 @@ Une grille d'auto-évaluation reprend ces points à la page [Institutionnalisati
 ## Les slides du cours
 
 <!-- >>> lien vers les slides de théorie (Moodle ou PDF) <<< -->
-Les slides de théorie associée sont sur **[Moodle](https://moodle.umons.ac.be/)** (chapitre IMSV-@@NN@@).
+Les slides de théorie associée sont sur
+**[Moodle](https://moodle.umons.ac.be/course/view.php?id=2657)** (chapitre IMSV-@@NN@@).
 
 ## Avant la séance
 
