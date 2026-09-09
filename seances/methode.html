@@ -182,6 +182,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#sec-nier" id="toc-sec-nier" class="nav-link active" data-scroll-target="#sec-nier">Nier une proposition logique</a></li>
+  <li><a href="#sec-traduire" id="toc-sec-traduire" class="nav-link" data-scroll-target="#sec-traduire">Traduire une phrase en langage formel</a></li>
+  <li><a href="#sec-intervalle" id="toc-sec-intervalle" class="nav-link" data-scroll-target="#sec-intervalle">Décider l’appartenance à un intervalle</a></li>
+  <li><a href="#sec-contraposee" id="toc-sec-contraposee" class="nav-link" data-scroll-target="#sec-contraposee">Réciproque, contraposée : laquelle est vraie ?</a></li>
+  <li><a href="#sec-preuve" id="toc-sec-preuve" class="nav-link" data-scroll-target="#sec-preuve">Exemple, contre-exemple ou preuve ?</a></li>
   </ul>
 </nav>
     </div>
@@ -207,9 +211,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Les méthodes institutionnalisées en fin de séance s’accumulent ici. Ce sont tes <strong>outils d’examen</strong>.</p>
+<p>Les méthodes institutionnalisées en fin de séance s’accumulent ici. Ce sont tes <strong>outils d’examen</strong>. Chaque méthode tient en <strong>cinq cases</strong> — jamais un paragraphe :</p>
+<ul>
+<li><strong>Nom</strong> — comment on l’appelle.</li>
+<li><strong>Quand l’utiliser</strong> — le <em>signal déclencheur</em> (« dès que tu vois… »).</li>
+<li><strong>Étapes</strong> — numérotées, une action par étape.</li>
+<li><strong>Exemple minimal</strong> — le plus petit cas qui la montre.</li>
+<li><strong>Le piège</strong> — la faute à ne pas refaire.</li>
+</ul>
+<div class="callout callout-style-simple callout-tip callout-titled" title="Fabriquer une méthode toi-même">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Fabriquer une méthode toi-même
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tu n’as rien à inventer : dans les corrections, l’<strong>Indice 2</strong> (« la question à te poser ») te donne les <em>étapes</em>, et le <strong>Piège</strong> te donne la case <em>piège</em>. Relis-les pour l’exercice concerné, et remplis le gabarit. La <strong><a href="../pdf/feuille-methodes.pdf">feuille à compléter (PDF)</a></strong> est faite pour ça.</p>
+</div>
+</div>
+<p>Une méthode est <strong>faite ensemble en séance</strong> (ci-dessous, <em>Nier une proposition</em>). Pour les autres, seul le <strong>signal</strong> est visible ; les étapes, l’exemple et le piège sont <strong>repliés</strong> : construis d’abord, déplie ensuite pour te corriger.</p>
 <section id="sec-nier" class="level2">
 <h2 class="anchored" data-anchor-id="sec-nier">Nier une proposition logique</h2>
+<p><strong>Quand l’utiliser.</strong> Dès qu’on demande la <strong>négation</strong> d’un énoncé, surtout avec <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∀</mo><annotation encoding="application/x-tex">\forall</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∃</mo><annotation encoding="application/x-tex">\exists</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>≥</mo><annotation encoding="application/x-tex">\ge</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>=</mo><annotation encoding="application/x-tex">=</annotation></semantics></math>…</p>
 <p><strong>But.</strong> Passer d’une proposition à sa négation, mécaniquement, en poussant le <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>¬</mi><annotation encoding="application/x-tex">\lnot</annotation></semantics></math> vers l’intérieur.</p>
 <p><strong>Étape 1 — Repérer la structure.</strong> Identifier le connecteur principal et les quantificateurs.</p>
 <p><strong>Étape 2 — Faire entrer la négation, une couche à la fois.</strong></p>
@@ -220,7 +246,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Étape 3 — Nier les propositions atomiques.</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mspace width="0.222em"></mspace><mo>→</mo><mspace width="0.222em"></mspace><mo>≠</mo></mrow><annotation encoding="application/x-tex">=\ \to\ \ne</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&lt;</mo><mspace width="0.222em"></mspace><mo>→</mo><mspace width="0.222em"></mspace><mo>≥</mo></mrow><annotation encoding="application/x-tex">&lt;\ \to\ \ge</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&gt;</mo><mspace width="0.222em"></mspace><mo>→</mo><mspace width="0.222em"></mspace><mo>≤</mo></mrow><annotation encoding="application/x-tex">&gt;\ \to\ \le</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∈</mo><mspace width="0.222em"></mspace><mo>→</mo><mspace width="0.222em"></mspace><mo>∉</mo></mrow><annotation encoding="application/x-tex">\in\ \to\ \notin</annotation></semantics></math>.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Exemple travaillé">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -229,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Nier : « <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∀</mo><annotation encoding="application/x-tex">\forall</annotation></semantics></math> échantillon <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math>, (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math> est positif <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math> est contaminé) ».</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">(</mo><mo>∀</mo><mi>e</mi><mo>,</mo><mspace width="0.222em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">pos</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>e</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>⇒</mo><mtext mathvariant="normal">cont</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>e</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo minsize="1.2" maxsize="1.2" stretchy="false" form="postfix">)</mo><mo>≡</mo><mo>∃</mo><mi>e</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>¬</mi><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">pos</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>e</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>⇒</mo><mtext mathvariant="normal">cont</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>e</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>≡</mo><mo>∃</mo><mi>e</mi><mo>,</mo><mspace width="0.222em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">pos</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>e</mi><mo stretchy="true" form="postfix">)</mo></mrow><mspace width="0.222em"></mspace><mo>∧</mo><mspace width="0.222em"></mspace><mi>¬</mi><mspace width="0.167em"></mspace><mtext mathvariant="normal">cont</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>e</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">\lnot\big(\forall e,\ (\text{pos}(e)\Rightarrow\text{cont}(e))\big)
@@ -240,7 +266,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled" title="Piège classique">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -249,9 +275,97 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Garder le même quantificateur en niant, ou nier <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>&gt;</mo><annotation encoding="application/x-tex">&gt;</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>&lt;</mo><annotation encoding="application/x-tex">&lt;</annotation></semantics></math> (oubli de l’égalité : la négation de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>&gt;</mo><annotation encoding="application/x-tex">&gt;</annotation></semantics></math> est <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>≤</mo><annotation encoding="application/x-tex">\le</annotation></semantics></math>).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-traduire" class="level2">
+<h2 class="anchored" data-anchor-id="sec-traduire">Traduire une phrase en langage formel</h2>
+<p><strong>Quand l’utiliser.</strong> Dès qu’une phrase mêle « et / ou / si…alors / non », ou parle d’ensembles de nombres.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Corrigé — étapes · exemple · piège">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Corrigé — étapes · exemple · piège
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Étapes.</strong> 1) repère le <em>connecteur</em> ou le <em>quantificateur</em> porteur ; 2) traduis chaque morceau (« mais » <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>∧</mi></mrow><annotation encoding="application/x-tex">=\land</annotation></semantics></math>, « négatif » <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>¬</mi></mrow><annotation encoding="application/x-tex">=\lnot</annotation></semantics></math>…) ; 3) vérifie le sens : <em>qui</em> implique <em>qui</em> ? un <strong>élément</strong> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∈</mo><annotation encoding="application/x-tex">\in</annotation></semantics></math>) ou un <strong>ensemble</strong> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⊆</mo><annotation encoding="application/x-tex">\subseteq</annotation></semantics></math>) ?</p>
+<p><strong>Exemple.</strong> « Le patient est malade mais son test est négatif » <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mspace width="0.222em"></mspace><mi>φ</mi><mo>∧</mo><mi>¬</mi><mi>ψ</mi></mrow><annotation encoding="application/x-tex">=\ \varphi \land \lnot\psi</annotation></semantics></math>.</p>
+<p><strong>Piège.</strong> Traduire « mais » autrement que par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∧</mi><annotation encoding="application/x-tex">\land</annotation></semantics></math> ; inverser le sens de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math> ; confondre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∈</mo><annotation encoding="application/x-tex">\in</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⊆</mo><annotation encoding="application/x-tex">\subseteq</annotation></semantics></math>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-intervalle" class="level2">
+<h2 class="anchored" data-anchor-id="sec-intervalle">Décider l’appartenance à un intervalle</h2>
+<p><strong>Quand l’utiliser.</strong> « <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">x \in [a,b[</annotation></semantics></math> ? » — toute question d’appartenance à un intervalle.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Corrigé — étapes · exemple · piège">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Corrigé — étapes · exemple · piège
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Étapes.</strong> 1) crochet <strong>fermé</strong> = borne <strong>incluse</strong>, <strong>ouvert</strong> = <strong>exclue</strong> ; 2) une borne <strong>infinie</strong> est <strong>toujours</strong> ouverte ; 3) compare le nombre à chaque borne.</p>
+<p><strong>Exemple.</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><mo>∉</mo><mo stretchy="false" form="prefix">[</mo><mn>3</mn><mo>,</mo><mn>7</mn><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">7 \notin [3,7[</annotation></semantics></math> (7 exclu) ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn><mo>∈</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="postfix">]</mo><mo>−</mo><mi>∞</mi><mo>,</mo><mspace width="0.167em"></mspace><mo>−</mo><mn>2</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">-2 \in\ ]{-}\infty,\,-2]</annotation></semantics></math> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">-2</annotation></semantics></math> inclus).</p>
+<p><strong>Piège.</strong> Confondre crochet fermé / ouvert ; croire qu’une borne infinie peut être incluse.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-contraposee" class="level2">
+<h2 class="anchored" data-anchor-id="sec-contraposee">Réciproque, contraposée : laquelle est vraie ?</h2>
+<p><strong>Quand l’utiliser.</strong> On te donne <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>φ</mi><mo>⇒</mo><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\varphi \Rightarrow \psi</annotation></semantics></math> et on demande une implication « dérivée ».</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Corrigé — étapes · exemple · piège">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Corrigé — étapes · exemple · piège
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Étapes.</strong> 1) <strong>réciproque</strong> = on <strong>échange</strong> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo>⇒</mo><mi>φ</mi></mrow><annotation encoding="application/x-tex">\psi \Rightarrow \varphi</annotation></semantics></math>) ; 2) <strong>contraposée</strong> = on <strong>nie et on échange</strong> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mi>ψ</mi><mo>⇒</mo><mi>¬</mi><mi>φ</mi></mrow><annotation encoding="application/x-tex">\lnot\psi \Rightarrow \lnot\varphi</annotation></semantics></math>) ; 3) la <strong>contraposée est équivalente</strong> à l’implication ; la réciproque, non.</p>
+<p><strong>Exemple.</strong> « multiple de 4 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math> pair » : contraposée « impair <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math> non multiple de 4 » (vraie) ; réciproque « pair <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math> multiple de 4 » (fausse, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">n=6</annotation></semantics></math>).</p>
+<p><strong>Piège.</strong> Confondre réciproque et contraposée ; croire que la contraposée « peut être fausse ».</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-preuve" class="level2">
+<h2 class="anchored" data-anchor-id="sec-preuve">Exemple, contre-exemple ou preuve ?</h2>
+<p><strong>Quand l’utiliser.</strong> On te propose un <strong>argument</strong> pour un énoncé « pour tout ».</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Corrigé — étapes · exemple · piège">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Corrigé — étapes · exemple · piège
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Étapes.</strong> 1) l’argument traite-t-il <strong>un</strong> cas ou <strong>tous</strong> les cas ? 2) un <strong>exemple</strong> n’établit <strong>rien</strong> ; 3) un <strong>contre-exemple</strong> (qui doit être <strong>dans le domaine</strong>) <strong>réfute</strong> ; une <strong>preuve</strong> (tous les cas) <strong>établit</strong>.</p>
+<p><strong>Exemple.</strong> « 2 est premier et pair » réfute « tout premier est impair » ; « 3 est premier et impair » ne prouve rien.</p>
+<p><strong>Piège.</strong> Prendre un exemple pour une preuve ; oublier qu’un seul contre-exemple suffit.</p>
 </div>
 </div>
 </div>
@@ -295,7 +409,7 @@ ul.task-list li input[type="checkbox"] {
 // Trois outils à côté du titre (comme « bookup ») : GitHub · Téléchargement · Thème clair/sombre.
 (function () {
   // >>> À COMPLÉTER : URL du dépôt GitHub du projet <<<
-  var GITHUB_URL = "https://qlambotte.github.io/imsv-exos-2026/";
+  var GITHUB_URL = "https://github.com/qlambotte/imsv-exos-2026";
 
   var SVG = {
     github: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
