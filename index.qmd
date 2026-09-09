@@ -1,0 +1,43 @@
+# Bienvenue {.unnumbered}
+
+Ce site rassemble les **énoncés des exercices et leur correction** pour le cours d'*Introduction
+Mathématique aux Sciences de la Vie*. Pour chaque séance, chaque exercice est accompagné de
+**coups de pouce gradués** : tu les ouvres un à un, seulement quand tu en as besoin.
+
+::: {.callout-tip appearance="simple"}
+## Comment travailler avec ce site
+
+1. **Cherche d'abord au brouillon.** L'apprentissage vient de l'effort, pas de la lecture d'une
+   solution.
+2. **Bloqué·e ? Ouvre les coups de pouce dans l'ordre :**
+   d'abord la **référence théorique** (où réviser), puis la **question à te poser**, puis une
+   **étape**, et seulement en dernier la **solution complète**.
+3. **Repère le piège.** Chaque exercice signale la faute classique à éviter.
+
+Descendre directement à la solution sans avoir essayé ne fait rien apprendre.
+:::
+
+## Les séances
+
+| # | Séance | Thème | Correction |
+|:-:|:--|:--|:--|
+| 1 | [Langage et raisonnement](seances/seance01/index.qmd) | Logique, ensembles, quantificateurs,... | ✅ en ligne |
+| 2 | *à venir* | — | — |
+| 3 | *à venir* | — | — |
+| … | | | |
+
+: Le tableau se complétera au fil du quadrimestre. {.striped .hover tbl-colwidths="[8,32,45,15]"}
+
+## Rappels utiles
+
+- **Préparation.** Chaque séance suppose que la théorie de la semaine précédente a été revue, et que le test Moodle
+  suivant cette séance a été fait. Sans préparation, tu ne seras pas seulement en difficulté — tu seras perdu·e. Ceci est évitable si tu te **prépares**.
+- **Remédiation.** Si tes difficultés persistent malgré une préparation et un investissement lors des séances, n'hésite pas à venir aux remédiations, qui reprendront les bases.
+- **La méthode.** En fin de chaque séance, on rédigera ensemble une méthode réutilisable sur base du contenu de la séance. Cette séance rejoint
+  ta [boîte à outils](seances/methode.qmd) pour l'examen. **Attention**: ces méthodes construites en fin de séance ne sont pas exhaustives: à toi de les compléter sur base du cours théorique et des séances d'exercices
+
+::: {.seance-meta}
+Faculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS.
+
+Ce cours est en refonte : vos retours sont les bienvenus.
+:::

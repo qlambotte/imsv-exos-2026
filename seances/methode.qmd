@@ -1,0 +1,37 @@
+# Boîte à outils — méthodes {.unnumbered}
+
+Les méthodes institutionnalisées en fin de séance s'accumulent ici. Ce sont tes **outils d'examen**.
+
+## Nier une proposition logique {#sec-nier}
+
+**But.** Passer d'une proposition à sa négation, mécaniquement, en poussant le $\lnot$ vers
+l'intérieur.
+
+**Étape 1 — Repérer la structure.** Identifier le connecteur principal et les quantificateurs.
+
+**Étape 2 — Faire entrer la négation, une couche à la fois.**
+
+- $\lnot(P\land Q) \equiv \lnot P \lor \lnot Q$ ; $\lnot(P\lor Q)\equiv \lnot P\land\lnot Q$ (De
+  Morgan).
+- $\lnot(P\Rightarrow Q) \equiv P \land \lnot Q$.
+- $\lnot(\forall x,\ P(x)) \equiv \exists x,\ \lnot P(x)$ ;
+  $\lnot(\exists x,\ P(x)) \equiv \forall x,\ \lnot P(x)$.
+
+**Étape 3 — Nier les propositions atomiques.** $=\ \to\ \ne$ ; $<\ \to\ \ge$ ; $>\ \to\ \le$ ;
+$\in\ \to\ \notin$.
+
+::: {.callout-note collapse="true" title="Exemple travaillé"}
+Nier : « $\forall$ échantillon $e$, ($e$ est positif $\Rightarrow$ $e$ est contaminé) ».
+
+$$\lnot\big(\forall e,\ (\text{pos}(e)\Rightarrow\text{cont}(e))\big)
+\equiv \exists e,\ \lnot(\text{pos}(e)\Rightarrow\text{cont}(e))
+\equiv \exists e,\ (\text{pos}(e)\ \land\ \lnot\,\text{cont}(e)).$$
+
+En mots : « il existe un échantillon positif **et non** contaminé ». Chaque passage utilise
+$\lnot\forall \to \exists\lnot$, puis $\lnot(P\Rightarrow Q)\equiv P\land\lnot Q$.
+:::
+
+::: {.callout-warning collapse="true" title="Piège classique"}
+Garder le même quantificateur en niant, ou nier $>$ par $<$ (oubli de l'égalité : la négation de $>$
+est $\le$).
+:::

@@ -1,0 +1,336 @@
+<!-- SOCLE = LE NOYAU (à faire par tous, en séance ou à la maison).
+     8 exercices : 2 versions légères (vocabulaire) + 6 alignés sur le QCM post-cours 1.
+     Convention : « Indice 1 » renvoie TOUJOURS à la théorie du cours (par nom de section) ;
+     les coups de pouce concrets sont dans « Indice 2 » et suivants. -->
+
+::: {.callout-caution .exo title="Exercice 1|Socle|1|O3"}
+Pour chaque lettre indiquée, dis son rôle dans l'expression entre guillements : **inconnue**, **variable** ou **paramètre**.
+
+(a) $x$ dans « résoudre $2x = 10$ »
+(b) $x$ dans « la fonction $f(x) = x^2$ »
+(c) $m$ dans « la droite $y = m x + 1$ »
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Égalité et symboles : lire avant de calculer*.
+
+## Solution
+
+(a) **Inconnue** ($x = 5$). 
+(b) **Variable** (l'entrée de $f$, parcourt $\mathbb{R}$).
+(c) **Paramètre** ($m$ fixe la droite ; la variable est $x$).
+
+# Indice 2
+
+*Question à te poser.*
+
+Pour chaque lettre : cherche-t-on **sa** valeur (inconnue) ? décrit-elle **tous** les cas ou l'entrée
+d'une fonction (variable) ? ou **fixe**-t-elle un objet particulier tandis qu'une autre lettre varie
+(paramètre) ?
+
+## Piège
+
+Dans $y = m x + 1$, confondre $x$ (variable) et $m$ (paramètre).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 2|Socle|1|O3"}
+Pour chaque énoncé, dis de quoi il
+s'agit: **un prédicat ou une proposition**?
+
+(a) « $5$ est pair. »
+(b) « $x \ge 0$. »
+(c) « Additionne $2$ et $3$. »
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Qu'est-ce qu'une affirmation mathématique ?*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Pour chaque énoncé : *puis-je dire, tel quel, s'il est vrai ou faux ?* Si oui → proposition (même
+s'il est **faux**). Si « ça dépend de la valeur d'une lettre » → prédicat. Si ce n'est ni une proposition ni un prédicat → ni l'un ni l'autre.
+
+## Solution
+
+(a) **Proposition** (fausse). (b) **Prédicat** (dépend de $x$). (c) **Ni l'un ni l'autre** (un ordre).
+
+## Piège
+
+Croire qu'un énoncé **faux** n'est « pas une proposition ».
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 3|Socle|2|O1"}
+Relie chaque phrase (a–d) à sa traduction (1–4).
+
+| Français | Traduction |
+|---|---|
+| **(a)** « −7 est un entier » | **(1)** $\mathbb{N} \subseteq \mathbb{Z}$ |
+| **(b)** « −7 est un entier **mais pas** naturel » | **(2)** $-7 \in \mathbb{Z}$ |
+| **(c)** « tout nombre naturel est un entier » | **(3)** $\forall n\in\mathbb{N},\ n\ge 0$ |
+| **(d)** « il n'existe pas d'entier naturel strictement négatif » | **(4)** $-7 \in \mathbb{Z}\setminus\mathbb{N}$ |
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Ensembles : regrouper des objets*, *Formaliser l’inclusion*, *Ensembles de nombres* et *Opérations sur les ensembles*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Chaque phrase parle-t-elle d'un **élément** ($\in$) ou d'un **ensemble entier** ($\subseteq$) ?
+À quelle opération correspond « mais pas… » ? Et « il n'existe pas de… négatif », est-ce un $\forall$
+déguisé ?
+
+## Solution
+
+**a–2**, **b–4**, **c–1**, **d–3**.
+($-7\in\mathbb{Z}$ ; « entier mais pas naturel » = $\mathbb{Z}\setminus\mathbb{N}$ ; « tout nombre naturel est
+entier » = $\mathbb{N}\subseteq\mathbb{Z}$ ; « aucun naturel n'est $<0$ » = $\forall n\in\mathbb{N},\
+n\ge 0$.)
+
+## Pièges
+
+Confondre $\in$ (un **élément** : $-7\in\mathbb{Z}$) et $\subseteq$ (deux **ensembles** :
+$\mathbb{N}\subseteq\mathbb{Z}$) ; oublier que « mais pas naturel » retire $\mathbb{N}$
+($\setminus\mathbb{N}$).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 4|Socle|2|O2"}
+Pour chaque ligne, dis si l'affirmation est **vraie** ou **fausse** :
+
+(a) $3 \in [3,\,7[$
+(b) $7 \in [3,\,7[$
+(c) $\sqrt2 \in\ ]1,\,2]$
+(d) $-2 \in\ ]{-}\infty,\,-2]$
+(e) $0 \in\ ]0,\,+\infty[$
+
+Ensuite: écris l'intervalle des réels $x$ tels que $-1 \le x < 4$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Intervalles réels* et *Ensembles : regrouper des objets*.
+
+## Indice 2
+
+*Question à te poser.*
+
+La borne de l'intervalle est-elle dans l'intervalle (crochet fermé) ou non (ouvert) ? Le nombre est-il strictement entre les
+bornes, ou **égal** à une borne — et cette borne est-elle incluse dans l'intervalle ?
+
+## Solution
+
+(a) **Vrai** — $3$ inclus (fermé à gauche).
+
+(b) **Faux** — $7$ exclu (ouvert à droite).
+
+(c) **Vrai** — $\sqrt2 \approx 1{,}41 \in\ ]1,2]$.
+
+(d) **Vrai** — $-2$ inclus (fermé à droite).
+
+(e) **Faux** — $0$ exclu (ouvert).
+
+L'intervalle des réels $x$ tels que $-1 \le x < 4$ s'écrit: $[-1,\,4[$.
+
+## Piège
+
+Confondre crochet fermé (inclus) et ouvert (exclu) ; croire qu'une borne infinie peut être « incluse ».
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 5|Socle|1|O2"}
+ Construire la table de vérité, pour toutes les valeurs de
+$\alpha$ et $\beta$, des colonnes $\lnot\alpha$, $\alpha\land\beta$, $\alpha\lor\beta$,
+$\alpha\Rightarrow\beta$. Vérifier ensuite que
+$\lnot(\alpha\land\beta) \Leftrightarrow \lnot\alpha \lor \lnot\beta$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Outil : table de vérité*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Il y a cinq lignes et huit colonnes dans le tableau. Pour $\alpha\Rightarrow\beta$, repère d'abord l'unique ligne qui la rend **fausse** ;
+toutes les autres doivent être vraies.
+
+## Solution
+
+| $\alpha$ | $\beta$ | $\lnot\alpha$ | $\alpha\land\beta$ | $\alpha\lor\beta$ | $\alpha\Rightarrow\beta$ | $\lnot(\alpha\land\beta)$ | $\lnot\alpha\lor\lnot\beta$ |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| V | V | F | V | V | V | F | F |
+| V | F | F | F | V | **F** | V | V |
+| F | V | V | F | V | V | V | V |
+| F | F | V | F | F | V | V | V |
+
+Les deux dernières colonnes coïncident ligne à ligne : la loi de De Morgan est vérifié. ✓
+
+## Piège
+
+Croire que $\alpha\Rightarrow\beta$ est fausse quand $\alpha$ est fausse. Une implication à
+**prémisse fausse** est *automatiquement vraie*.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 6|Socle|2|O2"}
+Soit $P$ l'implication  : « si $n$ est multiple de
+$4$, alors $n$ est pair ».
+
+(a) Écrire la **réciproque** et la **contraposée** de $P$.
+(b) Dire lesquelles des trois sont vraies. Justifier, par un contre-exemple si nécessaire.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Comprendre l’implication* et *Réciproque, contraposée, équivalence*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Pose $\alpha$ : « multiple de $4$ » et $\beta$ : « pair ». Réciproque = on **échange**. Contraposée =
+on **nie et on échange**. Pour tester la réciproque, cherche un $n$ pair non multiple de $4$.
+
+## Indice 3
+
+*Étape.*
+
+Validité de la réciproque: prendre $n=6$.
+
+## Solution
+
+**Implication** : vraie. 
+
+**Réciproque** « si $n$ pair alors $n$ multiple de $4$ » : **fausse** avec $n=6$, on a bien un $n$ pair qui n'est pas un multiple de $4$. 
+
+**Contraposée** « si $n$ impair alors $n$ non multiple de $4$ » : **vraie** car elle est équivalente à $P$.
+
+## Pièges
+
+Confondre **réciproque** et **contraposée**, et croire que la contraposée pourrait avoir une valeur
+de vérité différente de l'implication.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 7|Socle|2|O2"}
+Pour les trois premières propositions : dire si elle est **vraie** ou **fausse**,
+puis écrire sa **négation**.
+
+(a) $\forall x\in\mathbb{R},\ x^2\ge 0$.
+(b) $\exists n\in\mathbb{N},\ n+2 = 5$.
+(c) $\forall x\in\mathbb{R},\ x^2 > 0$.
+(d) On note $\alpha(v,t)$ « le test $t$ détecte le variant $v$ ».
+Écris la **négation** de $\ \forall v,\ \exists t,\ \alpha(v,t)\ $ puis traduis-la en français.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Formaliser l’inclusion*, *Nier une proposition quantifiée*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Pour nier : **échanger** $\forall$ et $\exists$, puis nier le prédicat. Négation de « $\ge$ » : « $<$ »
+; de « $=$ » : « $\ne$ » ; de « $>$ » : « $\le$ ». Pour (d) : que deviennent $\forall v$, **puis**
+$\exists t$, **puis** $\alpha$ ?
+
+## Solution
+
+(a) **Vraie**. Négation : $\exists x,\ x^2<0$ — **fausse**.
+
+(b) **Vraie** ($n=3$). Négation : $\forall n,\ n+2\ne 5$ — **fausse**.
+
+(c) **Fausse** ($x=0$). Négation : $\exists x,\ x^2\le 0$ — **vraie** ($x=0$).
+
+(d) $\lnot(\forall v,\ \exists t,\ \alpha(v,t)) \equiv \exists v,\ \forall t,\ \lnot\alpha(v,t)$ :
+« il existe un variant qu'**aucun** test ne détecte ».
+
+## Pièges
+
+Nier en **gardant le même quantificateur** ; ou, en imbriqué (d), n'échanger qu'**un seul**
+quantificateur au lieu des deux (le second aussi doit basculer $\exists\to\forall$).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 8|Socle|2|O3"}
+Pour chaque **argument** proposé, dis si c'est un
+**exemple**, un **contre-exemple** ou une **preuve**. Dans chaque cas, dis si l'argument établit l’affirmation, la réfute, ou ne conclut rien.
+
+Affirmation A : « Tout nombre premier est impair. »
+
+(a) « C'est vrai, car $3$ est premier et impair. »
+(b) « C'est faux : $2$ est premier et pair. »
+
+Affirmation B : « La somme de deux entiers pairs est paire. »
+
+(c) « $4+6=10$ est pair, donc c'est vrai. »
+(d) « Si $a=2k$ et $b=2k'$, alors $a+b=2(k+k')$, qui est pair. »
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Exemples, preuves, contre-exemples*.
+
+## Indice 2
+
+*Question à te poser.*
+
+L'argument traite-t-il **un** cas (exemple / contre-exemple) ou **tous** les cas (preuve) ?
+Ce cas **confirme**-t-il ou **contredit**-il l'affirmation ? S'il contredit, alors il s'égit d'un contre-exemple.
+
+## Solution
+
+(a) **Exemple** — ne permet pas de conclure sur la validité de l'afformation (un cas favorable ne prouve pas un « tout »).
+(b) **Contre-exemple** de A : on peut donc en déduire que l'affirmation est fausse.
+(c) **Exemple** — ne conclut rien (ne couvre pas tous les cas).
+(d) **Preuve** — **établit** B (l'argument vaut pour tous les entiers pairs).
+
+## Piège
+
+Croire qu'un exemple (a, c) **prouve** une affirmation générale ; ne pas voir qu'**un seul**
+contre-exemple suffit à réfuter.
+
+:::
+:::

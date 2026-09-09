@@ -1,0 +1,142 @@
+::: {.callout-caution .exo title="Exercice 9|Transfert|3|O2"}
+Dans un écosystème, on admet deux règles :
+
+(R1) « tout organisme photosynthétique[^2] est autotrophe[^0] » : $P \Rightarrow A$ ;
+
+[^2]: qui est relatif à la photosynthèse, le processus biologique par lequel les organismes vivants verts (plantes, algues et certaines bactéries) convertissent l'énergie lumineuse en énergie chimique.
+[^0]: organisme capable de produire de la matière organique à partir de matière inorganique.
+
+(R2) « aucun autotrophe n'est un prédateur » : $A \Rightarrow \lnot Pr$.
+
+(a) Un organisme photosynthétique peut-il être un prédateur ? Justifier en utilisant les deux règles.
+(b) Écrire la **contraposée** de (R2).
+(c) On observe un prédateur. Peut-on dire que ce prédateur est autotrophe? Peut-on dire qu'il est photosynthétique?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Comprendre l'implication*, *Réciproque, contraposée, équivalence*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Peux-tu enchaîner (R1) puis (R2) : que donne $P\Rightarrow A$ suivi de $A\Rightarrow\lnot Pr$ ? Pour
+(c), pars de « $Pr$ » et remonte la chaîne par contraposées.
+
+## Indice 3
+
+*Étape.*
+
+$P\Rightarrow A\Rightarrow \lnot Pr$. Et la contraposée de $P\Rightarrow A$ est
+$\lnot A\Rightarrow\lnot P$.
+
+## Solution
+
+(a) **Non.** Par composition, $P\Rightarrow A$ et $A\Rightarrow\lnot Pr$ donnent
+$P\Rightarrow\lnot Pr$ : un organisme photosynthétique n'est pas un prédateur.
+
+(b) Contraposée de (R2) : $Pr \Rightarrow \lnot A$ (« si prédateur, alors non autotrophe »).
+
+(c) Puisque $Pr \Rightarrow \lnot A$, un prédateur n'est pas autotrophe ; aa contraposée de (R1) ($\lnot A\Rightarrow\lnot P$),
+nous dit "si je ne suis pas autotrophe, alors je ne suis pas photosynthétique": un prédateur ne peut donc pas être photosynthétique. Donc: un prédateur n'est **ni autotrophe ni photosynthétique**.
+
+## Pièges
+
+Inverser une implication (croire que « autotrophe $\Rightarrow$ photosynthétique »), ou se tromper
+dans la contraposée en oubliant de nier **les deux** constituants de l'implication.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 10|Transfert|2|O1"}
+Dans le cabinet d'un groupe de médecins, notons $U$ l'ensemble de tous les patients vus aujourd'hui, $F$
+l'ensemble des patients fébriles[^1] et $T$ celui des patients qui toussent. Exprimer par des ensembles
+
+[^1]: qui a de la fièvre
+
+(a) « les patients fébriles qui ne toussent pas » ;
+(b) « les patients qui présentent au moins un des deux symptômes (fièvre ou toux) » ;
+(c) « les patients sans fièvre ni toux ».
+
+Traduis en français:
+
+(d) l'énoncé $F \cap T = \varnothing$ (en français) ;
+
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Ensembles : regrouper des objets* et *Opérations sur les ensembles*.
+
+## Indice 2
+
+*Question à te poser.*
+
+« sans toux » = quelle opération ? « au moins un » = union ou intersection ? « ni… ni… » = complément
+de quoi ?
+
+## Solution
+
+(a) $F \setminus T$.
+(b) $F \cup T$.
+(c) $U\setminus(F \cup T) (= (U\setminus F) \cap (U\setminus T))$
+(d) « Aucun patient n'a **à la fois** de la fièvre et de la toux ».
+
+## Piège
+
+Confondre $\cup$ (« au moins un ») et $\cap$ (« les deux ») ; et écrire « ni $F$ ni $T$ » comme
+$(U\setminus F)\cup(U\setminus T)$ au lieu de $(U\setminus F)\cap(U\setminus T)$ (De Morgan).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 11|Transfert|3|O2"}
+Pour une bactérie $b$ et un antibiotique $a$, $\psi(a,b)$
+signifie « $a$ est efficace contre $b$ ». On considère
+$$(\star)\qquad \forall\, b,\ \exists\, a,\ \psi(a,b).$$
+
+(a) Traduire $(\star)$ en français.
+(b) Traduire $\exists\, a,\ \forall\, b,\ \psi(a,b)$, et dire laquelle de $(\star)$ ou celle-ci est la
+plus **forte**.
+(c) Écrire la **négation** de $(\star)$, puis la traduire en français.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Quantificateurs*, *Nier une proposition quantifiée*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Pour (b) : dans $(\star)$, l'antibiotique « $\exists\, a$ » a-t-il le droit de **dépendre** de la bactérie $b$ ?
+Pour (c) : que deviennent $\forall\, b$, puis $\exists\, a$, puis $\psi$, quand on nie ?
+
+## Solution
+
+(a) « Pour **toute** bactérie, il existe un antibiotique efficace contre elle » (l'antibiotique peut
+dépendre de la bactérie).
+
+(b) « Il existe **un seul** antibiotique efficace contre **toutes** les bactéries » (un antibiotique
+universel). La proposition la **plus forte** est $\exists\, a\,\forall\, b\ \Rightarrow\ \forall\, b\,\exists\, a$, pas
+l'inverse.
+
+(c) La négation de $\lnot(\star)$ est $\exists\, b,\ \forall\, a,\ \lnot\psi(a,b)$ : « il existe une bactérie contre
+laquelle **aucun** antibiotique n'est efficace ».
+
+## Pièges
+
+Ne pas changer les quantificateurs en niant; croire $\forall\, b\,\exists\, a, \psi(a,b)$ est la même chose que $\exists\, a\,\forall\, b, \psi(a,b)$.
+
+:::
+:::

@@ -1,0 +1,37 @@
+---
+title: "Séance 1 — Langage et raisonnement"
+subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
+---
+
+::: {.seance-meta}
+**Thème.** Logique (propositions, connecteurs, tables de vérité, implication), ensembles,
+quantificateurs, .... 
+
+**Théorie associée :** IMSV-1, *« Pourquoi les mathématiques ? -- Langage et raisonnement »*.
+:::
+
+{{< include _download.qmd >}}
+
+## Objectifs de la séance
+
+Trois objectifs, repris du cours théorique (IMSV-1). **Chaque exercice indique l'objectif qu'il
+travaille** — la pastille **O1 / O2 / O3** dans son en-tête.
+
+- **O1** — traduire une affirmation simple entre **langage courant et langage formel**.
+- **O2** — utiliser les éléments de base de la logique (**ensembles, quantificateurs, connecteurs**) pour **démontrer ou réfuter** une affirmation mathématique.
+- **O3** — lire une affirmation mathématique simple et distinguer **exemple, preuve et contre-exemple**.
+
+Une grille d'**auto-évaluation** sur ces trois objectifs t'attend à la page
+[Institutionnalisation](institution.qmd).
+
+## Le parcours de la séance
+
+1. **[Socle](socle.qmd)** — les exercices routiniers, à ton rythme.
+2. **[Transfert](transfert.qmd)** — des problèmes en contexte nouveau.
+3. **[Exercices supplémentaires](supplementaires.qmd)** — pour les rapides (facultatif, hors examen).
+4. **[Institutionnalisation](institution.qmd)** — la méthode qu'on dégage ensemble, et l'auto-évaluation.
+
+## Les slides du cours
+
+<!-- >>> À COMPLÉTER : lien vers les slides de théorie de la séance (Moodle ou PDF) <<< -->
+Les slides de théorie associée sont sur **[Moodle](https://moodle.umons.ac.be/course/view.php?id=2657)**.

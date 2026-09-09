@@ -1,0 +1,825 @@
+---
+title: "Séance 1 — Langage et raisonnement"
+subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
+format:
+  html: default
+  typst:
+    papersize: a4
+    margin: {x: 2cm, y: 2cm}
+    mainfont: "Lora"
+    toc: false
+filters:
+  - ../exercice.lua
+---
+
+::: {.seance-meta}
+**Thème.** Logique (propositions, connecteurs, tables de vérité, implication), ensembles,
+quantificateurs. **Théorie associée :** IMSV-1, *« Pourquoi les mathématiques ? »*.
+:::
+
+::: {.content-visible when-format="html"}
+::: {.dl}
+<details class="dl-menu">
+<summary>Télécharger les énoncés (PDF)</summary>
+<a href="../pdf/seance01-enonces.pdf">Énoncés seuls</a>
+<a href="../pdf/seance01-complet.pdf">Énoncés + coups de pouce &amp; corrections</a>
+</details>
+:::
+:::
+
+::: {.content-visible when-format="typst"}
+::: {.ressources}
+[![QR — correction en libre-service](../img/qr.png){fig-alt="QR vers la page de correction" width="3cm"}](https://exemple-hote.be/imsv/seance01)
+
+Scanne ce code pour la **correction en libre-service** (coups de pouce gradués et solutions).
+:::
+:::
+
+**Notation.** $\lnot$ (non), $\land$ (et), $\lor$ (ou), $\Rightarrow$ (implique),
+$\Leftrightarrow$ (équivaut), $\forall,\exists,\in,\notin,\subseteq,\cup,\cap,\setminus,\times,
+\varnothing$.
+
+::: {.callout-tip appearance="simple" title="À lire d'abord"}
+Cherche au brouillon **d'abord**. Ouvre les indices **dans l'ordre** (référence → question →
+étape → solution). La solution est le **dernier** recours.
+:::
+
+## Socle — exercices routiniers
+
+::: {.callout-caution .exo title="Exercice 1|Socle|1"}
+**Proposition, prédicat, ou ni l'un ni l'autre ?** Pour chaque énoncé, dire s'il s'agit d'une
+**proposition** (on peut lui attribuer vrai/faux), d'un **prédicat** (dépend d'une variable libre),
+ou de **ni l'un ni l'autre**. Justifier.
+
+(a) « $7$ est un nombre premier. »
+(b) « Calculez $2+2$. »
+(c) « $x > 3$. »
+(d) « $2 + 2 = 5$. »
+(e) « Tout réel admet un inverse. »
+(f) « $f(x) = x^2$. »
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+*Référence théorique.*
+
+Slide *« Qu'est-ce qu'une affirmation mathématique ? »* : une **proposition** est un énoncé auquel
+on peut attribuer une valeur de vérité. Une expression contenant une variable libre (comme $x>3$)
+est un **prédicat** : pas de valeur de vérité tant que $x$ n'est pas fixé ou quantifié.
+
+## Indice 2
+
+*Question à te poser.*
+
+Pour chaque énoncé : *puis-je dire, tel quel, s'il est vrai ou faux ?* Si oui → proposition (même
+s'il est **faux**). Si « ça dépend de la valeur d'une lettre » → prédicat. Si ce n'est pas un énoncé
+(un ordre, une simple expression) → ni l'un ni l'autre.
+
+## Indice 3
+
+*Étape.*
+
+« $2+2=5$ » est bien une proposition : on peut trancher (fausse). « $x>3$ » ne peut pas être tranchée
+sans connaître $x$.
+
+## Solution
+
+(a) **Proposition** (vraie).
+(b) **Ni l'un ni l'autre** — un impératif.
+(c) **Prédicat** — dépend de $x$ ($\forall x,\ x>3$ serait faux).
+(d) **Proposition** (fausse) — *fausse* ≠ *non-proposition*.
+(e) **Proposition** (fausse : $0$ n'a pas d'inverse).
+(f) **Ni l'un ni l'autre** — une définition.
+
+## Piège
+
+Prendre « $x>3$ » pour une proposition, et croire qu'un énoncé **faux** (comme $2+2=5$) n'est « pas
+une proposition ». Faux ≠ non-proposition.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 2|Socle|2"}
+**Traduire entre langage courant et langage formel.** On pose $\varphi$ : « le patient est malade »
+et $\psi$ : « le test est positif ». Traduire :
+
+(a) « Le patient est malade **mais** son test est négatif. »
+(b) « **Si** le test est positif **alors** le patient est malade. »
+(c) $\lnot(\varphi \lor \psi)$ en français.
+(d) « Le patient est malade **ou** son test est négatif. »
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+*Référence théorique.*
+
+Table des connecteurs (slide *« Comment combiner des propositions ? »*). « mais » se traduit
+logiquement comme « **et** » ($\land$) ; « négatif » = $\lnot\psi$.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quel connecteur porte la phrase (et / ou / si…alors / non) ? Attention au sens de l'implication :
+*qui* implique *qui* ?
+
+## Solution
+
+(a) $\varphi \land \lnot\psi$.
+(b) $\psi \Rightarrow \varphi$ (c'est le test qui implique la maladie).
+(c) « Le patient n'est **ni** malade **ni** positif », soit $\lnot\varphi \land \lnot\psi$.
+(d) $\varphi \lor \lnot\psi$.
+
+## Piège
+
+Traduire « mais » autrement que par $\land$ ; inverser le sens de l'implication en (b).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 3|Socle|1"}
+**Table de vérité et lois de De Morgan.** Construire la table de vérité, pour toutes les valeurs de
+$\varphi$ et $\psi$, des colonnes $\lnot\varphi$, $\varphi\land\psi$, $\varphi\lor\psi$,
+$\varphi\Rightarrow\psi$. Vérifier ensuite que
+$\lnot(\varphi\land\psi) \Leftrightarrow \lnot\varphi \lor \lnot\psi$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+*Référence théorique.*
+
+Slides *« Table de vérité »* et *« Comprendre l'implication »* : $\varphi\Rightarrow\psi$ est
+**fausse dans le seul cas** $\varphi$ vraie et $\psi$ fausse ; vraie partout ailleurs (notamment
+quand $\varphi$ est fausse).
+
+## Indice 2
+
+*Question à te poser.*
+
+Quatre lignes. Pour $\varphi\Rightarrow\psi$, repère d'abord l'unique ligne qui la rend **fausse** ;
+toutes les autres sont vraies.
+
+## Solution
+
+| $\varphi$ | $\psi$ | $\lnot\varphi$ | $\varphi\land\psi$ | $\varphi\lor\psi$ | $\varphi\Rightarrow\psi$ | $\lnot(\varphi\land\psi)$ | $\lnot\varphi\lor\lnot\psi$ |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| V | V | F | V | V | V | F | F |
+| V | F | F | F | V | **F** | V | V |
+| F | V | V | F | V | V | V | V |
+| F | F | V | F | F | V | V | V |
+
+Les deux dernières colonnes coïncident ligne à ligne : De Morgan est vérifié. ✓
+
+## Piège
+
+Croire que $\varphi\Rightarrow\psi$ est fausse quand $\varphi$ est fausse. Une implication à
+**prémisse fausse** est *automatiquement vraie*.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 4|Socle|2"}
+**Implication, réciproque, contraposée.** Soit $P$ (avec $n\in\mathbb{N}$) : « si $n$ est multiple de
+$4$, alors $n$ est pair ».
+
+(a) Écrire la **réciproque** et la **contraposée** de $P$.
+(b) Dire lesquelles des trois sont vraies. Justifier, par un contre-exemple si nécessaire.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+*Référence théorique.*
+
+Slide *« Réciproque, contraposée, équivalence »* : la contraposée de $\varphi\Rightarrow\psi$ est
+$\lnot\psi\Rightarrow\lnot\varphi$ — **équivalente** à l'implication. La réciproque
+$\psi\Rightarrow\varphi$ n'est **pas** forcément vraie.
+
+## Indice 2
+
+*Question à te poser.*
+
+Pose $\varphi$ : « multiple de $4$ » et $\psi$ : « pair ». Réciproque = on **échange**. Contraposée =
+on **nie et on échange**. Pour tester la réciproque, cherche un $n$ pair non multiple de $4$.
+
+## Indice 3
+
+*Étape.*
+
+$n = 6$ est pair, mais n'est pas multiple de $4$.
+
+## Solution
+
+**Implication** : vraie. **Réciproque** « si $n$ pair alors $n$ multiple de $4$ » : **fausse**
+($n=6$). **Contraposée** « si $n$ impair alors $n$ non multiple de $4$ » : **vraie** (équivalente à
+$P$).
+
+## Piège
+
+Confondre **réciproque** et **contraposée**, et croire que la contraposée pourrait avoir une valeur
+de vérité différente de l'implication.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 5|Socle|2"}
+**Ensembles, appartenance, inclusion.** Soient $A = \{a,b,c\}$ et $B = \{c,d\}$.
+
+(a) Donner $A\cup B$, $A\cap B$, $A\setminus B$, $B\setminus A$.
+(b) Donner $A\times B$ et son cardinal.
+(c) Vrai ou faux : $a\in A$ ; $\{a\}\in A$ ; $\{a\}\subseteq A$ ; $\varnothing\subseteq A$ ; $c\in A\cap B$.
+(d) Placer : $-7$, $\tfrac14$, $\sqrt2$ (parmi $\mathbb{Z}\setminus\mathbb{N}$, $\mathbb{Q}\setminus\mathbb{Z}$, $\mathbb{R}\setminus\mathbb{Q}$).
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+*Référence théorique.*
+
+Slides *« Ensembles »*, *« Opérations »*, *« Ensembles de nombres »*. Distinguer **appartenance**
+$\in$ et **inclusion** $\subseteq$. Chaîne :
+$\mathbb{N}\subsetneq\mathbb{Z}\subsetneq\mathbb{Q}\subsetneq\mathbb{R}\subsetneq\mathbb{C}$.
+
+## Indice 2
+
+*Question à te poser.*
+
+Pour (c) : $\{a\}$ est-il un **élément** de $A$, ou un **sous-ensemble** de $A$ ? Pour (d) : entier ?
+rationnel non entier ? irrationnel ?
+
+## Solution
+
+(a) $A\cup B=\{a,b,c,d\}$ ; $A\cap B=\{c\}$ ; $A\setminus B=\{a,b\}$ ; $B\setminus A=\{d\}$.
+(b) $A\times B=\{(a,c),(a,d),(b,c),(b,d),(c,c),(c,d)\}$, cardinal $6$.
+(c) $a\in A$ **V** ; $\{a\}\in A$ **F** ; $\{a\}\subseteq A$ **V** ; $\varnothing\subseteq A$ **V** ; $c\in A\cap B$ **V**.
+(d) $-7\in\mathbb{Z}\setminus\mathbb{N}$ ; $\tfrac14\in\mathbb{Q}\setminus\mathbb{Z}$ ; $\sqrt2\in\mathbb{R}\setminus\mathbb{Q}$.
+
+## Piège
+
+Confondre $\in$ et $\subseteq$ : écrire $\{a\}\in A$ (faux) au lieu de $\{a\}\subseteq A$ (vrai).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 6|Socle|2"}
+**Quantificateurs et négation.** Pour chaque proposition : dire si elle est **vraie** ou **fausse**,
+puis écrire sa **négation** et l'évaluer.
+
+(a) $\forall x\in\mathbb{R},\ x^2\ge 0$.
+(b) $\exists n\in\mathbb{N},\ n+2 = 5$.
+(c) $\forall x\in\mathbb{R},\ x^2 > 0$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+*Référence théorique.*
+
+Slides *« Quantificateurs »* / *« Nier une proposition quantifiée »* :
+$\lnot(\forall x,\varphi) \Leftrightarrow \exists x,\lnot\varphi$ et
+$\lnot(\exists x,\varphi) \Leftrightarrow \forall x,\lnot\varphi$. Un seul contre-exemple réfute un
+$\forall$.
+
+## Indice 2
+
+*Question à te poser.*
+
+Pour nier : **échanger** $\forall$ et $\exists$, et nier l'intérieur. Négation de « $\ge$ » : « $<$ »
+; de « $=$ » : « $\ne$ » ; de « $>$ » : « $\le$ ».
+
+## Solution
+
+(a) **Vraie**. Négation : $\exists x,\ x^2<0$ — **fausse**.
+(b) **Vraie** ($n=3$). Négation : $\forall n,\ n+2\ne 5$ — **fausse**.
+(c) **Fausse** ($x=0$). Négation : $\exists x,\ x^2\le 0$ — **vraie** ($x=0$).
+
+## Piège
+
+Nier en **gardant le même quantificateur** ; ou nier « $>$ » par « $<$ » en oubliant l'égalité (la
+négation de $>$ est $\le$).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 7|Socle|2"}
+**Retrouver la proposition cachée.** Voici la table de vérité de deux propositions $a$ et $b$ et
+d'une proposition cachée « ? » (dont la colonne est remplie). Parmi les propositions proposées,
+laquelle a **exactement** cette colonne ?
+
+| $a$ | $b$ | ? |
+|:--:|:--:|:--:|
+| V | V | V |
+| V | F | V |
+| F | V | F |
+| F | F | V |
+
+Choix : (A) $a \Rightarrow b$ ;  (B) $b \Rightarrow a$ ;  (C) $a \land b$ ;  (D) $a \lor b$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+*Référence théorique.*
+
+Slide *« Comprendre l'implication »* : $\varphi\Rightarrow\psi$ est **fausse dans le seul cas**
+$\varphi$ vraie et $\psi$ fausse.
+
+## Indice 2
+
+*Question à te poser.*
+
+Repère l'**unique ligne** où « ? » vaut **F**. Sur cette ligne, quelle proposition atomique est vraie
+(la prémisse) et laquelle est fausse (la conclusion) ?
+
+## Solution
+
+« ? » vaut F seulement à la ligne $a=F,\ b=V$. Une implication est fausse quand sa **prémisse** est
+vraie et sa **conclusion** fausse : ici la prémisse est $b$ (V), la conclusion $a$ (F). Donc
+« ? » $=\,b\Rightarrow a$ — réponse **(B)**.
+
+## Piège
+
+Choisir $a\Rightarrow b$ (la **réciproque**) : la direction est inversée. Vérifie toujours *sur quelle
+ligne* l'implication doit être fausse.
+
+:::
+:::
+
+## Transfert — problèmes
+
+::: {.callout-caution .exo title="Exercice 8|Transfert|3"}
+**Enchaîner des implications.** Dans un écosystème, on admet deux règles :
+(R1) « tout organisme photosynthétique est autotrophe » : $P \Rightarrow A$ ;
+(R2) « aucun autotrophe n'est un prédateur » : $A \Rightarrow \lnot Pr$.
+
+(a) Un organisme photosynthétique peut-il être un prédateur ? Justifier par une **chaîne
+d'implications**.
+(b) Écrire la **contraposée** de (R2).
+(c) On observe un prédateur. Que peut-on en déduire quant à « autotrophe » et « photosynthétique » ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+*Référence théorique.*
+
+Slides *« Comprendre l'implication »* et *« Réciproque, contraposée »*. Une implication se
+**compose** ($P\Rightarrow A$ et $A\Rightarrow C$ donnent $P\Rightarrow C$) ; la contraposée de
+$A\Rightarrow B$ est $\lnot B\Rightarrow\lnot A$.
+
+## Indice 2
+
+*Question à te poser.*
+
+Peux-tu enchaîner (R1) puis (R2) : que donne $P\Rightarrow A$ suivi de $A\Rightarrow\lnot Pr$ ? Pour
+(c), pars de « $Pr$ » et remonte la chaîne par contraposées.
+
+## Indice 3
+
+*Étape.*
+
+$P\Rightarrow A\Rightarrow \lnot Pr$. Et la contraposée de $P\Rightarrow A$ est
+$\lnot A\Rightarrow\lnot P$.
+
+## Solution
+
+(a) **Non.** Par composition, $P\Rightarrow A$ et $A\Rightarrow\lnot Pr$ donnent
+$P\Rightarrow\lnot Pr$ : un organisme photosynthétique n'est pas un prédateur.
+
+(b) Contraposée de (R2) : $Pr \Rightarrow \lnot A$ (« si prédateur, alors non autotrophe »).
+
+(c) De $Pr$ : par (b), $\lnot A$ ; puis par la contraposée de (R1) ($\lnot A\Rightarrow\lnot P$),
+$\lnot P$. Un prédateur n'est **ni autotrophe ni photosynthétique**.
+
+## Piège
+
+Inverser une implication (croire que « autotrophe $\Rightarrow$ photosynthétique »), ou se tromper
+dans la contraposée en oubliant de nier **les deux** membres.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 9|Transfert|2"}
+**Traduire avec des ensembles.** En consultation, soit $U$ l'ensemble de tous les patients vus, $F$
+l'ensemble des patients fébriles et $T$ celui des patients qui toussent. Exprimer par des ensembles
+(ou traduire en français) :
+
+(a) « les patients fébriles qui ne toussent pas » ;
+(b) « les patients qui présentent au moins un des deux symptômes » ;
+(c) l'énoncé $F \cap T = \varnothing$ (en français) ;
+(d) « les patients sans fièvre ni toux ».
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+*Référence théorique.*
+
+Slides *« Opérations sur les ensembles »* et De Morgan. Correspondances : $\cup\leftrightarrow$
+« ou », $\cap\leftrightarrow$ « et », « ne… pas » = complément par rapport à $U$, noté $U\setminus X$.
+De Morgan ensembliste : $U\setminus(X\cup Y)=(U\setminus X)\cap(U\setminus Y)$.
+
+## Indice 2
+
+*Question à te poser.*
+
+« sans toux » = quelle opération ? « au moins un » = union ou intersection ? « ni… ni… » = complément
+de quoi ?
+
+## Solution
+
+(a) $F \setminus T$.
+(b) $F \cup T$.
+(c) « Aucun patient n'a **à la fois** de la fièvre et de la toux » (les deux symptômes ne coexistent
+jamais).
+(d) $U\setminus(F \cup T) = (U\setminus F) \cap (U\setminus T)$ (De Morgan).
+
+## Piège
+
+Confondre $\cup$ (« au moins un ») et $\cap$ (« les deux ») ; et écrire « ni $F$ ni $T$ » comme
+$(U\setminus F)\cup(U\setminus T)$ au lieu de $(U\setminus F)\cap(U\setminus T)$ (De Morgan).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 10|Transfert|3"}
+**Quantificateurs imbriqués et négation.** Pour une bactérie $b$ et un antibiotique $a$, $\psi(a,b)$
+signifie « $a$ est efficace contre $b$ ». On considère
+$$(\star)\qquad \forall b,\ \exists a,\ \psi(a,b).$$
+
+(a) Traduire $(\star)$ en français.
+(b) Traduire $\exists a,\ \forall b,\ \psi(a,b)$, et dire laquelle de $(\star)$ ou celle-ci est la
+plus **forte**.
+(c) Écrire la **négation** de $(\star)$, puis la traduire en français.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+*Référence théorique.*
+
+Slides *« Quantificateurs »*, *« Propositions complexes »*, *« Nier une proposition quantifiée »* :
+l'ordre $\forall\exists$ vs $\exists\forall$ change le sens ; nier échange
+$\forall\leftrightarrow\exists$ et nie l'intérieur.
+
+## Indice 2
+
+*Question à te poser.*
+
+Dans $(\star)$, l'antibiotique « $\exists a$ » a-t-il le droit de **dépendre** de la bactérie $b$ ?
+Pour (c) : que deviennent $\forall b$, puis $\exists a$, puis $\psi$, quand on nie ?
+
+## Solution
+
+(a) « Pour **toute** bactérie, il existe un antibiotique efficace contre elle » (l'antibiotique peut
+dépendre de la bactérie).
+
+(b) « Il existe **un seul** antibiotique efficace contre **toutes** les bactéries » (un antibiotique
+universel). C'est la **plus forte** : $\exists a\,\forall b\ \Rightarrow\ \forall b\,\exists a$, pas
+l'inverse.
+
+(c) $\lnot(\star) \equiv \exists b,\ \forall a,\ \lnot\psi(a,b)$ : « il existe une bactérie contre
+laquelle **aucun** antibiotique n'est efficace ».
+
+## Piège
+
+Garder le même ordre en niant, ou croire $\forall b\,\exists a \equiv \exists a\,\forall b$. La
+négation de $(\star)$ **échange** les quantificateurs : $\exists b,\forall a,\lnot\psi$.
+
+:::
+:::
+
+## Exercices supplémentaires
+
+::: {.callout-tip title="À qui s'adressent ces exercices ?"}
+Tu as terminé le socle **et** le transfert avant la fin ? Ces exercices sont pour toi — **facultatifs**
+et **pas à l'examen**. Ils viennent en **deux familles** ; choisis selon ton besoin :
+
+- **Renforcement** — les *mêmes* savoir-faire que le socle, un cran de pratique en plus. Si tu as fini
+  vite mais que tu ne te sens pas encore *sûr·e* de toi, commence ici.
+- **Dépassement** — on va un peu *plus loin* que le programme, pour le plaisir. Si le socle t'a paru
+  facile, va directement là.
+
+L'échelle de coups de pouce y est plus courte (un indice, puis la solution) : à ce stade, tu n'en as
+normalement plus besoin d'autant.
+:::
+
+### Renforcement — le socle, un cran plus loin
+
+::: {.callout-caution .exo title="Exercice 11|Renforcement|2"}
+**Traduire (bis).** On pose $\varphi$ : « l'animal est un mammifère » et $\psi$ : « l'animal allaite
+ses petits ». Traduire :
+
+(a) « L'animal est un mammifère **mais** il n'allaite pas. »
+(b) « **Si** l'animal est un mammifère **alors** il allaite. »
+(c) $\lnot(\varphi\land\psi)$ en français.
+(d) « L'animal n'est **pas** un mammifère **ou** il allaite. »
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice ?
+
+« mais » se traduit comme « et » ($\land$) ; attention au sens de $\Rightarrow$ (*qui* implique
+*qui* ?). Pour (c), applique De Morgan : $\lnot(P\land Q)\equiv\lnot P\lor\lnot Q$.
+
+## Solution
+
+(a) $\varphi\land\lnot\psi$.
+(b) $\varphi\Rightarrow\psi$.
+(c) « L'animal n'est pas un mammifère **ou** il n'allaite pas » $=\lnot\varphi\lor\lnot\psi$.
+(d) $\lnot\varphi\lor\psi$ — qui est justement une écriture de $\varphi\Rightarrow\psi$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 12|Renforcement|1"}
+**De Morgan — l'autre loi.** Construire la table de vérité de $\lnot\varphi$, $\lnot\psi$,
+$\varphi\lor\psi$, puis vérifier que
+$$\lnot(\varphi\lor\psi)\ \Leftrightarrow\ \lnot\varphi\land\lnot\psi.$$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice ?
+
+Quatre lignes. $\varphi\lor\psi$ n'est **fausse** que lorsque $\varphi$ **et** $\psi$ sont fausses,
+donc $\lnot(\varphi\lor\psi)$ n'est **vraie** que sur cette unique ligne.
+
+## Solution
+
+| $\varphi$ | $\psi$ | $\varphi\lor\psi$ | $\lnot(\varphi\lor\psi)$ | $\lnot\varphi\land\lnot\psi$ |
+|:--:|:--:|:--:|:--:|:--:|
+| V | V | V | F | F |
+| V | F | V | F | F |
+| F | V | V | F | F |
+| F | F | F | **V** | **V** |
+
+Les deux dernières colonnes coïncident : $\lnot(\varphi\lor\psi)\equiv\lnot\varphi\land\lnot\psi$. ✓
+(nier « $\varphi$ **ou** $\psi$ », c'est « ni l'un ni l'autre ».)
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 13|Renforcement|2"}
+**Réciproque, contraposée (bis).** Soit $P$ (avec $n\in\mathbb{N}$) : « si $n$ est multiple de $6$,
+alors $n$ est multiple de $3$ ».
+
+(a) Écrire la **réciproque** et la **contraposée** de $P$.
+(b) Dire lesquelles des trois sont vraies, par un contre-exemple si nécessaire.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice ?
+
+Réciproque = on **échange** ; contraposée = on **nie et on échange**. Pour tester la réciproque,
+cherche un multiple de $3$ qui n'est **pas** multiple de $6$.
+
+## Solution
+
+**Implication** : vraie (tout multiple de $6$ est multiple de $3$).
+**Réciproque** « si $n$ multiple de $3$ alors $n$ multiple de $6$ » : **fausse** ($n=3$).
+**Contraposée** « si $n$ n'est pas multiple de $3$ alors $n$ n'est pas multiple de $6$ » : **vraie**
+(équivalente à $P$).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 14|Renforcement|2"}
+**Ensembles (bis).** Soient $A=\{1,2,3\}$ et $B=\{3,4\}$.
+
+(a) Donner $A\cup B$, $A\cap B$, $A\setminus B$, $B\setminus A$.
+(b) Donner le **cardinal** de $A\times B$.
+(c) Vrai ou faux : $2\in A$ ; $\{2\}\in A$ ; $\{2,3\}\subseteq A$ ; $\varnothing\in A$ ; $3\in A\cap B$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice ?
+
+Distingue **élément** ($\in$) et **sous-ensemble** ($\subseteq$). Piège : $\varnothing\subseteq A$ est
+toujours vrai — mais $\varnothing\in A$ demande que $\varnothing$ soit **listé** parmi les éléments
+de $A$.
+
+## Solution
+
+(a) $A\cup B=\{1,2,3,4\}$ ; $A\cap B=\{3\}$ ; $A\setminus B=\{1,2\}$ ; $B\setminus A=\{4\}$.
+(b) $|A\times B|=3\times 2=6$.
+(c) $2\in A$ **V** ; $\{2\}\in A$ **F** ($\{2\}$ est un sous-ensemble, pas un élément) ;
+$\{2,3\}\subseteq A$ **V** ; $\varnothing\in A$ **F** ($A$ ne contient pas $\varnothing$ comme
+élément) ; $3\in A\cap B$ **V**.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 15|Renforcement|2"}
+**Quantificateurs et négation (bis).** Pour chaque proposition : dire si elle est **vraie** ou
+**fausse**, écrire sa **négation**, puis l'évaluer.
+
+(a) $\forall n\in\mathbb{N},\ n+1 > n$.
+(b) $\exists x\in\mathbb{R},\ x^2 = 2$.
+(c) $\forall x\in\mathbb{R},\ x^2 \ne x$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice ?
+
+Nier : **échanger** $\forall$ et $\exists$, puis nier l'intérieur. Négation de « $>$ » : « $\le$ » ;
+de « $=$ » : « $\ne$ » ; de « $\ne$ » : « $=$ ». Un seul contre-exemple réfute un $\forall$.
+
+## Solution
+
+(a) **Vraie**. Négation : $\exists n\in\mathbb{N},\ n+1\le n$ — **fausse**.
+(b) **Vraie** ($x=\sqrt2$). Négation : $\forall x\in\mathbb{R},\ x^2\ne 2$ — **fausse**.
+(c) **Fausse** ($x=0$ donne $0^2=0$, et $x=1$ aussi). Négation : $\exists x\in\mathbb{R},\ x^2=x$ —
+**vraie** ($x=0$ ou $x=1$).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 16|Renforcement|2"}
+**Retrouver la proposition cachée (bis).** Voici la table de vérité de $a$, $b$ et d'une proposition
+cachée « ? ». Parmi les choix, laquelle a **exactement** cette colonne ?
+
+| $a$ | $b$ | ? |
+|:--:|:--:|:--:|
+| V | V | V |
+| V | F | F |
+| F | V | V |
+| F | F | V |
+
+Choix : (A) $a\Rightarrow b$ ;  (B) $b\Rightarrow a$ ;  (C) $a\lor b$ ;  (D) $a\land b$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice ?
+
+Repère l'**unique ligne** où « ? » vaut **F**. Sur cette ligne, quelle proposition est vraie (la
+prémisse) et laquelle est fausse (la conclusion) ?
+
+## Solution
+
+« ? » vaut F seulement à la ligne $a=V,\ b=F$ : prémisse $a$ (V), conclusion $b$ (F). C'est donc
+$a\Rightarrow b$ — réponse **(A)**. (Cette fois la direction est $a\Rightarrow b$, l'inverse de
+l'exercice 7 du socle : c'est toujours la **ligne fausse** qui tranche.)
+
+:::
+:::
+
+### Dépassement — un peu au-delà du programme
+
+::: {.callout-caution .exo title="Exercice 17|Dépassement|2"}
+**L'implication autrement.** On veut relier l'implication aux connecteurs $\lnot$, $\lor$, $\land$.
+
+(a) Dresser la table de vérité de $\varphi\Rightarrow\psi$ et celle de $\lnot\varphi\lor\psi$, et
+constater qu'elles coïncident.
+(b) En déduire une écriture de $\lnot(\varphi\Rightarrow\psi)$ *sans* le symbole $\Rightarrow$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice ?
+
+Quatre lignes ($\varphi,\psi\in\{V,F\}$), une colonne par proposition. Pour (b), nie $\lnot\varphi\lor\psi$
+et applique De Morgan : $\lnot(P\lor Q)\equiv\lnot P\land\lnot Q$.
+
+## Solution
+
+(a) Les deux colonnes valent **F** uniquement sur la ligne $\varphi=V,\ \psi=F$, et **V** sur les
+trois autres : elles sont identiques, donc $\varphi\Rightarrow\psi\equiv\lnot\varphi\lor\psi$.
+
+(b) $\lnot(\varphi\Rightarrow\psi)\equiv\lnot(\lnot\varphi\lor\psi)\equiv\varphi\land\lnot\psi$ :
+« nier une implication », c'est affirmer l'hypothèse **et** nier la conclusion.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 18|Dépassement|2"}
+**Toujours vraie, jamais vraie, ou ça dépend ?** Pour chaque proposition, dire si c'est une
+**tautologie** (vraie quelles que soient les valeurs), une **contradiction** (jamais vraie), ou une
+**contingence** (ni l'une ni l'autre).
+
+(a) $\varphi\lor\lnot\varphi$   (b) $\varphi\land\lnot\varphi$
+(c) $(\varphi\Rightarrow\psi)\Rightarrow(\lnot\psi\Rightarrow\lnot\varphi)$
+(d) $(\varphi\lor\psi)\Rightarrow\varphi$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice ?
+
+Une table de vérité tranche à coup sûr : tautologie = colonne finale tout **V**, contradiction = tout
+**F**. Pour (c), regarde ce que $\lnot\psi\Rightarrow\lnot\varphi$ représente par rapport à
+$\varphi\Rightarrow\psi$.
+
+## Solution
+
+(a) **Tautologie** (tiers exclu). (b) **Contradiction** (principe de non-contradiction).
+(c) **Tautologie** : $\lnot\psi\Rightarrow\lnot\varphi$ est la **contraposée** de
+$\varphi\Rightarrow\psi$, donc les deux membres sont équivalents et l'implication est toujours vraie.
+(d) **Contingence** : fausse pour $\varphi=F,\ \psi=V$ (l'hypothèse est vraie, la conclusion fausse),
+vraie ailleurs.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 19|Dépassement|3"}
+**L'ordre des quantificateurs, sur les réels.** On travaille dans $\mathbb{R}$.
+$$(\star)\qquad \forall x,\ \exists y,\ x+y=0.$$
+
+(a) $(\star)$ est-elle vraie ? Justifier.
+(b) Écrire $\exists y,\ \forall x,\ x+y=0$ et dire si elle est vraie.
+(c) Écrire la **négation** de $(\star)$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice ?
+
+Dans $(\star)$, le $y$ « $\exists y$ » vient **après** $\forall x$ : il a le droit de dépendre de $x$.
+Dans (b), un **même** $y$ doit convenir pour tous les $x$. Nier : $\forall\leftrightarrow\exists$ et on
+nie l'égalité intérieure.
+
+## Solution
+
+(a) **Vraie** : pour $x$ donné, prends $y=-x$ ; alors $x+y=0$. Le $y$ dépend de $x$, c'est permis.
+
+(b) « Il existe un réel $y$ tel que, pour **tout** $x$, $x+y=0$. » **Fausse** : un $y$ fixé ne peut
+annuler $x+y$ que pour le seul $x=-y$, pas pour tous.
+
+(c) $\lnot(\star)\equiv\exists x,\ \forall y,\ x+y\neq 0$ (« il existe un $x$ que **aucun** $y$
+n'annule ») — fausse, comme il se doit.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 20|Dépassement|3"}
+**Distributivité et fausse symétrie.** Soient $A$, $B$, $C$ des ensembles.
+
+(a) Démontrer $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$.
+(b) L'égalité $A\setminus(B\cap C)=(A\setminus B)\cap(A\setminus C)$ est-elle vraie ? Sinon, donner un
+**contre-exemple** et écrire l'identité correcte.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice ?
+
+(a) Montre $x\in$ membre de gauche $\Leftrightarrow x\in$ membre de droite, en traduisant $\cap$ par
+« et », $\cup$ par « ou ». (b) Teste sur de petits ensembles ; rappelle-toi De Morgan pour la
+différence : $A\setminus(B\cap C)=(A\setminus B)\cup(A\setminus C)$.
+
+## Solution
+
+(a) $x\in A\cap(B\cup C)\ \Leftrightarrow\ x\in A\ \text{et}\ (x\in B\ \text{ou}\ x\in C)\
+\Leftrightarrow\ (x\in A\ \text{et}\ x\in B)\ \text{ou}\ (x\in A\ \text{et}\ x\in C)\
+\Leftrightarrow\ x\in(A\cap B)\cup(A\cap C)$ (distributivité du « et » sur le « ou »).
+
+(b) **Fausse.** Contre-exemple : $A=\{1,2\}$, $B=\{1\}$, $C=\{2\}$. Alors $B\cap C=\varnothing$, donc
+$A\setminus(B\cap C)=A=\{1,2\}$ ; tandis que $A\setminus B=\{2\}$, $A\setminus C=\{1\}$, dont
+l'intersection est $\varnothing$. L'identité correcte est $A\setminus(B\cap C)=(A\setminus B)\cup
+(A\setminus C)$ (De Morgan : nier « $B$ **et** $C$ » donne « pas $B$ **ou** pas $C$ »).
+
+:::
+:::
+
+---
+
+En fin de séance, on institutionnalise la **méthode pour nier une proposition** — voir l'annexe
+[Boîte à outils](methode.qmd).

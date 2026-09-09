@@ -1,0 +1,431 @@
+## Exercices supplémentaires
+
+::: {.callout-note appearance="simple"}
+Ces exercices restent **dans les objectifs** de la séance (donc **examinables**) : à faire une fois
+le socle et le transfert bouclés, en séance ou à la maison. À ne pas confondre avec les *dépassements* ci-dessous,
+qui sont facultatifs et hors-examen.
+:::
+
+::: {.callout-caution .exo title="Exercice 12| Socle|2|O1"}
+On pose $\varphi$ : « le patient est malade »
+et $\psi$ : « le test est positif ». Traduire :
+
+(a) « Le patient est malade **mais** son test est négatif. »
+(b) « **Si** le test est positif **alors** le patient est malade. »
+(c) $\lnot(\varphi \lor \psi)$ en français.
+(d) « Le patient est malade **ou** son test est négatif. »
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Comment combiner des propositions ? Connecteurs logiques*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quel connecteur porte la phrase (et / ou / si…alors / non) ? Attention au sens de l'implication :
+*qui* implique *qui* ?
+
+## Solution
+
+(a) $\varphi \land \lnot\psi$.
+(b) $\psi \Rightarrow \varphi$ (c'est le test qui implique la maladie).
+(c) « Le patient n'est **ni** malade **ni** positif », soit $\lnot\varphi \land \lnot\psi$.
+(d) $\varphi \lor \lnot\psi$.
+
+## Piège
+
+Traduire « mais » autrement que par $\land$ ; inverser le sens de l'implication en (b).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 13|Socle|2|O2"}
+ Soient $A = \{a,b,c\}$ et $B = \{c,d\}$.
+
+(a) Donner $A\cup B$, $A\cap B$, $A\setminus B$, $B\setminus A$.
+(b) Donner $A\times B$ et son cardinal.
+(c) Vrai ou faux : $a\in A$ ; $\{a\}\in A$ ; $\{a\}\subseteq A$ ; $\varnothing\subseteq A$ ; $c\in A\cap B$.
+(d) Placer : $-7$, $\tfrac14$, $\sqrt2$ parmi les ensembles $\mathbb{Z}\setminus\mathbb{N}$, $\mathbb{Q}\setminus\mathbb{Z}$, $\mathbb{R}\setminus\mathbb{Q}$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Ensembles : regrouper des objets*, *Ensembles de nombres* et *Opérations sur les ensembles*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Pour (c) : $\{a\}$ est-il un **élément** de $A$, ou un **sous-ensemble** de $A$ ? Pour (d) : qui est entier non naturel ?
+qui est rationnel non entier ? qui est irrationnel ?
+
+## Solution
+
+(a) $A\cup B=\{a,b,c,d\}$ ; $A\cap B=\{c\}$ ; $A\setminus B=\{a,b\}$ ; $B\setminus A=\{d\}$.
+(b) $A\times B=\{(a,c),(a,d),(b,c),(b,d),(c,c),(c,d)\}$, cardinal $6$.
+(c) $a\in A$ **V** ; $\{a\}\in A$ **F** ; $\{a\}\subseteq A$ **V** ; $\varnothing\subseteq A$ **V** ; $c\in A\cap B$ **V**.
+(d) $-7\in\mathbb{Z}\setminus\mathbb{N}$ ; $\tfrac14\in\mathbb{Q}\setminus\mathbb{Z}$ ; $\sqrt2\in\mathbb{R}\setminus\mathbb{Q}$.
+
+## Piège
+
+Confondre $\in$ et $\subseteq$ : écrire $\{a\}\in A$ (faux) au lieu de $\{a\}\subseteq A$ (vrai).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 14|Socle|2|O2"}
+Voici la table de vérité de deux propositions $a$ et $b$ et
+d'une proposition cachée « ? ». Parmi les propositions proposées, laquelle a **exactement** cette
+colonne ?
+
+| $a$ | $b$ | ? |
+|:--:|:--:|:--:|
+| V | V | V |
+| V | F | V |
+| F | V | F |
+| F | F | V |
+
+Choix : (A) $a \Rightarrow b$ ;  (B) $b \Rightarrow a$ ;  (C) $a \land b$ ;  (D) $a \lor b$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Comprendre l'implication*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Repère l'**unique ligne** où « ? » vaut **F**. Sur cette ligne, quelle proposition atomique est vraie
+(la prémisse) et laquelle est fausse (la conclusion) ?
+
+## Solution
+
+« ? » vaut F seulement à la ligne $a=F,\ b=V$. Une implication est fausse quand sa **prémisse** est
+vraie et sa **conclusion** fausse : ici la prémisse est $b$ (V), la conclusion $a$ (F). Donc
+« ? » $=\,b\Rightarrow a$ — réponse **(B)**.
+
+## Piège
+
+Choisir $a\Rightarrow b$ (la **réciproque**) : la direction est inversée. Vérifie toujours *sur quelle
+ligne* l'implication doit être fausse.
+
+:::
+:::
+
+
+
+
+::: {.callout-caution .exo title="Exercice 15|Socle|2|O1"}
+On pose $\varphi$ : « l'animal est un mammifère » et $\psi$ : « l'animal allaite
+ses petits ». Traduire :
+
+(a) « L'animal est un mammifère **mais** il n'allaite pas. »
+(b) « **Si** l'animal est un mammifère **alors** il allaite. »
+(c) $\lnot(\varphi\land\psi)$ en français.
+(d) « L'animal n'est **pas** un mammifère **ou** il allaite. »
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+« mais » se traduit comme « et » ($\land$) ; attention au sens de $\Rightarrow$ (*qui* implique
+*qui* ?). Pour (c), applique De Morgan : $\lnot(P\land Q)\Leftrightarrow\lnot P\lor\lnot Q$.
+
+## Solution
+
+(a) $\varphi\land\lnot\psi$.
+(b) $\varphi\Rightarrow\psi$.
+(c) « L'animal n'est pas un mammifère **ou** il n'allaite pas » $=\lnot\varphi\lor\lnot\psi$.
+(d) $\lnot\varphi\lor\psi$ — qui est justement une écriture de $\varphi\Rightarrow\psi$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 16|Socle|1|O2"}
+Construire la table de vérité de $\lnot\varphi$, $\lnot\psi$,
+$\varphi\lor\psi$, puis vérifier que
+$$\lnot(\varphi\lor\psi)\ \Leftrightarrow\ \lnot\varphi\land\lnot\psi.$$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Dans ton tableau, il y a 5 ligne. La proposition $\varphi\lor\psi$ n'est **fausse** que lorsque $\varphi$ **et** $\psi$ sont fausses,
+donc $\lnot(\varphi\lor\psi)$ n'est **vraie** que sur cette ligne.
+
+## Solution
+
+| $\varphi$ | $\psi$ | $\varphi\lor\psi$ | $\lnot(\varphi\lor\psi)$ | $\lnot\varphi\land\lnot\psi$ |
+|:--:|:--:|:--:|:--:|:--:|
+| V | V | V | F | F |
+| V | F | V | F | F |
+| F | V | V | F | F |
+| F | F | F | **V** | **V** |
+
+Les deux dernières colonnes coïncident : $\lnot(\varphi\lor\psi)\Leftrightarrow\lnot\varphi\land\lnot\psi$. Autrement dit: nier « $\varphi$ **ou** $\psi$ », c'est n'avoir « ni l'un ni l'autre ».
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 17|Socle|2|O2"}
+Soit $P$ l'implication : « si $n$ est multiple de $6$,
+alors $n$ est multiple de $3$ ».
+
+(a) Écrire la **réciproque** et la **contraposée** de $P$.
+(b) Dire lesquelles des trois sont vraies, par un contre-exemple si nécessaire.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Réciproque = on **échange** ; contraposée = on **nie et on échange**. Pour tester la réciproque,
+cherche un multiple de $3$ qui n'est **pas** multiple de $6$.
+
+## Solution
+
+**Implication** : vraie (tout multiple de $6$ est multiple de $3$).
+
+**Réciproque** « si $n$ multiple de $3$ alors $n$ multiple de $6$ » : **fausse** ($n=3$).
+
+**Contraposée** « si $n$ n'est pas multiple de $3$ alors $n$ n'est pas multiple de $6$ » : **vraie** car équivalente à $P$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 18|Socle|2|O2"}
+oient $A=\{1,2,3\}$ et $B=\{3,4\}$.
+
+(a) Donner $A\cup B$, $A\cap B$, $A\setminus B$, $B\setminus A$.
+(b) Donner le **cardinal** de $A\times B$.
+(c) Vrai ou faux : $2\in A$ ; $\{2\}\in A$ ; $\{2,3\}\subseteq A$ ; $\varnothing\in A$ ; $3\in A\cap B$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Distingue **élément** ($\in$) et **sous-ensemble** ($\subseteq$). Piège : $\varnothing\subseteq A$ est
+toujours vrai — mais $\varnothing\in A$ demande que $\varnothing$ soit **listé** parmi les éléments
+de $A$.
+
+## Solution
+
+(a) $A\cup B=\{1,2,3,4\}$ ; $A\cap B=\{3\}$ ; $A\setminus B=\{1,2\}$ ; $B\setminus A=\{4\}$.
+(b) le cardinal de $A\times B$ est $3\times 2=6$.
+(c) $2\in A$ **V** ; $\{2\}\in A$ **F** ($\{2\}$ est un sous-ensemble, pas un élément) ;
+$\{2,3\}\subseteq A$ **V** ; $\varnothing\in A$ **F** ($A$ ne contient pas $\varnothing$ comme
+élément) ; $3\in A\cap B$ **V**.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 19|Socle|2|O2"}
+Pour chaque proposition : dire si elle est **vraie** ou
+**fausse**, écrire sa **négation**, puis l'évaluer.
+
+(a) $\forall n\in\mathbb{N},\ n+1 > n$.
+(b) $\exists x\in\mathbb{R},\ x^2 = 2$.
+(c) $\forall x\in\mathbb{R},\ x^2 \ne x$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Nier : **échanger** $\forall$ et $\exists$, puis nier l'intérieur. Négation de « $>$ » : « $\le$ » ;
+de « $=$ » : « $\ne$ » ; de « $\ne$ » : « $=$ ». Un seul contre-exemple réfute un $\forall$.
+
+## Solution
+
+(a) **Vraie**. Négation : $\exists n\in\mathbb{N},\ n+1\le n$ — **fausse**.
+(b) **Vraie** ($x=\sqrt2$). Négation : $\forall x\in\mathbb{R},\ x^2\ne 2$ — **fausse**.
+(c) **Fausse** ($x=0$ donne $0^2=0$, et $x=1$ aussi). Négation : $\exists x\in\mathbb{R},\ x^2=x$ —
+**vraie** ($x=0$ ou $x=1$).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 20|Socle|2|O2"}
+Voici la table de vérité de $a$, $b$ et d'une proposition
+cachée « ? ». Parmi les choix, laquelle a **exactement** cette colonne ?
+
+| $a$ | $b$ | ? |
+|:--:|:--:|:--:|
+| V | V | V |
+| V | F | F |
+| F | V | V |
+| F | F | V |
+
+Choix : (A) $a\Rightarrow b$ ;  (B) $b\Rightarrow a$ ;  (C) $a\lor b$ ;  (D) $a\land b$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Repère l'**unique ligne** où « ? » vaut **F**. Sur cette ligne, quelle proposition est vraie (la
+prémisse) et laquelle est fausse (la conclusion) ?
+
+## Solution
+
+« ? » vaut F seulement à la ligne $a=V,\ b=F$ : prémisse $a$ (V), conclusion $b$ (F). C'est donc
+$a\Rightarrow b$ — réponse **(A)**. (Cette fois la direction est $a\Rightarrow b$, l'inverse de
+l'exercice 7 du socle : c'est toujours la **ligne fausse** qui tranche.)
+
+:::
+:::
+
+## Exercices de dépassement 
+
+::: {.callout-tip title="À qui s'adressent ces exercices ?"}
+Tu as terminé le socle,  le transfert *et* les exercices Renforcement du Transferts? Ces exercices sont pour toi — **facultatifs**
+et **pas à l'examen**. Dans ces exercices on va un peu *plus loin* que le programme, pour le plaisir. 
+
+L'échelle de coups de pouce y est plus courte (un indice, puis la solution).
+:::
+
+::: {.callout-caution .exo title="Exercice 21|Dépassement|2|O2"}
+On veut relier l'implication aux connecteurs $\lnot$, $\lor$, $\land$.
+
+(a) Dresser la table de vérité de $\varphi\Rightarrow\psi$ et celle de $\lnot\varphi\lor\psi$, et
+constater qu'elles coïncident.
+(b) En déduire une écriture de $\lnot(\varphi\Rightarrow\psi)$ *sans* le symbole $\Rightarrow$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+La table aura 5 lignes et une colonne par proposition. Pour (b), nie $\lnot\varphi\lor\psi$
+et applique De Morgan : $\lnot(P\lor Q)\equiv\lnot P\land\lnot Q$.
+
+## Solution
+
+(a) Les deux colonnes valent **F** uniquement sur la ligne $\varphi=V,\ \psi=F$, et **V** sur les
+trois autres : elles sont identiques, donc $\varphi\Rightarrow\psi\Leftrightarrow\lnot\varphi\lor\psi$.
+
+(b) $\lnot(\varphi\Rightarrow\psi)\Leftrightarrow\lnot(\lnot\varphi\lor\psi)\equiv\varphi\land\lnot\psi$ :
+« nier une implication », c'est affirmer l'hypothèse **et** nier la conclusion.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 22|Dépassement|2|O2"}
+ Pour chaque proposition, dire si c'est une
+**tautologie** (vraie quelles que soient les valeurs), une **contradiction** (jamais vraie), ou une
+**contingence** (ni l'une ni l'autre).
+
+(a) $\varphi\lor\lnot\varphi$   
+(b) $\varphi\land\lnot\varphi$
+(c) $(\varphi\Rightarrow\psi)\Rightarrow(\lnot\psi\Rightarrow\lnot\varphi)$
+(d) $(\varphi\lor\psi)\Rightarrow\varphi$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Une table de vérité tranche à coup sûr : tautologie = colonne finale tout **V**, contradiction = tout
+**F**. Pour (b), regarde ce que $\lnot\psi\Rightarrow\lnot\varphi$ représente par rapport à
+$\varphi\Rightarrow\psi$.
+
+## Solution
+
+(a) **Tautologie** . 
+(b) **Contradiction** .
+(c) **Tautologie** : $\lnot\psi\Rightarrow\lnot\varphi$ est la **contraposée** de
+$\varphi\Rightarrow\psi$, donc les deux membres sont équivalents et l'implication est toujours vraie.
+(d) **Contingence** : fausse pour $\varphi=F,\ \psi=V$ (l'hypothèse est vraie, la conclusion fausse),
+vraie ailleurs.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 23|Dépassement|3|O2"}
+On travaille dans $\mathbb{R}$.
+$$(\star)\qquad \forall x,\ \exists y,\ x+y=0.$$
+
+(a) $(\star)$ est-elle vraie ? Justifier.
+(b) Écrire $\exists y,\ \forall x,\ x+y=0$ et dire si elle est vraie.
+(c) Écrire la **négation** de $(\star)$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Traduis $(\star)$ en français pour juger de sa vérité.
+
+Dans (b), un **même** $y$ doit convenir pour tous les $x$. 
+
+Pour la négation, n'oublie pas de nier l'égalité.
+
+## Solution
+
+(a) **Vraie** : pour $x$ donné, prends $y=-x$ ; alors $x+y=0$. Cette proposition dit que tout nombre réel à un opposé. 
+
+(b) « Il existe un réel $y$ tel que, pour **tout** $x$, $x+y=0$. » 
+**Fausse** : un $y$ fixé ne peut
+annuler $x+y$ que pour le seul $x=-y$, pas pour tous.
+
+(c) $\lnot(\star)\equiv\exists x,\ \forall y,\ x+y\neq 0$ (« il existe un $x$ que **aucun** $y$
+n'annule »).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice 24|Dépassement|3|O2"}
+Soient $A$, $B$, $C$ des ensembles.
+
+(a) Démontrer $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$.
+(b) L'égalité $A\setminus(B\cap C)=(A\setminus B)\cap(A\setminus C)$ est-elle vraie ? Sinon, donner un
+**contre-exemple** et écrire l'identité correcte.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+(a) Montre $x\in$ membre de gauche $\Leftrightarrow x\in$ membre de droite, en traduisant $\cap$ par
+« et », $\cup$ par « ou ». 
+
+(b) Teste sur de petits ensembles.
+
+## Solution
+
+(a) $x\in A\cap(B\cup C)\ \Leftrightarrow\ x\in A\ \text{et}\ (x\in B\ \text{ou}\ x\in C)\
+\Leftrightarrow\ (x\in A\ \text{et}\ x\in B)\ \text{ou}\ (x\in A\ \text{et}\ x\in C)\
+\Leftrightarrow\ x\in(A\cap B)\cup(A\cap C)$ (distributivité du « et » sur le « ou »).
+
+(b) **Fausse.** Contre-exemple : $A=\{1,2\}$, $B=\{1\}$, $C=\{2\}$. Alors $B\cap C=\varnothing$, donc
+$A\setminus(B\cap C)=A=\{1,2\}$ ; tandis que $A\setminus B=\{2\}$, $A\setminus C=\{1\}$, dont
+l'intersection est $\varnothing$. L'identité correcte est $A\setminus(B\cap C)=(A\setminus B)\cup
+(A\setminus C)$ (De Morgan : nier « $B$ **et** $C$ » donne « pas $B$ **ou** pas $C$ »).
+
+:::
+:::

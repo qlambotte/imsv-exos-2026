@@ -1,0 +1,9 @@
+::: {.content-visible when-format="html"}
+::: {.dl}
+<details class="dl-menu">
+<summary>Télécharger les énoncés (PDF)</summary>
+<a href="../../pdf/seance@@NN@@-enonces.pdf">Énoncés seuls</a>
+<a href="../../pdf/seance@@NN@@-complet.pdf">Énoncés + coups de pouce &amp; corrections</a>
+</details>
+:::
+:::

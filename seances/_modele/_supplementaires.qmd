@@ -1,0 +1,45 @@
+::: {.callout-tip title="À qui s'adressent ces exercices ?"}
+Tu as terminé le socle **et** le transfert avant la fin ? Ces exercices sont pour toi — **facultatifs**
+et **pas à l'examen**. Deux familles : **Renforcement** (mêmes savoir-faire que le socle) et
+**Dépassement** (un peu plus loin). Échelle courte : un indice, puis la solution.
+:::
+
+### Renforcement — le socle, un cran plus loin
+
+::: {.callout-caution .exo title="Exercice 9|Renforcement|2"}
+**Variation d'un exercice du socle** (même savoir-faire, contexte/valeurs nouveaux)………
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Un seul indice………
+
+## Solution
+
+………
+
+:::
+:::
+
+### Dépassement — un peu au-delà du programme
+
+::: {.callout-caution .exo title="Exercice 10|Dépassement|3"}
+**Prolongement hors programme**………
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Un seul indice………
+
+## Solution
+
+………
+
+:::
+:::

@@ -1,0 +1,19 @@
+---
+title: "Socle — exercices routiniers"
+subtitle: "Séance @@NN@@ · à faire à ton rythme"
+filters:
+  - ../../exercice.lua
+---
+
+{{< include _download.qmd >}}
+
+{{< include _consignes.qmd >}}
+
+Le socle, c'est le **noyau** que tout le monde vise : des exercices routiniers pour installer les
+automatismes. Prends-les à ton rythme ; ouvre les *coups de pouce* seulement si tu bloques.
+
+{{< include _socle.qmd >}}
+
+::: {.callout-note appearance="simple"}
+Terminé avant la fin ? Passe au **[Transfert](transfert.qmd)**.
+:::

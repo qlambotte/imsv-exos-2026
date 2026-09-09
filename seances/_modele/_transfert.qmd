@@ -1,0 +1,33 @@
+<!-- Fragment TRANSFERT (+ exercices supplémentaires). La numérotation CONTINUE
+     après le socle : si le socle va jusqu'à l'exercice 7, le transfert commence à 8.
+     Catégories : Transfert, puis Renforcement et Dépassement (supplémentaires). -->
+
+::: {.callout-caution .exo title="Exercice 8|Transfert|3"}
+**Titre du problème.** Énoncé (contexte nouveau, pas repris tel quel du cours)………
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+*Référence théorique.*
+
+………
+
+## Indice 2
+
+*Question à te poser.*
+
+………
+
+## Solution
+
+………
+
+## Piège
+
+………
+
+:::
+:::

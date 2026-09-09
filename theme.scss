@@ -1,0 +1,209 @@
+/*-- scss:defaults --*/
+
+// Couleurs de marque (servent aussi de base Bootstrap)
+$blue:   #1f5fbf;
+$primary:       $blue;
+$link-color:    $blue;
+
+// Typographie — Roboto (corps) + Roboto Slab (titres), façon « bookup ».
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Roboto+Slab:wght@500;600;700&family=JetBrains+Mono&display=swap');
+
+$font-family-sans-serif: "Roboto", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+$font-family-serif:      "Roboto Slab", Georgia, "Times New Roman", serif;
+$font-family-monospace:  "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+$headings-font-family: "Roboto Slab", Georgia, serif;
+$headings-font-weight: 600;
+$font-size-root: 16.5px;
+$line-height-base: 1.62;
+
+/*-- scss:rules --*/
+
+// =====================================================================
+//  Jetons de couleur — clair par défaut, sombre via [data-theme="dark"]
+// =====================================================================
+:root {
+  --accent:     #1f5fbf;
+  --h:          #14304a;
+  --muted:      #5a6b7b;
+  --rule:       #e5e9ef;
+  --page-bg:    #ffffff;
+  --text:       #24313d;
+  --side-bg:    #fbfcfd;
+  --card-bg:    #f6f8fb;
+  --card-brd:   #e5e9ef;
+  --exo-body:   #fffdfb;
+  --exo-bg:     #fdf3e8;
+  --exo-brd:    #f0dcc4;
+  --exo-accent: #c76e00;
+  --exo-title:  #9a4f00;
+  --tip-bg:     #f2f7ff;
+  --tip-brd:    #dbe7fb;
+  --thead-bg:   #f4f7fa;
+  --hover-bg:   #eef3fb;
+  --input-bg:   #ffffff;
+}
+:root[data-theme="dark"] {
+  --accent:     #6ea8ff;
+  --h:          #e8eef6;
+  --muted:      #9db0c1;
+  --rule:       #26323d;
+  --page-bg:    #11171d;
+  --text:       #c7d2dc;
+  --side-bg:    #0f151b;
+  --card-bg:    #171f27;
+  --card-brd:   #2a3540;
+  --exo-body:   #1c1712;
+  --exo-bg:     #2a2016;
+  --exo-brd:    #4a3826;
+  --exo-accent: #d98a3a;
+  --exo-title:  #f0b878;
+  --tip-bg:     #14202b;
+  --tip-brd:    #24455f;
+  --thead-bg:   #1b232c;
+  --hover-bg:   #202b35;
+  --input-bg:   #171f27;
+}
+
+body { -webkit-font-smoothing: antialiased; background: var(--page-bg); color: var(--text); }
+
+// --- Titres ---
+h1, .title { color: var(--h); font-weight: 700; letter-spacing: -0.005em; }
+h2, h3, h4 { color: var(--h); }
+h2 { border-top: 1px solid var(--rule); padding-top: 1.1rem; margin-top: 2.4rem; font-size: 1.5rem; }
+h3 { margin-top: 1.8rem; font-size: 1.2rem; }
+.book-title, .subtitle { color: var(--h); }
+main a { color: var(--accent); text-underline-offset: 2px; }
+
+// --- Barre latérale dockée ---
+#quarto-sidebar { border-right: 1px solid var(--rule); background: var(--side-bg); }
+.sidebar-navigation .active { font-weight: 600; color: var(--accent); }
+.sidebar-title a { font-family: $headings-font-family; color: var(--h); }
+
+// --- Table des matières ---
+#TOC .active, #TOC a:hover { color: var(--accent); }
+#toc-title { font-family: $font-family-sans-serif; font-weight: 700; font-size: .8rem;
+  text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+
+// =====================================================================
+//  Outils à côté du titre (GitHub · téléchargement · thème)
+// =====================================================================
+.sidebar-tools-main { display: flex; align-items: center; gap: .1rem; }
+.imsv-tool {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.9rem; height: 1.9rem; padding: 0;
+  color: var(--muted); background: none; border: none; border-radius: 6px;
+  cursor: pointer;
+}
+.imsv-tool:hover { color: var(--accent); background: var(--hover-bg); }
+.imsv-tool svg { width: 1.05rem; height: 1.05rem; fill: currentColor; }
+.imsv-dl { position: relative; }
+.imsv-dl-menu {
+  position: absolute; left: 0; top: 2.1rem; z-index: 1000; min-width: 15rem;
+  background: var(--page-bg); border: 1px solid var(--card-brd); border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.12); padding: .3rem;
+}
+.imsv-dl-menu a { display: block; padding: .5rem .7rem; border-radius: 6px;
+  color: var(--accent); text-decoration: none; font-size: .92rem; }
+.imsv-dl-menu a:hover { background: var(--hover-bg); }
+.imsv-dl-menu .imsv-dl-head { padding: .2rem .7rem .4rem; font-size: .72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+
+// =====================================================================
+//  Menu de téléchargement (dans le corps — repli si pas de barre latérale)
+// =====================================================================
+.dl { margin: .2rem 0 1.5rem; }
+details.dl-menu { display: inline-block; border: 1px solid var(--card-brd); border-radius: 7px; background: var(--card-bg); }
+details.dl-menu > summary { cursor: pointer; list-style: none; padding: .5rem .95rem;
+  font-family: $font-family-sans-serif; font-weight: 600; color: var(--h); border-radius: 7px; user-select: none; }
+details.dl-menu > summary::-webkit-details-marker { display: none; }
+details.dl-menu > summary::before { content: "⤓"; margin-right: .5rem; color: var(--accent); }
+details.dl-menu > summary::after { content: "  ▸"; color: var(--muted); font-size: .8em; }
+details.dl-menu[open] > summary { border-bottom: 1px solid var(--card-brd); border-radius: 7px 7px 0 0; }
+details.dl-menu[open] > summary::after { content: "  ▾"; }
+details.dl-menu a { display: block; padding: .55rem .95rem; color: var(--accent); text-decoration: none; border-top: 1px solid var(--rule); }
+details.dl-menu a:first-of-type { border-top: none; }
+details.dl-menu a:hover { background: var(--hover-bg); }
+
+// =====================================================================
+//  Exercices : boîte d'énoncé (ancre) + tabset d'aides (fermé au départ)
+// =====================================================================
+.exo-meta { float: right; font-family: $font-family-sans-serif; font-weight: 600;
+  font-size: 0.86em; color: var(--exo-title); letter-spacing: 0.02em; }
+// Ancre par exercice : cible de défilement + petit « # » visible au survol
+.exo-anchor { position: relative; top: -70px; visibility: hidden; }
+.exo-hash { color: var(--exo-title); text-decoration: none; opacity: 0; font-weight: 700; padding: 0 .25rem; }
+div.callout.exo > .callout-header:hover .exo-hash { opacity: .55; }
+.exo-hash:hover { opacity: 1 !important; text-decoration: underline; }
+div.callout.exo {
+  border-radius: 8px; border: 1px solid var(--exo-brd); border-left: 4px solid var(--exo-accent);
+  margin: 1.4rem 0 0; background: var(--exo-body);
+}
+div.callout.exo > .callout-header { background: var(--exo-bg); }
+div.callout.exo .callout-title-container { color: var(--exo-title); font-size: 1.03em; font-weight: 700; }
+div.callout.exo .callout-title { font-family: $font-family-sans-serif; }
+
+.aides { margin: .4rem 0 1.4rem; }
+// Bouton repliable « ▶ Coups de pouce »
+.aides-toggle {
+  display: inline-flex; align-items: center; gap: .45rem;
+  background: none; border: none; padding: .25rem 0; cursor: pointer;
+  font-family: $font-family-sans-serif; font-weight: 700; font-size: .72rem;
+  text-transform: uppercase; letter-spacing: .05em; color: var(--muted);
+}
+.aides-toggle:hover { color: var(--accent); }
+.aides-caret { font-size: .72em; line-height: 1; }
+// Les onglets sont cachés tant que le menu n'est pas ouvert
+.aides .panel-tabset { display: none; margin-top: .35rem; }
+.aides.open .panel-tabset { display: block; }
+.aides .panel-tabset > .nav-tabs {
+  border-bottom: 1px solid var(--rule); gap: .1rem; margin-bottom: 0; align-items: center;
+}
+.aides .nav-tabs .nav-link {
+  font-family: $font-family-sans-serif; font-size: .88rem; font-weight: 600; color: var(--muted);
+  padding: .4rem .85rem; border: none; border-bottom: 2px solid transparent; border-radius: 0; background: none;
+}
+.aides .nav-tabs .nav-link:hover { color: var(--h); border-bottom-color: var(--rule); }
+.aides .nav-tabs .nav-link.active { color: var(--accent); background: none; border-bottom: 2px solid var(--accent); }
+.aides .tab-content { padding: .9rem .1rem .1rem; font-size: .98rem; }
+.aides .tab-content em:first-child { color: var(--muted); font-style: italic; }
+
+// --- Tables ---
+table { font-variant-numeric: tabular-nums; }
+.table { color: var(--text); --bs-table-color: var(--text); --bs-table-bg: transparent; }
+.table > :not(caption) > * > * { padding: 0.32rem 0.55rem; }
+thead th { background: var(--thead-bg); }
+
+// --- Cartouche de séance ---
+.seance-meta {
+  font-family: $font-family-sans-serif; font-size: 0.9rem; color: var(--muted);
+  background: var(--card-bg); border: 1px solid var(--card-brd); border-radius: 8px;
+  padding: 0.7rem 1rem; margin-bottom: 1.2rem;
+}
+
+// --- Encadré « astuce » (consignes) ---
+div.callout-tip.callout-style-simple {
+  background: var(--tip-bg); border: 1px solid var(--tip-brd); border-left: 4px solid var(--accent);
+  border-radius: 8px; padding: 0.6rem 0.9rem;
+}
+
+// --- Ressources / QR (PDF uniquement ; style de repli) ---
+.ressources { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.ressources img { width: 120px; height: auto; }
+
+// =====================================================================
+//  Habillage sombre du châssis Bootstrap (thème unique cosmo + override)
+// =====================================================================
+html[data-theme="dark"] { background: var(--page-bg); }
+html[data-theme="dark"] #quarto-sidebar a,
+html[data-theme="dark"] .sidebar-navigation .sidebar-item a { color: #c2ccd6; }
+html[data-theme="dark"] .sidebar-navigation .active { color: var(--accent); }
+html[data-theme="dark"] #quarto-search input,
+html[data-theme="dark"] input.form-control,
+html[data-theme="dark"] .aa-Input { background: var(--input-bg); color: var(--text); border-color: var(--card-brd); }
+html[data-theme="dark"] pre, html[data-theme="dark"] code { background: var(--card-bg); color: #e3e9f0; }
+html[data-theme="dark"] .nav-footer, html[data-theme="dark"] .page-footer,
+html[data-theme="dark"] .quarto-title-block { color: var(--muted); }
+html[data-theme="dark"] .nav-footer { background: var(--side-bg); border-color: var(--rule); }
+html[data-theme="dark"] hr { border-color: var(--rule); }
+html[data-theme="dark"] blockquote { color: var(--muted); }

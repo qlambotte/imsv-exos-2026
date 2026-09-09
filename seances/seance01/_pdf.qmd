@@ -1,0 +1,48 @@
+---
+title: "Séance 1 — Langage et raisonnement"
+subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
+format:
+  typst:
+    papersize: a4
+    margin: {x: 2cm, y: 2cm}
+    mainfont: "Lora"
+    toc: false
+filters:
+  - ../../exercice.lua
+---
+
+<!-- Source d'assemblage du PDF (feuille unique). NE PAS ajouter à _quarto.yml :
+     préfixe « _ » = ignoré par le rendu du livre. Généré/rendu par build-pdf.sh,
+     qui réunit consignes + socle + transfert en une seule feuille (2 versions). -->
+
+::: {.seance-meta}
+**Thème.** Logique (propositions, connecteurs, tables de vérité, implication), ensembles,
+quantificateurs. **Théorie associée :** IMSV-1, *« Pourquoi les mathématiques ? »*.
+:::
+
+::: {.content-visible when-format="typst"}
+::: {.ressources}
+[![QR — correction en libre-service](../../img/qr-01.png){fig-alt="QR vers la page de correction" width="3cm"}](https://exemple-hote.be/imsv/seance01)
+
+Scanne ce code pour la **correction en libre-service** (coups de pouce gradués et solutions).
+:::
+:::
+
+{{< include _consignes.qmd >}}
+
+## Socle — exercices routiniers
+
+{{< include _socle.qmd >}}
+
+## Transfert — problèmes
+
+{{< include _transfert.qmd >}}
+
+## Exercices supplémentaires
+
+{{< include _supplementaires.qmd >}}
+
+---
+
+En fin de séance, on institutionnalise la **méthode pour nier une proposition** — voir l'annexe
+[Boîte à outils](methode.qmd).

@@ -1,0 +1,46 @@
+---
+title: "Séance @@NN@@ — @@TITRE@@"
+subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
+format:
+  typst:
+    papersize: a4
+    margin: {x: 2cm, y: 2cm}
+    mainfont: "Lora"
+    toc: false
+filters:
+  - ../../exercice.lua
+---
+
+<!-- Source d'assemblage du PDF (feuille unique). Préfixe « _ » = ignoré par le livre.
+     Rendu par build-pdf.sh, qui réunit consignes + socle + transfert. -->
+
+::: {.seance-meta}
+**Thème.** ……… **Théorie associée :** IMSV-@@NN@@, *« … »*.
+:::
+
+::: {.content-visible when-format="typst"}
+::: {.ressources}
+[![QR — correction en libre-service](../../img/qr-@@NN@@.png){fig-alt="QR vers la page de correction" width="3cm"}](https://exemple-hote.be/imsv/seance@@NN@@)
+
+Scanne ce code pour la **correction en libre-service** (coups de pouce gradués et solutions).
+:::
+:::
+
+{{< include _consignes.qmd >}}
+
+## Socle — exercices routiniers
+
+{{< include _socle.qmd >}}
+
+## Transfert — problèmes
+
+{{< include _transfert.qmd >}}
+
+## Exercices supplémentaires
+
+{{< include _supplementaires.qmd >}}
+
+---
+
+En fin de séance, on institutionnalise la **méthode** du jour — voir l'annexe
+[Boîte à outils](methode.qmd).

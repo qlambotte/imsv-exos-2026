@@ -1,0 +1,45 @@
+<!-- Fragment SOCLE : les exercices routiniers. Un exercice = un encadré .exo suivi
+     d'un bloc .aides (onglets Indice 1/2/3 · Solution · Piège). Le titre est
+     "Exercice N|Socle|niveau" (niveau = 1,2,3 → ★). Numérotation CONTINUE sur la
+     séance (le transfert continue après le dernier numéro du socle). Dupliquer le
+     couple ci-dessous pour chaque exercice. -->
+
+::: {.callout-caution .exo title="Exercice 1|Socle|1"}
+**Titre court.** Énoncé………
+
+(a) ………
+(b) ………
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+*Référence théorique.*
+
+Renvoi précis à la théorie………
+
+## Indice 2
+
+*Question à te poser.*
+
+La bonne question (pas l'étape)………
+
+## Indice 3
+
+*Étape.*
+
+Une amorce………  *(supprimer cet onglet si inutile)*
+
+## Solution
+
+(a) ………
+(b) ………
+
+## Piège
+
+La faute usuelle à éviter………
+
+:::
+:::

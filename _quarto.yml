@@ -1,0 +1,56 @@
+project:
+  type: book
+  output-dir: _book
+  resources:
+    - pdf/
+
+book:
+  title: "IMSV — Exercices"
+  subtitle: "Introduction Mathématique aux Sciences de la Vie"
+  author: "Quentin Lambotte · FMPB · UMONS"
+  date: today
+  date-format: "YYYY"
+  reader-mode: false
+  search: true
+  site-url: "https://qlambotte.github.io/imsv-exos-2026/"
+  sidebar:
+    style: docked
+    collapse-level: 1
+    pinned: true
+  chapters:
+    - index.qmd
+    - part: seances/seance01/index.qmd
+      chapters:
+        - seances/seance01/socle.qmd
+        - seances/seance01/transfert.qmd
+        - seances/seance01/supplementaires.qmd
+        - seances/seance01/institution.qmd
+  appendices:
+    - seances/methode.qmd
+  page-footer:
+    left: "IMSV — Faculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS"
+    center: "Énoncés et correctif des exercices"
+    right: "© {{< meta book.author >}}"
+
+lang: fr
+
+format:
+  html:
+    theme:
+      - cosmo
+      - theme.scss
+    include-in-header:
+      - _includes/theme-init.html
+    include-after-body:
+      - _includes/aides.html
+      - _includes/tools.html
+    toc: true
+    toc-title: "Sur cette page"
+    toc-depth: 3
+    number-sections: false
+    html-math-method: mathml
+    grid:
+      sidebar-width: 320px
+      body-width: 820px
+      margin-width: 220px
+    fig-cap-location: bottom

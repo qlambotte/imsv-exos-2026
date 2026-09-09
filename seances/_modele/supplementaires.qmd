@@ -1,0 +1,10 @@
+---
+title: "Exercices supplémentaires"
+subtitle: "Séance @@NN@@ · pour les rapides — facultatif, hors examen"
+filters:
+  - ../../exercice.lua
+---
+
+{{< include _download.qmd >}}
+
+{{< include _supplementaires.qmd >}}
