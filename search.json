@@ -1,0 +1,193 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "IMSV — Exercices",
+    "section": "",
+    "text": "Bienvenue\nCe site rassemble les énoncés des exercices et leur correction pour le cours d’Introduction Mathématique aux Sciences de la Vie. Pour chaque séance, chaque exercice est accompagné de coups de pouce gradués : tu les ouvres un à un, seulement quand tu en as besoin.",
+    "crumbs": [
+      "Bienvenue"
+    ]
+  },
+  {
+    "objectID": "index.html#les-séances",
+    "href": "index.html#les-séances",
+    "title": "IMSV — Exercices",
+    "section": "Les séances",
+    "text": "Les séances\n\nLe tableau se complétera au fil du quadrimestre.\n\n\n\n\n\n\n\n\n#\nSéance\nThème\nCorrection\n\n\n\n\n1\nLangage et raisonnement\nLogique, ensembles, quantificateurs,…\n✅ en ligne\n\n\n2\nà venir\n—\n—\n\n\n3\nà venir\n—\n—\n\n\n…",
+    "crumbs": [
+      "Bienvenue"
+    ]
+  },
+  {
+    "objectID": "index.html#rappels-utiles",
+    "href": "index.html#rappels-utiles",
+    "title": "IMSV — Exercices",
+    "section": "Rappels utiles",
+    "text": "Rappels utiles\n\nPréparation. Chaque séance suppose que la théorie de la semaine précédente a été revue, et que le test Moodle suivant cette séance a été fait. Sans préparation, tu ne seras pas seulement en difficulté — tu seras perdu·e. Ceci est évitable si tu te prépares.\nRemédiation. Si tes difficultés persistent malgré une préparation et un investissement lors des séances, n’hésite pas à venir aux remédiations, qui reprendront les bases.\nLa méthode. En fin de chaque séance, on rédigera ensemble une méthode réutilisable sur base du contenu de la séance. Cette séance rejoint ta boîte à outils pour l’examen. Attention: ces méthodes construites en fin de séance ne sont pas exhaustives: à toi de les compléter sur base du cours théorique et des séances d’exercices\n\n\nFaculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS.\nCe cours est en refonte : vos retours sont les bienvenus.",
+    "crumbs": [
+      "Bienvenue"
+    ]
+  },
+  {
+    "objectID": "seances/seance01/index.html",
+    "href": "seances/seance01/index.html",
+    "title": "Séance 1 — Langage et raisonnement",
+    "section": "",
+    "text": "Objectifs de la séance\nTrois objectifs, repris du cours théorique (IMSV-1). Chaque exercice indique l’objectif qu’il travaille — la pastille O1 / O2 / O3 dans son en-tête.\nUne grille d’auto-évaluation sur ces trois objectifs t’attend à la page Institutionnalisation.",
+    "crumbs": [
+      "Séance 1 — Langage et raisonnement"
+    ]
+  },
+  {
+    "objectID": "seances/seance01/index.html#objectifs-de-la-séance",
+    "href": "seances/seance01/index.html#objectifs-de-la-séance",
+    "title": "Séance 1 — Langage et raisonnement",
+    "section": "",
+    "text": "O1 — traduire une affirmation simple entre langage courant et langage formel.\nO2 — utiliser les éléments de base de la logique (ensembles, quantificateurs, connecteurs) pour démontrer ou réfuter une affirmation mathématique.\nO3 — lire une affirmation mathématique simple et distinguer exemple, preuve et contre-exemple.",
+    "crumbs": [
+      "Séance 1 — Langage et raisonnement"
+    ]
+  },
+  {
+    "objectID": "seances/seance01/index.html#le-parcours-de-la-séance",
+    "href": "seances/seance01/index.html#le-parcours-de-la-séance",
+    "title": "Séance 1 — Langage et raisonnement",
+    "section": "Le parcours de la séance",
+    "text": "Le parcours de la séance\n\nSocle — les exercices routiniers, à ton rythme.\nTransfert — des problèmes en contexte nouveau.\nExercices supplémentaires — pour les rapides (facultatif, hors examen).\nInstitutionnalisation — la méthode qu’on dégage ensemble, et l’auto-évaluation.",
+    "crumbs": [
+      "Séance 1 — Langage et raisonnement"
+    ]
+  },
+  {
+    "objectID": "seances/seance01/index.html#les-slides-du-cours",
+    "href": "seances/seance01/index.html#les-slides-du-cours",
+    "title": "Séance 1 — Langage et raisonnement",
+    "section": "Les slides du cours",
+    "text": "Les slides du cours\n\nLes slides de théorie associée sont sur Moodle.",
+    "crumbs": [
+      "Séance 1 — Langage et raisonnement"
+    ]
+  },
+  {
+    "objectID": "seances/seance01/socle.html",
+    "href": "seances/seance01/socle.html",
+    "title": "Socle — exercices routiniers",
+    "section": "",
+    "text": "Télécharger les énoncés (PDF)\n\nÉnoncés seuls Énoncés + coups de pouce & corrections\n\n\n\n\n\n\n\n\nAstuceÀ lire d’abord\n\n\n\nCherche au brouillon d’abord. N’hésite pas à résoudre les exercices avec tes voisin.e.s. Ouvre les indices dans l’ordre (référence → question → étape → solution). La solution est le dernier recours.\n\n\nLes exercices du socle sont des exercices routiniers pour installer les automatismes. Résous-les à ton rythme. Si tu n’arrives pas au bout du socle lors de la séance, ce n’est pas grave: tu peux le poursuivre à domicile avec les coups de pource et la solution finale. \n\n\n\n\n\n\nMise en garde✎ Exercice 1 #Socle · O3 · ★☆☆\n\n\n\nPour chaque lettre indiquée, dis son rôle dans l’expression entre guillements : inconnue, variable ou paramètre.\n\nxx dans « résoudre 2x=102x = 10 »\nxx dans « la fonction f(x)=x2f(x) = x^2 »\nmm dans « la droite y=mx+1y = m x + 1 »\n\n\n\n\n\nIndice 1SolutionPiège\n\n\nRetourne à la théorie du cours : Égalité et symboles : lire avant de calculer.\n\n\n\nInconnue (x=5x = 5).\nVariable (l’entrée de ff, parcourt ℝ\\mathbb{R}).\nParamètre (mm fixe la droite ; la variable est xx).\n\n\nIndice 2\nQuestion à te poser.\nPour chaque lettre : cherche-t-on sa valeur (inconnue) ? décrit-elle tous les cas ou l’entrée d’une fonction (variable) ? ou fixe-t-elle un objet particulier tandis qu’une autre lettre varie (paramètre) ?\n\n\n\nDans y=mx+1y = m x + 1, confondre xx (variable) et mm (paramètre).\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 2 #Socle · O3 · ★☆☆\n\n\n\nPour chaque énoncé, dis de quoi il s’agit: un prédicat ou une proposition?\n\n« 55 est pair. »\n« x≥0x \\ge 0. »\n« Additionne 22 et 33. »\n\n\n\n\n\nIndice 1Indice 2SolutionPiège\n\n\nRetourne à la théorie du cours : Qu’est-ce qu’une affirmation mathématique ?.\n\n\nQuestion à te poser.\nPour chaque énoncé : puis-je dire, tel quel, s’il est vrai ou faux ? Si oui → proposition (même s’il est faux). Si « ça dépend de la valeur d’une lettre » → prédicat. Si ce n’est ni une proposition ni un prédicat → ni l’un ni l’autre.\n\n\n\nProposition (fausse). (b) Prédicat (dépend de xx). (c) Ni l’un ni l’autre (un ordre).\n\n\n\nCroire qu’un énoncé faux n’est « pas une proposition ».\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 3 #Socle · O1 · ★★☆\n\n\n\nRelie chaque phrase (a–d) à sa traduction (1–4).\n\n\n\n\n\n\n\nFrançais\nTraduction\n\n\n\n\n(a) « −7 est un entier »\n(1) ℕ⊆ℤ\\mathbb{N} \\subseteq \\mathbb{Z}\n\n\n(b) « −7 est un entier mais pas naturel »\n(2) −7∈ℤ-7 \\in \\mathbb{Z}\n\n\n(c) « tout nombre naturel est un entier »\n(3) ∀n∈ℕ,n≥0\\forall n\\in\\mathbb{N},\\ n\\ge 0\n\n\n(d) « il n’existe pas d’entier naturel strictement négatif »\n(4) −7∈ℤ\\ℕ-7 \\in \\mathbb{Z}\\setminus\\mathbb{N}\n\n\n\n\n\n\n\nIndice 1Indice 2SolutionPièges\n\n\nRetourne à la théorie du cours : Ensembles : regrouper des objets, Formaliser l’inclusion, Ensembles de nombres et Opérations sur les ensembles.\n\n\nQuestion à te poser.\nChaque phrase parle-t-elle d’un élément (∈\\in) ou d’un ensemble entier (⊆\\subseteq) ? À quelle opération correspond « mais pas… » ? Et « il n’existe pas de… négatif », est-ce un ∀\\forall déguisé ?\n\n\na–2, b–4, c–1, d–3. (−7∈ℤ-7\\in\\mathbb{Z} ; « entier mais pas naturel » = ℤ\\ℕ\\mathbb{Z}\\setminus\\mathbb{N} ; « tout nombre naturel est entier » = ℕ⊆ℤ\\mathbb{N}\\subseteq\\mathbb{Z} ; « aucun naturel n’est &lt;0&lt;0 » = ∀n∈ℕ,n≥0\\forall n\\in\\mathbb{N},\\\nn\\ge 0.)\n\n\nConfondre ∈\\in (un élément : −7∈ℤ-7\\in\\mathbb{Z}) et ⊆\\subseteq (deux ensembles : ℕ⊆ℤ\\mathbb{N}\\subseteq\\mathbb{Z}) ; oublier que « mais pas naturel » retire ℕ\\mathbb{N} (\\ℕ\\setminus\\mathbb{N}).\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 4 #Socle · O2 · ★★☆\n\n\n\nPour chaque ligne, dis si l’affirmation est vraie ou fausse :\n\n3∈[3,7[3 \\in [3,\\,7[\n7∈[3,7[7 \\in [3,\\,7[\n2∈]1,2]\\sqrt2 \\in\\ ]1,\\,2]\n−2∈]−∞,−2]-2 \\in\\ ]{-}\\infty,\\,-2]\n0∈]0,+∞[0 \\in\\ ]0,\\,+\\infty[\n\nEnsuite: écris l’intervalle des réels xx tels que −1≤x&lt;4-1 \\le x &lt; 4.\n\n\n\n\nIndice 1Indice 2SolutionPiège\n\n\nRetourne à la théorie du cours : Intervalles réels et Ensembles : regrouper des objets.\n\n\nQuestion à te poser.\nLa borne de l’intervalle est-elle dans l’intervalle (crochet fermé) ou non (ouvert) ? Le nombre est-il strictement entre les bornes, ou égal à une borne — et cette borne est-elle incluse dans l’intervalle ?\n\n\n\nVrai — 33 inclus (fermé à gauche).\nFaux — 77 exclu (ouvert à droite).\nVrai — 2≈1,41∈]1,2]\\sqrt2 \\approx 1{,}41 \\in\\ ]1,2].\nVrai — −2-2 inclus (fermé à droite).\nFaux — 00 exclu (ouvert).\n\nL’intervalle des réels xx tels que −1≤x&lt;4-1 \\le x &lt; 4 s’écrit: [−1,4[[-1,\\,4[.\n\n\nConfondre crochet fermé (inclus) et ouvert (exclu) ; croire qu’une borne infinie peut être « incluse ».\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 5 #Socle · O2 · ★☆☆\n\n\n\nConstruire la table de vérité, pour toutes les valeurs de α\\alpha et β\\beta, des colonnes ¬α\\lnot\\alpha, α∧β\\alpha\\land\\beta, α∨β\\alpha\\lor\\beta, α⇒β\\alpha\\Rightarrow\\beta. Vérifier ensuite que ¬(α∧β)⇔¬α∨¬β\\lnot(\\alpha\\land\\beta) \\Leftrightarrow \\lnot\\alpha \\lor \\lnot\\beta.\n\n\n\n\nIndice 1Indice 2SolutionPiège\n\n\nRetourne à la théorie du cours : Outil : table de vérité.\n\n\nQuestion à te poser.\nIl y a cinq lignes et huit colonnes dans le tableau. Pour α⇒β\\alpha\\Rightarrow\\beta, repère d’abord l’unique ligne qui la rend fausse ; toutes les autres doivent être vraies.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nα\\alpha\nβ\\beta\n¬α\\lnot\\alpha\nα∧β\\alpha\\land\\beta\nα∨β\\alpha\\lor\\beta\nα⇒β\\alpha\\Rightarrow\\beta\n¬(α∧β)\\lnot(\\alpha\\land\\beta)\n¬α∨¬β\\lnot\\alpha\\lor\\lnot\\beta\n\n\n\n\nV\nV\nF\nV\nV\nV\nF\nF\n\n\nV\nF\nF\nF\nV\nF\nV\nV\n\n\nF\nV\nV\nF\nV\nV\nV\nV\n\n\nF\nF\nV\nF\nF\nV\nV\nV\n\n\n\nLes deux dernières colonnes coïncident ligne à ligne : la loi de De Morgan est vérifié. ✓\n\n\nCroire que α⇒β\\alpha\\Rightarrow\\beta est fausse quand α\\alpha est fausse. Une implication à prémisse fausse est automatiquement vraie.\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 6 #Socle · O2 · ★★☆\n\n\n\nSoit PP l’implication : « si nn est multiple de 44, alors nn est pair ».\n\nÉcrire la réciproque et la contraposée de PP.\nDire lesquelles des trois sont vraies. Justifier, par un contre-exemple si nécessaire.\n\n\n\n\n\nIndice 1Indice 2Indice 3SolutionPièges\n\n\nRetourne à la théorie du cours : Comprendre l’implication et Réciproque, contraposée, équivalence.\n\n\nQuestion à te poser.\nPose α\\alpha : « multiple de 44 » et β\\beta : « pair ». Réciproque = on échange. Contraposée = on nie et on échange. Pour tester la réciproque, cherche un nn pair non multiple de 44.\n\n\nÉtape.\nValidité de la réciproque: prendre n=6n=6.\n\n\nImplication : vraie.\nRéciproque « si nn pair alors nn multiple de 44 » : fausse avec n=6n=6, on a bien un nn pair qui n’est pas un multiple de 44.\nContraposée « si nn impair alors nn non multiple de 44 » : vraie car elle est équivalente à PP.\n\n\nConfondre réciproque et contraposée, et croire que la contraposée pourrait avoir une valeur de vérité différente de l’implication.\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 7 #Socle · O2 · ★★☆\n\n\n\nPour les trois premières propositions : dire si elle est vraie ou fausse, puis écrire sa négation.\n\n∀x∈ℝ,x2≥0\\forall x\\in\\mathbb{R},\\ x^2\\ge 0.\n∃n∈ℕ,n+2=5\\exists n\\in\\mathbb{N},\\ n+2 = 5.\n∀x∈ℝ,x2&gt;0\\forall x\\in\\mathbb{R},\\ x^2 &gt; 0.\nOn note α(v,t)\\alpha(v,t) « le test tt détecte le variant vv ». Écris la négation de ∀v,∃t,α(v,t)\\ \\forall v,\\ \\exists t,\\ \\alpha(v,t)\\  puis traduis-la en français.\n\n\n\n\n\nIndice 1Indice 2SolutionPièges\n\n\nRetourne à la théorie du cours : Formaliser l’inclusion, Nier une proposition quantifiée.\n\n\nQuestion à te poser.\nPour nier : échanger ∀\\forall et ∃\\exists, puis nier le prédicat. Négation de « ≥\\ge » : « &lt;&lt; » ; de « == » : « ≠\\ne » ; de « &gt;&gt; » : « ≤\\le ». Pour (d) : que deviennent ∀v\\forall v, puis ∃t\\exists t, puis α\\alpha ?\n\n\n\nVraie. Négation : ∃x,x2&lt;0\\exists x,\\ x^2&lt;0 — fausse.\nVraie (n=3n=3). Négation : ∀n,n+2≠5\\forall n,\\ n+2\\ne 5 — fausse.\nFausse (x=0x=0). Négation : ∃x,x2≤0\\exists x,\\ x^2\\le 0 — vraie (x=0x=0).\n¬(∀v,∃t,α(v,t))≡∃v,∀t,¬α(v,t)\\lnot(\\forall v,\\ \\exists t,\\ \\alpha(v,t)) \\equiv \\exists v,\\ \\forall t,\\ \\lnot\\alpha(v,t) : « il existe un variant qu’aucun test ne détecte ».\n\n\n\nNier en gardant le même quantificateur ; ou, en imbriqué (d), n’échanger qu’un seul quantificateur au lieu des deux (le second aussi doit basculer ∃→∀\\exists\\to\\forall).\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 8 #Socle · O3 · ★★☆\n\n\n\nPour chaque argument proposé, dis si c’est un exemple, un contre-exemple ou une preuve. Dans chaque cas, dis si l’argument établit l’affirmation, la réfute, ou ne conclut rien.\nAffirmation A : « Tout nombre premier est impair. »\n\n« C’est vrai, car 33 est premier et impair. »\n« C’est faux : 22 est premier et pair. »\n\nAffirmation B : « La somme de deux entiers pairs est paire. »\n\n« 4+6=104+6=10 est pair, donc c’est vrai. »\n« Si a=2ka=2k et b=2k′b=2k', alors a+b=2(k+k′)a+b=2(k+k'), qui est pair. »\n\n\n\n\n\nIndice 1Indice 2SolutionPiège\n\n\nRetourne à la théorie du cours : Exemples, preuves, contre-exemples.\n\n\nQuestion à te poser.\nL’argument traite-t-il un cas (exemple / contre-exemple) ou tous les cas (preuve) ? Ce cas confirme-t-il ou contredit-il l’affirmation ? S’il contredit, alors il s’égit d’un contre-exemple.\n\n\n\nExemple — ne permet pas de conclure sur la validité de l’afformation (un cas favorable ne prouve pas un « tout »).\nContre-exemple de A : on peut donc en déduire que l’affirmation est fausse.\nExemple — ne conclut rien (ne couvre pas tous les cas).\nPreuve — établit B (l’argument vaut pour tous les entiers pairs).\n\n\n\nCroire qu’un exemple (a, c) prouve une affirmation générale ; ne pas voir qu’un seul contre-exemple suffit à réfuter.\n\n\n\n\n\n\n\n\n\n\nTerminé avant la fin ? Passe au Transfert — et, plus loin, aux exercices supplémentaires.",
+    "crumbs": [
+      "Séance 1 — Langage et raisonnement",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Socle — exercices routiniers</span>"
+    ]
+  },
+  {
+    "objectID": "seances/seance01/transfert.html",
+    "href": "seances/seance01/transfert.html",
+    "title": "Transfert — problèmes",
+    "section": "",
+    "text": "Le transfert, c’est le moment où l’outil du socle sert sur un contexte nouveau : de vrais problèmes, pas repris tels quels du cours. Travaille en binôme si tu veux.",
+    "crumbs": [
+      "Séance 1 — Langage et raisonnement",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Transfert — problèmes</span>"
+    ]
+  },
+  {
+    "objectID": "seances/seance01/transfert.html#footnotes",
+    "href": "seances/seance01/transfert.html#footnotes",
+    "title": "Transfert — problèmes",
+    "section": "",
+    "text": "qui est relatif à la photosynthèse, le processus biologique par lequel les organismes vivants verts (plantes, algues et certaines bactéries) convertissent l’énergie lumineuse en énergie chimique.↩︎\norganisme capable de produire de la matière organique à partir de matière inorganique.↩︎\nqui a de la fièvre↩︎",
+    "crumbs": [
+      "Séance 1 — Langage et raisonnement",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Transfert — problèmes</span>"
+    ]
+  },
+  {
+    "objectID": "seances/seance01/supplementaires.html",
+    "href": "seances/seance01/supplementaires.html",
+    "title": "Exercices supplémentaires et de dépassement",
+    "section": "",
+    "text": "Exercices supplémentaires",
+    "crumbs": [
+      "Séance 1 — Langage et raisonnement",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Exercices supplémentaires et de dépassement</span>"
+    ]
+  },
+  {
+    "objectID": "seances/seance01/supplementaires.html#exercices-supplémentaires",
+    "href": "seances/seance01/supplementaires.html#exercices-supplémentaires",
+    "title": "Exercices supplémentaires et de dépassement",
+    "section": "",
+    "text": "Ces exercices restent dans les objectifs de la séance (donc examinables) : à faire une fois le socle et le transfert bouclés, en séance ou à la maison. À ne pas confondre avec les dépassements ci-dessous, qui sont facultatifs et hors-examen.\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 12 # Socle · O1 · ★★☆\n\n\n\nOn pose φ\\varphi : « le patient est malade » et ψ\\psi : « le test est positif ». Traduire :\n\n« Le patient est malade mais son test est négatif. »\n« Si le test est positif alors le patient est malade. »\n¬(φ∨ψ)\\lnot(\\varphi \\lor \\psi) en français.\n« Le patient est malade ou son test est négatif. »\n\n\n\n\n\nIndice 1Indice 2SolutionPiège\n\n\nRetourne à la théorie du cours : Comment combiner des propositions ? Connecteurs logiques.\n\n\nQuestion à te poser.\nQuel connecteur porte la phrase (et / ou / si…alors / non) ? Attention au sens de l’implication : qui implique qui ?\n\n\n\nφ∧¬ψ\\varphi \\land \\lnot\\psi.\nψ⇒φ\\psi \\Rightarrow \\varphi (c’est le test qui implique la maladie).\n« Le patient n’est ni malade ni positif », soit ¬φ∧¬ψ\\lnot\\varphi \\land \\lnot\\psi.\nφ∨¬ψ\\varphi \\lor \\lnot\\psi.\n\n\n\nTraduire « mais » autrement que par ∧\\land ; inverser le sens de l’implication en (b).\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 13 #Socle · O2 · ★★☆\n\n\n\nSoient A={a,b,c}A = \\{a,b,c\\} et B={c,d}B = \\{c,d\\}.\n\nDonner A∪BA\\cup B, A∩BA\\cap B, A\\BA\\setminus B, B\\AB\\setminus A.\nDonner A×BA\\times B et son cardinal.\nVrai ou faux : a∈Aa\\in A ; {a}∈A\\{a\\}\\in A ; {a}⊆A\\{a\\}\\subseteq A ; ⌀⊆A\\varnothing\\subseteq A ; c∈A∩Bc\\in A\\cap B.\nPlacer : −7-7, 14\\tfrac14, 2\\sqrt2 parmi les ensembles ℤ\\ℕ\\mathbb{Z}\\setminus\\mathbb{N}, ℚ\\ℤ\\mathbb{Q}\\setminus\\mathbb{Z}, ℝ\\ℚ\\mathbb{R}\\setminus\\mathbb{Q}.\n\n\n\n\n\nIndice 1Indice 2SolutionPiège\n\n\nRetourne à la théorie du cours : Ensembles : regrouper des objets, Ensembles de nombres et Opérations sur les ensembles.\n\n\nQuestion à te poser.\nPour (c) : {a}\\{a\\} est-il un élément de AA, ou un sous-ensemble de AA ? Pour (d) : qui est entier non naturel ? qui est rationnel non entier ? qui est irrationnel ?\n\n\n\nA∪B={a,b,c,d}A\\cup B=\\{a,b,c,d\\} ; A∩B={c}A\\cap B=\\{c\\} ; A\\B={a,b}A\\setminus B=\\{a,b\\} ; B\\A={d}B\\setminus A=\\{d\\}.\nA×B={(a,c),(a,d),(b,c),(b,d),(c,c),(c,d)}A\\times B=\\{(a,c),(a,d),(b,c),(b,d),(c,c),(c,d)\\}, cardinal 66.\na∈Aa\\in A V ; {a}∈A\\{a\\}\\in A F ; {a}⊆A\\{a\\}\\subseteq A V ; ⌀⊆A\\varnothing\\subseteq A V ; c∈A∩Bc\\in A\\cap B V.\n−7∈ℤ\\ℕ-7\\in\\mathbb{Z}\\setminus\\mathbb{N} ; 14∈ℚ\\ℤ\\tfrac14\\in\\mathbb{Q}\\setminus\\mathbb{Z} ; 2∈ℝ\\ℚ\\sqrt2\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\n\n\nConfondre ∈\\in et ⊆\\subseteq : écrire {a}∈A\\{a\\}\\in A (faux) au lieu de {a}⊆A\\{a\\}\\subseteq A (vrai).\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 14 #Socle · O2 · ★★☆\n\n\n\nVoici la table de vérité de deux propositions aa et bb et d’une proposition cachée « ? ». Parmi les propositions proposées, laquelle a exactement cette colonne ?\n\n\n\naa\nbb\n?\n\n\n\n\nV\nV\nV\n\n\nV\nF\nV\n\n\nF\nV\nF\n\n\nF\nF\nV\n\n\n\nChoix : (A) a⇒ba \\Rightarrow b ; (B) b⇒ab \\Rightarrow a ; (C) a∧ba \\land b ; (D) a∨ba \\lor b.\n\n\n\n\nIndice 1Indice 2SolutionPiège\n\n\nRetourne à la théorie du cours : Comprendre l’implication.\n\n\nQuestion à te poser.\nRepère l’unique ligne où « ? » vaut F. Sur cette ligne, quelle proposition atomique est vraie (la prémisse) et laquelle est fausse (la conclusion) ?\n\n\n« ? » vaut F seulement à la ligne a=F,b=Va=F,\\ b=V. Une implication est fausse quand sa prémisse est vraie et sa conclusion fausse : ici la prémisse est bb (V), la conclusion aa (F). Donc « ? » =b⇒a=\\,b\\Rightarrow a — réponse (B).\n\n\nChoisir a⇒ba\\Rightarrow b (la réciproque) : la direction est inversée. Vérifie toujours sur quelle ligne l’implication doit être fausse.\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 15 #Socle · O1 · ★★☆\n\n\n\nOn pose φ\\varphi : « l’animal est un mammifère » et ψ\\psi : « l’animal allaite ses petits ». Traduire :\n\n« L’animal est un mammifère mais il n’allaite pas. »\n« Si l’animal est un mammifère alors il allaite. »\n¬(φ∧ψ)\\lnot(\\varphi\\land\\psi) en français.\n« L’animal n’est pas un mammifère ou il allaite. »\n\n\n\n\n\nIndiceSolution\n\n\n« mais » se traduit comme « et » (∧\\land) ; attention au sens de ⇒\\Rightarrow (qui implique qui ?). Pour (c), applique De Morgan : ¬(P∧Q)⇔¬P∨¬Q\\lnot(P\\land Q)\\Leftrightarrow\\lnot P\\lor\\lnot Q.\n\n\n\nφ∧¬ψ\\varphi\\land\\lnot\\psi.\nφ⇒ψ\\varphi\\Rightarrow\\psi.\n« L’animal n’est pas un mammifère ou il n’allaite pas » =¬φ∨¬ψ=\\lnot\\varphi\\lor\\lnot\\psi.\n¬φ∨ψ\\lnot\\varphi\\lor\\psi — qui est justement une écriture de φ⇒ψ\\varphi\\Rightarrow\\psi.\n\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 16 #Socle · O2 · ★☆☆\n\n\n\nConstruire la table de vérité de ¬φ\\lnot\\varphi, ¬ψ\\lnot\\psi, φ∨ψ\\varphi\\lor\\psi, puis vérifier que ¬(φ∨ψ)⇔¬φ∧¬ψ.\\lnot(\\varphi\\lor\\psi)\\ \\Leftrightarrow\\ \\lnot\\varphi\\land\\lnot\\psi.\n\n\n\n\nIndiceSolution\n\n\nDans ton tableau, il y a 5 ligne. La proposition φ∨ψ\\varphi\\lor\\psi n’est fausse que lorsque φ\\varphi et ψ\\psi sont fausses, donc ¬(φ∨ψ)\\lnot(\\varphi\\lor\\psi) n’est vraie que sur cette ligne.\n\n\n\n\n\n\n\n\n\n\n\n\nφ\\varphi\nψ\\psi\nφ∨ψ\\varphi\\lor\\psi\n¬(φ∨ψ)\\lnot(\\varphi\\lor\\psi)\n¬φ∧¬ψ\\lnot\\varphi\\land\\lnot\\psi\n\n\n\n\nV\nV\nV\nF\nF\n\n\nV\nF\nV\nF\nF\n\n\nF\nV\nV\nF\nF\n\n\nF\nF\nF\nV\nV\n\n\n\nLes deux dernières colonnes coïncident : ¬(φ∨ψ)⇔¬φ∧¬ψ\\lnot(\\varphi\\lor\\psi)\\Leftrightarrow\\lnot\\varphi\\land\\lnot\\psi. Autrement dit: nier « φ\\varphi ou ψ\\psi », c’est n’avoir « ni l’un ni l’autre ».\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 17 #Socle · O2 · ★★☆\n\n\n\nSoit PP l’implication : « si nn est multiple de 66, alors nn est multiple de 33 ».\n\nÉcrire la réciproque et la contraposée de PP.\nDire lesquelles des trois sont vraies, par un contre-exemple si nécessaire.\n\n\n\n\n\nIndiceSolution\n\n\nRéciproque = on échange ; contraposée = on nie et on échange. Pour tester la réciproque, cherche un multiple de 33 qui n’est pas multiple de 66.\n\n\nImplication : vraie (tout multiple de 66 est multiple de 33).\nRéciproque « si nn multiple de 33 alors nn multiple de 66 » : fausse (n=3n=3).\nContraposée « si nn n’est pas multiple de 33 alors nn n’est pas multiple de 66 » : vraie car équivalente à PP.\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 18 #Socle · O2 · ★★☆\n\n\n\noient A={1,2,3}A=\\{1,2,3\\} et B={3,4}B=\\{3,4\\}.\n\nDonner A∪BA\\cup B, A∩BA\\cap B, A\\BA\\setminus B, B\\AB\\setminus A.\nDonner le cardinal de A×BA\\times B.\nVrai ou faux : 2∈A2\\in A ; {2}∈A\\{2\\}\\in A ; {2,3}⊆A\\{2,3\\}\\subseteq A ; ⌀∈A\\varnothing\\in A ; 3∈A∩B3\\in A\\cap B.\n\n\n\n\n\nIndiceSolution\n\n\nDistingue élément (∈\\in) et sous-ensemble (⊆\\subseteq). Piège : ⌀⊆A\\varnothing\\subseteq A est toujours vrai — mais ⌀∈A\\varnothing\\in A demande que ⌀\\varnothing soit listé parmi les éléments de AA.\n\n\n\nA∪B={1,2,3,4}A\\cup B=\\{1,2,3,4\\} ; A∩B={3}A\\cap B=\\{3\\} ; A\\B={1,2}A\\setminus B=\\{1,2\\} ; B\\A={4}B\\setminus A=\\{4\\}.\nle cardinal de A×BA\\times B est 3×2=63\\times 2=6.\n2∈A2\\in A V ; {2}∈A\\{2\\}\\in A F ({2}\\{2\\} est un sous-ensemble, pas un élément) ; {2,3}⊆A\\{2,3\\}\\subseteq A V ; ⌀∈A\\varnothing\\in A F (AA ne contient pas ⌀\\varnothing comme élément) ; 3∈A∩B3\\in A\\cap B V.\n\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 19 #Socle · O2 · ★★☆\n\n\n\nPour chaque proposition : dire si elle est vraie ou fausse, écrire sa négation, puis l’évaluer.\n\n∀n∈ℕ,n+1&gt;n\\forall n\\in\\mathbb{N},\\ n+1 &gt; n.\n∃x∈ℝ,x2=2\\exists x\\in\\mathbb{R},\\ x^2 = 2.\n∀x∈ℝ,x2≠x\\forall x\\in\\mathbb{R},\\ x^2 \\ne x.\n\n\n\n\n\nIndiceSolution\n\n\nNier : échanger ∀\\forall et ∃\\exists, puis nier l’intérieur. Négation de « &gt;&gt; » : « ≤\\le » ; de « == » : « ≠\\ne » ; de « ≠\\ne » : « == ». Un seul contre-exemple réfute un ∀\\forall.\n\n\n\nVraie. Négation : ∃n∈ℕ,n+1≤n\\exists n\\in\\mathbb{N},\\ n+1\\le n — fausse.\nVraie (x=2x=\\sqrt2). Négation : ∀x∈ℝ,x2≠2\\forall x\\in\\mathbb{R},\\ x^2\\ne 2 — fausse.\nFausse (x=0x=0 donne 02=00^2=0, et x=1x=1 aussi). Négation : ∃x∈ℝ,x2=x\\exists x\\in\\mathbb{R},\\ x^2=x — vraie (x=0x=0 ou x=1x=1).\n\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 20 #Socle · O2 · ★★☆\n\n\n\nVoici la table de vérité de aa, bb et d’une proposition cachée « ? ». Parmi les choix, laquelle a exactement cette colonne ?\n\n\n\naa\nbb\n?\n\n\n\n\nV\nV\nV\n\n\nV\nF\nF\n\n\nF\nV\nV\n\n\nF\nF\nV\n\n\n\nChoix : (A) a⇒ba\\Rightarrow b ; (B) b⇒ab\\Rightarrow a ; (C) a∨ba\\lor b ; (D) a∧ba\\land b.\n\n\n\n\nIndiceSolution\n\n\nRepère l’unique ligne où « ? » vaut F. Sur cette ligne, quelle proposition est vraie (la prémisse) et laquelle est fausse (la conclusion) ?\n\n\n« ? » vaut F seulement à la ligne a=V,b=Fa=V,\\ b=F : prémisse aa (V), conclusion bb (F). C’est donc a⇒ba\\Rightarrow b — réponse (A). (Cette fois la direction est a⇒ba\\Rightarrow b, l’inverse de l’exercice 7 du socle : c’est toujours la ligne fausse qui tranche.)",
+    "crumbs": [
+      "Séance 1 — Langage et raisonnement",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Exercices supplémentaires et de dépassement</span>"
+    ]
+  },
+  {
+    "objectID": "seances/seance01/supplementaires.html#exercices-de-dépassement",
+    "href": "seances/seance01/supplementaires.html#exercices-de-dépassement",
+    "title": "Exercices supplémentaires et de dépassement",
+    "section": "Exercices de dépassement",
+    "text": "Exercices de dépassement\n\n\n\n\n\n\nAstuceÀ qui s’adressent ces exercices ?\n\n\n\nTu as terminé le socle, le transfert et les exercices Renforcement du Transferts? Ces exercices sont pour toi — facultatifs et pas à l’examen. Dans ces exercices on va un peu plus loin que le programme, pour le plaisir.\nL’échelle de coups de pouce y est plus courte (un indice, puis la solution).\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 21 #Dépassement · O2 · ★★☆\n\n\n\nOn veut relier l’implication aux connecteurs ¬\\lnot, ∨\\lor, ∧\\land.\n\nDresser la table de vérité de φ⇒ψ\\varphi\\Rightarrow\\psi et celle de ¬φ∨ψ\\lnot\\varphi\\lor\\psi, et constater qu’elles coïncident.\nEn déduire une écriture de ¬(φ⇒ψ)\\lnot(\\varphi\\Rightarrow\\psi) sans le symbole ⇒\\Rightarrow.\n\n\n\n\n\nIndiceSolution\n\n\nLa table aura 5 lignes et une colonne par proposition. Pour (b), nie ¬φ∨ψ\\lnot\\varphi\\lor\\psi et applique De Morgan : ¬(P∨Q)≡¬P∧¬Q\\lnot(P\\lor Q)\\equiv\\lnot P\\land\\lnot Q.\n\n\n\nLes deux colonnes valent F uniquement sur la ligne φ=V,ψ=F\\varphi=V,\\ \\psi=F, et V sur les trois autres : elles sont identiques, donc φ⇒ψ⇔¬φ∨ψ\\varphi\\Rightarrow\\psi\\Leftrightarrow\\lnot\\varphi\\lor\\psi.\n¬(φ⇒ψ)⇔¬(¬φ∨ψ)≡φ∧¬ψ\\lnot(\\varphi\\Rightarrow\\psi)\\Leftrightarrow\\lnot(\\lnot\\varphi\\lor\\psi)\\equiv\\varphi\\land\\lnot\\psi : « nier une implication », c’est affirmer l’hypothèse et nier la conclusion.\n\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 22 #Dépassement · O2 · ★★☆\n\n\n\nPour chaque proposition, dire si c’est une tautologie (vraie quelles que soient les valeurs), une contradiction (jamais vraie), ou une contingence (ni l’une ni l’autre).\n\nφ∨¬φ\\varphi\\lor\\lnot\\varphi\n\nφ∧¬φ\\varphi\\land\\lnot\\varphi\n(φ⇒ψ)⇒(¬ψ⇒¬φ)(\\varphi\\Rightarrow\\psi)\\Rightarrow(\\lnot\\psi\\Rightarrow\\lnot\\varphi)\n(φ∨ψ)⇒φ(\\varphi\\lor\\psi)\\Rightarrow\\varphi\n\n\n\n\n\nIndiceSolution\n\n\nUne table de vérité tranche à coup sûr : tautologie = colonne finale tout V, contradiction = tout F. Pour (b), regarde ce que ¬ψ⇒¬φ\\lnot\\psi\\Rightarrow\\lnot\\varphi représente par rapport à φ⇒ψ\\varphi\\Rightarrow\\psi.\n\n\n\nTautologie .\nContradiction .\nTautologie : ¬ψ⇒¬φ\\lnot\\psi\\Rightarrow\\lnot\\varphi est la contraposée de φ⇒ψ\\varphi\\Rightarrow\\psi, donc les deux membres sont équivalents et l’implication est toujours vraie.\nContingence : fausse pour φ=F,ψ=V\\varphi=F,\\ \\psi=V (l’hypothèse est vraie, la conclusion fausse), vraie ailleurs.\n\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 23 #Dépassement · O2 · ★★★\n\n\n\nOn travaille dans ℝ\\mathbb{R}. (⋆)∀x,∃y,x+y=0.(\\star)\\qquad \\forall x,\\ \\exists y,\\ x+y=0.\n\n(⋆)(\\star) est-elle vraie ? Justifier.\nÉcrire ∃y,∀x,x+y=0\\exists y,\\ \\forall x,\\ x+y=0 et dire si elle est vraie.\nÉcrire la négation de (⋆)(\\star).\n\n\n\n\n\nIndiceSolution\n\n\nTraduis (⋆)(\\star) en français pour juger de sa vérité.\nDans (b), un même yy doit convenir pour tous les xx.\nPour la négation, n’oublie pas de nier l’égalité.\n\n\n\nVraie : pour xx donné, prends y=−xy=-x ; alors x+y=0x+y=0. Cette proposition dit que tout nombre réel à un opposé.\n« Il existe un réel yy tel que, pour tout xx, x+y=0x+y=0. » Fausse : un yy fixé ne peut annuler x+yx+y que pour le seul x=−yx=-y, pas pour tous.\n¬(⋆)≡∃x,∀y,x+y≠0\\lnot(\\star)\\equiv\\exists x,\\ \\forall y,\\ x+y\\neq 0 (« il existe un xx que aucun yy n’annule »).\n\n\n\n\n\n\n\n\n\n\n\nMise en garde✎ Exercice 24 #Dépassement · O2 · ★★★\n\n\n\nSoient AA, BB, CC des ensembles.\n\nDémontrer A∩(B∪C)=(A∩B)∪(A∩C)A\\cap(B\\cup C)=(A\\cap B)\\cup(A\\cap C).\nL’égalité A\\(B∩C)=(A\\B)∩(A\\C)A\\setminus(B\\cap C)=(A\\setminus B)\\cap(A\\setminus C) est-elle vraie ? Sinon, donner un contre-exemple et écrire l’identité correcte.\n\n\n\n\n\nIndiceSolution\n\n\n\nMontre x∈x\\in membre de gauche ⇔x∈\\Leftrightarrow x\\in membre de droite, en traduisant ∩\\cap par « et », ∪\\cup par « ou ».\nTeste sur de petits ensembles.\n\n\n\n\nx∈A∩(B∪C)⇔x∈Aet(x∈Boux∈C)⇔(x∈Aetx∈B)ou(x∈Aetx∈C)⇔x∈(A∩B)∪(A∩C)x\\in A\\cap(B\\cup C)\\ \\Leftrightarrow\\ x\\in A\\ \\text{et}\\ (x\\in B\\ \\text{ou}\\ x\\in C)\\\n\\Leftrightarrow\\ (x\\in A\\ \\text{et}\\ x\\in B)\\ \\text{ou}\\ (x\\in A\\ \\text{et}\\ x\\in C)\\\n\\Leftrightarrow\\ x\\in(A\\cap B)\\cup(A\\cap C) (distributivité du « et » sur le « ou »).\nFausse. Contre-exemple : A={1,2}A=\\{1,2\\}, B={1}B=\\{1\\}, C={2}C=\\{2\\}. Alors B∩C=⌀B\\cap C=\\varnothing, donc A\\(B∩C)=A={1,2}A\\setminus(B\\cap C)=A=\\{1,2\\} ; tandis que A\\B={2}A\\setminus B=\\{2\\}, A\\C={1}A\\setminus C=\\{1\\}, dont l’intersection est ⌀\\varnothing. L’identité correcte est A\\(B∩C)=(A\\B)∪(A\\C)A\\setminus(B\\cap C)=(A\\setminus B)\\cup\n(A\\setminus C) (De Morgan : nier « BB et CC » donne « pas BB ou pas CC »).",
+    "crumbs": [
+      "Séance 1 — Langage et raisonnement",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Exercices supplémentaires et de dépassement</span>"
+    ]
+  },
+  {
+    "objectID": "seances/seance01/institution.html",
+    "href": "seances/seance01/institution.html",
+    "title": "Institutionnalisation — méthode & auto-évaluation",
+    "section": "",
+    "text": "La méthode qu’on dégage ensemble\nEn fin de séance, on formalise la méthode pour nier une proposition — surtout une proposition quantifiée, là où l’intuition trompe le plus :\nCette méthode rejoint ta boîte à outils — elle resservira à chaque séance et à l’examen.",
+    "crumbs": [
+      "Séance 1 — Langage et raisonnement",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Institutionnalisation — méthode & auto-évaluation</span>"
+    ]
+  },
+  {
+    "objectID": "seances/seance01/institution.html#la-méthode-quon-dégage-ensemble",
+    "href": "seances/seance01/institution.html#la-méthode-quon-dégage-ensemble",
+    "title": "Institutionnalisation — méthode & auto-évaluation",
+    "section": "",
+    "text": "on échange chaque quantificateur (∀↔∃\\forall \\leftrightarrow \\exists) ;\non descend la négation jusqu’au cœur de la proposition ;\non nie le prédicat final (≥\\ge devient &lt;&lt;, == devient ≠\\ne, &gt;&gt; devient ≤\\le…).",
+    "crumbs": [
+      "Séance 1 — Langage et raisonnement",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Institutionnalisation — méthode & auto-évaluation</span>"
+    ]
+  },
+  {
+    "objectID": "seances/seance01/institution.html#auto-évaluation-coche-ce-que-tu-sais-faire",
+    "href": "seances/seance01/institution.html#auto-évaluation-coche-ce-que-tu-sais-faire",
+    "title": "Institutionnalisation — méthode & auto-évaluation",
+    "section": "Auto-évaluation — coche ce que tu sais faire",
+    "text": "Auto-évaluation — coche ce que tu sais faire\nSois honnête : c’est pour toi, pas pour une note. Les cases suivent les trois objectifs.\nO1 — traduire une affirmation simple entre langage courant et langage formel.\n\nJe traduis une phrase en connecteurs (¬,∧,∨,⇒\\lnot,\\land,\\lor,\\Rightarrow) et l’inverse, sans me tromper de sens d’implication.\nJe relie le langage courant aux ensembles de nombres (∈\\in, ⊆\\subseteq, \\\\setminus).\n\nO2 — utiliser les éléments de base de la logique (ensembles, quantificateurs, connecteurs) pour démontrer ou réfuter une affirmation mathématique.\n\nJe manipule ensembles et intervalles (appartenance, inclusion, opérations, bornes).\nJe construis une table de vérité et j’applique De Morgan.\nJe manie implication / réciproque / contraposée, et je nie une proposition quantifiée.\n\nO3 — lire une affirmation mathématique simple et distinguer exemple, preuve et contre-exemple.\n\nJe distingue inconnue, variable et paramètre dans un énoncé.\nDevant un argument, je dis si c’est un exemple, un contre-exemple ou une preuve — et ce qu’il établit.\n\n\n\n\n\n\n\nTu coches moins de la moitié des cases ? Ce n’est pas un échec — c’est le signal d’aller à la remédiation (une séance chaque semaine pour reprendre les bases).",
+    "crumbs": [
+      "Séance 1 — Langage et raisonnement",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Institutionnalisation — méthode & auto-évaluation</span>"
+    ]
+  },
+  {
+    "objectID": "seances/methode.html",
+    "href": "seances/methode.html",
+    "title": "Boîte à outils — méthodes",
+    "section": "",
+    "text": "Nier une proposition logique\nLes méthodes institutionnalisées en fin de séance s’accumulent ici. Ce sont tes outils d’examen.\nBut. Passer d’une proposition à sa négation, mécaniquement, en poussant le ¬\\lnot vers l’intérieur.\nÉtape 1 — Repérer la structure. Identifier le connecteur principal et les quantificateurs.\nÉtape 2 — Faire entrer la négation, une couche à la fois.\nÉtape 3 — Nier les propositions atomiques. =→≠=\\ \\to\\ \\ne ; &lt;→≥&lt;\\ \\to\\ \\ge ; &gt;→≤&gt;\\ \\to\\ \\le ; ∈→∉\\in\\ \\to\\ \\notin.",
+    "crumbs": [
+      "Annexes",
+      "Boîte à outils — méthodes"
+    ]
+  },
+  {
+    "objectID": "seances/methode.html#sec-nier",
+    "href": "seances/methode.html#sec-nier",
+    "title": "Boîte à outils — méthodes",
+    "section": "",
+    "text": "¬(P∧Q)≡¬P∨¬Q\\lnot(P\\land Q) \\equiv \\lnot P \\lor \\lnot Q ; ¬(P∨Q)≡¬P∧¬Q\\lnot(P\\lor Q)\\equiv \\lnot P\\land\\lnot Q (De Morgan).\n¬(P⇒Q)≡P∧¬Q\\lnot(P\\Rightarrow Q) \\equiv P \\land \\lnot Q.\n¬(∀x,P(x))≡∃x,¬P(x)\\lnot(\\forall x,\\ P(x)) \\equiv \\exists x,\\ \\lnot P(x) ; ¬(∃x,P(x))≡∀x,¬P(x)\\lnot(\\exists x,\\ P(x)) \\equiv \\forall x,\\ \\lnot P(x).\n\n\n\n\n\n\n\n\nNoteExemple travaillé\n\n\n\n\n\nNier : « ∀\\forall échantillon ee, (ee est positif ⇒\\Rightarrow ee est contaminé) ».\n¬(∀e,(pos(e)⇒cont(e)))≡∃e,¬(pos(e)⇒cont(e))≡∃e,(pos(e)∧¬cont(e)).\\lnot\\big(\\forall e,\\ (\\text{pos}(e)\\Rightarrow\\text{cont}(e))\\big)\n\\equiv \\exists e,\\ \\lnot(\\text{pos}(e)\\Rightarrow\\text{cont}(e))\n\\equiv \\exists e,\\ (\\text{pos}(e)\\ \\land\\ \\lnot\\,\\text{cont}(e)).\nEn mots : « il existe un échantillon positif et non contaminé ». Chaque passage utilise ¬∀→∃¬\\lnot\\forall \\to \\exists\\lnot, puis ¬(P⇒Q)≡P∧¬Q\\lnot(P\\Rightarrow Q)\\equiv P\\land\\lnot Q.\n\n\n\n\n\n\n\n\n\nAvertissementPiège classique\n\n\n\n\n\nGarder le même quantificateur en niant, ou nier &gt;&gt; par &lt;&lt; (oubli de l’égalité : la négation de &gt;&gt; est ≤\\le).",
+    "crumbs": [
+      "Annexes",
+      "Boîte à outils — méthodes"
+    ]
+  }
+]
