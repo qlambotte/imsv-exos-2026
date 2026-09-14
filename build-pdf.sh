@@ -22,7 +22,7 @@ OUT="$ROOT/pdf"
 [ -f "$DIR/_pdf.qmd" ] || { echo "Introuvable : $DIR/_pdf.qmd"; exit 1; }
 
 rm -rf "$TMP"; mkdir -p "$TMP" "$OUT"
-cp -r "$ROOT/img" "$TMP/"
+[ -d "$ROOT/img" ] && cp -r "$ROOT/img" "$TMP/" || true   # img/ optionnel (supprimé avec les QR)
 cp "$ROOT/exercice.lua" "$TMP/"
 cp "$DIR"/_*.qmd "$TMP/"                       # _pdf, _consignes, _socle, _transfert…
 

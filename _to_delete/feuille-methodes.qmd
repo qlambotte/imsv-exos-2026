@@ -1,0 +1,53 @@
+---
+title: "Feuille de méthodes — à compléter"
+subtitle: "IMSV · institutionnalisation — à remplir à partir des corrections"
+format:
+  typst:
+    papersize: a4
+    margin: {x: 2cm, y: 1.7cm}
+    mainfont: "Lora"
+    fontsize: 11pt
+    toc: false
+---
+
+<!-- Feuille imprimable : UNE méthode par page. Les étudiants complètent aussi les
+     « Exercices associés » et la « Théorie associée ». Mise en page typst native.
+     Rendue par build-methodes.sh et le hook post-render. -->
+
+```{=typst}
+#let rule() = line(length: 100%, stroke: 0.4pt + luma(58%))
+#let lines(n) = { for _ in range(n) { v(1fr); rule() } }
+#let sect(label, n) = { v(1fr); block(above: 0pt, below: 2pt, text(size: 10.5pt, weight: 600, label)); lines(n) }
+#let cfield(label) = { block(above: 9pt, below: 3pt, text(size: 10pt, weight: 600, label)); rule() }
+#let badge(t) = box(inset: (x: 7pt, y: 3pt), radius: 3pt, fill: rgb("#e7eef8"),
+  text(size: 10pt, weight: 700, fill: rgb("#2f4f7a"), t))
+#let rappel = block(width: 100%, inset: 8pt, radius: 4pt, fill: rgb("#f3f6fb"),
+  stroke: 0.6pt + rgb("#c7d6ea"),
+  text(size: 8.5pt, fill: luma(35%))[*Rappel* — une méthode = 5 cases : Nom · #emph[Quand l'utiliser] (le signal) · Étapes · Exemple minimal · Le piège.  Puise dans l'#emph[Indice 2] (étapes) et le #emph[Piège] des exercices, puis vérifie-toi avec la boîte à outils en ligne.])
+
+#let page_methode(titre, obj, nomline: false) = {
+  rappel
+  v(12pt)
+  grid(columns: (1fr, auto), column-gutter: 10pt, align: (left+horizon, right+horizon),
+    text(size: 15pt, weight: 700, titre), badge(obj))
+  v(2pt)
+  cfield("Exercices associés (numéros)")
+  cfield("Théorie associée (chapitre / slide)")
+  if nomline { sect("Nom de la méthode", 1) }
+  sect("Quand l'utiliser — le signal (« dès que tu vois… »)", 1)
+  sect("Étapes", 6)
+  sect("Exemple minimal / contre-exemple", 3)
+  sect("Le piège", 3)
+  v(1fr)
+}
+
+#page_methode("Traduire une phrase en langage formel", "O1")
+#pagebreak()
+#page_methode("Décider l'appartenance à un intervalle", "O2")
+#pagebreak()
+#page_methode("Réciproque, contraposée : laquelle est vraie ?", "O2")
+#pagebreak()
+#page_methode("Exemple, contre-exemple ou preuve ?", "O3")
+#pagebreak()
+#page_methode("À toi — une méthode que tu veux retenir", "O?", nomline: true)
+```

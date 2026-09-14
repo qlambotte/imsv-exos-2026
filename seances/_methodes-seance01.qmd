@@ -1,0 +1,158 @@
+<!-- Cartes de méthode — SÉANCE 1 (Langage et raisonnement).
+     Fragment sans en-tête : inclus par methode.qmd (hub, onglet séance 1) et
+     par _methode-pdf.qmd. Mise en forme par le filtre methode.lua. -->
+
+::: {.methode obj="O2" titre="Nier une proposition logique"}
+
+::: {.quand}
+Dès qu'on te demande la **négation** d'un énoncé.
+:::
+
+::: {.etapes}
+1. Repère d'abord la **structure** de l'énoncé : quel est le connecteur principal ($\land$, $\lor$,
+   $\Rightarrow$) et quels sont les quantificateurs qui l'entourent ?
+2. Fais entrer la négation **une couche à la fois**, de l'extérieur vers l'intérieur, avec les règles :
+   $\lnot(\alpha\land \beta)$ devient $\lnot \alpha \lor \lnot \beta$ et $\lnot(\alpha\lor \beta)$ devient $\lnot \alpha \land \lnot \beta$
+   (lois de De Morgan) ; $\lnot(\alpha\Rightarrow \beta)$ devient $\alpha \land \lnot \beta$ ; $\lnot(\forall\, x,\ \alpha(x))$
+   devient $\exists\, x,\ \lnot \alpha(x)$, et $\lnot(\exists\, x,\ \alpha(x))$ devient $\forall\, x,\ \lnot \alpha(x)$.
+3. Termine en **niant les propositions sans connecteurs ni quantificateurs** : $=$ devient $\ne$, $<$ devient $\ge$,
+   $>$ devient $\le$, et $\in$ devient $\notin$.
+:::
+
+::: {.exemple}
+Nions $\forall\, e, (e>0\Rightarrow e^2>0)$. Le
+quantificateur $\forall$ devient $\exists$ et on nie l'intérieur, ce qui donne d'abord
+$\exists\, e,\ \lnot(e>0\Rightarrow e^2>0)$. Or la négation d'une implication
+$\alpha\Rightarrow \beta$ s'écrit $\alpha\land\lnot \beta$ ; on obtient donc $\exists\, e,\ (e>0\ \land\ \lnot\,(e^2>0))$,
+c'est-à-dire $\exists\, e,\ (e>0\ \land\ e^2\le 0)$.
+:::
+
+::: {.piege}
+Un piège est de **garder le même quantificateur** en niant (laisser un $\forall$ là
+où il faut un $\exists$). Un autre est de nier une inégalité stricte par une autre stricte : la
+négation de $>$ n'est pas $<$ mais $\le$, car il ne faut pas oublier le cas d'égalité.
+:::
+
+:::
+
+::: {.methode obj="O1" titre="Traduire une phrase en langage formel"}
+
+::: {.quand}
+Dès qu'une phrase de la vie courante contient un mot logique — « et », « ou », « si… alors »,
+« non » — ou qu'elle parle d'un nombre qui **appartient** (ou non) à un ensemble. 
+:::
+
+::: {.etapes}
+1. Repère les connecteurs logiques et les quantificateurs : les connecteurs « et », « ou », « si… alors »
+   ou les quantificateurs « pour tout », « il existe ».
+2. Traduis ensuite **chaque morceau séparément** : une proposition simple devient une lettre
+   ($\alpha$, $\beta$…), « et » devient $\land$, « ou » devient $\lor$, « non » (ou « ne… pas »)
+   devient $\lnot$, et « si… alors » devient $\Rightarrow$.
+3. Relis pour **vérifier le sens** : demande-toi *qui implique qui*; parle-t-on d'un **
+   élément** appartenant à un ensemble (relation $\in$) ou d'une relation entre plusieurs **ensembles** (relation $\subseteq$)?
+:::
+
+::: {.exemple}
+Prenons « Le patient est malade **mais** son test est négatif ». On pose $\alpha$ = « le patient est
+malade » et $\beta$ = « le test est positif ». Le mot « mais » joue exactement le rôle d'un « et » :
+il relie deux faits vrais **en même temps**. « Négatif » est la négation de « positif ». La phrase se
+traduit donc par $\alpha \land \lnot\beta$.
+:::
+
+::: {.piege}
+Le mot « mais » exprime un contraste dans la langue, mais en logique il ne dit rien de plus que
+« et » : le traduire autrement est une erreur. Fais aussi attention à ne pas
+**inverser** le sens de l'implication (« si $\alpha$ alors $\beta$ » n'est pas la même chose que « si $\beta$ alors
+$\alpha$ »), et à ne pas confondre l'**appartenance** d'un élément ($\in$) avec l'**inclusion** d'un
+ensemble ($\subseteq$).
+:::
+
+:::
+
+::: {.methode obj="O2" titre="Décider l'appartenance à un intervalle"}
+
+::: {.quand}
+Dès qu'on te demande si un nombre appartient à un intervalle, par exemple « $x \in [a,b[$ ? ».
+:::
+
+::: {.etapes}
+1. Traduis chaque crochet : un crochet **fermé** (tourné vers le nombre) signifie que la borne est
+   **incluse** à l'intervall ; un crochet **ouvert** signifie qu'elle est **exclue** de l'intervalle.
+2. Rappelle-toi qu'une borne **infinie** ($+\infty$ ou $-\infty$) est **toujours** ouverte :
+   l'infini n'est jamais dans un intervalle.
+3. Compare le nombre à **chaque borne** et vérifie les deux conditions à la fois (au-dessus de la
+   borne de gauche, en dessous de celle de droite), en tenant compte de l'inclusion ou de l'exclusion.
+:::
+
+::: {.exemple}
+On a $7\notin[3,\ 7[$ : en effet $7$ bien supérieur ou égal à $3$ ($3\le 7$), mais il n'est pas strictement inférieur à $7$ ($\neg(7<7)$). En revanche, $-2 \in\ ]{-}\infty,\ -2]$ : on a bien $-\infty<2$ et $2\le 2$ .
+:::
+
+::: {.piege}
+Confondre crochet fermé et crochet ouvert est l'erreur la plus fréquente ; retiens que le crochet
+« s'ouvre » vers l'extérieur quand la borne est exclue. Et n'inclus **jamais** une borne infinie.
+:::
+
+:::
+
+::: {.methode obj="O2" titre="Réciproque, contraposée : laquelle est vraie ?"}
+
+::: {.quand}
+On te donne une implication « $\alpha \Rightarrow \beta$ » et on te demande sa réciproque ou sa contraposée. On te demande si l'une d'elles est vraie.
+:::
+
+::: {.etapes}
+1. Pars de l'implication de départ, $\alpha \Rightarrow \beta$.
+2. Écris la **réciproque** en **échangeant** $\alpha$ et $\beta$ : elle s'écrit
+   $\beta \Rightarrow \alpha$.
+3. Écris la **contraposée** en **niant** $\alpha$ et $\beta$ **puis en les échangeant** : elle s'écrit
+   $\lnot\beta \Rightarrow \lnot\alpha$.
+4. Applique enfin la règle suivante : la **contraposée est toujours équivalente** à l'implication
+   de départ (si l'une est vraie, l'autre l'est aussi). La validité de la **réciproque** d'une implication est indépendante de la validité de l'implication.
+:::
+
+::: {.exemple}
+Partons de « si $n$ est multiple de 4, alors $n$ est pair ». Sa **contraposée** est « si $n$ est
+impair, alors $n$ n'est pas multiple de 4 » : elle est vraie, tout comme l'implication de départ. Sa
+**réciproque** est « si $n$ est pair, alors $n$ est multiple de 4 » : elle est fausse, et $n = 6$ le
+montre ($6$ est pair, mais pas multiple de 4).
+
+Voici un exemple d'une implication vraie dont la réciproque est vraie. Considérons « si $n$ est divisible par 6, alors $n$ est divisible par 2 et par 3 ». Sa réciproque « si $n$ est divisible par 2 et 6, alors $n$ est divisible par 6 » est vraie aussi.
+
+:::
+
+::: {.piege}
+L'erreur classique est de **confondre réciproque et contraposée**, ou de croire qu'une contraposée
+« pourrait être fausse » alors que l'implication de départ est vraie : c'est impossible, puisque
+toutes deux sont équivalentes.
+:::
+
+:::
+
+::: {.methode obj="O3" titre="Exemple, contre-exemple ou preuve d'un énoncé universel ?"}
+
+::: {.quand}
+Dès qu'on te propose un **argument** pour justifier (ou réfuter) un énoncé universel et qu'il
+faut juger si cet argument **établit vraiment** quelque chose.
+:::
+
+::: {.etapes}
+1. Dans le cas d'une proposition universelle, regarde si l'argument traite **un seul cas** ou **tous les cas** à la fois : c'est ce qui décide de la valeur de l'argument. Dans un énoncé universel, une preuve doit analyser tous les cas. 
+2. Souviens-toi qu'un **exemple** (un cas qui marche) n'établit **rien** pour un énoncé universel : ce n'est pas une preuve.
+3. Un **contre-exemple** (un seul cas qui échoue, mais **dans le domaine** de l'énoncé) suffit à le
+   **réfuter** ; une **preuve**, elle, doit couvrir **tous** les cas pour l'**établir**.
+:::
+
+::: {.exemple}
+Pour l'énoncé « tout nombre premier est impair », le nombre $2$ est un **contre-exemple** : il est
+premier et pair, donc l'énoncé est faux. À l'inverse, remarquer que « $3$ est premier et impair » ne
+**prouve rien** — c'est un simple exemple parmi d'autres.
+:::
+
+::: {.piege}
+Prendre un exemple pour une preuve est le piège majeur. Et n'oublie pas qu'un **seul** contre-exemple
+suffit à réfuter (inutile d'en chercher plusieurs), à condition qu'il appartienne bien au domaine de
+l'énoncé.
+:::
+
+:::

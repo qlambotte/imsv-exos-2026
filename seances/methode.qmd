@@ -1,118 +1,53 @@
-# Boîte à outils — méthodes {.unnumbered}
+---
+title: "Boîte à outils"
+listing:
+  id: meth
+  contents: "methodes/seance*.qmd"
+  type: table
+  table-striped: true
+  table-hover: true
+  fields: [order, nom, correction]
+  field-display-names:
+    order: "#"
+    nom: "Séance"
+    correction: "Méthodes"
+  sort: "order"
+  sort-ui: false
+  filter-ui: false
+---
 
-Les méthodes institutionnalisées en fin de séance s'accumulent ici. Ce sont tes **outils
-d'examen**. Chaque méthode tient en **cinq cases** — jamais un paragraphe :
+::: {.content-visible when-format="html"}
+::: {.dl}
+<details class="dl-menu">
+<summary>Télécharger (PDF)</summary>
+<a href="../pdf/feuille-vierge.pdf" download>Feuille de méthode vierge (PDF)</a>
+</details>
+:::
+:::
 
-- **Nom** — comment on l'appelle.
-- **Quand l'utiliser** — le *signal déclencheur* (« dès que tu vois… »).
-- **Étapes** — numérotées, une action par étape.
-- **Exemple minimal** — le plus petit cas qui la montre.
-- **Le piège** — la faute à ne pas refaire.
+Une méthode réunit, sur une page : quand l'utiliser, les étapes, un exemple et le·s piège·s à
+éviter. Ce sont tes **outils d'examen**. Sur le site, « quand l'utiliser ? » est visible tout de
+suite ; le reste est replié — reconstruis la méthode toi-même, puis déplie pour te corriger.
 
 ::: {.callout-tip appearance="simple" title="Fabriquer une méthode toi-même"}
-Tu n'as rien à inventer : dans les corrections, l'**Indice 2** (« la question à te poser ») te
-donne les *étapes*, et le **Piège** te donne la case *piège*. Relis-les pour l'exercice concerné,
-et remplis le gabarit. La **[feuille à compléter (PDF)](../pdf/feuille-methodes.pdf)** est faite
-pour ça.
+Pour construire toi même une méthode, il n'y à rien à inventer : tout est déjà dans le **cours** et les **exercices**. Procède ainsi :
+
+1. Repère le **type de question** qui revient et donne-lui un **nom**.
+2. Note **quand l'utiliser** : la situation qui doit te faire penser à cette méthode.
+3. Récupère les **étapes** dans l'**Indice 2** des exercices concernés.
+4. Ajoute un **exemple** court, puis le **piège** (dans la case *Piège* des exercices concernés).
+
+Le corrigé de la **plupart des méthodes** est déjà en ligne ici — sers-t'en pour te vérifier.
+Entraîne-toi avec la [feuille à compléter (PDF)](methodes/seance01.qmd) de la séance 1.
 :::
 
-Une méthode est **faite ensemble en séance** (ci-dessous, *Nier une proposition*). Pour les autres,
-seul le **signal** est visible ; les étapes, l'exemple et le piège sont **repliés** : construis
-d'abord, déplie ensuite pour te corriger.
+## Les méthodes, séance par séance
 
-## Nier une proposition logique {#sec-nier}
-
-**Quand l'utiliser.** Dès qu'on demande la **négation** d'un énoncé, surtout avec $\forall$,
-$\exists$, $\ge$, $=$…
-
-**But.** Passer d'une proposition à sa négation, mécaniquement, en poussant le $\lnot$ vers
-l'intérieur.
-
-**Étape 1 — Repérer la structure.** Identifier le connecteur principal et les quantificateurs.
-
-**Étape 2 — Faire entrer la négation, une couche à la fois.**
-
-- $\lnot(P\land Q) \equiv \lnot P \lor \lnot Q$ ; $\lnot(P\lor Q)\equiv \lnot P\land\lnot Q$ (De
-  Morgan).
-- $\lnot(P\Rightarrow Q) \equiv P \land \lnot Q$.
-- $\lnot(\forall x,\ P(x)) \equiv \exists x,\ \lnot P(x)$ ;
-  $\lnot(\exists x,\ P(x)) \equiv \forall x,\ \lnot P(x)$.
-
-**Étape 3 — Nier les propositions atomiques.** $=\ \to\ \ne$ ; $<\ \to\ \ge$ ; $>\ \to\ \le$ ;
-$\in\ \to\ \notin$.
-
-::: {.callout-note collapse="true" title="Exemple travaillé"}
-Nier : « $\forall$ échantillon $e$, ($e$ est positif $\Rightarrow$ $e$ est contaminé) ».
-
-$$\lnot\big(\forall e,\ (\text{pos}(e)\Rightarrow\text{cont}(e))\big)
-\equiv \exists e,\ \lnot(\text{pos}(e)\Rightarrow\text{cont}(e))
-\equiv \exists e,\ (\text{pos}(e)\ \land\ \lnot\,\text{cont}(e)).$$
-
-En mots : « il existe un échantillon positif **et non** contaminé ». Chaque passage utilise
-$\lnot\forall \to \exists\lnot$, puis $\lnot(P\Rightarrow Q)\equiv P\land\lnot Q$.
+::: {.callout-important appearance="simple" title="Liste des méthodes"}
+**Cette liste n'est pas exhaustive** : elle rassemble les méthodes qu'on dégage en séance ;
+complète-la avec les tiennes (feuille vierge téléchargeable dans le menu en haut à gauche). Cette liste sera mise à jour automatiquement à chaque
+nouvelle séance — clique sur une séance pour voir ses méthodes.
 :::
 
-::: {.callout-warning collapse="true" title="Piège classique"}
-Garder le même quantificateur en niant, ou nier $>$ par $<$ (oubli de l'égalité : la négation de $>$
-est $\le$).
-:::
-
-## Traduire une phrase en langage formel {#sec-traduire}
-
-**Quand l'utiliser.** Dès qu'une phrase mêle « et / ou / si…alors / non », ou parle d'ensembles de
-nombres.
-
-::: {.callout-note collapse="true" title="Corrigé — étapes · exemple · piège"}
-**Étapes.** 1) repère le *connecteur* ou le *quantificateur* porteur ; 2) traduis chaque morceau
-(« mais » $=\land$, « négatif » $=\lnot$…) ; 3) vérifie le sens : *qui* implique *qui* ? un
-**élément** ($\in$) ou un **ensemble** ($\subseteq$) ?
-
-**Exemple.** « Le patient est malade mais son test est négatif » $=\ \varphi \land \lnot\psi$.
-
-**Piège.** Traduire « mais » autrement que par $\land$ ; inverser le sens de $\Rightarrow$ ;
-confondre $\in$ et $\subseteq$.
-:::
-
-## Décider l'appartenance à un intervalle {#sec-intervalle}
-
-**Quand l'utiliser.** « $x \in [a,b[$ ? » — toute question d'appartenance à un intervalle.
-
-::: {.callout-note collapse="true" title="Corrigé — étapes · exemple · piège"}
-**Étapes.** 1) crochet **fermé** = borne **incluse**, **ouvert** = **exclue** ; 2) une borne
-**infinie** est **toujours** ouverte ; 3) compare le nombre à chaque borne.
-
-**Exemple.** $7 \notin [3,7[$ (7 exclu) ; $-2 \in\ ]{-}\infty,\,-2]$ ($-2$ inclus).
-
-**Piège.** Confondre crochet fermé / ouvert ; croire qu'une borne infinie peut être incluse.
-:::
-
-## Réciproque, contraposée : laquelle est vraie ? {#sec-contraposee}
-
-**Quand l'utiliser.** On te donne $\varphi \Rightarrow \psi$ et on demande une implication
-« dérivée ».
-
-::: {.callout-note collapse="true" title="Corrigé — étapes · exemple · piège"}
-**Étapes.** 1) **réciproque** = on **échange** ($\psi \Rightarrow \varphi$) ; 2) **contraposée** =
-on **nie et on échange** ($\lnot\psi \Rightarrow \lnot\varphi$) ; 3) la **contraposée est
-équivalente** à l'implication ; la réciproque, non.
-
-**Exemple.** « multiple de 4 $\Rightarrow$ pair » : contraposée « impair $\Rightarrow$ non multiple
-de 4 » (vraie) ; réciproque « pair $\Rightarrow$ multiple de 4 » (fausse, $n=6$).
-
-**Piège.** Confondre réciproque et contraposée ; croire que la contraposée « peut être fausse ».
-:::
-
-## Exemple, contre-exemple ou preuve ? {#sec-preuve}
-
-**Quand l'utiliser.** On te propose un **argument** pour un énoncé « pour tout ».
-
-::: {.callout-note collapse="true" title="Corrigé — étapes · exemple · piège"}
-**Étapes.** 1) l'argument traite-t-il **un** cas ou **tous** les cas ? 2) un **exemple** n'établit
-**rien** ; 3) un **contre-exemple** (qui doit être **dans le domaine**) **réfute** ; une **preuve**
-(tous les cas) **établit**.
-
-**Exemple.** « 2 est premier et pair » réfute « tout premier est impair » ; « 3 est premier et
-impair » ne prouve rien.
-
-**Piège.** Prendre un exemple pour une preuve ; oublier qu'un seul contre-exemple suffit.
+:::{#meth}
 :::

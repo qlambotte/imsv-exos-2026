@@ -1,14 +1,13 @@
 ---
 title: "Séance 1 — Langage et raisonnement"
 subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
+description: "Logique : propositions, connecteurs, ensembles, quantificateurs"
+order: 1
+nom: "[Langage et raisonnement](seances/seance01/index.html)"
+correction: "✅ en ligne"
 ---
 
-::: {.seance-meta}
-**Thème.** Logique (propositions, connecteurs, tables de vérité, implication), ensembles,
-quantificateurs, .... 
-
-**Théorie associée :** IMSV-1, *« Pourquoi les mathématiques ? -- Langage et raisonnement »*.
-:::
+{{< include _meta.qmd >}}
 
 {{< include _download.qmd >}}
 
@@ -28,7 +27,7 @@ Une grille d'**auto-évaluation** sur ces trois objectifs t'attend à la page
 
 1. **[Socle](socle.qmd)** — les exercices routiniers, à ton rythme.
 2. **[Transfert](transfert.qmd)** — des problèmes en contexte nouveau.
-3. **[Exercices supplémentaires](supplementaires.qmd)** — pour les rapides (facultatif, hors examen).
+3. **[Exercices supplémentaires](supplementaires.qmd)** — pour les rapides (facultatif).
 4. **[Institutionnalisation](institution.qmd)** — la méthode qu'on dégage ensemble, et l'auto-évaluation.
 
 ## Les slides du cours

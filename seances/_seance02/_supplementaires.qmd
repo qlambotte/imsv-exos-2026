@@ -1,0 +1,382 @@
+<!-- RENFORCEMENT : variations du socle (même compétence, entraînement en plus) et
+     consolidation des points de théorie non couverts par le socle (propriétés des
+     opérations, symétries et périodicité trigonométriques, chiffres significatifs).
+     Faisable SANS calculatrice ; valeurs différentes des slides ET du socle (pas de recopie).
+     Numéro AUTOMATIQUE (catégorie Renforcement -> R.1, R.2…). Échelle d'aides courte :
+     un onglet « Indice » (référence + coup de pouce), puis « Solution » (et « Piège » au besoin). -->
+
+::: {.callout-note appearance="simple"}
+Ces exercices restent **dans les objectifs** de la séance : à faire une fois le socle et le transfert
+bouclés, en séance ou à la maison.
+:::
+
+### Renforcement — le socle, un cran plus loin
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
+**Propriétés des opérations.** Pour chaque égalité, dis si elle est **vraie** ou **fausse**, et nomme
+la propriété (ou son absence) en jeu.
+
+(a) $(20 - 8) - 5 = 20 - (8 - 5)$
+(b) $10 - 4 = 4 - 10$
+(c) $3 \cdot (6 + 4) = 3 \cdot 6 + 3 \cdot 4$
+(d) $(30 + 12) : 6 = 30 : 6 + 12 : 6$
+(e) $48 : (8 : 2) = (48 : 8) : 2$
+(f) $60 : (4 + 6) = 60 : 4 + 60 : 6$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Associativité*, *Commutativité* et *Distributivité*. La soustraction
+et la division ne sont **ni** associatives **ni** commutatives ; la division est distributive **à
+droite** seulement.
+
+## Solution
+
+(a) **Faux** : $7 \ne 17$ (la soustraction n'est pas associative).
+(b) **Faux** : $6 \ne -6$ (la soustraction n'est pas commutative).
+(c) **Vrai** : distributivité de la multiplication sur l'addition.
+(d) **Vrai** : la division est distributive **à droite**.
+(e) **Faux** : $12 \ne 3$ (la division n'est pas associative).
+(f) **Faux** : $6 \ne 25$ (la division n'est **pas** distributive à gauche).
+
+## Piège
+
+Croire que la division « se distribue » sur une somme au dénominateur : $60 : (4 + 6) \ne 60 : 4 + 60 : 6$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
+**Une expression complexe.** Calcule, étape par étape,
+$$12 : \sqrt{\left[10 - (4 + 4)\right]^2 + 4 - 4 \cdot (-2)}.$$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Expressions et priorités des opérations*. Commence **à l'intérieur**
+des parenthèses, puis la puissance, puis la racine ; termine par la division.
+
+## Solution
+
+$10 - (4 + 4) = 2$, donc $\left[\,\cdot\,\right]^2 = 4$. Sous la racine : $4 + 4 - 4 \cdot (-2) = 4 + 4 + 8 = 16$.
+Puis $\sqrt{16} = 4$, et enfin $12 : 4 = 3$.
+
+## Piège
+
+Oublier que $-\,4 \cdot (-2) = +8$ ; diviser avant d'avoir évalué la racine.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
+**Développer et factoriser.**
+
+(a) Développer $(2x - 3)^2$.
+(b) Développer $(5 + 2b)(5 - 2b)$.
+(c) Factoriser $7a^2 - 28$.
+(d) Factoriser $6x^2 + 15x$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Distributivité* et *identités remarquables*. Pour factoriser, cherche
+d'abord un **facteur commun**, puis reconnais une éventuelle **différence de carrés**.
+
+## Solution
+
+(a) $4x^2 - 12x + 9$.
+(b) $25 - 4b^2$.
+(c) $7(a^2 - 4) = 7(a - 2)(a + 2)$.
+(d) $3x(2x + 5)$.
+
+## Piège
+
+En (a), oublier le **double produit** $2 \cdot 2x \cdot 3 = 12x$ ; en (c), s'arrêter à $7(a^2 - 4)$
+sans reconnaître la différence de carrés.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
+**Fractions algébriques.** Réduis au même dénominateur, puis simplifie si possible.
+
+(a) $\dfrac{3}{x + 2} - \dfrac{6}{x - 2}$
+(b) $\dfrac{3}{x + 2} : \dfrac{6}{x - 2}$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Addition et soustraction de fractions* et *Produit et quotient de
+fractions*. Diviser, c'est **multiplier par l'inverse**.
+
+## Solution
+
+(a) $\dfrac{3(x - 2) - 6(x + 2)}{(x + 2)(x - 2)} = \dfrac{-3x - 18}{x^2 - 4}$.
+(b) $\dfrac{3}{x + 2} \cdot \dfrac{x - 2}{6} = \dfrac{x - 2}{2(x + 2)}$.
+
+## Piège
+
+Additionner numérateurs et dénominateurs entre eux ; « simplifier en diagonale » dans la soustraction
+(a) — ce n'est permis que dans un **produit**.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
+**Puissances et exposants rationnels.** Calcule, ou écris comme une seule puissance (avec $x \ne 0$).
+
+(a) $16^{3/4}$
+(b) $125^{-2/3}$
+(c) $\dfrac{\left(x^4\right)^2 \cdot x^{-3}}{x^2}$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Puissances* et *Racines et exposants rationnels*. Rappelle-toi
+$x^{p/q} = \sqrt[q]{x^{\,p}}$ et $a^{-n} = \dfrac{1}{a^n}$.
+
+## Solution
+
+(a) $16^{3/4} = \left(\sqrt[4]{16}\right)^3 = 2^3 = 8$.
+(b) $125^{-2/3} = \dfrac{1}{\left(\sqrt[3]{125}\right)^2} = \dfrac{1}{5^2} = \dfrac{1}{25}$.
+(c) $\dfrac{x^{8} \cdot x^{-3}}{x^2} = x^{8 - 3 - 2} = x^3$.
+
+## Piège
+
+Confondre $\left(x^4\right)^2$ (on **multiplie** : $x^8$) et $x^4 \cdot x^2$ (on **ajoute** : $x^6$).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|3|O3"}
+**Pourquoi la valeur absolue ?**
+
+(a) Montre qu'on **ne peut pas** avoir $\sqrt{x^2} = x$ pour tout $x$, en testant $x = -3$.
+(b) Énonce la règle correcte, puis calcule $\sqrt{(5 - 9)^2}$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Valeur absolue*. Une racine d'indice **pair** est **toujours
+positive**.
+
+## Solution
+
+(a) Pour $x = -3$ : d'un côté $\sqrt{(-3)^2} = \sqrt{9} = 3$ ; de l'autre, l'hypothèse donnerait $-3$. On
+aurait $3 = -3$, ce qui est absurde. L'égalité $\sqrt{x^2} = x$ est donc fausse dès que $x < 0$.
+(b) La règle correcte est $\sqrt{x^2} = |x|$. Donc $\sqrt{(5 - 9)^2} = |5 - 9| = |-4| = 4$.
+
+## Piège
+
+Écrire $\sqrt{x^2} = x$ sans valeur absolue : c'est faux pour tout $x < 0$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
+**Une même valeur, plusieurs écritures.**
+
+(a) Écris $\dfrac{5}{8}$ en décimal et en pourcentage ; écris $0{,}45$ en fraction irréductible et en
+pourcentage.
+(b) Prendre $\dfrac{2}{5}$ de $35$ mL : combien de mL ?
+(c) Après une hausse de $25\,\%$, une population de bactéries atteint $500$. Quel était l'effectif
+**initial** ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Fractions : quel est leur sens ?* et *Pourcentages*. Pour retrouver la
+valeur initiale, résous $\left(1 + \tfrac{p}{100}\right) \cdot x = y$.
+
+## Solution
+
+(a) $\dfrac{5}{8} = 0{,}625 = 62{,}5\,\%$ ; $0{,}45 = \dfrac{9}{20} = 45\,\%$.
+(b) $\dfrac{2}{5} \cdot 35 = 14$ mL.
+(c) $1{,}25 \cdot x = 500$, d'où $x = 500 : 1{,}25 = 400$.
+
+## Piège
+
+Retirer $25\,\%$ de la valeur **finale** ($500 - 0{,}25 \cdot 500 = 375$) au lieu de l'initiale.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O3"}
+**Ordres de grandeur et précision.**
+
+(a) Calcule, en notation scientifique : $(4 \times 10^{7}) \cdot (2{,}5 \times 10^{-3})$.
+(b) **Estime** (sans calculatrice) $\dfrac{5{,}1 \times 10^{6}}{2{,}05 \times 10^{2}}$.
+(c) Une longueur est mesurée au dixième de millimètre près. Est-il justifié d'annoncer le résultat
+final d'un calcul au **nanomètre** près ? Explique.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Notation scientifique*, *Ordres de grandeur et estimations* et
+*Chiffres significatifs*. La précision d'un résultat ne peut **excéder** celle des données.
+
+## Solution
+
+(a) $4 \cdot 2{,}5 \times 10^{7 - 3} = 10 \times 10^{4} = 1 \times 10^{5}$.
+(b) $\approx \dfrac{5 \times 10^{6}}{2 \times 10^{2}} = 2{,}5 \times 10^{4}$.
+(c) **Non** : le nanomètre est un million de fois plus fin que le dixième de millimètre. Ajouter des
+décimales que la mesure ne justifie pas ne rend pas le résultat plus exact.
+
+## Piège
+
+Laisser $10 \times 10^{4}$ (le $a$ doit être dans $[1, 10[$) ; confondre précision affichée et
+exactitude réelle.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O4"}
+**Symétries sur le cercle.** À partir des valeurs remarquables et des symétries, donne $\cos$ et $\sin$
+de :
+
+(a) $135°$
+(b) $-\dfrac{\pi}{6}$
+(c) $\dfrac{\pi}{2} - \dfrac{\pi}{3}$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Symétries* et *Signes*. Opposés : $\cos(-\theta) = \cos\theta$,
+$\sin(-\theta) = -\sin\theta$. Supplémentaires : $\cos(\pi - \theta) = -\cos\theta$,
+$\sin(\pi - \theta) = \sin\theta$. Complémentaires : $\cos(\tfrac{\pi}{2} - \theta) = \sin\theta$,
+$\sin(\tfrac{\pi}{2} - \theta) = \cos\theta$.
+
+## Solution
+
+(a) $135° = 180° - 45°$ (supplémentaire de $45°$) : $\cos(135°) = -\dfrac{\sqrt2}{2}$,
+$\sin(135°) = \dfrac{\sqrt2}{2}$.
+(b) $\cos\!\left(-\tfrac{\pi}{6}\right) = \cos\tfrac{\pi}{6} = \dfrac{\sqrt3}{2}$ ;
+$\sin\!\left(-\tfrac{\pi}{6}\right) = -\sin\tfrac{\pi}{6} = -\dfrac{1}{2}$.
+(c) $\cos\!\left(\tfrac{\pi}{2} - \tfrac{\pi}{3}\right) = \sin\tfrac{\pi}{3} = \dfrac{\sqrt3}{2}$ ;
+$\sin\!\left(\tfrac{\pi}{2} - \tfrac{\pi}{3}\right) = \cos\tfrac{\pi}{3} = \dfrac{1}{2}$ (ce sont les
+valeurs de $\tfrac{\pi}{6}$).
+
+## Piège
+
+Confondre la symétrie des angles **opposés** et celle des **supplémentaires** ; se tromper de signe
+selon le quadrant.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O4"}
+**Périodicité et identité fondamentale.**
+
+(a) Ramène-toi à un angle connu : $\cos(420°)$ et $\sin\!\left(\dfrac{7\pi}{3}\right)$.
+(b) On sait que $\cos\theta = \dfrac{3}{5}$ et que $\theta \in \left[0,\ \tfrac{\pi}{2}\right]$. Calcule
+$\sin\theta$, puis $\tan\theta$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Périodicité et identité fondamentale* et *Tangente*. Périodicité : on
+peut retrancher un tour ($2\pi$ ou $360°$). Identité : $\sin^2\theta + \cos^2\theta = 1$.
+
+## Solution
+
+(a) $\cos(420°) = \cos(420° - 360°) = \cos(60°) = \dfrac{1}{2}$ ;
+$\sin\!\left(\dfrac{7\pi}{3}\right) = \sin\!\left(\dfrac{7\pi}{3} - 2\pi\right) = \sin\dfrac{\pi}{3} = \dfrac{\sqrt3}{2}$.
+(b) $\sin\theta = \sqrt{1 - \tfrac{9}{25}} = \sqrt{\tfrac{16}{25}} = \dfrac{4}{5}$ (positif au quadrant I) ;
+$\tan\theta = \dfrac{\sin\theta}{\cos\theta} = \dfrac{4/5}{3/5} = \dfrac{4}{3}$.
+
+## Piège
+
+Oublier de ramener l'angle dans un tour avant de lire la valeur ; prendre $\sin\theta$ négatif au
+quadrant I.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O4"}
+**Tangente.**
+
+(a) Donne $\tan\theta$ pour $\theta = 0,\ \dfrac{\pi}{6},\ \dfrac{\pi}{4},\ \dfrac{\pi}{3}$.
+(b) Pourquoi $\tan\!\left(\dfrac{\pi}{2}\right)$ n'existe-t-elle pas ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Tangente*. Rappelle-toi $\tan\theta = \dfrac{\sin\theta}{\cos\theta}$.
+
+## Solution
+
+(a) $\tan 0 = 0$ ; $\tan\dfrac{\pi}{6} = \dfrac{1}{\sqrt3} = \dfrac{\sqrt3}{3}$ ; $\tan\dfrac{\pi}{4} = 1$ ;
+$\tan\dfrac{\pi}{3} = \sqrt3$.
+(b) $\cos\dfrac{\pi}{2} = 0$ : $\tan\dfrac{\pi}{2} = \dfrac{\sin(\pi/2)}{\cos(\pi/2)}$ serait une division
+par zéro.
+
+## Piège
+
+Écrire $\tan\dfrac{\pi}{3} = \dfrac{1}{\sqrt3}$ (c'est $\tan\dfrac{\pi}{6}$) : $\tan$ **croît** de $0$ à
+$\dfrac{\pi}{2}$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|3|O4"}
+**Retrouver un angle.** On sait que $\cos\theta = -\dfrac{1}{2}$ et que $\theta \in \left[\dfrac{\pi}{2},\ \pi\right]$.
+
+(a) Calcule $\sin\theta$.
+(b) Donne la valeur exacte de $\theta$.
+(c) Déduis-en $\cos(-\theta)$ et $\sin(\pi - \theta)$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Identité fondamentale*, *Signes* et *Symétries*. Le **quadrant** fixe
+le signe de $\sin\theta$.
+
+## Solution
+
+(a) $\sin^2\theta = 1 - \dfrac{1}{4} = \dfrac{3}{4}$, donc $\sin\theta = \pm\dfrac{\sqrt3}{2}$. Au
+quadrant II, $\sin\theta > 0$ : $\sin\theta = \dfrac{\sqrt3}{2}$.
+(b) L'angle du quadrant II dont le cosinus vaut $-\dfrac{1}{2}$ est $\theta = \dfrac{2\pi}{3}$ ($= 120°$).
+(c) $\cos(-\theta) = \cos\theta = -\dfrac{1}{2}$ (angles opposés) ; $\sin(\pi - \theta) = \sin\theta = \dfrac{\sqrt3}{2}$ (angles supplémentaires).
+
+## Piège
+
+Garder $\sin\theta < 0$ en oubliant que le sinus est **positif** au quadrant II.
+
+:::
+:::

@@ -1,0 +1,180 @@
+<!-- TRANSFERT : appliquer les savoir-faire du socle à un contexte nouveau.
+     Faisable SANS calculatrice ; valeurs choisies différentes de celles des slides.
+     Numéro AUTOMATIQUE (catégorie Transfert -> T.1, T.2…). -->
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O3"}
+**Dilution.** On dispose d'une solution mère à $25$ mg/mL. On veut préparer $200$ mL d'une solution à
+$4$ mg/mL.
+
+(a) Quel volume de solution mère faut-il prélever ?
+(b) Un·e étudiant·e trouve $320$ mL. Quel **contrôle rapide** montre, sans refaire le calcul, que
+c'est faux ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Retour à la dilution*, *Unités et dimensions* et *Ordres de
+grandeur*.
+
+## Indice 2
+
+*Question à te poser.*
+
+La **quantité** de soluté se conserve : $C_1 V_1 = C_2 V_2$. La solution fille est **moins**
+concentrée que la mère : le volume prélevé est-il plus grand ou plus petit que $200$ mL ?
+
+## Solution
+
+(a) $V_1 = \dfrac{C_2 V_2}{C_1} = \dfrac{4 \cdot 200}{25} = \dfrac{800}{25} = 32$ mL.
+(b) On ne peut pas prélever $320$ mL pour obtenir seulement $200$ mL : le volume prélevé doit être
+**inférieur** au volume final. L'**ordre de grandeur** (et la contrainte volumique) tranche
+immédiatement.
+
+## Piège
+
+Prélever **plus** que le volume final ; mélanger les unités de concentration et de volume.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O2"}
+**Pourcentages successifs.** Le prix d'un consommable de laboratoire est de $5$ €/L. Il augmente de
+$10\,\%$ un mois, puis **baisse de $10\,\%$** le mois suivant.
+
+(a) Quel est le prix final ? Est-on revenu à $5$ €/L ?
+(b) De quel pourcentage **global** le prix a-t-il varié entre le début et la fin ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Pourcentages* (pourcentages successifs).
+
+## Indice 2
+
+*Question à te poser.*
+
+Des pourcentages successifs se **composent par multiplication**, pas par addition : $\times 1{,}1$ puis
+$\times 0{,}9$.
+
+## Solution
+
+(a) $5 \cdot 1{,}1 \cdot 0{,}9 = 4{,}95$ €/L : **non**, on ne revient pas à $5$ €/L.
+(b) $1{,}1 \cdot 0{,}9 = 0{,}99$ : le prix a **baissé de $1\,\%$** au total.
+
+## Piège
+
+Croire que $+10\,\%$ puis $-10\,\%$ s'annulent ($+10 - 10 = 0$).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O4"}
+**Projection.** Un déplacement (ou une force) de norme $12$ fait un angle de $60°$ avec l'horizontale.
+
+(a) Exprimer ses composantes **horizontale** et **verticale** à l'aide de $\cos$ et $\sin$.
+(b) Les calculer (valeurs remarquables).
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Pourquoi s'intéresser aux angles ?* et *Cercle trigonométrique
+(triangle rectangle)*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Sur le triangle rectangle formé par la projection : la composante **horizontale** est le côté
+**adjacent** à l'angle, la **verticale** le côté **opposé**. Donc horizontale $= 12\cos(60°)$,
+verticale $= 12\sin(60°)$.
+
+## Solution
+
+(a) Horizontale $= 12\cos(60°)$ ; verticale $= 12\sin(60°)$.
+(b) $12 \cdot \dfrac{1}{2} = 6$ ; $12 \cdot \dfrac{\sqrt3}{2} = 6\sqrt3 \approx 10{,}4$.
+
+## Piège
+
+Inverser $\cos$ (horizontale) et $\sin$ (verticale) ; confondre l'angle avec l'horizontale et avec la
+verticale.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O3"}
+**Contrôle par les unités.** Une posologie est de $5$ mg par kilogramme de masse corporelle et par
+jour, répartie en $2$ prises égales.
+
+(a) Pour un patient de $70$ kg, quelle masse de principe actif par **prise** ?
+(b) Un·e étudiant·e propose $17{,}5$ g par prise. Quel **contrôle** révèle aussitôt l'erreur ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Unités et dimensions* et *Comment détecter une erreur ?*
+
+## Indice 2
+
+*Question à te poser.*
+
+Suis les unités : $\left(\dfrac{\text{mg}}{\text{kg} \cdot \text{jour}}\right) \cdot \text{kg}$ donne des
+mg par jour. Divise ensuite par le nombre de prises.
+
+## Solution
+
+(a) $5 \cdot 70 = 350$ mg par jour, soit $350 : 2 = 175$ mg par prise.
+(b) $17{,}5$ g $= 17\,500$ mg : c'est **cent fois** trop. L'**ordre de grandeur** et l'**unité** (g au
+lieu de mg) trahissent l'erreur immédiatement.
+
+## Piège
+
+Oublier de diviser par le nombre de prises ; mélanger g et mg.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O4"}
+**Rampe d'accès.** Une rampe rectiligne fait un angle de $30°$ avec le sol horizontal et mesure $8$ m
+de long.
+
+(a) Quelle **hauteur** permet-elle de franchir ?
+(b) Quelle est son **emprise au sol** (distance horizontale) ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Cercle trigonométrique (triangle rectangle)*.
+
+## Indice 2
+
+*Question à te poser.*
+
+La rampe est l'**hypoténuse**. La hauteur est le côté **opposé** à l'angle de $30°$ (donc $\sin$),
+l'emprise au sol le côté **adjacent** (donc $\cos$).
+
+## Solution
+
+(a) Hauteur $= 8 \sin(30°) = 8 \cdot \dfrac{1}{2} = 4$ m.
+(b) Emprise $= 8 \cos(30°) = 8 \cdot \dfrac{\sqrt3}{2} = 4\sqrt3 \approx 6{,}9$ m.
+
+## Piège
+
+Inverser $\sin$ (hauteur) et $\cos$ (emprise) ; prendre la hauteur plus grande que la rampe.
+
+:::
+:::

@@ -3,8 +3,8 @@
      Convention : « Indice 1 » renvoie TOUJOURS à la théorie du cours (par nom de section) ;
      les coups de pouce concrets sont dans « Indice 2 » et suivants. -->
 
-::: {.callout-caution .exo title="Exercice 1|Socle|1|O3"}
-Pour chaque lettre indiquée, dis son rôle dans l'expression entre guillements : **inconnue**, **variable** ou **paramètre**.
+::: {.callout-caution .exo title="Exercice|Socle|1|O3"}
+Pour chaque lettre indiquée, dire son rôle dans l'expression entre guillements : **inconnue**, **variable** ou **paramètre**.
 
 (a) $x$ dans « résoudre $2x = 10$ »
 (b) $x$ dans « la fonction $f(x) = x^2$ »
@@ -22,14 +22,15 @@ Retourne à la théorie du cours : *Égalité et symboles : lire avant de calcul
 
 *Question à te poser.*
 
-Pour chaque lettre : cherche-t-on **sa** valeur (inconnue) ? décrit-elle **tous** les cas ou l'entrée
-d'une fonction (variable) ? ou **fixe**-t-elle un objet particulier tandis qu'une autre lettre varie
+Pour chaque lettre : cherche-t-on **sa** valeur (inconnue) ? Décrit-elle **tous** les cas ou l'entrée
+d'une fonction (variable) ? **Fixe**-t-elle un objet particulier tandis qu'une autre lettre varie
 (paramètre) ?
+
 ## Solution
 
-(a) **Inconnue** ($x = 5$). 
-(b) **Variable** (l'entrée de $f$, parcourt $\mathbb{R}$).
-(c) **Paramètre** ($m$ fixe la droite ; la variable est $x$).
+(a) **Inconnue**: on cherche la (ou les) valeur(s) de $x$ qui satisfont l'équation, ici $x = 5$. 
+(b) **Variable**: la lettre $x$ représente la variable indépendante de la fonction $f$ et parcourt $\mathbb{R}$.
+(c) **Paramètre**: dans l'expression, $m$ représente un nombre fixé, en l'occurence la pente de la droite d'équation $y=mx+1$.
 
 
 
@@ -40,8 +41,8 @@ Dans $y = m x + 1$, confondre $x$ (variable) et $m$ (paramètre).
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice 2|Socle|1|O3"}
-Pour chaque énoncé, dis de quoi il
+::: {.callout-caution .exo title="Exercice|Socle|1|O3"}
+Pour chaque énoncé, dire de quoi il
 s'agit: **un prédicat ou une proposition**?
 
 (a) « $5$ est pair. »
@@ -54,7 +55,9 @@ s'agit: **un prédicat ou une proposition**?
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Qu'est-ce qu'une affirmation mathématique ?*.
+Retourne à la théorie du cours : *Qu’est-ce qu’une affirmation mathématique ?*
+
+
 
 ## Indice 2
 
@@ -67,7 +70,7 @@ s'il est **faux**). Si « ça dépend de la valeur d'une lettre » → prédicat
 
 (a) **Proposition** (fausse). 
 (b) **Prédicat** (dépend de $x$). 
-(c) **Ni l'un ni l'autre** (un ordre).
+(c) **Ni l'un ni l'autre** (une consigne : on ne peut pas la dire vraie ou fausse).
 
 ## Piège
 
@@ -76,8 +79,8 @@ Croire qu'un énoncé **faux** n'est « pas une proposition ».
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice 3|Socle|2|O1"}
-Relie chaque phrase (a–d) à sa traduction (1–4).
+::: {.callout-caution .exo title="Exercice|Socle|2|O1"}
+Relier chaque phrase (a–d) à sa traduction (1–4).
 
 | Français | Traduction |
 |---|---|
@@ -98,7 +101,7 @@ Retourne à la théorie du cours : *Ensembles : regrouper des objets*, *Formalis
 
 *Question à te poser.*
 
-Chaque phrase parle-t-elle d'un **élément** ($\in$) ou d'un **ensemble entier** ($\subseteq$) ?
+Chaque phrase parle-t-elle de l'appartenance d'un **élément** à un **ensemble** ($\in$) ou d'une **inclusion entre ensembles** ($\subseteq$) ?
 À quelle opération correspond « mais pas… » ? Et « il n'existe pas de… négatif », est-ce un $\forall\,$
 déguisé ?
 
@@ -118,8 +121,8 @@ $\mathbb{N}\subseteq\mathbb{Z}$) ; oublier que « mais pas naturel » retire $\m
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice 4|Socle|2|O2"}
-Pour chaque ligne, dis si l'affirmation est **vraie** ou **fausse** :
+::: {.callout-caution .exo title="Exercice|Socle|2|O2"}
+Pour chaque ligne, dire si l'affirmation est **vraie** ou **fausse** :
 
 (a) $3 \in [3,\,7[$
 (b) $7 \in [3,\,7[$
@@ -127,7 +130,7 @@ Pour chaque ligne, dis si l'affirmation est **vraie** ou **fausse** :
 (d) $-2 \in\ ]{-}\infty,\,-2]$
 (e) $0 \in\ ]0,\,+\infty[$
 
-Ensuite: écris l'intervalle des réels $x$ tels que $-1 \le x < 4$.
+Ensuite, écrire l'intervalle des réels $x$ tels que $-1 \le x < 4$.
 :::
 
 ::: {.aides}
@@ -165,7 +168,7 @@ Confondre crochet fermé (inclus) et ouvert (exclu) ; croire qu'une borne infini
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice 5|Socle|1|O2"}
+::: {.callout-caution .exo title="Exercice|Socle|1|O2"}
  Construire la table de vérité, pour toutes les valeurs de
 $\alpha$ et $\beta$, des colonnes $\lnot\alpha$, $\alpha\land\beta$, $\alpha\lor\beta$,
 $\alpha\Rightarrow\beta$. Vérifier ensuite que
@@ -195,7 +198,7 @@ toutes les autres doivent être vraies.
 | F | V | V | F | V | V | V | V |
 | F | F | V | F | F | V | V | V |
 
-Les deux dernières colonnes coïncident ligne à ligne : la loi de De Morgan est vérifié. ✓
+Les deux dernières colonnes coïncident ligne à ligne : la loi de De Morgan est vérifiée. ✓
 
 ## Piège
 
@@ -205,13 +208,15 @@ Croire que $\alpha\Rightarrow\beta$ est fausse quand $\alpha$ est fausse. Une im
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice 6|Socle|2|O2"}
-Soit $P$ l'implication  : « si $n$ est multiple de
-$4$, alors $n$ est pair ».
+::: {.callout-caution .exo title="Exercice|Socle|2|O2"}
+Soit $\gamma$ l'implication  : « si $n$ est multiple de
+$4$, alors $n$ est pair ».[^4]
 
-(a) Écrire la **réciproque** et la **contraposée** de $P$.
+(a) Écrire la **réciproque** et la **contraposée** de $\gamma$.
 (b) Dire lesquelles des trois sont vraies. Justifier, par un contre-exemple si nécessaire.
 :::
+
+[^4]: Le symbole $\gamma$ est une lettre grecque, la troisième dans l'ordre alphabétique et se prononce "gamma".
 
 ::: {.aides}
 ::: {.panel-tabset}
@@ -224,12 +229,16 @@ Retourne à la théorie du cours : *Comprendre l’implication* et *Réciproque,
 
 *Question à te poser.*
 
-Pose $\alpha$ : « multiple de $4$ » et $\beta$ : « pair ». Réciproque = on **échange**. Contraposée =
-on **nie et on échange**. Pour tester la réciproque, cherche un $n$ pair non multiple de $4$.
+Comment construit-on la réciproque d'une implication? Comment construit-on la contraposée d'une implication?
+
+Pour tester la validité des implication: que faut-il chercher pour que l'implication doit fausse? 
 
 ## Indice 3
 
 *Étape.*
+
+Pose $\alpha$ : « multiple de $4$ » et $\beta$ : « pair ». Pour construire la réciproque de $\gamma$ on **échange** $\alpha$ et $\beta$. Pour construire la contraposée de $\gamma$, 
+on **nie** $\alpha$ et $\beta$ puis on les **échange**. 
 
 Validité de la réciproque: prendre $n=6$.
 
@@ -239,7 +248,7 @@ Validité de la réciproque: prendre $n=6$.
 
 **Réciproque** « si $n$ pair alors $n$ multiple de $4$ » : **fausse** avec $n=6$, on a bien un $n$ pair qui n'est pas un multiple de $4$. 
 
-**Contraposée** « si $n$ impair alors $n$ non multiple de $4$ » : **vraie** car elle est équivalente à $P$.
+**Contraposée** « si $n$ impair alors $n$ non multiple de $4$ » : **vraie** car elle est équivalente à $\gamma$.
 
 ## Pièges
 
@@ -249,7 +258,7 @@ de vérité différente de l'implication.
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice 7|Socle|2|O2"}
+::: {.callout-caution .exo title="Exercice|Socle|2|O2"}
 Pour les trois premières propositions : dire si elle est **vraie** ou **fausse**,
 puis écrire sa **négation**.
 
@@ -257,7 +266,7 @@ puis écrire sa **négation**.
 (b) $\exists\, n\in\mathbb{N},\ n+2 = 5$.
 (c) $\forall\, x\in\mathbb{R},\ x^2 > 0$.
 (d) On note $\alpha(v,t)$ « le test $t$ détecte le variant $v$ ».
-Écris la **négation** de $\ \forall\, v,\ \exists\, t,\ \alpha(v,t)\ $ puis traduis-la en français.
+Écrire la **négation** de $\ \forall\, v,\ \exists\, t,\ \alpha(v,t)\ $ puis la traduire en français.
 :::
 
 ::: {.aides}
@@ -277,13 +286,13 @@ $\exists\, t$, **puis** $\alpha$ ?
 
 ## Solution
 
-(a) **Vraie**. Négation : $\exists\, x,\ x^2<0$ — **fausse**.
+(a) $\forall\, x\in\mathbb{R},\ x^2\ge 0$. est **vraie**. Sa négation : $\exists\, x\in\mathbb{R},\ x^2<0$ est **fausse**.
 
-(b) **Vraie** ($n=3$). Négation : $\forall\, n,\ n+2\ne 5$ — **fausse**.
+(b) $\exists\, n\in\mathbb{N},\ n+2 = 5$ est **vraie** (on peut le vérifier en considérant  $n=3$). Sa négation : $\forall\, n\in\mathbb{N},\ n+2\ne 5$ est **fausse**.
 
-(c) **Fausse** ($x=0$). Négation : $\exists\, x,\ x^2\le 0$ — **vraie** ($x=0$).
+(c) $\forall\, x\in\mathbb{R},\ x^2 > 0$ est **fausse** (on peut contredire la proposition en considérant $x=0$). Sa négation : $\exists\, x\in\mathbb{R},\ x^2\le 0$ est **vraie** ($x=0$).
 
-(d) $\lnot(\forall\, v,\ \exists\, t,\ \alpha(v,t)) \equiv \exists\, v,\ \forall\, t,\ \lnot\alpha(v,t)$ :
+(d) $\lnot\big(\forall\, v,\ \exists\, t,\ \alpha(v,t)\big) \Leftrightarrow \exists\, v,\ \forall\, t,\ \lnot\alpha(v,t)$ :
 « il existe un variant qu'**aucun** test ne détecte ».
 
 ## Pièges
@@ -294,9 +303,9 @@ quantificateur au lieu des deux (le second aussi doit basculer $\exists\,\to\for
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice 8|Socle|2|O3"}
-Pour chaque **argument** proposé, dis si c'est un
-**exemple**, un **contre-exemple** ou une **preuve**. Dans chaque cas, dis si l'argument établit l’affirmation, la réfute, ou ne conclut rien.
+::: {.callout-caution .exo title="Exercice|Socle|2|O3"}
+Pour chaque **argument** proposé, dire si c'est un
+**exemple**, un **contre-exemple** ou une **preuve**. Dans chaque cas, dire si l'argument établit l’affirmation, la réfute, ou ne conclut rien.
 
 Affirmation A : « Tout nombre premier est impair. »
 
@@ -321,11 +330,11 @@ Retourne à la théorie du cours : *Exemples, preuves, contre-exemples*.
 *Question à te poser.*
 
 L'argument traite-t-il **un** cas (exemple / contre-exemple) ou **tous** les cas (preuve) ?
-Ce cas **confirme**-t-il ou **contredit**-il l'affirmation ? S'il contredit, alors il s'égit d'un contre-exemple.
+Ce cas **confirme**-t-il ou **contredit**-il l'affirmation ? S'il contredit, alors il s'agit d'un contre-exemple.
 
 ## Solution
 
-(a) **Exemple** — ne permet pas de conclure sur la validité de l'afformation (un cas favorable ne prouve pas un « tout »).
+(a) **Exemple** — ne permet pas de conclure sur la validité de l'affirmation (un cas favorable ne prouve pas un « tout »).
 (b) **Contre-exemple** de A : on peut donc en déduire que l'affirmation est fausse.
 (c) **Exemple** — ne conclut rien (ne couvre pas tous les cas).
 (d) **Preuve** — **établit** B (l'argument vaut pour tous les entiers pairs).

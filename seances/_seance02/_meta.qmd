@@ -1,0 +1,7 @@
+::: {.seance-meta}
+**Thème.** Calcul fiable (priorités, distributivité et identités remarquables, fractions,
+puissances, racines, pourcentages, valeur absolue, notation scientifique, ordres de grandeur,
+unités) et trigonométrie de base (cercle, triangle rectangle, valeurs remarquables).
+
+**Théorie associée :** IMSV-2, *« Calcul fiable et trigonométrie »*.
+:::

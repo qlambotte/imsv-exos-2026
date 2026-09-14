@@ -16,7 +16,7 @@ cp -r "$ROOT/seances/_modele" "$DEST"
 
 # Remplace les marqueurs @@NN@@ et @@TITRE@@
 grep -rl -e '@@NN@@' -e '@@TITRE@@' "$DEST" | while read -r f; do
-  sed -i -e "s|@@NN@@|$NN|g" -e "s|@@TITRE@@|$TITRE|g" "$f"
+  sed -i -e "s|@@NN@@|$NN|g" -e "s|@@N@@|$N|g" -e "s|@@TITRE@@|$TITRE|g" "$f"
 done
 
 cat <<EOF
@@ -39,9 +39,6 @@ cat <<EOF
      Numérotation CONTINUE : le transfert reprend après le dernier numéro du socle.
      Complète aussi index.qmd (objectifs, slides) et institution.qmd (méthode, auto-éval).
 
-  3) Génère le QR (adapte l'URL réelle du site) :
-        python3 make_qr.py "https://URL-du-site/seance$NN" img/qr-$NN.png
-
-  4) Construis tout :
+  3) Construis tout :
         ./build-all.sh
 EOF

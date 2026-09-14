@@ -1,0 +1,42 @@
+---
+title: "Séance 2 — Calcul fiable et trigonométrie"
+subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
+description: "Calcul fiable et trigonométrie de base"
+order: 2
+nom: "[Calcul fiable et trigonométrie](seances/seance02/index.html)"
+correction: "✅ en ligne"
+---
+
+{{< include _meta.qmd >}}
+
+{{< include _download.qmd >}}
+
+## Objectifs de la séance
+
+Ces objectifs sont repris du cours théorique (IMSV-2, ses AAVs). **Chaque exercice indique
+l'objectif qu'il travaille** — la pastille **O1 / O2 / O3 / O4** dans son en-tête.
+
+- **O1** — effectuer et expliquer les **manipulations algébriques de base**.
+- **O2** — reconnaître et manipuler différentes **représentations d'une même valeur** (fractions, décimaux, pourcentages).
+- **O3** — **estimer et contrôler** un résultat (ordre de grandeur, unité, dimension, valeur absolue).
+- **O4** — comprendre et utiliser le **cercle trigonométrique** (valeurs et formules fondamentales).
+
+Une grille d'**auto-évaluation** sur ces objectifs t'attend à la page
+[Institutionnalisation](institution.qmd).
+
+## Le parcours de la séance
+
+1. **[Socle](socle.qmd)** — les exercices routiniers, à ton rythme.
+2. **[Transfert](transfert.qmd)** — des problèmes en contexte nouveau.
+3. **[Exercices supplémentaires](supplementaires.qmd)** — des variations pour consolider, en séance ou à la maison.
+4. **[Institutionnalisation](institution.qmd)** — la méthode qu'on dégage ensemble, et l'auto-évaluation.
+
+## Les slides du cours
+
+Les slides de théorie associée sont sur
+**[Moodle](https://moodle.umons.ac.be/course/view.php?id=2657)** (chapitre IMSV-2).
+
+## Avant la séance
+
+- **QCM Moodle de préparation** — court, il amorce la théorie du jour. <!-- lien QCM -->
+- **Prépa de la séance précédente** — à avoir faite : elle réapparaît à l'échauffement.

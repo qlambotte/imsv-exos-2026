@@ -207,3 +207,29 @@ html[data-theme="dark"] .quarto-title-block { color: var(--muted); }
 html[data-theme="dark"] .nav-footer { background: var(--side-bg); border-color: var(--rule); }
 html[data-theme="dark"] hr { border-color: var(--rule); }
 html[data-theme="dark"] blockquote { color: var(--muted); }
+
+// =====================================================================
+//  Boîte à outils — cartes de méthode (source unique, cf. methode.lua)
+// =====================================================================
+.methode-card { border: 1px solid var(--tip-brd); border-radius: 6px; overflow: hidden; margin: 1.6rem 0; background: var(--page-bg); }
+.methode-card .mc-head { display: flex; align-items: center; justify-content: space-between; gap: .6rem; background: var(--tip-bg); padding: .6rem .95rem; border-bottom: 1px solid var(--tip-brd); }
+.methode-card .mc-titre { font-family: $headings-font-family; font-size: 1.18rem; font-weight: 700; color: var(--h); line-height: 1.25; }
+.methode-card .mc-badge { flex: none; font-size: .8rem; font-weight: 700; color: var(--accent); background: var(--hover-bg); border-radius: 3px; padding: .15rem .55rem; }
+.methode-card .mc-body { padding: .75rem 1rem 1rem; }
+.methode-card .mc-sect { margin-top: .95rem; }
+.methode-card .mc-sect:first-child { margin-top: .2rem; }
+.methode-card .mc-label { font-size: .76rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--accent); margin-bottom: .25rem; }
+.methode-card .mc-sect > p:first-of-type { margin-top: 0; }
+.methode-card .mc-sect p { margin: .25rem 0; }
+.methode-card .mc-etapes ol { margin: .2rem 0 0; padding-left: 1.35rem; }
+.methode-card .mc-etapes li { margin: .3rem 0; }
+.methode-card details.mc-reponses { margin-top: 1.05rem; border-top: 1px dashed var(--tip-brd); }
+.methode-card details.mc-reponses > summary { cursor: pointer; list-style: none; font-size: .85rem; font-weight: 600; color: var(--accent); padding: .6rem 0 .3rem; }
+.methode-card details.mc-reponses > summary::-webkit-details-marker { display: none; }
+.methode-card details.mc-reponses > summary::before { content: "\25B8"; display: inline-block; margin-right: .45rem; transition: transform .15s ease; }
+.methode-card details.mc-reponses[open] > summary::before { transform: rotate(90deg); }
+.methode-card details.mc-reponses > summary:hover { text-decoration: underline; }
+
+// Liens de titre dans les tableaux « listing » (bienvenue, boîte à outils) : en bleu lien.
+.quarto-listing-table td a { color: var(--accent); text-decoration: none; font-weight: 700; }
+.quarto-listing-table td a:hover { text-decoration: underline; }

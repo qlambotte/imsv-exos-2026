@@ -1,28 +1,19 @@
 #!/usr/bin/env bash
-# Génère la « feuille de méthodes à compléter » en PDF (feuille imprimable) :
-#   pdf/feuille-methodes.pdf
-#
-# Usage :  ./build-methodes.sh
-#
-# Le format typst est interdit dans un projet « book » : on rend la source
-# (seances/feuille-methodes.qmd, qui inclut _methodes-cadres.qmd) dans une copie
-# isolée « à plat », hors du projet. N'affecte ni le site ni les PDF de séance.
+# Génère les feuilles de méthodes à compléter (PDF imprimables) :
+#   - chaque séance en ligne : pdf/feuille-seanceNN.pdf  (seances/feuille-seanceNN.qmd)
+#   - la feuille vierge       : pdf/feuille-vierge.pdf    (seances/feuille-vierge.qmd)
+# Rien de codé en dur : on rend toutes les feuilles présentes (hors ligne = préfixe « _ »).
 set -euo pipefail
-
 ROOT="$(cd "$(dirname "$0")" && pwd)"
-SRC="$ROOT/seances"
-TMP="$ROOT/.pdfbuild-meth"
-OUT="$ROOT/pdf"
-
-[ -f "$SRC/feuille-methodes.qmd" ] || { echo "Introuvable : seances/feuille-methodes.qmd"; exit 1; }
-
-rm -rf "$TMP"; mkdir -p "$TMP" "$OUT"
-cp "$SRC/feuille-methodes.qmd" "$SRC/_methodes-cadres.qmd" "$TMP/"
-
-cd "$TMP"
-echo "→ feuille de méthodes (PDF à compléter)"
-quarto render "feuille-methodes.qmd" --to typst --output "feuille-methodes.pdf" >/dev/null
-mv -f "feuille-methodes.pdf" "$OUT/"
-
-cd "$ROOT"; rm -rf "$TMP"
-echo "OK : $OUT/feuille-methodes.pdf"
+SRC="$ROOT/seances"; OUT="$ROOT/pdf"; TMP="$ROOT/.pdfbuild-meth"
+mkdir -p "$OUT"
+shopt -s nullglob
+for q in "$SRC"/feuille-seance*.qmd "$SRC"/feuille-vierge.qmd; do
+  b=$(basename "$q" .qmd)
+  rm -rf "$TMP"; mkdir -p "$TMP"; cp "$q" "$TMP/"
+  echo "→ $b"
+  ( cd "$TMP" && quarto render "$b.qmd" --to typst --output "$b.pdf" >/dev/null )
+  mv -f "$TMP/$b.pdf" "$OUT/"
+done
+rm -rf "$TMP"
+echo "OK : pdf/feuille-*.pdf"

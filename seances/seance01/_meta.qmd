@@ -1,0 +1,6 @@
+::: {.seance-meta}
+**Thème.** Logique (propositions, connecteurs, tables de vérité, implication), ensembles,
+quantificateurs, ....
+
+**Théorie associée :** IMSV-1, *« Pourquoi les mathématiques ? -- Langage et raisonnement »*.
+:::

@@ -35,6 +35,6 @@ solutions). Les *coups de pouce* se déplient au clic, comme sur le site.
 
 {{< include _transfert.qmd >}}
 
-# Exercices supplémentaires et de dépassement
+# Exercices supplémentaires
 
 {{< include _supplementaires.qmd >}}

@@ -1,12 +1,12 @@
-::: {.callout-caution .exo title="Exercice 9|Transfert|3|O2"}
+::: {.callout-caution .exo title="Exercice|Transfert|3|O2"}
 Dans un écosystème, on admet deux règles :
 
-(R1) « tout organisme photosynthétique[^2] est autotrophe[^0] » : $P \Rightarrow A$ ;
+(R1) « tout organisme photosynthétique[^2] est autotrophe[^0] » : $\beta \Rightarrow \alpha$ ;
 
-[^2]: qui est relatif à la photosynthèse, le processus biologique par lequel les organismes vivants verts (plantes, algues et certaines bactéries) convertissent l'énergie lumineuse en énergie chimique.
-[^0]: organisme capable de produire de la matière organique à partir de matière inorganique.
+[^2]: Qui est relatif à la photosynthèse, le processus biologique par lequel les organismes vivants verts (plantes, algues et certaines bactéries) convertissent l'énergie lumineuse en énergie chimique.
+[^0]: Organisme capable de produire de la matière organique à partir de matière inorganique.
 
-(R2) « aucun autotrophe n'est un prédateur » : $A \Rightarrow \lnot Pr$.
+(R2) « aucun autotrophe n'est un prédateur » : $\alpha \Rightarrow \lnot \gamma$.
 
 (a) Un organisme photosynthétique peut-il être un prédateur ? Justifier en utilisant les deux règles.
 (b) Écrire la **contraposée** de (R2).
@@ -24,25 +24,25 @@ Retourne à la théorie du cours : *Comprendre l'implication*, *Réciproque, con
 
 *Question à te poser.*
 
-Peux-tu enchaîner (R1) puis (R2) : que donne $P\Rightarrow A$ suivi de $A\Rightarrow\lnot Pr$ ? Pour
-(c), pars de « $Pr$ » et remonte la chaîne par contraposées.
+Peux-tu enchaîner (R1) puis (R2) : que donne $\beta\Rightarrow \alpha$ suivi de $\alpha\Rightarrow\lnot \gamma$ ? Pour
+(c), en partant $\gamma$ que peut-on dire en considérant la contraposée de (R2)? Puis en enchaînant avec la contraposée de (R1)?
 
 ## Indice 3
 
 *Étape.*
 
-$P\Rightarrow A\Rightarrow \lnot Pr$. Et la contraposée de $P\Rightarrow A$ est
-$\lnot A\Rightarrow\lnot P$.
+$\gamma\Rightarrow \alpha$ et $\alpha\Rightarrow \lnot \beta$. Et la contraposée de $\beta\Rightarrow \alpha$ est
+$\lnot A\Rightarrow\lnot \beta$.
 
 ## Solution
 
-(a) **Non.** Par composition, $P\Rightarrow A$ et $A\Rightarrow\lnot Pr$ donnent
-$P\Rightarrow\lnot Pr$ : un organisme photosynthétique n'est pas un prédateur.
+(a) **Non.** En effet: $\beta\Rightarrow \alpha$ et $\alpha\Rightarrow\lnot \gamma$. Donc
+$\beta\Rightarrow\lnot \gamma$ : un organisme photosynthétique n'est pas un prédateur.
 
-(b) Contraposée de (R2) : $Pr \Rightarrow \lnot A$ (« si prédateur, alors non autotrophe »).
+(b) Contraposée de (R2) : $\gamma \Rightarrow \lnot \alpha$ (« si prédateur, alors non autotrophe »).
 
-(c) Puisque $Pr \Rightarrow \lnot A$, un prédateur n'est pas autotrophe ; aa contraposée de (R1) ($\lnot A\Rightarrow\lnot P$),
-nous dit "si je ne suis pas autotrophe, alors je ne suis pas photosynthétique": un prédateur ne peut donc pas être photosynthétique. Donc: un prédateur n'est **ni autotrophe ni photosynthétique**.
+(c) Puisque $\gamma \Rightarrow \lnot \alpha$, un prédateur n'est pas autotrophe ; la contraposée de (R1) ($\lnot \alpha\Rightarrow\lnot \beta$),
+nous dit "si je ne suis pas autotrophe, alors je ne suis pas photosynthétique" : un prédateur ne peut donc pas être photosynthétique. Donc : un prédateur n'est **ni autotrophe ni photosynthétique**.
 
 ## Pièges
 
@@ -52,17 +52,17 @@ dans la contraposée en oubliant de nier **les deux** constituants de l'implicat
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice 10|Transfert|2|O1"}
+::: {.callout-caution .exo title="Exercice|Transfert|2|O1"}
 Dans le cabinet d'un groupe de médecins, notons $U$ l'ensemble de tous les patients vus aujourd'hui, $F$
 l'ensemble des patients fébriles[^1] et $T$ celui des patients qui toussent. Exprimer par des ensembles
 
-[^1]: qui a de la fièvre
+[^1]: Qui a de la fièvre.
 
 (a) « les patients fébriles qui ne toussent pas » ;
 (b) « les patients qui présentent au moins un des deux symptômes (fièvre ou toux) » ;
 (c) « les patients sans fièvre ni toux ».
 
-Traduis en français:
+Traduire en français :
 
 (d) l'énoncé $F \cap T = \varnothing$ (en français) ;
 
@@ -86,26 +86,32 @@ de quoi ?
 
 (a) $F \setminus T$.
 (b) $F \cup T$.
-(c) $U\setminus(F \cup T) (= (U\setminus F) \cap (U\setminus T))$
+(c) $U\setminus(F \cup T)\ \big(= (U\setminus F) \cap (U\setminus T)\big)$
 (d) « Aucun patient n'a **à la fois** de la fièvre et de la toux ».
 
 ## Piège
 
 Confondre $\cup$ (« au moins un ») et $\cap$ (« les deux ») ; et écrire « ni $F$ ni $T$ » comme
-$(U\setminus F)\cup(U\setminus T)$ au lieu de $(U\setminus F)\cap(U\setminus T)$ (De Morgan).
+$(U\setminus F)\cup(U\setminus T)$ au lieu de $U\setminus(F \cup T)=(U\setminus F)\cap(U\setminus T)$.
 
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice 11|Transfert|3|O2"}
-Pour une bactérie $b$ et un antibiotique $a$, $\psi(a,b)$
-signifie « $a$ est efficace contre $b$ ». On considère
-$$(\star)\qquad \forall\, b,\ \exists\, a,\ \psi(a,b).$$
+::: {.callout-caution .exo title="Exercice|Transfert|3|O2"}
+Pour une bactérie $b$ et un antibiotique $a$, $\alpha(a,b)$ signifie « $a$ est efficace contre $b$ ». On considère              
+$$(\star)\qquad \forall\, b,\ \exists\, a,\ \alpha(a,b).$$
 
 (a) Traduire $(\star)$ en français.
-(b) Traduire $\exists\, a,\ \forall\, b,\ \psi(a,b)$, et dire laquelle de $(\star)$ ou celle-ci est la
-plus **forte**.
-(c) Écrire la **négation** de $(\star)$, puis la traduire en français.
+
+(b) Traduire $\exists\, a,\ \forall\, b,\ \alpha(a,b)$.
+
+(c) Quelle est la différence entre ces deux énoncés
+    - d'un point de vue symbolique, dans leur écriture mathématique?
+    - d'un point de vue du français, en ce qui concerne les bactéries et les antibiotiques?
+
+(d) Quel énoncé est le plus exigeant concernant les antibiotiques? Justifier la réponse.
+
+(e) Écrire la **négation** de $(\star)$, puis la traduire en français.
 :::
 
 ::: {.aides}
@@ -119,8 +125,17 @@ Retourne à la théorie du cours : *Quantificateurs*, *Nier une proposition quan
 
 *Question à te poser.*
 
-Pour (b) : dans $(\star)$, l'antibiotique « $\exists\, a$ » a-t-il le droit de **dépendre** de la bactérie $b$ ?
-Pour (c) : que deviennent $\forall\, b$, puis $\exists\, a$, puis $\psi$, quand on nie ?
+Pour (c) :  
+
+   - dans les deux écritures, dans quel ordre apparaissent $\forall b$ et $\exists a$ ?
+
+   - dans les traductions en français, pour quel énoncé l'antibiotique dépend de la bactérie ?
+
+ 
+
+Pour (d) : lequel des deux énoncés demande le plus d'efficacité à un antibiotique?
+
+Pour (e) : que deviennent (\forall b), puis (\exists a), puis (\alpha), quand on nie ?
 
 ## Solution
 
@@ -128,15 +143,21 @@ Pour (c) : que deviennent $\forall\, b$, puis $\exists\, a$, puis $\psi$, quand 
 dépendre de la bactérie).
 
 (b) « Il existe **un seul** antibiotique efficace contre **toutes** les bactéries » (un antibiotique
-universel). La proposition la **plus forte** est $\exists\, a\,\forall\, b\ \Rightarrow\ \forall\, b\,\exists\, a$, pas
-l'inverse.
+universel). 
 
-(c) La négation de $\lnot(\star)$ est $\exists\, b,\ \forall\, a,\ \lnot\psi(a,b)$ : « il existe une bactérie contre
+(c) 
+
+    - Les deux énoncés utilisent les mêmes quantificateurs mais dans un ordre différent: dans $(\star)$ on commence par un quantificateur universel sur $b$ puis un quantificateur existentiel sur $a$, tandis que pour l'autre énoncé, on commence par le quantificateur existentiel sur $a$ puis le quantificateur universel sur $b$.
+
+    - Dans la traduction en français: $(\star)$ demande à ce que chaque bactérie dispose d'un antibiotique tandis que l'autre formule demande un seul et même antibiotique pour toutes les bactéries.
+(d) L'énoncé $\exists\, a,\ \forall\, b,\ \alpha(a,b)$ est le plus exigeant concernant les antibiotiques: il demande à ce qu'un seul antibiotique convienne pour toutes les bactéries. À l'inverse, $(\star)$ autorise à priori des antibiotiques différents pour selon les bactéries.
+
+(e) $\lnot(\star)\Leftrightarrow\exists\, b,\ \forall\, a,\ \lnot\alpha(a,b)$ : « il existe une bactérie contre
 laquelle **aucun** antibiotique n'est efficace ».
 
 ## Pièges
 
-Ne pas changer les quantificateurs en niant; croire $\forall\, b\,\exists\, a, \psi(a,b)$ est la même chose que $\exists\, a\,\forall\, b, \psi(a,b)$.
+Ne pas changer les quantificateurs en niant; croire que $\forall\, b\,\exists\, a, \alpha(a,b)$ est la même chose que $\exists\, a\,\forall\, b, \alpha(a,b)$.
 
 :::
 :::

@@ -1,11 +1,11 @@
 ---
 title: "Séance @@NN@@ — @@TITRE@@"
 subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
+description: "@@TITRE@@"
+order: @@N@@
 ---
 
-::: {.seance-meta}
-**Thème.** ……… **Théorie associée :** IMSV-@@NN@@, *« … »*.
-:::
+{{< include _meta.qmd >}}
 
 {{< include _download.qmd >}}
 
@@ -25,7 +25,7 @@ Une grille d'**auto-évaluation** sur ces objectifs t'attend à la page
 
 1. **[Socle](socle.qmd)** — les exercices routiniers, à ton rythme.
 2. **[Transfert](transfert.qmd)** — des problèmes en contexte nouveau.
-3. **[Exercices supplémentaires](supplementaires.qmd)** — pour les rapides (facultatif, hors examen).
+3. **[Exercices supplémentaires](supplementaires.qmd)** — pour les rapides (facultatif).
 4. **[Institutionnalisation](institution.qmd)** — la méthode qu'on dégage ensemble, et l'auto-évaluation.
 
 ## Les slides du cours
