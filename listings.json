@@ -1,0 +1,14 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/seances/seance01/index.html"
+    ]
+  },
+  {
+    "listing": "/seances/methode.html",
+    "items": [
+      "/seances/methodes/seance01.html"
+    ]
+  }
+]
