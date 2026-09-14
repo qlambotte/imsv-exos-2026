@@ -1,4 +1,22 @@
-# Bienvenue {.unnumbered}
+---
+title: "Bienvenue"
+listing:
+  id: seances
+  contents: "seances/seance*/index.qmd"
+  type: table
+  table-striped: true
+  table-hover: true
+  fields: [order, nom, correction]
+  field-display-names:
+    order: "#"
+    nom: "Séance"
+    correction: "Correction"
+  sort: "order"
+  sort-ui: false
+  filter-ui: false
+---
+
+# Bienvenue
 
 Ce site rassemble les **énoncés des exercices et leur correction** pour le cours d'*Introduction
 Mathématique aux Sciences de la Vie*. Pour chaque séance, chaque exercice est accompagné de
@@ -19,14 +37,10 @@ Descendre directement à la solution sans avoir essayé ne fait rien apprendre.
 
 ## Les séances
 
-| # | Séance | Thème | Correction |
-|:-:|:--|:--|:--|
-| 1 | [Langage et raisonnement](seances/seance01/index.qmd) | Logique, ensembles, quantificateurs,... | ✅ en ligne |
-| 2 | *à venir* | — | — |
-| 3 | *à venir* | — | — |
-| … | | | |
+La liste se met à jour automatiquement à chaque nouvelle séance.
 
-: Le tableau se complétera au fil du quadrimestre. {.striped .hover tbl-colwidths="[8,32,45,15]"}
+:::{#seances}
+:::
 
 ## Rappels utiles
 

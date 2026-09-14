@@ -1,0 +1,42 @@
+---
+title: "Institutionnalisation — méthode & auto-évaluation"
+subtitle: "Séance 2 · ce qu'on retient"
+---
+
+## La méthode qu'on dégage ensemble
+
+En fin de séance, on formalise la méthode pour **contrôler un résultat** avant de l'accepter :
+
+- l'**ordre de grandeur** est-il plausible (estimation à un chiffre) ?
+- les **unités / dimensions** sont-elles cohérentes ?
+- le **sens** du résultat est-il celui attendu (plus grand / plus petit, signe) ?
+
+Cette méthode rejoint ta **[boîte à outils](../methode.qmd)** — elle resservira à chaque séance.
+
+## Auto-évaluation — coche ce que tu sais faire
+
+Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **quatre objectifs**.
+
+**O1** — manipulations algébriques de base.
+
+- [ ] J'applique l'ordre des opérations, je développe et je factorise (identités remarquables).
+- [ ] Je calcule avec des fractions, des puissances et des racines sans me tromper de règle.
+
+**O2** — représentations d'une même valeur.
+
+- [ ] Je passe d'une fraction à un décimal, à un pourcentage, et je compose des pourcentages successifs.
+
+**O3** — estimer et contrôler.
+
+- [ ] J'estime un ordre de grandeur et j'écris en notation scientifique.
+- [ ] Je contrôle un résultat par son unité / sa dimension, et je manie la valeur absolue.
+
+**O4** — cercle trigonométrique.
+
+- [ ] Je place un angle (degrés / radians), je lis $\cos$ et $\sin$ sur le cercle, je connais les valeurs remarquables.
+- [ ] Dans un triangle rectangle, j'utilise $\sin$, $\cos$, $\tan$ et l'identité $\sin^2\theta + \cos^2\theta = 1$.
+
+::: {.callout-important appearance="simple"}
+Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la
+**remédiation** (une séance chaque semaine pour reprendre les bases).
+:::

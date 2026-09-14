@@ -1,0 +1,6 @@
+<!-- Cartes de méthode — SÉANCE 2 (Calcul fiable et trigonométrie).
+     Vide pour l'instant : les méthodes seront ajoutées quand la séance 2 sera finalisée. -->
+
+::: {.callout-note appearance="simple"}
+Les méthodes de la séance 2 seront ajoutées ici au fil du cours.
+:::

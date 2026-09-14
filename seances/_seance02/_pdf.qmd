@@ -1,0 +1,25 @@
+---
+title: "Séance 2 — Calcul fiable et trigonométrie"
+subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
+format:
+  typst:
+    papersize: a4
+    margin: {x: 2cm, y: 2cm}
+    toc: false
+filters:
+  - ../../exercice.lua
+---
+
+<!-- Source d'assemblage du PDF. Rendu par build-pdf.sh et le hook post-render. -->
+
+{{< include _meta.qmd >}}
+
+{{< include _consignes.qmd >}}
+
+## Socle — exercices routiniers
+
+{{< include _socle.qmd >}}
+
+## Transfert — problèmes
+
+{{< include _transfert.qmd >}}

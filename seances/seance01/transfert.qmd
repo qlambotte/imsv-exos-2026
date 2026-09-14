@@ -16,5 +16,5 @@ problèmes, pas repris tels quels du cours. Travaille en binôme si tu veux.
 
 ::: {.callout-note appearance="simple"}
 Fini avant tout le monde ? Enchaîne avec les **[exercices supplémentaires](supplementaires.qmd)**
-(renforcement ou dépassement, au choix).
+(renforcement, au choix).
 :::

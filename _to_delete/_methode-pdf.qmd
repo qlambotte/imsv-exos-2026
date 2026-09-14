@@ -1,0 +1,17 @@
+---
+title: "Méthodes — Séance 1"
+subtitle: "IMSV · les méthodes institutionnalisées, à garder pour l'examen"
+format:
+  typst:
+    papersize: a4
+    margin: {x: 2cm, y: 2cm}
+    toc: false
+filters:
+  - ../methode.lua
+---
+
+<!-- Version PDF (imprimable) de la boîte à outils : UNE méthode par page, par séance.
+     Inclut les fragments de cartes communs au site. Ajouter les séances suivantes
+     à mesure qu'elles sont finalisées. Rendu par build-boite.sh et post-render. -->
+
+{{< include _methodes-seance01.qmd >}}

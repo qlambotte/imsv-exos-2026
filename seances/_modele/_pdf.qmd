@@ -5,26 +5,15 @@ format:
   typst:
     papersize: a4
     margin: {x: 2cm, y: 2cm}
-    mainfont: "Lora"
     toc: false
 filters:
   - ../../exercice.lua
 ---
 
 <!-- Source d'assemblage du PDF (feuille unique). Préfixe « _ » = ignoré par le livre.
-     Rendu par build-pdf.sh, qui réunit consignes + socle + transfert. -->
+     Rendu par build-pdf.sh et par le hook post-render. -->
 
-::: {.seance-meta}
-**Thème.** ……… **Théorie associée :** IMSV-@@NN@@, *« … »*.
-:::
-
-::: {.content-visible when-format="typst"}
-::: {.ressources}
-[![QR — correction en libre-service](../../img/qr-@@NN@@.png){fig-alt="QR vers la page de correction" width="3cm"}](https://exemple-hote.be/imsv/seance@@NN@@)
-
-Scanne ce code pour la **correction en libre-service** (coups de pouce gradués et solutions).
-:::
-:::
+{{< include _meta.qmd >}}
 
 {{< include _consignes.qmd >}}
 
@@ -36,11 +25,6 @@ Scanne ce code pour la **correction en libre-service** (coups de pouce gradués 
 
 {{< include _transfert.qmd >}}
 
-## Exercices supplémentaires et de dépassement
+## Exercices supplémentaires
 
 {{< include _supplementaires.qmd >}}
-
----
-
-En fin de séance, on institutionnalise la **méthode** du jour — voir l'annexe
-[Boîte à outils](methode.qmd).

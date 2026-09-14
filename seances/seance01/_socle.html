@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>socle</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="_socle_files/libs/clipboard/clipboard.min.js"></script>
+<script src="_socle_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="_socle_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="_socle_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="_socle_files/libs/quarto-html/popper.min.js"></script>
+<script src="_socle_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="_socle_files/libs/quarto-html/anchor.min.js"></script>
+<link href="_socle_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="_socle_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="_socle_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="_socle_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="_socle_files/libs/bootstrap/bootstrap-b0852dd1070364c970788c42a504e8aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<!-- SOCLE = LE NOYAU (à faire par tous, en séance ou à la maison).
+     8 exercices : 2 versions légères (vocabulaire) + 6 alignés sur le QCM post-cours 1.
+     Convention : « Indice 1 » renvoie TOUJOURS à la théorie du cours (par nom de section) ;
+     les coups de pouce concrets sont dans « Indice 2 » et suivants. -->
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Socle|1|O3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Socle|1|O3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour chaque lettre indiquée, dire son rôle dans l’expression entre guillements : <strong>inconnue</strong>, <strong>variable</strong> ou <strong>paramètre</strong>.</p>
+<ol type="a">
+<li><span class="math inline">\(x\)</span> dans « résoudre <span class="math inline">\(2x = 10\)</span> »</li>
+<li><span class="math inline">\(x\)</span> dans « la fonction <span class="math inline">\(f(x) = x^2\)</span> »</li>
+<li><span class="math inline">\(m\)</span> dans « la droite <span class="math inline">\(y = m x + 1\)</span> »</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Retourne à la théorie du cours : <em>Égalité et symboles : lire avant de calculer</em>.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Pour chaque lettre : cherche-t-on <strong>sa</strong> valeur (inconnue) ? Décrit-elle <strong>tous</strong> les cas ou l’entrée d’une fonction (variable) ? <strong>Fixe</strong>-t-elle un objet particulier tandis qu’une autre lettre varie (paramètre) ?</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<ol type="a">
+<li><strong>Inconnue</strong>: on cherche la (ou les) valeur(s) de <span class="math inline">\(x\)</span> qui satisfont l’équation, ici <span class="math inline">\(x = 5\)</span>.</li>
+<li><strong>Variable</strong>: la lettre <span class="math inline">\(x\)</span> représente la variable indépendante de la fonction <span class="math inline">\(f\)</span> et parcourt <span class="math inline">\(\mathbb{R}\)</span>.</li>
+<li><strong>Paramètre</strong>: dans l’expression, <span class="math inline">\(m\)</span> représente un nombre fixé, en l’occurence la pente de la droite d’équation <span class="math inline">\(y=mx+1\)</span>.</li>
+</ol>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>Dans <span class="math inline">\(y = m x + 1\)</span>, confondre <span class="math inline">\(x\)</span> (variable) et <span class="math inline">\(m\)</span> (paramètre).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Socle|1|O3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Socle|1|O3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour chaque énoncé, dire de quoi il s’agit: <strong>un prédicat ou une proposition</strong>?</p>
+<ol type="a">
+<li>« <span class="math inline">\(5\)</span> est pair. »</li>
+<li>« <span class="math inline">\(x \ge 0\)</span>. »</li>
+<li>« Additionne <span class="math inline">\(2\)</span> et <span class="math inline">\(3\)</span>. »</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Retourne à la théorie du cours : <em>Qu’est-ce qu’une affirmation mathématique ?</em></p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Pour chaque énoncé : <em>puis-je dire, tel quel, s’il est vrai ou faux ?</em> Si oui → proposition (même s’il est <strong>faux</strong>). Si « ça dépend de la valeur d’une lettre » → prédicat. Si ce n’est ni une proposition ni un prédicat → ni l’un ni l’autre.</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<ol type="a">
+<li><strong>Proposition</strong> (fausse).</li>
+<li><strong>Prédicat</strong> (dépend de <span class="math inline">\(x\)</span>).</li>
+<li><strong>Ni l’un ni l’autre</strong> (une consigne : on ne peut pas la dire vraie ou fausse).</li>
+</ol>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p>Croire qu’un énoncé <strong>faux</strong> n’est « pas une proposition ».</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Socle|2|O1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Socle|2|O1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Relier chaque phrase (a–d) à sa traduction (1–4).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Français</th>
+<th>Traduction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>(a)</strong> « −7 est un entier »</td>
+<td><strong>(1)</strong> <span class="math inline">\(\mathbb{N} \subseteq \mathbb{Z}\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>(b)</strong> « −7 est un entier <strong>mais pas</strong> naturel »</td>
+<td><strong>(2)</strong> <span class="math inline">\(-7 \in \mathbb{Z}\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>(c)</strong> « tout nombre naturel est un entier »</td>
+<td><strong>(3)</strong> <span class="math inline">\(\forall\, n\in\mathbb{N},\ n\ge 0\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>(d)</strong> « il n’existe pas d’entier naturel strictement négatif »</td>
+<td><strong>(4)</strong> <span class="math inline">\(-7 \in \mathbb{Z}\setminus\mathbb{N}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Pièges</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>Retourne à la théorie du cours : <em>Ensembles : regrouper des objets</em>, <em>Formaliser l’inclusion</em>, <em>Ensembles de nombres</em> et <em>Opérations sur les ensembles</em>.</p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Chaque phrase parle-t-elle de l’appartenance d’un <strong>élément</strong> à un <strong>ensemble</strong> (<span class="math inline">\(\in\)</span>) ou d’une <strong>inclusion entre ensembles</strong> (<span class="math inline">\(\subseteq\)</span>) ? À quelle opération correspond « mais pas… » ? Et « il n’existe pas de… négatif », est-ce un <span class="math inline">\(\forall\,\)</span> déguisé ?</p>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p><strong>a–2</strong>, <strong>b–4</strong>, <strong>c–1</strong>, <strong>d–3</strong>. (<span class="math inline">\(-7\in\mathbb{Z}\)</span> ; « entier mais pas naturel » = <span class="math inline">\(\mathbb{Z}\setminus\mathbb{N}\)</span> ; « tout nombre naturel est entier » = <span class="math inline">\(\mathbb{N}\subseteq\mathbb{Z}\)</span> ; « aucun naturel n’est <span class="math inline">\(&lt;0\)</span> » = <span class="math inline">\(\forall\, n\in\mathbb{N},\
+n\ge 0\)</span>.)</p>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<p>Confondre <span class="math inline">\(\in\)</span> (un <strong>élément</strong> : <span class="math inline">\(-7\in\mathbb{Z}\)</span>) et <span class="math inline">\(\subseteq\)</span> (deux <strong>ensembles</strong> : <span class="math inline">\(\mathbb{N}\subseteq\mathbb{Z}\)</span>) ; oublier que « mais pas naturel » retire <span class="math inline">\(\mathbb{N}\)</span> (<span class="math inline">\(\setminus\mathbb{N}\)</span>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Socle|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Socle|2|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour chaque ligne, dire si l’affirmation est <strong>vraie</strong> ou <strong>fausse</strong> :</p>
+<ol type="a">
+<li><span class="math inline">\(3 \in [3,\,7[\)</span></li>
+<li><span class="math inline">\(7 \in [3,\,7[\)</span></li>
+<li><span class="math inline">\(\sqrt2 \in\ ]1,\,2]\)</span></li>
+<li><span class="math inline">\(-2 \in\ ]{-}\infty,\,-2]\)</span></li>
+<li><span class="math inline">\(0 \in\ ]0,\,+\infty[\)</span></li>
+</ol>
+<p>Ensuite, écrire l’intervalle des réels <span class="math inline">\(x\)</span> tels que <span class="math inline">\(-1 \le x &lt; 4\)</span>.</p>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>Retourne à la théorie du cours : <em>Intervalles réels</em> et <em>Ensembles : regrouper des objets</em>.</p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>La borne de l’intervalle est-elle dans l’intervalle (crochet fermé) ou non (ouvert) ? Le nombre est-il strictement entre les bornes, ou <strong>égal</strong> à une borne — et cette borne est-elle incluse dans l’intervalle ?</p>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<ol type="a">
+<li><p><strong>Vrai</strong> — <span class="math inline">\(3\)</span> inclus (fermé à gauche).</p></li>
+<li><p><strong>Faux</strong> — <span class="math inline">\(7\)</span> exclu (ouvert à droite).</p></li>
+<li><p><strong>Vrai</strong> — <span class="math inline">\(\sqrt2 \approx 1{,}41 \in\ ]1,2]\)</span>.</p></li>
+<li><p><strong>Vrai</strong> — <span class="math inline">\(-2\)</span> inclus (fermé à droite).</p></li>
+<li><p><strong>Faux</strong> — <span class="math inline">\(0\)</span> exclu (ouvert).</p></li>
+</ol>
+<p>L’intervalle des réels <span class="math inline">\(x\)</span> tels que <span class="math inline">\(-1 \le x &lt; 4\)</span> s’écrit: <span class="math inline">\([-1,\,4[\)</span>.</p>
+</div>
+<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
+<p>Confondre crochet fermé (inclus) et ouvert (exclu) ; croire qu’une borne infinie peut être « incluse ».</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Socle|1|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Socle|1|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Construire la table de vérité, pour toutes les valeurs de <span class="math inline">\(\alpha\)</span> et <span class="math inline">\(\beta\)</span>, des colonnes <span class="math inline">\(\lnot\alpha\)</span>, <span class="math inline">\(\alpha\land\beta\)</span>, <span class="math inline">\(\alpha\lor\beta\)</span>, <span class="math inline">\(\alpha\Rightarrow\beta\)</span>. Vérifier ensuite que <span class="math inline">\(\lnot(\alpha\land\beta) \Leftrightarrow \lnot\alpha \lor \lnot\beta\)</span>.</p>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-4" role="tab" aria-controls="tabset-5-4" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p>Retourne à la théorie du cours : <em>Outil : table de vérité</em>.</p>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Il y a cinq lignes et huit colonnes dans le tableau. Pour <span class="math inline">\(\alpha\Rightarrow\beta\)</span>, repère d’abord l’unique ligne qui la rend <strong>fausse</strong> ; toutes les autres doivent être vraies.</p>
+</div>
+<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(\alpha\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\beta\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\lnot\alpha\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\alpha\land\beta\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\alpha\lor\beta\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\alpha\Rightarrow\beta\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\lnot(\alpha\land\beta)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\lnot\alpha\lor\lnot\beta\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;"><strong>F</strong></td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<p>Les deux dernières colonnes coïncident ligne à ligne : la loi de De Morgan est vérifiée. ✓</p>
+</div>
+<div id="tabset-5-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-4-tab">
+<p>Croire que <span class="math inline">\(\alpha\Rightarrow\beta\)</span> est fausse quand <span class="math inline">\(\alpha\)</span> est fausse. Une implication à <strong>prémisse fausse</strong> est <em>automatiquement vraie</em>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Socle|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Socle|2|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Soit <span class="math inline">\(\gamma\)</span> l’implication : « si <span class="math inline">\(n\)</span> est multiple de <span class="math inline">\(4\)</span>, alors <span class="math inline">\(n\)</span> est pair ».<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<ol type="a">
+<li>Écrire la <strong>réciproque</strong> et la <strong>contraposée</strong> de <span class="math inline">\(\gamma\)</span>.</li>
+<li>Dire lesquelles des trois sont vraies. Justifier, par un contre-exemple si nécessaire.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-4" role="tab" aria-controls="tabset-6-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-5" role="tab" aria-controls="tabset-6-5" aria-selected="false" href="">Pièges</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p>Retourne à la théorie du cours : <em>Comprendre l’implication</em> et <em>Réciproque, contraposée, équivalence</em>.</p>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Comment construit-on la réciproque d’une implication? Comment construit-on la contraposée d’une implication?</p>
+<p>Pour tester la validité des implication: que faut-il chercher pour que l’implication doit fausse?</p>
+</div>
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<p><em>Étape.</em></p>
+<p>Pose <span class="math inline">\(\alpha\)</span> : « multiple de <span class="math inline">\(4\)</span> » et <span class="math inline">\(\beta\)</span> : « pair ». Pour construire la réciproque de <span class="math inline">\(\gamma\)</span> on <strong>échange</strong> <span class="math inline">\(\alpha\)</span> et <span class="math inline">\(\beta\)</span>. Pour construire la contraposée de <span class="math inline">\(\gamma\)</span>, on <strong>nie</strong> <span class="math inline">\(\alpha\)</span> et <span class="math inline">\(\beta\)</span> puis on les <strong>échange</strong>.</p>
+<p>Validité de la réciproque: prendre <span class="math inline">\(n=6\)</span>.</p>
+</div>
+<div id="tabset-6-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-4-tab">
+<p><strong>Implication</strong> : vraie.</p>
+<p><strong>Réciproque</strong> « si <span class="math inline">\(n\)</span> pair alors <span class="math inline">\(n\)</span> multiple de <span class="math inline">\(4\)</span> » : <strong>fausse</strong> avec <span class="math inline">\(n=6\)</span>, on a bien un <span class="math inline">\(n\)</span> pair qui n’est pas un multiple de <span class="math inline">\(4\)</span>.</p>
+<p><strong>Contraposée</strong> « si <span class="math inline">\(n\)</span> impair alors <span class="math inline">\(n\)</span> non multiple de <span class="math inline">\(4\)</span> » : <strong>vraie</strong> car elle est équivalente à <span class="math inline">\(\gamma\)</span>.</p>
+</div>
+<div id="tabset-6-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-5-tab">
+<p>Confondre <strong>réciproque</strong> et <strong>contraposée</strong>, et croire que la contraposée pourrait avoir une valeur de vérité différente de l’implication.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Socle|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Socle|2|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour les trois premières propositions : dire si elle est <strong>vraie</strong> ou <strong>fausse</strong>, puis écrire sa <strong>négation</strong>.</p>
+<ol type="a">
+<li><span class="math inline">\(\forall\, x\in\mathbb{R},\ x^2\ge 0\)</span>.</li>
+<li><span class="math inline">\(\exists\, n\in\mathbb{N},\ n+2 = 5\)</span>.</li>
+<li><span class="math inline">\(\forall\, x\in\mathbb{R},\ x^2 &gt; 0\)</span>.</li>
+<li>On note <span class="math inline">\(\alpha(v,t)\)</span> « le test <span class="math inline">\(t\)</span> détecte le variant <span class="math inline">\(v\)</span> ». Écrire la <strong>négation</strong> de <span class="math inline">\(\ \forall\, v,\ \exists\, t,\ \alpha(v,t)\ \)</span> puis la traduire en français.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-4" role="tab" aria-controls="tabset-7-4" aria-selected="false" href="">Pièges</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<p>Retourne à la théorie du cours : <em>Formaliser l’inclusion</em>, <em>Nier une proposition quantifiée</em>.</p>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Pour nier : <strong>échanger</strong> <span class="math inline">\(\forall\,\)</span> et <span class="math inline">\(\exists\,\)</span>, puis nier le prédicat. Négation de « <span class="math inline">\(\ge\)</span> » : « <span class="math inline">\(&lt;\)</span> » ; de « <span class="math inline">\(=\)</span> » : « <span class="math inline">\(\ne\)</span> » ; de « <span class="math inline">\(&gt;\)</span> » : « <span class="math inline">\(\le\)</span> ». Pour (d) : que deviennent <span class="math inline">\(\forall\, v\)</span>, <strong>puis</strong> <span class="math inline">\(\exists\, t\)</span>, <strong>puis</strong> <span class="math inline">\(\alpha\)</span> ?</p>
+</div>
+<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<ol type="a">
+<li><p><span class="math inline">\(\forall\, x\in\mathbb{R},\ x^2\ge 0\)</span>. est <strong>vraie</strong>. Sa négation : <span class="math inline">\(\exists\, x\in\mathbb{R},\ x^2&lt;0\)</span> est <strong>fausse</strong>.</p></li>
+<li><p><span class="math inline">\(\exists\, n\in\mathbb{N},\ n+2 = 5\)</span> est <strong>vraie</strong> (on peut le vérifier en considérant <span class="math inline">\(n=3\)</span>). Sa négation : <span class="math inline">\(\forall\, n\in\mathbb{N},\ n+2\ne 5\)</span> est <strong>fausse</strong>.</p></li>
+<li><p><span class="math inline">\(\forall\, x\in\mathbb{R},\ x^2 &gt; 0\)</span> est <strong>fausse</strong> (on peut contredire la proposition en considérant <span class="math inline">\(x=0\)</span>). Sa négation : <span class="math inline">\(\exists\, x\in\mathbb{R},\ x^2\le 0\)</span> est <strong>vraie</strong> (<span class="math inline">\(x=0\)</span>).</p></li>
+<li><p><span class="math inline">\(\lnot\big(\forall\, v,\ \exists\, t,\ \alpha(v,t)\big) \Leftrightarrow \exists\, v,\ \forall\, t,\ \lnot\alpha(v,t)\)</span> : « il existe un variant qu’<strong>aucun</strong> test ne détecte ».</p></li>
+</ol>
+</div>
+<div id="tabset-7-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-4-tab">
+<p>Nier en <strong>gardant le même quantificateur</strong> ; ou, en imbriqué (d), n’échanger qu’<strong>un seul</strong> quantificateur au lieu des deux (le second aussi doit basculer <span class="math inline">\(\exists\,\to\forall\,\)</span>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Socle|2|O3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Socle|2|O3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour chaque <strong>argument</strong> proposé, dire si c’est un <strong>exemple</strong>, un <strong>contre-exemple</strong> ou une <strong>preuve</strong>. Dans chaque cas, dire si l’argument établit l’affirmation, la réfute, ou ne conclut rien.</p>
+<p>Affirmation A : « Tout nombre premier est impair. »</p>
+<ol type="a">
+<li>« C’est vrai, car <span class="math inline">\(3\)</span> est premier et impair. »</li>
+<li>« C’est faux : <span class="math inline">\(2\)</span> est premier et pair. »</li>
+</ol>
+<p>Affirmation B : « La somme de deux entiers pairs est paire. »</p>
+<ol start="3" type="a">
+<li>« <span class="math inline">\(4+6=10\)</span> est pair, donc c’est vrai. »</li>
+<li>« Si <span class="math inline">\(a=2k\)</span> et <span class="math inline">\(b=2k'\)</span>, alors <span class="math inline">\(a+b=2(k+k')\)</span>, qui est pair. »</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-3" role="tab" aria-controls="tabset-8-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-4" role="tab" aria-controls="tabset-8-4" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<p>Retourne à la théorie du cours : <em>Exemples, preuves, contre-exemples</em>.</p>
+</div>
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>L’argument traite-t-il <strong>un</strong> cas (exemple / contre-exemple) ou <strong>tous</strong> les cas (preuve) ? Ce cas <strong>confirme</strong>-t-il ou <strong>contredit</strong>-il l’affirmation ? S’il contredit, alors il s’agit d’un contre-exemple.</p>
+</div>
+<div id="tabset-8-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-3-tab">
+<ol type="a">
+<li><strong>Exemple</strong> — ne permet pas de conclure sur la validité de l’affirmation (un cas favorable ne prouve pas un « tout »).</li>
+<li><strong>Contre-exemple</strong> de A : on peut donc en déduire que l’affirmation est fausse.</li>
+<li><strong>Exemple</strong> — ne conclut rien (ne couvre pas tous les cas).</li>
+<li><strong>Preuve</strong> — <strong>établit</strong> B (l’argument vaut pour tous les entiers pairs).</li>
+</ol>
+</div>
+<div id="tabset-8-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-4-tab">
+<p>Croire qu’un exemple (a, c) <strong>prouve</strong> une affirmation générale ; ne pas voir qu’<strong>un seul</strong> contre-exemple suffit à réfuter.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Le symbole <span class="math inline">\(\gamma\)</span> est une lettre grecque, la troisième dans l’ordre alphabétique et se prononce “gamma”.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

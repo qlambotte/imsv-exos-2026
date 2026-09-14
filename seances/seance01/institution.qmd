@@ -7,7 +7,7 @@ title: "Institutionnalisation — méthode & auto-évaluation"
 En fin de séance, on formalise la méthode pour **nier une proposition** — surtout une proposition
 **quantifiée**, là où l'intuition trompe le plus :
 
-- on **échange** chaque quantificateur ($\forall \leftrightarrow \exists$) ;
+- on **échange** chaque quantificateur ($\forall\, \leftrightarrow \exists\,$) ;
 - on **descend** la négation jusqu'au cœur de la proposition ;
 - on **nie le prédicat final** ($\ge$ devient $<$, $=$ devient $\ne$, $>$ devient $\le$…).
 
@@ -18,21 +18,13 @@ l'examen.
 
 Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **trois objectifs**.
 
-**O1** — traduire une affirmation simple entre **langage courant et langage formel**.
+- [ ]**O1** — traduire une affirmation simple entre **langage courant et langage formel**.
 
-- [ ] Je traduis une phrase en connecteurs ($\lnot,\land,\lor,\Rightarrow$) et l'inverse, sans me tromper de sens d'implication.
-- [ ] Je relie le langage courant aux ensembles de nombres ($\in$, $\subseteq$, $\setminus$).
 
-**O2** — utiliser les éléments de base de la logique (**ensembles, quantificateurs, connecteurs**) pour **démontrer ou réfuter** une affirmation mathématique.
+- [ ] **O2** — utiliser les éléments de base de la logique (**ensembles, quantificateurs, connecteurs**) pour **démontrer ou réfuter** une affirmation mathématique.
 
-- [ ] Je manipule ensembles et intervalles (appartenance, inclusion, opérations, bornes).
-- [ ] Je construis une **table de vérité** et j'applique **De Morgan**.
-- [ ] Je manie **implication / réciproque / contraposée**, et je **nie** une proposition quantifiée.
 
-**O3** — lire une affirmation mathématique simple et distinguer **exemple, preuve et contre-exemple**.
-
-- [ ] Je distingue **inconnue, variable et paramètre** dans un énoncé.
-- [ ] Devant un argument, je dis si c'est un **exemple**, un **contre-exemple** ou une **preuve** — et ce qu'il établit.
+- [ ] **O3** — lire une affirmation mathématique simple et distinguer **exemple, preuve et contre-exemple**.
 
 ::: {.callout-important appearance="simple"}
 Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la

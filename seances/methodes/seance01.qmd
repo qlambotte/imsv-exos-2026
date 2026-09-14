@@ -1,0 +1,21 @@
+---
+title: "Séance 1 — Langage et raisonnement"
+description: "Logique : propositions, connecteurs, ensembles, quantificateurs"
+order: 1
+nom: "[Langage et raisonnement](methodes/seance01.html)"
+correction: "✅ en ligne"
+filters:
+  - ../../methode.lua
+---
+
+::: {.content-visible when-format="html"}
+::: {.dl}
+<details class="dl-menu">
+<summary>Télécharger (PDF)</summary>
+<a href="../../pdf/feuille-seance01.pdf" download>Feuille à compléter — séance 1 (PDF)</a>
+<a href="../../pdf/methodes-seance01.pdf">Méthodes de la séance (PDF)</a>
+</details>
+:::
+:::
+
+{{< include ../_methodes-seance01.qmd >}}

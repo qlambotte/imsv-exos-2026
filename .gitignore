@@ -1,0 +1,35 @@
+# ---- Sortie de rendu Quarto ----
+# Publiée séparément (branche gh-pages via `quarto publish gh-pages`) : à ne pas versionner.
+/_book/
+
+# ---- Cache / temporaires Quarto ----
+/.quarto/
+/_freeze/
+
+# ---- Dossier temporaire de build-pdf.sh ----
+/.pdfbuild/
+/.pdfbuild
+
+# ---- Python (make_qr.py) ----
+__pycache__/
+*.pyc
+
+# ---- Système / éditeurs ----
+.DS_Store
+Thumbs.db
+*~
+*.swp
+.vscode/
+.idea/
+
+# NB : le dossier  pdf/  (PDF + version hors-ligne) est VOLONTAIREMENT suivi —
+# ce sont des ressources du site (resources: pdf/ dans _quarto.yml), copiées dans
+# le site publié. Ajoute  /pdf/  ici si tu préfères le régénérer à chaque build.
+
+**/*.quarto_ipynb
+
+# Dossier temporaire de build-methodes.sh
+/.pdfbuild-meth/
+
+# Dossier temporaire de build-boite.sh
+/.pdfbuild-boite/

@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>supplementaires</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="_supplementaires_files/libs/clipboard/clipboard.min.js"></script>
+<script src="_supplementaires_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="_supplementaires_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="_supplementaires_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="_supplementaires_files/libs/quarto-html/popper.min.js"></script>
+<script src="_supplementaires_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="_supplementaires_files/libs/quarto-html/anchor.min.js"></script>
+<link href="_supplementaires_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="_supplementaires_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="_supplementaires_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="_supplementaires_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="_supplementaires_files/libs/bootstrap/bootstrap-b0852dd1070364c970788c42a504e8aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Ces exercices restent <strong>dans les objectifs</strong> de la séance (donc <strong>examinables</strong>) : à faire une fois le socle et le transfert bouclés, en séance ou à la maison.</p>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|2|O1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|2|O1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On pose <span class="math inline">\(\alpha\)</span> : « le patient est malade » et <span class="math inline">\(\beta\)</span> : « le test est positif ». Traduire :</p>
+<ol type="a">
+<li>« Le patient est malade <strong>mais</strong> son test est négatif. »</li>
+<li>« <strong>Si</strong> le test est positif <strong>alors</strong> le patient est malade. »</li>
+<li><span class="math inline">\(\lnot(\alpha \lor \beta)\)</span> en français.</li>
+<li>« Le patient est malade <strong>ou</strong> son test est négatif. »</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Retourne à la théorie du cours : <em>Comment combiner des propositions ? Connecteurs logiques</em>.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Quel connecteur porte la phrase (et / ou / si…alors / non) ? Attention au sens de l’implication : <em>qui</em> implique <em>qui</em> ?</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<ol type="a">
+<li><span class="math inline">\(\alpha \land \lnot\beta\)</span>.</li>
+<li><span class="math inline">\(\beta \Rightarrow \alpha\)</span> (c’est le test qui implique la maladie).</li>
+<li>« Le patient n’est <strong>ni</strong> malade <strong>ni</strong> positif », soit <span class="math inline">\(\lnot\alpha \land \lnot\beta\)</span>.</li>
+<li><span class="math inline">\(\alpha \lor \lnot\beta\)</span>.</li>
+</ol>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>Traduire « mais » autrement que par <span class="math inline">\(\land\)</span> ; inverser le sens de l’implication en (b).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|2|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Soient <span class="math inline">\(A = \{a,b,c\}\)</span> et <span class="math inline">\(B = \{c,d\}\)</span>.</p>
+<ol type="a">
+<li>Donner <span class="math inline">\(A\cup B\)</span>, <span class="math inline">\(A\cap B\)</span>, <span class="math inline">\(A\setminus B\)</span>, <span class="math inline">\(B\setminus A\)</span>.</li>
+<li>Donner <span class="math inline">\(A\times B\)</span>.</li>
+<li>Vrai ou faux : <span class="math inline">\(a\in A\)</span> ; <span class="math inline">\(\{a\}\in A\)</span> ; <span class="math inline">\(\{a\}\subseteq A\)</span> ; <span class="math inline">\(\varnothing\subseteq A\)</span> ; <span class="math inline">\(c\in A\cap B\)</span>.</li>
+<li>Placer : <span class="math inline">\(-7\)</span>, <span class="math inline">\(\tfrac14\)</span>, <span class="math inline">\(\sqrt2\)</span> parmi les ensembles <span class="math inline">\(\mathbb{Z}\setminus\mathbb{N}\)</span>, <span class="math inline">\(\mathbb{Q}\setminus\mathbb{Z}\)</span>, <span class="math inline">\(\mathbb{R}\setminus\mathbb{Q}\)</span>.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Retourne à la théorie du cours : <em>Ensembles : regrouper des objets</em>, <em>Ensembles de nombres</em> et <em>Opérations sur les ensembles</em>.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Pour (c) : <span class="math inline">\(\{a\}\)</span> est-il un <strong>élément</strong> de <span class="math inline">\(A\)</span>, ou un <strong>sous-ensemble</strong> de <span class="math inline">\(A\)</span> ? Pour (d) : qui est entier non naturel ? qui est rationnel non entier ? qui est irrationnel ?</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<ol type="a">
+<li><span class="math inline">\(A\cup B=\{a,b,c,d\}\)</span> ; <span class="math inline">\(A\cap B=\{c\}\)</span> ; <span class="math inline">\(A\setminus B=\{a,b\}\)</span> ; <span class="math inline">\(B\setminus A=\{d\}\)</span>.</li>
+<li><span class="math inline">\(A\times B=\{(a,c),(a,d),(b,c),(b,d),(c,c),(c,d)\}\)</span>.</li>
+<li><ul>
+<li><span class="math inline">\(a\in A\)</span> est <strong>vraie</strong>. En effet, l’élément <span class="math inline">\(a\)</span> est dans l’ensemble <span class="math inline">\(A=\{a,b,c,d\}\)</span>.</li>
+<li><span class="math inline">\(\{a\}\in A\)</span> est <strong>fausse</strong>. En effet, <span class="math inline">\(\{a\}\)</span> désigne un ensemble dont l’unique élément est <span class="math inline">\(a\)</span>. Cet ensemble n’est pas un élément de l’ensemble <span class="math inline">\(A=\{a,b,c,d\}\)</span>.</li>
+<li><span class="math inline">\(\{a\}\subseteq A\)</span> est <strong>vraie</strong>. En effet, <span class="math inline">\(\{a\}\subseteq A\)</span> signifie <span class="math inline">\(\forall x\big(x\in\{a\}\Rightarrow x\in A\big)\)</span>. Cette phrase est vraie car le seul élément de l’ensemble <span class="math inline">\(\{a\}\)</span> est l’élément <span class="math inline">\(a\)</span>, qui est bien un élément de l’ensemble <span class="math inline">\(A\)</span>.</li>
+<li><span class="math inline">\(\varnothing\subseteq A\)</span> est <strong>vraie</strong>. En effet, <span class="math inline">\(\varnothing\subseteq A\)</span> signifie <span class="math inline">\(\forall x\big(x\in\varnothing\Rightarrow x\in A\big)\)</span>. Cette phrase est vraie car il n’y a aucun élément dans <span class="math inline">\(\varnothing\)</span>: la prémisse de l’implication étant fausse, l’implication est vraie.</li>
+<li><span class="math inline">\(c\in A\cap B\)</span> est <strong>vraie</strong>. En effet, l’élément <span class="math inline">\(c\)</span> est un élément commun aux ensemble <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span>: <span class="math inline">\(c\)</span> est donc dans l’intersection <span class="math inline">\(A\cap B\)</span>.</li>
+</ul></li>
+<li><span class="math inline">\(-7\in\mathbb{Z}\setminus\mathbb{N}\)</span> ; <span class="math inline">\(\tfrac14\in\mathbb{Q}\setminus\mathbb{Z}\)</span> ; <span class="math inline">\(\sqrt2\in\mathbb{R}\setminus\mathbb{Q}\)</span>.</li>
+</ol>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p>Confondre <span class="math inline">\(\in\)</span> et <span class="math inline">\(\subseteq\)</span> : écrire <span class="math inline">\(\{a\}\in A\)</span> (faux) au lieu de <span class="math inline">\(\{a\}\subseteq A\)</span> (vrai).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|2|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Voici la table de vérité de deux propositions <span class="math inline">\(a\)</span> et <span class="math inline">\(b\)</span> et d’une proposition cachée « ? ». Parmi les propositions proposées, laquelle a correspond à cette colonne ?</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(a\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(b\)</span></th>
+<th style="text-align: center;">?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<p>Choix : (A) <span class="math inline">\(a \Rightarrow b\)</span> ; (B) <span class="math inline">\(b \Rightarrow a\)</span> ; (C) <span class="math inline">\(a \land b\)</span> ; (D) <span class="math inline">\(a \lor b\)</span>.</p>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>Retourne à la théorie du cours : <em>Comprendre l’implication</em>.</p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Repère l’<strong>unique ligne</strong> où « ? » vaut <strong>F</strong>. Sur cette ligne, quelle proposition atomique est vraie (la prémisse) et laquelle est fausse (la conclusion) ?</p>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p>« ? » vaut F seulement à la ligne <span class="math inline">\(a=F,\ b=V\)</span>. Une implication est fausse quand sa <strong>prémisse</strong> est vraie et sa <strong>conclusion</strong> fausse : ici la prémisse est <span class="math inline">\(b\)</span> (V), la conclusion <span class="math inline">\(a\)</span> (F). Donc « ? » <span class="math inline">\(=\,b\Rightarrow a\)</span> — réponse <strong>(B)</strong>.</p>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<p>Choisir <span class="math inline">\(a\Rightarrow b\)</span> (la <strong>réciproque</strong>) : la direction est inversée. Vérifie toujours <em>sur quelle ligne</em> l’implication doit être fausse.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|2|O1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|2|O1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On pose <span class="math inline">\(\alpha\)</span> : « l’animal est un mammifère » et <span class="math inline">\(\beta\)</span> : « l’animal allaite ses petits ». Traduire :</p>
+<ol type="a">
+<li>« L’animal est un mammifère <strong>mais</strong> il n’allaite pas. »</li>
+<li>« <strong>Si</strong> l’animal est un mammifère <strong>alors</strong> il allaite. »</li>
+<li><span class="math inline">\(\lnot(\alpha\land\beta)\)</span> en français.</li>
+<li>« L’animal n’est <strong>pas</strong> un mammifère <strong>ou</strong> il allaite. »</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Indice</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>« mais » se traduit comme « et » (<span class="math inline">\(\land\)</span>) ; attention au sens de <span class="math inline">\(\Rightarrow\)</span> (<em>qui</em> implique <em>qui</em> ?). Pour (c), appliquer De Morgan : <span class="math inline">\(\lnot(\alpha\land \beta)\Leftrightarrow\lnot \alpha\lor\lnot \beta\)</span>.</p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<ol type="a">
+<li><span class="math inline">\(\alpha\land\lnot\beta\)</span>.</li>
+<li><span class="math inline">\(\alpha\Rightarrow\beta\)</span>.</li>
+<li>« L’animal n’est pas un mammifère <strong>ou</strong> il n’allaite pas » <span class="math inline">\(=\lnot\alpha\lor\lnot\beta\)</span>.</li>
+<li><span class="math inline">\(\lnot\alpha\lor\beta\)</span> — qui est justement une écriture de <span class="math inline">\(\alpha\Rightarrow\beta\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|1|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|1|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Construire la table de vérité de <span class="math inline">\(\lnot\alpha\)</span>, <span class="math inline">\(\lnot\beta\)</span>, <span class="math inline">\(\alpha\lor\beta\)</span>, puis vérifier que <span class="math display">\[\lnot(\alpha\lor\beta)\ \Leftrightarrow\ \lnot\alpha\land\lnot\beta.\]</span></p>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Indice</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p>Dans ton tableau, il y a 5 lignes. La proposition <span class="math inline">\(\alpha\lor\beta\)</span> n’est <strong>fausse</strong> que lorsque <span class="math inline">\(\alpha\)</span> <strong>et</strong> <span class="math inline">\(\beta\)</span> sont fausses, donc <span class="math inline">\(\lnot(\alpha\lor\beta)\)</span> n’est <strong>vraie</strong> que sur cette ligne.</p>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(\alpha\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\beta\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\alpha\lor\beta\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\lnot(\alpha\lor\beta)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\lnot\alpha\land\lnot\beta\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Les deux dernières colonnes coïncident : <span class="math inline">\(\lnot(\alpha\lor\beta)\Leftrightarrow\lnot\alpha\land\lnot\beta\)</span>. Autrement dit : nier « <span class="math inline">\(\alpha\)</span> <strong>ou</strong> <span class="math inline">\(\beta\)</span> », c’est n’avoir « ni l’un ni l’autre ».</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|2|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Soit <span class="math inline">\(\alpha\)</span> l’implication : « si <span class="math inline">\(n\)</span> est multiple de <span class="math inline">\(6\)</span>, alors <span class="math inline">\(n\)</span> est multiple de <span class="math inline">\(3\)</span> ».</p>
+<ol type="a">
+<li>Écrire la <strong>réciproque</strong> et la <strong>contraposée</strong> de <span class="math inline">\(\alpha\)</span>.</li>
+<li>Dire lesquelles des trois sont vraies, par un contre-exemple si nécessaire.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Indice</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p>Réciproque = on <strong>échange</strong> ; contraposée = on <strong>nie chaque proposition</strong> puis on les <strong>échange</strong>. Pour tester la réciproque, cherche un multiple de <span class="math inline">\(3\)</span> qui n’est <strong>pas</strong> multiple de <span class="math inline">\(6\)</span>.</p>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p><strong>Implication</strong> : vraie (tout multiple de <span class="math inline">\(6\)</span> est multiple de <span class="math inline">\(3\)</span>).</p>
+<p><strong>Réciproque</strong> : « si <span class="math inline">\(n\)</span> multiple de <span class="math inline">\(3\)</span> alors <span class="math inline">\(n\)</span> multiple de <span class="math inline">\(6\)</span> » : <strong>fausse</strong> (<span class="math inline">\(n=3\)</span>).</p>
+<p><strong>Contraposée</strong> : « si <span class="math inline">\(n\)</span> n’est pas multiple de <span class="math inline">\(3\)</span> alors <span class="math inline">\(n\)</span> n’est pas multiple de <span class="math inline">\(6\)</span> » : <strong>vraie</strong> car équivalente à <span class="math inline">\(\alpha\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|2|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Soient <span class="math inline">\(A=\{1,2,3\}\)</span> et <span class="math inline">\(B=\{3,4\}\)</span>.</p>
+<ol type="a">
+<li>Donner <span class="math inline">\(A\cup B\)</span>, <span class="math inline">\(A\cap B\)</span>, <span class="math inline">\(A\setminus B\)</span>, <span class="math inline">\(B\setminus A\)</span>.</li>
+<li>Vrai ou faux : <span class="math inline">\(2\in A\)</span> ; <span class="math inline">\(\{2\}\in A\)</span> ; <span class="math inline">\(\{2,3\}\subseteq A\)</span> ; <span class="math inline">\(\varnothing\in A\)</span> ; <span class="math inline">\(3\in A\cap B\)</span>.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">Indice</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<p>Distingue <strong>élément</strong> (<span class="math inline">\(\in\)</span>) et <strong>sous-ensemble</strong> (<span class="math inline">\(\subseteq\)</span>). Piège : <span class="math inline">\(\varnothing\subseteq A\)</span> est toujours vrai — mais <span class="math inline">\(\varnothing\in A\)</span> demande que <span class="math inline">\(\varnothing\)</span> soit <strong>listé</strong> parmi les éléments de <span class="math inline">\(A\)</span>.</p>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<ol type="a">
+<li><span class="math inline">\(A\cup B=\{1,2,3,4\}\)</span> ; <span class="math inline">\(A\cap B=\{3\}\)</span> ; <span class="math inline">\(A\setminus B=\{1,2\}\)</span> ; <span class="math inline">\(B\setminus A=\{4\}\)</span>.</li>
+<li><ul>
+<li><span class="math inline">\(2\in A\)</span> est <strong>vraie</strong> ;</li>
+<li><span class="math inline">\(\{2\}\in A\)</span> est <strong>fausse</strong> (<span class="math inline">\(\{2\}\)</span> est un sous-ensemble, pas un élément) ;</li>
+<li><span class="math inline">\(\{2,3\}\subseteq A\)</span> est <strong>vraie</strong> ;</li>
+<li><span class="math inline">\(\varnothing\in A\)</span> est <strong>fausse</strong> (<span class="math inline">\(A\)</span> ne contient pas <span class="math inline">\(\varnothing\)</span> comme élément) ; -<span class="math inline">\(3\in A\cap B\)</span> est <strong>vraie</strong>.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|2|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour chaque proposition : dire si elle est <strong>vraie</strong> ou <strong>fausse</strong>, écrire sa <strong>négation</strong>, puis l’évaluer.</p>
+<ol type="a">
+<li><span class="math inline">\(\forall\, n\in\mathbb{N},\ n+1 &gt; n\)</span>.</li>
+<li><span class="math inline">\(\exists\, x\in\mathbb{R},\ x^2 = 2\)</span>.</li>
+<li><span class="math inline">\(\forall\, x\in\mathbb{R},\ x^2 \ne x\)</span>.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true" href="">Indice</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false" href="">Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<p>Nier : <strong>échanger</strong> <span class="math inline">\(\forall\,\)</span> et <span class="math inline">\(\exists\,\)</span>, puis nier l’intérieur. Négation de « <span class="math inline">\(&gt;\)</span> » : « <span class="math inline">\(\le\)</span> » ; de « <span class="math inline">\(=\)</span> » : « <span class="math inline">\(\ne\)</span> » ; de « <span class="math inline">\(\ne\)</span> » : « <span class="math inline">\(=\)</span> ». Un seul contre-exemple réfute un <span class="math inline">\(\forall\,\)</span>.</p>
+</div>
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<ol type="a">
+<li><strong>Vraie</strong>. Négation : <span class="math inline">\(\exists\, n\in\mathbb{N},\ n+1\le n\)</span> — <strong>fausse</strong>.</li>
+<li><strong>Vraie</strong> (<span class="math inline">\(x=\sqrt2\)</span>). Négation : <span class="math inline">\(\forall\, x\in\mathbb{R},\ x^2\ne 2\)</span> — <strong>fausse</strong>.</li>
+<li><strong>Fausse</strong> (<span class="math inline">\(x=0\)</span> donne <span class="math inline">\(0^2=0\)</span>, et <span class="math inline">\(x=1\)</span> aussi). Négation : <span class="math inline">\(\exists\, x\in\mathbb{R},\ x^2=x\)</span> — <strong>vraie</strong> (<span class="math inline">\(x=0\)</span> ou <span class="math inline">\(x=1\)</span>).</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|2|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Voici la table de vérité de <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> et d’une proposition cachée « ? ». Parmi les choix, laquelle a <strong>exactement</strong> cette colonne ?</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(a\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(b\)</span></th>
+<th style="text-align: center;">?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<p>Choix : (A) <span class="math inline">\(a\Rightarrow b\)</span> ; (B) <span class="math inline">\(b\Rightarrow a\)</span> ; (C) <span class="math inline">\(a\lor b\)</span> ; (D) <span class="math inline">\(a\land b\)</span>.</p>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true" href="">Indice</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false" href="">Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
+<p>Repère l’<strong>unique ligne</strong> où « ? » vaut <strong>F</strong>. Sur cette ligne, quelle proposition est vraie (la prémisse) et laquelle est fausse (la conclusion) ?</p>
+</div>
+<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
+<p>« ? » vaut F seulement à la ligne <span class="math inline">\(a=V,\ b=F\)</span> : prémisse <span class="math inline">\(a\)</span> (V), conclusion <span class="math inline">\(b\)</span> (F). C’est donc <span class="math inline">\(a\Rightarrow b\)</span> — réponse <strong>(A)</strong>. (Cette fois la direction est <span class="math inline">\(a\Rightarrow b\)</span>, l’inverse de l’exercice S.7 du socle : c’est toujours la <strong>ligne fausse</strong> qui tranche.)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|2|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On veut relier l’implication aux connecteurs <span class="math inline">\(\lnot\)</span>, <span class="math inline">\(\lor\)</span>, <span class="math inline">\(\land\)</span>.</p>
+<ol type="a">
+<li>Dresser la table de vérité de <span class="math inline">\(\alpha\Rightarrow\beta\)</span> et celle de <span class="math inline">\(\lnot\alpha\lor\beta\)</span>, et constater qu’elles coïncident.</li>
+<li>En déduire une écriture de <span class="math inline">\(\lnot(\alpha\Rightarrow\beta)\)</span> <em>sans</em> le symbole <span class="math inline">\(\Rightarrow\)</span>.</li>
+</ol>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-10-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-1" role="tab" aria-controls="tabset-10-1" aria-selected="true" href="">Indice</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-2" role="tab" aria-controls="tabset-10-2" aria-selected="false" href="">Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-10-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-10-1-tab">
+<p>La table aura 5 lignes et une colonne par proposition. Pour (b), nie <span class="math inline">\(\lnot\alpha\lor\beta\)</span> et applique De Morgan : <span class="math inline">\(\lnot(P\lor Q)\Leftrightarrow\lnot P\land\lnot Q\)</span>.</p>
+</div>
+<div id="tabset-10-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-2-tab">
+<ol type="a">
+<li><p>Les deux colonnes valent <strong>F</strong> uniquement sur la ligne <span class="math inline">\(\alpha=V,\ \beta=F\)</span>, et <strong>V</strong> sur les trois autres : elles sont identiques, donc <span class="math inline">\(\alpha\Rightarrow\beta\Leftrightarrow\lnot\alpha\lor\beta\)</span>.</p></li>
+<li><p><span class="math inline">\(\lnot(\alpha\Rightarrow\beta)\Leftrightarrow\lnot(\lnot\alpha\lor\beta)\Leftrightarrow\alpha\land\lnot\beta\)</span> : « nier une implication », c’est affirmer l’hypothèse <strong>et</strong> nier la conclusion.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|2|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour chaque proposition, dire si c’est une <strong>tautologie</strong> (vraie quelles que soient les valeurs), une <strong>contradiction</strong> (jamais vraie), ou une <strong>contingence</strong> (ni l’une ni l’autre).</p>
+<ol type="a">
+<li><span class="math inline">\(\alpha\lor\lnot\alpha\)</span><br>
+</li>
+<li><span class="math inline">\(\alpha\land\lnot\alpha\)</span></li>
+<li><span class="math inline">\((\alpha\Rightarrow\beta)\Rightarrow(\lnot\beta\Rightarrow\lnot\alpha)\)</span></li>
+<li><span class="math inline">\((\alpha\lor\beta)\Rightarrow\alpha\)</span></li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-11-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-1" role="tab" aria-controls="tabset-11-1" aria-selected="true" href="">Indice</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-11-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-2" role="tab" aria-controls="tabset-11-2" aria-selected="false" href="">Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-11-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-11-1-tab">
+<p>Une table de vérité tranche à coup sûr : tautologie = colonne finale tout <strong>V</strong>, contradiction = tout <strong>F</strong>. Pour (b), regarde ce que <span class="math inline">\(\lnot\beta\Rightarrow\lnot\alpha\)</span> représente par rapport à <span class="math inline">\(\alpha\Rightarrow\beta\)</span>.</p>
+</div>
+<div id="tabset-11-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-11-2-tab">
+<ol type="a">
+<li><strong>Tautologie</strong>.</li>
+<li><strong>Contradiction</strong>.</li>
+<li><strong>Tautologie</strong> : <span class="math inline">\(\lnot\beta\Rightarrow\lnot\alpha\)</span> est la <strong>contraposée</strong> de <span class="math inline">\(\alpha\Rightarrow\beta\)</span>, donc les deux membres sont équivalents et l’implication est toujours vraie.</li>
+<li><strong>Contingence</strong> : fausse pour <span class="math inline">\(\alpha=F,\ \beta=V\)</span> (l’hypothèse est vraie, la conclusion fausse), vraie ailleurs.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|3|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|3|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On travaille dans <span class="math inline">\(\mathbb{R}\)</span>. <span class="math display">\[(\star)\qquad \forall\, x,\ \exists\, y,\ x+y=0.\]</span></p>
+<ol type="a">
+<li><span class="math inline">\((\star)\)</span> est-elle vraie ? Justifier.</li>
+<li>Écrire <span class="math inline">\(\exists\, y,\ \forall\, x,\ x+y=0\)</span> et dire si elle est vraie.</li>
+<li>Écrire la <strong>négation</strong> de <span class="math inline">\((\star)\)</span>.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-12-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-1" role="tab" aria-controls="tabset-12-1" aria-selected="true" href="">Indice</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-12-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-2" role="tab" aria-controls="tabset-12-2" aria-selected="false" href="">Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-12-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-12-1-tab">
+<p>Traduis <span class="math inline">\((\star)\)</span> en français pour juger de sa vérité.</p>
+<p>Dans (b), un <strong>même</strong> <span class="math inline">\(y\)</span> doit convenir pour tous les <span class="math inline">\(x\)</span>.</p>
+<p>Pour la négation, n’oublie pas de nier l’égalité.</p>
+</div>
+<div id="tabset-12-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-12-2-tab">
+<ol type="a">
+<li><p><strong>Vraie</strong> : pour <span class="math inline">\(x\)</span> donné, prends <span class="math inline">\(y=-x\)</span> ; alors <span class="math inline">\(x+y=0\)</span>. Cette proposition dit que tout nombre réel a un opposé.</p></li>
+<li><p>« Il existe un réel <span class="math inline">\(y\)</span> tel que, pour <strong>tout</strong> <span class="math inline">\(x\)</span>, <span class="math inline">\(x+y=0\)</span>. » <strong>Fausse</strong> : un <span class="math inline">\(y\)</span> fixé ne peut annuler <span class="math inline">\(x+y\)</span> que pour le seul <span class="math inline">\(x=-y\)</span>, pas pour tous.</p></li>
+<li><p><span class="math inline">\(\lnot(\star)\Leftrightarrow\exists\, x,\ \forall\, y,\ x+y\neq 0\)</span> (« il existe un <span class="math inline">\(x\)</span> que <strong>aucun</strong> <span class="math inline">\(y\)</span> n’annule »).</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|3|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|3|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Soient <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> des ensembles.</p>
+<ol type="a">
+<li>Démontrer <span class="math inline">\(A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\)</span>.</li>
+<li>L’égalité <span class="math inline">\(A\setminus(B\cap C)=(A\setminus B)\cap(A\setminus C)\)</span> est-elle vraie ? Sinon, donner un <strong>contre-exemple</strong> et écrire l’identité correcte.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-13-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-1" role="tab" aria-controls="tabset-13-1" aria-selected="true" href="">Indice</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-13-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-2" role="tab" aria-controls="tabset-13-2" aria-selected="false" href="">Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-13-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-13-1-tab">
+<ol type="a">
+<li><p>Montre <span class="math inline">\(x\in\)</span> membre de gauche <span class="math inline">\(\Leftrightarrow x\in\)</span> membre de droite, en traduisant <span class="math inline">\(\cap\)</span> par « et », <span class="math inline">\(\cup\)</span> par « ou ».</p></li>
+<li><p>Teste sur de petits ensembles.</p></li>
+</ol>
+</div>
+<div id="tabset-13-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-13-2-tab">
+<ol type="a">
+<li><p><span class="math inline">\(x\in A\cap(B\cup C)\ \Leftrightarrow\ x\in A\ \text{et}\ (x\in B\ \text{ou}\ x\in C)\
+\Leftrightarrow\ (x\in A\ \text{et}\ x\in B)\ \text{ou}\ (x\in A\ \text{et}\ x\in C)\
+\Leftrightarrow\ x\in(A\cap B)\cup(A\cap C)\)</span> (distributivité du « et » sur le « ou »).</p></li>
+<li><p><strong>Fausse.</strong> Contre-exemple : <span class="math inline">\(A=\{1,2\}\)</span>, <span class="math inline">\(B=\{1\}\)</span>, <span class="math inline">\(C=\{2\}\)</span>. Alors <span class="math inline">\(B\cap C=\varnothing\)</span>, donc <span class="math inline">\(A\setminus(B\cap C)=A=\{1,2\}\)</span> ; tandis que <span class="math inline">\(A\setminus B=\{2\}\)</span>, <span class="math inline">\(A\setminus C=\{1\}\)</span>, dont l’intersection est <span class="math inline">\(\varnothing\)</span>. L’identité correcte est <span class="math inline">\(A\setminus(B\cap C)=(A\setminus B)\cup
+(A\setminus C)\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<section id="nouveaux-exercices-suggérés-par-mickaël" class="level2">
+<h2 class="anchored" data-anchor-id="nouveaux-exercices-suggérés-par-mickaël">Nouveaux exercices — suggérés par Mickaël</h2>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|2|O2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>À l’aide de tables de vérités, dire si les équivalences sont vraies (les deux membres de l’équivalence ont la même colonne dans la table de vérité) ou fausse (une des lignes de la table de vérité distingue les deux membres).</p>
+<ol type="a">
+<li><span class="math inline">\((\alpha\Rightarrow\beta)\ \Leftrightarrow\ (\lnot\beta\Rightarrow\lnot\alpha)\)</span></li>
+<li><span class="math inline">\((\alpha\Rightarrow\beta)\ \Leftrightarrow\ (\beta\Rightarrow\alpha)\)</span></li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-14-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-1" role="tab" aria-controls="tabset-14-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-14-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-2" role="tab" aria-controls="tabset-14-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-14-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-3" role="tab" aria-controls="tabset-14-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-14-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-14-4" role="tab" aria-controls="tabset-14-4" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-14-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-14-1-tab">
+<p>Retourne à la théorie du cours : <em>Réciproque, contraposée, équivalence</em> et <em>Outil : table de vérité</em>.</p>
+</div>
+<div id="tabset-14-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-14-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Les deux membres de l’équivalence ont-elles la <strong>même colonne finale</strong>?</p>
+</div>
+<div id="tabset-14-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-14-3-tab">
+<p><strong>(a)</strong> <strong>Vraie</strong> : c’est le lien implication / contraposée.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(\alpha\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\beta\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\lnot\alpha\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\lnot\beta\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\alpha\Rightarrow\beta\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\lnot\beta\Rightarrow\lnot\alpha\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<p>Les deux dernières colonnes sont identiques ligne à ligne : l’équivalence est <strong>vraie</strong>.</p>
+<p><strong>(b)</strong> <strong>Fausse</strong> : à la ligne <span class="math inline">\(\alpha=V,\ \beta=F\)</span>, <span class="math inline">\(\alpha\Rightarrow\beta\)</span> vaut <strong>F</strong> tandis que <span class="math inline">\(\beta\Rightarrow\alpha\)</span> vaut <strong>V</strong> — c’est la réciproque, pas équivalente.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(\alpha\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\beta\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\alpha\Rightarrow\beta\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\beta\Rightarrow\alpha\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<p>Aux lignes 2 et 3, les colonnes diffèrent : l’équivalence est <strong>fausse</strong>.</p>
+</div>
+<div id="tabset-14-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-14-4-tab">
+<p>Prendre une <strong>coïncidence sur une ligne</strong> pour une équivalence (il faut <strong>toutes</strong> les lignes) ; oublier qu’une seule ligne de différence réfute.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|2|O1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|2|O1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On se place dans un ensemble de référence <span class="math inline">\(E\)</span>. Pour chaque relation entre ensembles, écrire l’<strong>énoncé logique équivalent</strong> (avec <span class="math inline">\(\forall\,\)</span>, <span class="math inline">\(\Rightarrow\)</span>, <span class="math inline">\(\in\)</span>) puis représenter la situation sur un diagramme de Venn.</p>
+<ol type="a">
+<li><span class="math inline">\(A \subseteq B\)</span></li>
+<li><span class="math inline">\(A \cap B = \varnothing\)</span></li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-15-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-15-1" role="tab" aria-controls="tabset-15-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-15-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-15-2" role="tab" aria-controls="tabset-15-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-15-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-15-3" role="tab" aria-controls="tabset-15-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-15-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-15-4" role="tab" aria-controls="tabset-15-4" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-15-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-15-1-tab">
+<p>Retourne à la théorie du cours : <em>Formaliser l’inclusion</em> et <em>Opérations sur les ensembles</em>.</p>
+</div>
+<div id="tabset-15-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-15-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>« Être dans <span class="math inline">\(A\)</span> » se note <span class="math inline">\(x\in A\)</span>. Une relation <strong>entre ensembles</strong> se lit comme un énoncé <strong>« pour tout élément <span class="math inline">\(x\)</span>… »</strong>. Que dit-elle de la position des disques dans le diagramme de Venn ?</p>
+</div>
+<div id="tabset-15-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-15-3-tab">
+<p><strong>(a)</strong> <span class="math inline">\(\forall\, x,\ x\in A \Rightarrow x\in B\)</span> — le disque <span class="math inline">\(A\)</span> est entièrement contenu dans <span class="math inline">\(B\)</span>.</p>
+<svg width="260" height="220" viewbox="0 0 260 220" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0.5em auto;">
+  <rect x="10" y="10" width="240" height="200" rx="6" fill="none" stroke="black" stroke-width="1.5"></rect>
+  <text x="20" y="28" font-size="16" font-family="serif" font-style="italic">E</text>
+  <circle cx="130" cy="120" r="80" fill="none" stroke="black" stroke-width="1.5"></circle>
+  <text x="130" y="55" font-size="16" font-family="serif" font-style="italic" text-anchor="middle">B</text>
+  <circle cx="105" cy="130" r="35" fill="none" stroke="black" stroke-width="1.5"></circle>
+  <text x="105" y="130" font-size="16" font-family="serif" font-style="italic" text-anchor="middle" dominant-baseline="middle">A</text>
+</svg>
+<p><strong>(b)</strong> <span class="math inline">\(\forall\, x,\ \lnot(x\in A \land x\in B)\)</span> — les disques <span class="math inline">\(A\)</span> et <span class="math inline">\(B\)</span> ne se recouvrent pas (disjoints).</p>
+<svg width="260" height="180" viewbox="0 0 260 180" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0.5em auto;">
+  <rect x="10" y="10" width="240" height="160" rx="6" fill="none" stroke="black" stroke-width="1.5"></rect>
+  <text x="20" y="28" font-size="16" font-family="serif" font-style="italic">E</text>
+  <circle cx="80" cy="95" r="45" fill="none" stroke="black" stroke-width="1.5"></circle>
+  <text x="80" y="95" font-size="16" font-family="serif" font-style="italic" text-anchor="middle" dominant-baseline="middle">A</text>
+  <circle cx="185" cy="95" r="38" fill="none" stroke="black" stroke-width="1.5"></circle>
+  <text x="185" y="95" font-size="16" font-family="serif" font-style="italic" text-anchor="middle" dominant-baseline="middle">B</text>
+</svg>
+</div>
+<div id="tabset-15-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-15-4-tab">
+<p>Écrire une <strong>égalité d’ensembles</strong> là où il faut une <strong>implication</strong> (inclusion) ; confondre <span class="math inline">\(\cap=\varnothing\)</span> (disjoints) et <span class="math inline">\(\subseteq\)</span> (inclus).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|2|O1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|2|O1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour chaque ligne, écrire le membre de droite en fonction de « <span class="math inline">\(x\in A\)</span> » et « <span class="math inline">\(x\in B\)</span> » et les connecteurs logiques <span class="math inline">\(\land\)</span>, <span class="math inline">\(\lor\)</span> et <span class="math inline">\(\lnot\)</span>.</p>
+<ol type="a">
+<li><span class="math inline">\(x \in A\cap B\ \Leftrightarrow\ \ldots\)</span></li>
+<li><span class="math inline">\(x \in A\cup B\ \Leftrightarrow\ \ldots\)</span></li>
+<li><span class="math inline">\(x \in A\setminus B\ \Leftrightarrow\ \ldots\)</span></li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-16-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-1" role="tab" aria-controls="tabset-16-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-16-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-2" role="tab" aria-controls="tabset-16-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-16-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-3" role="tab" aria-controls="tabset-16-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-16-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-16-4" role="tab" aria-controls="tabset-16-4" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-16-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-16-1-tab">
+<p>Retourne à la théorie du cours : <em>Opérations sur les ensembles</em> et <em>Comment combiner des propositions ? Connecteurs logiques</em>.</p>
+</div>
+<div id="tabset-16-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-16-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Comment traduire en français <span class="math inline">\(A \cap B\)</span> avec un connecteur logique? Comment traduire l’union avec un connecteur logique? etc.</p>
+</div>
+<div id="tabset-16-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-16-3-tab">
+<ol type="a">
+<li><span class="math inline">\((x\in A)\ \land\ (x\in B)\)</span>.</li>
+<li><span class="math inline">\((x\in A)\ \lor\ (x\in B)\)</span>.</li>
+<li><span class="math inline">\((x\in A)\ \land\ \lnot(x\in B)\)</span>.</li>
+</ol>
+</div>
+<div id="tabset-16-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-16-4-tab">
+<p>Traduire <span class="math inline">\(\cup\)</span> par « et » ; oublier le <strong>non</strong> du complément ou du « <span class="math inline">\(\setminus\)</span> ».</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution callout-titled" title="Exercice|Renforcement|1|O3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Exercice|Renforcement|1|O3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dans chaque paire, les deux énoncés utilisent <strong>les mêmes symboles</strong>, mais dans un <strong>ordre différent</strong> (ou avec des parenthèses placées ailleurs).</p>
+<ol type="1">
+<li>Traduis chaque énoncé en <strong>français courant</strong>.</li>
+<li>Dis s’il est <strong>vrai</strong> ou <strong>faux</strong>.</li>
+</ol>
+<ol type="a">
+<li><p><span class="math inline">\(\forall\, n\in\mathbb{N},\ \exists\, m\in\mathbb{N},\ n&lt; m\)</span> <strong>et</strong> <span class="math inline">\(\exists\, m\in\mathbb{N},\ \forall\, n\in\mathbb{N},\ n&lt; m\)</span></p></li>
+<li><p><span class="math inline">\(\forall\, n\in\mathbb{N},\ \exists\, m\in\mathbb{N},\ n+m=10\)</span> <strong>et</strong> <span class="math inline">\(\exists\, m\in\mathbb{N},\ \forall\, n\in\mathbb{N},\ n+m=10\)</span></p></li>
+<li><p><span class="math inline">\(\forall\, n\in\mathbb{N},\ (n \text{ est pair}\ \lor\ n \text{ est impair})\)</span> <strong>et</strong> <span class="math inline">\(\big(\forall\, n\in\mathbb{N},\ n \text{ est pair}\big)\ \lor\ \big(\forall\, n\in\mathbb{N},\ n \text{ est impair}\big)\)</span></p></li>
+<li><p><span class="math inline">\(\exists\, n\in\mathbb{N},\ (n \text{ est pair}\ \land\ n \text{ est impair})\)</span> <strong>et</strong> <span class="math inline">\(\big(\exists\, n\in\mathbb{N},\ n \text{ est pair}\big)\ \land\ \big(\exists\, n\in\mathbb{N},\ n \text{ est impair}\big)\)</span></p></li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-17-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-1" role="tab" aria-controls="tabset-17-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-17-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-2" role="tab" aria-controls="tabset-17-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-17-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-3" role="tab" aria-controls="tabset-17-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-17-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-17-4" role="tab" aria-controls="tabset-17-4" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-17-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-17-1-tab">
+<p>Retourne à la théorie du cours : <em>Quantificateurs imbriqués</em> et <em>Portée des quantificateurs</em>.</p>
+</div>
+<div id="tabset-17-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-17-2-tab">
+<p><em>Question à te poser</em></p>
+<p>Dans quel ordre est-ce que je <strong>choisis</strong> mes nombres — et le second a-t-il le droit de dépendre du premier ?</p>
+<ul>
+<li>Si je lis <span class="math inline">\(\forall\, n\in\mathbb{N},\ \exists\, m\in\mathbb{N},\ \ldots\)</span> : on me donne <span class="math inline">\(n\)</span> d’abord, puis je cherche un <span class="math inline">\(m\)</span> adapté. <strong>Ai-je le droit de changer de <span class="math inline">\(m\)</span> quand <span class="math inline">\(n\)</span> change ?</strong></li>
+<li>Si je lis <span class="math inline">\(\exists\, m\in\mathbb{N},\ \forall\, n\in\mathbb{N},\ \ldots\)</span> : je dois annoncer mon <span class="math inline">\(m\)</span> avant de voir les <span class="math inline">\(n\)</span>. <strong>Un seul et même <span class="math inline">\(m\)</span> peut-il convenir à tous les <span class="math inline">\(n\)</span> à la fois ?</strong></li>
+</ul>
+</div>
+<div id="tabset-17-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-17-3-tab">
+<p><strong>(a)</strong></p>
+<ul>
+<li><span class="math inline">\(\forall\, n\in\mathbb{N},\ \exists\, m\in\mathbb{N},\ n&lt;m\)</span> : « Quel que soit le naturel choisi, il en existe un plus grand. » &nbsp;<strong>Vrai</strong> (prendre <span class="math inline">\(m=n+1\)</span>, qui dépend de <span class="math inline">\(n\)</span>).</li>
+<li><span class="math inline">\(\exists\, m\in\mathbb{N},\ \forall\, n\in\mathbb{N},\ n&lt;m\)</span> : « Il existe un naturel plus grand que tous les naturels. » &nbsp;<strong>Faux</strong> : ce <span class="math inline">\(m\)</span> devrait notamment être plus grand que lui-même, et de toute façon <span class="math inline">\(m+1\)</span> le dépasse. Il n’y a pas de plus grand naturel.</li>
+</ul>
+<p><strong>(b)</strong></p>
+<ul>
+<li><span class="math inline">\(\forall\, n\in\mathbb{N},\ \exists\, m\in\mathbb{N},\ n+m=10\)</span> : « Tout naturel peut être complété à <span class="math inline">\(10\)</span>. » &nbsp;<strong>Faux</strong> dans <span class="math inline">\(\mathbb{N}\)</span> : pour <span class="math inline">\(n=12\)</span>, il faudrait <span class="math inline">\(m=-2\)</span>, qui n’est pas un naturel.</li>
+<li><span class="math inline">\(\exists\, m\in\mathbb{N},\ \forall\, n\in\mathbb{N},\ n+m=10\)</span> : « Il existe un naturel qui, ajouté à n’importe quel naturel, donne toujours <span class="math inline">\(10\)</span>. » &nbsp;<strong>Faux</strong> (il faudrait <span class="math inline">\(m=10\)</span> pour <span class="math inline">\(n=0\)</span> et <span class="math inline">\(m=9\)</span> pour <span class="math inline">\(n=1\)</span>).</li>
+</ul>
+<p><strong>(c)</strong></p>
+<ul>
+<li><span class="math inline">\(\forall\, n\in\mathbb{N},\ (n \text{ est pair}\ \lor\ n \text{ est impair})\)</span> : « Tout naturel est pair ou impair. » &nbsp;<strong>Vrai</strong>.</li>
+<li><span class="math inline">\(\big(\forall\, n\in\mathbb{N},\ n \text{ est pair}\big)\ \lor\ \big(\forall\, n\in\mathbb{N},\ n \text{ est impair}\big)\)</span> : « Ou bien tous les naturels sont pairs, ou bien tous sont impairs. » &nbsp;<strong>Faux</strong> (<span class="math inline">\(3\)</span> contredit la première, <span class="math inline">\(4\)</span> la seconde).</li>
+</ul>
+<p><strong>(d)</strong></p>
+<ul>
+<li><span class="math inline">\(\exists\, n\in\mathbb{N},\ (n \text{ est pair}\ \land\ n \text{ est impair})\)</span> : « Il existe un naturel à la fois pair et impair. » &nbsp;<strong>Faux</strong> (impossible pour un <strong>même</strong> nombre).</li>
+<li><span class="math inline">\(\big(\exists\, n\in\mathbb{N},\ n \text{ est pair}\big)\ \land\ \big(\exists\, n\in\mathbb{N},\ n \text{ est impair}\big)\)</span> : « Il existe un naturel pair, et il existe un naturel impair. » &nbsp;<strong>Vrai</strong> (par exemple <span class="math inline">\(4\)</span> et <span class="math inline">\(7\)</span> : ce ne sont pas les mêmes).</li>
+</ul>
+</div>
+<div id="tabset-17-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-17-4-tab">
+<p>Permuter des quantificateurs change une proposition : <span class="math inline">\(\forall n\in\mathbb{N},\exists m\in\mathbb{N}\)</span> autorise un <span class="math inline">\(m\)</span> <strong>différent pour chaque</strong> <span class="math inline">\(n\)</span>, alors que <span class="math inline">\(\exists m\in\mathbb{N},\forall n\in\mathbb{N}\)</span> exige <strong>un seul</strong> <span class="math inline">\(m\)</span> valable partout. En (a), c’est toute la différence entre « il y a toujours un naturel plus grand qu’un autre » (vrai) et « il y a un naturel plus grand grand que tous les autres» (faux).</p>
+<p>Et surveille les parenthèses : dans (c) et (d), le même symbole placé à l’intérieur ou à l’extérieur change complètement l’énoncé.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
