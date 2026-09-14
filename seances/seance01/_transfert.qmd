@@ -64,7 +64,7 @@ l'ensemble des patients fébriles[^1] et $T$ celui des patients qui toussent. Ex
 
 Traduire en français :
 
-(d) l'énoncé $F \cap T = \varnothing$ (en français) ;
+(d) l'énoncé $F \cap T = \varnothing$;
 
 :::
 
