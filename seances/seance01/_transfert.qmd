@@ -135,7 +135,7 @@ Pour (c) :
 
 Pour (d) : lequel des deux énoncés demande le plus d'efficacité à un antibiotique?
 
-Pour (e) : que deviennent (\forall b), puis (\exists a), puis (\alpha), quand on nie ?
+Pour (e) : que deviennent $\forall b$, puis $\exists a$, puis $\alpha$, quand on nie ?
 
 ## Solution
 

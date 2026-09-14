@@ -35,8 +35,10 @@ cat <<EOF
   2) Rédige les exercices dans :
         seances/seance$NN/_socle.qmd            (socle)
         seances/seance$NN/_transfert.qmd        (transfert)
-        seances/seance$NN/_supplementaires.qmd  (renforcement + dépassement)
-     Numérotation CONTINUE : le transfert reprend après le dernier numéro du socle.
+        seances/seance$NN/_supplementaires.qmd  (renforcement)
+     Numérotation AUTOMATIQUE (filtre exercice.lua) : par catégorie (Socle → S.1, S.2… ;
+     Transfert → T.1… ; Renforcement → R.1…). Titre source « Exercice|Catégorie|niveau|Objectif »,
+     SANS numéro écrit ; réordonner un exercice le renumérote tout seul.
      Complète aussi index.qmd (objectifs, slides) et institution.qmd (méthode, auto-éval).
 
   3) Construis tout :
