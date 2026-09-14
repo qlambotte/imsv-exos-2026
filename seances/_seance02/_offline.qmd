@@ -31,3 +31,7 @@ solutions). Les *coups de pouce* se déplient au clic, comme sur le site.
 # Transfert — problèmes
 
 {{< include _transfert.qmd >}}
+
+# Exercices supplémentaires
+
+{{< include _supplementaires.qmd >}}

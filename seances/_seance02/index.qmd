@@ -17,9 +17,9 @@ Ces objectifs sont repris du cours théorique (IMSV-2, ses AAVs). **Chaque exerc
 l'objectif qu'il travaille** — la pastille **O1 / O2 / O3 / O4** dans son en-tête.
 
 - **O1** — effectuer et expliquer les **manipulations algébriques de base**.
-- **O2** — reconnaître et manipuler différentes **représentations d'une même valeur** (fractions, décimaux, pourcentages).
-- **O3** — **estimer et contrôler** un résultat (ordre de grandeur, unité, dimension, valeur absolue).
-- **O4** — comprendre et utiliser le **cercle trigonométrique** (valeurs et formules fondamentales).
+- **O2** — reconnaître et manipuler différentes **représentations d'une même valeur** (p.ex., fractions et pourcentages).
+- **O3** — **estimer et contrôler** un résultat via son ordre de grandeur, son unité, sa dimension.
+- **O4** — comprendre le **cercle trigonométrique** et savoir l’utiliser pour retrouver les formules et valeurs fondamentales de la trigonométrie.
 
 Une grille d'**auto-évaluation** sur ces objectifs t'attend à la page
 [Institutionnalisation](institution.qmd).

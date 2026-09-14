@@ -34,6 +34,7 @@ SYMBOLIQUE ET CONTENU.
 - Pas de calculatrice : les étudiant·es n'y ont pas droit en évaluation, donc chaque exercice doit
   être faisable « à la main » --- valeurs simples, racines et puissances « rondes », fractions
   qui tombent juste, pas de décimales à rallonge ni de calculs pénibles.
+- Dans les indices, dans l'indice de niveau 2, donner une question à se poser. N'écris pas la réponse à cette question juste après.
 
 MANIÈRE DE TRAVAILLER (pour éviter les allers-retours).
 - Corriger, ne pas régénérer : éditions ciblées dans les sources, et NE PAS relancer les builds —

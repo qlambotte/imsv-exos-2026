@@ -425,8 +425,6 @@ l'intersection est $\varnothing$. L'identité correcte est $A\setminus(B\cap C)=
 :::
 :::
 
-## Nouveaux exercices — suggérés par Mickaël
-
 
 ::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
 À l'aide de tables de vérités, dire si les équivalences sont vraies (les deux membres de l'équivalence ont la même colonne dans la table de vérité) ou fausse (une des lignes de la table de vérité distingue les deux membres).

@@ -17,24 +17,10 @@ Cette méthode rejoint ta **[boîte à outils](../methode.qmd)** — elle resser
 
 Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **quatre objectifs**.
 
-**O1** — manipulations algébriques de base.
-
-- [ ] J'applique l'ordre des opérations, je développe et je factorise (identités remarquables).
-- [ ] Je calcule avec des fractions, des puissances et des racines sans me tromper de règle.
-
-**O2** — représentations d'une même valeur.
-
-- [ ] Je passe d'une fraction à un décimal, à un pourcentage, et je compose des pourcentages successifs.
-
-**O3** — estimer et contrôler.
-
-- [ ] J'estime un ordre de grandeur et j'écris en notation scientifique.
-- [ ] Je contrôle un résultat par son unité / sa dimension, et je manie la valeur absolue.
-
-**O4** — cercle trigonométrique.
-
-- [ ] Je place un angle (degrés / radians), je lis $\cos$ et $\sin$ sur le cercle, je connais les valeurs remarquables.
-- [ ] Dans un triangle rectangle, j'utilise $\sin$, $\cos$, $\tan$ et l'identité $\sin^2\theta + \cos^2\theta = 1$.
+- [ ] **O1** — effectuer et expliquer les **manipulations algébriques de base**.
+- [ ] **O2** — reconnaître et manipuler différentes **représentations d'une même valeur** (p.ex., fractions et pourcentages).
+- [ ] **O3** — **estimer et contrôler** un résultat via son ordre de grandeur, son unité, sa dimension.
+- [ ] **O4** — comprendre le **cercle trigonométrique** et savoir l’utiliser pour retrouver les formules et valeurs fondamentales de la trigonométrie.
 
 ::: {.callout-important appearance="simple"}
 Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la

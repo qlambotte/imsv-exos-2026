@@ -38,7 +38,7 @@ Pour construire toi même une méthode, il n'y à rien à inventer : tout est d�
 4. Ajoute un **exemple** court, puis le **piège** (dans la case *Piège* des exercices concernés).
 
 Le corrigé de la **plupart des méthodes** est déjà en ligne ici — sers-t'en pour te vérifier.
-Entraîne-toi avec la [feuille à compléter (PDF)](methodes/seance01.qmd) de la séance 1.
+Entraîne-toi avec les feuilles à compléter disponibles sur les pages des séances.
 :::
 
 ## Les méthodes, séance par séance

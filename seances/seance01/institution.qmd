@@ -4,21 +4,17 @@ title: "Institutionnalisation — méthode & auto-évaluation"
 
 ## La méthode qu'on dégage ensemble
 
-En fin de séance, on formalise la méthode pour **nier une proposition** — surtout une proposition
-**quantifiée**, là où l'intuition trompe le plus :
+En fin de séance, on formalise la méthode pour **nier une proposition**.
 
-- on **échange** chaque quantificateur ($\forall\, \leftrightarrow \exists\,$) ;
-- on **descend** la négation jusqu'au cœur de la proposition ;
-- on **nie le prédicat final** ($\ge$ devient $<$, $=$ devient $\ne$, $>$ devient $\le$…).
+Pour ce faire, nous complèterons la première page des [feuilles de méthodes de la séance 1](../../pdf/feuille-seance01.pdf).
 
-Cette méthode rejoint ta **[boîte à outils](../methode.qmd)** — elle resservira à chaque séance et à
-l'examen.
+Cette méthode rejoint ta **[boîte à outils](../methode.qmd)**. Tu y trouveras le corrigé de quelques méthodes issues des exercices de la séance 1.
 
 ## Auto-évaluation — coche ce que tu sais faire
 
 Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **trois objectifs**.
 
-- [ ]**O1** — traduire une affirmation simple entre **langage courant et langage formel**.
+- [ ] **O1** — traduire une affirmation simple entre **langage courant et langage formel**.
 
 
 - [ ] **O2** — utiliser les éléments de base de la logique (**ensembles, quantificateurs, connecteurs**) pour **démontrer ou réfuter** une affirmation mathématique.
