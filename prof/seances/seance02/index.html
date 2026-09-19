@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Quentin Lambotte · FMPB · UMONS">
-<meta name="dcterms.date" content="2026-01-01">
+<meta name="description" content="Calcul fiable et trigonométrie de base">
 
-<title>IMSV — Exercices</title>
+<title>Séance 2 — Calcul fiable et trigonométrie – IMSV — Exercices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,26 +24,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./seances/seance01/index.html" rel="next">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-be208d595c6a2a218ca02eae83ab10cf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1b5b3ee8581b783e83719253fdcf2dd1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../seances/seance02/socle.html" rel="next">
+<link href="../../seances/seance01/institution.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-be208d595c6a2a218ca02eae83ab10cf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-1b5b3ee8581b783e83719253fdcf2dd1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -73,35 +71,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-seances .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-order','listing-nom','listing-correction',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-seances'] = new List('listing-seances', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-<script>
 // Applique le thème mémorisé AVANT le rendu (évite le clignotement clair→sombre).
 (function () {
   try {
@@ -123,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Bienvenue</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seances/seance02/index.html">Séance 2 — Calcul fiable et trigonométrie</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
@@ -137,10 +106,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
+      <a href="../../index.html" class="sidebar-logo-link">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">IMSV — Exercices</a> 
+      <a href="../../">IMSV — Exercices</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -152,12 +121,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Bienvenue</span></a>
+  <a href="../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bienvenue</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./seances/seance01/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../seances/seance01/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Séance 1 — Langage et raisonnement</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -166,38 +135,110 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./seances/seance01/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  <a href="../../seances/seance01/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./seances/seance01/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  <a href="../../seances/seance01/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./seances/seance01/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  <a href="../../seances/seance01/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./seances/seance01/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  <a href="../../seances/seance01/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./seances/methode.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Boîte à outils</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <a href="../../seances/seance02/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Séance 2 — Calcul fiable et trigonométrie</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./seances/methodes/seance01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 1 — Langage et raisonnement</span></a>
+  <a href="../../seances/seance02/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance03/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 3 — Équations, proportions et géométrie analytique</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/methode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Boîte à outils</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 1 — Langage et raisonnement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 2 — Calcul fiable et trigonométrie</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 3 — Équations, proportions et géométrie analytique</span></a>
   </div>
 </li>
       </ul>
@@ -212,11 +253,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#bienvenue" id="toc-bienvenue" class="nav-link active" data-scroll-target="#bienvenue">Bienvenue</a>
-  <ul class="collapse">
-  <li><a href="#les-séances" id="toc-les-séances" class="nav-link" data-scroll-target="#les-séances">Les séances</a></li>
-  <li><a href="#rappels-utiles" id="toc-rappels-utiles" class="nav-link" data-scroll-target="#rappels-utiles">Rappels utiles</a></li>
-  </ul></li>
+  <li><a href="#objectifs-de-la-séance" id="toc-objectifs-de-la-séance" class="nav-link active" data-scroll-target="#objectifs-de-la-séance">Objectifs de la séance</a></li>
+  <li><a href="#le-parcours-de-la-séance" id="toc-le-parcours-de-la-séance" class="nav-link" data-scroll-target="#le-parcours-de-la-séance">Le parcours de la séance</a></li>
+  <li><a href="#les-slides-du-cours" id="toc-les-slides-du-cours" class="nav-link" data-scroll-target="#les-slides-du-cours">Les slides du cours</a></li>
+  <li><a href="#avant-la-séance" id="toc-avant-la-séance" class="nav-link" data-scroll-target="#avant-la-séance">Avant la séance</a></li>
   </ul>
 </nav>
     </div>
@@ -225,27 +265,15 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">IMSV — Exercices</h1>
-<p class="subtitle lead">Introduction Mathématique aux Sciences de la Vie</p>
+<h1 class="title">Séance 2 — Calcul fiable et trigonométrie</h1>
+<p class="subtitle lead">IMSV · Introduction Mathématique aux Sciences de la Vie</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Auteur·rice</div>
-    <div class="quarto-title-meta-contents">
-             <p>Quentin Lambotte · FMPB · UMONS </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Date de publication</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -255,85 +283,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="bienvenue" class="level1">
-<h1>Bienvenue</h1>
-<p>Ce site rassemble les <strong>énoncés des exercices et leur correction</strong> pour le cours d’<em>Introduction Mathématique aux Sciences de la Vie</em>. Pour chaque séance, chaque exercice est accompagné de <strong>coups de pouce gradués</strong> : tu les ouvres un à un, seulement quand tu en as besoin.</p>
-<div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Astuce</span>Comment travailler avec ce site
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li><strong>Cherche d’abord au brouillon.</strong> L’apprentissage vient de l’effort, pas de la lecture d’une solution.</li>
-<li><strong>Bloqué·e ? Ouvre les coups de pouce dans l’ordre :</strong> d’abord la <strong>référence théorique</strong> (où réviser), puis la <strong>question à te poser</strong>, puis une <strong>étape</strong>, et seulement en dernier la <strong>solution complète</strong>.</li>
-<li><strong>Repère le piège.</strong> Chaque exercice signale la faute classique à éviter.</li>
-</ol>
-<p>Descendre directement à la solution sans avoir essayé ne fait rien apprendre.</p>
-</div>
-</div>
-<section id="les-séances" class="level2">
-<h2 class="anchored" data-anchor-id="les-séances">Les séances</h2>
-<p>La liste se met à jour automatiquement à chaque nouvelle séance.</p>
-<div id="listing-seances" class="quarto-listing quarto-listing-container-table">
-<table class="quarto-listing-table table table-striped table-hover">
-<thead>
-<tr>
-
-<th>
-#
-</th>
-
-<th>
-Séance
-</th>
-
-<th>
-Correction
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-file-modified-sort="1789825248232" data-listing-reading-time-sort="1" data-listing-word-count-sort="149" data-listing-title-sort="Séance 1 — Langage et raisonnement" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-order">1</span>
-</td>
-<td>
-<span class="listing-nom"><a href="seances/seance01/index.html">Langage et raisonnement</a></span>
-</td>
-<td>
-<span class="listing-correction">✅ en ligne</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">Aucun article correspondant</div>
-</div>
-</section>
-<section id="rappels-utiles" class="level2">
-<h2 class="anchored" data-anchor-id="rappels-utiles">Rappels utiles</h2>
-<ul>
-<li><strong>Préparation.</strong> Chaque séance suppose que la théorie de la semaine précédente a été revue, et que le test Moodle suivant cette séance a été fait. Sans préparation, tu ne seras pas seulement en difficulté — tu seras perdu·e. Ceci est évitable si tu te <strong>prépares</strong>.</li>
-<li><strong>Remédiation.</strong> Si tes difficultés persistent malgré une préparation et un investissement lors des séances, n’hésite pas à venir aux remédiations, qui reprendront les bases.</li>
-<li><strong>La méthode.</strong> En fin de chaque séance, on rédigera ensemble une méthode réutilisable sur base du contenu de la séance. Cette séance rejoint ta <a href="./seances/methode.html">boîte à outils</a> pour l’examen. <strong>Attention</strong>: ces méthodes construites en fin de séance ne sont pas exhaustives: à toi de les compléter sur base du cours théorique et des séances d’exercices</li>
-</ul>
 <div class="seance-meta">
-<p>Faculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS.</p>
-<p>Ce cours est en refonte : vos retours sont les bienvenus.</p>
+<p><strong>Thème.</strong> Calcul fiable (priorités, distributivité et identités remarquables, fractions, puissances, racines, pourcentages, valeur absolue, notation scientifique, ordres de grandeur, unités) et trigonométrie de base (cercle, triangle rectangle, valeurs remarquables).</p>
+<p><strong>Théorie associée :</strong> IMSV-2, <em>« Calcul fiable et trigonométrie »</em>.</p>
 </div>
-
-
-
+<div class="dl">
+<details class="dl-menu">
+<summary>
+Télécharger (PDF · hors-ligne)
+</summary>
+<a href="../../pdf/seance02-enonces.pdf">Énoncés seuls (PDF)</a> <a href="../../pdf/seance02-complet.pdf">Énoncés + coups de pouce &amp; corrections (PDF)</a> <a href="../../pdf/seance02-offline.html" download="">Corrections hors-ligne — 1 fichier (à garder)</a>
+</details>
+</div>
+<section id="objectifs-de-la-séance" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-de-la-séance">Objectifs de la séance</h2>
+<p>Ces objectifs sont repris du cours théorique (IMSV-2, ses AAVs). <strong>Chaque exercice indique l’objectif qu’il travaille</strong> — la pastille <strong>O1 / O2 / O3 / O4</strong> dans son en-tête.</p>
+<ul>
+<li><strong>O1</strong> — effectuer et expliquer les <strong>manipulations algébriques de base</strong>.</li>
+<li><strong>O2</strong> — reconnaître et manipuler différentes <strong>représentations d’une même valeur</strong> (p.ex., fractions et pourcentages).</li>
+<li><strong>O3</strong> — <strong>estimer et contrôler</strong> un résultat via son ordre de grandeur, son unité, sa dimension.</li>
+<li><strong>O4</strong> — comprendre le <strong>cercle trigonométrique</strong> et savoir l’utiliser pour retrouver les formules et valeurs fondamentales de la trigonométrie.</li>
+</ul>
+<p>Une grille d’<strong>auto-évaluation</strong> sur ces objectifs t’attend à la page <a href="../../seances/seance02/institution.html">Institutionnalisation</a>.</p>
 </section>
+<section id="le-parcours-de-la-séance" class="level2">
+<h2 class="anchored" data-anchor-id="le-parcours-de-la-séance">Le parcours de la séance</h2>
+<ol type="1">
+<li><strong><a href="../../seances/seance02/socle.html">Socle</a></strong> — les exercices routiniers, à ton rythme.</li>
+<li><strong><a href="../../seances/seance02/transfert.html">Transfert</a></strong> — des problèmes en contexte nouveau.</li>
+<li><strong><a href="../../seances/seance02/supplementaires.html">Exercices supplémentaires</a></strong> — des variations pour consolider, en séance ou à la maison.</li>
+<li><strong><a href="../../seances/seance02/institution.html">Institutionnalisation</a></strong> — la méthode qu’on dégage ensemble, et l’auto-évaluation.</li>
+</ol>
+</section>
+<section id="les-slides-du-cours" class="level2">
+<h2 class="anchored" data-anchor-id="les-slides-du-cours">Les slides du cours</h2>
+<p>Les slides de théorie associée sont sur <strong><a href="https://moodle.umons.ac.be/course/view.php?id=2657">Moodle</a></strong> (chapitre IMSV-2).</p>
+</section>
+<section id="avant-la-séance" class="level2">
+<h2 class="anchored" data-anchor-id="avant-la-séance">Avant la séance</h2>
+<ul>
+<li><strong>QCM Moodle de préparation</strong> — court, il amorce la théorie du jour. <!-- lien QCM --></li>
+<li><strong>Prépa de la séance précédente</strong> — à avoir faite : elle réapparaît à l’échauffement.</li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -535,7 +528,7 @@ Correction
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/qlambotte\.github\.io\/imsv-exos-2026\/");
+        var filterRegex = new RegExp("https:\/\/qlambotte\.github\.io\/imsv-exos-2026\/prof\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -864,10 +857,13 @@ Correction
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../../seances/seance01/institution.html" class="pagination-link" aria-label="Institutionnalisation — méthode &amp; auto-évaluation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./seances/seance01/index.html" class="pagination-link" aria-label="Séance 1 — Langage et raisonnement">
-        <span class="nav-page-text">Séance 1 — Langage et raisonnement</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../seances/seance02/socle.html" class="pagination-link" aria-label="Socle — exercices routiniers">
+        <span class="nav-page-text"><span class="chapter-title">Socle — exercices routiniers</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

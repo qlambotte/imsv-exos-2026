@@ -1,0 +1,18 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/seances/seance01/index.html",
+      "/seances/seance02/index.html",
+      "/seances/seance03/index.html"
+    ]
+  },
+  {
+    "listing": "/seances/methode.html",
+    "items": [
+      "/seances/methodes/seance01.html",
+      "/seances/methodes/seance02.html",
+      "/seances/methodes/seance03.html"
+    ]
+  }
+]
