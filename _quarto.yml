@@ -32,17 +32,17 @@ book:
         - seances/seance02/transfert.qmd
         - seances/seance02/supplementaires.qmd
         - seances/seance02/institution.qmd
-    - part: seances/seance03/index.qmd
-      chapters:
-        - seances/seance03/socle.qmd
-        - seances/seance03/transfert.qmd
-        - seances/seance03/supplementaires.qmd
-        - seances/seance03/institution.qmd
+    #OFF03# - part: seances/seance03/index.qmd
+      #OFF03# chapters:
+        #OFF03# - seances/seance03/socle.qmd
+        #OFF03# - seances/seance03/transfert.qmd
+        #OFF03# - seances/seance03/supplementaires.qmd
+        #OFF03# - seances/seance03/institution.qmd
     - part: seances/methode.qmd
       chapters:
         - seances/methodes/seance01.qmd
         - seances/methodes/seance02.qmd
-        - seances/methodes/seance03.qmd
+        #OFF03# - seances/methodes/seance03.qmd
   page-footer:
     left: "IMSV — Faculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS"
     center: "Énoncés et correctif des exercices"
