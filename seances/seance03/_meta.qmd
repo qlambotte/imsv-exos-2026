@@ -1,0 +1,8 @@
+::: {.seance-meta}
+**Thème.** Équations et inéquations du premier degré (modéliser, transformer, valider dans le
+contexte), proportionnalité, taux et conversions, systèmes linéaires (substitution, élimination,
+interprétation graphique), droites (pente, ordonnée à l'origine, intersection, parallélisme et
+orthogonalité) et équations du second degré (discriminant).
+
+**Théorie associée :** IMSV-3, *« Équations, proportions et géométrie analytique »*.
+:::

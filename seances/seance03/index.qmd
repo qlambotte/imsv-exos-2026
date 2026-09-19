@@ -1,0 +1,43 @@
+---
+title: "Séance 3 — Équations, proportions et géométrie analytique"
+subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
+description: "Équations, proportions et géométrie analytique"
+order: 3
+nom: "[Équations, proportions et géométrie analytique](seances/seance03/index.html)"
+correction: "✅ en ligne"
+---
+
+{{< include _meta.qmd >}}
+
+{{< include _download.qmd >}}
+
+## Objectifs de la séance
+
+Ces objectifs sont repris du cours théorique (IMSV-3, ses AAVs). **Chaque exercice indique
+l'objectif qu'il travaille** — la pastille **O1 / O2 / O3 / O4 / O5** dans son en-tête.
+
+- **O1** — **mettre un problème simple en équation** : choisir l'inconnue et son unité, traduire chaque relation, résoudre, vérifier, énoncer la réponse dans le contexte.
+- **O2** — **résoudre une équation ou une inéquation du premier degré**, et contrôler l'admissibilité des solutions dans le contexte.
+- **O3** — **résoudre un système linéaire élémentaire** (substitution, élimination) et **interpréter ses solutions**, y compris les cas sans solution ou à une infinité de solutions.
+- **O4** — **droites et proportionnalité** : calculer et interpréter **pente** et **ordonnée à l'origine**, **intersection** de droites, **parallélisme** et **orthogonalité** ; règle de trois, taux et conversions.
+- **O5** — **résoudre une équation du second degré** et **interpréter le signe du discriminant**.
+
+Une grille d'**auto-évaluation** sur ces objectifs t'attend à la page
+[Institutionnalisation](institution.qmd).
+
+## Le parcours de la séance
+
+1. **[Socle](socle.qmd)** — les exercices routiniers, à ton rythme.
+2. **[Transfert](transfert.qmd)** — des problèmes en contexte nouveau.
+3. **[Exercices supplémentaires](supplementaires.qmd)** — des variations pour consolider, en séance ou à la maison.
+4. **[Institutionnalisation](institution.qmd)** — la méthode qu'on dégage ensemble, et l'auto-évaluation.
+
+## Les slides du cours
+
+Les slides de théorie associée sont sur
+**[Moodle](https://moodle.umons.ac.be/course/view.php?id=2657)** (chapitre IMSV-3).
+
+## Avant la séance
+
+- **QCM Moodle de préparation** — court, il amorce la théorie du jour. <!-- lien QCM -->
+- **Prépa de la séance précédente** — à avoir faite : elle réapparaît à l'échauffement.

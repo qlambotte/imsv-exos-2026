@@ -1,0 +1,19 @@
+---
+title: "Transfert — problèmes"
+subtitle: "Séance 03 · déployer l'outil sur du nouveau"
+filters:
+  - ../../exercice.lua
+---
+
+{{< include _download.qmd >}}
+
+{{< include _consignes.qmd >}}
+
+Le transfert, c'est le moment où l'outil du socle sert sur un **contexte nouveau** : de vrais
+problèmes, pas repris tels quels du cours. Travaille en binôme si tu veux.
+
+{{< include _transfert.qmd >}}
+
+::: {.callout-note appearance="simple"}
+Fini ? Enchaîne avec les **[exercices supplémentaires](supplementaires.qmd)**.
+:::

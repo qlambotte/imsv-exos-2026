@@ -1,0 +1,24 @@
+::: {.callout-note appearance="simple"}
+Ces exercices restent **dans les objectifs** de la séance (donc **examinables**) : à faire une fois
+le socle et le transfert bouclés, en séance ou à la maison.
+:::
+
+### Renforcement — le socle, un cran plus loin
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
+**Variation d'un exercice du socle** (même savoir-faire, contexte/valeurs nouveaux)………
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Un seul indice………
+
+## Solution
+
+………
+
+:::
+:::

@@ -1,0 +1,10 @@
+::: {.content-visible when-format="html"}
+::: {.dl}
+<details class="dl-menu">
+<summary>Télécharger (PDF · hors-ligne)</summary>
+<a href="../../pdf/seance03-enonces.pdf">Énoncés seuls (PDF)</a>
+<a href="../../pdf/seance03-complet.pdf">Énoncés + coups de pouce &amp; corrections (PDF)</a>
+<a href="../../pdf/seance03-offline.html" download>Corrections hors-ligne — 1 fichier (à garder)</a>
+</details>
+:::
+:::

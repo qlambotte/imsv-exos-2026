@@ -1,0 +1,32 @@
+---
+title: "Institutionnalisation — méthode & auto-évaluation"
+subtitle: "Séance 3 · ce qu'on retient"
+---
+
+## La méthode qu'on dégage ensemble
+
+En fin de séance, on formalise la méthode pour **modéliser puis résoudre** un problème :
+
+- **choisir l'inconnue** (ou les inconnues) et **son unité** ;
+- **traduire** chaque relation de l'énoncé en une équation ;
+- **résoudre** par transformations identiques appliquées aux deux membres ;
+- **contrôler** : la solution est-elle **admissible** dans le contexte (signe, domaine, ordre de grandeur) ?
+- **conclure** en répondant à la question posée, avec l'unité.
+
+Cette méthode rejoint ta **[boîte à outils](../methode.qmd)** — elle resservira à chaque séance. Tu y
+trouveras le corrigé de quelques méthodes issues des exercices de la séance 3.
+
+## Auto-évaluation — coche ce que tu sais faire
+
+Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **cinq objectifs**.
+
+- [ ] **O1** — mettre un problème simple en équation (inconnue, unité, traduction, vérification).
+- [ ] **O2** — résoudre une équation ou une inéquation du premier degré, et valider la solution dans le contexte.
+- [ ] **O3** — résoudre un système linéaire (substitution, élimination) et interpréter ses solutions.
+- [ ] **O4** — calculer et interpréter pente, ordonnée à l'origine, intersection, parallélisme et orthogonalité ; règle de trois et conversions.
+- [ ] **O5** — résoudre une équation du second degré et interpréter le signe du discriminant.
+
+::: {.callout-important appearance="simple"}
+Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la
+**remédiation** (une séance chaque semaine pour reprendre les bases).
+:::

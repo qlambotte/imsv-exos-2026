@@ -1,0 +1,33 @@
+<!-- Fragment TRANSFERT. La numérotation CONTINUE après le socle : si le socle va
+     jusqu'à l'exercice 7, le transfert commence à 8. Titre de la forme
+     "Exercice N|Transfert|niveau|Ox" (Ox = objectif travaillé, pastille dans l'en-tête). -->
+
+::: {.callout-caution .exo title="Exercice 8|Transfert|3|O2"}
+**Titre du problème.** Énoncé (contexte nouveau, pas repris tel quel du cours)………
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+*Référence théorique.*
+
+………
+
+## Indice 2
+
+*Question à te poser.*
+
+………
+
+## Solution
+
+………
+
+## Piège
+
+………
+
+:::
+:::
