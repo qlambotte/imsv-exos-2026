@@ -1,0 +1,20 @@
+---
+title: "Séance 2 — Calcul fiable et trigonométrie"
+description: "Calcul fiable et trigonométrie de base"
+order: 2
+nom: "[Calcul fiable et trigonométrie](methodes/seance02.html)"
+correction: "✅ en ligne"
+filters:
+  - ../../methode.lua
+---
+
+::: {.content-visible when-format="html"}
+::: {.dl}
+<details class="dl-menu">
+<summary>Télécharger (PDF)</summary>
+<a href="../../pdf/feuille-seance02.pdf" download>Feuille à compléter — séance 2 (PDF)</a>
+</details>
+:::
+:::
+
+{{< include _corrige-seance02.qmd >}}

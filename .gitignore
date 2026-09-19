@@ -33,3 +33,6 @@ Thumbs.db
 
 # Dossier temporaire de build-boite.sh
 /.pdfbuild-boite/
+
+Claude outputs/
+scrcpy/

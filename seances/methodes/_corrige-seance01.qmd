@@ -1,0 +1,10 @@
+::: {.content-visible when-format="html"}
+::: {.dl}
+<details class="dl-menu">
+<summary>Télécharger — correctif (PDF)</summary>
+<a href="../../pdf/methodes-seance01.pdf">Méthodes de la séance — correctif (PDF)</a>
+</details>
+:::
+:::
+
+{{< include ../_methodes-seance01.qmd >}}

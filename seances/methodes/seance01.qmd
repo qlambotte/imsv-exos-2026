@@ -13,9 +13,8 @@ filters:
 <details class="dl-menu">
 <summary>Télécharger (PDF)</summary>
 <a href="../../pdf/feuille-seance01.pdf" download>Feuille à compléter — séance 1 (PDF)</a>
-<a href="../../pdf/methodes-seance01.pdf">Méthodes de la séance (PDF)</a>
 </details>
 :::
 :::
 
-{{< include ../_methodes-seance01.qmd >}}
+{{< include _corrige-seance01.qmd >}}

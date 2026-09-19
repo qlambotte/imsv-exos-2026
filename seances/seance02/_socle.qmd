@@ -1,0 +1,441 @@
+<!-- SOCLE = LE NOYAU (à faire par tous, en séance ou à la maison).
+     Calcul fiable + trigonométrie de base. ~40 % de trigo (demande des étudiants).
+     HIÉRARCHIE DES INDICES (à respecter partout) :
+       Indice 1 = renvoi à la théorie du cours ;
+       Indice 2 = une QUESTION à se poser (surtout pas la réponse) ;
+       Indice 3 = une ÉTAPE (un pas concret, sans donner la solution).
+     Numéro AUTOMATIQUE (pas écrit). Valeurs DIFFÉRENTES des slides. Faisable SANS calculatrice. -->
+
+::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
+Calculer.
+
+(a) $7 - 3 \cdot 2^2$
+(b) $(7 - 3) \cdot 2^2$
+(c) $(8 - 2 \cdot 3)^2$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Expressions et priorités des opérations*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Dans quel ordre évalue-t-on une expression ?
+
+## Indice 3
+
+*Étape.*
+
+Évalue d'abord ce qui est entre parenthèses ; ensuite seulement les puissances, puis les
+multiplications, et enfin les additions et soustractions.
+
+## Solution
+
+(a) $7 - 3 \cdot 2^2 = 7 - 3 \cdot 4 = 7 - 12 = -5$.
+(b) $(7 - 3) \cdot 2^2 = 4 \cdot 4 = 16$.
+(c) $(8 - 2 \cdot 3)^2 = (8 - 6)^2 = 2^2 = 4$.
+
+## Piège
+
+Soustraire avant de multiplier en (a) ; en (c), distribuer le carré dans les parenthèses.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O1"}
+(a) Développer $(x + 5)^2$.
+(b) Développer $(3t - 4)(3t + 4)$.
+(c) Factoriser $4y^2 + 12y$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Distributivité : ce qui peut être propagé*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Pour développer, quelle identité remarquable peux-tu utiliser ?
+
+Pour factoriser, quel **facteur commun** peux-tu mettre en évidence ?
+
+## Indice 3
+
+*Étape.*
+
+En (a), pense à $(a + b)^2 = a^2 + 2ab + b^2$ ; en (b), à $(a - b)(a + b) = a^2 - b^2$ ; en (c), le plus
+grand facteur commun de $4y^2$ et $12y$ est $4y$ : mets-le en évidence.
+
+## Solution
+
+(a) $(x + 5)^2 = x^2 + 10x + 25$.
+(b) $(3t - 4)(3t + 4) = 9t^2 - 16$.
+(c) $4y^2 + 12y = 4y(y + 3)$.
+
+## Piège
+
+Écrire $(x + 5)^2 = x^2 + 25$ (oubli du **double produit** $2 \cdot x \cdot 5 = 10x$).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O1"}
+Calculer puis simplifier, en donnant une fraction **irréductible**.
+
+(a) $\dfrac{45}{60}$
+(b) $\dfrac{5}{6} - \dfrac{3}{8}$
+(c) $\dfrac{3}{8} \cdot \dfrac{4}{9}$
+(d) $\dfrac{6}{7} : \dfrac{9}{14}$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Fractions équivalentes et simplification*, *Addition et soustraction
+de fractions* et *Produit et quotient de fractions*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quelle est la première chose à faire : simplifier la (ou les) fractions, mettre au même dénominateur,
+renverser une fraction ?
+
+## Indice 3
+
+*Étape.*
+
+(a) simplifie par un facteur commun ; (b) prends $24$ comme dénominateur commun ; (c) multiplie
+numérateurs entre eux et dénominateurs entre eux ; (d) multiplie par l'**inverse** de la seconde
+fraction.
+
+## Solution
+
+(a) $\dfrac{45}{60} = \dfrac{3}{4}$.
+(b) $\dfrac{20}{24} - \dfrac{9}{24} = \dfrac{11}{24}$.
+(c) $\dfrac{3 \cdot 4}{8 \cdot 9} = \dfrac{12}{72} = \dfrac{1}{6}$.
+(d) $\dfrac{6}{7} \cdot \dfrac{14}{9} = \dfrac{84}{63} = \dfrac{4}{3}$.
+
+## Piège
+
+Additionner numérateurs **et** dénominateurs ($\frac56 - \frac38 \ne \frac{2}{14}$).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O2"}
+Fractions, décimaux et pourcentages.
+
+(a) Écrire $\dfrac{2}{5}$ sous forme décimale, puis en pourcentage.
+(b) Ranger du plus petit au plus grand : $\dfrac{3}{5}$, $\ 0{,}55$, $\ 65\,\%$.
+(c) On augmente $80$ de $25\,\%$, puis on **diminue le résultat** de $25\,\%$. Retombe-t-on sur $80$ ?
+(d) Après une **baisse** de $20\,\%$, une quantité vaut $96$. Quelle était sa valeur **initiale** ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Fractions : quel est leur sens ?* et *Pourcentages*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Sous quelle forme commune écrire les nombres de (b) pour pouvoir les comparer ?
+
+En (c) et (d), augmenter ou diminuer d'un pourcentage : est-ce ajouter/retrancher, ou **multiplier** ?
+
+## Indice 3
+
+*Étape.*
+
+Pour (a) et (b), ramène chaque nombre à un décimal. En (c), multiplie $80$ par $1{,}25$ puis par
+$0{,}75$. En (d), écris l'équation $0{,}80 \cdot x = 96$ et isole $x$.
+
+## Solution
+
+(a) $\dfrac{2}{5} = 0{,}4 = 40\,\%$.
+(b) $\dfrac{3}{5} = 0{,}60$ et $65\,\% = 0{,}65$ ; d'où $0{,}55 < \dfrac{3}{5} < 65\,\%$.
+(c) $80 \cdot 1{,}25 \cdot 0{,}75 = 75 \ne 80$ : **non**.
+(d) $0{,}80 \cdot x = 96$, d'où $x = 96 : 0{,}80 = 120$.
+
+## Piège
+
+Comparer des écritures différentes sans les ramener à une forme commune ; composer des pourcentages
+par **addition** ($+25 - 25 = 0$) ; appliquer le pourcentage à la valeur **finale** au lieu de
+l'initiale.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O1"}
+Écrire sous la forme d'une **seule puissance**.
+
+(a) $\dfrac{2^5}{2^3}$
+(b) $\left(3^2\right)^3$
+(c) $4^{-2}$
+(d) $\dfrac{b^7 \cdot b^{-3}}{b^2}$   (avec $b \ne 0$)
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Puissances*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quelle est la structure de l'expression : un quotient, un produit, une puissance de puissance ? À
+chaque structure correspond une règle : laquelle ?
+
+## Indice 3
+
+*Étape.*
+
+Applique $a^m : a^n = a^{m-n}$ en (a) ; $\left(a^m\right)^n = a^{mn}$ en (b) ; $a^{-n} = \dfrac{1}{a^n}$
+en (c) ; en (d), regroupe les exposants du haut et retranche celui du bas.
+
+## Solution
+
+(a) $2^{5-3} = 2^2 = 4$.
+(b) $3^{2 \cdot 3} = 3^6 = 729$.
+(c) $\dfrac{1}{4^2} = \dfrac{1}{16}$.
+(d) $b^{7 - 3 - 2} = b^2$.
+
+## Piège
+
+Confondre $a^m a^n$ (on **ajoute**) et $\left(a^m\right)^n$ (on **multiplie**).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O3"}
+Valeur absolue, notation scientifique et ordre de grandeur.
+
+(a) Calculer $\sqrt{(-7)^2}$ et $\sqrt{(2 - 9)^2}$.
+(b) Écrire en notation scientifique : $0{,}00058$ ; puis $(6 \times 10^{4}) \cdot (5 \times 10^{-7})$.
+(c) **Estimer** l'ordre de grandeur de $\dfrac{3{,}9 \times 10^{5}}{1{,}9 \times 10^{2}}$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Valeur absolue*, *Notation scientifique* et *Ordres de grandeur et
+estimations*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quel est le signe d'une racine d'indice pair ?
+
+Par quelle puissance de $10$ faut-il multiplier pour amener le facteur entre $1$ et $10$ ? Comment se
+combinent les puissances de $10$ dans un produit ou un quotient ?
+
+## Indice 3
+
+*Étape.*
+
+En (a), $\sqrt{x^2} = |x|$. En (b), compte les déplacements de la virgule pour l'exposant de $10$, et
+vérifie que le facteur est dans $[1, 10[$. En (c), arrondis chaque nombre à un chiffre, puis soustrais
+les exposants de $10$.
+
+## Solution
+
+(a) $\sqrt{(-7)^2} = |-7| = 7$ ; $\sqrt{(2 - 9)^2} = |2 - 9| = |-7| = 7$.
+(b) $0{,}00058 = 5{,}8 \times 10^{-4}$ ; $(6 \times 10^{4}) \cdot (5 \times 10^{-7}) = 30 \times 10^{-3} = 3 \times 10^{-2}$.
+(c) $\dfrac{3{,}9 \times 10^{5}}{1{,}9 \times 10^{2}} \approx \dfrac{4 \times 10^{5}}{2 \times 10^{2}} = 2 \times 10^{3}$.
+
+## Piège
+
+Écrire $\sqrt{x^2} = x$ (faux si $x < 0$) ; laisser $30 \times 10^{-3}$ (le facteur doit être dans
+$[1, 10[$) ; se tromper en soustrayant les exposants de $10$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|1|O4"}
+(a) Convertir en radians : $60°$, $90°$, $120°$, $270°$.
+(b) Convertir en degrés : $\dfrac{\pi}{6}$, $\dfrac{3\pi}{4}$, $\dfrac{3\pi}{2}$, $2\pi$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Cercle trigonométrique*.
+
+## Indice 2
+
+*Question à te poser.*
+
+À combien de radians correspond un angle plat de $180°$ ?
+
+## Indice 3
+
+*Étape.*
+
+$180°$ correspond à $\pi$ rad. Pose la proportion $\dfrac{\text{degrés}}{180°} = \dfrac{\text{radians}}{\pi}$
+et isole l'inconnue.
+
+## Solution
+
+(a) $\dfrac{\pi}{3}$, $\ \dfrac{\pi}{2}$, $\ \dfrac{2\pi}{3}$, $\ \dfrac{3\pi}{2}$.
+(b) $30°$, $\ 135°$, $\ 270°$, $\ 360°$.
+
+## Piège
+
+Multiplier par $\dfrac{180°}{\pi}$ là où il faut $\dfrac{\pi}{180°}$ (ou l'inverse).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O4"}
+Cercle trigonométrique et valeurs remarquables.
+
+(a) Donner $\cos\theta$ et $\sin\theta$ pour $\theta = \dfrac{\pi}{6}$, $\dfrac{\pi}{4}$, $\dfrac{\pi}{3}$.
+(b) Un point du cercle a pour coordonnées $\left(\dfrac{1}{2},\ \dfrac{\sqrt3}{2}\right)$. Quel angle
+$\theta \in [0,\ 2\pi[$ ?
+(c) Même question pour $(0,\ -1)$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Cercle trigonométrique* et *Angles et valeurs remarquables*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Sur le cercle, laquelle des deux coordonnées est le cosinus, laquelle est le sinus ?
+
+## Indice 3
+
+*Étape.*
+
+Le point du cercle d'angle $\theta$ est $(\cos\theta,\ \sin\theta)$. Compare chaque couple donné à la
+table des valeurs remarquables, et repère le quadrant.
+
+## Solution
+
+(a) $\cos : \dfrac{\sqrt3}{2},\ \dfrac{\sqrt2}{2},\ \dfrac{1}{2}$ ; $\sin : \dfrac{1}{2},\ \dfrac{\sqrt2}{2},\ \dfrac{\sqrt3}{2}$.
+(b) $\theta = \dfrac{\pi}{3}$ ($\cos = \tfrac12$, $\sin = \tfrac{\sqrt3}{2}$).
+(c) $\theta = \dfrac{3\pi}{2}$.
+
+## Piège
+
+Confondre $\dfrac{\pi}{6}$ et $\dfrac{\pi}{3}$ en intervertissant $\cos$ (abscisse) et $\sin$ (ordonnée).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O4"}
+Signes et symétries.
+
+(a) Pour chacun des quatre quadrants, donner les signes de $\cos\theta$ et de $\sin\theta$.
+(b) À partir des valeurs remarquables et des symétries, donner $\cos$ et $\sin$ de $135°$ et de
+$-\dfrac{\pi}{6}$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Signes* et *Symétries*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Dans quel quadrant $\cos$ (resp. $\sin$) est-il positif ? De quel angle remarquable $135°$ est-il le
+supplémentaire ? Et $-\dfrac{\pi}{6}$, de quel angle est-il l'opposé ?
+
+## Indice 3
+
+*Étape.*
+
+Pour $135° = 180° - 45°$, applique $\cos(\pi - \theta) = -\cos\theta$ et $\sin(\pi - \theta) = \sin\theta$.
+Pour $-\dfrac{\pi}{6}$, applique $\cos(-\theta) = \cos\theta$ et $\sin(-\theta) = -\sin\theta$.
+
+## Solution
+
+(a) I : $(\cos > 0,\ \sin > 0)$ ; II : $(\cos < 0,\ \sin > 0)$ ; III : $(\cos < 0,\ \sin < 0)$ ;
+IV : $(\cos > 0,\ \sin < 0)$.
+(b) $\cos(135°) = -\dfrac{\sqrt2}{2}$, $\sin(135°) = \dfrac{\sqrt2}{2}$ ;
+$\cos\!\left(-\dfrac{\pi}{6}\right) = \dfrac{\sqrt3}{2}$, $\sin\!\left(-\dfrac{\pi}{6}\right) = -\dfrac{1}{2}$.
+
+## Piège
+
+Se tromper de signe selon le quadrant ; confondre la symétrie des angles **opposés** et celle des
+**supplémentaires**.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O4"}
+(a) Dans un triangle rectangle en $B$ avec $|AB| = 5$, $|BC| = 12$ et $|AC| = 13$, calculer
+$\sin(\widehat{A})$, $\cos(\widehat{A})$ et $\tan(\widehat{A})$.
+(b) Rappeler $\tan\theta$ en fonction de $\sin\theta$ et $\cos\theta$ ; pour quels $\theta$ n'est-elle
+**pas définie** ?
+(c) Si $\cos\theta = \dfrac{8}{17}$ et $\theta \in \left[0,\ \tfrac{\pi}{2}\right]$, calculer $\sin\theta$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Cercle trigonométrique (triangle rectangle)*, *Tangente* et
+*Identité fondamentale*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Dans un triangle rectangle, quel rapport de côtés donne le sinus ? le cosinus ? Comment obtient-on la
+tangente à partir des deux ? Quelle relation lie $\sin^2\theta$ et $\cos^2\theta$ ?
+
+## Indice 3
+
+*Étape.*
+
+$\sin = \dfrac{\text{opposé}}{\text{hypoténuse}}$, $\cos = \dfrac{\text{adjacent}}{\text{hypoténuse}}$,
+$\tan\theta = \dfrac{\sin\theta}{\cos\theta}$. En (c), tire $\sin\theta$ de $\sin^2\theta + \cos^2\theta = 1$
+et fixe son signe par le quadrant.
+
+## Solution
+
+(a) $\sin(\widehat{A}) = \dfrac{|BC|}{|AC|} = \dfrac{12}{13}$ ; $\cos(\widehat{A}) = \dfrac{|AB|}{|AC|} = \dfrac{5}{13}$ ;
+$\tan(\widehat{A}) = \dfrac{12}{5}$.
+(b) $\tan\theta = \dfrac{\sin\theta}{\cos\theta}$ ; non définie pour $\theta = \tfrac{\pi}{2} + k\pi$ ($k \in \mathbb{Z}$).
+(c) $\sin\theta = \sqrt{1 - \tfrac{64}{289}} = \sqrt{\tfrac{225}{289}} = \dfrac{15}{17}$ (positif dans le quadrant I).
+
+## Piège
+
+Inverser opposé et adjacent ; oublier le **signe** donné par le quadrant en (c).
+
+:::
+:::

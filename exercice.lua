@@ -125,5 +125,16 @@ function Pandoc(doc)
       'stroke: 0.6pt + col, radius: 3pt, inset: (x:9pt, y:7pt), fill: white)[' ..
       '#text(size:0.9em, weight:700, fill:col)[#label] #v(2pt) #body]'))
   end
+  -- Corrigé des exos masqué sur le SITE : « corrige-exos: false » dans
+  -- seances/<seance>/_metadata.yml retire les blocs d'aides (coups de pouce + solutions).
+  if quarto.doc.is_format("html") then
+    local m = doc.meta and doc.meta["corrige-exos"]
+    local off = (m == false) or (m ~= nil and pandoc.utils.stringify(m) == "false")
+    if off then
+      doc = doc:walk({ Div = function(el)
+        for _, c in ipairs(el.classes) do if c == "aides" then return {} end end
+      end })
+    end
+  end
   return doc
 end

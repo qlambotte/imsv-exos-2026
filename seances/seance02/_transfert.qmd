@@ -1,0 +1,213 @@
+<!-- TRANSFERT : appliquer les savoir-faire du socle à un contexte nouveau.
+     ~40 % de trigo. Faisable SANS calculatrice ; valeurs différentes des slides.
+     HIÉRARCHIE DES INDICES : 1 = théorie ; 2 = une QUESTION (pas la réponse) ; 3 = une ÉTAPE.
+     Numéro AUTOMATIQUE (catégorie Transfert -> T.1, T.2…). -->
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O3"}
+On dispose d'une solution mère à $25$ mg/mL. On veut préparer $200$ mL d'une solution à $4$ mg/mL.
+
+(a) Quel volume de solution mère faut-il prélever ?
+(b) Un·e étudiant·e trouve $320$ mL. Quel **contrôle rapide** montre, sans refaire le calcul, que
+c'est faux ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Retour à la dilution*, *Unités et dimensions* et *Ordres de
+grandeur*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quelle grandeur se conserve entre la solution mère et la solution fille ? La solution fille étant
+**moins** concentrée, le volume prélevé est-il plus grand ou plus petit que $200$ mL ?
+
+## Indice 3
+
+*Étape.*
+
+Écris la conservation de la quantité de soluté, $C_1 V_1 = C_2 V_2$, puis isole $V_1$.
+
+## Solution
+
+(a) $V_1 = \dfrac{C_2 V_2}{C_1} = \dfrac{4 \cdot 200}{25} = \dfrac{800}{25} = 32$ mL.
+(b) On ne peut pas prélever $320$ mL pour obtenir seulement $200$ mL : le volume prélevé doit être
+**inférieur** au volume final. L'**ordre de grandeur** (et la contrainte volumique) tranche
+immédiatement.
+
+## Piège
+
+Prélever **plus** que le volume final ; mélanger les unités de concentration et de volume.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O2"}
+Le prix d'un consommable de laboratoire est de $5$ €/L. Il augmente de $10\,\%$ un mois, puis
+**baisse de $10\,\%$** le mois suivant.
+
+(a) Quel est le prix final ? Est-on revenu à $5$ €/L ?
+(b) De quel pourcentage **global** le prix a-t-il varié entre le début et la fin ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Pourcentages* (pourcentages successifs).
+
+## Indice 2
+
+*Question à te poser.*
+
+Deux variations successives en pourcentage, est-ce que ça s'**ajoute** ou est-ce que ça se
+**multiplie** ?
+
+## Indice 3
+
+*Étape.*
+
+Traduis chaque variation en un facteur : $+10\,\% \to \times 1{,}1$ et $-10\,\% \to \times 0{,}9$, puis
+multiplie-les.
+
+## Solution
+
+(a) $5 \cdot 1{,}1 \cdot 0{,}9 = 4{,}95$ €/L : **non**, on ne revient pas à $5$ €/L.
+(b) $1{,}1 \cdot 0{,}9 = 0{,}99$ : le prix a **baissé de $1\,\%$** au total.
+
+## Piège
+
+Croire que $+10\,\%$ puis $-10\,\%$ s'annulent ($+10 - 10 = 0$).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O3"}
+Une posologie est de $5$ mg par kilogramme de masse corporelle et par jour, répartie en $2$ prises
+égales.
+
+(a) Pour un patient de $70$ kg, quelle masse de principe actif par **prise** ?
+(b) Un·e étudiant·e propose $17{,}5$ g par prise. Quel **contrôle** révèle aussitôt l'erreur ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Unités et dimensions* et *Comment détecter une erreur ?*
+
+## Indice 2
+
+*Question à te poser.*
+
+Quelles unités faut-il combiner pour obtenir une masse par jour ? Que reste-t-il à faire pour passer à
+une masse par **prise** ?
+
+## Indice 3
+
+*Étape.*
+
+Multiplie la posologie ($\text{mg}/\text{kg}/\text{jour}$) par la masse (kg) pour obtenir des mg par
+jour, puis divise par le nombre de prises.
+
+## Solution
+
+(a) $5 \cdot 70 = 350$ mg par jour, soit $350 : 2 = 175$ mg par prise.
+(b) $17{,}5$ g $= 17\,500$ mg : c'est **cent fois** trop. L'**ordre de grandeur** et l'**unité** (g au
+lieu de mg) trahissent l'erreur immédiatement.
+
+## Piège
+
+Oublier de diviser par le nombre de prises ; mélanger g et mg.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O4"}
+Une rampe rectiligne fait un angle de $30°$ avec le sol horizontal et mesure $8$ m de long.
+
+(a) Quelle **hauteur** permet-elle de franchir ?
+(b) Quelle est son **emprise au sol** (distance horizontale) ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Cercle trigonométrique (triangle rectangle)*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Dans le triangle rectangle formé, la rampe est-elle l'hypoténuse, le côté adjacent ou le côté opposé ?
+La hauteur correspond-elle au côté opposé ou adjacent à l'angle de $30°$ ?
+
+## Indice 3
+
+*Étape.*
+
+La rampe est l'**hypoténuse** : hauteur $= 8 \sin(30°)$ (côté opposé), emprise $= 8 \cos(30°)$ (côté
+adjacent).
+
+## Solution
+
+(a) Hauteur $= 8 \sin(30°) = 8 \cdot \dfrac{1}{2} = 4$ m.
+(b) Emprise $= 8 \cos(30°) = 8 \cdot \dfrac{\sqrt3}{2} = 4\sqrt3 \approx 6{,}9$ m.
+
+## Piège
+
+Inverser $\sin$ (hauteur) et $\cos$ (emprise) ; prendre la hauteur plus grande que la rampe.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O4"}
+Un bras articulé fait un angle **aigu** $\theta$ avec l'horizontale. Un capteur donne
+$\cos\theta = \dfrac{3}{5}$ (l'angle lui-même n'est pas mesuré).
+
+(a) Donner $\sin\theta$ sans déterminer $\theta$.
+(b) Le bras mesure $50$ cm : quelle **hauteur** son extrémité atteint-elle au-dessus de l'articulation ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Périodicité et identité fondamentale* et *Cercle trigonométrique
+(triangle rectangle)*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Connais-tu une relation qui lie $\sin\theta$ et $\cos\theta$ sans passer par l'angle ? L'angle étant
+**aigu**, quel est le signe de $\sin\theta$ ?
+
+## Indice 3
+
+*Étape.*
+
+Tire $\sin\theta$ de $\sin^2\theta + \cos^2\theta = 1$ (positif car $\theta$ est aigu), puis multiplie
+la longueur du bras par $\sin\theta$ pour obtenir la hauteur.
+
+## Solution
+
+(a) $\sin\theta = \sqrt{1 - \tfrac{9}{25}} = \sqrt{\tfrac{16}{25}} = \dfrac{4}{5}$ (positif car $\theta$ aigu).
+(b) Hauteur $= 50 \cdot \sin\theta = 50 \cdot \dfrac{4}{5} = 40$ cm.
+
+## Piège
+
+Prendre $\sin\theta$ négatif alors que $\theta$ est aigu ; confondre la hauteur ($\sin$) et la portée
+horizontale ($\cos$).
+
+:::
+:::
