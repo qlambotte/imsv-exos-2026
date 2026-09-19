@@ -1,0 +1,4 @@
+# Statut des séances EN PRÉPARATION (num: étiquette). Séance absente = prête (en ligne).
+# Géré par seance-onoff.py (verbe « statut », ou « off <étiquette> »).
+2: à relire
+3: en construction

@@ -1,19 +1,7 @@
 ---
 title: "Bienvenue"
-listing:
-  id: seances
-  contents: "seances/seance*/index.qmd"
-  type: table
-  table-striped: true
-  table-hover: true
-  fields: [order, nom, correction]
-  field-display-names:
-    order: "#"
-    nom: "Séance"
-    correction: "Correction"
-  sort: "order"
-  sort-ui: false
-  filter-ui: false
+filters:
+  - seances.lua
 ---
 
 # Bienvenue
