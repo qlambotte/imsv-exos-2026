@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Transfert — problèmes – IMSV — Exercices</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../seances/seance01/supplementaires.html" rel="next">
+<link href="../../seances/seance01/socle.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-be208d595c6a2a218ca02eae83ab10cf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-1b5b3ee8581b783e83719253fdcf2dd1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<script>
+// Applique le thème mémorisé AVANT le rendu (évite le clignotement clair→sombre).
+(function () {
+  try {
+    var t = localStorage.getItem('imsv-theme');
+    if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+})();
+</script>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seances/seance01/index.html">Séance 1 — Langage et raisonnement</a></li><li class="breadcrumb-item"><a href="../../seances/seance01/transfert.html"><span class="chapter-title">Transfert — problèmes</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">IMSV — Exercices</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Recherche"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bienvenue</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance01/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 1 — Langage et raisonnement</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/transfert.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance02/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 2 — Calcul fiable et trigonométrie</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance03/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 3 — Équations, proportions et géométrie analytique</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/methode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Boîte à outils</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 1 — Langage et raisonnement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 2 — Calcul fiable et trigonométrie</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 3 — Équations, proportions et géométrie analytique</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seances/seance01/index.html">Séance 1 — Langage et raisonnement</a></li><li class="breadcrumb-item"><a href="../../seances/seance01/transfert.html"><span class="chapter-title">Transfert — problèmes</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Transfert — problèmes</span></h1>
+<p class="subtitle lead">Séance 1 · déployer l’outil sur du nouveau</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="dl">
+<details class="dl-menu">
+<summary>
+Télécharger (PDF · hors-ligne)
+</summary>
+<a href="../../pdf/seance01-enonces.pdf">Énoncés seuls (PDF)</a> <a href="../../pdf/seance01-complet.pdf">Énoncés + coups de pouce &amp; corrections (PDF)</a> <a href="../../pdf/seance01-offline.html" download="">Corrections hors-ligne — 1 fichier (à garder)</a>
+</details>
+</div>
+<div class="callout callout-style-simple callout-tip callout-titled" title="À lire d'abord">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>À lire d’abord
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cherche au brouillon <strong>d’abord</strong>. N’hésite pas à résoudre les exercices avec tes voisin.e.s. Ouvre les indices <strong>dans l’ordre</strong> (référence → question → étape → solution). La solution est le <strong>dernier</strong> recours.</p>
+</div>
+</div>
+<p>Le transfert, c’est le moment où l’outil du socle sert sur un <strong>contexte nouveau</strong> : de vrais problèmes, pas repris tels quels du cours. Travaille en binôme si tu veux.</p>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Transfert|3|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-T1"></span>✎ <strong>Exercice T.1</strong> <a class="exo-hash" href="#exercice-T1" title="Lien vers cet exercice">#</a><span class="exo-meta">Transfert · O2 · ★★★</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dans un écosystème, on admet deux règles :</p>
+<p>(R1) « tout organisme photosynthétique<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> est autotrophe<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> » : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>⇒</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\beta \Rightarrow \alpha</annotation></semantics></math> ;</p>
+<p>(R2) « aucun autotrophe n’est un prédateur » : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>⇒</mo><mi>¬</mi><mi>γ</mi></mrow><annotation encoding="application/x-tex">\alpha \Rightarrow \lnot \gamma</annotation></semantics></math>.</p>
+<ol type="a">
+<li>Un organisme photosynthétique peut-il être un prédateur ? Justifier en utilisant les deux règles.</li>
+<li>Écrire la <strong>contraposée</strong> de (R2).</li>
+<li>On observe un prédateur. Peut-on dire que ce prédateur est autotrophe? Peut-on dire qu’il est photosynthétique?</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Pièges</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Retourne à la théorie du cours : <em>Comprendre l’implication</em>, <em>Réciproque, contraposée, équivalence</em>.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Peux-tu enchaîner (R1) puis (R2) : que donne <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>⇒</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\beta\Rightarrow \alpha</annotation></semantics></math> suivi de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>⇒</mo><mi>¬</mi><mi>γ</mi></mrow><annotation encoding="application/x-tex">\alpha\Rightarrow\lnot \gamma</annotation></semantics></math> ? Pour (c), en partant <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math> que peut-on dire en considérant la contraposée de (R2)? Puis en enchaînant avec la contraposée de (R1)?</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><em>Étape.</em></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>⇒</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\gamma\Rightarrow \alpha</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>⇒</mo><mi>¬</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\alpha\Rightarrow \lnot \beta</annotation></semantics></math>. Et la contraposée de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>⇒</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\beta\Rightarrow \alpha</annotation></semantics></math> est <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mi>A</mi><mo>⇒</mo><mi>¬</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\lnot A\Rightarrow\lnot \beta</annotation></semantics></math>.</p>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<ol type="a">
+<li><p><strong>Non.</strong> En effet: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>⇒</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\beta\Rightarrow \alpha</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>⇒</mo><mi>¬</mi><mi>γ</mi></mrow><annotation encoding="application/x-tex">\alpha\Rightarrow\lnot \gamma</annotation></semantics></math>. Donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>⇒</mo><mi>¬</mi><mi>γ</mi></mrow><annotation encoding="application/x-tex">\beta\Rightarrow\lnot \gamma</annotation></semantics></math> : un organisme photosynthétique n’est pas un prédateur.</p></li>
+<li><p>Contraposée de (R2) : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>⇒</mo><mi>¬</mi><mi>α</mi></mrow><annotation encoding="application/x-tex">\gamma \Rightarrow \lnot \alpha</annotation></semantics></math> (« si prédateur, alors non autotrophe »).</p></li>
+<li><p>Puisque <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>⇒</mo><mi>¬</mi><mi>α</mi></mrow><annotation encoding="application/x-tex">\gamma \Rightarrow \lnot \alpha</annotation></semantics></math>, un prédateur n’est pas autotrophe ; la contraposée de (R1) (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mi>α</mi><mo>⇒</mo><mi>¬</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\lnot \alpha\Rightarrow\lnot \beta</annotation></semantics></math>), nous dit “si je ne suis pas autotrophe, alors je ne suis pas photosynthétique” : un prédateur ne peut donc pas être photosynthétique. Donc : un prédateur n’est <strong>ni autotrophe ni photosynthétique</strong>.</p></li>
+</ol>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p>Inverser une implication (croire que « autotrophe <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math> photosynthétique »), ou se tromper dans la contraposée en oubliant de nier <strong>les deux</strong> constituants de l’implication.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Transfert|2|O1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-T2"></span>✎ <strong>Exercice T.2</strong> <a class="exo-hash" href="#exercice-T2" title="Lien vers cet exercice">#</a><span class="exo-meta">Transfert · O1 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dans le cabinet d’un groupe de médecins, notons <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math> l’ensemble de tous les patients vus aujourd’hui, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math> l’ensemble des patients fébriles<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> celui des patients qui toussent. Exprimer par des ensembles</p>
+<ol type="a">
+<li>« les patients fébriles qui ne toussent pas » ;</li>
+<li>« les patients qui présentent au moins un des deux symptômes (fièvre ou toux) » ;</li>
+<li>« les patients sans fièvre ni toux ».</li>
+</ol>
+<p>Traduire en français :</p>
+<ol start="4" type="a">
+<li>l’énoncé <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>∩</mo><mi>T</mi><mo>=</mo><mi>⌀</mi></mrow><annotation encoding="application/x-tex">F \cap T = \varnothing</annotation></semantics></math>;</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Retourne à la théorie du cours : <em>Ensembles : regrouper des objets</em> et <em>Opérations sur les ensembles</em>.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>« sans toux » = quelle opération ? « au moins un » = union ou intersection ? « ni… ni… » = complément de quoi ?</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>\</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">F \setminus T</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>∪</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">F \cup T</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>\</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>F</mi><mo>∪</mo><mi>T</mi><mo stretchy="true" form="postfix">)</mo></mrow><mspace width="0.222em"></mspace><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">(</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>U</mi><mo>\</mo><mi>F</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>∩</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>U</mi><mo>\</mo><mi>T</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo minsize="1.2" maxsize="1.2" stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">U\setminus(F \cup T)\ \big(= (U\setminus F) \cap (U\setminus T)\big)</annotation></semantics></math></li>
+<li>« Aucun patient n’a <strong>à la fois</strong> de la fièvre et de la toux ».</li>
+</ol>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p>Confondre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∪</mi><annotation encoding="application/x-tex">\cup</annotation></semantics></math> (« au moins un ») et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∩</mi><annotation encoding="application/x-tex">\cap</annotation></semantics></math> (« les deux ») ; et écrire « ni <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math> ni <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> » comme <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>U</mi><mo>\</mo><mi>F</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>U</mi><mo>\</mo><mi>T</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">(U\setminus F)\cup(U\setminus T)</annotation></semantics></math> au lieu de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>\</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>F</mi><mo>∪</mo><mi>T</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>U</mi><mo>\</mo><mi>F</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>∩</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>U</mi><mo>\</mo><mi>T</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">U\setminus(F \cup T)=(U\setminus F)\cap(U\setminus T)</annotation></semantics></math>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Transfert|3|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-T3"></span>✎ <strong>Exercice T.3</strong> <a class="exo-hash" href="#exercice-T3" title="Lien vers cet exercice">#</a><span class="exo-meta">Transfert · O2 · ★★★</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour une bactérie <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math> et un antibiotique <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\alpha(a,b)</annotation></semantics></math> signifie « <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math> est efficace contre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math> ». On considère<br>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>⋆</mi><mo stretchy="true" form="postfix">)</mo></mrow><mspace width="2.0em"></mspace><mo>∀</mo><mspace width="0.167em"></mspace><mi>b</mi><mo>,</mo><mspace width="0.222em"></mspace><mo>∃</mo><mspace width="0.167em"></mspace><mi>a</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>α</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">(\star)\qquad \forall\, b,\ \exists\, a,\ \alpha(a,b).</annotation></semantics></math></p>
+<ol type="a">
+<li><p>Traduire <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mi>⋆</mi><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\star)</annotation></semantics></math> en français.</p></li>
+<li><p>Traduire <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mspace width="0.167em"></mspace><mi>a</mi><mo>,</mo><mspace width="0.222em"></mspace><mo>∀</mo><mspace width="0.167em"></mspace><mi>b</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>α</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\exists\, a,\ \forall\, b,\ \alpha(a,b)</annotation></semantics></math>.</p></li>
+<li><p>Quelle est la différence entre ces deux énoncés</p>
+<ul>
+<li>d’un point de vue symbolique, dans leur écriture mathématique?</li>
+<li>d’un point de vue du français, en ce qui concerne les bactéries et les antibiotiques?</li>
+</ul></li>
+<li><p>Quel énoncé est le plus exigeant concernant les antibiotiques? Justifier la réponse.</p></li>
+<li><p>Écrire la <strong>négation</strong> de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mi>⋆</mi><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\star)</annotation></semantics></math>, puis la traduire en français.</p></li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Pièges</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>Retourne à la théorie du cours : <em>Quantificateurs</em>, <em>Nier une proposition quantifiée</em>.</p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Pour (c) :</p>
+<ul>
+<li><p>dans les deux écritures, dans quel ordre apparaissent <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">\forall b</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">\exists a</annotation></semantics></math> ?</p></li>
+<li><p>dans les traductions en français, pour quel énoncé l’antibiotique dépend de la bactérie ?</p></li>
+</ul>
+<p>Pour (d) : lequel des deux énoncés demande le plus d’efficacité à un antibiotique?</p>
+<p>Pour (e) : que deviennent <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">\forall b</annotation></semantics></math>, puis <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">\exists a</annotation></semantics></math>, puis <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>, quand on nie ?</p>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<ol type="a">
+<li><p>« Pour <strong>toute</strong> bactérie, il existe un antibiotique efficace contre elle » (l’antibiotique peut dépendre de la bactérie).</p></li>
+<li><p>« Il existe <strong>un seul</strong> antibiotique efficace contre <strong>toutes</strong> les bactéries » (un antibiotique universel).</p></li>
+<li><ul>
+<li><p>Les deux énoncés utilisent les mêmes quantificateurs mais dans un ordre différent: dans <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mi>⋆</mi><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\star)</annotation></semantics></math> on commence par un quantificateur universel sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math> puis un quantificateur existentiel sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>, tandis que pour l’autre énoncé, on commence par le quantificateur existentiel sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math> puis le quantificateur universel sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>.</p></li>
+<li><p>Dans la traduction en français: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mi>⋆</mi><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\star)</annotation></semantics></math> demande à ce que chaque bactérie dispose d’un antibiotique tandis que l’autre formule demande un seul et même antibiotique pour toutes les bactéries.</p></li>
+</ul></li>
+<li><p>L’énoncé <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mspace width="0.167em"></mspace><mi>a</mi><mo>,</mo><mspace width="0.222em"></mspace><mo>∀</mo><mspace width="0.167em"></mspace><mi>b</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>α</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\exists\, a,\ \forall\, b,\ \alpha(a,b)</annotation></semantics></math> est le plus exigeant concernant les antibiotiques: il demande à ce qu’un seul antibiotique convienne pour toutes les bactéries. À l’inverse, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mi>⋆</mi><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\star)</annotation></semantics></math> autorise à priori des antibiotiques différents pour selon les bactéries.</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>⋆</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>⇔</mo><mo>∃</mo><mspace width="0.167em"></mspace><mi>b</mi><mo>,</mo><mspace width="0.222em"></mspace><mo>∀</mo><mspace width="0.167em"></mspace><mi>a</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>¬</mi><mi>α</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\lnot(\star)\Leftrightarrow\exists\, b,\ \forall\, a,\ \lnot\alpha(a,b)</annotation></semantics></math> : « il existe une bactérie contre laquelle <strong>aucun</strong> antibiotique n’est efficace ».</p></li>
+</ol>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<p>Ne pas changer les quantificateurs en niant; croire que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mspace width="0.167em"></mspace><mi>b</mi><mspace width="0.167em"></mspace><mo>∃</mo><mspace width="0.167em"></mspace><mi>a</mi><mo>,</mo><mi>α</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\forall\, b\,\exists\, a, \alpha(a,b)</annotation></semantics></math> est la même chose que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mspace width="0.167em"></mspace><mi>a</mi><mspace width="0.167em"></mspace><mo>∀</mo><mspace width="0.167em"></mspace><mi>b</mi><mo>,</mo><mi>α</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\exists\, a\,\forall\, b, \alpha(a,b)</annotation></semantics></math>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Fini? Enchaîne avec les <strong><a href="../../seances/seance01/supplementaires.html">exercices supplémentaires</a></strong>.</p>
+</div>
+</div>
+</div>
+
+
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Qui est relatif à la photosynthèse, le processus biologique par lequel les organismes vivants verts (plantes, algues et certaines bactéries) convertissent l’énergie lumineuse en énergie chimique.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Organisme capable de produire de la matière organique à partir de matière inorganique.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Qui a de la fièvre.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script>
+// Aides (indices / solution / piège) : repliées dans un menu « Coups de pouce ».
+//   - au départ : on ne voit que le bouton  ▶ COUPS DE POUCE  (les onglets sont cachés) ;
+//   - au clic : le bouton passe à  ▼ COUPS DE POUCE  et les onglets apparaissent,
+//     l'onglet « Indice 1 » étant affiché par défaut (comportement natif des tabs) ;
+//   - reclic sur le bouton : tout se referme.
+(function () {
+  function build(a) {
+    if (a.dataset.aidesWired) return;
+    a.dataset.aidesWired = '1';
+    var panel = a.querySelector('.panel-tabset');
+    if (!panel) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'aides-toggle';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span class="aides-caret">▶</span> Coups de pouce';
+    a.insertBefore(btn, a.firstChild);
+    btn.addEventListener('click', function () {
+      var open = a.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      a.querySelector('.aides-caret').textContent = open ? '▼' : '▶';
+    });
+  }
+  function setup() { document.querySelectorAll('.aides').forEach(build); }
+  document.addEventListener('DOMContentLoaded', function () {
+    setup();
+    setTimeout(setup, 100);
+  });
+})();
+</script>
+<script>
+// Trois outils à côté du titre (comme « bookup ») : GitHub · Téléchargement · Thème clair/sombre.
+(function () {
+  // >>> À COMPLÉTER : URL du dépôt GitHub du projet <<<
+  var GITHUB_URL = "https://github.com/qlambotte/imsv-exos-2026";
+
+  var SVG = {
+    github: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
+    download: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a.75.75 0 0 1 .75.75v6.44l1.97-1.97a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 1.06-1.06l1.97 1.97V1.75A.75.75 0 0 1 8 1zM2.75 12a.75.75 0 0 1 .75.75v.75a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-.75a.75.75 0 0 1 1.5 0v.75A2 2 0 0 1 12 15.5H4a2 2 0 0 1-2-2v-.75a.75.75 0 0 1 .75-.75z"/></svg>',
+    sun: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 4.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM8 0a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1A.75.75 0 0 1 8 0zm0 13a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1A.75.75 0 0 1 8 13zM16 8a.75.75 0 0 1-.75.75h-1a.75.75 0 0 1 0-1.5h1A.75.75 0 0 1 16 8zM3 8a.75.75 0 0 1-.75.75h-1a.75.75 0 0 1 0-1.5h1A.75.75 0 0 1 3 8zm10.66-5.66a.75.75 0 0 1 0 1.06l-.7.7a.75.75 0 1 1-1.06-1.06l.7-.7a.75.75 0 0 1 1.06 0zM4.1 11.9a.75.75 0 0 1 0 1.06l-.7.7a.75.75 0 0 1-1.06-1.06l.7-.7a.75.75 0 0 1 1.06 0zm9.56 1.76a.75.75 0 0 1-1.06 0l-.7-.7a.75.75 0 1 1 1.06-1.06l.7.7a.75.75 0 0 1 0 1.06zM4.1 4.1a.75.75 0 0 1-1.06 0l-.7-.7a.75.75 0 0 1 1.06-1.06l.7.7a.75.75 0 0 1 0 1.06z"/></svg>',
+    moon: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278z"/></svg>'
+  };
+
+  function makeTool(tag, cls, html, title) {
+    var el = document.createElement(tag);
+    el.className = 'imsv-tool ' + (cls || '');
+    el.setAttribute('title', title);
+    el.setAttribute('aria-label', title);
+    el.innerHTML = html;
+    return el;
+  }
+
+  function build() {
+    var host = document.querySelector('.sidebar-tools-main');
+    if (!host) {
+      var title = document.querySelector('#quarto-sidebar .sidebar-title');
+      if (!title) return;
+      host = document.createElement('div');
+      host.className = 'sidebar-tools-main';
+      title.appendChild(host);
+    }
+    if (host.dataset.imsvTools) return;
+    host.dataset.imsvTools = '1';
+
+    // 1) GitHub
+    var gh = makeTool('a', '', SVG.github, 'Code source (GitHub)');
+    gh.setAttribute('href', GITHUB_URL);
+    gh.setAttribute('target', '_blank');
+    gh.setAttribute('rel', 'noopener');
+
+    // 2) Téléchargement — repris du menu présent dans le corps de la page
+    //    (uniquement sur les pages qui ont des PDF : séances).
+    var bodyMenu = document.querySelector('.dl .dl-menu') || document.querySelector('.dl-menu');
+    var dlWrap = null;
+    if (bodyMenu && bodyMenu.querySelectorAll('a').length) {
+      dlWrap = makeTool('div', 'imsv-dl', SVG.download, 'Télécharger les PDF');
+      var menu = document.createElement('div');
+      menu.className = 'imsv-dl-menu';
+      menu.hidden = true;
+      var head = document.createElement('div');
+      head.className = 'imsv-dl-head';
+      head.textContent = 'Télécharger';
+      menu.appendChild(head);
+      bodyMenu.querySelectorAll('a').forEach(function (a) {
+        var link = document.createElement('a');
+        link.href = a.getAttribute('href');
+        link.textContent = a.textContent;
+        menu.appendChild(link);
+      });
+      var container = document.querySelector('.dl');
+      if (container) container.hidden = true;      // on masque le menu du corps (doublon)
+      dlWrap.appendChild(menu);
+      dlWrap.addEventListener('click', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        menu.hidden = !menu.hidden;
+      });
+      document.addEventListener('click', function () { menu.hidden = true; });
+      menu.addEventListener('click', function (e) { e.stopPropagation(); });
+    }
+
+    // 3) Thème clair / sombre
+    function isDark() { return document.documentElement.getAttribute('data-theme') === 'dark'; }
+    var themeBtn = makeTool('button', '', isDark() ? SVG.sun : SVG.moon,
+                            isDark() ? 'Passer en thème clair' : 'Passer en thème sombre');
+    themeBtn.type = 'button';
+    themeBtn.addEventListener('click', function () {
+      var dark = !isDark();
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      try { localStorage.setItem('imsv-theme', dark ? 'dark' : 'light'); } catch (e) {}
+      themeBtn.innerHTML = dark ? SVG.sun : SVG.moon;
+      themeBtn.setAttribute('title', dark ? 'Passer en thème clair' : 'Passer en thème sombre');
+    });
+
+    host.appendChild(gh);
+    if (dlWrap) host.appendChild(dlWrap);
+    host.appendChild(themeBtn);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    build();
+    setTimeout(build, 100);
+  });
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/qlambotte\.github\.io\/imsv-exos-2026\/prof\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../seances/seance01/socle.html" class="pagination-link" aria-label="Socle — exercices routiniers">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Socle — exercices routiniers</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../seances/seance01/supplementaires.html" class="pagination-link" aria-label="Exercices supplémentaires">
+        <span class="nav-page-text"><span class="chapter-title">Exercices supplémentaires</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>IMSV — Faculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Énoncés et correctif des exercices</p>
+</div>
+    <div class="nav-footer-right">
+<p>© Quentin Lambotte · FMPB · UMONS</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

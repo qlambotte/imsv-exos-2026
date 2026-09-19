@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Socle — exercices routiniers – IMSV — Exercices</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../seances/seance02/transfert.html" rel="next">
+<link href="../../seances/seance02/index.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-be208d595c6a2a218ca02eae83ab10cf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-1b5b3ee8581b783e83719253fdcf2dd1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<script>
+// Applique le thème mémorisé AVANT le rendu (évite le clignotement clair→sombre).
+(function () {
+  try {
+    var t = localStorage.getItem('imsv-theme');
+    if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+})();
+</script>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seances/seance02/index.html">Séance 2 — Calcul fiable et trigonométrie</a></li><li class="breadcrumb-item"><a href="../../seances/seance02/socle.html"><span class="chapter-title">Socle — exercices routiniers</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">IMSV — Exercices</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Recherche"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bienvenue</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance01/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 1 — Langage et raisonnement</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance02/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 2 — Calcul fiable et trigonométrie</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/socle.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance03/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 3 — Équations, proportions et géométrie analytique</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/methode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Boîte à outils</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 1 — Langage et raisonnement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 2 — Calcul fiable et trigonométrie</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 3 — Équations, proportions et géométrie analytique</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seances/seance02/index.html">Séance 2 — Calcul fiable et trigonométrie</a></li><li class="breadcrumb-item"><a href="../../seances/seance02/socle.html"><span class="chapter-title">Socle — exercices routiniers</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Socle — exercices routiniers</span></h1>
+<p class="subtitle lead">Séance 2 · à faire à ton rythme</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="dl">
+<details class="dl-menu">
+<summary>
+Télécharger (PDF · hors-ligne)
+</summary>
+<a href="../../pdf/seance02-enonces.pdf">Énoncés seuls (PDF)</a> <a href="../../pdf/seance02-complet.pdf">Énoncés + coups de pouce &amp; corrections (PDF)</a> <a href="../../pdf/seance02-offline.html" download="">Corrections hors-ligne — 1 fichier (à garder)</a>
+</details>
+</div>
+<div class="callout callout-style-simple callout-tip callout-titled" title="À lire d'abord">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>À lire d’abord
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cherche au brouillon <strong>d’abord</strong>. N’hésite pas à résoudre les exercices avec tes voisin.e.s. Ouvre les indices <strong>dans l’ordre</strong> (référence → question → étape → solution). La solution est le <strong>dernier</strong> recours.</p>
+</div>
+</div>
+<p>Les exercices du <strong>socle</strong> sont des exercices routiniers, pour installer les automatismes. Résous-les à ton rythme. Si tu n’arrives pas au bout du socle lors de la séance, ce n’est pas grave: tu peux le poursuivre à domicile avec les coups de pource et la solution finale.</p>
+<!-- SOCLE = LE NOYAU (à faire par tous, en séance ou à la maison).
+     Calcul fiable + trigonométrie de base. ~40 % de trigo (demande des étudiants).
+     HIÉRARCHIE DES INDICES (à respecter partout) :
+       Indice 1 = renvoi à la théorie du cours ;
+       Indice 2 = une QUESTION à se poser (surtout pas la réponse) ;
+       Indice 3 = une ÉTAPE (un pas concret, sans donner la solution).
+     Numéro AUTOMATIQUE (pas écrit). Valeurs DIFFÉRENTES des slides. Faisable SANS calculatrice. -->
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|1|O1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S1"></span>✎ <strong>Exercice S.1</strong> <a class="exo-hash" href="#exercice-S1" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O1 · ★☆☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Calculer.</p>
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><mo>−</mo><mn>3</mn><mo>⋅</mo><msup><mn>2</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">7 - 3 \cdot 2^2</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>7</mn><mo>−</mo><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><msup><mn>2</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(7 - 3) \cdot 2^2</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>8</mn><mo>−</mo><mn>2</mn><mo>⋅</mo><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><annotation encoding="application/x-tex">(8 - 2 \cdot 3)^2</annotation></semantics></math></li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Retourne à la théorie du cours : <em>Expressions et priorités des opérations</em>.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Dans quel ordre évalue-t-on une expression ?</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><em>Étape.</em></p>
+<p>Évalue d’abord ce qui est entre parenthèses ; ensuite seulement les puissances, puis les multiplications, et enfin les additions et soustractions.</p>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><mo>−</mo><mn>3</mn><mo>⋅</mo><msup><mn>2</mn><mn>2</mn></msup><mo>=</mo><mn>7</mn><mo>−</mo><mn>3</mn><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>7</mn><mo>−</mo><mn>12</mn><mo>=</mo><mi>−</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">7 - 3 \cdot 2^2 = 7 - 3 \cdot 4 = 7 - 12 = -5</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>7</mn><mo>−</mo><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><msup><mn>2</mn><mn>2</mn></msup><mo>=</mo><mn>4</mn><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">(7 - 3) \cdot 2^2 = 4 \cdot 4 = 16</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>8</mn><mo>−</mo><mn>2</mn><mo>⋅</mo><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>8</mn><mo>−</mo><mn>6</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mn>2</mn><mn>2</mn></msup><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">(8 - 2 \cdot 3)^2 = (8 - 6)^2 = 2^2 = 4</annotation></semantics></math>.</li>
+</ol>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p>Soustraire avant de multiplier en (a) ; en (c), distribuer le carré dans les parenthèses.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S2"></span>✎ <strong>Exercice S.2</strong> <a class="exo-hash" href="#exercice-S2" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O1 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Développer <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo>+</mo><mn>5</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><annotation encoding="application/x-tex">(x + 5)^2</annotation></semantics></math>.</li>
+<li>Développer <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mi>t</mi><mo>−</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mi>t</mi><mo>+</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">(3t - 4)(3t + 4)</annotation></semantics></math>.</li>
+<li>Factoriser <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mn>12</mn><mi>y</mi></mrow><annotation encoding="application/x-tex">4y^2 + 12y</annotation></semantics></math>.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Retourne à la théorie du cours : <em>Distributivité : ce qui peut être propagé</em>.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Pour développer, quelle identité remarquable peux-tu utiliser ?</p>
+<p>Pour factoriser, quel <strong>facteur commun</strong> peux-tu mettre en évidence ?</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p><em>Étape.</em></p>
+<p>En (a), pense à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>a</mi><mi>b</mi><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a + b)^2 = a^2 + 2ab + b^2</annotation></semantics></math> ; en (b), à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(a - b)(a + b) = a^2 - b^2</annotation></semantics></math> ; en (c), le plus grand facteur commun de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><msup><mi>y</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">4y^2</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mi>y</mi></mrow><annotation encoding="application/x-tex">12y</annotation></semantics></math> est <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>y</mi></mrow><annotation encoding="application/x-tex">4y</annotation></semantics></math> : mets-le en évidence.</p>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo>+</mo><mn>5</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>10</mn><mi>x</mi><mo>+</mo><mn>25</mn></mrow><annotation encoding="application/x-tex">(x + 5)^2 = x^2 + 10x + 25</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mi>t</mi><mo>−</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mi>t</mi><mo>+</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>9</mn><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">(3t - 4)(3t + 4) = 9t^2 - 16</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mn>12</mn><mi>y</mi><mo>=</mo><mn>4</mn><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>y</mi><mo>+</mo><mn>3</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">4y^2 + 12y = 4y(y + 3)</annotation></semantics></math>.</li>
+</ol>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<p>Écrire <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo>+</mo><mn>5</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>25</mn></mrow><annotation encoding="application/x-tex">(x + 5)^2 = x^2 + 25</annotation></semantics></math> (oubli du <strong>double produit</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>⋅</mo><mi>x</mi><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>10</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">2 \cdot x \cdot 5 = 10x</annotation></semantics></math>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S3"></span>✎ <strong>Exercice S.3</strong> <a class="exo-hash" href="#exercice-S3" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O1 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Calculer puis simplifier, en donnant une fraction <strong>irréductible</strong>.</p>
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mn>45</mn><mn>60</mn></mfrac><annotation encoding="application/x-tex">\dfrac{45}{60}</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mn>5</mn><mn>6</mn></mfrac><mo>−</mo><mfrac displaystyle="true"><mn>3</mn><mn>8</mn></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{5}{6} - \dfrac{3}{8}</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mn>3</mn><mn>8</mn></mfrac><mo>⋅</mo><mfrac displaystyle="true"><mn>4</mn><mn>9</mn></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{3}{8} \cdot \dfrac{4}{9}</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mn>6</mn><mn>7</mn></mfrac><mo>:</mo><mfrac displaystyle="true"><mn>9</mn><mn>14</mn></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{6}{7} : \dfrac{9}{14}</annotation></semantics></math></li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" role="tab" aria-controls="tabset-3-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>Retourne à la théorie du cours : <em>Fractions équivalentes et simplification</em>, <em>Addition et soustraction de fractions</em> et <em>Produit et quotient de fractions</em>.</p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Quelle est la première chose à faire : simplifier la (ou les) fractions, mettre au même dénominateur, renverser une fraction ?</p>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p><em>Étape.</em></p>
+<ol type="a">
+<li>simplifie par un facteur commun ; (b) prends <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>24</mn><annotation encoding="application/x-tex">24</annotation></semantics></math> comme dénominateur commun ; (c) multiplie numérateurs entre eux et dénominateurs entre eux ; (d) multiplie par l’<strong>inverse</strong> de la seconde fraction.</li>
+</ol>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mn>45</mn><mn>60</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>3</mn><mn>4</mn></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{45}{60} = \dfrac{3}{4}</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mn>20</mn><mn>24</mn></mfrac><mo>−</mo><mfrac displaystyle="true"><mn>9</mn><mn>24</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>11</mn><mn>24</mn></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{20}{24} - \dfrac{9}{24} = \dfrac{11}{24}</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mrow><mn>3</mn><mo>⋅</mo><mn>4</mn></mrow><mrow><mn>8</mn><mo>⋅</mo><mn>9</mn></mrow></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>12</mn><mn>72</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>1</mn><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{3 \cdot 4}{8 \cdot 9} = \dfrac{12}{72} = \dfrac{1}{6}</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mn>6</mn><mn>7</mn></mfrac><mo>⋅</mo><mfrac displaystyle="true"><mn>14</mn><mn>9</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>84</mn><mn>63</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>4</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{6}{7} \cdot \dfrac{14}{9} = \dfrac{84}{63} = \dfrac{4}{3}</annotation></semantics></math>.</li>
+</ol>
+</div>
+<div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
+<p>Additionner numérateurs <strong>et</strong> dénominateurs (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>5</mn><mn>6</mn></mfrac><mo>−</mo><mfrac><mn>3</mn><mn>8</mn></mfrac><mo>≠</mo><mfrac><mn>2</mn><mn>14</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac56 - \frac38 \ne \frac{2}{14}</annotation></semantics></math>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S4"></span>✎ <strong>Exercice S.4</strong> <a class="exo-hash" href="#exercice-S4" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O2 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fractions, décimaux et pourcentages.</p>
+<ol type="a">
+<li>Écrire <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mn>2</mn><mn>5</mn></mfrac><annotation encoding="application/x-tex">\dfrac{2}{5}</annotation></semantics></math> sous forme décimale, puis en pourcentage.</li>
+<li>Ranger du plus petit au plus grand : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mn>3</mn><mn>5</mn></mfrac><annotation encoding="application/x-tex">\dfrac{3}{5}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mn>0</mn><mo>,</mo><mn>55</mn></mrow><annotation encoding="application/x-tex">\ 0{,}55</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mn>65</mn><mspace width="0.167em"></mspace><mi>%</mi></mrow><annotation encoding="application/x-tex">\ 65\,\%</annotation></semantics></math>.</li>
+<li>On augmente <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>80</mn><annotation encoding="application/x-tex">80</annotation></semantics></math> de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><mspace width="0.167em"></mspace><mi>%</mi></mrow><annotation encoding="application/x-tex">25\,\%</annotation></semantics></math>, puis on <strong>diminue le résultat</strong> de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><mspace width="0.167em"></mspace><mi>%</mi></mrow><annotation encoding="application/x-tex">25\,\%</annotation></semantics></math>. Retombe-t-on sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>80</mn><annotation encoding="application/x-tex">80</annotation></semantics></math> ?</li>
+<li>Après une <strong>baisse</strong> de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn><mspace width="0.167em"></mspace><mi>%</mi></mrow><annotation encoding="application/x-tex">20\,\%</annotation></semantics></math>, une quantité vaut <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>96</mn><annotation encoding="application/x-tex">96</annotation></semantics></math>. Quelle était sa valeur <strong>initiale</strong> ?</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>Retourne à la théorie du cours : <em>Fractions : quel est leur sens ?</em> et <em>Pourcentages</em>.</p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Sous quelle forme commune écrire les nombres de (b) pour pouvoir les comparer ?</p>
+<p>En (c) et (d), augmenter ou diminuer d’un pourcentage : est-ce ajouter/retrancher, ou <strong>multiplier</strong> ?</p>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<p><em>Étape.</em></p>
+<p>Pour (a) et (b), ramène chaque nombre à un décimal. En (c), multiplie <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>80</mn><annotation encoding="application/x-tex">80</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>25</mn></mrow><annotation encoding="application/x-tex">1{,}25</annotation></semantics></math> puis par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>75</mn></mrow><annotation encoding="application/x-tex">0{,}75</annotation></semantics></math>. En (d), écris l’équation <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>80</mn><mo>⋅</mo><mi>x</mi><mo>=</mo><mn>96</mn></mrow><annotation encoding="application/x-tex">0{,}80 \cdot x = 96</annotation></semantics></math> et isole <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.</p>
+</div>
+<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mn>2</mn><mn>5</mn></mfrac><mo>=</mo><mn>0</mn><mo>,</mo><mn>4</mn><mo>=</mo><mn>40</mn><mspace width="0.167em"></mspace><mi>%</mi></mrow><annotation encoding="application/x-tex">\dfrac{2}{5} = 0{,}4 = 40\,\%</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mn>3</mn><mn>5</mn></mfrac><mo>=</mo><mn>0</mn><mo>,</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">\dfrac{3}{5} = 0{,}60</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>65</mn><mspace width="0.167em"></mspace><mi>%</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>65</mn></mrow><annotation encoding="application/x-tex">65\,\% = 0{,}65</annotation></semantics></math> ; d’où <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>55</mn><mo>&lt;</mo><mfrac displaystyle="true"><mn>3</mn><mn>5</mn></mfrac><mo>&lt;</mo><mn>65</mn><mspace width="0.167em"></mspace><mi>%</mi></mrow><annotation encoding="application/x-tex">0{,}55 &lt; \dfrac{3}{5} &lt; 65\,\%</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>80</mn><mo>⋅</mo><mn>1</mn><mo>,</mo><mn>25</mn><mo>⋅</mo><mn>0</mn><mo>,</mo><mn>75</mn><mo>=</mo><mn>75</mn><mo>≠</mo><mn>80</mn></mrow><annotation encoding="application/x-tex">80 \cdot 1{,}25 \cdot 0{,}75 = 75 \ne 80</annotation></semantics></math> : <strong>non</strong>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>80</mn><mo>⋅</mo><mi>x</mi><mo>=</mo><mn>96</mn></mrow><annotation encoding="application/x-tex">0{,}80 \cdot x = 96</annotation></semantics></math>, d’où <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>96</mn><mo>:</mo><mn>0</mn><mo>,</mo><mn>80</mn><mo>=</mo><mn>120</mn></mrow><annotation encoding="application/x-tex">x = 96 : 0{,}80 = 120</annotation></semantics></math>.</li>
+</ol>
+</div>
+<div id="tabset-4-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-5-tab">
+<p>Comparer des écritures différentes sans les ramener à une forme commune ; composer des pourcentages par <strong>addition</strong> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mn>25</mn><mo>−</mo><mn>25</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">+25 - 25 = 0</annotation></semantics></math>) ; appliquer le pourcentage à la valeur <strong>finale</strong> au lieu de l’initiale.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S5"></span>✎ <strong>Exercice S.5</strong> <a class="exo-hash" href="#exercice-S5" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O1 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Écrire sous la forme d’une <strong>seule puissance</strong>.</p>
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><msup><mn>2</mn><mn>5</mn></msup><msup><mn>2</mn><mn>3</mn></msup></mfrac><annotation encoding="application/x-tex">\dfrac{2^5}{2^3}</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mn>3</mn><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow><mn>3</mn></msup><annotation encoding="application/x-tex">\left(3^2\right)^3</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>4</mn><mrow><mi>−</mi><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">4^{-2}</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mrow><msup><mi>b</mi><mn>7</mn></msup><mo>⋅</mo><msup><mi>b</mi><mrow><mi>−</mi><mn>3</mn></mrow></msup></mrow><msup><mi>b</mi><mn>2</mn></msup></mfrac><annotation encoding="application/x-tex">\dfrac{b^7 \cdot b^{-3}}{b^2}</annotation></semantics></math> (avec <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b \ne 0</annotation></semantics></math>)</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-4" role="tab" aria-controls="tabset-5-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-5" role="tab" aria-controls="tabset-5-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p>Retourne à la théorie du cours : <em>Puissances</em>.</p>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Quelle est la structure de l’expression : un quotient, un produit, une puissance de puissance ? À chaque structure correspond une règle : laquelle ?</p>
+</div>
+<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<p><em>Étape.</em></p>
+<p>Applique <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mi>m</mi></msup><mo>:</mo><msup><mi>a</mi><mi>n</mi></msup><mo>=</mo><msup><mi>a</mi><mrow><mi>m</mi><mo>−</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">a^m : a^n = a^{m-n}</annotation></semantics></math> en (a) ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>a</mi><mi>m</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mi>n</mi></msup><mo>=</mo><msup><mi>a</mi><mrow><mi>m</mi><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\left(a^m\right)^n = a^{mn}</annotation></semantics></math> en (b) ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mrow><mi>−</mi><mi>n</mi></mrow></msup><mo>=</mo><mfrac displaystyle="true"><mn>1</mn><msup><mi>a</mi><mi>n</mi></msup></mfrac></mrow><annotation encoding="application/x-tex">a^{-n} = \dfrac{1}{a^n}</annotation></semantics></math> en (c) ; en (d), regroupe les exposants du haut et retranche celui du bas.</p>
+</div>
+<div id="tabset-5-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-4-tab">
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mn>5</mn><mo>−</mo><mn>3</mn></mrow></msup><mo>=</mo><msup><mn>2</mn><mn>2</mn></msup><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">2^{5-3} = 2^2 = 4</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>3</mn><mrow><mn>2</mn><mo>⋅</mo><mn>3</mn></mrow></msup><mo>=</mo><msup><mn>3</mn><mn>6</mn></msup><mo>=</mo><mn>729</mn></mrow><annotation encoding="application/x-tex">3^{2 \cdot 3} = 3^6 = 729</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mn>1</mn><msup><mn>4</mn><mn>2</mn></msup></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>1</mn><mn>16</mn></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{1}{4^2} = \dfrac{1}{16}</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>b</mi><mrow><mn>7</mn><mo>−</mo><mn>3</mn><mo>−</mo><mn>2</mn></mrow></msup><mo>=</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">b^{7 - 3 - 2} = b^2</annotation></semantics></math>.</li>
+</ol>
+</div>
+<div id="tabset-5-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-5-tab">
+<p>Confondre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mi>m</mi></msup><msup><mi>a</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">a^m a^n</annotation></semantics></math> (on <strong>ajoute</strong>) et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>a</mi><mi>m</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mi>n</mi></msup><annotation encoding="application/x-tex">\left(a^m\right)^n</annotation></semantics></math> (on <strong>multiplie</strong>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S6"></span>✎ <strong>Exercice S.6</strong> <a class="exo-hash" href="#exercice-S6" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O3 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Valeur absolue, notation scientifique et ordre de grandeur.</p>
+<ol type="a">
+<li>Calculer <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mn>7</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></msqrt><annotation encoding="application/x-tex">\sqrt{(-7)^2}</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo>−</mo><mn>9</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></msqrt><annotation encoding="application/x-tex">\sqrt{(2 - 9)^2}</annotation></semantics></math>.</li>
+<li>Écrire en notation scientifique : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>00058</mn></mrow><annotation encoding="application/x-tex">0{,}00058</annotation></semantics></math> ; puis <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>6</mn><mo>×</mo><msup><mn>10</mn><mn>4</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>5</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>7</mn></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">(6 \times 10^{4}) \cdot (5 \times 10^{-7})</annotation></semantics></math>.</li>
+<li><strong>Estimer</strong> l’ordre de grandeur de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mrow><mn>3</mn><mo>,</mo><mn>9</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><mrow><mn>1</mn><mo>,</mo><mn>9</mn><mo>×</mo><msup><mn>10</mn><mn>2</mn></msup></mrow></mfrac><annotation encoding="application/x-tex">\dfrac{3{,}9 \times 10^{5}}{1{,}9 \times 10^{2}}</annotation></semantics></math>.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-4" role="tab" aria-controls="tabset-6-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-5" role="tab" aria-controls="tabset-6-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p>Retourne à la théorie du cours : <em>Valeur absolue</em>, <em>Notation scientifique</em> et <em>Ordres de grandeur et estimations</em>.</p>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Quel est le signe d’une racine d’indice pair ?</p>
+<p>Par quelle puissance de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10</mn><annotation encoding="application/x-tex">10</annotation></semantics></math> faut-il multiplier pour amener le facteur entre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10</mn><annotation encoding="application/x-tex">10</annotation></semantics></math> ? Comment se combinent les puissances de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10</mn><annotation encoding="application/x-tex">10</annotation></semantics></math> dans un produit ou un quotient ?</p>
+</div>
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<p><em>Étape.</em></p>
+<p>En (a), <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><msup><mi>x</mi><mn>2</mn></msup></msqrt><mo>=</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>x</mi><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">\sqrt{x^2} = |x|</annotation></semantics></math>. En (b), compte les déplacements de la virgule pour l’exposant de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10</mn><annotation encoding="application/x-tex">10</annotation></semantics></math>, et vérifie que le facteur est dans <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>1</mn><mo>,</mo><mn>10</mn><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">[1, 10[</annotation></semantics></math>. En (c), arrondis chaque nombre à un chiffre, puis soustrais les exposants de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10</mn><annotation encoding="application/x-tex">10</annotation></semantics></math>.</p>
+</div>
+<div id="tabset-6-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-4-tab">
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mn>7</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></msqrt><mo>=</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>−</mi><mn>7</mn><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">\sqrt{(-7)^2} = |-7| = 7</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo>−</mo><mn>9</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></msqrt><mo>=</mo><mrow><mo stretchy="true" form="prefix">|</mo><mn>2</mn><mo>−</mo><mn>9</mn><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>−</mi><mn>7</mn><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">\sqrt{(2 - 9)^2} = |2 - 9| = |-7| = 7</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>00058</mn><mo>=</mo><mn>5</mn><mo>,</mo><mn>8</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>4</mn></mrow></msup></mrow><annotation encoding="application/x-tex">0{,}00058 = 5{,}8 \times 10^{-4}</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>6</mn><mo>×</mo><msup><mn>10</mn><mn>4</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>5</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>7</mn></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>30</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>3</mn></mrow></msup><mo>=</mo><mn>3</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(6 \times 10^{4}) \cdot (5 \times 10^{-7}) = 30 \times 10^{-3} = 3 \times 10^{-2}</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mrow><mn>3</mn><mo>,</mo><mn>9</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><mrow><mn>1</mn><mo>,</mo><mn>9</mn><mo>×</mo><msup><mn>10</mn><mn>2</mn></msup></mrow></mfrac><mo>≈</mo><mfrac displaystyle="true"><mrow><mn>4</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><mrow><mn>2</mn><mo>×</mo><msup><mn>10</mn><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mn>2</mn><mo>×</mo><msup><mn>10</mn><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\dfrac{3{,}9 \times 10^{5}}{1{,}9 \times 10^{2}} \approx \dfrac{4 \times 10^{5}}{2 \times 10^{2}} = 2 \times 10^{3}</annotation></semantics></math>.</li>
+</ol>
+</div>
+<div id="tabset-6-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-5-tab">
+<p>Écrire <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><msup><mi>x</mi><mn>2</mn></msup></msqrt><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">\sqrt{x^2} = x</annotation></semantics></math> (faux si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x &lt; 0</annotation></semantics></math>) ; laisser <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">30 \times 10^{-3}</annotation></semantics></math> (le facteur doit être dans <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>1</mn><mo>,</mo><mn>10</mn><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">[1, 10[</annotation></semantics></math>) ; se tromper en soustrayant les exposants de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10</mn><annotation encoding="application/x-tex">10</annotation></semantics></math>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|1|O4">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S7"></span>✎ <strong>Exercice S.7</strong> <a class="exo-hash" href="#exercice-S7" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O4 · ★☆☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Convertir en radians : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn><mi>°</mi></mrow><annotation encoding="application/x-tex">60°</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>90</mn><mi>°</mi></mrow><annotation encoding="application/x-tex">90°</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mi>°</mi></mrow><annotation encoding="application/x-tex">120°</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>270</mn><mi>°</mi></mrow><annotation encoding="application/x-tex">270°</annotation></semantics></math>.</li>
+<li>Convertir en degrés : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mi>π</mi><mn>6</mn></mfrac><annotation encoding="application/x-tex">\dfrac{\pi}{6}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mrow><mn>3</mn><mi>π</mi></mrow><mn>4</mn></mfrac><annotation encoding="application/x-tex">\dfrac{3\pi}{4}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mrow><mn>3</mn><mi>π</mi></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\dfrac{3\pi}{2}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">2\pi</annotation></semantics></math>.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-4" role="tab" aria-controls="tabset-7-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-5" role="tab" aria-controls="tabset-7-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<p>Retourne à la théorie du cours : <em>Cercle trigonométrique</em>.</p>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>À combien de radians correspond un angle plat de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>180</mn><mi>°</mi></mrow><annotation encoding="application/x-tex">180°</annotation></semantics></math> ?</p>
+</div>
+<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<p><em>Étape.</em></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>180</mn><mi>°</mi></mrow><annotation encoding="application/x-tex">180°</annotation></semantics></math> correspond à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>π</mi><annotation encoding="application/x-tex">\pi</annotation></semantics></math> rad. Pose la proportion <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mtext mathvariant="normal">degrés</mtext><mrow><mn>180</mn><mi>°</mi></mrow></mfrac><mo>=</mo><mfrac displaystyle="true"><mtext mathvariant="normal">radians</mtext><mi>π</mi></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{\text{degrés}}{180°} = \dfrac{\text{radians}}{\pi}</annotation></semantics></math> et isole l’inconnue.</p>
+</div>
+<div id="tabset-7-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-4-tab">
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mi>π</mi><mn>3</mn></mfrac><annotation encoding="application/x-tex">\dfrac{\pi}{3}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mfrac displaystyle="true"><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\ \dfrac{\pi}{2}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mfrac displaystyle="true"><mrow><mn>2</mn><mi>π</mi></mrow><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\ \dfrac{2\pi}{3}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mfrac displaystyle="true"><mrow><mn>3</mn><mi>π</mi></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\ \dfrac{3\pi}{2}</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mi>°</mi></mrow><annotation encoding="application/x-tex">30°</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mn>135</mn><mi>°</mi></mrow><annotation encoding="application/x-tex">\ 135°</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mn>270</mn><mi>°</mi></mrow><annotation encoding="application/x-tex">\ 270°</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mn>360</mn><mi>°</mi></mrow><annotation encoding="application/x-tex">\ 360°</annotation></semantics></math>.</li>
+</ol>
+</div>
+<div id="tabset-7-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-5-tab">
+<p>Multiplier par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mrow><mn>180</mn><mi>°</mi></mrow><mi>π</mi></mfrac><annotation encoding="application/x-tex">\dfrac{180°}{\pi}</annotation></semantics></math> là où il faut <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mi>π</mi><mrow><mn>180</mn><mi>°</mi></mrow></mfrac><annotation encoding="application/x-tex">\dfrac{\pi}{180°}</annotation></semantics></math> (ou l’inverse).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O4">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S8"></span>✎ <strong>Exercice S.8</strong> <a class="exo-hash" href="#exercice-S8" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O4 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cercle trigonométrique et valeurs remarquables.</p>
+<ol type="a">
+<li>Donner <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\cos\theta</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\sin\theta</annotation></semantics></math> pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mfrac displaystyle="true"><mi>π</mi><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">\theta = \dfrac{\pi}{6}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mi>π</mi><mn>4</mn></mfrac><annotation encoding="application/x-tex">\dfrac{\pi}{4}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mi>π</mi><mn>3</mn></mfrac><annotation encoding="application/x-tex">\dfrac{\pi}{3}</annotation></semantics></math>.</li>
+<li>Un point du cercle a pour coordonnées <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac displaystyle="true"><mn>1</mn><mn>2</mn></mfrac><mo>,</mo><mspace width="0.222em"></mspace><mfrac displaystyle="true"><msqrt><mn>3</mn></msqrt><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left(\dfrac{1}{2},\ \dfrac{\sqrt3}{2}\right)</annotation></semantics></math>. Quel angle <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mi>π</mi><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">\theta \in [0,\ 2\pi[</annotation></semantics></math> ?</li>
+<li>Même question pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0,\ -1)</annotation></semantics></math>.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-3" role="tab" aria-controls="tabset-8-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-4" role="tab" aria-controls="tabset-8-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-5" role="tab" aria-controls="tabset-8-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<p>Retourne à la théorie du cours : <em>Cercle trigonométrique</em> et <em>Angles et valeurs remarquables</em>.</p>
+</div>
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Sur le cercle, laquelle des deux coordonnées est le cosinus, laquelle est le sinus ?</p>
+</div>
+<div id="tabset-8-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-3-tab">
+<p><em>Étape.</em></p>
+<p>Le point du cercle d’angle <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math> est <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mo>cos</mo><mi>θ</mi><mo>,</mo><mspace width="0.222em"></mspace><mo>sin</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\cos\theta,\ \sin\theta)</annotation></semantics></math>. Compare chaque couple donné à la table des valeurs remarquables, et repère le quadrant.</p>
+</div>
+<div id="tabset-8-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-4-tab">
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mo>:</mo><mfrac displaystyle="true"><msqrt><mn>3</mn></msqrt><mn>2</mn></mfrac><mo>,</mo><mspace width="0.222em"></mspace><mfrac displaystyle="true"><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac><mo>,</mo><mspace width="0.222em"></mspace><mfrac displaystyle="true"><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\cos : \dfrac{\sqrt3}{2},\ \dfrac{\sqrt2}{2},\ \dfrac{1}{2}</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mo>:</mo><mfrac displaystyle="true"><mn>1</mn><mn>2</mn></mfrac><mo>,</mo><mspace width="0.222em"></mspace><mfrac displaystyle="true"><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac><mo>,</mo><mspace width="0.222em"></mspace><mfrac displaystyle="true"><msqrt><mn>3</mn></msqrt><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\sin : \dfrac{1}{2},\ \dfrac{\sqrt2}{2},\ \dfrac{\sqrt3}{2}</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mfrac displaystyle="true"><mi>π</mi><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\theta = \dfrac{\pi}{3}</annotation></semantics></math> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mo>=</mo><mfrac displaystyle="false"><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\cos = \tfrac12</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mo>=</mo><mfrac displaystyle="false"><msqrt><mn>3</mn></msqrt><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\sin = \tfrac{\sqrt3}{2}</annotation></semantics></math>).</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mfrac displaystyle="true"><mrow><mn>3</mn><mi>π</mi></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\theta = \dfrac{3\pi}{2}</annotation></semantics></math>.</li>
+</ol>
+</div>
+<div id="tabset-8-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-5-tab">
+<p>Confondre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mi>π</mi><mn>6</mn></mfrac><annotation encoding="application/x-tex">\dfrac{\pi}{6}</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mi>π</mi><mn>3</mn></mfrac><annotation encoding="application/x-tex">\dfrac{\pi}{3}</annotation></semantics></math> en intervertissant <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>cos</mo><annotation encoding="application/x-tex">\cos</annotation></semantics></math> (abscisse) et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>sin</mo><annotation encoding="application/x-tex">\sin</annotation></semantics></math> (ordonnée).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O4">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S9"></span>✎ <strong>Exercice S.9</strong> <a class="exo-hash" href="#exercice-S9" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O4 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Signes et symétries.</p>
+<ol type="a">
+<li>Pour chacun des quatre quadrants, donner les signes de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\cos\theta</annotation></semantics></math> et de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\sin\theta</annotation></semantics></math>.</li>
+<li>À partir des valeurs remarquables et des symétries, donner <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>cos</mo><annotation encoding="application/x-tex">\cos</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>sin</mo><annotation encoding="application/x-tex">\sin</annotation></semantics></math> de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>135</mn><mi>°</mi></mrow><annotation encoding="application/x-tex">135°</annotation></semantics></math> et de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac displaystyle="true"><mi>π</mi><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">-\dfrac{\pi}{6}</annotation></semantics></math>.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-3" role="tab" aria-controls="tabset-9-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-4" role="tab" aria-controls="tabset-9-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-5" role="tab" aria-controls="tabset-9-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
+<p>Retourne à la théorie du cours : <em>Signes</em> et <em>Symétries</em>.</p>
+</div>
+<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Dans quel quadrant <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>cos</mo><annotation encoding="application/x-tex">\cos</annotation></semantics></math> (resp. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>sin</mo><annotation encoding="application/x-tex">\sin</annotation></semantics></math>) est-il positif ? De quel angle remarquable <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>135</mn><mi>°</mi></mrow><annotation encoding="application/x-tex">135°</annotation></semantics></math> est-il le supplémentaire ? Et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac displaystyle="true"><mi>π</mi><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">-\dfrac{\pi}{6}</annotation></semantics></math>, de quel angle est-il l’opposé ?</p>
+</div>
+<div id="tabset-9-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-3-tab">
+<p><em>Étape.</em></p>
+<p>Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>135</mn><mi>°</mi><mo>=</mo><mn>180</mn><mi>°</mi><mo>−</mo><mn>45</mn><mi>°</mi></mrow><annotation encoding="application/x-tex">135° = 180° - 45°</annotation></semantics></math>, applique <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>−</mi><mo>cos</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\cos(\pi - \theta) = -\cos\theta</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo>sin</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\sin(\pi - \theta) = \sin\theta</annotation></semantics></math>. Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac displaystyle="true"><mi>π</mi><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">-\dfrac{\pi}{6}</annotation></semantics></math>, applique <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo>cos</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\cos(-\theta) = \cos\theta</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>−</mi><mo>sin</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\sin(-\theta) = -\sin\theta</annotation></semantics></math>.</p>
+</div>
+<div id="tabset-9-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-4-tab">
+<ol type="a">
+<li>I : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mo>cos</mo><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mo>sin</mo><mo>&gt;</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\cos &gt; 0,\ \sin &gt; 0)</annotation></semantics></math> ; II : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mo>cos</mo><mo>&lt;</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mo>sin</mo><mo>&gt;</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\cos &lt; 0,\ \sin &gt; 0)</annotation></semantics></math> ; III : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mo>cos</mo><mo>&lt;</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mo>sin</mo><mo>&lt;</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\cos &lt; 0,\ \sin &lt; 0)</annotation></semantics></math> ; IV : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mo>cos</mo><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mo>sin</mo><mo>&lt;</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\cos &gt; 0,\ \sin &lt; 0)</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>135</mn><mi>°</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>−</mi><mfrac displaystyle="true"><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\cos(135°) = -\dfrac{\sqrt2}{2}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>135</mn><mi>°</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\sin(135°) = \dfrac{\sqrt2}{2}</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mfrac displaystyle="true"><mi>π</mi><mn>6</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><msqrt><mn>3</mn></msqrt><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\cos\!\left(-\dfrac{\pi}{6}\right) = \dfrac{\sqrt3}{2}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mfrac displaystyle="true"><mi>π</mi><mn>6</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>−</mi><mfrac displaystyle="true"><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\sin\!\left(-\dfrac{\pi}{6}\right) = -\dfrac{1}{2}</annotation></semantics></math>.</li>
+</ol>
+</div>
+<div id="tabset-9-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-5-tab">
+<p>Se tromper de signe selon le quadrant ; confondre la symétrie des angles <strong>opposés</strong> et celle des <strong>supplémentaires</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O4">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S10"></span>✎ <strong>Exercice S.10</strong> <a class="exo-hash" href="#exercice-S10" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O4 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Dans un triangle rectangle en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> avec <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi>A</mi><mi>B</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">|AB| = 5</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi>B</mi><mi>C</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mn>12</mn></mrow><annotation encoding="application/x-tex">|BC| = 12</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi>A</mi><mi>C</mi><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mn>13</mn></mrow><annotation encoding="application/x-tex">|AC| = 13</annotation></semantics></math>, calculer <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mrow><mo stretchy="true" form="prefix">(</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\sin(\widehat{A})</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\cos(\widehat{A})</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>tan</mo><mrow><mo stretchy="true" form="prefix">(</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\tan(\widehat{A})</annotation></semantics></math>.</li>
+<li>Rappeler <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>tan</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\tan\theta</annotation></semantics></math> en fonction de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\sin\theta</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\cos\theta</annotation></semantics></math> ; pour quels <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math> n’est-elle <strong>pas définie</strong> ?</li>
+<li>Si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mi>θ</mi><mo>=</mo><mfrac displaystyle="true"><mn>8</mn><mn>17</mn></mfrac></mrow><annotation encoding="application/x-tex">\cos\theta = \dfrac{8}{17}</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>∈</mo><mrow><mo stretchy="true" form="prefix">[</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mfrac displaystyle="false"><mi>π</mi><mn>2</mn></mfrac><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">\theta \in \left[0,\ \tfrac{\pi}{2}\right]</annotation></semantics></math>, calculer <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\sin\theta</annotation></semantics></math>.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-10-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-1" role="tab" aria-controls="tabset-10-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-2" role="tab" aria-controls="tabset-10-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-3" role="tab" aria-controls="tabset-10-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-4" role="tab" aria-controls="tabset-10-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-5" role="tab" aria-controls="tabset-10-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-10-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-10-1-tab">
+<p>Retourne à la théorie du cours : <em>Cercle trigonométrique (triangle rectangle)</em>, <em>Tangente</em> et <em>Identité fondamentale</em>.</p>
+</div>
+<div id="tabset-10-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Dans un triangle rectangle, quel rapport de côtés donne le sinus ? le cosinus ? Comment obtient-on la tangente à partir des deux ? Quelle relation lie <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mo>sin</mo><mn>2</mn></msup><mi>θ</mi></mrow><annotation encoding="application/x-tex">\sin^2\theta</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mo>cos</mo><mn>2</mn></msup><mi>θ</mi></mrow><annotation encoding="application/x-tex">\cos^2\theta</annotation></semantics></math> ?</p>
+</div>
+<div id="tabset-10-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-3-tab">
+<p><em>Étape.</em></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mo>=</mo><mfrac displaystyle="true"><mtext mathvariant="normal">opposé</mtext><mtext mathvariant="normal">hypoténuse</mtext></mfrac></mrow><annotation encoding="application/x-tex">\sin = \dfrac{\text{opposé}}{\text{hypoténuse}}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mo>=</mo><mfrac displaystyle="true"><mtext mathvariant="normal">adjacent</mtext><mtext mathvariant="normal">hypoténuse</mtext></mfrac></mrow><annotation encoding="application/x-tex">\cos = \dfrac{\text{adjacent}}{\text{hypoténuse}}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>tan</mo><mi>θ</mi><mo>=</mo><mfrac displaystyle="true"><mrow><mo>sin</mo><mi>θ</mi></mrow><mrow><mo>cos</mo><mi>θ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\tan\theta = \dfrac{\sin\theta}{\cos\theta}</annotation></semantics></math>. En (c), tire <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\sin\theta</annotation></semantics></math> de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mo>sin</mo><mn>2</mn></msup><mi>θ</mi><mo>+</mo><msup><mo>cos</mo><mn>2</mn></msup><mi>θ</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sin^2\theta + \cos^2\theta = 1</annotation></semantics></math> et fixe son signe par le quadrant.</p>
+</div>
+<div id="tabset-10-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-4-tab">
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mrow><mo stretchy="true" form="prefix">(</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mrow><mo stretchy="true" form="prefix">|</mo><mi>B</mi><mi>C</mi><mo stretchy="true" form="postfix">|</mo></mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi>A</mi><mi>C</mi><mo stretchy="true" form="postfix">|</mo></mrow></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>12</mn><mn>13</mn></mfrac></mrow><annotation encoding="application/x-tex">\sin(\widehat{A}) = \dfrac{|BC|}{|AC|} = \dfrac{12}{13}</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mrow><mo stretchy="true" form="prefix">|</mo><mi>A</mi><mi>B</mi><mo stretchy="true" form="postfix">|</mo></mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi>A</mi><mi>C</mi><mo stretchy="true" form="postfix">|</mo></mrow></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>5</mn><mn>13</mn></mfrac></mrow><annotation encoding="application/x-tex">\cos(\widehat{A}) = \dfrac{|AB|}{|AC|} = \dfrac{5}{13}</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>tan</mo><mrow><mo stretchy="true" form="prefix">(</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>12</mn><mn>5</mn></mfrac></mrow><annotation encoding="application/x-tex">\tan(\widehat{A}) = \dfrac{12}{5}</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>tan</mo><mi>θ</mi><mo>=</mo><mfrac displaystyle="true"><mrow><mo>sin</mo><mi>θ</mi></mrow><mrow><mo>cos</mo><mi>θ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\tan\theta = \dfrac{\sin\theta}{\cos\theta}</annotation></semantics></math> ; non définie pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mfrac displaystyle="false"><mi>π</mi><mn>2</mn></mfrac><mo>+</mo><mi>k</mi><mi>π</mi></mrow><annotation encoding="application/x-tex">\theta = \tfrac{\pi}{2} + k\pi</annotation></semantics></math> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">k \in \mathbb{Z}</annotation></semantics></math>).</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mi>θ</mi><mo>=</mo><msqrt><mrow><mn>1</mn><mo>−</mo><mfrac displaystyle="false"><mn>64</mn><mn>289</mn></mfrac></mrow></msqrt><mo>=</mo><msqrt><mfrac displaystyle="false"><mn>225</mn><mn>289</mn></mfrac></msqrt><mo>=</mo><mfrac displaystyle="true"><mn>15</mn><mn>17</mn></mfrac></mrow><annotation encoding="application/x-tex">\sin\theta = \sqrt{1 - \tfrac{64}{289}} = \sqrt{\tfrac{225}{289}} = \dfrac{15}{17}</annotation></semantics></math> (positif dans le quadrant I).</li>
+</ol>
+</div>
+<div id="tabset-10-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-5-tab">
+<p>Inverser opposé et adjacent ; oublier le <strong>signe</strong> donné par le quadrant en (c).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Terminé avant la fin ? Passe au <strong><a href="../../seances/seance02/transfert.html">Transfert</a></strong>.</p>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script>
+// Aides (indices / solution / piège) : repliées dans un menu « Coups de pouce ».
+//   - au départ : on ne voit que le bouton  ▶ COUPS DE POUCE  (les onglets sont cachés) ;
+//   - au clic : le bouton passe à  ▼ COUPS DE POUCE  et les onglets apparaissent,
+//     l'onglet « Indice 1 » étant affiché par défaut (comportement natif des tabs) ;
+//   - reclic sur le bouton : tout se referme.
+(function () {
+  function build(a) {
+    if (a.dataset.aidesWired) return;
+    a.dataset.aidesWired = '1';
+    var panel = a.querySelector('.panel-tabset');
+    if (!panel) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'aides-toggle';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span class="aides-caret">▶</span> Coups de pouce';
+    a.insertBefore(btn, a.firstChild);
+    btn.addEventListener('click', function () {
+      var open = a.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      a.querySelector('.aides-caret').textContent = open ? '▼' : '▶';
+    });
+  }
+  function setup() { document.querySelectorAll('.aides').forEach(build); }
+  document.addEventListener('DOMContentLoaded', function () {
+    setup();
+    setTimeout(setup, 100);
+  });
+})();
+</script>
+<script>
+// Trois outils à côté du titre (comme « bookup ») : GitHub · Téléchargement · Thème clair/sombre.
+(function () {
+  // >>> À COMPLÉTER : URL du dépôt GitHub du projet <<<
+  var GITHUB_URL = "https://github.com/qlambotte/imsv-exos-2026";
+
+  var SVG = {
+    github: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
+    download: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a.75.75 0 0 1 .75.75v6.44l1.97-1.97a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 1.06-1.06l1.97 1.97V1.75A.75.75 0 0 1 8 1zM2.75 12a.75.75 0 0 1 .75.75v.75a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-.75a.75.75 0 0 1 1.5 0v.75A2 2 0 0 1 12 15.5H4a2 2 0 0 1-2-2v-.75a.75.75 0 0 1 .75-.75z"/></svg>',
+    sun: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 4.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM8 0a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1A.75.75 0 0 1 8 0zm0 13a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1A.75.75 0 0 1 8 13zM16 8a.75.75 0 0 1-.75.75h-1a.75.75 0 0 1 0-1.5h1A.75.75 0 0 1 16 8zM3 8a.75.75 0 0 1-.75.75h-1a.75.75 0 0 1 0-1.5h1A.75.75 0 0 1 3 8zm10.66-5.66a.75.75 0 0 1 0 1.06l-.7.7a.75.75 0 1 1-1.06-1.06l.7-.7a.75.75 0 0 1 1.06 0zM4.1 11.9a.75.75 0 0 1 0 1.06l-.7.7a.75.75 0 0 1-1.06-1.06l.7-.7a.75.75 0 0 1 1.06 0zm9.56 1.76a.75.75 0 0 1-1.06 0l-.7-.7a.75.75 0 1 1 1.06-1.06l.7.7a.75.75 0 0 1 0 1.06zM4.1 4.1a.75.75 0 0 1-1.06 0l-.7-.7a.75.75 0 0 1 1.06-1.06l.7.7a.75.75 0 0 1 0 1.06z"/></svg>',
+    moon: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278z"/></svg>'
+  };
+
+  function makeTool(tag, cls, html, title) {
+    var el = document.createElement(tag);
+    el.className = 'imsv-tool ' + (cls || '');
+    el.setAttribute('title', title);
+    el.setAttribute('aria-label', title);
+    el.innerHTML = html;
+    return el;
+  }
+
+  function build() {
+    var host = document.querySelector('.sidebar-tools-main');
+    if (!host) {
+      var title = document.querySelector('#quarto-sidebar .sidebar-title');
+      if (!title) return;
+      host = document.createElement('div');
+      host.className = 'sidebar-tools-main';
+      title.appendChild(host);
+    }
+    if (host.dataset.imsvTools) return;
+    host.dataset.imsvTools = '1';
+
+    // 1) GitHub
+    var gh = makeTool('a', '', SVG.github, 'Code source (GitHub)');
+    gh.setAttribute('href', GITHUB_URL);
+    gh.setAttribute('target', '_blank');
+    gh.setAttribute('rel', 'noopener');
+
+    // 2) Téléchargement — repris du menu présent dans le corps de la page
+    //    (uniquement sur les pages qui ont des PDF : séances).
+    var bodyMenu = document.querySelector('.dl .dl-menu') || document.querySelector('.dl-menu');
+    var dlWrap = null;
+    if (bodyMenu && bodyMenu.querySelectorAll('a').length) {
+      dlWrap = makeTool('div', 'imsv-dl', SVG.download, 'Télécharger les PDF');
+      var menu = document.createElement('div');
+      menu.className = 'imsv-dl-menu';
+      menu.hidden = true;
+      var head = document.createElement('div');
+      head.className = 'imsv-dl-head';
+      head.textContent = 'Télécharger';
+      menu.appendChild(head);
+      bodyMenu.querySelectorAll('a').forEach(function (a) {
+        var link = document.createElement('a');
+        link.href = a.getAttribute('href');
+        link.textContent = a.textContent;
+        menu.appendChild(link);
+      });
+      var container = document.querySelector('.dl');
+      if (container) container.hidden = true;      // on masque le menu du corps (doublon)
+      dlWrap.appendChild(menu);
+      dlWrap.addEventListener('click', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        menu.hidden = !menu.hidden;
+      });
+      document.addEventListener('click', function () { menu.hidden = true; });
+      menu.addEventListener('click', function (e) { e.stopPropagation(); });
+    }
+
+    // 3) Thème clair / sombre
+    function isDark() { return document.documentElement.getAttribute('data-theme') === 'dark'; }
+    var themeBtn = makeTool('button', '', isDark() ? SVG.sun : SVG.moon,
+                            isDark() ? 'Passer en thème clair' : 'Passer en thème sombre');
+    themeBtn.type = 'button';
+    themeBtn.addEventListener('click', function () {
+      var dark = !isDark();
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      try { localStorage.setItem('imsv-theme', dark ? 'dark' : 'light'); } catch (e) {}
+      themeBtn.innerHTML = dark ? SVG.sun : SVG.moon;
+      themeBtn.setAttribute('title', dark ? 'Passer en thème clair' : 'Passer en thème sombre');
+    });
+
+    host.appendChild(gh);
+    if (dlWrap) host.appendChild(dlWrap);
+    host.appendChild(themeBtn);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    build();
+    setTimeout(build, 100);
+  });
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/qlambotte\.github\.io\/imsv-exos-2026\/prof\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../seances/seance02/index.html" class="pagination-link" aria-label="Séance 2 — Calcul fiable et trigonométrie">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Séance 2 — Calcul fiable et trigonométrie</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../seances/seance02/transfert.html" class="pagination-link" aria-label="Transfert — problèmes">
+        <span class="nav-page-text"><span class="chapter-title">Transfert — problèmes</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>IMSV — Faculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Énoncés et correctif des exercices</p>
+</div>
+    <div class="nav-footer-right">
+<p>© Quentin Lambotte · FMPB · UMONS</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
