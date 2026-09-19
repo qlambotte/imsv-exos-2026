@@ -13,7 +13,7 @@ book:
   date-format: "YYYY"
   reader-mode: false
   search: true
-  site-url: "https://qlambotte.github.io/imsv-exos-2026/"
+  site-url: "https://qlambotte.github.io/imsv-exos-2026/prof/"
   sidebar:
     style: docked
     collapse-level: 1
