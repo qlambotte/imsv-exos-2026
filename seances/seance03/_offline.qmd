@@ -1,5 +1,5 @@
 ---
-title: "Séance 03 — corrections (hors-ligne)"
+title: "Séance 3 — corrections (hors-ligne)"
 subtitle: "IMSV · à consulter sans connexion — garde ce fichier"
 format:
   html:

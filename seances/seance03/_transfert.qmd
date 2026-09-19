@@ -1,9 +1,12 @@
-<!-- Fragment TRANSFERT. La numérotation CONTINUE après le socle : si le socle va
-     jusqu'à l'exercice 7, le transfert commence à 8. Titre de la forme
-     "Exercice N|Transfert|niveau|Ox" (Ox = objectif travaillé, pastille dans l'en-tête). -->
+<!-- TRANSFERT = appliquer l'outil du socle à un CONTEXTE NOUVEAU (vrais problèmes).
+     Calcul sans calculatrice. Ensemble solution noté Sol. -->
 
-::: {.callout-caution .exo title="Exercice 8|Transfert|3|O2"}
-**Titre du problème.** Énoncé (contexte nouveau, pas repris tel quel du cours)………
+::: {.callout-caution .exo title="Exercice|Transfert|2|O1"}
+Une culture de cellules **double** chaque jour. Après avoir doublé deux jours de suite, on prélève
+$40$ cellules pour une analyse ; il en reste alors $120$. Combien de cellules la culture
+comptait-elle au départ ?
+
+Suis la démarche complète : **inconnue → équation → résolution → vérification → réponse**.
 :::
 
 ::: {.aides}
@@ -11,23 +14,188 @@
 
 ## Indice 1
 
-*Référence théorique.*
-
-………
+Retourne à la théorie du cours : *Modéliser : du texte à l'équation*.
 
 ## Indice 2
 
 *Question à te poser.*
 
-………
+Que devient l'effectif après **un** doublement ? après **deux** ? À quel moment retire-t-on les $40$ cellules ?
+
+## Indice 3
+
+*Étape.*
+
+Note $x$ l'effectif initial. Deux doublements donnent $4x$ ; on retire ensuite $40$.
 
 ## Solution
 
-………
+- **Inconnue :** $x$, le nombre de cellules au départ.
+- **Équation :** $4x - 40 = 120$.
+- **Résolution :** $4x = 160$, donc $x = 40$. $\mathrm{Sol} = \{40\}$.
+- **Vérification :** $40 \to 80 \to 160$, puis $160 - 40 = 120$. ✓
+- **Réponse :** la culture comptait $40$ cellules au départ.
 
 ## Piège
 
-………
+Retirer les $40$ **avant** de doubler, ou ne doubler qu'une seule fois : traduire l'énoncé dans le bon **ordre** est l'essentiel de la modélisation.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O3"}
+On souhaite préparer $100$ mL d'un mélange à $16$ mg/mL à partir de deux solutions $A$ et $B$,
+respectivement à $10$ et $20$ mg/mL. Quels volumes $v_A$ et $v_B$ faut-il prélever ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Préparation d'un mélange* et *Résolution par substitution / élimination*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quelles sont les deux contraintes à satisfaire **en même temps** : celle sur le **volume total**, et celle sur la **masse de soluté** ?
+
+## Indice 3
+
+*Étape.*
+
+Volume : $v_A + v_B = 100$. Masse de soluté : $10\, v_A + 20\, v_B = 16 \cdot 100$.
+
+## Solution
+
+Le système est
+$$\begin{cases} v_A + v_B = 100, \\ 10\, v_A + 20\, v_B = 1600. \end{cases}$$
+Par substitution, $v_A = 100 - v_B$, d'où $10(100 - v_B) + 20\, v_B = 1600$, soit
+$1000 + 10\, v_B = 1600$, donc $v_B = 60$ et $v_A = 40$. $\mathrm{Sol} = \{(40,\, 60)\}$.
+
+**Vérification :** $40 + 60 = 100$ ✓ ; $10 \cdot 40 + 20 \cdot 60 = 400 + 1200 = 1600$ ✓.
+
+**Réponse :** prélever $40$ mL de $A$ et $60$ mL de $B$.
+
+## Piège
+
+N'écrire qu'une seule contrainte (le volume, en oubliant la masse de soluté) : deux inconnues exigent **deux** équations.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O4"}
+Un spectrophotomètre relie l'absorbance $A$ à la concentration $C$ (en mmol/L) par une **droite**.
+Deux étalons donnent $(C,\, A) = (2\, ;\, 0{,}25)$ et $(6\, ;\, 0{,}45)$.
+
+(a) Détermine la droite d'étalonnage $A(C) = m\, C + p$.
+(b) Un échantillon inconnu donne $A = 0{,}40$. Quelle est sa concentration ?
+(c) Que représente concrètement l'ordonnée à l'origine $p$ ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Équation d'une droite* et *Retour à l'étalonnage*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Comment obtenir la pente à partir des deux étalons ? Une fois la droite connue, la question (b) demande-t-elle de partir de $C$ ou de $A$ ?
+
+## Solution
+
+(a) $m = \dfrac{0{,}45 - 0{,}25}{6 - 2} = \dfrac{0{,}20}{4} = 0{,}05$ ; $p = 0{,}25 - 0{,}05 \cdot 2 = 0{,}15$.
+Donc $A(C) = 0{,}05\, C + 0{,}15$.
+
+(b) On résout $0{,}40 = 0{,}05\, C + 0{,}15$, soit $0{,}05\, C = 0{,}25$, donc $C = 5$ mmol/L.
+
+(c) $p = 0{,}15$ est l'absorbance mesurée pour une concentration nulle : c'est le **biais instrumental** (le signal résiduel de l'appareil).
+
+## Piège
+
+En (b), utiliser la concentration comme si c'était l'absorbance : ici l'inconnue est $C$, on part donc de la valeur de $A$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|3|O5"}
+Un projectile suit la trajectoire $y = -x^2 + 6x$, où $y$ est la hauteur et $x$ la distance
+horizontale (toutes deux en mètres).
+
+(a) À quelle(s) distance(s) le projectile est-il à la hauteur $y = 5$ m ?
+(b) À quelle distance retombe-t-il au sol ($y = 0$) ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Équation du second degré* et *Résolution (discriminant)*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Comment ramener « la trajectoire atteint la hauteur $5$ » à une équation du second degré de la forme $ax^2 + bx + c = 0$ ?
+
+## Indice 3
+
+*Étape.*
+
+Pour (a), pose $-x^2 + 6x = 5$, puis mets tout d'un même côté. Pour (b), pose $-x^2 + 6x = 0$ et mets en évidence.
+
+## Solution
+
+(a) $-x^2 + 6x = 5 \;\Rightarrow\; x^2 - 6x + 5 = 0$. $\Delta = (-6)^2 - 4 \cdot 1 \cdot 5 = 36 - 20 = 16 > 0$.
+$$x_{1,2} = \dfrac{6 \pm \sqrt{16}}{2} = \dfrac{6 \pm 4}{2} \;\Rightarrow\; x_1 = 1, \quad x_2 = 5.$$
+Le projectile est à $5$ m de haut à $x = 1$ m (en montant) **et** à $x = 5$ m (en descendant).
+
+(b) $-x^2 + 6x = 0 \;\Rightarrow\; x(6 - x) = 0$, donc $x = 0$ (départ) ou $x = 6$. Il retombe au sol à $x = 6$ m.
+
+## Piège
+
+Oublier l'une des deux solutions en (a) : une hauteur intermédiaire est atteinte **deux** fois (montée et descente). En (b), retenir $x = 0$ comme point d'atterrissage alors que c'est le départ.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|3|O4"}
+Un laboratoire propose deux forfaits pour $x$ analyses. Le forfait $A$ coûte $y = 3x + 20$ (en €) ;
+le forfait $B$ coûte $y = 5x$.
+
+(a) Pour combien d'analyses les deux forfaits coûtent-ils le **même** prix ?
+(b) À partir de combien d'analyses le forfait $A$ devient-il le plus avantageux ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Intersection de droites* et *Inéquations*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Le « même prix » correspond à quel objet graphique commun aux deux droites ? Pour (b), au-delà de ce point, quelle droite passe **en dessous** de l'autre ?
+
+## Solution
+
+(a) On impose l'égalité des deux prix : $3x + 20 = 5x \;\Rightarrow\; 20 = 2x \;\Rightarrow\; x = 10$.
+Les deux forfaits coûtent alors $5 \cdot 10 = 50$ € : c'est l'**intersection** des deux droites.
+
+(b) Pour $x > 10$, on a $3x + 20 < 5x$ : le forfait $A$ est le moins cher. À partir de $11$ analyses, $A$ est plus avantageux (à $10$ analyses, les deux se valent).
+
+## Piège
+
+Conclure sans regarder **de quel côté** de l'intersection on se place : l'égalité donne le seuil, l'inégalité dit qui l'emporte au-delà.
 
 :::
 :::

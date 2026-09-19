@@ -1,0 +1,49 @@
+---
+title: "Feuille de méthodes — Séance 3"
+subtitle: "IMSV · à compléter à partir des corrections"
+format:
+  typst:
+    papersize: a4
+    margin: {x: 2cm, y: 1.7cm}
+    fontsize: 11pt
+    toc: false
+---
+
+```{=typst}
+#let rule() = line(length: 100%, stroke: 0.4pt + luma(58%))
+#let lines(n) = { for _ in range(n) { v(1fr); rule() } }
+#let sect(label, n) = { v(1fr); block(above: 0pt, below: 2pt, text(size: 10.5pt, weight: 600, label)); lines(n) }
+#let cfield(label) = { block(above: 9pt, below: 3pt, text(size: 10pt, weight: 600, label)); rule() }
+#let badge(t) = box(inset: (x: 7pt, y: 3pt), radius: 3pt, fill: rgb("#e7eef8"),
+  text(size: 10pt, weight: 700, fill: rgb("#2f4f7a"), t))
+#let rappel = block(width: 100%, inset: 9pt, radius: 4pt, fill: rgb("#f3f6fb"),
+  stroke: 0.6pt + rgb("#c7d6ea"),
+  text(size: 9pt, fill: luma(30%))[*Comment remplir une méthode.* Une méthode se résume en cinq parties : son *nom* (déjà indiqué), *quand l'utiliser* — la situation qui la déclenche, les *étapes* à suivre dans l'ordre, un *exemple* sur un cas concret, et le *piège* à éviter. Tu n'as rien à inventer : les étapes se retrouvent dans l'*Indice 2* des exercices et le piège dans leur case *Piège*. Le corrigé de la plupart des méthodes est en ligne dans la boîte à outils.])
+
+#let page_methode(titre, obj) = {
+  grid(columns: (1fr, auto), column-gutter: 10pt, align: (left+horizon, right+horizon),
+    text(size: 15pt, weight: 700, titre), badge(obj))
+  v(2pt)
+  cfield("Exercices associés (numéros)")
+  cfield("Théorie associée (chapitre / slide)")
+  sect("Quand l'utiliser ?", 1)
+  sect("Étapes", 6)
+  sect("Exemple", 3)
+  sect("Le piège", 3)
+  v(1fr)
+}
+
+#rappel
+#v(10pt)
+#page_methode("Mettre un problème en équation", "O1")
+#pagebreak()
+#page_methode("Résoudre une équation ou une inéquation du premier degré", "O2")
+#pagebreak()
+#page_methode("Résoudre un système linéaire (substitution ou élimination)", "O3")
+#pagebreak()
+#page_methode("Équation d'une droite : pente et ordonnée à l'origine", "O4")
+#pagebreak()
+#page_methode("Proportionnalité, taux et conversions", "O4")
+#pagebreak()
+#page_methode("Résoudre une équation du second degré (discriminant)", "O5")
+```

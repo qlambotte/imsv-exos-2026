@@ -1,15 +1,15 @@
-<!-- Fragment SOCLE : les exercices routiniers. Un exercice = un encadré .exo suivi
-     d'un bloc .aides (onglets Indice 1/2/3 · Solution · Piège). Le titre a la forme
-     "Exercice N|Socle|niveau|Ox" : niveau = 1,2,3 (→ ★) ; Ox = l'objectif travaillé
-     (O1/O2/O3), affiché en pastille dans l'en-tête. Numérotation CONTINUE sur la
-     séance (le transfert continue après le dernier numéro du socle). Dupliquer le
-     couple ci-dessous pour chaque exercice. -->
+<!-- SOCLE = LE NOYAU (à faire par tous, en séance ou à la maison).
+     Numérotation AUTOMATIQUE (exercice.lua) : titre « Exercice|Catégorie|niveau|Objectif », sans numéro.
+     Convention : « Indice 1 » renvoie TOUJOURS à la théorie du cours (par nom de section) ;
+     les coups de pouce concrets sont dans « Indice 2 » et suivants.
+     Calcul sans calculatrice : valeurs rondes, fractions qui tombent juste. Ensemble solution noté Sol. -->
 
-::: {.callout-caution .exo title="Exercice 1|Socle|1|O3"}
-**Titre court.** Énoncé………
+::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
+Pour chaque situation, **choisis l'inconnue** (avec son unité) et **écris l'équation** — sans la résoudre.
 
-(a) ………
-(b) ………
+(a) Un nombre augmenté de $8$ vaut $21$.
+(b) Le double d'un nombre, diminué de $5$, vaut $17$.
+(c) Après une remise de $10$ €, un article coûte $40$ €.
 :::
 
 ::: {.aides}
@@ -17,30 +17,356 @@
 
 ## Indice 1
 
-*Référence théorique.*
-
-Renvoi précis à la théorie………
+Retourne à la théorie du cours : *Modéliser : du texte à l'équation*.
 
 ## Indice 2
 
 *Question à te poser.*
 
-La bonne question (pas l'étape)………
+Quelle grandeur cherche-t-on ? Comment se lit « augmenté de », « le double de », « diminué de »,
+« après une remise de » en opérations ?
+
+## Solution
+
+(a) Soit $x$ le nombre : $x + 8 = 21$.
+(b) Soit $x$ le nombre : $2x - 5 = 17$.
+(c) Soit $p$ le prix initial (en €) : $p - 10 = 40$.
+
+## Piège
+
+Traduire « le double, diminué de $5$ » par $2(x-5)$ au lieu de $2x - 5$ : l'ordre des mots fixe l'ordre des opérations.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|1|O2"}
+Résous chaque équation du premier degré.
+
+(a) $5x - 3 = 12$
+(b) $3x + 7 = x + 15$
+(c) $2(x - 4) = 10$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Transformer une équation*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quelle transformation **identique** appliquer aux **deux membres** pour isoler $x$ ? Faut-il d'abord développer un produit ?
+
+## Solution
+
+(a) $5x = 15$, donc $x = 3$. $\mathrm{Sol} = \{3\}$.
+(b) $2x = 8$, donc $x = 4$. $\mathrm{Sol} = \{4\}$.
+(c) $2x - 8 = 10$, donc $2x = 18$ et $x = 9$. $\mathrm{Sol} = \{9\}$.
+
+## Piège
+
+Changer un terme de membre **sans changer son signe** ; en (c), écrire $2x - 4 = 10$ (distribution incomplète).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O2"}
+Résous $\dfrac{x+2}{3} + \dfrac{x-1}{2} = 6.$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Équations avec fractions*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Par quelle quantité multiplier **les deux membres** pour supprimer d'un coup les deux dénominateurs ?
 
 ## Indice 3
 
 *Étape.*
 
-Une amorce………  *(supprimer cet onglet si inutile)*
+Multiplie chaque membre par $6$ (le dénominateur commun), puis développe : $2(x+2) + 3(x-1) = 36$.
 
 ## Solution
 
-(a) ………
-(b) ………
+$$2(x+2) + 3(x-1) = 36 \;\Rightarrow\; 2x + 4 + 3x - 3 = 36 \;\Rightarrow\; 5x + 1 = 36 \;\Rightarrow\; x = 7.$$
+$\mathrm{Sol} = \{7\}$. **Vérification** : $\dfrac{9}{3} + \dfrac{6}{2} = 3 + 3 = 6$. ✓
 
 ## Piège
 
-La faute usuelle à éviter………
+Ne multiplier qu'**un seul** terme par $6$, ou oublier de distribuer le facteur sur le numérateur $(x+2)$ et $(x-1)$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O2"}
+Résous chaque inéquation, et écris l'ensemble solution sous forme d'intervalle.
+
+(a) $3x - 1 > 8$
+(b) $-2x + 1 \le 7$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Inéquations*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Les transformations sont celles des équations, à une exception : dans quel cas le sens de l'inégalité doit-il s'inverser ?
+
+## Solution
+
+(a) $3x > 9$, donc $x > 3$. $\mathrm{Sol} = \,]3,\, +\infty[$.
+(b) $-2x \le 6$ ; en divisant par $-2$ (négatif), le sens s'inverse : $x \ge -3$. $\mathrm{Sol} = [-3,\, +\infty[$.
+
+## Piège
+
+Diviser par un nombre négatif **sans** inverser le sens de l'inégalité (écrire $x \le -3$ en (b)).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O2"}
+L'aire d'un carré vaut $36$ m². Quelle est la longueur (en mètres) de son côté ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Domaine et validation contextuelle*.
+
+## Indice 2
+
+*Question à te poser.*
+
+L'équation admet deux solutions algébriques : les **deux** ont-elles un sens comme longueur ?
+
+## Solution
+
+Soit $c$ le côté (en m). Mise en équation : $c^2 = 36$, donc $\mathrm{Sol} = \{-6,\, 6\}$.
+Une longueur est positive : la seule solution admissible dans le contexte est $c = 6$ m.
+
+## Piège
+
+Garder la solution négative alors que le contexte l'interdit — ou, à l'inverse, oublier qu'algébriquement il y a bien **deux** solutions.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O4"}
+Le prix des oranges est **directement proportionnel** à la masse : $2$ €/kg.
+
+(a) Écris le prix $p$ (en €) en fonction de la masse $m$ (en kg).
+(b) Combien coûtent $3{,}5$ kg ?
+(c) On ajoute un forfait de livraison fixe de $5$ €. Écris la nouvelle relation. Est-elle encore proportionnelle ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Proportionnalité et règles de trois*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Une relation proportionnelle s'écrit $y = kx$ : que vaut ici le facteur $k$ ? Un forfait fixe change-t-il la pente, ou l'ordonnée à l'origine ?
+
+## Solution
+
+(a) $p = 2m$.
+(b) $p = 2 \cdot 3{,}5 = 7$ €.
+(c) $p = 2m + 5$. Elle n'est **plus** proportionnelle : c'est une relation **affine** (elle ne passe pas par l'origine).
+
+## Piège
+
+Confondre relation **linéaire** ($p = 2m$, passe par l'origine) et **affine** ($p = 2m + 5$) ; croire qu'un forfait fixe se traite par une règle de trois.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O4"}
+Convertis les vitesses suivantes.
+
+(a) $72$ km/h en m/s.
+(b) $18$ km/h en m/s.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Taux et conversions*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Combien de mètres dans $1$ km, combien de secondes dans $1$ h ? Une vitesse en m/s est-elle plus petite ou plus grande que la même en km/h ?
+
+## Solution
+
+(a) $72$ km/h $= \dfrac{72\,000 \text{ m}}{3\,600 \text{ s}} = 20$ m/s.
+(b) $18$ km/h $= \dfrac{18\,000 \text{ m}}{3\,600 \text{ s}} = 5$ m/s.
+
+## Piège
+
+Multiplier au lieu de diviser (ou l'inverse) : contrôle par l'ordre de grandeur — en m/s, le nombre doit être **plus petit** qu'en km/h.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O4"}
+Détermine l'équation de la droite passant par les points $(1,\, 3)$ et $(3,\, 7)$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Équation d'une droite*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quelle est la formule de la pente à partir de deux points ? Une fois la pente connue, comment retrouver l'ordonnée à l'origine avec **un** des deux points ?
+
+## Indice 3
+
+*Étape.*
+
+Calcule d'abord $m = \dfrac{y_2 - y_1}{x_2 - x_1}$, puis $p = y_1 - m\, x_1$.
+
+## Solution
+
+$m = \dfrac{7 - 3}{3 - 1} = \dfrac{4}{2} = 2$ ; $p = 3 - 2 \cdot 1 = 1$. Donc $y = 2x + 1$.
+**Vérification** avec $(3,7)$ : $2 \cdot 3 + 1 = 7$. ✓
+
+## Piège
+
+Inverser le rapport de la pente ($\frac{x_2 - x_1}{y_2 - y_1}$), ou mélanger l'ordre des points au numérateur et au dénominateur.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|1|O4"}
+Une concentration évolue selon $C(t) = 20 - 3t$, où $C$ s'exprime en mg/L et $t$ en heures.
+
+(a) Que représente le coefficient $-3$ ?
+(b) Que représente le nombre $20$ ?
+(c) La concentration croît-elle ou décroît-elle ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Interpréter une équation de droite* et *Différents types de droites*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Dans $y = mx + p$, lequel des deux nombres est la pente, lequel est l'ordonnée à l'origine ? Que dit le **signe** de la pente sur le sens de variation ?
+
+## Solution
+
+(a) $-3$ est la **pente** : un **taux de variation** de $-3$ mg/L par heure (la concentration diminue de $3$ mg/L chaque heure).
+(b) $20$ est l'**ordonnée à l'origine** : la concentration **initiale** (à $t = 0$), soit $20$ mg/L.
+(c) La pente est négative, donc la concentration **décroît**.
+
+## Piège
+
+Oublier l'unité du taux (mg/L **par heure**) ; interpréter le signe $-$ comme une simple valeur sans y lire une diminution.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O3"}
+Résous le système
+$$\begin{cases} x + y = 7, \\ 2x - y = 2. \end{cases}$$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Résolution par substitution* et *Résolution par élimination*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Peux-tu isoler une inconnue dans la première équation pour la remplacer dans la seconde ? Ou additionner les deux équations pour éliminer $y$ d'un coup ?
+
+## Solution
+
+Par substitution : la première donne $y = 7 - x$. On remplace dans la seconde :
+$$2x - (7 - x) = 2 \;\Rightarrow\; 3x - 7 = 2 \;\Rightarrow\; x = 3, \quad\text{puis } y = 7 - 3 = 4.$$
+$\mathrm{Sol} = \{(3,\, 4)\}$.
+
+## Piège
+
+Oublier que la solution d'un système à deux inconnues est un **couple** $(x, y)$, pas un seul nombre ; en éliminant, ne pas ajouter les équations **terme à terme**.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O5"}
+Résous l'équation du second degré $x^2 - 5x + 6 = 0.$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Équation du second degré* et *Résolution (discriminant)*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Que valent $a$, $b$, $c$ ici ? Que dit le signe du discriminant $\Delta = b^2 - 4ac$ sur le nombre de solutions ?
+
+## Indice 3
+
+*Étape.*
+
+Calcule $\Delta = b^2 - 4ac$, puis, si $\Delta > 0$, applique $x_{1,2} = \dfrac{-b \pm \sqrt{\Delta}}{2a}$.
+
+## Solution
+
+Ici $a = 1$, $b = -5$, $c = 6$, donc $\Delta = (-5)^2 - 4 \cdot 1 \cdot 6 = 25 - 24 = 1 > 0$ : deux solutions.
+$$x_{1,2} = \dfrac{5 \pm \sqrt{1}}{2} = \dfrac{5 \pm 1}{2} \;\Rightarrow\; x_1 = 3, \quad x_2 = 2.$$
+$\mathrm{Sol} = \{2,\, 3\}$.
+
+## Piège
+
+Se tromper de signe sur $b$ dans $-b$ (ici $-b = 5$) ; oublier le $2a$ au dénominateur.
 
 :::
 :::

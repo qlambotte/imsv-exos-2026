@@ -1,0 +1,20 @@
+---
+title: "Séance 3 — Équations, proportions et géométrie analytique"
+description: "Équations, proportions et géométrie analytique"
+order: 3
+nom: "[Équations, proportions et géométrie analytique](methodes/seance03.html)"
+correction: "✅ en ligne"
+filters:
+  - ../../methode.lua
+---
+
+::: {.content-visible when-format="html"}
+::: {.dl}
+<details class="dl-menu">
+<summary>Télécharger (PDF)</summary>
+<a href="../../pdf/feuille-seance03.pdf" download>Feuille à compléter — séance 3 (PDF)</a>
+</details>
+:::
+:::
+
+{{< include _corrige-seance03.qmd >}}

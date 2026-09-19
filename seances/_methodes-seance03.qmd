@@ -1,0 +1,144 @@
+<!-- Cartes de méthode — SÉANCE 3 (Équations, proportions et géométrie analytique).
+     Fragment sans en-tête : inclus par la page methodes/seance03.qmd (site, correctif)
+     et par build-boite.sh pour le PDF « méthodes » (une méthode par page).
+     Mise en forme par le filtre methode.lua. Calc-free, notation du cours (Sol). -->
+
+::: {.methode obj="O1" titre="Mettre un problème en équation"}
+
+::: {.quand}
+Dès qu'un énoncé décrit une situation par des mots et demande une valeur inconnue.
+:::
+
+::: {.etapes}
+1. **Choisis l'inconnue** et note son **unité** ($x$ = …, en …).
+2. **Traduis** chaque relation de l'énoncé en une égalité ; respecte l'**ordre** des mots.
+3. **Résous** l'équation obtenue par transformations identiques.
+4. **Contrôle** que la solution est **admissible** dans le contexte (signe, domaine, ordre de grandeur).
+5. **Énonce** la réponse avec son unité.
+:::
+
+::: {.exemple}
+« Le double d'un nombre, diminué de $5$, vaut $17$. » Inconnue $x$ : $2x - 5 = 17 \Rightarrow 2x = 22 \Rightarrow x = 11$.
+:::
+
+::: {.piege}
+Traduire dans le mauvais ordre — $2(x - 5)$ pour « le double, diminué de $5$ » au lieu de $2x - 5$ — ou oublier de vérifier que la réponse a un sens.
+:::
+
+:::
+
+::: {.methode obj="O2" titre="Résoudre une équation ou une inéquation du premier degré"}
+
+::: {.quand}
+Dès qu'une (in)égalité met en jeu une inconnue à la puissance $1$.
+:::
+
+::: {.etapes}
+1. Développe les produits et supprime les fractions (multiplie les deux membres par le dénominateur commun).
+2. Regroupe les termes en $x$ d'un côté, les nombres de l'autre, par transformations **identiques** aux deux membres.
+3. Isole $x$ en divisant par son coefficient.
+4. Pour une **inéquation** : si tu multiplies ou divises par un nombre **négatif**, **inverse** le sens de l'inégalité.
+5. Écris l'ensemble solution ($\mathrm{Sol} = \{\dots\}$, ou un intervalle pour une inéquation).
+:::
+
+::: {.exemple}
+$-2x + 3 \le 11 \Rightarrow -2x \le 8 \Rightarrow x \ge -4$ (division par $-2$ : le sens s'inverse). $\mathrm{Sol} = [-4,\, +\infty[$.
+:::
+
+::: {.piege}
+Changer un terme de membre sans changer son signe ; diviser par un négatif **sans** inverser l'inégalité.
+:::
+
+:::
+
+::: {.methode obj="O3" titre="Résoudre un système linéaire (substitution ou élimination)"}
+
+::: {.quand}
+Dès qu'il faut trouver **plusieurs** inconnues satisfaisant **plusieurs** équations en même temps.
+:::
+
+::: {.etapes}
+1. **Substitution** : isole une inconnue dans une équation, remplace-la dans l'autre, résous, puis remonte la chaîne.
+2. **Élimination** : multiplie une équation pour opposer les coefficients d'une inconnue, additionne **terme à terme** pour la faire disparaître, résous, puis remonte.
+3. Donne la solution comme un **couple** $(x, y)$.
+4. **Vérifie** le couple dans **les deux** équations de départ.
+:::
+
+::: {.exemple}
+$\begin{cases} v_A + v_B = 100 \\ 10 v_A + 20 v_B = 1600 \end{cases}$ : substitution $v_A = 100 - v_B$ donne $v_B = 60$, $v_A = 40$. $\mathrm{Sol} = \{(40, 60)\}$.
+:::
+
+::: {.piege}
+Donner un seul nombre au lieu d'un couple ; en élimination, ne multiplier qu'**un** membre de l'équation.
+:::
+
+:::
+
+::: {.methode obj="O4" titre="Équation d'une droite : pente et ordonnée à l'origine"}
+
+::: {.quand}
+Dès qu'il faut trouver, lire ou interpréter l'équation $y = mx + p$ d'une droite.
+:::
+
+::: {.etapes}
+1. À partir de deux points $(x_1, y_1)$ et $(x_2, y_2)$ (avec $x_1 \ne x_2$), calcule la **pente** $m = \dfrac{y_2 - y_1}{x_2 - x_1}$.
+2. Déduis l'**ordonnée à l'origine** avec un point : $p = y_1 - m\, x_1$.
+3. Écris l'équation $y = mx + p$ et vérifie avec l'autre point.
+4. **Interprète** : $m$ est un **taux de variation** (de $y$ par unité de $x$) ; son signe dit si la droite croît, décroît ou est constante. $p$ est la valeur de $y$ pour $x = 0$.
+:::
+
+::: {.exemple}
+Par $(1, 3)$ et $(3, 7)$ : $m = \dfrac{7 - 3}{3 - 1} = 2$ ; $p = 3 - 2 \cdot 1 = 1$. D'où $y = 2x + 1$.
+:::
+
+::: {.piege}
+Inverser le rapport de la pente ; oublier qu'une droite **verticale** ($x = c$) n'a pas de pente et n'est pas une fonction.
+:::
+
+:::
+
+::: {.methode obj="O4" titre="Proportionnalité, taux et conversions"}
+
+::: {.quand}
+Dès que deux grandeurs varient « par unité de » l'une l'autre : prix par kg, distance par heure, masse par volume…
+:::
+
+::: {.etapes}
+1. Vérifie que les grandeurs sont **directement proportionnelles** : $y = kx$ (la relation passe par l'origine). Un **coût fixe** la rend **affine** ($y = kx + p$) : plus de règle de trois.
+2. Identifie le **facteur** $k$ (le taux), avec son unité.
+3. Pour convertir un taux, passe par les **unités de base** ($1$ km $= 1000$ m, $1$ h $= 3600$ s, …).
+4. **Contrôle** par l'ordre de grandeur : le résultat va-t-il dans le sens attendu (plus grand / plus petit) ?
+:::
+
+::: {.exemple}
+$72$ km/h $= \dfrac{72\,000 \text{ m}}{3\,600 \text{ s}} = 20$ m/s. Prix à $3$ €/kg : $p = 3m$ (linéaire) ; avec $5$ € de livraison : $p = 3m + 5$ (affine).
+:::
+
+::: {.piege}
+Appliquer une règle de trois à une relation **affine** (avec coût fixe) ; se tromper de sens (multiplier au lieu de diviser) dans une conversion.
+:::
+
+:::
+
+::: {.methode obj="O5" titre="Résoudre une équation du second degré (discriminant)"}
+
+::: {.quand}
+Dès qu'une équation se ramène à la forme $ax^2 + bx + c = 0$ (avec $a \ne 0$).
+:::
+
+::: {.etapes}
+1. Mets l'équation sous forme développée $ax^2 + bx + c = 0$ (tout d'un même côté).
+2. Calcule le **discriminant** $\Delta = b^2 - 4ac$.
+3. Selon son **signe** : $\Delta > 0$ → deux solutions $x_{1,2} = \dfrac{-b \pm \sqrt{\Delta}}{2a}$ ; $\Delta = 0$ → une solution $x = \dfrac{-b}{2a}$ ; $\Delta < 0$ → aucune solution réelle.
+4. Écris l'ensemble solution.
+:::
+
+::: {.exemple}
+$x^2 - 5x + 6 = 0$ : $\Delta = 25 - 24 = 1 > 0$, donc $x_{1,2} = \dfrac{5 \pm 1}{2}$, soit $x = 3$ ou $x = 2$. $\mathrm{Sol} = \{2, 3\}$.
+:::
+
+::: {.piege}
+Se tromper de signe dans $-b$ ; oublier le $2a$ au dénominateur ; conclure sur la **taille** de $\Delta$ plutôt que sur son **signe**.
+:::
+
+:::

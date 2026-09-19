@@ -1,12 +1,14 @@
 ::: {.callout-note appearance="simple"}
-Ces exercices restent **dans les objectifs** de la séance (donc **examinables**) : à faire une fois
-le socle et le transfert bouclés, en séance ou à la maison.
+Ces exercices restent **dans les objectifs** de la séance : à faire une fois le socle et le transfert
+bouclés, en séance ou à la maison. L'échelle d'aide y est plus courte : un **indice**, puis la **solution**.
 :::
 
-### Renforcement — le socle, un cran plus loin
+::: {.callout-caution .exo title="Exercice|Renforcement|1|O2"}
+Résous chaque équation du premier degré.
 
-::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
-**Variation d'un exercice du socle** (même savoir-faire, contexte/valeurs nouveaux)………
+(a) $4x + 9 = 2x + 21$
+(b) $3(x - 2) = x + 4$
+(c) $\dfrac{x - 3}{4} = 2$
 :::
 
 ::: {.aides}
@@ -14,11 +16,260 @@ le socle et le transfert bouclés, en séance ou à la maison.
 
 ## Indice
 
-Un seul indice………
+Regroupe les $x$ d'un côté, les nombres de l'autre, par transformations **identiques** aux deux membres. En (c), multiplie d'abord les deux membres par $4$.
 
 ## Solution
 
-………
+(a) $2x = 12$, donc $x = 6$. $\mathrm{Sol} = \{6\}$.
+(b) $3x - 6 = x + 4 \Rightarrow 2x = 10 \Rightarrow x = 5$. $\mathrm{Sol} = \{5\}$.
+(c) $x - 3 = 8 \Rightarrow x = 11$. $\mathrm{Sol} = \{11\}$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
+Résous chaque inéquation, et donne l'ensemble solution en intervalle.
+
+(a) $5 - 2x < 1$
+(b) $-3x + 2 \ge -7$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+N'oublie pas : diviser (ou multiplier) par un nombre **négatif** inverse le sens de l'inégalité.
+
+## Solution
+
+(a) $-2x < -4$ ; en divisant par $-2$, le sens s'inverse : $x > 2$. $\mathrm{Sol} = \,]2,\, +\infty[$.
+(b) $-3x \ge -9$ ; en divisant par $-3$, le sens s'inverse : $x \le 3$. $\mathrm{Sol} = \,]{-}\infty,\, 3]$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
+Un rectangle a un périmètre de $26$ cm ; sa longueur dépasse sa largeur de $3$ cm. Trouve ses
+dimensions (mise en équation, résolution, réponse).
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Exprime la longueur **en fonction** de la largeur, puis écris le périmètre $2 \cdot (\text{longueur} + \text{largeur})$.
+
+## Solution
+
+Soit $x$ la largeur (en cm) ; la longueur est $x + 3$. Périmètre : $2\big(x + (x + 3)\big) = 26$, soit
+$4x + 6 = 26$, donc $4x = 20$ et $x = 5$. La largeur vaut $5$ cm et la longueur $8$ cm.
+**Vérification :** $2(5 + 8) = 26$ ✓.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O4"}
+Calcule la pente de la droite passant par chaque paire de points.
+
+(a) $(0,\, 1)$ et $(2,\, 5)$
+(b) $(-1,\, 4)$ et $(1,\, 0)$
+(c) $(2,\, 3)$ et $(5,\, 3)$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Applique $m = \dfrac{y_2 - y_1}{x_2 - x_1}$, en gardant le **même** ordre des points au numérateur et au dénominateur.
+
+## Solution
+
+(a) $m = \dfrac{5 - 1}{2 - 0} = 2$.
+(b) $m = \dfrac{0 - 4}{1 - (-1)} = \dfrac{-4}{2} = -2$.
+(c) $m = \dfrac{3 - 3}{5 - 2} = 0$ : la droite est **horizontale** ($y = 3$).
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O4"}
+On considère la droite $d : y = 2x + 1$.
+
+(a) Écris l'équation de la droite **parallèle** à $d$ passant par $(0,\, 4)$.
+(b) Quelle est la pente d'une droite **orthogonale** à $d$ ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Deux droites sont parallèles si $m_1 = m_2$, orthogonales si $m_1 = -\dfrac{1}{m_2}$.
+
+## Solution
+
+(a) Même pente que $d$, soit $m = 2$ ; l'ordonnée à l'origine est $4$ (le point $(0,4)$). Donc $y = 2x + 4$.
+(b) Une droite orthogonale à $d$ a pour pente $m = -\dfrac{1}{2}$.
+
+## Piège
+
+Pour l'orthogonalité, prendre l'opposé $-2$ au lieu de l'**opposé de l'inverse** $-\tfrac{1}{2}$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O3"}
+Résous chaque système ; indique clairement la méthode utilisée.
+
+(a) $\begin{cases} 2x + y = 8, \\ x - y = 1. \end{cases}$
+(b) $\begin{cases} x + 2y = 5, \\ 3x - 2y = 7. \end{cases}$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Dans les deux cas, l'**addition** des deux équations élimine directement une inconnue (le $y$).
+
+## Solution
+
+(a) Par élimination, $(2x + y) + (x - y) = 8 + 1 \Rightarrow 3x = 9 \Rightarrow x = 3$, puis $y = 2$. $\mathrm{Sol} = \{(3,\, 2)\}$.
+(b) Par élimination, $(x + 2y) + (3x - 2y) = 5 + 7 \Rightarrow 4x = 12 \Rightarrow x = 3$, puis $3 + 2y = 5 \Rightarrow y = 1$. $\mathrm{Sol} = \{(3,\, 1)\}$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|3|O3"}
+Pour chaque système, dis s'il admet une **solution unique**, **aucune** solution, ou une **infinité**
+de solutions — et justifie.
+
+(a) $\begin{cases} x + y = 4, \\ x + y = 6. \end{cases}$
+(b) $\begin{cases} x + y = 4, \\ 2x + 2y = 8. \end{cases}$
+(c) $\begin{cases} x + y = 4, \\ x - y = 0. \end{cases}$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Compare les deux équations : décrivent-elles des droites parallèles (jamais d'intersection), confondues (mêmes solutions), ou sécantes (une intersection) ?
+
+## Solution
+
+(a) **Aucune solution** : les deux droites sont **parallèles** ($x + y$ ne peut valoir à la fois $4$ et $6$). Système incompatible, $\mathrm{Sol} = \varnothing$.
+(b) **Une infinité** : la seconde équation est le **double** de la première (droites confondues). $\mathrm{Sol} = \{(x, y) \mid x + y = 4\}$.
+(c) **Solution unique** : droites sécantes. En additionnant, $2x = 4 \Rightarrow x = 2$, $y = 2$. $\mathrm{Sol} = \{(2,\, 2)\}$.
+
+## Piège
+
+Croire que deux équations donnent toujours une solution unique : tout dépend de la position relative des deux droites.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O5"}
+Résous chaque équation du second degré (calcule d'abord le discriminant).
+
+(a) $x^2 - 4x + 3 = 0$
+(b) $x^2 - 6x + 9 = 0$
+(c) $x^2 + x + 1 = 0$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Calcule $\Delta = b^2 - 4ac$. Son **signe** annonce le nombre de solutions : $\Delta > 0$ (deux), $\Delta = 0$ (une), $\Delta < 0$ (aucune réelle).
+
+## Solution
+
+(a) $\Delta = 16 - 12 = 4 > 0$ : $x_{1,2} = \dfrac{4 \pm 2}{2}$, donc $x = 3$ ou $x = 1$. $\mathrm{Sol} = \{1,\, 3\}$.
+(b) $\Delta = 36 - 36 = 0$ : une solution double $x = \dfrac{6}{2} = 3$. $\mathrm{Sol} = \{3\}$.
+(c) $\Delta = 1 - 4 = -3 < 0$ : **aucune** solution réelle. $\mathrm{Sol} = \varnothing$.
+
+## Piège
+
+Annoncer « pas de solution » dès que $\Delta$ paraît petit : c'est le **signe** de $\Delta$ qui tranche, pas sa taille.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O4"}
+Effectue les conversions.
+
+(a) $36$ km/h en m/s.
+(b) Un débit de $3$ L/min en mL/s.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Passe par les unités de base : $1$ km $= 1000$ m, $1$ h $= 3600$ s ; $1$ L $= 1000$ mL, $1$ min $= 60$ s.
+
+## Solution
+
+(a) $36$ km/h $= \dfrac{36\,000 \text{ m}}{3\,600 \text{ s}} = 10$ m/s.
+(b) $3$ L/min $= \dfrac{3\,000 \text{ mL}}{60 \text{ s}} = 50$ mL/s.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|1|O2"}
+Le carré d'un nombre vaut $25$.
+
+(a) Quelles sont les valeurs possibles si ce nombre peut être quelconque ?
+(b) Et si ce nombre représente la longueur d'un segment ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Résous d'abord l'équation ; réfléchis ensuite à l'**admissibilité** de chaque solution selon le contexte.
+
+## Solution
+
+$x^2 = 25$ donne $\mathrm{Sol} = \{-5,\, 5\}$.
+(a) Les deux valeurs conviennent : $-5$ et $5$.
+(b) Une longueur est positive : seule $5$ est admissible.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|3|O4"}
+Un champ circulaire est centré en $(0, 0)$ (la ferme) et a un rayon de $100$ m. Un fermier veut placer
+un épouvantail le long d'un sentier rectiligne nord-sud situé à $50$ m à l'est de la ferme, **sans
+sortir** du champ. Quelle mise en équation décrit correctement les emplacements possibles ?
+
+(A) $\begin{cases} \sqrt{x^2 + y^2} \ge 100, \\ y = 50. \end{cases}$
+(B) $\begin{cases} x^2 + y^2 \le 10\,000, \\ x = 50. \end{cases}$
+(C) $\begin{cases} x + y = 100, \\ y = 50x. \end{cases}$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+« Rester dans le champ » se traduit par une **inéquation** sur la distance à la ferme ; « sentier à $50$ m à l'est » fixe l'abscisse ou l'ordonnée ?
+
+## Solution
+
+Réponse **(B)**. Être dans le champ (disque de rayon $100$) s'écrit $\sqrt{x^2 + y^2} \le 100$, soit
+$x^2 + y^2 \le 10\,000$. Un sentier « à $50$ m à l'est », orienté nord-sud, est la droite **verticale**
+$x = 50$.
+
+## Piège
+
+Écrire $y = 50$ (sentier est-ouest) au lieu de $x = 50$ ; ou prendre $\ge 100$ (hors du champ) au lieu de $\le 100$.
 
 :::
 :::

@@ -1,6 +1,6 @@
 ---
 title: "Transfert — problèmes"
-subtitle: "Séance 03 · déployer l'outil sur du nouveau"
+subtitle: "Séance 3 · déployer l'outil sur du nouveau"
 filters:
   - ../../exercice.lua
 ---

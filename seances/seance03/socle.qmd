@@ -1,6 +1,6 @@
 ---
 title: "Socle — exercices routiniers"
-subtitle: "Séance 03 · à faire à ton rythme"
+subtitle: "Séance 3 · à faire à ton rythme"
 filters:
   - ../../exercice.lua
 ---

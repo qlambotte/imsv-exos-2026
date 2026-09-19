@@ -1,5 +1,5 @@
 ---
-title: "Séance 03 — Équations, proportions et géométrie analytique"
+title: "Séance 3 — Équations, proportions et géométrie analytique"
 subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
 format:
   typst:
