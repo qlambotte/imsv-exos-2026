@@ -49,6 +49,15 @@ build_view(){   # $1 = student|prof ; $2 = sous-dossier de destination ("" ou "p
 build_view student ""     # site étudiant  -> racine
 build_view prof   "prof"  # vue prof       -> /prof
 
+# slides/ : deck(s) reveal.js autonomes, HORS pipeline Quarto (pas un chapitre, pas une
+# ressource du livre) -> copiés tels quels, verbatim, depuis le répertoire de travail.
+# Volontairement non référencés dans le livre/menus : accessibles seulement par lien direct.
+if [ -d "$ROOT/slides" ]; then
+  echo "→ copie slides/ (verbatim, hors pipeline Quarto)"
+  mkdir -p "$STAGE/slides"
+  cp -a "$ROOT/slides/." "$STAGE/slides"/
+fi
+
 echo "→ publication gh-pages"
 WGH="$(mktemp -d)"; WTS+=("$WGH")
 git fetch -q origin gh-pages || true
@@ -66,3 +75,4 @@ echo ""
 echo "✓ Publié :"
 echo "   étudiants : $BASE_URL/"
 echo "   prof      : $BASE_URL/prof/"
+[ -d "$ROOT/slides" ] && echo "   slides    : $BASE_URL/slides"
