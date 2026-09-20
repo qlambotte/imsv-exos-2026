@@ -242,5 +242,29 @@ $font-family-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, m
 .center { text-align: center; }
 .big-eq { font-size: 1.15em; }
 
+// Minuteur (échauffement)
+.et-timer { margin-top: 1em; display: flex; justify-content: center; }
+#et-timer-box {
+  display: flex; flex-direction: column; align-items: center; gap: .5em;
+  padding: .6em 1.4em; background: $tip-bg; border: 1px solid $tip-brd; border-radius: .6em;
+}
+.et-row { display: flex; align-items: center; gap: .8em; }
+.et-display {
+  font-family: "JetBrains Mono", monospace; font-size: 2em; font-weight: 700;
+  color: $heading-ink; min-width: 1.6em; text-align: center; transition: color .2s ease;
+}
+.et-display.et-warn { color: $exo-accent; }
+.et-display.et-done { color: #c0392b; animation: et-pulse 1s ease-in-out infinite; }
+// @keyframes déplacée dans un <style> du qmd (le scanner de variables scss de Quarto
+// ne digère pas la syntaxe "0%, 100% { }" d'une règle @keyframes ici).
+.et-btn {
+  font-family: "Roboto", sans-serif; font-size: .5em; font-weight: 500;
+  padding: .35em .75em; border-radius: .4em; border: 1px solid $rule;
+  background: #fff; color: $body-ink; cursor: pointer;
+}
+.et-btn:hover { background: $rule; }
+.et-btn.et-primary { background: $accent; border-color: $accent; color: #fff; }
+.et-btn.et-primary:hover { background: #1a52a6; }
+
 // Bas de slide discret
 .reveal .footer-note { color: $muted; font-size: .62em; }

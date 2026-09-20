@@ -2,7 +2,7 @@
 title: "Séance 1 — Langage et raisonnement"
 subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie — séance d'exercices"
 author: "Quentin Lambotte · FMPB · UMONS"
-date: today
+date: 09/21/2026
 date-format: "D MMMM YYYY"
 lang: fr
 format:
@@ -37,7 +37,7 @@ format:
 <tr><td class="ph">1 · Échauffement</td><td class="du">10 min</td><td>Trois questions rapides projetées. Tu réponds sur papier, puis on vote.</td></tr>
 <tr><td class="ph">2 · Socle</td><td class="du">35 min</td><td>Les exercices de base, à ton rythme, en t'auto-corrigeant sur un site.</td></tr>
 <tr><td class="ph">3 · Pause</td><td class="du">10 min</td><td>On souffle, on prend un café, ...</td></tr>
-<tr><td class="ph">4 · Transfert</td><td class="du">35 min</td><td>Des problèmes en contexte. Ici le travail avec les voisin·e·s est conseillé.</td></tr>
+<tr><td class="ph">4 · Transfert</td><td class="du">35 min</td><td>Des problèmes en contexte. Ici le travail avec les voisin·es est conseillé.</td></tr>
 <tr><td class="ph">5 · Méthode</td><td class="du">20 min</td><td>On dégage ensemble une ou deux méthodes réutilisables.</td></tr>
 </tbody>
 </table>
@@ -53,7 +53,7 @@ Deux modes de travail:
 ::: {.m-titre}
 Travail autonome
 :::
-Seul ou avec tes voisin·e·s — parler, comparer une réponse, discuter un indice, ... Ce mode de travail engendrera du bruit: on s'entraînera pour le canaliser.
+Seul ou avec tes voisin·es — parler, comparer une réponse, discuter un indice, ... Ce mode de travail engendrera du bruit: on s'entraînera pour le canaliser.
 :::
 ::: {.mode .jeparle}
 ::: {.m-titre}
@@ -64,7 +64,7 @@ Ce sont les moments où je reprends la parole. Lors de ces moments, j'ai besoin 
 :::
 
 ::: {.aretenir .smaller}
-**Une seule règle à retenir : seul tes voisin·e·s doit t'entendre.** On est nombreux. On verra lorsqu'on parlera d'exponentielles et de logarithmes que l'accumulations de bavardage mène vite à un bruit incompatible avec le travail. On veillera donc à maintenir le volume sonore à un niveau raisonnable.
+**Une seule règle à retenir : seul tes voisin·es doit t'entendre.** On est nombreux. On verra lorsqu'on parlera d'exponentielles et de logarithmes que l'accumulations de bavardage mène vite à un bruit incompatible avec le travail. On veillera donc à maintenir le volume sonore à un niveau raisonnable.
 :::
 
 ## L'outil qui affiche le niveau sonore
@@ -77,20 +77,20 @@ Pendant les moments de travail, un **niveau sonore projeté** tourne en fond sur
 ::: {.aretenir .smaller}
 Le gong est là pour nous donner un repère, car il est difficile de se rendre compte que le volume est trop haut.
 
-Nous allons calibrer ensemble d'appli.
+Nous allons calibrer ensemble [l'appli](https://classroomscreen.com/app/p/01df535d-01a3-43cc-ab1a-078cd59695af/0).
 :::
 
 
 
 ## On sera cinq pour vous accompagner
 
-Cinq enseignant·e·s, pour environ 400 étudiant·e·s. Conséquences:
+Cinq enseignant·es, pour environ 400 étudiant·es. Conséquences:
 
-- **l'attention qu'on peut te donner est comptée**;
-- la séance te demande, en retour, davantage d'**autonomie** que ce à quoi tu es peut-être habitué.
+- **l'attention qu'on peut vous donner individuellement est comptée**;
+- la séance demande, en retour, davantage d'**autonomie** que ce à quoi vous êtes peut-être habitué·es.
 
 ::: {.aretenir}
-Ça peut **déstabiliser au début**. C'est voulu, et voici pourquoi : les mathématiques s'apprennent comme un langage — en le pratiquant, en se trompant, en corrigeant. Personne n'apprend une langue en écoutant seulement quelqu'un la parler. Le but n'est pas de te laisser seul face à la difficulté, mais de te **préparer** à en sortir par toi-même — à l'examen, tu n'auras que toi.
+Ça peut **déstabiliser au début**. C'est voulu, et voici pourquoi : les mathématiques s'apprennent comme un langage — en le pratiquant, en se trompant, en corrigeant. Personne n'apprend une langue en écoutant seulement quelqu'un la parler. Le but n'est pas de vous laisser seul face à la difficulté, mais de vous **préparer** à vous en sortir par vous-même — à l'examen, vous serez seul·es face aux questions.
 :::
 
 ## Ce qu'on fait — et ce qu'on ne fait pas
@@ -104,7 +104,7 @@ Cinq enseignant·e·s, pour environ 400 étudiant·e·s. Conséquences:
 . . .
 
 ::: {.aretenir .smaller}
-Tu n'es pas laissé sans ressource pour autant. Les leviers : les **indices** du site (trois niveaux, avant la solution), ton **voisin**, les **assistant·e·s** qui te guident, la **remédiation** si les bases manquent, les **méthodes** qu'on dégage en fin de séance — et, si un blocage touche tout le monde, une **mise au point collective**, ponctuelle, faite par moi.
+Tu n'es pas laissé sans ressource pour autant. Les leviers : les **indices** du site (trois niveaux, avant la solution), ton **voisin**, les **assistant·es** qui te guident, la **remédiation** si les bases manquent, les **méthodes** qu'on dégage en fin de séance — et, si un blocage touche tout le monde, une **mise au point collective**, ponctuelle, faite par moi.
 :::
 
 
@@ -135,7 +135,7 @@ Exercices, indices à trois niveaux, corrections, méthodes : tout est sur le si
 **Vote sur Wooclap**
 
 ::: {.wc-lien}
-lien : REMPLACER_WOOCLAP_ECHAUFFEMENT
+Code : MSKHLGY
 :::
 :::
 ::: {.wc-qr}
@@ -145,7 +145,121 @@ lien : REMPLACER_WOOCLAP_ECHAUFFEMENT
 :::
 :::
 
+::: {.et-timer}
+<style>
+@keyframes et-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+</style>
+<div id="et-timer-box" data-default="240">
+<div class="et-row">
+<button id="et-minus" class="et-btn" type="button" aria-label="Retirer une minute">−1 min</button>
+<div id="et-display" class="et-display">04:00</div>
+<button id="et-plus" class="et-btn" type="button" aria-label="Ajouter une minute">+1 min</button>
+</div>
+<div class="et-row">
+<button id="et-toggle" class="et-btn et-primary" type="button">Démarrer</button>
+<button id="et-reset" class="et-btn" type="button" aria-label="Réinitialiser">↺ Réinitialiser</button>
+</div>
+</div>
+:::
 
+<script>
+(function () {
+  var box = document.getElementById('et-timer-box');
+  if (!box) return;
+  var DEFAULT = parseInt(box.getAttribute('data-default'), 10) || 240;
+  var display = document.getElementById('et-display');
+  var btnToggle = document.getElementById('et-toggle');
+  var btnMinus = document.getElementById('et-minus');
+  var btnPlus = document.getElementById('et-plus');
+  var btnReset = document.getElementById('et-reset');
+
+  var remaining = DEFAULT;
+  var running = false;
+  var intervalId = null;
+  var audioCtx = null;
+
+  function fmt(s) {
+    s = Math.max(0, s);
+    var m = Math.floor(s / 60);
+    var sec = s % 60;
+    return (m < 10 ? '0' : '') + m + ':' + (sec < 10 ? '0' : '') + sec;
+  }
+
+  function render() {
+    display.textContent = fmt(remaining);
+    display.classList.toggle('et-warn', running && remaining <= 30 && remaining > 0);
+    display.classList.toggle('et-done', remaining === 0);
+  }
+
+  function beep() {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      var t0 = audioCtx.currentTime;
+      [0, 0.35].forEach(function (offset) {
+        var osc = audioCtx.createOscillator();
+        var gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = 880;
+        gain.gain.setValueAtTime(0.0001, t0 + offset);
+        gain.gain.exponentialRampToValueAtTime(0.3, t0 + offset + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0001, t0 + offset + 0.28);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(t0 + offset);
+        osc.stop(t0 + offset + 0.3);
+      });
+    } catch (e) {}
+  }
+
+  function stop() {
+    running = false;
+    btnToggle.textContent = remaining > 0 ? 'Reprendre' : 'Démarrer';
+    if (intervalId) { clearInterval(intervalId); intervalId = null; }
+  }
+
+  function tick() {
+    remaining -= 1;
+    if (remaining <= 0) {
+      remaining = 0;
+      stop();
+      beep();
+    }
+    render();
+  }
+
+  function start() {
+    if (running) return;
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+    } catch (e) {}
+    if (remaining <= 0) remaining = DEFAULT;
+    render();
+    running = true;
+    btnToggle.textContent = 'Pause';
+    intervalId = setInterval(tick, 1000);
+  }
+
+  btnToggle.addEventListener('click', function () { running ? stop() : start(); });
+  btnMinus.addEventListener('click', function () {
+    remaining = Math.max(0, remaining - 60);
+    render();
+    if (remaining === 0) stop();
+  });
+  btnPlus.addEventListener('click', function () {
+    remaining = remaining + 60;
+    render();
+  });
+  btnReset.addEventListener('click', function () {
+    stop();
+    remaining = DEFAULT;
+    btnToggle.textContent = 'Démarrer';
+    render();
+  });
+
+  render();
+})();
+</script>
 
 ##  Q1 [[O3]{.obj}]{style="float:right"}
 
@@ -214,7 +328,7 @@ Avec tes mots, essaye de donner des étapes pour nier une proposition.
 **Ouvre le Wooclap — Nier.** Trois questions ouvertes, une par étape.
 
 ::: {.wc-lien}
-lien : REMPLACER_WOOCLAP_NIER
+Code : MQTNSRK
 :::
 :::
 ::: {.wc-qr}

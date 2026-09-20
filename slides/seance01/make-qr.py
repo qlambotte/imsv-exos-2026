@@ -15,9 +15,8 @@ from pathlib import Path
 
 # >>> À COMPLÉTER : les trois liens Wooclap <<<
 LIENS = {
-    "qr-echauffement": "https://www.wooclap.com/REMPLACER-ECHAUFFEMENT",
-    "qr-nier":         "https://www.wooclap.com/REMPLACER-NIER",
-    "qr-traduire":     "https://www.wooclap.com/REMPLACER-TRADUIRE",
+    "qr-echauffement": "https://app.wooclap.com/MSKHLGY?from=instruction-slide",
+    "qr-nier":         "https://app.wooclap.com/MQTNSRK?from=instruction-slide",
     # Celui-ci pointe déjà vers la vraie page de la séance (pas un placeholder).
     "qr-site":         "https://qlambotte.github.io/imsv-exos-2026/",
 }
