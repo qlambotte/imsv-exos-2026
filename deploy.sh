@@ -49,14 +49,24 @@ build_view(){   # $1 = student|prof ; $2 = sous-dossier de destination ("" ou "p
 build_view student ""     # site étudiant  -> racine
 build_view prof   "prof"  # vue prof       -> /prof
 
-# slides/ : deck(s) reveal.js autonomes, HORS pipeline Quarto (pas un chapitre, pas une
-# ressource du livre) -> copiés tels quels, verbatim, depuis le répertoire de travail.
-# Volontairement non référencés dans le livre/menus : accessibles seulement par lien direct.
-if [ -d "$ROOT/slides" ]; then
-  echo "→ copie slides/ (verbatim, hors pipeline Quarto)"
-  mkdir -p "$STAGE/slides"
-  cp -a "$ROOT/slides/." "$STAGE/slides"/
-fi
+# slides/ : deck(s) reveal.js, projet Quarto indépendant du livre (son propre
+# _quarto.yml dans slides/ fait écran à celui du livre) -> rendu à part, dans son propre
+# worktree isolé, puis seuls les fichiers publiés (pas les sources .qmd/.scss/img) sont
+# copiés dans le stage. Volontairement non référencé dans le livre/menus : accessible
+# seulement par lien direct.
+build_slides(){
+  [ -d "$ROOT/slides" ] || return 0
+  local wt dest="$STAGE/slides"
+  wt="$(mktemp -d)"; WTS+=("$wt")
+  echo "→ rendu (slides)"
+  git worktree add --detach "$wt" HEAD >/dev/null
+  ( cd "$wt/slides" && quarto render seance01/langage-et-raisonnement.qmd >/dev/null )
+  mkdir -p "$dest/seance01"
+  cp "$wt/slides/index.html" "$dest/index.html"
+  cp "$wt/slides/seance01/langage-et-raisonnement.html" "$dest/seance01/langage-et-raisonnement.html"
+  git worktree remove --force "$wt"
+}
+build_slides
 
 echo "→ publication gh-pages"
 WGH="$(mktemp -d)"; WTS+=("$WGH")

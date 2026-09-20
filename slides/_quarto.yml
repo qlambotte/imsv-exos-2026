@@ -1,0 +1,6 @@
+project:
+  title: "IMSV — Slides d'exercices"
+  # Projet indépendant du livre imsv-exos-2026.
+  # Rendre un deck : depuis ce dossier, `quarto render seance01/langage-et-raisonnement.qmd`
+
+lang: fr

@@ -1,0 +1,757 @@
+<!-- Outil d'annotation ad hoc, dans l'esprit tldreveal : dessiner par-dessus la slide
+     courante (pas un tableau blanc séparé), dock flottant façon tldraw, trait lissé.
+     Raccourcis : C = pointeur (navigation normale) · D = dessin · T = surligneur ·
+     Q = gomme · Z = carré · I = cercle · U = cercle trigonométrique · X = repère ·
+     1-4 = couleur · Ctrl/Cmd+Z = annuler · Retour/Suppr = effacer la slide ·
+     W = insérer une slide blanche (note libre) juste après la slide courante ·
+     Ctrl/Cmd+S = exporter en .html (slides blanches + ce qui y est dessiné) ·
+     Y = masquer/rafficher le dock (repasse en pointeur en le masquant, pour ne
+     jamais bloquer un clic sous une poignée invisible).
+     NB : ces lettres évitent volontairement tout ce que reveal.js/Quarto lient
+     déjà nativement (V/B=pause, N/P/H/J/K/L=navigation, A=autoslide, O/G=
+     aperçu/aller-à, F=plein écran, M=menu, S=notes, E=export PDF, R=mode
+     scroll) — les reprendre aurait déclenché les deux actions à la fois ;
+     vérifié un par un, pas seulement dans le code source de reveal.js mais
+     aussi dans les scripts que Quarto ajoute par-dessus (export PDF, scroll).
+     Les slides blanches ajoutées (et leur contenu) sont retenues d'une session
+     à l'autre via localStorage, pour CE fichier précis — le reste (annotations
+     sur les slides d'origine) reste volatile, comme avant. -->
+<style>
+  #tla-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    pointer-events: none;
+    touch-action: none;
+  }
+
+  #tla-dock {
+    position: fixed;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(20, 48, 74, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(20, 48, 74, 0.16), 0 1px 2px rgba(20, 48, 74, 0.08);
+    font-family: "Roboto", system-ui, -apple-system, sans-serif;
+    opacity: 0.5;
+    transition: opacity .18s ease, transform .18s ease;
+  }
+  #tla-dock:hover, #tla-dock.tla-active { opacity: 1; }
+  #tla-dock.tla-hidden {
+    opacity: 0;
+    transform: translateX(-50%) translateY(150%);
+    pointer-events: none;
+  }
+
+  /* Poignée résiduelle quand le dock est masqué : discrète, ancrée au bord
+     de l'écran, ne recouvre aucun contenu de slide. */
+  #tla-handle {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 52px;
+    height: 15px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(20, 48, 74, 0.1);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    background: rgba(20, 48, 74, 0.14);
+    color: rgba(20, 48, 74, 0.55);
+    cursor: pointer;
+  }
+  #tla-handle:hover { background: rgba(20, 48, 74, 0.26); color: rgba(20,48,74,.8); }
+  #tla-handle.tla-show { display: flex; }
+  #tla-handle svg { width: 13px; height: 13px; }
+
+  .tla-group { display: flex; gap: 2px; padding: 0 2px; }
+  .tla-sep { width: 1px; align-self: stretch; margin: 4px 2px; background: rgba(20,48,74,.12); }
+
+  .tla-btn {
+    width: 34px; height: 34px;
+    display: flex; align-items: center; justify-content: center;
+    border: none; border-radius: 9px;
+    background: transparent;
+    color: #14304a;
+    cursor: pointer;
+  }
+  .tla-btn svg { width: 18px; height: 18px; }
+  .tla-btn:hover { background: rgba(20,48,74,.07); }
+  .tla-btn.tla-selected { background: #e7f0ff; color: #1f5fbf; }
+  .tla-btn:disabled { opacity: .35; cursor: default; }
+  .tla-btn:disabled:hover { background: transparent; }
+
+  .tla-swatch {
+    width: 22px; height: 22px; margin: 6px 3px;
+    border-radius: 999px; border: 2px solid #fff;
+    box-shadow: 0 0 0 1.5px rgba(20,48,74,.18);
+    cursor: pointer; padding: 0;
+  }
+  .tla-swatch.tla-selected { box-shadow: 0 0 0 2px #14304a; }
+
+  .tla-shape-wrap { position: relative; }
+  .tla-shape-menu {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    flex-direction: row;
+    gap: 3px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(20, 48, 74, 0.1);
+    border-radius: 13px;
+    box-shadow: 0 6px 20px rgba(20, 48, 74, 0.18);
+  }
+  .tla-shape-menu.tla-open { display: flex; }
+
+  /* Slide blanche insérée en direct : juste un repère discret pour la
+     retrouver dans le plan/l'aperçu, rien qui gêne le dessin par-dessus. */
+  .reveal .tla-blank-slide::before {
+    content: "page libre";
+    position: absolute;
+    left: 26px;
+    bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    letter-spacing: .02em;
+    color: rgba(20, 48, 74, 0.18);
+    pointer-events: none;
+  }
+
+  @media (max-width: 900px) {
+    #tla-dock { transform: translateX(-50%) scale(.9); }
+  }
+</style>
+
+<div id="tla-dock">
+  <div class="tla-group">
+    <button class="tla-btn tla-selected" id="tla-tool-pointer" data-tool="pointer" title="Pointeur — navigation normale (C)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 7-6 2-2 6-6-15z"/></svg>
+    </button>
+    <button class="tla-btn" id="tla-tool-pencil" data-tool="pencil" title="Dessiner (D)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1z"/><path d="M14 7l3 3"/></svg>
+    </button>
+    <button class="tla-btn" id="tla-tool-highlighter" data-tool="highlighter" title="Surligneur (T)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4l9 9-3 3-9-9 3-3z"/><path d="M11 13l-2 2H5l2-4"/><path d="M4 20h5"/></svg>
+    </button>
+    <button class="tla-btn" id="tla-tool-eraser" data-tool="eraser" title="Gomme (Q)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l4 4-9.5 9.5H7L3 12.5z"/><path d="M7 16.5L3 20h8"/></svg>
+    </button>
+    <div class="tla-shape-wrap">
+      <button class="tla-btn" id="tla-tool-shape" data-tool="shape" title="Formes — carré (Z) · cercle (I) · cercle trigo (U) · repère (X)">
+        <span class="tla-icon-slot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="9" height="9"/><circle cx="17" cy="7" r="4"/></svg></span>
+      </button>
+      <div class="tla-shape-menu" id="tla-shape-menu">
+        <button class="tla-btn tla-shape-opt tla-selected" data-shape="square" title="Carré (Z)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14"/></svg>
+        </button>
+        <button class="tla-btn tla-shape-opt" data-shape="circle" title="Cercle (I)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/></svg>
+        </button>
+        <button class="tla-btn tla-shape-opt" data-shape="unitcircle" title="Cercle trigonométrique (U)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><line x1="1" y1="12" x2="23" y2="12"/><line x1="12" y1="1" x2="12" y2="23"/></svg>
+        </button>
+        <button class="tla-btn tla-shape-opt" data-shape="axes" title="Repère (X)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M12 21V3"/><path d="M17 8l4 4-4 4"/><path d="M8 7l4-4 4 4"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tla-sep"></div>
+
+  <div class="tla-group" id="tla-swatches">
+    <button class="tla-swatch tla-selected" data-color="#e63946" style="background:#e63946" title="Rouge (1)"></button>
+    <button class="tla-swatch" data-color="#1f5fbf" style="background:#1f5fbf" title="Bleu (2)"></button>
+    <button class="tla-swatch" data-color="#14304a" style="background:#14304a" title="Noir (3)"></button>
+    <button class="tla-swatch" data-color="#ffd60a" style="background:#ffd60a" title="Jaune (4)"></button>
+  </div>
+
+  <div class="tla-sep"></div>
+
+  <div class="tla-group">
+    <button class="tla-btn" id="tla-undo" title="Annuler (Ctrl/Cmd+Z)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 010 12h-3"/></svg>
+    </button>
+    <button class="tla-btn" id="tla-clear" title="Effacer cette slide (Retour/Suppr)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/></svg>
+    </button>
+  </div>
+
+  <div class="tla-sep"></div>
+
+  <div class="tla-group">
+    <button class="tla-btn" id="tla-new-slide" title="Insérer une slide blanche après celle-ci (W)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M12 9v6"/><path d="M9 12h6"/></svg>
+    </button>
+    <button class="tla-btn" id="tla-export" title="Exporter en .html — slides blanches + ce qui y est dessiné (Ctrl/Cmd+S)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>
+    </button>
+  </div>
+
+  <div class="tla-sep"></div>
+
+  <div class="tla-group">
+    <button class="tla-btn" id="tla-hide" title="Masquer le dock (Y)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+  </div>
+</div>
+
+<button id="tla-handle" title="Ré-afficher le dock d'annotation (Y)">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+(function () {
+  var STAGE_W = 1280, STAGE_H = 800; // doit correspondre à width/height du format revealjs
+
+  function init() {
+    if (!window.Reveal || !document.querySelector('.reveal .slides')) {
+      setTimeout(init, 200);
+      return;
+    }
+    var deck = window.Reveal;
+    var slidesEl = document.querySelector('.reveal .slides');
+
+    var canvas = document.createElement('canvas');
+    canvas.id = 'tla-canvas';
+    canvas.width = STAGE_W;
+    canvas.height = STAGE_H;
+    slidesEl.appendChild(canvas);
+    var ctx = canvas.getContext('2d');
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+
+    var dock = document.getElementById('tla-dock');
+    var toolBtns = {
+      pointer: document.getElementById('tla-tool-pointer'),
+      pencil: document.getElementById('tla-tool-pencil'),
+      highlighter: document.getElementById('tla-tool-highlighter'),
+      eraser: document.getElementById('tla-tool-eraser'),
+      shape: document.getElementById('tla-tool-shape')
+    };
+    var swatches = Array.prototype.slice.call(document.querySelectorAll('.tla-swatch'));
+    var undoBtn = document.getElementById('tla-undo');
+    var clearBtn = document.getElementById('tla-clear');
+    var newSlideBtn = document.getElementById('tla-new-slide');
+    var exportBtn = document.getElementById('tla-export');
+    var hideBtn = document.getElementById('tla-hide');
+    var handle = document.getElementById('tla-handle');
+    var shapeMenu = document.getElementById('tla-shape-menu');
+    var shapeOpts = Array.prototype.slice.call(document.querySelectorAll('.tla-shape-opt'));
+    var shapeIconSlot = toolBtns.shape.querySelector('.tla-icon-slot');
+
+    var tool = 'pointer';
+    var color = swatches[0].getAttribute('data-color');
+    var shapeType = 'square';
+    var strokesBySlide = {};
+    var currentStroke = null;
+
+    // Icônes du bouton « Formes », dupliquées depuis les options du menu — pour
+    // que le bouton affiche visuellement la forme actuellement sélectionnée.
+    var shapeIcons = {
+      square: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14"/></svg>',
+      circle: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/></svg>',
+      unitcircle: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><line x1="1" y1="12" x2="23" y2="12"/><line x1="12" y1="1" x2="12" y2="23"/></svg>',
+      axes: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M12 21V3"/><path d="M17 8l4 4-4 4"/><path d="M8 7l4-4 4 4"/></svg>'
+    };
+    var shapeDefaultExtent = { square: [160, 160], circle: [90, 0], unitcircle: [120, 0], axes: [140, 0] };
+
+    // Identifiant stable par slide plutôt que les indices h-v : ces derniers
+    // se décalent dès qu'on insère une slide blanche, ce qui ferait « sauter »
+    // les traits déjà posés sur les slides suivantes vers le mauvais contenu.
+    // Les slides d'origine reçoivent « o0, o1, … » (ordre du document, fixé
+    // une fois pour toutes ci-dessous) ; les slides blanches ajoutées en
+    // direct reçoivent « b0, b1, … ». C'est aussi ce qui permet de retenir
+    // — et de rejouer — l'insertion des slides blanches d'une session à l'autre.
+    var idToSlide = {};
+    var slideToId = typeof WeakMap !== 'undefined' ? new WeakMap() : null;
+    var origCounter = 0, blankCounter = 0;
+
+    function registerSlide(node, id) {
+      if (slideToId) slideToId.set(node, id);
+      idToSlide[id] = node;
+      return id;
+    }
+
+    // Repère les vraies slides (feuilles), en ignorant les <section> qui ne
+    // font qu'empiler une colonne verticale (## sous un #, jamais visitées
+    // pour elles-mêmes par Reveal). Si ce fichier est une EXPORTATION déjà
+    // ouverte une fois (les slides blanches y sont de vraies <section>, avec
+    // leur identifiant d'origine dans data-tla-id), on retrouve cet
+    // identifiant plutôt que d'en fabriquer un nouveau — sinon la relecture
+    // des traits stockés dans la seed ne retomberait pas sur la bonne slide.
+    Array.prototype.slice.call(slidesEl.querySelectorAll('section')).forEach(function (sec) {
+      if (sec.querySelector(':scope > section')) return;
+      if (sec.classList.contains('tla-blank-slide')) {
+        var savedId = sec.getAttribute('data-tla-id');
+        if (savedId) {
+          registerSlide(sec, savedId);
+          var n = parseInt(savedId.slice(1), 10);
+          if (!isNaN(n) && n >= blankCounter) blankCounter = n + 1;
+          return;
+        }
+      }
+      registerSlide(sec, 'o' + (origCounter++));
+    });
+
+    function slideKey() {
+      var cur = deck.getCurrentSlide && deck.getCurrentSlide();
+      if (!cur) { var idx = deck.getIndices(); return idx.h + '-' + idx.v; }
+      var id = slideToId && slideToId.get(cur);
+      if (!id) id = registerSlide(cur, 'o' + (origCounter++)); // filet de sécurité
+      return id;
+    }
+
+    // Insère une slide blanche après `afterNode` (slide courante par défaut),
+    // dans la même pile verticale si on y est. `fromReplay` = reconstruction
+    // au chargement (id imposé, ne rejoue pas dans le journal, ne re-sauve pas).
+    function insertBlankSlide(afterNode, idOverride, fromReplay) {
+      afterNode = afterNode || deck.getCurrentSlide();
+      if (!afterNode || !afterNode.parentNode) return null;
+      var section = document.createElement('section');
+      section.className = 'tla-blank-slide';
+      var id = idOverride || ('b' + (blankCounter++));
+      section.setAttribute('data-tla-id', id);
+      afterNode.parentNode.insertBefore(section, afterNode.nextSibling);
+      registerSlide(section, id);
+      deck.sync();
+      if (!fromReplay) {
+        blankLog.push({ id: id, afterId: slideToId.get(afterNode) });
+        saveState();
+      }
+      return section;
+    }
+
+    function insertAndGotoBlank() {
+      var section = insertBlankSlide();
+      if (!section) return;
+      var idx = deck.getIndices(section);
+      deck.slide(idx.h, idx.v);
+      openShapeMenu(false);
+    }
+
+    // -------- Persistance : uniquement les slides blanches ajoutées et ce
+    // qu'on y dessine (pas les annotations sur les slides d'origine, qui
+    // restent volatiles, comme annoncé). Deux mécanismes qui partagent le
+    // même format : localStorage (survit à un simple rechargement de CE
+    // fichier) et l'export .html (fichier autonome, à garder ou partager).
+    var blankLog = [];
+    var STORAGE_KEY = 'tla-notes::' + (location.pathname || document.title || 'deck');
+
+    function blankStrokes() {
+      var out = {};
+      Object.keys(strokesBySlide).forEach(function (k) {
+        if (k.charAt(0) === 'b') out[k] = strokesBySlide[k];
+      });
+      return out;
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ blanks: blankLog, strokes: blankStrokes() }));
+      } catch (e) { /* stockage indisponible : tant pis, l'outil reste utilisable */ }
+    }
+
+    function applyState(data) {
+      if (!data) return;
+      (data.blanks || []).forEach(function (entry) {
+        var n = parseInt(String(entry.id).slice(1), 10);
+        if (!isNaN(n) && n >= blankCounter) blankCounter = n + 1;
+        // Déjà une vraie <section> du document (cas d'un .html exporté déjà
+        // ouvert une fois) : rien à reconstruire, seuls les traits comptent.
+        if (idToSlide[entry.id]) return;
+        var neighbor = idToSlide[entry.afterId];
+        if (neighbor) insertBlankSlide(neighbor, entry.id, true);
+      });
+      blankLog = (data.blanks || []).slice();
+      Object.keys(data.strokes || {}).forEach(function (k) {
+        strokesBySlide[k] = data.strokes[k];
+      });
+    }
+
+    function loadState() {
+      var raw = null;
+      try { raw = localStorage.getItem(STORAGE_KEY); } catch (e) { /* ignore */ }
+      if (!raw) {
+        var seed = document.getElementById('tla-seed');
+        if (seed) raw = seed.textContent;
+      }
+      if (!raw) return;
+      var data;
+      try { data = JSON.parse(raw); } catch (e) { return; }
+      applyState(data);
+    }
+
+    // Exporte un .html autonome : copie complète de la page actuelle (donc
+    // avec les slides blanches, désormais de vraies slides du document), plus
+    // les traits qui y sont dessinés injectés en donnée (le <canvas> ne se
+    // sérialise pas tout seul) pour être redessinés à l'ouverture.
+    function exportHtml() {
+      var clone = document.documentElement.cloneNode(true);
+      var staleCanvas = clone.querySelector('#tla-canvas');
+      if (staleCanvas) staleCanvas.parentNode.removeChild(staleCanvas);
+
+      var seed = clone.querySelector('#tla-seed');
+      if (!seed) {
+        seed = document.createElement('script');
+        seed.type = 'application/json';
+        seed.id = 'tla-seed';
+        clone.querySelector('body').appendChild(seed);
+      }
+      seed.textContent = JSON.stringify({ blanks: blankLog, strokes: blankStrokes() });
+
+      // Repart d'un état d'interface propre (pas figé sur l'outil/la slide
+      // en cours à l'export) — Reveal recalcule le reste tout seul à l'ouverture.
+      Array.prototype.slice.call(clone.querySelectorAll('.slides, .slides section')).forEach(function (el) {
+        el.removeAttribute('style');
+      });
+      var dockClone = clone.querySelector('#tla-dock');
+      if (dockClone) dockClone.classList.remove('tla-hidden', 'tla-active');
+      var handleClone = clone.querySelector('#tla-handle');
+      if (handleClone) handleClone.classList.remove('tla-show');
+      Array.prototype.slice.call(clone.querySelectorAll('.tla-btn.tla-selected, .tla-swatch.tla-selected')).forEach(function (el) {
+        el.classList.remove('tla-selected');
+      });
+      var pointerClone = clone.querySelector('#tla-tool-pointer');
+      if (pointerClone) pointerClone.classList.add('tla-selected');
+      var firstSwatchClone = clone.querySelector('.tla-swatch');
+      if (firstSwatchClone) firstSwatchClone.classList.add('tla-selected');
+      var squareOptClone = clone.querySelector('.tla-shape-opt[data-shape="square"]');
+      if (squareOptClone) squareOptClone.classList.add('tla-selected');
+
+      var html = '<!DOCTYPE html>\n' + clone.outerHTML;
+      var blob = new Blob([html], { type: 'text/html' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      var stamp = new Date().toISOString().slice(0, 16).replace(/[:T]/g, '-');
+      var base = (document.title || 'slides').replace(/[^\w\-àâäéèêëïîôöùûüç]+/gi, '_');
+      a.download = base + '-annote-' + stamp + '.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+    }
+
+    function selectTool(name) {
+      tool = name;
+      Object.keys(toolBtns).forEach(function (k) {
+        toolBtns[k].classList.toggle('tla-selected', k === name);
+      });
+      var drawing = name === 'pencil' || name === 'highlighter' || name === 'eraser' || name === 'shape';
+      canvas.style.pointerEvents = drawing ? 'auto' : 'none';
+      dock.classList.toggle('tla-active', drawing);
+    }
+
+    function setShapeType(type) {
+      shapeType = type;
+      shapeOpts.forEach(function (o) { o.classList.toggle('tla-selected', o.getAttribute('data-shape') === type); });
+      shapeIconSlot.innerHTML = shapeIcons[type];
+    }
+
+    function openShapeMenu(open) {
+      shapeMenu.classList.toggle('tla-open', open);
+    }
+
+    function selectColor(btn) {
+      swatches.forEach(function (s) { s.classList.remove('tla-selected'); });
+      btn.classList.add('tla-selected');
+      color = btn.getAttribute('data-color');
+      if (tool === 'eraser') selectTool('pencil');
+    }
+
+    // Masquer le dock : en plus de le sortir de l'écran, on repasse en
+    // pointeur pour que le canvas cesse de capter les clics — sinon une
+    // poignée invisible bloquerait la slide en dessous.
+    var dockHidden = false;
+    function setDockHidden(hidden) {
+      dockHidden = hidden;
+      dock.classList.toggle('tla-hidden', hidden);
+      handle.classList.toggle('tla-show', hidden);
+      if (hidden) selectTool('pointer');
+    }
+
+    function strokeWidth(s) {
+      if (s.mode === 'eraser') return 34;
+      if (s.mode === 'highlighter') return 16;
+      return 3.5;
+    }
+
+    // Lissage par courbes quadratiques passant par les milieux des segments —
+    // même principe que les moteurs de dessin "à main levée" façon tldraw.
+    function pathFor(points) {
+      var p = new Path2D();
+      if (points.length < 2) {
+        if (points.length === 1) { p.moveTo(points[0][0] - .01, points[0][1]); p.lineTo(points[0][0] + .01, points[0][1]); }
+        return p;
+      }
+      p.moveTo(points[0][0], points[0][1]);
+      for (var i = 1; i < points.length - 1; i++) {
+        var mx = (points[i][0] + points[i + 1][0]) / 2;
+        var my = (points[i][1] + points[i + 1][1]) / 2;
+        p.quadraticCurveTo(points[i][0], points[i][1], mx, my);
+      }
+      var last = points[points.length - 1];
+      p.lineTo(last[0], last[1]);
+      return p;
+    }
+
+    // Petites flèches d'axe façon manuel scolaire : trait, plus une pointe
+    // triangulaire pleine à l'extrémité positive.
+    function arrowHead(x, y, angle, color) {
+      var size = 9;
+      ctx.save();
+      ctx.fillStyle = color;
+      ctx.translate(x, y);
+      ctx.rotate(angle);
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(-size, size * 0.55);
+      ctx.lineTo(-size, -size * 0.55);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+
+    // Repère : origine (ox,oy), demi-portée `ext` de part et d'autre. Flèche
+    // sur les sens positifs seulement (convention du cours), "O" à l'origine.
+    function drawAxes(ox, oy, ext, color) {
+      ctx.save();
+      ctx.strokeStyle = color;
+      ctx.fillStyle = color;
+      ctx.lineWidth = 2.4;
+      ctx.beginPath();
+      ctx.moveTo(ox - ext, oy);
+      ctx.lineTo(ox + ext, oy);
+      ctx.stroke();
+      arrowHead(ox + ext, oy, 0, color);
+      ctx.beginPath();
+      ctx.moveTo(ox, oy + ext);
+      ctx.lineTo(ox, oy - ext);
+      ctx.stroke();
+      arrowHead(ox, oy - ext, -Math.PI / 2, color);
+      ctx.font = '600 15px Roboto, sans-serif';
+      ctx.fillText('O', ox - 17, oy + 17);
+      ctx.fillText('x', ox + ext - 4, oy - 8);
+      ctx.fillText('y', ox + 8, oy - ext + 15);
+      ctx.restore();
+    }
+
+    // Petites graduations « 1 » sur chaque demi-axe, pour le cercle trigo.
+    function drawUnitTicks(ox, oy, r, color) {
+      ctx.save();
+      ctx.strokeStyle = color;
+      ctx.fillStyle = color;
+      ctx.lineWidth = 2.2;
+      var t = 6;
+      [[ox + r, oy, 0, t], [ox - r, oy, 0, t], [ox, oy - r, t, 0], [ox, oy + r, t, 0]].forEach(function (p) {
+        ctx.beginPath();
+        ctx.moveTo(p[0] - p[2], p[1] - p[3]);
+        ctx.lineTo(p[0] + p[2], p[1] + p[3]);
+        ctx.stroke();
+      });
+      ctx.font = '13px Roboto, sans-serif';
+      ctx.fillText('1', ox + r - 5, oy - 10);
+      ctx.fillText('1', ox - 15, oy - r + 4);
+      ctx.restore();
+    }
+
+    function paintShape(s) {
+      var p0 = s.points[0], p1 = s.points[1];
+      ctx.save();
+      ctx.strokeStyle = s.color;
+      ctx.lineWidth = 3;
+      if (s.shape === 'square') {
+        var dx = p1[0] - p0[0], dy = p1[1] - p0[1];
+        var side = Math.max(Math.abs(dx), Math.abs(dy));
+        var sx = dx < 0 ? -1 : 1, sy = dy < 0 ? -1 : 1;
+        ctx.strokeRect(p0[0], p0[1], sx * side, sy * side);
+      } else if (s.shape === 'circle' || s.shape === 'unitcircle') {
+        var r = Math.hypot(p1[0] - p0[0], p1[1] - p0[1]);
+        if (s.shape === 'unitcircle') drawAxes(p0[0], p0[1], r * 1.35, s.color);
+        ctx.beginPath();
+        ctx.arc(p0[0], p0[1], r, 0, Math.PI * 2);
+        ctx.stroke();
+        if (s.shape === 'unitcircle') drawUnitTicks(p0[0], p0[1], r, s.color);
+      } else if (s.shape === 'axes') {
+        var ext = Math.hypot(p1[0] - p0[0], p1[1] - p0[1]);
+        drawAxes(p0[0], p0[1], ext, s.color);
+      }
+      ctx.restore();
+    }
+
+    function paint(s) {
+      if (s.mode === 'shape') { paintShape(s); return; }
+      ctx.save();
+      ctx.globalCompositeOperation = s.mode === 'eraser' ? 'destination-out' : (s.mode === 'highlighter' ? 'multiply' : 'source-over');
+      ctx.globalAlpha = s.mode === 'highlighter' ? 0.4 : 1;
+      ctx.strokeStyle = s.color;
+      ctx.lineWidth = strokeWidth(s);
+      ctx.stroke(pathFor(s.points));
+      ctx.restore();
+    }
+
+    function redraw() {
+      ctx.clearRect(0, 0, STAGE_W, STAGE_H);
+      (strokesBySlide[slideKey()] || []).forEach(paint);
+    }
+
+    function toStage(evt) {
+      var r = canvas.getBoundingClientRect();
+      return [(evt.clientX - r.left) / r.width * STAGE_W, (evt.clientY - r.top) / r.height * STAGE_H];
+    }
+
+    // Un bouton du dock cliqué à la souris ne doit jamais garder le focus clavier :
+    // sinon les flèches ← → cessent de naviguer dans Reveal tant qu'on n'a pas
+    // recliqué ailleurs. On empêche la prise de focus dès le mousedown.
+    function preventFocusSteal(el) {
+      el.addEventListener('mousedown', function (evt) { evt.preventDefault(); });
+    }
+    Array.prototype.slice.call(dock.querySelectorAll('button')).forEach(preventFocusSteal);
+    preventFocusSteal(handle);
+
+    toolBtns.pointer.addEventListener('click', function () { selectTool('pointer'); openShapeMenu(false); });
+    toolBtns.pencil.addEventListener('click', function () { selectTool('pencil'); openShapeMenu(false); });
+    toolBtns.highlighter.addEventListener('click', function () { selectTool('highlighter'); openShapeMenu(false); });
+    toolBtns.eraser.addEventListener('click', function () { selectTool('eraser'); openShapeMenu(false); });
+    swatches.forEach(function (sw) { sw.addEventListener('click', function () { selectColor(sw); }); });
+
+    // Bouton « Formes » : sélectionne tout de suite la forme mémorisée (ou
+    // « carré » par défaut) et ouvre/ferme le menu pour en choisir une autre.
+    toolBtns.shape.addEventListener('click', function (evt) {
+      evt.stopPropagation();
+      selectTool('shape');
+      openShapeMenu(!shapeMenu.classList.contains('tla-open'));
+    });
+    shapeOpts.forEach(function (opt) {
+      opt.addEventListener('click', function (evt) {
+        evt.stopPropagation();
+        setShapeType(opt.getAttribute('data-shape'));
+        selectTool('shape');
+        openShapeMenu(false);
+      });
+    });
+    // Clic ailleurs que sur le menu ou son bouton : referme le menu, sans
+    // toucher à l'outil en cours (le menu ne fait que proposer un choix).
+    document.addEventListener('pointerdown', function (evt) {
+      if (shapeMenu.classList.contains('tla-open') && !shapeMenu.contains(evt.target) && evt.target !== toolBtns.shape && !toolBtns.shape.contains(evt.target)) {
+        openShapeMenu(false);
+      }
+    }, true);
+
+    undoBtn.addEventListener('click', function () {
+      var key = slideKey();
+      if (strokesBySlide[key] && strokesBySlide[key].length) {
+        strokesBySlide[key].pop();
+        redraw();
+        saveState();
+      }
+    });
+    clearBtn.addEventListener('click', function () {
+      strokesBySlide[slideKey()] = [];
+      redraw();
+      saveState();
+    });
+    newSlideBtn.addEventListener('click', insertAndGotoBlank);
+    exportBtn.addEventListener('click', exportHtml);
+    hideBtn.addEventListener('click', function () { setDockHidden(true); });
+    handle.addEventListener('click', function () { setDockHidden(false); });
+
+    canvas.addEventListener('pointerdown', function (evt) {
+      if (tool !== 'pencil' && tool !== 'highlighter' && tool !== 'eraser' && tool !== 'shape') return;
+      canvas.setPointerCapture(evt.pointerId);
+      if (tool === 'shape') {
+        var p = toStage(evt);
+        currentStroke = { mode: 'shape', shape: shapeType, color: color, points: [p, p] };
+      } else {
+        currentStroke = { color: color, mode: tool, points: [toStage(evt)] };
+      }
+    });
+    canvas.addEventListener('pointermove', function (evt) {
+      if (!currentStroke) return;
+      if (currentStroke.mode === 'shape') {
+        currentStroke.points[1] = toStage(evt);
+      } else {
+        currentStroke.points.push(toStage(evt));
+      }
+      redraw();
+      paint(currentStroke);
+    });
+    function endStroke() {
+      if (!currentStroke) return;
+      if (currentStroke.mode === 'shape') {
+        var p0 = currentStroke.points[0], p1 = currentStroke.points[1];
+        // Un simple clic (sans glisser) donne quand même une forme d'une
+        // taille par défaut — plus rapide pendant le cours qu'un glisser précis.
+        if (Math.hypot(p1[0] - p0[0], p1[1] - p0[1]) < 6) {
+          var off = shapeDefaultExtent[currentStroke.shape] || [120, 0];
+          currentStroke.points[1] = [p0[0] + off[0], p0[1] + off[1]];
+        }
+      }
+      var key = slideKey();
+      (strokesBySlide[key] = strokesBySlide[key] || []).push(currentStroke);
+      currentStroke = null;
+      redraw();
+      saveState();
+    }
+    canvas.addEventListener('pointerup', endStroke);
+    canvas.addEventListener('pointercancel', endStroke);
+    canvas.addEventListener('pointerleave', function (evt) { if (evt.buttons === 0) endStroke(); });
+
+    deck.on('slidechanged', redraw);
+    deck.on('resize', redraw);
+
+    document.addEventListener('keydown', function (evt) {
+      var tag = (document.activeElement || {}).tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+      var k = evt.key.toLowerCase();
+
+      // Lettres choisies pour ne RIEN reprendre des raccourcis natifs de
+      // reveal.js (V=pause, N=slide suivante, H/J/K/L=nav vim, A=autoslide,
+      // O=aperçu, G=jump-to-slide, F=plein écran, M=menu, S=notes) : sinon
+      // les deux actions se déclenchaient en même temps.
+      if ((evt.ctrlKey || evt.metaKey) && k === 'z') { evt.preventDefault(); undoBtn.click(); }
+      else if ((evt.ctrlKey || evt.metaKey) && k === 's') { evt.preventDefault(); exportHtml(); }
+      else if (k === 'c') { selectTool('pointer'); openShapeMenu(false); }
+      else if (k === 'd') { selectTool('pencil'); openShapeMenu(false); }
+      else if (k === 't') { selectTool('highlighter'); openShapeMenu(false); }
+      else if (k === 'q') { selectTool('eraser'); openShapeMenu(false); }
+      else if (k === 'z') { setShapeType('square'); selectTool('shape'); }
+      else if (k === 'i') { setShapeType('circle'); selectTool('shape'); }
+      else if (k === 'u') { setShapeType('unitcircle'); selectTool('shape'); }
+      else if (k === 'x') { setShapeType('axes'); selectTool('shape'); }
+      else if (k === 'w') { insertAndGotoBlank(); }
+      else if (k === 'y') { setDockHidden(!dockHidden); }
+      else if (k === 'escape' && tool !== 'pointer') { selectTool('pointer'); openShapeMenu(false); }
+      else if (['1', '2', '3', '4'].indexOf(k) !== -1) { selectColor(swatches[+k - 1]); }
+      else if (tool !== 'pointer' && (k === 'backspace' || k === 'delete')) { evt.preventDefault(); clearBtn.click(); }
+      else { return; }
+      evt.preventDefault();
+    });
+
+    loadState();
+    redraw();
+  }
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') init();
+  else document.addEventListener('DOMContentLoaded', init);
+})();
+</script>

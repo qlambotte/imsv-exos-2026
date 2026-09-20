@@ -1,0 +1,3 @@
+# Rendu Quarto régénéré à chaque déploiement (deploy.sh) — ne pas versionner.
+# (annotate.html est une SOURCE incluse via include-after-body, pas un rendu -> pas ignoré)
+seance01/langage-et-raisonnement.html
