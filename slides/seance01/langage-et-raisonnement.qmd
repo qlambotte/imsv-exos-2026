@@ -64,7 +64,7 @@ Ce sont les moments où je reprends la parole. Lors de ces moments, j'ai besoin 
 :::
 
 ::: {.aretenir .smaller}
-**Une seule règle à retenir : seul tes voisin·es doit t'entendre.** On est nombreux. On verra lorsqu'on parlera d'exponentielles et de logarithmes que l'accumulations de bavardage mène vite à un bruit incompatible avec le travail. On veillera donc à maintenir le volume sonore à un niveau raisonnable.
+**Une seule règle à retenir : seul·es tes voisin·es doivent t'entendre.** On est nombreux. On verra lorsqu'on parlera d'exponentielles et de logarithmes que l'accumulation de bavardage mène vite à un bruit incompatible avec le travail. On veillera donc à maintenir le volume sonore à un niveau raisonnable.
 :::
 
 ## L'outil qui affiche le niveau sonore
@@ -90,7 +90,7 @@ Cinq enseignant·es, pour environ 400 étudiant·es. Conséquences:
 - la séance demande, en retour, davantage d'**autonomie** que ce à quoi vous êtes peut-être habitué·es.
 
 ::: {.aretenir}
-Ça peut **déstabiliser au début**. C'est voulu, et voici pourquoi : les mathématiques s'apprennent comme un langage — en le pratiquant, en se trompant, en corrigeant. Personne n'apprend une langue en écoutant seulement quelqu'un la parler. Le but n'est pas de vous laisser seul face à la difficulté, mais de vous **préparer** à vous en sortir par vous-même — à l'examen, vous serez seul·es face aux questions.
+Ça peut **déstabiliser au début**. C'est voulu, et voici pourquoi : les mathématiques s'apprennent comme un langage — en le pratiquant, en se trompant, en corrigeant. Personne n'apprend une langue en écoutant seulement quelqu'un la parler. Le but n'est pas de vous laisser seul·es face à la difficulté, mais de vous **préparer** à vous en sortir par vous-même — à l'examen, vous serez seul·es face aux questions.
 :::
 
 ## Ce qu'on fait — et ce qu'on ne fait pas
@@ -104,7 +104,7 @@ Cinq enseignant·es, pour environ 400 étudiant·es. Conséquences:
 . . .
 
 ::: {.aretenir .smaller}
-Tu n'es pas laissé sans ressource pour autant. Les leviers : les **indices** du site (trois niveaux, avant la solution), ton **voisin**, les **assistant·es** qui te guident, la **remédiation** si les bases manquent, les **méthodes** qu'on dégage en fin de séance — et, si un blocage touche tout le monde, une **mise au point collective**, ponctuelle, faite par moi.
+Tu n'es pas laissé·e sans ressource pour autant. Les leviers : les **indices** du site (trois niveaux, avant la solution), ton **voisin**, les **assistant·es** qui te guident, la **remédiation** si les bases manquent, les **méthodes** qu'on dégage en fin de séance — et, si un blocage touche tout le monde, une **mise au point collective**, ponctuelle, faite par moi.
 :::
 
 
@@ -314,7 +314,7 @@ Le $\forall$ devient $\exists$, et la négation de « $> 0$ » est « $\le 0$ »
 
 ## Comment fabriquer une méthode
 
-Une méthode, ce n'est rien à inventer : on récupère dans le cours et les exercices **les gestes qui reviennent**, et on les met en ordre.
+Pour fabriquer une méthode, il n'y a rien à inventer : on récupère dans le cours et les exercices **les gestes qui reviennent**, et on les met en ordre.
 
 Aujourd'hui, on construit une méthode pour **nier une proposition**. 
 
