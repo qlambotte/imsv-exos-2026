@@ -142,7 +142,7 @@ Pour (e) : que deviennent $\forall b$, puis $\exists a$, puis $\alpha$, quand on
 (a) « Pour **toute** bactérie, il existe un antibiotique efficace contre elle » (l'antibiotique peut
 dépendre de la bactérie).
 
-(b) « Il existe **un seul** antibiotique efficace contre **toutes** les bactéries » (un antibiotique
+(b) « Il existe **un** antibiotique efficace contre **toutes** les bactéries » (un antibiotique
 universel). 
 
 (c) 
