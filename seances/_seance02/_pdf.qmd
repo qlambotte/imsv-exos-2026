@@ -23,3 +23,7 @@ filters:
 ## Transfert — problèmes
 
 {{< include _transfert.qmd >}}
+
+## Exercices supplémentaires
+
+{{< include _supplementaires.qmd >}}
