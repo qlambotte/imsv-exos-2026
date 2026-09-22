@@ -35,12 +35,12 @@ droite** seulement.
 
 ## Solution
 
-(a) **Faux** : à gauche $(20 - 8) - 5 = 7$, à droite $20 - (8 - 5) = 17$. Déplacer les parenthèses change le résultat : la soustraction n'est **pas associative**.
-(b) **Faux** : $10 - 4 = 6$ tandis que $4 - 10 = -6$. L'ordre des termes compte : la soustraction n'est **pas commutative**.
-(c) **Vrai** : $3 \cdot (6 + 4) = 3 \cdot 10 = 30$ et $3 \cdot 6 + 3 \cdot 4 = 18 + 12 = 30$. C'est la **distributivité** de la multiplication sur l'addition.
-(d) **Vrai** : $(30 + 12) : 6 = 42 : 6 = 7$ et $30 : 6 + 12 : 6 = 5 + 2 = 7$. La division est distributive **à droite**, c'est-à-dire quand la somme est au **numérateur**.
-(e) **Faux** : $48 : (8 : 2) = 48 : 4 = 12$ mais $(48 : 8) : 2 = 6 : 2 = 3$. La division n'est **pas associative**.
-(f) **Faux** : $60 : (4 + 6) = 60 : 10 = 6$ mais $60 : 4 + 60 : 6 = 15 + 10 = 25$. La division n'est **pas** distributive **à gauche** (somme au **dénominateur**) : c'est le piège classique.
+(a) **Faux** : $7 \ne 17$ (la soustraction n'est pas associative).
+(b) **Faux** : $6 \ne -6$ (la soustraction n'est pas commutative).
+(c) **Vrai** : distributivité de la multiplication sur l'addition.
+(d) **Vrai** : la division est distributive **à droite**.
+(e) **Faux** : $12 \ne 3$ (la division n'est pas associative).
+(f) **Faux** : $6 \ne 25$ (la division n'est **pas** distributive à gauche).
 
 ## Piège
 
@@ -146,7 +146,7 @@ Confondre $\left(x^4\right)^2$ (on **multiplie** : $x^8$) et $x^4 \cdot x^2$ (on
 
 ## Indice
 
-Retourne à la théorie du cours : *Valeur absolue*. Une racine carrée est **toujours
+Retourne à la théorie du cours : *Valeur absolue*. Une racine d'indice **pair** est **toujours
 positive**.
 
 ## Solution
@@ -210,7 +210,8 @@ Retourne à la théorie du cours : *Notation scientifique*, *Ordres de grandeur 
 
 (a) $4 \cdot 2{,}5 \times 10^{7 - 3} = 10 \times 10^{4} = 1 \times 10^{5}$.
 (b) $\approx \dfrac{5 \times 10^{6}}{2 \times 10^{2}} = 2{,}5 \times 10^{4}$.
-(c) **Non** : un résultat calculé ne peut pas être plus précis que les données qui l'alimentent (règle des **chiffres significatifs**). Le dixième de millimètre ($10^{-4}$ m) est un million de fois plus grossier que le nanomètre ($10^{-9}$ m) ; annoncer le résultat « au nanomètre près » afficherait des décimales que la mesure ne garantit pas — c'est une **fausse précision**.
+(c) **Non** : le nanomètre est un million de fois plus fin que le dixième de millimètre. Ajouter des
+décimales que la mesure ne justifie pas ne rend pas le résultat plus exact.
 
 ## Piège
 
@@ -221,7 +222,7 @@ exactitude réelle.
 :::
 
 ::: {.callout-caution .exo title="Exercice|Renforcement|2|O4"}
-(a) Ramène-toi à un angle du premier quandrant : $\cos(420°)$ et $\sin\!\left(\dfrac{7\pi}{3}\right)$.
+(a) Ramène-toi à un angle connu : $\cos(420°)$ et $\sin\!\left(\dfrac{7\pi}{3}\right)$.
 (b) On sait que $\cos\theta = \dfrac{3}{5}$ et que $\theta \in \left[0,\ \tfrac{\pi}{2}\right]$. Calcule
 $\sin\theta$, puis $\tan\theta$.
 :::
@@ -265,7 +266,8 @@ Retourne à la théorie du cours : *Tangente*. Rappelle-toi $\tan\theta = \dfrac
 
 (a) $\tan 0 = 0$ ; $\tan\dfrac{\pi}{6} = \dfrac{1}{\sqrt3} = \dfrac{\sqrt3}{3}$ ; $\tan\dfrac{\pi}{4} = 1$ ;
 $\tan\dfrac{\pi}{3} = \sqrt3$.
-(b) $\cos\dfrac{\pi}{2} = 0$, donc $\tan\dfrac{\pi}{2} = \dfrac{\sin(\pi/2)}{\cos(\pi/2)} = \dfrac{1}{0}$ serait une **division par zéro** : $\tan\dfrac{\pi}{2}$ n'existe pas. 
+(b) $\cos\dfrac{\pi}{2} = 0$ : $\tan\dfrac{\pi}{2} = \dfrac{\sin(\pi/2)}{\cos(\pi/2)}$ serait une division
+par zéro.
 
 ## Piège
 
@@ -305,8 +307,16 @@ Garder $\sin\theta < 0$ en oubliant que le sinus est **positif** au quadrant II.
 :::
 :::
 
+### Renforcement — exercices déplacés du socle et du transfert
+
+::: {.callout-note appearance="simple"}
+Ces exercices étaient au socle ou au transfert : ils restent **au programme de la séance**,
+à faire à la maison si le temps a manqué en classe.
+:::
 
 ::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
+Racines et exposants rationnels.
+
 (a) Calculer, dans $\mathbb{R}$ : $\sqrt{16}$, $\sqrt[3]{-8}$, $\sqrt{-4}$.
 (b) Écrire $8^{2/3}$ comme une racine, puis calculer.
 (c) Calculer $81^{-1/4}$.
@@ -319,13 +329,12 @@ Garder $\sin\theta < 0$ en oubliant que le sinus est **positif** au quadrant II.
 
 Retourne à la théorie du cours : *Racines et exposants rationnels*.
 
-Une racine carrée d'un nombre **négatif** n'est **pas définie** dans $\mathbb{R}$.
-
+Une racine d'indice **pair** d'un nombre **négatif** n'est **pas définie** dans $\mathbb{R}$.
 $x^{p/q} = \sqrt[q]{x^{\,p}}$.
 
 ## Solution
 
-(a) $\sqrt{16} = 4$ ; $\sqrt[3]{-8} = -2$ (un indice **impair** accepte un radicande négatif, car $(-2)^3 = -8$) ; $\sqrt{-4}$ est **non défini** dans $\mathbb{R}$ : aucun réel élevé au carré ne donne un nombre négatif (un carré est toujours $\ge 0$).
+(a) $\sqrt{16} = 4$ ; $\sqrt[3]{-8} = -2$ ; $\sqrt{-4}$ **non défini** dans $\mathbb{R}$.
 (b) $8^{2/3} = \sqrt[3]{8^2} = \left(\sqrt[3]{8}\right)^2 = 2^2 = 4$.
 (c) $81^{-1/4} = \dfrac{1}{\sqrt[4]{81}} = \dfrac{1}{3}$.
 
@@ -337,10 +346,10 @@ Vouloir calculer $\sqrt{-4}$ dans $\mathbb{R}$ ; écrire $\sqrt{x^2} = x$ sans v
 :::
 
 ::: {.callout-caution .exo title="Exercice|Renforcement|2|O4"}
-Un déplacement de longueur $12$ fait un angle de $60°$ avec l'horizontale.
+Un déplacement (ou une force) de norme $12$ fait un angle de $60°$ avec l'horizontale.
 
 (a) Exprimer ses composantes **horizontale** et **verticale** à l'aide de $\cos$ et $\sin$.
-(b) Les calculer.
+(b) Les calculer (valeurs remarquables).
 :::
 
 ::: {.aides}
@@ -348,7 +357,8 @@ Un déplacement de longueur $12$ fait un angle de $60°$ avec l'horizontale.
 
 ## Indice
 
-Retourne à la théorie du cours : *Pourquoi s'intéresser aux angles ?* et *Cercle trigonométrique*.
+Retourne à la théorie du cours : *Pourquoi s'intéresser aux angles ?* et *Cercle trigonométrique
+(triangle rectangle)*.
 
 Sur le triangle rectangle formé par la projection : la composante **horizontale** est le côté
 **adjacent** à l'angle, la **verticale** le côté **opposé**. Donc horizontale $= 12\cos(60°)$,

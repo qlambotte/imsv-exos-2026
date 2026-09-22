@@ -6,12 +6,13 @@
        Indice 3 = une ÉTAPE (un pas concret, sans donner la solution).
      Numéro AUTOMATIQUE (pas écrit). Valeurs DIFFÉRENTES des slides. Faisable SANS calculatrice. -->
 
-::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
+::: {.callout-caution .exo title="Exercice|Socle|2|O1"}
 Calculer.
 
 (a) $7 - 3 \cdot 2^2$
 (b) $(7 - 3) \cdot 2^2$
-(c) $(8 - 2 \cdot 3)^2$
+(c) $(7 - 3 \cdot 2)^2$
+(d) $12 : \sqrt{\left[10 - (4 + 4)\right]^2 + 4 - 4 \cdot (-2)}$
 :::
 
 ::: {.aides}
@@ -38,11 +39,12 @@ multiplications, et enfin les additions et soustractions.
 
 (a) $7 - 3 \cdot 2^2 = 7 - 3 \cdot 4 = 7 - 12 = -5$.
 (b) $(7 - 3) \cdot 2^2 = 4 \cdot 4 = 16$.
-(c) $(8 - 2 \cdot 3)^2 = (8 - 6)^2 = 2^2 = 4$.
+(c) $(7 - 3 \cdot 2)^2 = (7 - 6)^2 = 1^2 = 1$.
+(d) $10 - (4 + 4) = 2$, donc $\left[10 - (4 + 4)\right]^2 = 4$ ; sous la racine $4 + 4 - 4 \cdot (-2) = 4 + 4 + 8 = 16$, puis $\sqrt{16} = 4$ et enfin $12 : 4 = 3$.
 
 ## Piège
 
-Soustraire avant de multiplier en (a) ; en (c), distribuer le carré dans les parenthèses.
+Soustraire avant de multiplier en (a) ; en (c), distribuer le carré dans les parenthèses ; en (d), oublier que $-\,4 \cdot (-2) = +8$ ou diviser avant d'avoir évalué la racine (la barre de racine joue le rôle de parenthèses : on évalue tout l'intérieur d'abord).
 
 :::
 :::
@@ -95,6 +97,7 @@ Calculer puis simplifier, en donnant une fraction **irréductible**.
 (b) $\dfrac{5}{6} - \dfrac{3}{8}$
 (c) $\dfrac{3}{8} \cdot \dfrac{4}{9}$
 (d) $\dfrac{6}{7} : \dfrac{9}{14}$
+(e) $\left(\dfrac{5}{4} - \dfrac{6}{3}\right) : \dfrac{1}{2}$
 :::
 
 ::: {.aides}
@@ -116,9 +119,10 @@ renverser une fraction ?
 
 *Étape.*
 
-(a) simplifie par un facteur commun ; (b) prends $24$ comme dénominateur commun ; (c) multiplie
-numérateurs entre eux et dénominateurs entre eux ; (d) multiplie par l'**inverse** de la seconde
-fraction.
+(a) simplifie par un facteur commun ; 
+(b) prends $24$ comme dénominateur commun ; 
+(c) multiplie numérateurs entre eux et dénominateurs entre eux ;
+(d) multiplie par l'**inverse** de la seconde fraction.
 
 ## Solution
 
@@ -126,6 +130,7 @@ fraction.
 (b) $\dfrac{20}{24} - \dfrac{9}{24} = \dfrac{11}{24}$.
 (c) $\dfrac{3 \cdot 4}{8 \cdot 9} = \dfrac{12}{72} = \dfrac{1}{6}$.
 (d) $\dfrac{6}{7} \cdot \dfrac{14}{9} = \dfrac{84}{63} = \dfrac{4}{3}$.
+(e) $\dfrac{6}{3} = 2$, donc $\dfrac{5}{4} - \dfrac{6}{3}=\dfrac{5}{4} - 2 = -\dfrac{3}{4}$ ; puis $-\dfrac{3}{4} : \dfrac{1}{2} = -\dfrac{3}{4} \cdot 2 = -\dfrac{3}{2}$.
 
 ## Piège
 
@@ -135,7 +140,6 @@ Additionner numérateurs **et** dénominateurs ($\frac56 - \frac38 \ne \frac{2}{
 :::
 
 ::: {.callout-caution .exo title="Exercice|Socle|2|O2"}
-Fractions, décimaux et pourcentages.
 
 (a) Écrire $\dfrac{2}{5}$ sous forme décimale, puis en pourcentage.
 (b) Ranger du plus petit au plus grand : $\dfrac{3}{5}$, $\ 0{,}55$, $\ 65\,\%$.
@@ -169,8 +173,8 @@ $0{,}75$. En (d), écris l'équation $0{,}80 \cdot x = 96$ et isole $x$.
 
 (a) $\dfrac{2}{5} = 0{,}4 = 40\,\%$.
 (b) $\dfrac{3}{5} = 0{,}60$ et $65\,\% = 0{,}65$ ; d'où $0{,}55 < \dfrac{3}{5} < 65\,\%$.
-(c) $80 \cdot 1{,}25 \cdot 0{,}75 = 75 \ne 80$ : **non**.
-(d) $0{,}80 \cdot x = 96$, d'où $x = 96 : 0{,}80 = 120$.
+(c) $80 \cdot 1{,}25 \cdot 0{,}75 = 75 \ne 80$ : **non**. La baisse de $25\,\%$ ne compense pas la hausse parce qu'elle porte sur une valeur plus grande ($100$) que celle de départ ($80$) : on retranche $25\,\%$ de $100 = 25$, alors qu'on n'avait ajouté que $25\,\%$ de $80 = 20$. Deux variations en pourcentage se **composent** (on multiplie les facteurs $1{,}25$ et $0{,}75$), elles ne s'**additionnent** pas.
+(d) On cherche $x$ tel que $0{,}80 \cdot x = 96$, d'où $x = 96 : 0{,}80 = 120$. La valeur initiale est donc $120$.
 
 ## Piège
 
@@ -226,8 +230,6 @@ Confondre $a^m a^n$ (on **ajoute**) et $\left(a^m\right)^n$ (on **multiplie**).
 :::
 
 ::: {.callout-caution .exo title="Exercice|Socle|2|O3"}
-Valeur absolue, notation scientifique et ordre de grandeur.
-
 (a) Calculer $\sqrt{(-7)^2}$ et $\sqrt{(2 - 9)^2}$.
 (b) Écrire en notation scientifique : $0{,}00058$ ; puis $(6 \times 10^{4}) \cdot (5 \times 10^{-7})$.
 (c) **Estimer** l'ordre de grandeur de $\dfrac{3{,}9 \times 10^{5}}{1{,}9 \times 10^{2}}$.
@@ -245,7 +247,7 @@ estimations*.
 
 *Question à te poser.*
 
-Quel est le signe d'une racine d'indice pair ?
+Quel est le signe d'une racine carrée ?
 
 Par quelle puissance de $10$ faut-il multiplier pour amener le facteur entre $1$ et $10$ ? Comment se
 combinent les puissances de $10$ dans un produit ou un quotient ?
@@ -294,26 +296,22 @@ Retourne à la théorie du cours : *Cercle trigonométrique*.
 
 *Étape.*
 
-$180°$ correspond à $\pi$ rad. Pose la proportion $\dfrac{\text{degrés}}{180°} = \dfrac{\text{radians}}{\pi}$
-et isole l'inconnue.
+$180°$ correspond à $\pi$ rad. On applique ensuite une règle de troi.
 
 ## Solution
 
 (a) $\dfrac{\pi}{3}$, $\ \dfrac{\pi}{2}$, $\ \dfrac{2\pi}{3}$, $\ \dfrac{3\pi}{2}$.
 (b) $30°$, $\ 135°$, $\ 270°$, $\ 360°$.
 
-## Piège
 
-Multiplier par $\dfrac{180°}{\pi}$ là où il faut $\dfrac{\pi}{180°}$ (ou l'inverse).
 
 :::
 :::
 
 ::: {.callout-caution .exo title="Exercice|Socle|2|O4"}
-Cercle trigonométrique et valeurs remarquables.
 
 (a) Donner $\cos\theta$ et $\sin\theta$ pour $\theta = \dfrac{\pi}{6}$, $\dfrac{\pi}{4}$, $\dfrac{\pi}{3}$.
-(b) Un point du cercle a pour coordonnées $\left(\dfrac{1}{2},\ \dfrac{\sqrt3}{2}\right)$. Quel angle
+(b) Un point du cercle trigonométrique a pour coordonnées $\left(\dfrac{1}{2},\ -\dfrac{\sqrt3}{2}\right)$. Quel angle
 $\theta \in [0,\ 2\pi[$ ?
 (c) Même question pour $(0,\ -1)$.
 :::
@@ -340,9 +338,9 @@ table des valeurs remarquables, et repère le quadrant.
 
 ## Solution
 
-(a) $\cos : \dfrac{\sqrt3}{2},\ \dfrac{\sqrt2}{2},\ \dfrac{1}{2}$ ; $\sin : \dfrac{1}{2},\ \dfrac{\sqrt2}{2},\ \dfrac{\sqrt3}{2}$.
-(b) $\theta = \dfrac{\pi}{3}$ ($\cos = \tfrac12$, $\sin = \tfrac{\sqrt3}{2}$).
-(c) $\theta = \dfrac{3\pi}{2}$.
+(a) dans l'ordre de l'énoncé: $\cos: \dfrac{\sqrt3}{2},\ \dfrac{\sqrt2}{2},\ \dfrac{1}{2}$ ; $\sin : \dfrac{1}{2},\ \dfrac{\sqrt2}{2},\ \dfrac{\sqrt3}{2}$.
+(b) $\theta=\dfrac{5\pi}{3}$.
+(c) $\theta = \dfrac{3\pi}{2}$ : le point $(0,\ -1)$ est tout **en bas** du cercle, d'abscisse nulle ($\cos\theta = 0$) et d'ordonnée $-1$ ($\sin\theta = -1$), soit trois quarts de tour depuis $(1, 0)$.
 
 ## Piège
 
@@ -352,7 +350,6 @@ Confondre $\dfrac{\pi}{6}$ et $\dfrac{\pi}{3}$ en intervertissant $\cos$ (abscis
 :::
 
 ::: {.callout-caution .exo title="Exercice|Socle|2|O4"}
-Signes et symétries.
 
 (a) Pour chacun des quatre quadrants, donner les signes de $\cos\theta$ et de $\sin\theta$.
 (b) À partir des valeurs remarquables et des symétries, donner $\cos$ et $\sin$ de $135°$ et de
@@ -382,8 +379,7 @@ Pour $-\dfrac{\pi}{6}$, applique $\cos(-\theta) = \cos\theta$ et $\sin(-\theta) 
 
 ## Solution
 
-(a) I : $(\cos > 0,\ \sin > 0)$ ; II : $(\cos < 0,\ \sin > 0)$ ; III : $(\cos < 0,\ \sin < 0)$ ;
-IV : $(\cos > 0,\ \sin < 0)$.
+(a) Sur le cercle, $\cos\theta$ est l'**abscisse** du point (positive à droite de l'axe vertical, négative à gauche) et $\sin\theta$ son **ordonnée** (positive au-dessus de l'axe horizontal, négative en dessous). D'où : I : $(\cos > 0,\ \sin > 0)$ ; II : $(\cos < 0,\ \sin > 0)$ ; III : $(\cos < 0,\ \sin < 0)$ ; IV : $(\cos > 0,\ \sin < 0)$.
 (b) $\cos(135°) = -\dfrac{\sqrt2}{2}$, $\sin(135°) = \dfrac{\sqrt2}{2}$ ;
 $\cos\!\left(-\dfrac{\pi}{6}\right) = \dfrac{\sqrt3}{2}$, $\sin\!\left(-\dfrac{\pi}{6}\right) = -\dfrac{1}{2}$.
 
@@ -397,8 +393,8 @@ Se tromper de signe selon le quadrant ; confondre la symétrie des angles **oppo
 
 ::: {.callout-caution .exo title="Exercice|Socle|2|O4"}
 (a) Dans un triangle rectangle en $B$ avec $|AB| = 5$, $|BC| = 12$ et $|AC| = 13$, calculer
-$\sin(\widehat{A})$, $\cos(\widehat{A})$ et $\tan(\widehat{A})$.
-(b) Rappeler $\tan\theta$ en fonction de $\sin\theta$ et $\cos\theta$ ; pour quels $\theta$ n'est-elle
+$\sin(\widehat{BAC})$, $\cos(\widehat{BAC})$ et $\tan(\widehat{BAC})$.
+(b) Exprimer $\tan\theta$ en fonction de $\sin\theta$ et $\cos\theta$ ; pour quels $\theta$ n'est-elle
 **pas définie** ?
 (c) Si $\cos\theta = \dfrac{8}{17}$ et $\theta \in \left[0,\ \tfrac{\pi}{2}\right]$, calculer $\sin\theta$.
 :::
@@ -408,8 +404,8 @@ $\sin(\widehat{A})$, $\cos(\widehat{A})$ et $\tan(\widehat{A})$.
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Cercle trigonométrique (triangle rectangle)*, *Tangente* et
-*Identité fondamentale*.
+Retourne à la théorie du cours : *Cercle trigonométrique*, *Tangente* et
+*Périodicité et identité fondamentale*.
 
 ## Indice 2
 
@@ -428,14 +424,14 @@ et fixe son signe par le quadrant.
 
 ## Solution
 
-(a) $\sin(\widehat{A}) = \dfrac{|BC|}{|AC|} = \dfrac{12}{13}$ ; $\cos(\widehat{A}) = \dfrac{|AB|}{|AC|} = \dfrac{5}{13}$ ;
-$\tan(\widehat{A}) = \dfrac{12}{5}$.
-(b) $\tan\theta = \dfrac{\sin\theta}{\cos\theta}$ ; non définie pour $\theta = \tfrac{\pi}{2} + k\pi$ ($k \in \mathbb{Z}$).
-(c) $\sin\theta = \sqrt{1 - \tfrac{64}{289}} = \sqrt{\tfrac{225}{289}} = \dfrac{15}{17}$ (positif dans le quadrant I).
+(a) $\sin(\widehat{BAC}) = \dfrac{|BC|}{|AC|} = \dfrac{12}{13}$ ; $\cos(\widehat{BAC}) = \dfrac{|AB|}{|AC|} = \dfrac{5}{13}$ ;
+$\tan(\widehat{BAC}) = \dfrac{12}{5}$.
+(b) $\tan\theta = \dfrac{\sin\theta}{\cos\theta}$ ; elle n'est **pas définie** là où $\cos\theta = 0$, c'est-à-dire pour $\theta = \tfrac{\pi}{2} + k\pi$ ($k \in \mathbb{Z}$), car on diviserait alors par zéro.
+(c) On a que $\sin^2(\theta)=1-\left(\dfrac{8}{17}\right)^2=1-\dfrac{64}{289}=\dfrac{225}{289}$. Comme $\theta$ est dans le premier quadrant, son sinus est positif. Donc $\sin\theta =  \sqrt{\tfrac{225}{289}} = \dfrac{15}{17}$.
 
 ## Piège
 
-Inverser opposé et adjacent ; oublier le **signe** donné par le quadrant en (c).
+Inverser côté opposé et côté adjacent ; oublier le **signe** donné par le quadrant en (c).
 
 :::
 :::

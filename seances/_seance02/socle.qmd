@@ -9,7 +9,7 @@ filters:
 
 {{< include _consignes.qmd >}}
 
-Les exercices du **socle** sont des exercices routiniers, pour installer les automatismes. Résous-les à ton rythme. Si tu n’arrives pas au bout du socle lors de la séance, ce n’est pas grave: tu peux le poursuivre à domicile avec les coups de pource et la solution finale.
+Les exercices du **socle** sont des exercices routiniers, pour installer les automatismes. Résous-les à ton rythme. Si tu n’arrives pas au bout du socle lors de la séance, ce n’est pas grave: tu peux le poursuivre à domicile avec les coups de pouce et la solution finale.
 
 {{< include _socle.qmd >}}
 
