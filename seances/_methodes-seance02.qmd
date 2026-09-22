@@ -17,8 +17,8 @@ Dès qu'il faut transformer une expression algébrique : passer d'un **produit �
    $(a + b)(c + d) = ac + ad + bc + bd$, ou une **identité remarquable** :
    $(a \pm b)^2 = a^2 \pm 2ab + b^2$ et $(a - b)(a + b) = a^2 - b^2$.
 3. Pour **factoriser**, mets d'abord en évidence le **facteur commun**, puis regarde si le reste est
-   une identité remarquable (souvent une **différence de carrés**).
-4. **Contrôle** en redéveloppant : tu dois retomber sur l'expression de départ.
+   une identité remarquable.
+4. (Optionnelle) **Contrôle** en redéveloppant : tu dois retomber sur l'expression de départ.
 :::
 
 ::: {.exemple}
@@ -43,7 +43,7 @@ diviser.
 ::: {.etapes}
 1. **Simplifie** d'abord : divise le haut **et** le bas par un facteur commun (jamais un terme d'une
    somme).
-2. Pour une **somme ou une différence**, passe par le dénominateur commun (le **PPCM**) :
+2. Pour une **somme ou une différence**, passe par le dénominateur commun :
    $\dfrac{a}{b} \pm \dfrac{c}{d} = \dfrac{ad \pm bc}{bd}$.
 3. Pour un **produit**, multiplie les numérateurs entre eux et les dénominateurs entre eux ; simplifie
    « en diagonale » **avant** de multiplier si tu peux.
@@ -114,7 +114,7 @@ Pour préparer $200$ mL d'une solution diluée, le volume de solution mère pré
 :::
 
 ::: {.piege}
-Se fier au nombre de décimales affichées par une machine. Oublier de convertir dans une **unité
+Oublier de convertir dans une **unité
 commune** avant d'additionner ou de comparer.
 :::
 
@@ -149,7 +149,7 @@ par le quadrant.
 ::: {.methode obj="O4" titre="Triangle rectangle et identité fondamentale"}
 
 ::: {.quand}
-Dès qu'il faut relier les côtés d'un triangle rectangle à un angle, calculer une $\tan$, ou passer de
+Dès qu'il faut relier les côtés d'un triangle rectangle à un angle, calculer une tangente, ou passer de
 $\cos$ à $\sin$ (ou l'inverse).
 :::
 
@@ -167,7 +167,7 @@ $\sin\theta = \sqrt{1 - \tfrac{9}{25}} = \sqrt{\tfrac{16}{25}} = \dfrac{4}{5}$.
 :::
 
 ::: {.piege}
-Inverser opposé et adjacent. Oublier le **signe** imposé par le quadrant en tirant $\sin\theta$ de
+Inverser côté opposé et côté adjacent. Oublier le **signe** imposé par le quadrant en tirant $\sin\theta$ de
 l'identité.
 :::
 
