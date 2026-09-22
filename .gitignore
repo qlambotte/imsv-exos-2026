@@ -36,3 +36,11 @@ Thumbs.db
 
 Claude outputs/
 scrcpy/
+
+# ---- Rendus Quarto « par document » (preview/render d'un .qmd isolé) ----
+# Quarto écrit un <doc>.html + un dossier <doc>_files/ à côté de chaque .qmd rendu
+# isolément (ex. prévisualisation d'un fragment _socle.qmd). Le vrai site va dans
+# _book/ ; ces sous-produits n'ont pas à être versionnés.
+*_files/
+/seances/*.html
+/seances/**/*.html
