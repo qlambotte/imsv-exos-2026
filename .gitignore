@@ -44,3 +44,8 @@ scrcpy/
 *_files/
 /seances/*.html
 /seances/**/*.html
+
+# ---- Outillage à usage unique (ne pas versionner) ----
+/git-filter-repo.py
+/git-filter-repo
+/purge-history.sh
