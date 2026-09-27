@@ -522,8 +522,7 @@ Oublier de convertir dans une **unité commune** avant d'additionner ou de compa
 Cette fiche rejoint ta **boîte à outils** sur le site.
 :::
 
-# Méthode supplémentaire: Changer d'écriture et manier les pourcentages
- {.divider background-color="#1f5fbf"}
+# Méthode supplémentaire: Changer d'écriture et manier les pourcentages {.divider background-color="#1f5fbf"}
 
 
 
