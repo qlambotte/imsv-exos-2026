@@ -1,12 +1,18 @@
+<!-- RENFORCEMENT : variations du socle (même compétence, entraînement en plus).
+     Titre : « Exercice|Renforcement|niveau|Ox » — SANS numéro (R.1, R.2… automatiques).
+     Valeurs différentes du socle. Faisable SANS calculatrice.
+     Échelle d'aides courte : un onglet « Indice » (renvoi à la théorie + coup de pouce),
+     puis « Solution » (et « Piège » au besoin). -->
+
 ::: {.callout-note appearance="simple"}
-Ces exercices restent **dans les objectifs** de la séance (donc **examinables**) : à faire une fois
-le socle et le transfert bouclés, en séance ou à la maison.
+Ces exercices restent **dans les objectifs** de la séance : à faire une fois le socle et le transfert
+bouclés, en séance ou à la maison.
 :::
 
 ### Renforcement — le socle, un cran plus loin
 
 ::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
-**Variation d'un exercice du socle** (même savoir-faire, contexte/valeurs nouveaux)………
+Variation d'un exercice du socle (même savoir-faire, valeurs ou contexte nouveaux)………
 :::
 
 ::: {.aides}
@@ -14,9 +20,13 @@ le socle et le transfert bouclés, en séance ou à la maison.
 
 ## Indice
 
-Un seul indice………
+Retourne à la théorie du cours : *………*. Coup de pouce………
 
 ## Solution
+
+………
+
+## Piège
 
 ………
 

@@ -1,0 +1,20 @@
+---
+title: "Séance 4 — Vecteurs et systèmes de coordonnées"
+description: "Vecteurs et systèmes de coordonnées"
+order: 4
+nom: "[Vecteurs et systèmes de coordonnées](methodes/seance04.html)"
+correction: "✅ en ligne"
+filters:
+  - ../../methode.lua
+---
+
+::: {.content-visible when-format="html"}
+::: {.dl}
+<details class="dl-menu">
+<summary>Télécharger (PDF)</summary>
+<a href="../../pdf/feuille-seance04.pdf" download>Feuille à compléter — séance 4 (PDF)</a>
+</details>
+:::
+:::
+
+{{< include _corrige-seance04.qmd >}}

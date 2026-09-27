@@ -32,6 +32,7 @@ rm -rf "$TMP"; mkdir -p "$TMP" "$OUT"
 [ -d "$ROOT/img" ] && cp -r "$ROOT/img" "$TMP/" || true   # img/ optionnel (supprimé avec les QR)
 cp "$ROOT/exercice.lua" "$TMP/"
 cp "$DIR"/_*.qmd "$TMP/"                       # _pdf, _consignes, _socle, _transfert…
+if [ -d "$DIR/img" ]; then mkdir -p "$TMP/img"; cp "$DIR"/img/*.svg "$TMP/img/"; fi   # figures de la séance
 
 # À plat : réécrit les chemins ../../ (img, exercice.lua) dans _pdf.qmd
 sed -i -e 's#\.\./\.\./img/#img/#g' -e 's#\.\./\.\./exercice\.lua#exercice.lua#g' "$TMP/_pdf.qmd"

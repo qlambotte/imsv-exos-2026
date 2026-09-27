@@ -1,0 +1,44 @@
+---
+title: "Séance 4 — Vecteurs et systèmes de coordonnées"
+subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
+description: "Vecteurs et systèmes de coordonnées"
+order: 4
+nom: "[Vecteurs et systèmes de coordonnées](seances/seance04/index.html)"
+correction: "✅ en ligne"
+---
+
+{{< include _meta.qmd >}}
+
+{{< include _download.qmd >}}
+
+## Objectifs de la séance
+
+Ces objectifs sont repris du cours théorique (IMSV-4). **Chaque exercice indique l'objectif qu'il
+travaille** — la pastille **O1 / O2 / O3 / O4 / O5** dans son en-tête.
+
+- **O1** — **représenter une grandeur orientée par un vecteur** : distinguer point et vecteur, lire norme, direction et sens.
+- **O2** — **additionner, soustraire et multiplier un vecteur par un scalaire**, sur un dessin et en coordonnées ; reconnaître des vecteurs colinéaires.
+- **O3** — **relier représentation géométrique et coordonnées** dans $\mathbb{R}^2$, puis dans $\mathbb{R}^3$ et $\mathbb{R}^n$ : coordonnées d'un vecteur, norme, passage de la norme et de l'angle aux coordonnées.
+- **O4** — **calculer et interpréter un produit scalaire** : angle, orthogonalité, projection.
+- **O5** — **calculer et interpréter un produit vectoriel** : direction, sens (main droite) et norme (aire).
+
+Une grille d'**auto-évaluation** sur ces objectifs t'attend à la page
+[Institutionnalisation](institution.qmd).
+
+## Le parcours de la séance
+
+1. **[Socle](socle.qmd)** — les exercices routiniers, à ton rythme.
+2. **[Transfert](transfert.qmd)** — des problèmes en contexte nouveau.
+3. **[Exercices supplémentaires](supplementaires.qmd)** — des variations pour consolider, en séance ou à la maison.
+4. **[Institutionnalisation](institution.qmd)** — la méthode qu'on dégage ensemble, et l'auto-évaluation.
+
+## Les slides du cours
+
+Les slides de théorie associée sont sur
+**[Moodle](https://moodle.umons.ac.be/course/view.php?id=2657)** (chapitre IMSV-4).
+
+## Avant la séance
+
+- **QCM Moodle de préparation** — court, il amorce la théorie du jour. <!-- lien QCM -->
+- **Prépa de la séance précédente** — à avoir faite : elle réapparaît à l'échauffement.
+- **Trigonométrie** — revois le cercle trigonométrique et les valeurs remarquables (séance 2) : ils servent dès le socle.

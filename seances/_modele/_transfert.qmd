@@ -1,9 +1,13 @@
-<!-- Fragment TRANSFERT. La numérotation CONTINUE après le socle : si le socle va
-     jusqu'à l'exercice 7, le transfert commence à 8. Titre de la forme
-     "Exercice N|Transfert|niveau|Ox" (Ox = objectif travaillé, pastille dans l'en-tête). -->
+<!-- TRANSFERT : appliquer les savoir-faire du socle à un CONTEXTE NOUVEAU (vrais problèmes,
+     de préférence en sciences de la vie ; définir le vocabulaire technique en note de bas de page).
+     Titre : « Exercice|Transfert|niveau|Ox » — SANS numéro (T.1, T.2… automatiques).
+     Même hiérarchie d'indices que le socle. Faisable SANS calculatrice. -->
 
-::: {.callout-caution .exo title="Exercice 8|Transfert|3|O2"}
-**Titre du problème.** Énoncé (contexte nouveau, pas repris tel quel du cours)………
+::: {.callout-caution .exo title="Exercice|Transfert|2|O1"}
+Contexte du problème (pas repris tel quel du cours)………
+
+(a) ………
+(b) ………
 :::
 
 ::: {.aides}
@@ -11,13 +15,17 @@
 
 ## Indice 1
 
-*Référence théorique.*
-
-………
+Retourne à la théorie du cours : *………*.
 
 ## Indice 2
 
 *Question à te poser.*
+
+………
+
+## Indice 3
+
+*Étape.*
 
 ………
 

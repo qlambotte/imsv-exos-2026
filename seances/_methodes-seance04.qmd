@@ -1,0 +1,169 @@
+<!-- Cartes de méthode — SÉANCE 4 (Vecteurs et systèmes de coordonnées).
+     Fragment sans en-tête : inclus par la page methodes/seance04.qmd (site, correctif)
+     et par build-boite.sh pour le PDF « méthodes » (une méthode par page).
+     Mise en forme par le filtre methode.lua. Calc-free, notation du cours.
+     Pas de figure ici : build-boite.sh ne copie que le fragment. -->
+
+::: {.methode obj="O2" titre="Additionner et soustraire des vecteurs sur un dessin"}
+
+::: {.quand}
+Dès qu'il faut construire une somme, une différence ou un multiple de vecteurs donnés par des flèches.
+:::
+
+::: {.etapes}
+1. Un vecteur ne dépend que de sa **norme**, sa **direction** et son **sens** : tu peux déplacer une flèche
+   parallèlement à elle-même.
+2. Pour $\vec u + \vec v$, place les flèches **bout à bout** (l'origine de $\vec v$ à l'extrémité de
+   $\vec u$) ; la somme va de la première origine à la dernière extrémité.
+3. Pour $\vec u - \vec v$, ajoute $-\vec v$ (même direction et même norme que $\vec v$, sens opposé).
+4. Pour $k\,\vec u$ : même direction, norme multipliée par $|k|$, sens conservé si $k > 0$ et inversé si
+   $k < 0$.
+:::
+
+::: {.exemple}
+$\vec u = (3, 1)$, $\vec v = (1, 2)$ : bout à bout, on arrive à $\vec u + \vec v = (4, 3)$ ; avec
+$-\vec v$, on arrive à $\vec u - \vec v = (2, -1)$.
+:::
+
+::: {.piege}
+Dessiner les deux flèches à partir de la même origine et relier leurs extrémités : on obtient une
+**différence**, pas la somme.
+:::
+
+:::
+
+::: {.methode obj="O3" titre="Passer de la norme et de l'angle aux coordonnées (et retour)"}
+
+::: {.quand}
+Dès qu'une grandeur orientée (force, vitesse, déplacement) est donnée par sa norme et un angle, ou qu'il
+faut retrouver norme et angle à partir des coordonnées.
+:::
+
+::: {.etapes}
+1. Repère l'angle $\theta$ mesuré depuis l'axe des $x$ (sens trigonométrique) et le **quadrant**.
+2. Coordonnées : $\vec u = \left\Vert \vec u \right\Vert\,(\cos\theta,\ \sin\theta)$.
+3. Retour : $\left\Vert \vec u \right\Vert = \sqrt{u_1^2 + u_2^2}$, puis
+   $\cos\theta = \dfrac{u_1}{\left\Vert \vec u \right\Vert}$ et $\sin\theta = \dfrac{u_2}{\left\Vert \vec u \right\Vert}$.
+4. **Contrôle** : les signes des coordonnées correspondent au quadrant du dessin.
+:::
+
+::: {.exemple}
+Norme $6$, angle $150°$ : $6\left(-\tfrac{\sqrt3}{2},\ \tfrac12\right) = \left(-3\sqrt3,\ 3\right)$.
+Inversement, $(-2, 2)$ a pour norme $2\sqrt2$ et fait un angle de $135°$.
+:::
+
+::: {.piege}
+Oublier le signe imposé par le quadrant ; mesurer l'angle depuis l'axe des $y$ et échanger ainsi
+$\cos$ et $\sin$.
+:::
+
+:::
+
+::: {.methode obj="O2" titre="Calculer en coordonnées : somme, multiple, norme, colinéarité"}
+
+::: {.quand}
+Dès que les vecteurs sont donnés par leurs coordonnées, dans $\mathbb{R}^2$, $\mathbb{R}^3$ ou $\mathbb{R}^n$.
+:::
+
+::: {.etapes}
+1. Somme, différence et multiple se calculent **coordonnée par coordonnée**.
+2. Coordonnées de $\overrightarrow{AB}$ : extrémité moins origine, $B - A$.
+3. Norme : racine de la somme des **carrés** des coordonnées (Pythagore, appliqué autant de fois qu'il le
+   faut).
+4. Colinéarité : cherche un **même** $k$ tel que $\vec u = k\,\vec v$ pour toutes les coordonnées.
+:::
+
+::: {.exemple}
+$(2, -1) + (-3, 4) = (-1, 3)$ ; $\left\Vert (2, 4, 4) \right\Vert = \sqrt{4 + 16 + 16} = 6$ ;
+$(2, -6) = -2\,(-1, 3)$ : colinéaires.
+:::
+
+::: {.piege}
+Calculer « origine moins extrémité » ; oublier la racine carrée dans la norme ; conclure à la
+colinéarité sur une seule coordonnée.
+:::
+
+:::
+
+::: {.methode obj="O4" titre="Produit scalaire : angle, orthogonalité, projection"}
+
+::: {.quand}
+Dès qu'il faut un angle entre deux vecteurs, tester une perpendicularité, projeter un vecteur sur une
+direction, ou calculer un travail.
+:::
+
+::: {.etapes}
+1. Calcule $\vec u \cdot \vec v = u_1 v_1 + u_2 v_2\ (+\,u_3 v_3)$.
+2. **Signe** : positif si l'angle est aigu, nul si les vecteurs sont orthogonaux, négatif s'il est obtus.
+3. **Angle** : $\cos\theta = \dfrac{\vec u \cdot \vec v}{\left\Vert \vec u \right\Vert\,\left\Vert \vec v \right\Vert}$, puis reconnais
+   une valeur remarquable.
+4. **Projection** : la projection orthogonale de $\vec v$ sur la droite de $\vec u$ mesure
+   $\dfrac{\vec u \cdot \vec v}{\left\Vert \vec u \right\Vert}$.
+:::
+
+::: {.exemple}
+$(3, 0) \cdot (2, 2) = 6$ et $\cos\theta = \dfrac{6}{3 \cdot 2\sqrt2} = \dfrac{\sqrt2}{2}$, donc $\theta = 45°$.
+$(a, 2)$ et $(3, -6)$ sont orthogonaux si $3a - 12 = 0$, soit $a = 4$.
+:::
+
+::: {.piege}
+Oublier de diviser par le produit des normes (un cosinus reste entre $-1$ et $1$) ; croire qu'un
+produit scalaire nul impose un vecteur nul.
+:::
+
+:::
+
+::: {.methode obj="O5" titre="Produit vectoriel : calcul et interprétation"}
+
+::: {.quand}
+Dès qu'il faut un vecteur perpendiculaire à deux vecteurs de l'espace, l'aire d'un parallélogramme ou
+d'un triangle, ou le moment d'une force.
+:::
+
+::: {.etapes}
+1. Calcule $\vec u \times \vec v = \left(u_2 v_3 - u_3 v_2,\ u_3 v_1 - u_1 v_3,\ u_1 v_2 - u_2 v_1\right)$.
+2. **Contrôle** : $(\vec u \times \vec v) \cdot \vec u = 0$ et $(\vec u \times \vec v) \cdot \vec v = 0$.
+3. **Sens** : règle de la main droite ; échanger les deux vecteurs change le signe.
+4. **Norme** : $\left\Vert \vec u \times \vec v \right\Vert$ est l'aire du parallélogramme construit sur $\vec u$ et
+   $\vec v$ (la moitié pour le triangle) ; elle est nulle si les vecteurs sont colinéaires.
+:::
+
+::: {.exemple}
+$(3, 0, 0) \times (1, 2, 0) = (0, 0, 6)$ : perpendiculaire au plan $(x, y)$, et $6$ est l'aire du
+parallélogramme de base $3$ et de hauteur $2$.
+:::
+
+::: {.piege}
+Se tromper d'ordre dans un produit croisé ; oublier de diviser par $2$ pour l'aire d'un triangle.
+:::
+
+:::
+
+::: {.methode obj="O3" titre="Résoudre un problème de forces"}
+
+::: {.quand}
+Dès que plusieurs forces s'exercent sur un même point : chercher leur résultante, ou une force
+inconnue quand le point est immobile.
+:::
+
+::: {.etapes}
+1. **Représente** chaque force par une flèche partant du point où elle s'applique.
+2. **Choisis un repère** et écris chaque force en coordonnées : $F\,(\cos\theta,\ \sin\theta)$.
+3. **Additionne** coordonnée par coordonnée ; à l'équilibre, écris que chaque coordonnée de la somme est
+   nulle.
+4. **Reviens au dessin** : norme et direction de la résultante.
+5. **Contrôle** : la norme de la somme ne dépasse pas la somme des normes ; les symétries de la figure
+   se retrouvent dans les coordonnées.
+:::
+
+::: {.exemple}
+Deux forces de $40$ N à $\pm 30°$ de l'horizontale : $\left(20\sqrt3,\ 20\right) + \left(20\sqrt3,\ -20\right)
+= \left(40\sqrt3,\ 0\right)$, une résultante horizontale d'environ $69$ N, inférieure à $80$ N.
+:::
+
+::: {.piege}
+Additionner les **normes** au lieu des **vecteurs** ; oublier le signe d'une composante dirigée vers le
+bas ou vers la gauche.
+:::
+
+:::

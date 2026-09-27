@@ -1,12 +1,18 @@
-<!-- Fragment SOCLE : les exercices routiniers. Un exercice = un encadré .exo suivi
-     d'un bloc .aides (onglets Indice 1/2/3 · Solution · Piège). Le titre a la forme
-     "Exercice N|Socle|niveau|Ox" : niveau = 1,2,3 (→ ★) ; Ox = l'objectif travaillé
-     (O1/O2/O3), affiché en pastille dans l'en-tête. Numérotation CONTINUE sur la
-     séance (le transfert continue après le dernier numéro du socle). Dupliquer le
-     couple ci-dessous pour chaque exercice. -->
+<!-- SOCLE = LE NOYAU (à faire par tous, en séance ou à la maison).
+     Titre : « Exercice|Socle|niveau|Ox » — SANS numéro : exercice.lua numérote tout seul (S.1, S.2…).
+     niveau = 1, 2, 3 (→ ★) ; Ox = l'objectif travaillé (pastille dans l'en-tête).
+     HIÉRARCHIE DES INDICES (à respecter partout) :
+       Indice 1 = renvoi à la théorie du cours (par nom de section) ;
+       Indice 2 = une QUESTION à se poser (surtout pas la réponse) ;
+       Indice 3 = une ÉTAPE (un pas concret, sans donner la solution).
+     Solution : expliquer le POURQUOI, pas seulement le résultat.
+     Faisable SANS calculatrice : valeurs rondes, fractions qui tombent juste.
+     Figures : SVG dans img/ (copiés par build-pdf.sh), insérés avec une largeur en cm :
+       ![](img/nom.svg){fig-alt="…" width="10cm" fig-align="center"}
+     Dupliquer le couple ci-dessous pour chaque exercice. -->
 
-::: {.callout-caution .exo title="Exercice 1|Socle|1|O3"}
-**Titre court.** Énoncé………
+::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
+Énoncé, consigne à l'infinitif………
 
 (a) ………
 (b) ………
@@ -17,21 +23,19 @@
 
 ## Indice 1
 
-*Référence théorique.*
-
-Renvoi précis à la théorie………
+Retourne à la théorie du cours : *………*.
 
 ## Indice 2
 
 *Question à te poser.*
 
-La bonne question (pas l'étape)………
+La bonne question (pas sa réponse)………
 
 ## Indice 3
 
 *Étape.*
 
-Une amorce………  *(supprimer cet onglet si inutile)*
+Un pas concret………  *(supprimer cet onglet si inutile)*
 
 ## Solution
 

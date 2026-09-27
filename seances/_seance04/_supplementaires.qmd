@@ -1,0 +1,276 @@
+<!-- RENFORCEMENT : variations du socle (même compétence, entraînement en plus).
+     Faisable SANS calculatrice ; valeurs différentes du socle.
+     Numéro AUTOMATIQUE (catégorie Renforcement -> R.1, R.2…). Échelle d'aides courte :
+     un onglet « Indice » (référence + coup de pouce), puis « Solution » (et « Piège » au besoin). -->
+
+::: {.callout-note appearance="simple"}
+Ces exercices restent **dans les objectifs** de la séance : à faire une fois le socle et le transfert
+bouclés, en séance ou à la maison.
+:::
+
+### Renforcement — le socle, un cran plus loin
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
+Écrire comme un seul vecteur, pour des points $A$, $B$, $C$, $D$, $M$ quelconques.
+
+(a) $\overrightarrow{AB} + \overrightarrow{BC} + \overrightarrow{CD}$
+(b) $\overrightarrow{AB} - \overrightarrow{CB}$
+(c) $\overrightarrow{AB} + \overrightarrow{BA}$
+(d) $\overrightarrow{MA} - \overrightarrow{MB}$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Addition, soustraction et multiplication par un scalaire*.
+Enchaîne les déplacements : $\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}$. Retrancher
+$\overrightarrow{CB}$, c'est ajouter $\overrightarrow{BC}$.
+
+## Solution
+
+(a) $\overrightarrow{AD}$ : on va de $A$ à $B$, puis à $C$, puis à $D$.
+(b) $\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}$.
+(c) $\overrightarrow{AA} = \vec 0$ : un aller-retour ramène au point de départ.
+(d) $\overrightarrow{MA} + \overrightarrow{BM} = \overrightarrow{BM} + \overrightarrow{MA} = \overrightarrow{BA}$.
+
+## Piège
+
+En (d), répondre $\overrightarrow{AB}$ : le signe « moins » inverse le sens de $\overrightarrow{MB}$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
+Écrire chacun des vecteurs $\vec a$, $\vec b$ et $\vec c$ sous la forme $\alpha\,\vec u + \beta\,\vec v$, avec
+$\alpha$ et $\beta$ réels.
+
+![](img/r-decomposer.svg){fig-alt="Vecteurs u, v, a, b et c sur un quadrillage" width="9.3cm" fig-align="center"}
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Coordonnées cartésiennes*. Lis les coordonnées de tous les vecteurs,
+puis écris l'égalité coordonnée par coordonnée : tu obtiens un système de deux équations en $\alpha$ et
+$\beta$ (séance 3).
+
+## Solution
+
+On lit $\vec u = (1, 1)$, $\vec v = (2, -1)$, $\vec a = (3, 0)$, $\vec b = (0, 3)$ et $\vec c = (4, 1)$.
+
+- $\vec a$ : $\alpha + 2\beta = 3$ et $\alpha - \beta = 0$, donc $\alpha = \beta = 1$ : $\vec a = \vec u + \vec v$.
+- $\vec b$ : $\alpha + 2\beta = 0$ et $\alpha - \beta = 3$, donc $\beta = -1$, $\alpha = 2$ : $\vec b = 2\vec u - \vec v$.
+- $\vec c$ : $\alpha + 2\beta = 4$ et $\alpha - \beta = 1$, donc $\beta = 1$, $\alpha = 2$ : $\vec c = 2\vec u + \vec v$.
+
+Contrôle graphique : mets les flèches bout à bout sur le quadrillage.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
+(a) Trouver $k$ pour que $(k, -4)$ soit colinéaire à $(3, 6)$.
+(b) Les points $A = (1, 2)$, $B = (3, 5)$ et $C = (7, 11)$ sont-ils alignés ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Règles de calcul, colinéarité*. Trois points sont alignés quand
+$\overrightarrow{AB}$ et $\overrightarrow{AC}$ sont colinéaires.
+
+## Solution
+
+(a) Il faut $(k, -4) = \lambda\,(3, 6)$ : la seconde coordonnée donne $\lambda = -\dfrac46 = -\dfrac23$,
+puis $k = 3\lambda = -2$.
+(b) $\overrightarrow{AB} = (2, 3)$ et $\overrightarrow{AC} = (6, 9) = 3\,\overrightarrow{AB}$ : colinéaires,
+donc les trois points sont **alignés**. (On retrouve la même pente $\tfrac32$ qu'à la séance 3.)
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O3"}
+(a) Une vitesse de norme $10$ m/s fait un angle de $45°$ avec l'axe des $x$. Donner ses coordonnées.
+(b) Une force de norme $6$ N fait un angle de $240°$ avec l'axe des $x$. Donner ses coordonnées.
+(c) Donner la norme de $\vec w = (\sqrt3, -1)$ et l'angle qu'il fait avec l'axe des $x$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Coordonnées cartésiennes*. Un vecteur de norme $r$ et d'angle $\theta$
+s'écrit $r\,(\cos\theta,\ \sin\theta)$. Le quadrant fixe les signes.
+
+## Solution
+
+(a) $10\left(\dfrac{\sqrt2}{2},\ \dfrac{\sqrt2}{2}\right) = \left(5\sqrt2,\ 5\sqrt2\right)$.
+(b) $240° = 180° + 60°$ (troisième quadrant) : $6\left(-\dfrac12,\ -\dfrac{\sqrt3}{2}\right) = \left(-3,\ -3\sqrt3\right)$.
+(c) $\left\Vert \vec w \right\Vert = \sqrt{3 + 1} = 2$ ; $\cos\theta = \dfrac{\sqrt3}{2}$ et $\sin\theta = -\dfrac12$, donc
+$\theta = 330°$ (ou $-30°$).
+
+## Piège
+
+En (b), oublier que cosinus **et** sinus sont négatifs au troisième quadrant.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O3"}
+(a) Soient $A = (1, 2, 3)$ et $B = (3, 3, 5)$. Calculer $\overrightarrow{AB}$ et la distance $|AB|$.
+(b) Donner le vecteur de norme $1$ de même direction et de même sens que $\overrightarrow{AB}$.
+(c) Dans $\mathbb{R}^4$, calculer la distance entre $(1, 0, 2, 1)$ et $(2, 2, 4, 5)$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Coordonnées dans $\mathbb{R}^3$ et $\mathbb{R}^n$*. La distance entre deux
+points est la norme du vecteur qui les relie.
+
+## Solution
+
+(a) $\overrightarrow{AB} = (2, 1, 2)$ et $|AB| = \sqrt{4 + 1 + 4} = 3$.
+(b) $\dfrac13\,(2, 1, 2) = \left(\dfrac23,\ \dfrac13,\ \dfrac23\right)$.
+(c) Le vecteur qui relie les deux points est $(1, 2, 2, 4)$ ; sa norme vaut $\sqrt{1 + 4 + 4 + 16} = 5$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O4"}
+(a) Calculer l'angle entre $\vec u = (1, 1, 0)$ et $\vec v = (1, 0, 1)$.
+(b) Trouver $a$ pour que $(2, a, 1)$ et $(1, -1, 4)$ soient orthogonaux.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Produit scalaire* et *Projection, angle et orthogonalité*. Dans
+$\mathbb{R}^3$, $\vec u \cdot \vec v = u_1 v_1 + u_2 v_2 + u_3 v_3$.
+
+## Solution
+
+(a) $\vec u \cdot \vec v = 1$, $\left\Vert \vec u \right\Vert = \left\Vert \vec v \right\Vert = \sqrt2$, donc
+$\cos\theta = \dfrac{1}{2}$ et $\theta = 60°$.
+(b) $2 - a + 4 = 0$, donc $a = 6$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|3|O4"}
+Soient $\vec i = (1, 0)$, $\vec j = (0, 1)$ et $\vec u = (3, 4)$.
+
+(a) Calculer $\vec u \cdot \vec i$ et $\vec u \cdot \vec j$. Que retrouve-t-on ?
+(b) Soit $\vec w = (4, 3)$. Calculer la longueur de la projection orthogonale de $\vec u$ sur la droite
+qui porte $\vec w$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Projection, angle et orthogonalité*. La longueur de la projection de
+$\vec u$ sur la droite de $\vec w$ vaut $\left\Vert \vec u \right\Vert\cos\theta = \dfrac{\vec u \cdot \vec w}{\left\Vert \vec w \right\Vert}$.
+
+## Solution
+
+(a) $\vec u \cdot \vec i = 3$ et $\vec u \cdot \vec j = 4$ : on retrouve les **coordonnées** de $\vec u$.
+Chaque coordonnée est la projection de $\vec u$ sur un axe, puisque $\vec i$ et $\vec j$ sont de norme $1$.
+(b) $\vec u \cdot \vec w = 12 + 12 = 24$ et $\left\Vert \vec w \right\Vert = 5$ : la projection mesure
+$\dfrac{24}{5} = 4{,}8$. Contrôle : c'est un peu moins que $\left\Vert \vec u \right\Vert = 5$, car $\vec u$ et
+$\vec w$ font un petit angle.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O5"}
+Soient $\vec u = (1, 2, 3)$ et $\vec v = (0, 1, -1)$.
+
+(a) Calculer $\vec u \times \vec v$ et vérifier qu'il est orthogonal à $\vec u$ et à $\vec v$.
+(b) En déduire $\vec v \times \vec u$ sans refaire de calcul.
+(c) Que vaut $\vec u \times (2\vec u)$ ? Pourquoi ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Produit vectoriel*.
+$\vec u \times \vec v = \left(u_2 v_3 - u_3 v_2,\ u_3 v_1 - u_1 v_3,\ u_1 v_2 - u_2 v_1\right)$.
+
+## Solution
+
+(a) $\vec u \times \vec v = \big(2 \cdot (-1) - 3 \cdot 1,\ 3 \cdot 0 - 1 \cdot (-1),\ 1 \cdot 1 - 2 \cdot 0\big) = (-5, 1, 1)$.
+Contrôle : $(-5, 1, 1) \cdot (1, 2, 3) = -5 + 2 + 3 = 0$ et $(-5, 1, 1) \cdot (0, 1, -1) = 0$. ✓
+(b) $\vec v \times \vec u = -\,\vec u \times \vec v = (5, -1, -1)$.
+(c) $\vec 0$ : $\vec u$ et $2\vec u$ sont colinéaires, le parallélogramme qu'ils forment est aplati et
+son aire est nulle.
+
+## Piège
+
+Oublier le signe « moins » du produit croisé dans une coordonnée : le contrôle par produit scalaire
+détecte l'erreur.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|3|O5"}
+Calculer l'aire du triangle de sommets $A = (1, 0, 0)$, $B = (0, 2, 0)$ et $C = (0, 0, 2)$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Produit vectoriel*. $\left\Vert \overrightarrow{AB} \times \overrightarrow{AC} \right\Vert$
+est l'aire du parallélogramme construit sur $\overrightarrow{AB}$ et $\overrightarrow{AC}$ ; le triangle en
+est la moitié.
+
+## Solution
+
+$\overrightarrow{AB} = (-1, 2, 0)$ et $\overrightarrow{AC} = (-1, 0, 2)$, donc
+$\overrightarrow{AB} \times \overrightarrow{AC} = \big(2 \cdot 2 - 0 \cdot 0,\ 0 \cdot (-1) - (-1) \cdot 2,\ (-1) \cdot 0 - 2 \cdot (-1)\big) = (4, 2, 2)$.
+Sa norme vaut $\sqrt{16 + 4 + 4} = \sqrt{24} = 2\sqrt6$ : l'aire du triangle est $\sqrt6$.
+
+## Piège
+
+Oublier de diviser par $2$ : la norme du produit vectoriel donne l'aire du **parallélogramme**.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|1|O5"}
+Soient $\vec i = (1, 0, 0)$, $\vec j = (0, 1, 0)$ et $\vec k = (0, 0, 1)$. Calculer
+$\vec i \times \vec j$, $\vec j \times \vec k$, $\vec k \times \vec i$ et $\vec j \times \vec i$, puis vérifier
+chaque résultat avec la règle de la main droite.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Produit vectoriel*. Le produit vectoriel est orthogonal aux deux
+vecteurs ; son sens est donné par la main droite.
+
+## Solution
+
+$\vec i \times \vec j = \vec k$, $\vec j \times \vec k = \vec i$, $\vec k \times \vec i = \vec j$ et
+$\vec j \times \vec i = -\vec k$. On retient le cycle $\vec i \to \vec j \to \vec k \to \vec i$ : dans ce sens
+le résultat est positif, dans l'autre il change de signe.
+
+:::
+:::

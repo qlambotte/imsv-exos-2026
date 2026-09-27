@@ -35,15 +35,5 @@ format:
 
 #rappel
 #v(10pt)
-#page_methode("Développer et factoriser", "O1")
-#pagebreak()
-#page_methode("Calculer avec des fractions", "O1")
-#pagebreak()
-#page_methode("Changer d'écriture et manier les pourcentages", "O2")
-#pagebreak()
-#page_methode("Contrôler un résultat", "O3")
-#pagebreak()
-#page_methode("Se repérer sur le cercle trigonométrique", "O4")
-#pagebreak()
-#page_methode("Triangle rectangle et identité fondamentale", "O4")
+// @@METHODES@@  (pages générées par feuille-auto.py à partir des cartes de méthode)
 ```

@@ -1,5 +1,5 @@
 ::: {.seance-meta}
 **Thème.** ………
 
-**Théorie associée :** IMSV-@@NN@@, *« … »*.
+**Théorie associée :** IMSV-@@N@@, *« @@TITRE@@ »*.
 :::

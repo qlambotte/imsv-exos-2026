@@ -19,10 +19,13 @@ Il contient des **pages** (affichées dans le site) et des **fragments** (préfi
 | `institution.qmd` | Page Institutionnalisation : méthode + **auto-évaluation** | oui |
 | `_socle.qmd` | **Contenu** des exercices du socle | non (inclus) |
 | `_transfert.qmd` | **Contenu** des exercices de transfert | non (inclus) |
-| `_supplementaires.qmd` | **Contenu** des exercices supplémentaires (renforcement + dépassement) | non (inclus) |
+| `_supplementaires.qmd` | **Contenu** des exercices supplémentaires (renforcement) | non (inclus) |
 | `_consignes.qmd` | Notation + encadré « À lire d'abord » | non (inclus) |
 | `_download.qmd` | Le menu de téléchargement des PDF | non (inclus) |
 | `_pdf.qmd` | Source d'assemblage de la **feuille PDF** unique | non (rendu par `build-pdf.sh`) |
+| `_offline.qmd` | Source de la version **hors-ligne** (un seul fichier HTML) | non (rendu par `build-pdf.sh`) |
+| `_metadata.yml` | `corrige-exos: true/false` — corrigé visible ou masqué (géré par `corrige.py`) | non |
+| `img/` | Figures de la séance (SVG), copiées par `build-pdf.sh` pour le PDF | — |
 
 **Idée clé — une seule source :** le *contenu* des exercices vit dans `_socle.qmd` et `_transfert.qmd`.
 Il est **inclus** (`{{< include >}}`) à la fois dans les pages web *et* dans `_pdf.qmd`. Tu n'écris
@@ -80,19 +83,22 @@ quarto render           # juste le site
 Un exercice = un **encadré énoncé** suivi d'un **bloc d'aides** en onglets :
 
 ```markdown
-::: {.callout-caution .exo title="Exercice 8|Transfert|3"}
-**Titre court.** Énoncé………
+::: {.callout-caution .exo title="Exercice|Transfert|2|O1"}
+Énoncé, consigne à l'infinitif………
 :::
 
 ::: {.aides}
 ::: {.panel-tabset}
 
 ## Indice 1
-*Référence théorique.*
-………
+Retourne à la théorie du cours : *………*.
 
 ## Indice 2
 *Question à te poser.*
+………
+
+## Indice 3
+*Étape.*
 ………
 
 ## Solution
@@ -105,13 +111,23 @@ Un exercice = un **encadré énoncé** suivi d'un **bloc d'aides** en onglets :
 :::
 ```
 
-**Le titre `Exercice N|Catégorie|niveau` :**
+**Le titre `Exercice|Catégorie|niveau|Objectif` (sans numéro) :**
 
-- `N` — le **numéro**, écrit à la main, **continu sur toute la séance** : le socle va de 1 à 7, le
-  transfert reprend à 8, les supplémentaires continuent. (La numérotation n'est pas automatique, pour
-  garder le PDF identique d'une version à l'autre — voir §5.)
-- `Catégorie` — `Socle`, `Transfert`, `Renforcement` ou `Dépassement`. Affichée à droite du titre.
+- `Catégorie` — `Socle`, `Transfert` ou `Renforcement`. Elle fixe le préfixe du numéro.
 - `niveau` — `1`, `2` ou `3` → `★☆☆`, `★★☆`, `★★★`.
+- `Objectif` — `O1`, `O2`… : l'objectif de la séance travaillé, affiché en pastille.
+
+Le **numéro est automatique** (filtre `exercice.lua`) : S.1, S.2… pour le socle, T.1… pour le
+transfert, R.1… pour le renforcement. Réordonner un exercice ou changer sa catégorie renumérote tout
+seul.
+
+**Les indices :** Indice 1 = renvoi à la théorie du cours (par nom de section) ; Indice 2 = une
+**question** à se poser, sans sa réponse ; Indice 3 = une **étape** concrète. La solution explique le
+pourquoi, le piège nomme la faute usuelle.
+
+**Figures :** un SVG dans `img/`, inséré avec une largeur en cm pour garder la même taille de texte
+d'une figure à l'autre :
+`![](img/nom.svg){fig-alt="…" width="10cm" fig-align="center"}`.
 
 **Le bloc d'aides** (`.aides` autour d'un `.panel-tabset`) : chaque `##` devient un onglet. Sur le web
 il est **replié** derrière « Coups de pouce » (rien n'est montré tant qu'on ne clique pas). Dans le
@@ -120,8 +136,8 @@ PDF *complet* il s'aplatit en sous-sections ; dans le PDF *énoncés seuls* il e
 Pour les **exercices supplémentaires**, l'échelle est plus courte : un seul onglet `## Indice`, puis
 `## Solution`.
 
-**Ancre :** chaque exercice reçoit une ancre HTML `#exercice-N`. Pour pointer quelqu'un vers un
-exercice : `.../seance01/transfert.html#exercice-8`. Un petit « # » apparaît au survol du titre.
+**Ancre :** chaque exercice reçoit une ancre HTML `#exercice-S1`, `#exercice-T2`… Pour pointer quelqu'un
+vers un exercice : `.../seance01/transfert.html#exercice-T2`. Un petit « # » apparaît au survol du titre.
 
 ---
 
@@ -138,15 +154,14 @@ Le QR (présent seulement dans le PDF) pointe vers la page de correction ; il es
 
 ## 5. Ce qui est automatique, ce qui ne l'est pas
 
-- **Automatique :** la mise en forme du titre (`✎ Exercice N … Catégorie ★★☆`), le retrait de l'icône,
+- **Automatique :** le **numéro** et la mise en forme du titre (`✎ Exercice S.1 … Socle · O1 · ★★☆`), le retrait de l'icône,
   la version « énoncés seuls » (le filtre `exercice.lua` retire les blocs `.aides`), les ancres, le
   menu « Coups de pouce » repliable, le mode clair/sombre, les 3 boutons du titre.
-- **À la main :** le **numéro** de chaque exercice (continu), l'ajout au `_quarto.yml`, le QR, et bien
-  sûr le **contenu** mathématique.
-
-> Pourquoi le numéro reste manuel : une numérotation automatique *par catégorie* ferait redémarrer les
-> compteurs (Socle 1, Transfert 1…) et **changerait le rendu du PDF**. On garde donc des numéros
-> explicites et continus, identiques entre le web et le PDF.
+- **Automatique aussi :** les fichiers de méthodes, créés par `new-seance.sh` depuis
+  `seances/_modele-methodes/` (cartes `_methodes-seanceNN.qmd`, feuille `feuille-seanceNN.qmd`, page
+  `methodes/seanceNN.qmd`). Les titres et objectifs ne s'écrivent **que** dans les cartes : la feuille à
+  compléter les reprend toute seule (ligne `// @@METHODES@@`, remplie par `feuille-auto.py` au build).
+- **À la main :** l'ajout au `_quarto.yml`, le QR, et bien sûr le **contenu** mathématique.
 
 ---
 

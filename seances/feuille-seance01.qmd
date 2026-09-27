@@ -35,13 +35,5 @@ format:
 
 #rappel
 #v(10pt)
-#page_methode("Nier une proposition logique", "O2")
-#pagebreak()
-#page_methode("Traduire une phrase en langage formel", "O1")
-#pagebreak()
-#page_methode("Décider l'appartenance à un intervalle", "O2")
-#pagebreak()
-#page_methode("Réciproque, contraposée : laquelle est vraie ?", "O2")
-#pagebreak()
-#page_methode("Exemple, contre-exemple ou preuve ?", "O3")
+// @@METHODES@@  (pages générées par feuille-auto.py à partir des cartes de méthode)
 ```

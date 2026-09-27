@@ -1,0 +1,7 @@
+::: {.seance-meta}
+**Thème.** Vecteurs (point et vecteur ; norme, direction et sens ; somme, différence, multiplication
+par un scalaire, colinéarité), coordonnées cartésiennes dans $\mathbb{R}^2$, $\mathbb{R}^3$ et
+$\mathbb{R}^n$, produit scalaire (angle, orthogonalité, projection) et produit vectoriel.
+
+**Théorie associée :** IMSV-4, *« Vecteurs et systèmes de coordonnées »*.
+:::

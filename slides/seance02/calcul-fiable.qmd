@@ -1,0 +1,658 @@
+---
+title: "Séance 2 — Calcul fiable et trigonométrie"
+subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie — séance d'exercices"
+author: "Quentin Lambotte · FMPB · UMONS"
+date: 09/28/2026
+date-format: "D MMMM YYYY"
+lang: fr
+format:
+  revealjs:
+    theme: [default, ../seance01/theme.scss]
+    slide-number: c/t
+    show-slide-number: all
+    width: 1280
+    height: 800
+    margin: 0.06
+    center: false
+    transition: fade
+    transition-speed: fast
+    hash: true
+    history: false
+    html-math-method: katex
+    embed-resources: true
+    fig-align: center
+    menu:
+      side: right
+    include-after-body: ../seance01/annotate.html
+---
+
+# Présentation {.divider background-color="#14304a"}
+
+## Le déroulé de la séance
+
+<table class="deroule">
+<thead><tr><th>Temps</th><th>Durée</th><th>Ce qu'on y fait</th></tr></thead>
+<tbody>
+<tr><td class="ph">1 · Échauffement</td><td class="du">10 min</td><td>Quatre questions rapides projetées. Tu réponds sur papier, puis on vote.</td></tr>
+<tr><td class="ph">2 · Socle</td><td class="du">35 min</td><td>Les exercices de base, à ton rythme, en t'auto-corrigeant sur un site.</td></tr>
+<tr><td class="ph">3 · Pause</td><td class="du">10 min</td><td>On souffle, on prend un café, ...</td></tr>
+<tr><td class="ph">4 · Transfert</td><td class="du">35 min</td><td>Des problèmes en contexte. Ici le travail avec les voisin·es est conseillé.</td></tr>
+<tr><td class="ph">5 · Méthode</td><td class="du">20 min</td><td>On dégage ensemble une ou deux méthodes réutilisables.</td></tr>
+</tbody>
+</table>
+
+## La gestion du bruit
+
+::::::: modes
+:::: {.mode .travail}
+::: m-titre
+Travail autonome
+:::
+
+Seul ou avec tes voisin·es : le bruit est normal, mais il doit rester **contenu**.
+::::
+
+:::: {.mode .jeparle}
+::: m-titre
+Travail collectif
+:::
+
+Quand je reprends la parole, j'ai besoin d'un **silence complet**.
+::::
+:::::::
+
+Le **niveau sonore projeté** reste affiché pendant les moments de travail :
+
+- **Bleu** — c'est bon, on continue.
+- **Rouge**, signalé par **un gong** — on baisse le volume d'un cran.
+
+::: {.aretenir .smaller}
+**Seul·es tes voisin·es doivent t'entendre.** Avec environ 400 étudiant·es dans la salle, quelques conversations de trop suffisent à rendre le travail impossible pour tout le monde.
+:::
+
+# Annonces {.divider background-color="#14304a"}
+
+## Remédiations:
+
+- Remédiations thématiques:
+  - Biomed: mardi, sur la logique
+  - Bio+Biomed: mercredi, sur le calcul fiable
+  - Pharma: jeudi, sur le calcul fiable
+- Séance Q/R:
+  - Vous pouvez venir et on répondra à toutes vos questions ;-)
+
+## Tests de positionnement scientifique
+
+- Test de positionnement (chimie, bio, physique, math): consultez les valves!!
+  - réalisez le test sur UMOOC (le correctif est disponible en ligne)
+  - une séance QR mardi soir pour répondre à vos questions
+  - Possibilité de réserver un sandwich.
+
+## Examen blanc
+
+- Examen blanc: 26 octobre. Ne compte pas dans la note finale; le but est de voir où on en est et vous donner une idée de l'examen.
+
+# Échauffement {.divider background-color="#14304a"}
+
+## Les questions
+
+::::::::::::::: columns
+::::: {.column width="62%"}
+:::: {style="font-size:.85em"}
+**Q1** [[O1]{.obj}]{style="float:right"} — calculer $2 + 3 \cdot 4^2$.
+
+**Q2** [[O2]{.obj}]{style="float:right"} — après une hausse de $50\,\%$, un prix vaut $90$ €. Quel était le prix initial ?
+
+**Q3** [[O3]{.obj}]{style="float:right"} — estimer $\dfrac{6{,}2 \times 10^{7}}{2{,}9 \times 10^{3}}$.
+
+**Q4** [[Séance 1 · O2]{.obj}]{style="float:right"} — voici les valeurs de vérité de $\alpha$, $\beta$ et d'une proposition cachée « ? ». Est-ce $\alpha \Rightarrow \beta$ ou $\beta \Rightarrow \alpha$ ?
+
+::: smaller
+
+| $\alpha$ |  $\beta$  |  ?  |
+|:---------|:---------:|:---:|  
+|     V    |     V     |  V  |
+|     V    |     F     |  V  |
+|     F    |     V     |  F  |
+|     F    |     F     |  V  |
+
+:::
+::::
+:::::
+
+::::::::::: {.column width="38%"}
+::::: wooclap
+:::: wc-body
+**Vote sur Wooclap**
+
+::: wc-lien
+Code : UDXTFEY
+:::
+::::
+
+<!-- QR : python3 make-qr.py "<lien Wooclap>" img/qr-echauffement.png, puis décommenter le bloc suivant-->
+::: {.wc-qr}
+![](img/qr-echauffement.png)
+:::
+:::::
+
+::::::: et-timer
+```{=html}
+<style>
+@keyframes et-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+</style>
+```
+
+:::::: {#et-timer-box data-default="300"}
+:::: et-row
+<button id="et-minus" class="et-btn" type="button" aria-label="Retirer une minute">
+
+−1 min
+
+</button>
+
+::: {#et-display .et-display}
+05:00
+:::
+
+<button id="et-plus" class="et-btn" type="button" aria-label="Ajouter une minute">
+
++1 min
+
+</button>
+::::
+
+::: et-row
+<button id="et-toggle" class="et-btn et-primary" type="button">
+
+Démarrer
+
+</button>
+
+<button id="et-reset" class="et-btn" type="button" aria-label="Réinitialiser">
+
+↺ Réinitialiser
+
+</button>
+:::
+::::::
+:::::::
+:::::::::::
+:::::::::::::::
+
+```{=html}
+<script>
+(function () {
+  var box = document.getElementById('et-timer-box');
+  if (!box) return;
+  var DEFAULT = parseInt(box.getAttribute('data-default'), 10) || 300;
+  var display = document.getElementById('et-display');
+  var btnToggle = document.getElementById('et-toggle');
+  var btnMinus = document.getElementById('et-minus');
+  var btnPlus = document.getElementById('et-plus');
+  var btnReset = document.getElementById('et-reset');
+
+  var remaining = DEFAULT;
+  var running = false;
+  var intervalId = null;
+  var audioCtx = null;
+
+  function fmt(s) {
+    s = Math.max(0, s);
+    var m = Math.floor(s / 60);
+    var sec = s % 60;
+    return (m < 10 ? '0' : '') + m + ':' + (sec < 10 ? '0' : '') + sec;
+  }
+
+  function render() {
+    display.textContent = fmt(remaining);
+    display.classList.toggle('et-warn', running && remaining <= 30 && remaining > 0);
+    display.classList.toggle('et-done', remaining === 0);
+  }
+
+  function beep() {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      var t0 = audioCtx.currentTime;
+      [0, 0.35].forEach(function (offset) {
+        var osc = audioCtx.createOscillator();
+        var gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = 880;
+        gain.gain.setValueAtTime(0.0001, t0 + offset);
+        gain.gain.exponentialRampToValueAtTime(0.3, t0 + offset + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0001, t0 + offset + 0.28);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(t0 + offset);
+        osc.stop(t0 + offset + 0.3);
+      });
+    } catch (e) {}
+  }
+
+  function stop() {
+    running = false;
+    btnToggle.textContent = remaining > 0 ? 'Reprendre' : 'Démarrer';
+    if (intervalId) { clearInterval(intervalId); intervalId = null; }
+  }
+
+  function tick() {
+    remaining -= 1;
+    if (remaining <= 0) {
+      remaining = 0;
+      stop();
+      beep();
+    }
+    render();
+  }
+
+  function start() {
+    if (running) return;
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+    } catch (e) {}
+    if (remaining <= 0) remaining = DEFAULT;
+    render();
+    running = true;
+    btnToggle.textContent = 'Pause';
+    intervalId = setInterval(tick, 1000);
+  }
+
+  btnToggle.addEventListener('click', function () { running ? stop() : start(); });
+  btnMinus.addEventListener('click', function () {
+    remaining = Math.max(0, remaining - 60);
+    render();
+    if (remaining === 0) stop();
+  });
+  btnPlus.addEventListener('click', function () {
+    remaining = remaining + 60;
+    render();
+  });
+  btnReset.addEventListener('click', function () {
+    stop();
+    remaining = DEFAULT;
+    btnToggle.textContent = 'Démarrer';
+    render();
+  });
+
+  render();
+})();
+</script>
+```
+
+## Q1 [[O1]{.obj}]{style="float:right"}
+
+Calculer :
+
+::: {.big-eq .center}
+$2 + 3 \cdot 4^2$
+:::
+
+. . .
+
+::: aretenir
+$2 + 3 \cdot 4^2 = 2 + 3 \cdot 16 = 2 + 48 = 50$.
+
+On évalue d'abord la **puissance**, puis la **multiplication**, et enfin l'addition. Additionner d'abord donnerait $5 \cdot 16 = 80$ : c'est l'erreur classique.
+:::
+
+## Q2 [[O2]{.obj}]{style="float:right"}
+
+Après une hausse de $50\,\%$, un prix vaut $90$ €. Quel était le prix **initial** ?
+
+. . .
+
+::: aretenir
+Une hausse de $50\,\%$ **multiplie** par $1{,}5$ : $1{,}5\,x = 90$, donc $x = 60$ €.
+
+Retirer $50\,\%$ de $90$ pour trouver $45$ est l'erreur classique : le pourcentage porte sur la valeur **initiale**, pas sur la valeur finale.
+:::
+
+::: notes
+Cette question prépare la méthode supplémentaire.
+:::
+
+## Q3 [[O3]{.obj}]{style="float:right"}
+
+Estimer :
+
+::: {.big-eq .center}
+$\dfrac{6{,}2 \times 10^{7}}{2{,}9 \times 10^{3}}$
+:::
+
+. . .
+
+::: aretenir
+On arrondit chaque nombre à un chiffre : $\dfrac{6 \times 10^{7}}{3 \times 10^{3}} = 2 \times 10^{7-3} = 2 \times 10^{4}$.
+
+Dans un quotient, les exposants de $10$ se **soustraisent**.
+:::
+
+::: notes
+Cette question amène la méthode du jour.
+:::
+
+## Q4 [[Séance 1 · O2]{.obj}]{style="float:right"}
+
+::: smaller
+| $\alpha$ |  $\beta$  |  ?  |
+|:---------|:---------:|:---:|  
+|     V    |     V     |  V  |
+|     V    |     F     |  V  |
+|     F    |     V     |  F  |
+|     F    |     F     |  V  |
+
+:::
+
+« ? » est-il $\alpha \Rightarrow \beta$ ou $\beta \Rightarrow \alpha$ ?
+
+. . .
+
+:::: {.fragment .fade-in-then-out}
+::: {.aretenir .smaller}
+Une implication est un **contrat**. Avec $\alpha$ : « je réussis ma bac 1 » et $\beta$ : « j'invite mes parents au resto », $\alpha \Rightarrow \beta$ dit : si je réussis, j'invite mes parents.
+
+Le contrat n'est **rompu** que dans un seul cas : $\alpha$ vrai et $\beta$ faux (je réussis, mais je n'invite pas). Si j'échoue, le contrat ne m'oblige à rien : il n'est pas rompu, que j'invite ou non.
+:::
+::::
+
+::::: {.absolute top="55%" width="100%"}
+:::: fragment
+::: aretenir
+$\beta \Rightarrow \alpha$.
+
+« ? » n'est faux que sur la ligne $\alpha = F$, $\beta = V$. Pour $\beta \Rightarrow \alpha$, c'est bien le cas où le contrat est rompu : $\beta$ vrai, $\alpha$ faux. Pour $\alpha \Rightarrow \beta$, il serait rompu sur la ligne $\alpha = V$, $\beta = F$, où « ? » vaut pourtant V.
+:::
+::::
+:::::
+
+# Institutionnalisation {.divider background-color="#14304a"}
+
+## Avant de commencer
+
+Aujourd'hui, on construit une méthode pour **contrôler un résultat**.
+
+Avec tes mots, essaye de donner des moyens pour contrôler un résultat.
+
+:::::: wooclap
+::: wc-play
+▶
+:::
+
+:::: wc-body
+**Ouvre le Wooclap **
+
+::: wc-lien
+Code : OSMKPOP
+:::
+::::
+
+<!-- QR : python3 make-qr.py "<lien Wooclap>" img/qr-controler.png, puis décommenter le bloc suivant-->
+::: {.wc-qr}
+![](img/qr-controler.png)
+
+Contrôler
+:::
+
+::::::
+
+## Un exemple pour construire la méthode
+
+Combien de globules rouges, de diamètre environ $7\,\mu\text{m}$, peut-on aligner côte à côte sur $1\,\text{mm}$ ?
+
+Un·e étudiant·e répond :
+
+::: {.big-eq .center}
+$\dfrac{1}{7} \approx 0{,}14$
+:::
+
+On va **contrôler** ce résultat, une vérification à la fois.
+
+## Étape 1 — l'ordre de grandeur
+
+[1]{.step} **À peu près combien s'attend-on à trouver ?**
+
+On arrondit à un chiffre et on travaille avec des puissances de dix : $1\,\text{mm} = 10^{3}\,\mu\text{m}$.
+
+. . .
+
+::: aretenir
+$\dfrac{10^{3}}{7} \approx 10^{2}$ : on attend **une centaine** de globules rouges.
+
+Le résultat annoncé, $0{,}14$, est environ **mille fois** trop petit.
+:::
+
+## Étape 2 — les unités
+
+[2]{.step} **Les unités se combinent-elles correctement ?**
+
+On divise des millimètres par des micromètres : ce ne sont pas les mêmes unités.
+
+. . .
+
+::: aretenir
+Il faut d'abord **convertir** : $\dfrac{1000\,\mu\text{m}}{7\,\mu\text{m}} \approx 143$. Les $\mu\text{m}$ se simplifient : le résultat est un nombre de globules rouges, sans unité.
+
+L'erreur venait de la conversion oubliée : un facteur $1000$.
+:::
+
+## Étape 3 — le sens
+
+[3]{.step} **Le résultat va-t-il dans la direction attendue ?**
+
+Un globule rouge est bien plus petit que $1\,\text{mm}$.
+
+. . .
+
+::: aretenir
+Il doit donc y en avoir **beaucoup**, et en tout cas plus qu'un. Un résultat inférieur à $1$ est absurde : on ne peut pas aligner « $0{,}14$ globule ».
+
+Ce contrôle seul suffisait à détecter l'erreur, sans refaire le calcul.
+:::
+
+## Le piège à connaître
+
+:::: piege
+::: pg-titre
+Piège
+:::
+
+Oublier de convertir dans une **unité commune** avant d'additionner ou de comparer.
+::::
+
+## La carte « Contrôler un résultat » {.smaller}
+
+C'est la page qui t'attend sur ta **feuille de méthode** — même squelette, tu la remplis en même temps.
+
+:::::::::::::: fiche
+::: fiche-head
+Contrôler un résultat [[O3]{.obj}]{style="float:right"}
+:::
+
+:::::::::::: fiche-body
+:::::: fiche-col
+::: {.fiche-field .empty}
+Exercices associés (numéros)
+
+*à noter toi-même*
+:::
+
+::: {.fiche-field .empty}
+Théorie associée (chapitre / slide)
+
+*à noter toi-même*
+:::
+
+::: {.fiche-field .fragment}
+Quand l'utiliser ?
+
+Avant d'accepter **tout** résultat de calcul — surtout dans un problème, où une erreur d'unité ou de sens passe vite inaperçue.
+:::
+::::::
+
+::::::: fiche-col
+:::: fiche-field
+Étapes
+
+::: incremental
+1.  **Ordre de grandeur** : arrondis chaque donnée à un chiffre, calcule les puissances de dix, et compare l'estimation à ton résultat.
+2.  **Unités / dimensions** : vérifie que les unités se combinent correctement et que le résultat porte la bonne unité.
+3.  **Sens** : le résultat va-t-il dans la direction attendue — plus grand ou plus petit, bon signe, contrainte respectée ?
+:::
+::::
+
+::: {.fiche-field .fragment}
+Exemple
+
+Combien de globules rouges de $7\,\mu\text{m}$ sur $1\,\text{mm}$ ? Le résultat $0{,}14$ est mille fois trop petit par rapport à $\dfrac{10^{3}}{7} \approx 10^{2}$, vient d'une conversion oubliée, et est inférieur à $1$ : absurde.
+:::
+
+::: {.fiche-field .fragment}
+Le piège
+
+Oublier de convertir dans une **unité commune** avant d'additionner ou de comparer.
+:::
+:::::::
+::::::::::::
+::::::::::::::
+
+::: footer-note
+Cette fiche rejoint ta **boîte à outils** sur le site.
+:::
+
+# Méthode supplémentaire: Changer d'écriture et manier les pourcentages
+ {.divider background-color="#1f5fbf"}
+
+
+
+## Notre fil rouge
+
+Une culture compte $200$ bactéries. Elle **augmente de** $30\,\%$ le premier jour, puis **diminue de** $30\,\%$ le second.
+
+Combien de bactéries à la fin ? De combien a-t-elle varié au total ?
+
+Comme pour contrôler, on procède par morceaux, sans se presser.
+
+## Étape 1 — écrire le pourcentage comme un nombre
+
+[1]{.step} **Sous quelle forme écrire** $30\,\%$ ?
+
+Fraction, décimal et pourcentage décrivent la **même** valeur. Pour comparer, on les ramène à une écriture commune.
+
+. . .
+
+::: aretenir
+$30\,\% = \dfrac{30}{100} = \dfrac{3}{10} = 0{,}3$.
+
+Par exemple, $30\,\%$ est plus grand que $\dfrac{1}{4}$, car $0{,}3 > 0{,}25$.
+:::
+
+## Étape 2 — multiplier
+
+[2]{.step} **Augmenter ou diminuer de** $p\,\%$, est-ce ajouter ou multiplier ?
+
+. . .
+
+::: aretenir
+**Multiplier.** Augmenter de $30\,\%$, c'est multiplier par $1 + 0{,}3 = 1{,}3$ ; diminuer de $30\,\%$, c'est multiplier par $1 - 0{,}3 = 0{,}7$.
+
+Après le premier jour : $200 \cdot 1{,}3 = 260$.
+:::
+
+## Étape 3 — composer
+
+[3]{.step} **Comment enchaîner les deux variations ?**
+
+Des pourcentages **successifs** se composent par multiplication, pas par addition.
+
+. . .
+
+::: aretenir
+$200 \cdot 1{,}3 \cdot 0{,}7 = 260 \cdot 0{,}7 = 182$.
+
+Le facteur global est $1{,}3 \cdot 0{,}7 = 0{,}91 = 1 - 0{,}09$ : une baisse de $9\,\%$, et non un retour à $200$.
+:::
+
+## Étape 4 — retrouver la valeur initiale
+
+[4]{.step} **Comment remonter à la valeur de départ ?**
+
+Un autre jour, après une baisse de $30\,\%$, la culture compte $140$ bactéries. Combien en comptait-elle au départ ?
+
+. . .
+
+::: aretenir
+On écrit l'équation $0{,}7\,x = 140$, donc $x = 200$.
+
+On ne calcule **pas** $30\,\%$ de $140$ : le pourcentage porte sur la valeur **initiale**.
+:::
+
+## Le piège à connaître
+
+:::: piege
+::: pg-titre
+Piège
+:::
+
+Comparer deux écritures sans les ramener à une forme commune ; **additionner** des pourcentages successifs ($+30 - 30 = 0$) ; appliquer le pourcentage à la valeur **finale** au lieu de l'initiale.
+::::
+
+## La carte « Pourcentages » {.smaller}
+
+:::::::::::::: fiche
+::: fiche-head
+Changer d'écriture et manier les pourcentages [[O2]{.obj}]{style="float:right"}
+:::
+
+:::::::::::: fiche-body
+:::::: fiche-col
+::: {.fiche-field .empty}
+Exercices associés (numéros)
+
+*à noter toi-même*
+:::
+
+::: {.fiche-field .empty}
+Théorie associée (chapitre / slide)
+
+*à noter toi-même*
+:::
+
+::: {.fiche-field .fragment}
+Quand l'utiliser ?
+
+Dès qu'on passe d'une écriture à une autre (fraction, décimal, pourcentage), qu'on compare de telles écritures, ou qu'on augmente / diminue / enchaîne des pourcentages.
+:::
+::::::
+
+::::::: fiche-col
+:::: fiche-field
+Étapes
+
+::: incremental
+1.  Un pourcentage est une fraction de dénominateur $100$ : $\dfrac{p}{100}$. Pour **comparer**, ramène tout à une **écriture commune**.
+2.  Augmenter de $p\,\%$ = multiplier par $\left(1 + \tfrac{p}{100}\right)$ ; diminuer = multiplier par $\left(1 - \tfrac{p}{100}\right)$.
+3.  Des pourcentages **successifs** se **composent par multiplication**, pas par addition.
+4.  Pour retrouver la valeur **initiale** $x$ menant à $y$, résous $\left(1 \pm \tfrac{p}{100}\right) x = y$.
+:::
+::::
+
+::: {.fiche-field .fragment}
+Exemple
+
+Hausse de $30\,\%$ puis baisse de $30\,\%$ : $\times 1{,}3 \times 0{,}7 = 0{,}91$, soit une baisse de $9\,\%$. Après une baisse de $30\,\%$ menant à $140$ : $0{,}7\,x = 140$, donc $x = 200$.
+:::
+
+::: {.fiche-field .fragment}
+Le piège
+
+Comparer deux écritures sans forme commune ; **additionner** des pourcentages successifs ; appliquer le pourcentage à la valeur **finale**.
+:::
+:::::::
+::::::::::::
+::::::::::::::
+
+::: footer-note
+Cette fiche rejoint ta **boîte à outils** sur le site.
+:::

@@ -1,0 +1,29 @@
+<!-- Cartes de méthode — SÉANCE @@N@@ (@@TITRE@@).
+     Fragment sans en-tête : inclus par la page methodes/seance@@NN@@.qmd (site, correctif)
+     et par build-boite.sh pour le PDF « méthodes » (une méthode par page).
+     Mise en forme par le filtre methode.lua. Calc-free, notation du cours.
+     Les titres et objectifs (titre="…", obj="…") alimentent AUSSI la feuille à compléter
+     (feuille-auto.py) : ne les écris qu'ici. Pas de figure : build-boite.sh ne copie que ce fragment.
+     Dupliquer le bloc ci-dessous pour chaque méthode. -->
+
+::: {.methode obj="O1" titre="………"}
+
+::: {.quand}
+Dès qu'………
+:::
+
+::: {.etapes}
+1. ………
+2. ………
+3. ………
+:::
+
+::: {.exemple}
+………
+:::
+
+::: {.piege}
+………
+:::
+
+:::

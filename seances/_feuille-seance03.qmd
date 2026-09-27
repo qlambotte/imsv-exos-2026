@@ -35,15 +35,5 @@ format:
 
 #rappel
 #v(10pt)
-#page_methode("Mettre un problème en équation", "O1")
-#pagebreak()
-#page_methode("Résoudre une équation ou une inéquation du premier degré", "O2")
-#pagebreak()
-#page_methode("Résoudre un système linéaire (substitution ou élimination)", "O3")
-#pagebreak()
-#page_methode("Équation d'une droite : pente et ordonnée à l'origine", "O4")
-#pagebreak()
-#page_methode("Proportionnalité, taux et conversions", "O4")
-#pagebreak()
-#page_methode("Résoudre une équation du second degré (discriminant)", "O5")
+// @@METHODES@@  (pages générées par feuille-auto.py à partir des cartes de méthode)
 ```

@@ -1,8 +1,10 @@
 ---
-title: "Séance @@NN@@ — @@TITRE@@"
+title: "Séance @@N@@ — @@TITRE@@"
 subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
 description: "@@TITRE@@"
 order: @@N@@
+nom: "[@@TITRE@@](seances/seance@@NN@@/index.html)"
+correction: "✅ en ligne"
 ---
 
 {{< include _meta.qmd >}}
@@ -11,8 +13,8 @@ order: @@N@@
 
 ## Objectifs de la séance
 
-Ces objectifs sont repris du cours théorique (IMSV-@@NN@@). **Chaque exercice indique l'objectif
-qu'il travaille** — la pastille **O1 / O2 / O3** dans son en-tête.
+Ces objectifs sont repris du cours théorique (IMSV-@@N@@, ses AAVs). **Chaque exercice indique
+l'objectif qu'il travaille** — la pastille **O1 / O2 / O3** dans son en-tête.
 
 - **O1** — ……… .
 - **O2** — ……… .
@@ -25,16 +27,15 @@ Une grille d'**auto-évaluation** sur ces objectifs t'attend à la page
 
 1. **[Socle](socle.qmd)** — les exercices routiniers, à ton rythme.
 2. **[Transfert](transfert.qmd)** — des problèmes en contexte nouveau.
-3. **[Exercices supplémentaires](supplementaires.qmd)** — pour les rapides (facultatif).
+3. **[Exercices supplémentaires](supplementaires.qmd)** — des variations pour consolider, en séance ou à la maison.
 4. **[Institutionnalisation](institution.qmd)** — la méthode qu'on dégage ensemble, et l'auto-évaluation.
 
 ## Les slides du cours
 
-<!-- >>> lien vers les slides de théorie (Moodle ou PDF) <<< -->
 Les slides de théorie associée sont sur
-**[Moodle](https://moodle.umons.ac.be/course/view.php?id=2657)** (chapitre IMSV-@@NN@@).
+**[Moodle](https://moodle.umons.ac.be/course/view.php?id=2657)** (chapitre IMSV-@@N@@).
 
 ## Avant la séance
 
-- **QCM Moodle de préparation** — court, il amorce la théorie du jour ; son *ticket de complétion* vaut l'entrée. <!-- lien QCM -->
+- **QCM Moodle de préparation** — court, il amorce la théorie du jour. <!-- lien QCM -->
 - **Prépa de la séance précédente** — à avoir faite : elle réapparaît à l'échauffement.

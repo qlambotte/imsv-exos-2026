@@ -15,6 +15,5 @@ Les exercices du **socle** sont des exercices routiniers, pour installer les aut
 {{< include _socle.qmd >}}
 
 ::: {.callout-note appearance="simple"}
-Terminé avant la fin ? Passe au **[Transfert](transfert.qmd)** — et, plus loin, aux *exercices
-supplémentaires*.
+Terminé avant la fin ? Passe au **[Transfert](transfert.qmd)**.
 :::

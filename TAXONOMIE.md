@@ -3,16 +3,15 @@
 But : que **chaque exercice** ait une place claire (famille + objectif + niveau), lisible dans son
 en-tête (« ✎ Exercice **S.3**  ·  Socle · **O2** · **★★☆** ») et cohérente d'une séance à l'autre.
 
-## Les quatre familles (la lettre = le préfixe de numérotation)
+## Les trois familles (la lettre = le préfixe de numérotation)
 
-| Famille | Rôle | Pour qui | À l'examen ? |
-|---|---|---|---|
-| **Socle (S)** | le **noyau** : les savoir-faire de routine, directement issus de la théorie | **tous** | oui (esprit du QCM) |
-| **Transfert (T)** | appliquer les savoir-faire du socle à un **contexte nouveau** (un vrai problème) | tous | oui |
-| **Renforcement (R)** | **variations** du socle, même compétence, entraînement en plus | les rapides / à domicile | oui |
+| Famille | Rôle | Pour qui |
+|---|---|---|
+| **Socle (S)** | le **noyau** : les savoir-faire de routine, directement issus de la théorie | **tous** |
+| **Transfert (T)** | appliquer les savoir-faire du socle à un **contexte nouveau** (un vrai problème) | tous |
+| **Renforcement (R)** | **variations** du socle, même compétence, entraînement en plus | les rapides / à domicile |
 
-La **catégorie pilote le numéro** : Socle → S.1, S.2… ; Transfert → T.1… ; Renforcement → R.1… ;
-Dépassement → D.1… La numérotation est **automatique** (filtre `exercice.lua`) : réordonner un
+La **catégorie pilote le numéro** : Socle → S.1, S.2… ; Transfert → T.1… ; Renforcement → R.1… La numérotation est **automatique** (filtre `exercice.lua`) : réordonner un
 exercice, ou changer sa catégorie, renumérote tout seul.
 
 ## Qu'est-ce qu'un exercice de **socle** ?
@@ -29,7 +28,7 @@ Un exercice est « socle » quand **tous** ces critères sont réunis :
 6. Règle du pouce : *pourrait figurer, dans l'esprit, au **QCM** post-cours.*
 
 Ce **n'est pas** du socle si l'exercice : demande un **contexte nouveau** (→ *Transfert*) ; n'est qu'un
-**entraînement en plus** (→ *Renforcement*) ; ou **dépasse** le programme requis (→ *Dépassement*).
+**entraînement en plus** (→ *Renforcement*).
 
 ## Les niveaux de difficulté (★)
 

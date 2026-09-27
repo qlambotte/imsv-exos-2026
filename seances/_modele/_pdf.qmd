@@ -1,5 +1,5 @@
 ---
-title: "Séance @@NN@@ — @@TITRE@@"
+title: "Séance @@N@@ — @@TITRE@@"
 subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
 format:
   typst:

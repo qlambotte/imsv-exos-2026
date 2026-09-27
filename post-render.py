@@ -42,7 +42,12 @@ for d in sorted(glob.glob("seances/seance*/")):
 # --- Feuilles à compléter (build-methodes.sh) : chaque séance en ligne + la vierge ---
 if os.path.exists("build-methodes.sh"):
     feuilles = glob.glob("seances/feuille-seance*.qmd") + ["seances/feuille-vierge.qmd"]
-    if any(stale([q], f"pdf/{os.path.basename(q)[:-4]}.pdf") for q in feuilles if os.path.exists(q)):
+
+    def feuille_sources(q):  # la feuille + les cartes de méthode dont elle tire ses titres
+        n = os.path.basename(q)[len("feuille-seance"):-4]
+        return [q, "feuille-auto.py", f"seances/_methodes-seance{n}.qmd", f"seances/_methodes-seance{n}.qmd.off"]
+
+    if any(stale(feuille_sources(q), f"pdf/{os.path.basename(q)[:-4]}.pdf") for q in feuilles if os.path.exists(q)):
         print("[post-render] feuilles de méthodes : source modifiée → rebuild")
         subprocess.run(["./build-methodes.sh"], check=True, env=ENV)
 
