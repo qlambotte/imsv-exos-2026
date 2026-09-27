@@ -1,6 +1,7 @@
 ---
 title: "Séance 1 — Langage et raisonnement"
 subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie — séance d'exercices"
+description: "Déroulé complet de la séance — échauffement, méthodes, synthèse"
 author: "Quentin Lambotte · FMPB · UMONS"
 date: 09/21/2026
 date-format: "D MMMM YYYY"
