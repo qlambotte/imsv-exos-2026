@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>Séance 1 — Langage et raisonnement – IMSV — Exercices</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -30,18 +36,18 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../seances/methodes/seance02.html" rel="next">
 <link href="../../seances/methode.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-be208d595c6a2a218ca02eae83ab10cf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-1b5b3ee8581b783e83719253fdcf2dd1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-700ec0bb6adbe5778fda1d0f3c3bc38c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,9 +110,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../../index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">IMSV — Exercices</a> 
     </div>
@@ -156,16 +160,52 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../seances/methode.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Boîte à outils</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <a href="../../seances/seance02/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 2 — Calcul fiable et trigonométrie</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/methode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Boîte à outils</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seances/methodes/seance01.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Séance 1 — Langage et raisonnement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 2 — Calcul fiable et trigonométrie</span></a>
   </div>
 </li>
       </ul>
@@ -227,12 +267,12 @@ Télécharger — correctif (PDF)
 <div class="mc-sect mc-etapes"><div class="mc-label">Étapes</div>
 <ol type="1">
 <li>Repère d’abord la <strong>structure</strong> de l’énoncé : quel est le connecteur principal (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∧</mi><annotation encoding="application/x-tex">\land</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∨</mi><annotation encoding="application/x-tex">\lor</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math>) et quels sont les quantificateurs qui l’entourent ?</li>
-<li>Fais entrer la négation <strong>une couche à la fois</strong>, de l’extérieur vers l’intérieur, avec les règles : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>α</mi><mo>∧</mo><mi>β</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\lnot(\alpha\land \beta)</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mi>α</mi><mo>∨</mo><mi>¬</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\lnot \alpha \lor \lnot \beta</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>α</mi><mo>∨</mo><mi>β</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\lnot(\alpha\lor \beta)</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mi>α</mi><mo>∧</mo><mi>¬</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\lnot \alpha \land \lnot \beta</annotation></semantics></math> (lois de De Morgan) ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>α</mi><mo>⇒</mo><mi>β</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\lnot(\alpha\Rightarrow \beta)</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>∧</mo><mi>¬</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\alpha \land \lnot \beta</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mrow><mo stretchy="true" form="prefix">(</mo><mo>∀</mo><mspace width="0.167em"></mspace><mi>x</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>α</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\lnot(\forall\, x,\ \alpha(x))</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mspace width="0.167em"></mspace><mi>x</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>¬</mi><mi>α</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\exists\, x,\ \lnot \alpha(x)</annotation></semantics></math>, et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mrow><mo stretchy="true" form="prefix">(</mo><mo>∃</mo><mspace width="0.167em"></mspace><mi>x</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>α</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\lnot(\exists\, x,\ \alpha(x))</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mspace width="0.167em"></mspace><mi>x</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>¬</mi><mi>α</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\forall\, x,\ \lnot \alpha(x)</annotation></semantics></math>.</li>
+<li>Fais entrer la négation <strong>une couche à la fois</strong>, de l’extérieur vers l’intérieur, avec les règles : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mo stretchy="false" form="prefix">(</mo><mi>α</mi><mo>∧</mo><mi>β</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\lnot(\alpha\land \beta)</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mi>α</mi><mo>∨</mo><mi>¬</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\lnot \alpha \lor \lnot \beta</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mo stretchy="false" form="prefix">(</mo><mi>α</mi><mo>∨</mo><mi>β</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\lnot(\alpha\lor \beta)</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mi>α</mi><mo>∧</mo><mi>¬</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\lnot \alpha \land \lnot \beta</annotation></semantics></math> (lois de De Morgan) ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mo stretchy="false" form="prefix">(</mo><mi>α</mi><mo>⇒</mo><mi>β</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\lnot(\alpha\Rightarrow \beta)</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>∧</mo><mi>¬</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\alpha \land \lnot \beta</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mo stretchy="false" form="prefix">(</mo><mo>∀</mo><mspace width="0.167em"></mspace><mi>x</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>α</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\lnot(\forall\, x,\ \alpha(x))</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mspace width="0.167em"></mspace><mi>x</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>¬</mi><mi>α</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\exists\, x,\ \lnot \alpha(x)</annotation></semantics></math>, et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>¬</mi><mo stretchy="false" form="prefix">(</mo><mo>∃</mo><mspace width="0.167em"></mspace><mi>x</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>α</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\lnot(\exists\, x,\ \alpha(x))</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mspace width="0.167em"></mspace><mi>x</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>¬</mi><mi>α</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\forall\, x,\ \lnot \alpha(x)</annotation></semantics></math>.</li>
 <li>Termine en <strong>niant les propositions sans connecteurs ni quantificateurs</strong> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>=</mo><annotation encoding="application/x-tex">=</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>≠</mo><annotation encoding="application/x-tex">\ne</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>&lt;</mo><annotation encoding="application/x-tex">&lt;</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>≥</mo><annotation encoding="application/x-tex">\ge</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>&gt;</mo><annotation encoding="application/x-tex">&gt;</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>≤</mo><annotation encoding="application/x-tex">\le</annotation></semantics></math>, et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∈</mo><annotation encoding="application/x-tex">\in</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∉</mo><annotation encoding="application/x-tex">\notin</annotation></semantics></math>.</li>
 </ol>
 </div>
 <div class="mc-sect mc-exemple"><div class="mc-label">Exemple</div>
-<p>Nions <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mspace width="0.167em"></mspace><mi>e</mi><mo>,</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>e</mi><mo>&gt;</mo><mn>0</mn><mo>⇒</mo><msup><mi>e</mi><mn>2</mn></msup><mo>&gt;</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\forall\, e, (e&gt;0\Rightarrow e^2&gt;0)</annotation></semantics></math>. Le quantificateur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∀</mo><annotation encoding="application/x-tex">\forall</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∃</mo><annotation encoding="application/x-tex">\exists</annotation></semantics></math> et on nie l’intérieur, ce qui donne d’abord <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mspace width="0.167em"></mspace><mi>e</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>¬</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>e</mi><mo>&gt;</mo><mn>0</mn><mo>⇒</mo><msup><mi>e</mi><mn>2</mn></msup><mo>&gt;</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\exists\, e,\ \lnot(e&gt;0\Rightarrow e^2&gt;0)</annotation></semantics></math>. Or la négation d’une implication <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>⇒</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">\alpha\Rightarrow \beta</annotation></semantics></math> s’écrit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>∧</mo><mi>¬</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\alpha\land\lnot \beta</annotation></semantics></math> ; on obtient donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mspace width="0.167em"></mspace><mi>e</mi><mo>,</mo><mspace width="0.222em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mi>e</mi><mo>&gt;</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>∧</mo><mspace width="0.222em"></mspace><mi>¬</mi><mspace width="0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>e</mi><mn>2</mn></msup><mo>&gt;</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\exists\, e,\ (e&gt;0\ \land\ \lnot\,(e^2&gt;0))</annotation></semantics></math>, c’est-à-dire <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mspace width="0.167em"></mspace><mi>e</mi><mo>,</mo><mspace width="0.222em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mi>e</mi><mo>&gt;</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>∧</mo><mspace width="0.222em"></mspace><msup><mi>e</mi><mn>2</mn></msup><mo>≤</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\exists\, e,\ (e&gt;0\ \land\ e^2\le 0)</annotation></semantics></math>.</p>
+<p>Nions <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mspace width="0.167em"></mspace><mi>e</mi><mo>,</mo><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo>&gt;</mo><mn>0</mn><mo>⇒</mo><msup><mi>e</mi><mn>2</mn></msup><mo>&gt;</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\forall\, e, (e&gt;0\Rightarrow e^2&gt;0)</annotation></semantics></math>. Le quantificateur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∀</mo><annotation encoding="application/x-tex">\forall</annotation></semantics></math> devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∃</mo><annotation encoding="application/x-tex">\exists</annotation></semantics></math> et on nie l’intérieur, ce qui donne d’abord <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mspace width="0.167em"></mspace><mi>e</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>¬</mi><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo>&gt;</mo><mn>0</mn><mo>⇒</mo><msup><mi>e</mi><mn>2</mn></msup><mo>&gt;</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\exists\, e,\ \lnot(e&gt;0\Rightarrow e^2&gt;0)</annotation></semantics></math>. Or la négation d’une implication <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>⇒</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">\alpha\Rightarrow \beta</annotation></semantics></math> s’écrit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>∧</mo><mi>¬</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\alpha\land\lnot \beta</annotation></semantics></math> ; on obtient donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mspace width="0.167em"></mspace><mi>e</mi><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo>&gt;</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>∧</mo><mspace width="0.222em"></mspace><mi>¬</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><msup><mi>e</mi><mn>2</mn></msup><mo>&gt;</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\exists\, e,\ (e&gt;0\ \land\ \lnot\,(e^2&gt;0))</annotation></semantics></math>, c’est-à-dire <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mspace width="0.167em"></mspace><mi>e</mi><mo>,</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo>&gt;</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>∧</mo><mspace width="0.222em"></mspace><msup><mi>e</mi><mn>2</mn></msup><mo>≤</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\exists\, e,\ (e&gt;0\ \land\ e^2\le 0)</annotation></semantics></math>.</p>
 </div>
 <div class="mc-sect mc-piege"><div class="mc-label">Le piège</div>
 <p>Un piège est de <strong>garder le même quantificateur</strong> en niant (laisser un <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∀</mo><annotation encoding="application/x-tex">\forall</annotation></semantics></math> là où il faut un <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∃</mo><annotation encoding="application/x-tex">\exists</annotation></semantics></math>). Un autre est de nier une inégalité stricte par une autre stricte : la négation de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>&gt;</mo><annotation encoding="application/x-tex">&gt;</annotation></semantics></math> n’est pas <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>&lt;</mo><annotation encoding="application/x-tex">&lt;</annotation></semantics></math> mais <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>≤</mo><annotation encoding="application/x-tex">\le</annotation></semantics></math>, car il ne faut pas oublier le cas d’égalité.</p>
@@ -272,7 +312,7 @@ Télécharger — correctif (PDF)
 </ol>
 </div>
 <div class="mc-sect mc-exemple"><div class="mc-label">Exemple</div>
-<p>On a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><mo>∉</mo><mo stretchy="false" form="prefix">[</mo><mn>3</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">7\notin[3,\ 7[</annotation></semantics></math> : en effet <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>7</mn><annotation encoding="application/x-tex">7</annotation></semantics></math> bien supérieur ou égal à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>≤</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">3\le 7</annotation></semantics></math>), mais il n’est pas strictement inférieur à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>7</mn><annotation encoding="application/x-tex">7</annotation></semantics></math> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>¬</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>7</mn><mo>&lt;</mo><mn>7</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\neg(7&lt;7)</annotation></semantics></math>). En revanche, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn><mo>∈</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="postfix">]</mo><mo>−</mo><mi>∞</mi><mo>,</mo><mspace width="0.222em"></mspace><mo>−</mo><mn>2</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">-2 \in\ ]{-}\infty,\ -2]</annotation></semantics></math> : on a bien <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>∞</mi><mo>&lt;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">-\infty&lt;2</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>≤</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2\le 2</annotation></semantics></math> .</p>
+<p>On a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><mo>∉</mo><mo stretchy="false" form="prefix">[</mo><mn>3</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">7\notin[3,\ 7[</annotation></semantics></math> : en effet <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>7</mn><annotation encoding="application/x-tex">7</annotation></semantics></math> bien supérieur ou égal à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>≤</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">3\le 7</annotation></semantics></math>), mais il n’est pas strictement inférieur à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>7</mn><annotation encoding="application/x-tex">7</annotation></semantics></math> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>¬</mo><mo stretchy="false" form="prefix">(</mo><mn>7</mn><mo>&lt;</mo><mn>7</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\neg(7&lt;7)</annotation></semantics></math>). En revanche, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn><mo>∈</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="postfix">]</mo><mo>−</mo><mi>∞</mi><mo>,</mo><mspace width="0.222em"></mspace><mo>−</mo><mn>2</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">-2 \in\ ]{-}\infty,\ -2]</annotation></semantics></math> : on a bien <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>∞</mi><mo>&lt;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">-\infty&lt;2</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>≤</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2\le 2</annotation></semantics></math> .</p>
 </div>
 <div class="mc-sect mc-piege"><div class="mc-label">Le piège</div>
 <p>Confondre crochet fermé et crochet ouvert est l’erreur la plus fréquente ; retiens que le crochet « s’ouvre » vers l’extérieur quand la borne est exclue. Et n’inclus <strong>jamais</strong> une borne infinie.</p>
@@ -857,6 +897,9 @@ Télécharger — correctif (PDF)
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../seances/methodes/seance02.html" class="pagination-link" aria-label="Séance 2 — Calcul fiable et trigonométrie">
+        <span class="nav-page-text"><span class="chapter-title">Séance 2 — Calcul fiable et trigonométrie</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
