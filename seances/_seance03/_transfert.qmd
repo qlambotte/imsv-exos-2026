@@ -87,10 +87,10 @@ N'écrire qu'une seule contrainte (le volume, en oubliant la masse de soluté) :
 
 ::: {.callout-caution .exo title="Exercice|Transfert|2|O4"}
 Un spectrophotomètre relie l'absorbance $A$ à la concentration $C$ (en mmol/L) par une **droite**.
-Deux étalons donnent $(C,\, A) = (2\, ;\, 0{,}25)$ et $(6\, ;\, 0{,}45)$.
+Deux étalons donnent $(C,\, A) = (1\, ;\, 0{,}20)$ et $(5\, ;\, 0{,}60)$.
 
 (a) Détermine la droite d'étalonnage $A(C) = m\, C + p$.
-(b) Un échantillon inconnu donne $A = 0{,}40$. Quelle est sa concentration ?
+(b) Un échantillon inconnu donne $A = 0{,}50$. Quelle est sa concentration ?
 (c) Que représente concrètement l'ordonnée à l'origine $p$ ?
 :::
 
@@ -107,60 +107,24 @@ Retourne à la théorie du cours : *Équation d'une droite* et *Étalonnage d’
 
 Comment obtenir la pente à partir des deux étalons ? Une fois la droite connue, la question (b) demande-t-elle de partir de $C$ ou de $A$ ?
 
-## Solution
-
-(a) $m = \dfrac{0{,}45 - 0{,}25}{6 - 2} = \dfrac{0{,}20}{4} = 0{,}05$ ; $p = 0{,}25 - 0{,}05 \cdot 2 = 0{,}15$.
-Donc $A(C) = 0{,}05\, C + 0{,}15$.
-
-(b) On résout $0{,}40 = 0{,}05\, C + 0{,}15$, soit $0{,}05\, C = 0{,}25$, donc $C = 5$ mmol/L.
-
-(c) $p = 0{,}15$ est l'absorbance mesurée pour une concentration nulle : c'est le **biais instrumental** (le signal résiduel de l'appareil).
-
-## Piège
-
-En (b), utiliser la concentration comme si c'était l'absorbance : ici l'inconnue est $C$, on part donc de la valeur de $A$.
-
-:::
-:::
-
-::: {.callout-caution .exo title="Exercice|Transfert|3|O5"}
-Un projectile suit la trajectoire $y = -x^2 + 6x$, où $y$ est la hauteur et $x$ la distance
-horizontale (toutes deux en mètres).
-
-(a) À quelle(s) distance(s) le projectile est-il à la hauteur $y = 5$ m ?
-(b) À quelle distance retombe-t-il au sol ($y = 0$) ?
-:::
-
-::: {.aides}
-::: {.panel-tabset}
-
-## Indice 1
-
-Retourne à la théorie du cours : *Équation du second degré* et *Résolution*.
-
-## Indice 2
-
-*Question à te poser.*
-
-Comment ramener « la trajectoire atteint la hauteur $5$ » à une équation du second degré de la forme $ax^2 + bx + c = 0$ ?
-
 ## Indice 3
 
 *Étape.*
 
-Pour (a), pose $-x^2 + 6x = 5$, puis mets tout d'un même côté. Pour (b), pose $-x^2 + 6x = 0$ et mets en évidence.
+Calcule d'abord $m = \dfrac{A_2 - A_1}{C_2 - C_1}$ avec les deux étalons, puis $p = A_1 - m\, C_1$.
 
 ## Solution
 
-(a) $-x^2 + 6x = 5 \;\Leftrightarrow\; x^2 - 6x + 5 = 0$. On a $\Delta = (-6)^2 - 4 \cdot 1 \cdot 5 = 36 - 20 = 16 > 0$. On aura donc deux solutions.
-$$x_{1,2} = \dfrac{6 \pm \sqrt{16}}{2} = \dfrac{6 \pm 4}{2} \;\Rightarrow\; x_1 = 1, \quad x_2 = 5.$$
-Le projectile est à $5$ m de haut à $x = 1$ m (en montant) **et** à $x = 5$ m (en descendant).
+(a) $m = \dfrac{0{,}60 - 0{,}20}{5 - 1} = \dfrac{0{,}40}{4} = 0{,}10$ ; $p = 0{,}20 - 0{,}10 \cdot 1 = 0{,}10$.
+Donc $A(C) = 0{,}10\, C + 0{,}10$. **Vérification** avec $(5\, ;\, 0{,}60)$ : $0{,}10 \cdot 5 + 0{,}10 = 0{,}60$. ✓
 
-(b) $-x^2 + 6x = 0 \;\Leftrightarrow\; x(6 - x) = 0$, donc $x = 0$ (départ) ou $x = 6$. Il retombe au sol à $x = 6$ m.
+(b) On résout $0{,}50 = 0{,}10\, C + 0{,}10 \;\Leftrightarrow\; 0{,}10\, C = 0{,}40 \;\Leftrightarrow\; C = 4$. L'échantillon a une concentration de $4$ mmol/L.
+
+(c) $p = 0{,}10$ est l'absorbance mesurée pour une concentration nulle : c'est le **biais instrumental** (le signal résiduel de l'appareil).
 
 ## Piège
 
-Oublier l'une des deux solutions en (a) : une hauteur intermédiaire est atteinte **deux** fois (montée et descente). En (b), retenir $x = 0$ comme point d'atterrissage alors que c'est le départ.
+En (b), utiliser la concentration comme si c'était l'absorbance : ici l'inconnue est $C$, on part donc de la valeur de $A$.
 
 :::
 :::
@@ -196,6 +160,67 @@ Les deux forfaits coûtent alors $5 \cdot 10 = 50$ € : c'est l'**intersection*
 ## Piège
 
 Conclure sans regarder **de quel côté** de l'intersection on se place : l'égalité donne le seuil, l'inégalité dit qui l'emporte au-delà.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|3|O3"}
+Un saumon qui remonte une rivière saute hors de l'eau, au pied d'un rocher incliné, et retombe sur ce
+rocher. On se place dans un repère où l'axe des $x$ est horizontal, au niveau de la surface de l'eau,
+et l'axe des $y$ vertical (unités : dm).
+
+- La trajectoire du saumon suit $y = -x^2 + 6x - 5$.
+- La surface du rocher suit la droite d'équation $x - y = 1$.
+- Le saut commence en $x = 1$ : le point cherché vérifie donc $x > 1$.
+
+(a) Écris le système, avec sa condition, que vérifie le point où le saumon retombe sur le rocher.
+(b) Résous-le.
+(c) Interprète chaque solution du système sans la condition. À quelle hauteur au-dessus de l'eau, et à
+quelle distance horizontale du point de départ, le saumon retombe-t-il ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Résolution par substitution*, *Équation du second degré* et *Domaine et validation contextuelle*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Dans quelle équation est-il le plus simple d'isoler une inconnue ? Que représente, dans le contexte, un point commun à la trajectoire et au rocher ?
+
+## Indice 3
+
+*Étape.*
+
+Isole $y$ dans $x - y = 1$ et remplace-le dans l'équation de la trajectoire : tu obtiens une équation du second degré en $x$.
+
+## Solution
+
+(a) Le point d'arrivée est sur la trajectoire **et** sur le rocher, après le départ :
+$$\begin{cases} y = -x^2 + 6x - 5, \\ x - y = 1, \\ x > 1. \end{cases}$$
+
+(b) La deuxième équation donne $y = x - 1$. On remplace dans la première :
+$$x - 1 = -x^2 + 6x - 5 \;\Leftrightarrow\; x^2 - 5x + 4 = 0.$$
+On a $\Delta = (-5)^2 - 4 \cdot 1 \cdot 4 = 25 - 16 = 9 > 0$ : deux solutions,
+$$x_1 = \dfrac{5 - 3}{2} = 1, \qquad x_2 = \dfrac{5 + 3}{2} = 4.$$
+On reporte dans $y = x - 1$ : $y_1 = 0$ et $y_2 = 3$. Sans la condition, le système formé par les deux
+équations a pour ensemble solution $\{(1,\, 0),\, (4,\, 3)\}$. La condition $x > 1$ écarte $(1,\, 0)$,
+donc $\mathrm{Sol} = \{(4,\, 3)\}$.
+
+**Vérification** : $-4^2 + 6 \cdot 4 - 5 = -16 + 24 - 5 = 3$ ✓ et $4 - 3 = 1$ ✓.
+
+(c) Le point $(1,\, 0)$ est le **point de départ** : le saumon quitte l'eau au pied du rocher, qui
+appartient aussi à la trajectoire. Le point $(4,\, 3)$ est le **point d'arrivée** : le saumon retombe
+sur le rocher à $3$ dm (soit $30$ cm) au-dessus de l'eau, à $4 - 1 = 3$ dm du point de départ
+horizontalement.
+
+## Piège
+
+Garder les **deux** couples sans utiliser la condition $x > 1$ ; ne donner que $x = 4$ sans calculer $y$ (la solution est un **couple**) ; se tromper de signe en passant tous les termes dans un même membre.
 
 :::
 :::

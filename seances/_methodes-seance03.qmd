@@ -10,19 +10,31 @@ Dès qu'un énoncé décrit une situation par des mots et demande une valeur inc
 :::
 
 ::: {.etapes}
-1. **Choisis l'inconnue** et note son **unité** ($x$ = …, en …).
-2. **Traduis** chaque relation de l'énoncé en une égalité ; respecte l'**ordre** des mots.
-3. **Résous** l'équation obtenue par transformations identiques.
-4. **Contrôle** que la solution est **admissible** dans le contexte (signe, domaine, ordre de grandeur).
-5. **Énonce** la réponse avec son unité.
+1. Lis l'énoncé jusqu'au bout et repère la **question posée** : c'est elle qui désigne l'inconnue.
+2. **Choisis l'inconnue** et écris ce qu'elle représente, avec son **unité** : « Soit $x$ … (en …) ».
+   S'il y a plusieurs grandeurs inconnues, exprime-les si possible à l'aide d'une seule ; sinon, prends
+   une inconnue par grandeur et prévois autant d'équations que d'inconnues.
+3. **Traduis** chaque relation de l'énoncé, morceau par morceau et dans l'**ordre** des mots :
+   « augmenté de » devient $+$, « diminué de » devient $-$, « le double de » devient $2 \cdot$,
+   « vaut » ou « est égal à » devient $=$.
+4. Vérifie que les deux membres de l'équation s'expriment dans la **même unité**.
+5. **Résous** l'équation obtenue par transformations identiques.
+6. **Contrôle** que la solution est **admissible** dans le contexte (signe, domaine, ordre de grandeur) ;
+   écarte celles qui n'ont pas de sens.
+7. **Réponds** à la question par une phrase, avec l'unité.
 :::
 
 ::: {.exemple}
-« Le double d'un nombre, diminué de $5$, vaut $17$. » Inconnue $x$ : $2x - 5 = 17 \Rightarrow 2x = 22 \Rightarrow x = 11$.
+« Le double d'un nombre, diminué de $5$, vaut $17$. » Soit $x$ le nombre cherché. « Le double d'un
+nombre » s'écrit $2x$ ; « diminué de $5$ » donne $2x - 5$ ; « vaut $17$ » donne l'équation
+$2x - 5 = 17$. On résout :
+$$2x - 5 = 17 \;\Leftrightarrow\; 2x = 22 \;\Leftrightarrow\; x = 11.$$
+Donc $\mathrm{Sol} = \{11\}$. **Vérification** : $2 \cdot 11 - 5 = 17$. ✓ Le nombre cherché est $11$.
 :::
 
 ::: {.piege}
-Traduire dans le mauvais ordre — $2(x - 5)$ pour « le double, diminué de $5$ » au lieu de $2x - 5$ — ou oublier de vérifier que la réponse a un sens.
+Traduire dans le mauvais ordre — $2(x - 5)$ pour « le double, diminué de $5$ » au lieu de $2x - 5$ — ou
+oublier de vérifier que la réponse a un sens dans le contexte.
 :::
 
 :::
@@ -34,42 +46,83 @@ Dès qu'une (in)égalité met en jeu une inconnue à la puissance $1$.
 :::
 
 ::: {.etapes}
-1. Développe les produits et supprime les fractions (multiplie les deux membres par le dénominateur commun).
-2. Regroupe les termes en $x$ d'un côté, les nombres de l'autre, par transformations **identiques** aux deux membres.
-3. Isole $x$ en divisant par son coefficient.
-4. Pour une **inéquation** : si tu multiplies ou divises par un nombre **négatif**, **inverse** le sens de l'inégalité.
-5. Écris l'ensemble solution ($\mathrm{Sol} = \{\dots\}$, ou un intervalle pour une inéquation).
+1. **Développe** les produits : distribue le facteur sur **chaque** terme de la parenthèse.
+2. S'il y a des **fractions**, multiplie **chaque terme** des deux membres par le dénominateur commun.
+3. **Regroupe** les termes en $x$ dans un membre et les nombres dans l'autre, en ajoutant ou en
+   soustrayant le **même** terme aux deux membres : un terme qui change de membre change de signe.
+4. **Réduis** chaque membre : tu obtiens une égalité (ou une inégalité) de la forme $ax = b$.
+5. **Divise** les deux membres par $a$ (avec $a \ne 0$) :
+   - pour une **équation**, $x = \dfrac{b}{a}$ et $\mathrm{Sol} = \left\{\dfrac{b}{a}\right\}$ ;
+   - pour une **inéquation**, le sens est **conservé** si $a > 0$ et **inversé** si $a < 0$.
+6. Si les termes en $x$ se sont **éliminés** (il reste $0 \cdot x = b$) : l'égalité est toujours vraie
+   si $b = 0$, et $\mathrm{Sol} = \mathbb{R}$ ; elle n'est jamais vraie si $b \ne 0$, et
+   $\mathrm{Sol} = \varnothing$.
+7. Écris l'**ensemble solution** : un ensemble à un élément pour une équation, un **intervalle** pour
+   une inéquation (crochet fermé pour $\le$ ou $\ge$, ouvert pour $<$ ou $>$).
+8. **Vérifie** : remplace $x$ par la solution dans l'équation de départ ; pour une inéquation, teste une
+   valeur de l'intervalle et une valeur hors de l'intervalle.
 :::
 
 ::: {.exemple}
-$-2x + 3 \le 11 \Rightarrow -2x \le 8 \Rightarrow x \ge -4$ (division par $-2$ : le sens s'inverse). $\mathrm{Sol} = [-4,\, +\infty[$.
+Résolvons $-2x + 3 \le 11$. On soustrait $3$ aux deux membres, puis on divise par $-2$, qui est
+négatif : le sens s'inverse.
+$$-2x + 3 \le 11 \;\Leftrightarrow\; -2x \le 8 \;\Leftrightarrow\; x \ge -4.$$
+Donc $\mathrm{Sol} = [-4,\, +\infty[$. **Vérification** : pour $x = 0$, on a $3 \le 11$, qui est vrai ;
+pour $x = -5$, on a $13 \le 11$, qui est faux. ✓
 :::
 
 ::: {.piege}
-Changer un terme de membre sans changer son signe ; diviser par un négatif **sans** inverser l'inégalité.
+Changer un terme de membre sans changer son signe ; diviser par un nombre négatif **sans** inverser le
+sens de l'inégalité ; ne multiplier par le dénominateur commun qu'**un seul** terme.
 :::
 
 :::
 
-::: {.methode obj="O3" titre="Résoudre un système linéaire (substitution ou élimination)"}
+::: {.methode obj="O2" titre="Résoudre un système linéaire (substitution ou élimination)"}
 
 ::: {.quand}
 Dès qu'il faut trouver **plusieurs** inconnues satisfaisant **plusieurs** équations en même temps.
 :::
 
 ::: {.etapes}
-1. **Substitution** : isole une inconnue dans une équation, remplace-la dans l'autre, résous, puis remonte la chaîne.
-2. **Élimination** : multiplie une équation pour opposer les coefficients d'une inconnue, additionne **terme à terme** pour la faire disparaître, résous, puis remonte.
-3. Donne la solution comme un **couple** $(x, y)$.
-4. **Vérifie** le couple dans **les deux** équations de départ.
+1. Écris chaque équation sous la forme $ax + by = c$ et numérote-les $(1)$ et $(2)$.
+2. **Substitution** — pratique quand une inconnue a pour coefficient $1$ ou $-1$ :
+   - isole cette inconnue dans l'une des équations ;
+   - remplace-la dans l'**autre** équation : il reste une équation à **une** inconnue ;
+   - résous cette équation ;
+   - reporte la valeur trouvée dans l'expression isolée pour obtenir l'autre inconnue.
+3. **Élimination** — pratique quand les coefficients d'une inconnue sont opposés ou multiples l'un de
+   l'autre :
+   - multiplie **chaque terme des deux membres** d'une équation (ou des deux) pour que les coefficients
+     d'une inconnue deviennent **opposés** ;
+   - additionne les deux équations **terme à terme** : cette inconnue disparaît ;
+   - résous l'équation obtenue, puis reporte la valeur dans une équation de départ.
+4. **Conclus** selon ce qu'il reste :
+   - une valeur pour chaque inconnue : **une seule solution**, $\mathrm{Sol} = \{(x,\, y)\}$ ; les deux
+     droites sont **sécantes** ;
+   - une égalité **toujours fausse** (par exemple $0 = 2$) : **aucune solution**, $\mathrm{Sol} = \varnothing$ ;
+     les droites sont **parallèles** et distinctes (exemple : $x + y = 4$ et $x + y = 6$) ;
+   - une égalité **toujours vraie** ($0 = 0$) : une **infinité** de solutions,
+     $\mathrm{Sol} = \{(x, y) \mid ax + by = c\}$ ; les droites sont **confondues** (exemple : $x + y = 4$
+     et $2x + 2y = 8$).
+5. **Vérifie** le couple dans **les deux** équations de départ.
+6. **Interprète** dans le contexte : unité de chaque inconnue, et solution admissible (signe, domaine).
 :::
 
 ::: {.exemple}
-$\begin{cases} v_A + v_B = 100 \\ 10 v_A + 20 v_B = 1600 \end{cases}$ : substitution $v_A = 100 - v_B$ donne $v_B = 60$, $v_A = 40$. $\mathrm{Sol} = \{(40, 60)\}$.
+Résolvons
+$$\begin{cases} v_A + v_B = 100 & (1) \\ 10\, v_A + 20\, v_B = 1600 & (2) \end{cases}$$
+Dans $(1)$, le coefficient de $v_A$ vaut $1$ : on isole $v_A = 100 - v_B$ et on remplace dans $(2)$.
+$$10(100 - v_B) + 20\, v_B = 1600 \;\Leftrightarrow\; 1000 + 10\, v_B = 1600 \;\Leftrightarrow\; v_B = 60.$$
+On reporte : $v_A = 100 - 60 = 40$. Donc $\mathrm{Sol} = \{(40,\, 60)\}$.
+**Vérification** : $40 + 60 = 100$ ✓ et $10 \cdot 40 + 20 \cdot 60 = 400 + 1200 = 1600$ ✓.
+Si $v_A$ et $v_B$ sont des volumes en mL, il faut prélever $40$ mL de $A$ et $60$ mL de $B$.
 :::
 
 ::: {.piege}
-Donner un seul nombre au lieu d'un couple ; en élimination, ne multiplier qu'**un** membre de l'équation.
+Donner un seul nombre au lieu d'un couple ; en élimination, ne multiplier qu'**un** membre de
+l'équation ; conclure $x = 0$ quand on obtient $0 = 0$, ou confondre « aucune solution » et « une
+infinité de solutions ».
 :::
 
 :::
@@ -81,18 +134,38 @@ Dès qu'il faut trouver, lire ou interpréter l'équation $y = mx + p$ d'une dro
 :::
 
 ::: {.etapes}
-1. À partir de deux points $(x_1, y_1)$ et $(x_2, y_2)$ (avec $x_1 \ne x_2$), calcule la **pente** $m = \dfrac{y_2 - y_1}{x_2 - x_1}$.
-2. Déduis l'**ordonnée à l'origine** avec un point : $p = y_1 - m\, x_1$.
-3. Écris l'équation $y = mx + p$ et vérifie avec l'autre point.
-4. **Interprète** : $m$ est un **taux de variation** (de $y$ par unité de $x$) ; son signe dit si la droite croît, décroît ou est constante. $p$ est la valeur de $y$ pour $x = 0$.
+1. Pars de deux points $(x_1, y_1)$ et $(x_2, y_2)$ de la droite et compare leurs abscisses.
+2. Si $x_1 = x_2$, la droite est **verticale** : son équation est $x = x_1$. Elle n'a **pas de pente** et
+   ne s'écrit pas sous la forme $y = mx + p$.
+3. Sinon, calcule la **pente** $m = \dfrac{y_2 - y_1}{x_2 - x_1}$, en gardant le **même ordre** des points
+   au numérateur et au dénominateur. Si $m = 0$, la droite est **horizontale**, d'équation $y = y_1$.
+4. Déduis l'**ordonnée à l'origine** en remplaçant un point dans $y = mx + p$ : $p = y_1 - m\, x_1$.
+5. Écris l'équation $y = mx + p$ et **vérifie** avec l'autre point.
+6. **Interprète** :
+   - $m$ est le **taux de variation** : quand $x$ augmente de $1$, $y$ varie de $m$ (en unité de $y$ par
+     unité de $x$) ; la droite **croît** si $m > 0$, **décroît** si $m < 0$ et est **constante** si $m = 0$ ;
+   - $p$ est la valeur de $y$ pour $x = 0$ (souvent la **valeur initiale**).
+7. Pour **deux droites** $y = mx + p$ et $y = m'x + p'$ :
+   - si $m \ne m'$, elles sont **sécantes** ; leur point d'intersection se trouve en résolvant le système
+     formé par les deux équations ;
+   - si $m = m'$ et $p \ne p'$, elles sont **parallèles** ; si $m = m'$ et $p = p'$, elles sont **confondues** ;
+   - si $m \cdot m' = -1$, elles sont **orthogonales**.
 :::
 
 ::: {.exemple}
-Par $(1, 3)$ et $(3, 7)$ : $m = \dfrac{7 - 3}{3 - 1} = 2$ ; $p = 3 - 2 \cdot 1 = 1$. D'où $y = 2x + 1$.
+Par $(1, 3)$ et $(3, 7)$ : les abscisses sont différentes, la droite n'est donc pas verticale.
+$$m = \dfrac{7 - 3}{3 - 1} = \dfrac{4}{2} = 2, \qquad p = 3 - 2 \cdot 1 = 1.$$
+D'où $y = 2x + 1$. **Vérification** avec $(3, 7)$ : $2 \cdot 3 + 1 = 7$. ✓
+La pente $2$ est positive : quand $x$ augmente de $1$, $y$ augmente de $2$. La droite coupe l'axe des
+ordonnées en $(0, 1)$.
+
+En revanche, par $(2, 1)$ et $(2, 5)$, les abscisses sont égales : la droite est verticale, d'équation
+$x = 2$.
 :::
 
 ::: {.piege}
-Inverser le rapport de la pente ; oublier qu'une droite **verticale** ($x = c$) n'a pas de pente et n'est pas une fonction.
+Inverser le rapport de la pente, ou mélanger l'ordre des points entre numérateur et dénominateur ;
+chercher une pente à une droite **verticale** ($x = c$), qui n'en a pas.
 :::
 
 :::
@@ -104,18 +177,32 @@ Dès que deux grandeurs varient « par unité de » l'une l'autre : prix par kg,
 :::
 
 ::: {.etapes}
-1. Vérifie que les grandeurs sont **directement proportionnelles** : $y = kx$ (la relation passe par l'origine). Un **coût fixe** la rend **affine** ($y = kx + p$) : plus de règle de trois.
-2. Identifie le **facteur** $k$ (le taux), avec son unité.
-3. Pour convertir un taux, passe par les **unités de base** ($1$ km $= 1000$ m, $1$ h $= 3600$ s, …).
-4. **Contrôle** par l'ordre de grandeur : le résultat va-t-il dans le sens attendu (plus grand / plus petit) ?
+1. **Teste** la proportionnalité : les grandeurs sont **directement proportionnelles** si
+   $y = kx$, c'est-à-dire si le quotient $\dfrac{y}{x}$ est le même pour toutes les valeurs
+   (la relation passe par l'origine).
+2. Si c'est le cas, identifie le **facteur** $k = \dfrac{y}{x}$ (le taux), **avec son unité**.
+3. **Calcule** : $y = kx$ pour trouver $y$, ou $x = \dfrac{y}{k}$ pour trouver $x$ (règle de trois).
+4. Si la relation contient un **terme fixe** (forfait, coût de livraison…), elle s'écrit $y = kx + p$
+   avec $p \ne 0$ : elle est **affine** et non proportionnelle. Remplace alors directement $x$ dans la
+   relation, sans règle de trois.
+5. Pour **convertir un taux**, écris-le comme une fraction avec ses unités, remplace **chaque** unité
+   par sa valeur en unités de base ($1$ km $= 1000$ m, $1$ h $= 3600$ s, …), puis simplifie.
+6. **Contrôle** par l'ordre de grandeur : le résultat va-t-il dans le sens attendu (plus grand ou plus
+   petit) ?
 :::
 
 ::: {.exemple}
-$72$ km/h $= \dfrac{72\,000 \text{ m}}{3\,600 \text{ s}} = 20$ m/s. Prix à $3$ €/kg : $p = 3m$ (linéaire) ; avec $5$ € de livraison : $p = 3m + 5$ (affine).
+**Conversion.** $72$ km/h $= \dfrac{72 \text{ km}}{1 \text{ h}} = \dfrac{72\,000 \text{ m}}{3\,600 \text{ s}} = 20$ m/s.
+Contrôle : $1$ m/s vaut $3{,}6$ km/h, donc le nombre en m/s doit être plus petit. ✓
+
+**Proportionnalité.** À $3$ €/kg, le prix vaut $p = 3m$ : $2$ kg coûtent $6$ € et $4$ kg coûtent $12$ €,
+soit le double. Avec $5$ € de livraison, $p = 3m + 5$ : $2$ kg coûtent $11$ € et $4$ kg coûtent $17$ €,
+et non $22$ € ; la relation est affine, une règle de trois donnerait un résultat faux.
 :::
 
 ::: {.piege}
-Appliquer une règle de trois à une relation **affine** (avec coût fixe) ; se tromper de sens (multiplier au lieu de diviser) dans une conversion.
+Appliquer une règle de trois à une relation **affine** (avec coût fixe) ; se tromper de sens (multiplier
+au lieu de diviser) dans une conversion ; oublier l'unité du taux.
 :::
 
 :::
@@ -127,18 +214,39 @@ Dès qu'une équation se ramène à la forme $ax^2 + bx + c = 0$ (avec $a \ne 0$
 :::
 
 ::: {.etapes}
-1. Mets l'équation sous forme développée $ax^2 + bx + c = 0$ (tout d'un même côté).
-2. Calcule le **discriminant** $\Delta = b^2 - 4ac$.
-3. Selon son **signe** : $\Delta > 0$ → deux solutions $x_{1,2} = \dfrac{-b \pm \sqrt{\Delta}}{2a}$ ; $\Delta = 0$ → une solution $x = \dfrac{-b}{2a}$ ; $\Delta < 0$ → aucune solution réelle.
-4. Écris l'ensemble solution.
+1. Mets l'équation sous la forme $ax^2 + bx + c = 0$ : développe, passe tous les termes dans un même
+   membre, puis réduis.
+2. Identifie $a$, $b$ et $c$ **avec leur signe**.
+3. Si $c = 0$ ou $b = 0$, le discriminant n'est pas nécessaire :
+   - si $c = 0$, mets $x$ en évidence : $x(ax + b) = 0$, donc $x = 0$ ou $x = -\dfrac{b}{a}$ ;
+   - si $b = 0$, isole $x^2 = -\dfrac{c}{a}$ et prends les deux racines carrées si ce nombre est positif.
+4. Sinon, calcule le **discriminant** $\Delta = b^2 - 4ac$.
+5. Conclus selon son **signe** :
+   - $\Delta > 0$ : **deux** solutions, $x_1 = \dfrac{-b - \sqrt{\Delta}}{2a}$ et
+     $x_2 = \dfrac{-b + \sqrt{\Delta}}{2a}$ ; la parabole $y = ax^2 + bx + c$ coupe l'axe des $x$ en
+     deux points ;
+   - $\Delta = 0$ : **une** solution, $x = -\dfrac{b}{2a}$ ; la parabole touche l'axe des $x$ en un seul
+     point, son sommet ;
+   - $\Delta < 0$ : **aucune** solution réelle, $\mathrm{Sol} = \varnothing$ ; la parabole ne coupe pas
+     l'axe des $x$.
+6. Écris l'**ensemble solution** et **vérifie** une solution dans l'équation de départ.
+7. En contexte, ne garde que les solutions **admissibles** (signe, domaine).
 :::
 
 ::: {.exemple}
-$x^2 - 5x + 6 = 0$ : $\Delta = 25 - 24 = 1 > 0$, donc $x_{1,2} = \dfrac{5 \pm 1}{2}$, soit $x = 3$ ou $x = 2$. $\mathrm{Sol} = \{2, 3\}$.
+Résolvons $x^2 - 5x + 6 = 0$. On a $a = 1$, $b = -5$, $c = 6$, donc
+$$\Delta = (-5)^2 - 4 \cdot 1 \cdot 6 = 25 - 24 = 1 > 0 : \text{deux solutions.}$$
+$$x_1 = \dfrac{5 - 1}{2} = 2, \qquad x_2 = \dfrac{5 + 1}{2} = 3.$$
+Donc $\mathrm{Sol} = \{2,\, 3\}$. **Vérification** : $2^2 - 5 \cdot 2 + 6 = 4 - 10 + 6 = 0$. ✓
+
+Pour $x^2 - 6x + 9 = 0$, $\Delta = 36 - 36 = 0$ : une seule solution, $x = \dfrac{6}{2} = 3$, et
+$\mathrm{Sol} = \{3\}$. Pour $x^2 + x + 1 = 0$, $\Delta = 1 - 4 = -3 < 0$ : $\mathrm{Sol} = \varnothing$.
 :::
 
 ::: {.piege}
-Se tromper de signe dans $-b$ ; oublier le $2a$ au dénominateur ; conclure sur la **taille** de $\Delta$ plutôt que sur son **signe**.
+Se tromper de signe dans $-b$ ; oublier le $2a$ au dénominateur ; conclure sur la **taille** de $\Delta$
+plutôt que sur son **signe** ; oublier la solution $x = 0$ en divisant par $x$ au lieu de le mettre en
+évidence.
 :::
 
 :::

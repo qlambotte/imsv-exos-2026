@@ -24,7 +24,7 @@ Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **cin
 - [ ] **O2** — **Résoudre une équation ou inéquation du premier degré et un système linéaire élémentaire**.
 - [ ] **O3** — **Interpréter les solutions d’un système d’équations dans le contexte du problème d’origine**.
 - [ ] **O4** — **Interpréter pente et ordonnée à l’origine d’une droite, intersection de droites, savoir les calculer**.
-- [ ] **O5** — **Résoudre une équation du second degré, interpréter le signe du discriminant.**.
+- [ ] **O5** — **Résoudre une équation du second degré, interpréter le signe du discriminant**.
 
 ::: {.callout-important appearance="simple"}
 Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la
