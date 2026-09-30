@@ -85,50 +85,6 @@ N'écrire qu'une seule contrainte (le volume, en oubliant la masse de soluté) :
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Transfert|2|O4"}
-Un spectrophotomètre relie l'absorbance $A$ à la concentration $C$ (en mmol/L) par une **droite**.
-Deux étalons donnent $(C,\, A) = (1\, ;\, 0{,}20)$ et $(5\, ;\, 0{,}60)$.
-
-(a) Détermine la droite d'étalonnage $A(C) = m\, C + p$.
-(b) Un échantillon inconnu donne $A = 0{,}50$. Quelle est sa concentration ?
-(c) Que représente concrètement l'ordonnée à l'origine $p$ ?
-:::
-
-::: {.aides}
-::: {.panel-tabset}
-
-## Indice 1
-
-Retourne à la théorie du cours : *Équation d'une droite* et *Étalonnage d’un spectrophotomètre* et *Retour à l'étalonnage*.
-
-## Indice 2
-
-*Question à te poser.*
-
-Comment obtenir la pente à partir des deux étalons ? Une fois la droite connue, la question (b) demande-t-elle de partir de $C$ ou de $A$ ?
-
-## Indice 3
-
-*Étape.*
-
-Calcule d'abord $m = \dfrac{A_2 - A_1}{C_2 - C_1}$ avec les deux étalons, puis $p = A_1 - m\, C_1$.
-
-## Solution
-
-(a) $m = \dfrac{0{,}60 - 0{,}20}{5 - 1} = \dfrac{0{,}40}{4} = 0{,}10$ ; $p = 0{,}20 - 0{,}10 \cdot 1 = 0{,}10$.
-Donc $A(C) = 0{,}10\, C + 0{,}10$. **Vérification** avec $(5\, ;\, 0{,}60)$ : $0{,}10 \cdot 5 + 0{,}10 = 0{,}60$. ✓
-
-(b) On résout $0{,}50 = 0{,}10\, C + 0{,}10 \;\Leftrightarrow\; 0{,}10\, C = 0{,}40 \;\Leftrightarrow\; C = 4$. L'échantillon a une concentration de $4$ mmol/L.
-
-(c) $p = 0{,}10$ est l'absorbance mesurée pour une concentration nulle : c'est le **biais instrumental** (le signal résiduel de l'appareil).
-
-## Piège
-
-En (b), utiliser la concentration comme si c'était l'absorbance : ici l'inconnue est $C$, on part donc de la valeur de $A$.
-
-:::
-:::
-
 ::: {.callout-caution .exo title="Exercice|Transfert|3|O4"}
 Un laboratoire propose deux forfaits pour $x$ analyses. Le forfait $A$ coûte $y = 3x + 20$ (en €) ;
 le forfait $B$ coûte $y = 5x$.

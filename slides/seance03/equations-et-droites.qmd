@@ -2,7 +2,7 @@
 title: "Séance 3 — Équations, proportions et géométrie analytique"
 subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie — séance d'exercices"
 description: "Déroulé complet de la séance — échauffement, méthodes, synthèse"
-author: "Quentin Lambotte · FMPB · UMONS"
+author: "Chloé Capon · FS · UMONS"
 date: 10/05/2026
 date-format: "D MMMM YYYY"
 lang: fr
@@ -75,7 +75,7 @@ Le **niveau sonore projeté** reste affiché pendant les moments de travail :
 
 ## Annonces
 
-<!-- À compléter : remédiations de la semaine, tests de positionnement, etc. -->
+Les prochaines remédiations seront annoncées via Moodle demain soir.
 
 # Échauffement {.divider background-color="#14304a"}
 
@@ -100,15 +100,14 @@ Le **niveau sonore projeté** reste affiché pendant les moments de travail :
 **Vote sur Wooclap**
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : HXHQLBN
 :::
 ::::
 
-<!-- QR : python3 make-qr.py (après avoir complété le lien), puis décommenter le bloc suivant
 ::: {.wc-qr}
 ![](img/qr-echauffement.png)
 :::
--->
+
 :::::
 
 ::::::: et-timer
@@ -320,11 +319,19 @@ $\cos\left(\dfrac{2\pi}{3}\right)$
 
 . . .
 
+:::::: columns
+::::: {.column width="60%"}
 ::: aretenir
 $\dfrac{2\pi}{3} = 120°$ est dans le **deuxième quadrant**, où le cosinus est **négatif**. C'est le symétrique de $\dfrac{\pi}{3}$ par rapport à l'axe vertical, donc $\cos\left(\dfrac{2\pi}{3}\right) = -\cos\left(\dfrac{\pi}{3}\right) = -\dfrac{1}{2}$.
 
 Oublier le signe imposé par le quadrant, ou confondre avec $\sin\left(\dfrac{\pi}{3}\right) = \dfrac{\sqrt3}{2}$, sont les erreurs classiques.
 :::
+:::::
+
+::::: {.column width="40%"}
+![](img/cercle-2pi3.svg){fig-alt="Cercle trigonométrique : les angles π/3 et 2π/3 sont symétriques par rapport à l'axe vertical ; leurs cosinus valent 1/2 et −1/2." width="100%"}
+:::::
+::::::
 
 # Institutionnalisation {.divider background-color="#14304a"}
 
@@ -343,17 +350,15 @@ Avec tes mots : quand tu lis un énoncé de problème, par quoi commences-tu ?
 **Ouvre le Wooclap**
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : ZQFAKOT
 :::
 ::::
 
-<!-- QR : python3 make-qr.py (après avoir complété le lien), puis décommenter le bloc suivant
 ::: {.wc-qr}
 ![](img/qr-equation.png)
 
 Mettre en équation
 :::
--->
 
 ::::::
 
@@ -518,17 +523,15 @@ Avec tes mots : comment ramener un système à une équation à **une seule** in
 **Ouvre le Wooclap**
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : ZQFAKOT
 :::
 ::::
 
-<!-- QR : python3 make-qr.py (après avoir complété le lien), puis décommenter le bloc suivant
 ::: {.wc-qr}
-![](img/qr-systeme.png)
+![](img/qr-equation.png)
 
 Systèmes
 :::
--->
 
 ::::::
 

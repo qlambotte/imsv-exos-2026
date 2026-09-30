@@ -12,8 +12,7 @@ Dès qu'un énoncé décrit une situation par des mots et demande une valeur inc
 ::: {.etapes}
 1. Lis l'énoncé jusqu'au bout et repère la **question posée** : c'est elle qui désigne l'inconnue.
 2. **Choisis l'inconnue** et écris ce qu'elle représente, avec son **unité** : « Soit $x$ … (en …) ».
-   S'il y a plusieurs grandeurs inconnues, exprime-les si possible à l'aide d'une seule ; sinon, prends
-   une inconnue par grandeur et prévois autant d'équations que d'inconnues.
+   S'il y a plusieurs grandeurs inconnues, exprime-les si possible à l'aide d'une seule.
 3. **Traduis** chaque relation de l'énoncé, morceau par morceau et dans l'**ordre** des mots :
    « augmenté de » devient $+$, « diminué de » devient $-$, « le double de » devient $2 \cdot$,
    « vaut » ou « est égal à » devient $=$.
@@ -25,16 +24,22 @@ Dès qu'un énoncé décrit une situation par des mots et demande une valeur inc
 :::
 
 ::: {.exemple}
-« Le double d'un nombre, diminué de $5$, vaut $17$. » Soit $x$ le nombre cherché. « Le double d'un
-nombre » s'écrit $2x$ ; « diminué de $5$ » donne $2x - 5$ ; « vaut $17$ » donne l'équation
-$2x - 5 = 17$. On résout :
-$$2x - 5 = 17 \;\Leftrightarrow\; 2x = 22 \;\Leftrightarrow\; x = 11.$$
-Donc $\mathrm{Sol} = \{11\}$. **Vérification** : $2 \cdot 11 - 5 = 17$. ✓ Le nombre cherché est $11$.
+« Un flacon de sérum contient $500$ mL. Après $3$ heures de perfusion à débit constant, il reste
+$140$ mL. Quel est le débit de la perfusion ? »
+
+La question porte sur le débit. Soit $d$ le débit de la perfusion, en mL/h. En $3$ heures, le flacon
+perd $3d$ mL ; il en reste $140$ : l'équation est $500 - 3d = 140$, et ses deux membres sont en mL.
+On résout :
+$$500 - 3d = 140 \;\Leftrightarrow\; -3d = -360 \;\Leftrightarrow\; d = 120.$$
+Donc $\mathrm{Sol} = \{120\}$. **Vérification** : $500 - 3 \cdot 120 = 140$. ✓ Un débit est positif et le
+flacon ne peut pas perdre plus que son contenu ($3 \cdot 120 = 360 \le 500$) : la solution est
+admissible. La perfusion a un débit de $120$ mL/h.
 :::
 
 ::: {.piege}
-Traduire dans le mauvais ordre — $2(x - 5)$ pour « le double, diminué de $5$ » au lieu de $2x - 5$ — ou
-oublier de vérifier que la réponse a un sens dans le contexte.
+Traduire dans le mauvais ordre — $2(x - 5)$ pour « le double, diminué de $5$ » au lieu de $2x - 5$ ;
+oublier l'**unité** de l'inconnue ou de la réponse ; oublier de vérifier que la réponse a un sens dans
+le contexte.
 :::
 
 :::
