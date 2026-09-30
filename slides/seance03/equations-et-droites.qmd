@@ -311,17 +311,14 @@ C'est le **signe** de $\Delta$ qui donne le nombre de solutions : deux si $\Delt
 
 ## Q4 [[Séance 2 · O4]{.obj}]{style="float:right"}
 
-Que vaut :
+Que vaut : $\cos\left(\dfrac{2\pi}{3}\right)$?
 
-::: {.big-eq .center}
-$\cos\left(\dfrac{2\pi}{3}\right)$
-:::
 
 . . .
 
 :::::: columns
 ::::: {.column width="60%"}
-::: aretenir
+::: {.aretenir .smaller}
 $\dfrac{2\pi}{3} = 120°$ est dans le **deuxième quadrant**, où le cosinus est **négatif**. C'est le symétrique de $\dfrac{\pi}{3}$ par rapport à l'axe vertical, donc $\cos\left(\dfrac{2\pi}{3}\right) = -\cos\left(\dfrac{\pi}{3}\right) = -\dfrac{1}{2}$.
 
 Oublier le signe imposé par le quadrant, ou confondre avec $\sin\left(\dfrac{\pi}{3}\right) = \dfrac{\sqrt3}{2}$, sont les erreurs classiques.
