@@ -11,6 +11,11 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 cd "$ROOT"
 
+# Auto-guérison : un `git worktree add` (voir deploy.sh) peut extraire ces scripts
+# sans leur bit exécutable si git ne l'a pas enregistré. On le remet ici à chaque
+# lancement, pour ne plus jamais retomber sur « Permission non accordée ».
+chmod +x build-pdf.sh build-methodes.sh build-boite.sh 2>/dev/null || true
+
 for d in seances/seance*/; do
   s=$(basename "$d")
   [ -f "$d/_pdf.qmd" ] || continue

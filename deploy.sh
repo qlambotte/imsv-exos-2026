@@ -30,6 +30,10 @@ build_view(){   # $1 = student|prof ; $2 = sous-dossier de destination ("" ou "p
   git worktree add --detach "$wt" HEAD >/dev/null
   (
     cd "$wt"
+    # Auto-guérison : ce worktree est extrait depuis l'index git, qui peut ne pas
+    # avoir enregistré le bit exécutable de ces scripts (cf. « Permission non
+    # accordée » sur build-pdf.sh). On le remet ici, dans CE worktree seulement.
+    chmod +x build-all.sh build-pdf.sh build-methodes.sh build-boite.sh 2>/dev/null || true
     if [ "$mode" = prof ]; then
       # active toutes les séances en cours (dossiers seances/_seanceNN)
       for d in seances/_seance[0-9][0-9]; do

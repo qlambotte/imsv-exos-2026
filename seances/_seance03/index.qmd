@@ -16,11 +16,11 @@ correction: "✅ en ligne"
 Ces objectifs sont repris du cours théorique (IMSV-3, ses AAVs). **Chaque exercice indique
 l'objectif qu'il travaille** — la pastille **O1 / O2 / O3 / O4 / O5** dans son en-tête.
 
-- **O1** — **mettre un problème simple en équation** : choisir l'inconnue et son unité, traduire chaque relation, résoudre, vérifier, énoncer la réponse dans le contexte.
-- **O2** — **résoudre une équation ou une inéquation du premier degré**, et contrôler l'admissibilité des solutions dans le contexte.
-- **O3** — **résoudre un système linéaire élémentaire** (substitution, élimination) et **interpréter ses solutions**, y compris les cas sans solution ou à une infinité de solutions.
-- **O4** — **droites et proportionnalité** : calculer et interpréter **pente** et **ordonnée à l'origine**, **intersection** de droites, **parallélisme** et **orthogonalité** ; règle de trois, taux et conversions.
-- **O5** — **résoudre une équation du second degré** et **interpréter le signe du discriminant**.
+- **O1** — **Mettre un problème simple en équation**.
+- **O2** — **Résoudre une équation ou inéquation du premier degré et un système linéaire élémentaire**.
+- **O3** — **Interpréter les solutions d’un système d’équations dans le contexte du problème d’origine**.
+- **O4** — **Interpréter pente et ordonnée à l’origine d’une droite, intersection de droites, savoir les calculer**.
+- **O5** — **Résoudre une équation du second degré, interpréter le signe du discriminant.**.
 
 Une grille d'**auto-évaluation** sur ces objectifs t'attend à la page
 [Institutionnalisation](institution.qmd).

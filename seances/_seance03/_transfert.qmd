@@ -99,7 +99,7 @@ Deux étalons donnent $(C,\, A) = (2\, ;\, 0{,}25)$ et $(6\, ;\, 0{,}45)$.
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Équation d'une droite* et *Retour à l'étalonnage*.
+Retourne à la théorie du cours : *Équation d'une droite* et *Étalonnage d’un spectrophotomètre* et *Retour à l'étalonnage*.
 
 ## Indice 2
 
@@ -136,7 +136,7 @@ horizontale (toutes deux en mètres).
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Équation du second degré* et *Résolution (discriminant)*.
+Retourne à la théorie du cours : *Équation du second degré* et *Résolution*.
 
 ## Indice 2
 
@@ -152,11 +152,11 @@ Pour (a), pose $-x^2 + 6x = 5$, puis mets tout d'un même côté. Pour (b), pose
 
 ## Solution
 
-(a) $-x^2 + 6x = 5 \;\Rightarrow\; x^2 - 6x + 5 = 0$. $\Delta = (-6)^2 - 4 \cdot 1 \cdot 5 = 36 - 20 = 16 > 0$.
+(a) $-x^2 + 6x = 5 \;\Leftrightarrow\; x^2 - 6x + 5 = 0$. On a $\Delta = (-6)^2 - 4 \cdot 1 \cdot 5 = 36 - 20 = 16 > 0$. On aura donc deux solutions.
 $$x_{1,2} = \dfrac{6 \pm \sqrt{16}}{2} = \dfrac{6 \pm 4}{2} \;\Rightarrow\; x_1 = 1, \quad x_2 = 5.$$
 Le projectile est à $5$ m de haut à $x = 1$ m (en montant) **et** à $x = 5$ m (en descendant).
 
-(b) $-x^2 + 6x = 0 \;\Rightarrow\; x(6 - x) = 0$, donc $x = 0$ (départ) ou $x = 6$. Il retombe au sol à $x = 6$ m.
+(b) $-x^2 + 6x = 0 \;\Leftrightarrow\; x(6 - x) = 0$, donc $x = 0$ (départ) ou $x = 6$. Il retombe au sol à $x = 6$ m.
 
 ## Piège
 
@@ -178,7 +178,7 @@ le forfait $B$ coûte $y = 5x$.
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Intersection de droites* et *Inéquations*.
+Retourne à la théorie du cours : *Résolution par substitution* et *Inéquations*.
 
 ## Indice 2
 
@@ -188,7 +188,7 @@ Le « même prix » correspond à quel objet graphique commun aux deux droites ?
 
 ## Solution
 
-(a) On impose l'égalité des deux prix : $3x + 20 = 5x \;\Rightarrow\; 20 = 2x \;\Rightarrow\; x = 10$.
+(a) On impose l'égalité des deux prix : $3x + 20 = 5x \;\Leftrightarrow\; 20 = 2x \;\Leftrightarrow\; x = 10$.
 Les deux forfaits coûtent alors $5 \cdot 10 = 50$ € : c'est l'**intersection** des deux droites.
 
 (b) Pour $x > 10$, on a $3x + 20 < 5x$ : le forfait $A$ est le moins cher. À partir de $11$ analyses, $A$ est plus avantageux (à $10$ analyses, les deux se valent).
