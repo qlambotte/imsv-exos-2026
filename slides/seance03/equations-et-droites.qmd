@@ -390,10 +390,9 @@ On traduit morceau par morceau, dans l'ordre des mots.
 . . .
 
 ::: aretenir
-En $3$ heures, le flacon perd $3d$ mL. Il en reste $140$ : $500 - 3d = 140$.
+En $3$ heures, le flacon perd $3d$ mL. Il en reste $140$. Donc l'équation est $500 - 3d = 140$.
 
-Les deux membres sont en mL : l'équation est **homogène**.
-:::
+Les deux membres de l'équation sont en mL.
 
 ## Étape 3 — résoudre
 
