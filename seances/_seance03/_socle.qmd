@@ -5,7 +5,7 @@
      Calcul sans calculatrice : valeurs rondes, fractions qui tombent juste. Ensemble solution noté Sol. -->
 
 ::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
-Pour chaque situation, **choisis l'inconnue** (avec son unité) et **écris l'équation** — sans la résoudre.
+Pour chaque situation, **choisis l'inconnue** (avec son unité, pour la dernière situation) et **écris l'équation** — sans la résoudre.
 
 (a) Un nombre augmenté de $8$ vaut $21$.
 (b) Le double d'un nombre, diminué de $5$, vaut $17$.
