@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Équations, proportions et géométrie analytique">
+
+<title>Séance 3 — Équations, proportions et géométrie analytique – IMSV — Exercices</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../seances/methodes/seance02.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-700ec0bb6adbe5778fda1d0f3c3bc38c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<script>
+// Applique le thème mémorisé AVANT le rendu (évite le clignotement clair→sombre).
+(function () {
+  try {
+    var t = localStorage.getItem('imsv-theme');
+    if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+})();
+</script>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seances/methode.html">Boîte à outils</a></li><li class="breadcrumb-item"><a href="../../seances/methodes/seance03.html"><span class="chapter-title">Séance 3 — Équations, proportions et géométrie analytique</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">IMSV — Exercices</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Recherche"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bienvenue</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance01/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 1 — Langage et raisonnement</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance02/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 2 — Calcul fiable et trigonométrie</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance03/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 3 — Équations, proportions et géométrie analytique</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/methode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Boîte à outils</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 1 — Langage et raisonnement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 2 — Calcul fiable et trigonométrie</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance03.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Séance 3 — Équations, proportions et géométrie analytique</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seances/methode.html">Boîte à outils</a></li><li class="breadcrumb-item"><a href="../../seances/methodes/seance03.html"><span class="chapter-title">Séance 3 — Équations, proportions et géométrie analytique</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Séance 3 — Équations, proportions et géométrie analytique</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="dl">
+<details class="dl-menu">
+<summary>
+Télécharger (PDF)
+</summary>
+<a href="../../pdf/feuille-seance03.pdf" download="">Feuille à compléter — séance 3 (PDF)</a>
+</details>
+</div>
+<div class="dl">
+<details class="dl-menu">
+<summary>
+Télécharger — correctif (PDF)
+</summary>
+<a href="../../pdf/methodes-seance03.pdf">Méthodes de la séance — correctif (PDF)</a>
+</details>
+</div>
+<!-- Cartes de méthode — SÉANCE 3 (Équations, proportions et géométrie analytique).
+     Fragment sans en-tête : inclus par la page methodes/seance03.qmd (site, correctif)
+     et par build-boite.sh pour le PDF « méthodes » (une méthode par page).
+     Mise en forme par le filtre methode.lua. Calc-free, notation du cours (Sol). -->
+<div class="methode-card"><div class="mc-head"><span class="mc-titre">Mettre un problème en équation</span><span class="mc-badge">O1</span></div><div class="mc-body">
+<div class="mc-sect mc-quand"><div class="mc-label">Quand l'utiliser ?</div>
+<p>Dès qu’un énoncé décrit une situation par des mots et demande une valeur inconnue.</p>
+</div>
+<details class="mc-reponses"><summary>Déplier le corrigé — étapes, exemple, piège</summary>
+<div class="mc-sect mc-etapes"><div class="mc-label">Étapes</div>
+<ol type="1">
+<li>Lis l’énoncé jusqu’au bout et repère la <strong>question posée</strong> : c’est elle qui désigne l’inconnue.</li>
+<li><strong>Choisis l’inconnue</strong> et écris ce qu’elle représente, avec son <strong>unité</strong> : « Soit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> … (en …) ». S’il y a plusieurs grandeurs inconnues, exprime-les si possible à l’aide d’une seule.</li>
+<li><strong>Traduis</strong> chaque relation de l’énoncé, morceau par morceau et dans l’<strong>ordre</strong> des mots : « augmenté de » devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>+</mi><annotation encoding="application/x-tex">+</annotation></semantics></math>, « diminué de » devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>−</mi><annotation encoding="application/x-tex">-</annotation></semantics></math>, « le double de » devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>⋅</mo></mrow><annotation encoding="application/x-tex">2 \cdot</annotation></semantics></math>, « vaut » ou « est égal à » devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>=</mo><annotation encoding="application/x-tex">=</annotation></semantics></math>.</li>
+<li>Vérifie que les deux membres de l’équation s’expriment dans la <strong>même unité</strong>.</li>
+<li><strong>Résous</strong> l’équation obtenue par transformations identiques.</li>
+<li><strong>Contrôle</strong> que la solution est <strong>admissible</strong> dans le contexte (signe, domaine, ordre de grandeur) ; écarte celles qui n’ont pas de sens.</li>
+<li><strong>Réponds</strong> à la question par une phrase, avec l’unité.</li>
+</ol>
+</div>
+<div class="mc-sect mc-exemple"><div class="mc-label">Exemple</div>
+<p>« Un flacon de sérum contient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>500</mn><annotation encoding="application/x-tex">500</annotation></semantics></math> mL. Après <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math> heures de perfusion à débit constant, il reste <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>140</mn><annotation encoding="application/x-tex">140</annotation></semantics></math> mL. Quel est le débit de la perfusion ? »</p>
+<p>La question porte sur le débit. Soit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math> le débit de la perfusion, en mL/h. En <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math> heures, le flacon perd <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>d</mi></mrow><annotation encoding="application/x-tex">3d</annotation></semantics></math> mL ; il en reste <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>140</mn><annotation encoding="application/x-tex">140</annotation></semantics></math> : l’équation est <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>500</mn><mo>−</mo><mn>3</mn><mi>d</mi><mo>=</mo><mn>140</mn></mrow><annotation encoding="application/x-tex">500 - 3d = 140</annotation></semantics></math>, et ses deux membres sont en mL. On résout : <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>500</mn><mo>−</mo><mn>3</mn><mi>d</mi><mo>=</mo><mn>140</mn><mspace width="0.278em"></mspace><mo>⇔</mo><mspace width="0.278em"></mspace><mo>−</mo><mn>3</mn><mi>d</mi><mo>=</mo><mi>−</mi><mn>360</mn><mspace width="0.278em"></mspace><mo>⇔</mo><mspace width="0.278em"></mspace><mi>d</mi><mo>=</mo><mn>120</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">500 - 3d = 140 \;\Leftrightarrow\; -3d = -360 \;\Leftrightarrow\; d = 120.</annotation></semantics></math> Donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi></mrow><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>120</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathrm{Sol} = \{120\}</annotation></semantics></math>. <strong>Vérification</strong> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>500</mn><mo>−</mo><mn>3</mn><mo>⋅</mo><mn>120</mn><mo>=</mo><mn>140</mn></mrow><annotation encoding="application/x-tex">500 - 3 \cdot 120 = 140</annotation></semantics></math>. ✓ Un débit est positif et le flacon ne peut pas perdre plus que son contenu (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>⋅</mo><mn>120</mn><mo>=</mo><mn>360</mn><mo>≤</mo><mn>500</mn></mrow><annotation encoding="application/x-tex">3 \cdot 120 = 360 \le 500</annotation></semantics></math>) : la solution est admissible. La perfusion a un débit de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>120</mn><annotation encoding="application/x-tex">120</annotation></semantics></math> mL/h.</p>
+</div>
+<div class="mc-sect mc-piege"><div class="mc-label">Le piège</div>
+<p>Traduire dans le mauvais ordre — <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">2(x - 5)</annotation></semantics></math> pour « le double, diminué de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>5</mn><annotation encoding="application/x-tex">5</annotation></semantics></math> » au lieu de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>x</mi><mo>−</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">2x - 5</annotation></semantics></math> ; oublier l’<strong>unité</strong> de l’inconnue ou de la réponse ; oublier de vérifier que la réponse a un sens dans le contexte.</p>
+</div>
+</details>
+</div></div>
+<div class="methode-card"><div class="mc-head"><span class="mc-titre">Résoudre une équation ou une inéquation du premier degré</span><span class="mc-badge">O2</span></div><div class="mc-body">
+<div class="mc-sect mc-quand"><div class="mc-label">Quand l'utiliser ?</div>
+<p>Dès qu’une (in)égalité met en jeu une inconnue à la puissance <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>.</p>
+</div>
+<details class="mc-reponses"><summary>Déplier le corrigé — étapes, exemple, piège</summary>
+<div class="mc-sect mc-etapes"><div class="mc-label">Étapes</div>
+<ol type="1">
+<li><strong>Développe</strong> les produits : distribue le facteur sur <strong>chaque</strong> terme de la parenthèse.</li>
+<li>S’il y a des <strong>fractions</strong>, multiplie <strong>chaque terme</strong> des deux membres par le dénominateur commun.</li>
+<li><strong>Regroupe</strong> les termes en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> dans un membre et les nombres dans l’autre, en ajoutant ou en soustrayant le <strong>même</strong> terme aux deux membres : un terme qui change de membre change de signe.</li>
+<li><strong>Réduis</strong> chaque membre : tu obtiens une égalité (ou une inégalité) de la forme <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>x</mi><mo>=</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">ax = b</annotation></semantics></math>.</li>
+<li><strong>Divise</strong> les deux membres par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math> (avec <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a \ne 0</annotation></semantics></math>) :
+<ul>
+<li>pour une <strong>équation</strong>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>b</mi><mi>a</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">x = \dfrac{b}{a}</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">{</mo><mstyle displaystyle="true"><mfrac><mi>b</mi><mi>a</mi></mfrac></mstyle><mo stretchy="true" form="postfix">}</mo></mrow></mrow><annotation encoding="application/x-tex">\mathrm{Sol} = \left\{\dfrac{b}{a}\right\}</annotation></semantics></math> ;</li>
+<li>pour une <strong>inéquation</strong>, le sens est <strong>conservé</strong> si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a &gt; 0</annotation></semantics></math> et <strong>inversé</strong> si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a &lt; 0</annotation></semantics></math>.</li>
+</ul></li>
+<li>Si les termes en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> se sont <strong>éliminés</strong> (il reste <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>⋅</mo><mi>x</mi><mo>=</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">0 \cdot x = b</annotation></semantics></math>) : l’égalité est toujours vraie si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b = 0</annotation></semantics></math>, et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi></mrow><mo>=</mo><mi mathvariant="double-struck">ℝ</mi></mrow><annotation encoding="application/x-tex">\mathrm{Sol} = \mathbb{R}</annotation></semantics></math> ; elle n’est jamais vraie si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b \ne 0</annotation></semantics></math>, et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi></mrow><mo>=</mo><mi>⌀</mi></mrow><annotation encoding="application/x-tex">\mathrm{Sol} = \varnothing</annotation></semantics></math>.</li>
+<li>Écris l’<strong>ensemble solution</strong> : un ensemble à un élément pour une équation, un <strong>intervalle</strong> pour une inéquation (crochet fermé pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>≤</mo><annotation encoding="application/x-tex">\le</annotation></semantics></math> ou <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>≥</mo><annotation encoding="application/x-tex">\ge</annotation></semantics></math>, ouvert pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>&lt;</mo><annotation encoding="application/x-tex">&lt;</annotation></semantics></math> ou <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>&gt;</mo><annotation encoding="application/x-tex">&gt;</annotation></semantics></math>).</li>
+<li><strong>Vérifie</strong> : remplace <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> par la solution dans l’équation de départ ; pour une inéquation, teste une valeur de l’intervalle et une valeur hors de l’intervalle.</li>
+</ol>
+</div>
+<div class="mc-sect mc-exemple"><div class="mc-label">Exemple</div>
+<p>Résolvons <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo>≤</mo><mn>11</mn></mrow><annotation encoding="application/x-tex">-2x + 3 \le 11</annotation></semantics></math>. On soustrait <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math> aux deux membres, puis on divise par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">-2</annotation></semantics></math>, qui est négatif : le sens s’inverse. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo>≤</mo><mn>11</mn><mspace width="0.278em"></mspace><mo>⇔</mo><mspace width="0.278em"></mspace><mo>−</mo><mn>2</mn><mi>x</mi><mo>≤</mo><mn>8</mn><mspace width="0.278em"></mspace><mo>⇔</mo><mspace width="0.278em"></mspace><mi>x</mi><mo>≥</mo><mi>−</mi><mn>4</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">-2x + 3 \le 11 \;\Leftrightarrow\; -2x \le 8 \;\Leftrightarrow\; x \ge -4.</annotation></semantics></math> Donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi></mrow><mo>=</mo><mo stretchy="false" form="prefix">[</mo><mi>−</mi><mn>4</mn><mo>,</mo><mspace width="0.167em"></mspace><mo>+</mo><mi>∞</mi><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">\mathrm{Sol} = [-4,\, +\infty[</annotation></semantics></math>. <strong>Vérification</strong> : pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math>, on a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>≤</mo><mn>11</mn></mrow><annotation encoding="application/x-tex">3 \le 11</annotation></semantics></math>, qui est vrai ; pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>−</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">x = -5</annotation></semantics></math>, on a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>13</mn><mo>≤</mo><mn>11</mn></mrow><annotation encoding="application/x-tex">13 \le 11</annotation></semantics></math>, qui est faux. ✓</p>
+</div>
+<div class="mc-sect mc-piege"><div class="mc-label">Le piège</div>
+<p>Changer un terme de membre sans changer son signe ; diviser par un nombre négatif <strong>sans</strong> inverser le sens de l’inégalité ; ne multiplier par le dénominateur commun qu’<strong>un seul</strong> terme.</p>
+</div>
+</details>
+</div></div>
+<div class="methode-card"><div class="mc-head"><span class="mc-titre">Résoudre un système linéaire (substitution ou élimination)</span><span class="mc-badge">O2</span></div><div class="mc-body">
+<div class="mc-sect mc-quand"><div class="mc-label">Quand l'utiliser ?</div>
+<p>Dès qu’il faut trouver <strong>plusieurs</strong> inconnues satisfaisant <strong>plusieurs</strong> équations en même temps.</p>
+</div>
+<details class="mc-reponses"><summary>Déplier le corrigé — étapes, exemple, piège</summary>
+<div class="mc-sect mc-etapes"><div class="mc-label">Étapes</div>
+<ol type="1">
+<li>Écris chaque équation sous la forme <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mi>y</mi><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">ax + by = c</annotation></semantics></math> et numérote-les <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1)</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2)</annotation></semantics></math>.</li>
+<li><strong>Substitution</strong> — pratique quand une inconnue a pour coefficient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> ou <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math> :
+<ul>
+<li>isole cette inconnue dans l’une des équations ;</li>
+<li>remplace-la dans l’<strong>autre</strong> équation : il reste une équation à <strong>une</strong> inconnue ;</li>
+<li>résous cette équation ;</li>
+<li>reporte la valeur trouvée dans l’expression isolée pour obtenir l’autre inconnue.</li>
+</ul></li>
+<li><strong>Élimination</strong> — pratique quand les coefficients d’une inconnue sont opposés ou multiples l’un de l’autre :
+<ul>
+<li>multiplie <strong>chaque terme des deux membres</strong> d’une équation (ou des deux) pour que les coefficients d’une inconnue deviennent <strong>opposés</strong> ;</li>
+<li>additionne les deux équations <strong>terme à terme</strong> : cette inconnue disparaît ;</li>
+<li>résous l’équation obtenue, puis reporte la valeur dans une équation de départ.</li>
+</ul></li>
+<li><strong>Conclus</strong> selon ce qu’il reste :
+<ul>
+<li>une valeur pour chaque inconnue : <strong>une seule solution</strong>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi></mrow><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mspace width="0.167em"></mspace><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathrm{Sol} = \{(x,\, y)\}</annotation></semantics></math> ; les deux droites sont <strong>sécantes</strong> ;</li>
+<li>une égalité <strong>toujours fausse</strong> (par exemple <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">0 = 2</annotation></semantics></math>) : <strong>aucune solution</strong>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi></mrow><mo>=</mo><mi>⌀</mi></mrow><annotation encoding="application/x-tex">\mathrm{Sol} = \varnothing</annotation></semantics></math> ; les droites sont <strong>parallèles</strong> et distinctes (exemple : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">x + y = 4</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">x + y = 6</annotation></semantics></math>) ;</li>
+<li>une égalité <strong>toujours vraie</strong> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">0 = 0</annotation></semantics></math>) : une <strong>infinité</strong> de solutions, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi></mrow><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>∣</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mi>y</mi><mo>=</mo><mi>c</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathrm{Sol} = \{(x, y) \mid ax + by = c\}</annotation></semantics></math> ; les droites sont <strong>confondues</strong> (exemple : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">x + y = 4</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">2x + 2y = 8</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>Vérifie</strong> le couple dans <strong>les deux</strong> équations de départ.</li>
+<li><strong>Interprète</strong> dans le contexte : unité de chaque inconnue, et solution admissible (signe, domaine).</li>
+</ol>
+</div>
+<div class="mc-sect mc-exemple"><div class="mc-label">Exemple</div>
+<p>Résolvons <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><msub><mi>v</mi><mi>A</mi></msub><mo>+</mo><msub><mi>v</mi><mi>B</mi></msub><mo>=</mo><mn>100</mn></mtd><mtd columnalign="left" style="text-align: left"><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mn>10</mn><mspace width="0.167em"></mspace><msub><mi>v</mi><mi>A</mi></msub><mo>+</mo><mn>20</mn><mspace width="0.167em"></mspace><msub><mi>v</mi><mi>B</mi></msub><mo>=</mo><mn>1600</mn></mtd><mtd columnalign="left" style="text-align: left"><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\begin{cases} v_A + v_B = 100 &amp; (1) \\ 10\, v_A + 20\, v_B = 1600 &amp; (2) \end{cases}</annotation></semantics></math> Dans <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1)</annotation></semantics></math>, le coefficient de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mi>A</mi></msub><annotation encoding="application/x-tex">v_A</annotation></semantics></math> vaut <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> : on isole <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>A</mi></msub><mo>=</mo><mn>100</mn><mo>−</mo><msub><mi>v</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">v_A = 100 - v_B</annotation></semantics></math> et on remplace dans <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2)</annotation></semantics></math>. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo stretchy="false" form="prefix">(</mo><mn>100</mn><mo>−</mo><msub><mi>v</mi><mi>B</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>20</mn><mspace width="0.167em"></mspace><msub><mi>v</mi><mi>B</mi></msub><mo>=</mo><mn>1600</mn><mspace width="0.278em"></mspace><mo>⇔</mo><mspace width="0.278em"></mspace><mn>1000</mn><mo>+</mo><mn>10</mn><mspace width="0.167em"></mspace><msub><mi>v</mi><mi>B</mi></msub><mo>=</mo><mn>1600</mn><mspace width="0.278em"></mspace><mo>⇔</mo><mspace width="0.278em"></mspace><msub><mi>v</mi><mi>B</mi></msub><mo>=</mo><mn>60</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">10(100 - v_B) + 20\, v_B = 1600 \;\Leftrightarrow\; 1000 + 10\, v_B = 1600 \;\Leftrightarrow\; v_B = 60.</annotation></semantics></math> On reporte : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>A</mi></msub><mo>=</mo><mn>100</mn><mo>−</mo><mn>60</mn><mo>=</mo><mn>40</mn></mrow><annotation encoding="application/x-tex">v_A = 100 - 60 = 40</annotation></semantics></math>. Donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi></mrow><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mn>40</mn><mo>,</mo><mspace width="0.167em"></mspace><mn>60</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathrm{Sol} = \{(40,\, 60)\}</annotation></semantics></math>. <strong>Vérification</strong> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn><mo>+</mo><mn>60</mn><mo>=</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">40 + 60 = 100</annotation></semantics></math> ✓ et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo>⋅</mo><mn>40</mn><mo>+</mo><mn>20</mn><mo>⋅</mo><mn>60</mn><mo>=</mo><mn>400</mn><mo>+</mo><mn>1200</mn><mo>=</mo><mn>1600</mn></mrow><annotation encoding="application/x-tex">10 \cdot 40 + 20 \cdot 60 = 400 + 1200 = 1600</annotation></semantics></math> ✓. Si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mi>A</mi></msub><annotation encoding="application/x-tex">v_A</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mi>B</mi></msub><annotation encoding="application/x-tex">v_B</annotation></semantics></math> sont des volumes en mL, il faut prélever <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>40</mn><annotation encoding="application/x-tex">40</annotation></semantics></math> mL de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math> mL de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>.</p>
+</div>
+<div class="mc-sect mc-piege"><div class="mc-label">Le piège</div>
+<p>Donner un seul nombre au lieu d’un couple ; en élimination, ne multiplier qu’<strong>un</strong> membre de l’équation ; conclure <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math> quand on obtient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">0 = 0</annotation></semantics></math>, ou confondre « aucune solution » et « une infinité de solutions ».</p>
+</div>
+</details>
+</div></div>
+<div class="methode-card"><div class="mc-head"><span class="mc-titre">Équation d'une droite : pente et ordonnée à l'origine</span><span class="mc-badge">O4</span></div><div class="mc-body">
+<div class="mc-sect mc-quand"><div class="mc-label">Quand l'utiliser ?</div>
+<p>Dès qu’il faut trouver, lire ou interpréter l’équation <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>m</mi><mi>x</mi><mo>+</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">y = mx + p</annotation></semantics></math> d’une droite.</p>
+</div>
+<details class="mc-reponses"><summary>Déplier le corrigé — étapes, exemple, piège</summary>
+<div class="mc-sect mc-etapes"><div class="mc-label">Étapes</div>
+<ol type="1">
+<li>Pars de deux points <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x_1, y_1)</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x_2, y_2)</annotation></semantics></math> de la droite et compare leurs abscisses.</li>
+<li>Si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">x_1 = x_2</annotation></semantics></math>, la droite est <strong>verticale</strong> : son équation est <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">x = x_1</annotation></semantics></math>. Elle n’a <strong>pas de pente</strong> et ne s’écrit pas sous la forme <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>m</mi><mi>x</mi><mo>+</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">y = mx + p</annotation></semantics></math>.</li>
+<li>Sinon, calcule la <strong>pente</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">m = \dfrac{y_2 - y_1}{x_2 - x_1}</annotation></semantics></math>, en gardant le <strong>même ordre</strong> des points au numérateur et au dénominateur. Si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">m = 0</annotation></semantics></math>, la droite est <strong>horizontale</strong>, d’équation <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">y = y_1</annotation></semantics></math>.</li>
+<li>Déduis l’<strong>ordonnée à l’origine</strong> en remplaçant un point dans <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>m</mi><mi>x</mi><mo>+</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">y = mx + p</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><msub><mi>y</mi><mn>1</mn></msub><mo>−</mo><mi>m</mi><mspace width="0.167em"></mspace><msub><mi>x</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">p = y_1 - m\, x_1</annotation></semantics></math>.</li>
+<li>Écris l’équation <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>m</mi><mi>x</mi><mo>+</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">y = mx + p</annotation></semantics></math> et <strong>vérifie</strong> avec l’autre point.</li>
+<li><strong>Interprète</strong> :
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> est le <strong>taux de variation</strong> : quand <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> augmente de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> varie de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> (en unité de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> par unité de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>) ; la droite <strong>croît</strong> si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">m &gt; 0</annotation></semantics></math>, <strong>décroît</strong> si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">m &lt; 0</annotation></semantics></math> et est <strong>constante</strong> si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">m = 0</annotation></semantics></math> ;</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> est la valeur de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math> (souvent la <strong>valeur initiale</strong>).</li>
+</ul></li>
+<li>Pour <strong>deux droites</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>m</mi><mi>x</mi><mo>+</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">y = mx + p</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><msup><mi>m</mi><mo>′</mo></msup><mi>x</mi><mo>+</mo><msup><mi>p</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">y = m'x + p'</annotation></semantics></math> :
+<ul>
+<li>si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>≠</mo><msup><mi>m</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">m \ne m'</annotation></semantics></math>, elles sont <strong>sécantes</strong> ; leur point d’intersection se trouve en résolvant le système formé par les deux équations ;</li>
+<li>si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><msup><mi>m</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">m = m'</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>≠</mo><msup><mi>p</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">p \ne p'</annotation></semantics></math>, elles sont <strong>parallèles</strong> ; si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><msup><mi>m</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">m = m'</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><msup><mi>p</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">p = p'</annotation></semantics></math>, elles sont <strong>confondues</strong> ;</li>
+<li>si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>⋅</mo><msup><mi>m</mi><mo>′</mo></msup><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">m \cdot m' = -1</annotation></semantics></math>, elles sont <strong>orthogonales</strong>.</li>
+</ul></li>
+</ol>
+</div>
+<div class="mc-sect mc-exemple"><div class="mc-label">Exemple</div>
+<p>Par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1, 3)</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>7</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(3, 7)</annotation></semantics></math> : les abscisses sont différentes, la droite n’est donc pas verticale. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>7</mn><mo>−</mo><mn>3</mn></mrow><mrow><mn>3</mn><mo>−</mo><mn>1</mn></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>4</mn><mn>2</mn></mfrac></mstyle><mo>=</mo><mn>2</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>p</mi><mo>=</mo><mn>3</mn><mo>−</mo><mn>2</mn><mo>⋅</mo><mn>1</mn><mo>=</mo><mn>1</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">m = \dfrac{7 - 3}{3 - 1} = \dfrac{4}{2} = 2, \qquad p = 3 - 2 \cdot 1 = 1.</annotation></semantics></math> D’où <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">y = 2x + 1</annotation></semantics></math>. <strong>Vérification</strong> avec <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>7</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(3, 7)</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>⋅</mo><mn>3</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">2 \cdot 3 + 1 = 7</annotation></semantics></math>. ✓ La pente <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> est positive : quand <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> augmente de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> augmente de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>. La droite coupe l’axe des ordonnées en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0, 1)</annotation></semantics></math>.</p>
+<p>En revanche, par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2, 1)</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2, 5)</annotation></semantics></math>, les abscisses sont égales : la droite est verticale, d’équation <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x = 2</annotation></semantics></math>.</p>
+</div>
+<div class="mc-sect mc-piege"><div class="mc-label">Le piège</div>
+<p>Inverser le rapport de la pente, ou mélanger l’ordre des points entre numérateur et dénominateur ; chercher une pente à une droite <strong>verticale</strong> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">x = c</annotation></semantics></math>), qui n’en a pas.</p>
+</div>
+</details>
+</div></div>
+<div class="methode-card"><div class="mc-head"><span class="mc-titre">Proportionnalité, taux et conversions</span><span class="mc-badge">O4</span></div><div class="mc-body">
+<div class="mc-sect mc-quand"><div class="mc-label">Quand l'utiliser ?</div>
+<p>Dès que deux grandeurs varient « par unité de » l’une l’autre : prix par kg, distance par heure, masse par volume…</p>
+</div>
+<details class="mc-reponses"><summary>Déplier le corrigé — étapes, exemple, piège</summary>
+<div class="mc-sect mc-etapes"><div class="mc-label">Étapes</div>
+<ol type="1">
+<li><strong>Teste</strong> la proportionnalité : les grandeurs sont <strong>directement proportionnelles</strong> si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>k</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">y = kx</annotation></semantics></math>, c’est-à-dire si le quotient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle displaystyle="true"><mfrac><mi>y</mi><mi>x</mi></mfrac></mstyle><annotation encoding="application/x-tex">\dfrac{y}{x}</annotation></semantics></math> est le même pour toutes les valeurs (la relation passe par l’origine).</li>
+<li>Si c’est le cas, identifie le <strong>facteur</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>y</mi><mi>x</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">k = \dfrac{y}{x}</annotation></semantics></math> (le taux), <strong>avec son unité</strong>.</li>
+<li><strong>Calcule</strong> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>k</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">y = kx</annotation></semantics></math> pour trouver <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>, ou <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>y</mi><mi>k</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">x = \dfrac{y}{k}</annotation></semantics></math> pour trouver <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> (règle de trois).</li>
+<li>Si la relation contient un <strong>terme fixe</strong> (forfait, coût de livraison…), elle s’écrit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>k</mi><mi>x</mi><mo>+</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">y = kx + p</annotation></semantics></math> avec <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">p \ne 0</annotation></semantics></math> : elle est <strong>affine</strong> et non proportionnelle. Remplace alors directement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> dans la relation, sans règle de trois.</li>
+<li>Pour <strong>convertir un taux</strong>, écris-le comme une fraction avec ses unités, remplace <strong>chaque</strong> unité par sa valeur en unités de base (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> km <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">= 1000</annotation></semantics></math> m, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> h <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>3600</mn></mrow><annotation encoding="application/x-tex">= 3600</annotation></semantics></math> s, …), puis simplifie.</li>
+<li><strong>Contrôle</strong> par l’ordre de grandeur : le résultat va-t-il dans le sens attendu (plus grand ou plus petit) ?</li>
+</ol>
+</div>
+<div class="mc-sect mc-exemple"><div class="mc-label">Exemple</div>
+<p><strong>Conversion.</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>72</mn><annotation encoding="application/x-tex">72</annotation></semantics></math> km/h <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>72</mn><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> km</mtext></mrow></mrow><mrow><mn>1</mn><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> h</mtext></mrow></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>72</mn><mspace width="0.167em"></mspace><mn>000</mn><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> m</mtext></mrow></mrow><mrow><mn>3</mn><mspace width="0.167em"></mspace><mn>600</mn><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> s</mtext></mrow></mrow></mfrac></mstyle><mo>=</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">= \dfrac{72 \text{ km}}{1 \text{ h}} = \dfrac{72\,000 \text{ m}}{3\,600 \text{ s}} = 20</annotation></semantics></math> m/s. Contrôle : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> m/s vaut <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>,</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">3{,}6</annotation></semantics></math> km/h, donc le nombre en m/s doit être plus petit. ✓</p>
+<p><strong>Proportionnalité.</strong> À <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math> €/kg, le prix vaut <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>3</mn><mi>m</mi></mrow><annotation encoding="application/x-tex">p = 3m</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> kg coûtent <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>6</mn><annotation encoding="application/x-tex">6</annotation></semantics></math> € et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>4</mn><annotation encoding="application/x-tex">4</annotation></semantics></math> kg coûtent <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>12</mn><annotation encoding="application/x-tex">12</annotation></semantics></math> €, soit le double. Avec <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>5</mn><annotation encoding="application/x-tex">5</annotation></semantics></math> € de livraison, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>3</mn><mi>m</mi><mo>+</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">p = 3m + 5</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> kg coûtent <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>11</mn><annotation encoding="application/x-tex">11</annotation></semantics></math> € et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>4</mn><annotation encoding="application/x-tex">4</annotation></semantics></math> kg coûtent <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>17</mn><annotation encoding="application/x-tex">17</annotation></semantics></math> €, et non <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>22</mn><annotation encoding="application/x-tex">22</annotation></semantics></math> € ; la relation est affine, une règle de trois donnerait un résultat faux.</p>
+</div>
+<div class="mc-sect mc-piege"><div class="mc-label">Le piège</div>
+<p>Appliquer une règle de trois à une relation <strong>affine</strong> (avec coût fixe) ; se tromper de sens (multiplier au lieu de diviser) dans une conversion ; oublier l’unité du taux.</p>
+</div>
+</details>
+</div></div>
+<div class="methode-card"><div class="mc-head"><span class="mc-titre">Résoudre une équation du second degré (discriminant)</span><span class="mc-badge">O5</span></div><div class="mc-body">
+<div class="mc-sect mc-quand"><div class="mc-label">Quand l'utiliser ?</div>
+<p>Dès qu’une équation se ramène à la forme <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">ax^2 + bx + c = 0</annotation></semantics></math> (avec <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a \ne 0</annotation></semantics></math>).</p>
+</div>
+<details class="mc-reponses"><summary>Déplier le corrigé — étapes, exemple, piège</summary>
+<div class="mc-sect mc-etapes"><div class="mc-label">Étapes</div>
+<ol type="1">
+<li>Mets l’équation sous la forme <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">ax^2 + bx + c = 0</annotation></semantics></math> : développe, passe tous les termes dans un même membre, puis réduis.</li>
+<li>Identifie <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> <strong>avec leur signe</strong>.</li>
+<li>Si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c = 0</annotation></semantics></math> ou <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b = 0</annotation></semantics></math>, le discriminant n’est pas nécessaire :
+<ul>
+<li>si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c = 0</annotation></semantics></math>, mets <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> en évidence : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x(ax + b) = 0</annotation></semantics></math>, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math> ou <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>−</mi><mstyle displaystyle="true"><mfrac><mi>b</mi><mi>a</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">x = -\dfrac{b}{a}</annotation></semantics></math> ;</li>
+<li>si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b = 0</annotation></semantics></math>, isole <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mi>−</mi><mstyle displaystyle="true"><mfrac><mi>c</mi><mi>a</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">x^2 = -\dfrac{c}{a}</annotation></semantics></math> et prends les deux racines carrées si ce nombre est positif.</li>
+</ul></li>
+<li>Sinon, calcule le <strong>discriminant</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mo>=</mo><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">\Delta = b^2 - 4ac</annotation></semantics></math>.</li>
+<li>Conclus selon son <strong>signe</strong> :
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\Delta &gt; 0</annotation></semantics></math> : <strong>deux</strong> solutions, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>−</mi><mi>b</mi><mo>−</mo><msqrt><mi mathvariant="normal">Δ</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">x_1 = \dfrac{-b - \sqrt{\Delta}}{2a}</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>−</mi><mi>b</mi><mo>+</mo><msqrt><mi mathvariant="normal">Δ</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">x_2 = \dfrac{-b + \sqrt{\Delta}}{2a}</annotation></semantics></math> ; la parabole <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">y = ax^2 + bx + c</annotation></semantics></math> coupe l’axe des <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> en deux points ;</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\Delta = 0</annotation></semantics></math> : <strong>une</strong> solution, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>−</mi><mstyle displaystyle="true"><mfrac><mi>b</mi><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">x = -\dfrac{b}{2a}</annotation></semantics></math> ; la parabole touche l’axe des <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> en un seul point, son sommet ;</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\Delta &lt; 0</annotation></semantics></math> : <strong>aucune</strong> solution réelle, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi></mrow><mo>=</mo><mi>⌀</mi></mrow><annotation encoding="application/x-tex">\mathrm{Sol} = \varnothing</annotation></semantics></math> ; la parabole ne coupe pas l’axe des <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.</li>
+</ul></li>
+<li>Écris l’<strong>ensemble solution</strong> et <strong>vérifie</strong> une solution dans l’équation de départ.</li>
+<li>En contexte, ne garde que les solutions <strong>admissibles</strong> (signe, domaine).</li>
+</ol>
+</div>
+<div class="mc-sect mc-exemple"><div class="mc-label">Exemple</div>
+<p>Résolvons <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>6</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x^2 - 5x + 6 = 0</annotation></semantics></math>. On a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a = 1</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mi>−</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">b = -5</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">c = 6</annotation></semantics></math>, donc <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>−</mo><mn>4</mn><mo>⋅</mo><mn>1</mn><mo>⋅</mo><mn>6</mn><mo>=</mo><mn>25</mn><mo>−</mo><mn>24</mn><mo>=</mo><mn>1</mn><mo>&gt;</mo><mn>0</mn><mo>:</mo><mtext mathvariant="normal">deux solutions.</mtext></mrow><annotation encoding="application/x-tex">\Delta = (-5)^2 - 4 \cdot 1 \cdot 6 = 25 - 24 = 1 &gt; 0 : \text{deux solutions.}</annotation></semantics></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>5</mn><mo>−</mo><mn>1</mn></mrow><mn>2</mn></mfrac></mstyle><mo>=</mo><mn>2</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>5</mn><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac></mstyle><mo>=</mo><mn>3</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">x_1 = \dfrac{5 - 1}{2} = 2, \qquad x_2 = \dfrac{5 + 1}{2} = 3.</annotation></semantics></math> Donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi></mrow><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>2</mn><mo>,</mo><mspace width="0.167em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathrm{Sol} = \{2,\, 3\}</annotation></semantics></math>. <strong>Vérification</strong> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>−</mo><mn>5</mn><mo>⋅</mo><mn>2</mn><mo>+</mo><mn>6</mn><mo>=</mo><mn>4</mn><mo>−</mo><mn>10</mn><mo>+</mo><mn>6</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">2^2 - 5 \cdot 2 + 6 = 4 - 10 + 6 = 0</annotation></semantics></math>. ✓</p>
+<p>Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>9</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x^2 - 6x + 9 = 0</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mo>=</mo><mn>36</mn><mo>−</mo><mn>36</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\Delta = 36 - 36 = 0</annotation></semantics></math> : une seule solution, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>6</mn><mn>2</mn></mfrac></mstyle><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x = \dfrac{6}{2} = 3</annotation></semantics></math>, et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi></mrow><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>3</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathrm{Sol} = \{3\}</annotation></semantics></math>. Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x^2 + x + 1 = 0</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mo>=</mo><mn>1</mn><mo>−</mo><mn>4</mn><mo>=</mo><mi>−</mi><mn>3</mn><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\Delta = 1 - 4 = -3 &lt; 0</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi></mrow><mo>=</mo><mi>⌀</mi></mrow><annotation encoding="application/x-tex">\mathrm{Sol} = \varnothing</annotation></semantics></math>.</p>
+</div>
+<div class="mc-sect mc-piege"><div class="mc-label">Le piège</div>
+<p>Se tromper de signe dans <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">-b</annotation></semantics></math> ; oublier le <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>a</mi></mrow><annotation encoding="application/x-tex">2a</annotation></semantics></math> au dénominateur ; conclure sur la <strong>taille</strong> de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math> plutôt que sur son <strong>signe</strong> ; oublier la solution <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math> en divisant par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> au lieu de le mettre en évidence.</p>
+</div>
+</details>
+</div></div>
+
+
+
+</main> <!-- /main -->
+<script>
+// Aides (indices / solution / piège) : repliées dans un menu « Coups de pouce ».
+//   - au départ : on ne voit que le bouton  ▶ COUPS DE POUCE  (les onglets sont cachés) ;
+//   - au clic : le bouton passe à  ▼ COUPS DE POUCE  et les onglets apparaissent,
+//     l'onglet « Indice 1 » étant affiché par défaut (comportement natif des tabs) ;
+//   - reclic sur le bouton : tout se referme.
+(function () {
+  function build(a) {
+    if (a.dataset.aidesWired) return;
+    a.dataset.aidesWired = '1';
+    var panel = a.querySelector('.panel-tabset');
+    if (!panel) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'aides-toggle';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span class="aides-caret">▶</span> Coups de pouce';
+    a.insertBefore(btn, a.firstChild);
+    btn.addEventListener('click', function () {
+      var open = a.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      a.querySelector('.aides-caret').textContent = open ? '▼' : '▶';
+    });
+  }
+  function setup() { document.querySelectorAll('.aides').forEach(build); }
+  document.addEventListener('DOMContentLoaded', function () {
+    setup();
+    setTimeout(setup, 100);
+  });
+})();
+</script>
+<script>
+// Trois outils à côté du titre (comme « bookup ») : GitHub · Téléchargement · Thème clair/sombre.
+(function () {
+  // >>> À COMPLÉTER : URL du dépôt GitHub du projet <<<
+  var GITHUB_URL = "https://github.com/qlambotte/imsv-exos-2026";
+
+  var SVG = {
+    github: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
+    download: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a.75.75 0 0 1 .75.75v6.44l1.97-1.97a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 1.06-1.06l1.97 1.97V1.75A.75.75 0 0 1 8 1zM2.75 12a.75.75 0 0 1 .75.75v.75a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-.75a.75.75 0 0 1 1.5 0v.75A2 2 0 0 1 12 15.5H4a2 2 0 0 1-2-2v-.75a.75.75 0 0 1 .75-.75z"/></svg>',
+    sun: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 4.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM8 0a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1A.75.75 0 0 1 8 0zm0 13a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1A.75.75 0 0 1 8 13zM16 8a.75.75 0 0 1-.75.75h-1a.75.75 0 0 1 0-1.5h1A.75.75 0 0 1 16 8zM3 8a.75.75 0 0 1-.75.75h-1a.75.75 0 0 1 0-1.5h1A.75.75 0 0 1 3 8zm10.66-5.66a.75.75 0 0 1 0 1.06l-.7.7a.75.75 0 1 1-1.06-1.06l.7-.7a.75.75 0 0 1 1.06 0zM4.1 11.9a.75.75 0 0 1 0 1.06l-.7.7a.75.75 0 0 1-1.06-1.06l.7-.7a.75.75 0 0 1 1.06 0zm9.56 1.76a.75.75 0 0 1-1.06 0l-.7-.7a.75.75 0 1 1 1.06-1.06l.7.7a.75.75 0 0 1 0 1.06zM4.1 4.1a.75.75 0 0 1-1.06 0l-.7-.7a.75.75 0 0 1 1.06-1.06l.7.7a.75.75 0 0 1 0 1.06z"/></svg>',
+    moon: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278z"/></svg>'
+  };
+
+  function makeTool(tag, cls, html, title) {
+    var el = document.createElement(tag);
+    el.className = 'imsv-tool ' + (cls || '');
+    el.setAttribute('title', title);
+    el.setAttribute('aria-label', title);
+    el.innerHTML = html;
+    return el;
+  }
+
+  function build() {
+    var host = document.querySelector('.sidebar-tools-main');
+    if (!host) {
+      var title = document.querySelector('#quarto-sidebar .sidebar-title');
+      if (!title) return;
+      host = document.createElement('div');
+      host.className = 'sidebar-tools-main';
+      title.appendChild(host);
+    }
+    if (host.dataset.imsvTools) return;
+    host.dataset.imsvTools = '1';
+
+    // 1) GitHub
+    var gh = makeTool('a', '', SVG.github, 'Code source (GitHub)');
+    gh.setAttribute('href', GITHUB_URL);
+    gh.setAttribute('target', '_blank');
+    gh.setAttribute('rel', 'noopener');
+
+    // 2) Téléchargement — repris du menu présent dans le corps de la page
+    //    (uniquement sur les pages qui ont des PDF : séances).
+    var bodyMenu = document.querySelector('.dl .dl-menu') || document.querySelector('.dl-menu');
+    var dlWrap = null;
+    if (bodyMenu && bodyMenu.querySelectorAll('a').length) {
+      dlWrap = makeTool('div', 'imsv-dl', SVG.download, 'Télécharger les PDF');
+      var menu = document.createElement('div');
+      menu.className = 'imsv-dl-menu';
+      menu.hidden = true;
+      var head = document.createElement('div');
+      head.className = 'imsv-dl-head';
+      head.textContent = 'Télécharger';
+      menu.appendChild(head);
+      bodyMenu.querySelectorAll('a').forEach(function (a) {
+        var link = document.createElement('a');
+        link.href = a.getAttribute('href');
+        link.textContent = a.textContent;
+        menu.appendChild(link);
+      });
+      var container = document.querySelector('.dl');
+      if (container) container.hidden = true;      // on masque le menu du corps (doublon)
+      dlWrap.appendChild(menu);
+      dlWrap.addEventListener('click', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        menu.hidden = !menu.hidden;
+      });
+      document.addEventListener('click', function () { menu.hidden = true; });
+      menu.addEventListener('click', function (e) { e.stopPropagation(); });
+    }
+
+    // 3) Thème clair / sombre
+    function isDark() { return document.documentElement.getAttribute('data-theme') === 'dark'; }
+    var themeBtn = makeTool('button', '', isDark() ? SVG.sun : SVG.moon,
+                            isDark() ? 'Passer en thème clair' : 'Passer en thème sombre');
+    themeBtn.type = 'button';
+    themeBtn.addEventListener('click', function () {
+      var dark = !isDark();
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      try { localStorage.setItem('imsv-theme', dark ? 'dark' : 'light'); } catch (e) {}
+      themeBtn.innerHTML = dark ? SVG.sun : SVG.moon;
+      themeBtn.setAttribute('title', dark ? 'Passer en thème clair' : 'Passer en thème sombre');
+    });
+
+    host.appendChild(gh);
+    if (dlWrap) host.appendChild(dlWrap);
+    host.appendChild(themeBtn);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    build();
+    setTimeout(build, 100);
+  });
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/qlambotte\.github\.io\/imsv-exos-2026\/prof\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../seances/methodes/seance02.html" class="pagination-link" aria-label="Séance 2 — Calcul fiable et trigonométrie">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Séance 2 — Calcul fiable et trigonométrie</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>IMSV — Faculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Énoncés et correctif des exercices</p>
+</div>
+    <div class="nav-footer-right">
+<p>© Quentin Lambotte · FMPB · UMONS</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
