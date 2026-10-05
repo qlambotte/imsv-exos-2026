@@ -24,7 +24,7 @@ bouclés, en séance ou à la maison.
 
 ## Indice
 
-Retourne à la théorie du cours : *Addition, soustraction et multiplication par un scalaire*.
+Retourne à la théorie du cours : *Addition* et *Produit par un scalaire*.
 Enchaîne les déplacements : $\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}$. Retrancher
 $\overrightarrow{CB}$, c'est ajouter $\overrightarrow{BC}$.
 
@@ -81,7 +81,7 @@ Contrôle graphique : mets les flèches bout à bout sur le quadrillage.
 
 ## Indice
 
-Retourne à la théorie du cours : *Règles de calcul, colinéarité*. Trois points sont alignés quand
+Retourne à la théorie du cours : *Colinéarité*. Trois points sont alignés quand
 $\overrightarrow{AB}$ et $\overrightarrow{AC}$ sont colinéaires.
 
 ## Solution
@@ -90,6 +90,86 @@ $\overrightarrow{AB}$ et $\overrightarrow{AC}$ sont colinéaires.
 puis $k = 3\lambda = -2$.
 (b) $\overrightarrow{AB} = (2, 3)$ et $\overrightarrow{AC} = (6, 9) = 3\,\overrightarrow{AB}$ : colinéaires,
 donc les trois points sont **alignés**. (On retrouve la même pente $\tfrac32$ qu'à la séance 3.)
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
+Une bactérie nage à la vitesse $(2, -1)$ µm/s par rapport au fluide qui l'entoure, et ce fluide est
+entraîné à la vitesse $(1, 3)$ µm/s.
+
+(a) Calculer sa vitesse résultante.
+(b) Calculer son déplacement après $5$ s.
+(c) Calculer la valeur de sa vitesse.
+(d) Décrire qualitativement sa direction par rapport à l'axe des $x$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Addition*, *Produit par un scalaire*, *Norme d'un vecteur* et
+*Coordonnées et direction*. Les signes des coordonnées donnent le quadrant ; $\tan\theta = \dfrac{v_y}{v_x}$
+situe la direction dans ce quadrant.
+
+## Solution
+
+(a) $\vec v = (2, -1) + (1, 3) = (3, 2)$ µm/s.
+(b) $\vec d = 5 \cdot (3, 2) = (15, 10)$ µm.
+(c) $\left\Vert \vec v \right\Vert = \sqrt{9 + 4} = \sqrt{13} \approx 3{,}6$ µm/s.
+(d) Les deux coordonnées sont positives : premier quadrant. $\tan\theta = \dfrac23 < 1 = \tan 45°$, donc
+$\theta < 45°$ : la bactérie avance surtout selon l'axe des $x$, en montant légèrement.
+
+## Piège
+
+Additionner les normes des deux vitesses au lieu des vecteurs.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|3|O2"}
+Un poisson traverse une rivière de $20$ m de large. Il nage perpendiculairement aux rives à $0{,}4$ m/s
+(par rapport à l'eau), et le courant l'entraîne à $0{,}3$ m/s parallèlement aux rives.
+
+![](img/t-riviere.svg){fig-alt="Rivière de 20 m ; vitesse de nage perpendiculaire aux rives et vitesse du courant" width="12.4cm" fig-align="center"}
+
+On prend l'axe des $x$ dans le sens du courant et l'axe des $y$ vers l'autre rive.
+
+(a) Calculer la vitesse du poisson par rapport à la rive : ses coordonnées et sa norme.
+(b) Combien de temps met-il pour traverser ?
+(c) À quelle distance en aval de son point de départ arrive-t-il ?
+(d) Un autre poisson nage à $0{,}6$ m/s et veut arriver **juste en face** de son point de départ.
+Dans quelle direction doit-il nager ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Addition* et *Norme d'un vecteur*. La vitesse par rapport à la rive est
+la somme $(0, 0{,}4) + (0{,}3, 0)$ ; seule sa composante selon $y$ rapproche le poisson de l'autre rive.
+
+## Solution
+
+(a) $\vec v = (0{,}3 ;\ 0{,}4)$ et $\left\Vert \vec v \right\Vert = \sqrt{0{,}09 + 0{,}16} = \sqrt{0{,}25} = 0{,}5$ m/s.
+
+(b) Seule la composante selon $y$ fait traverser : $t = \dfrac{20}{0{,}4} = 50$ s. Le courant ne change
+pas ce temps.
+
+(c) Pendant ces $50$ s, le courant l'entraîne de $0{,}3 \cdot 50 = 15$ m vers l'aval.
+
+![](img/t-riviere-sol.svg){fig-alt="Vitesse résultante et trajectoire : arrivée 15 m en aval" width="12.4cm" fig-align="center"}
+
+(d) Il doit nager en remontant le courant : sa vitesse de nage a une composante $-0{,}3$ m/s selon $x$.
+Si $\alpha$ est l'angle entre sa direction de nage et la perpendiculaire aux rives,
+$\sin\alpha = \dfrac{0{,}3}{0{,}6} = \dfrac12$, donc $\alpha = 30°$, vers l'amont.
+
+## Piège
+
+Diviser la largeur par la norme $0{,}5$ m/s : la trajectoire est oblique et plus longue que $20$ m. On
+obtient le temps avec la seule composante perpendiculaire aux rives.
 
 :::
 :::
@@ -105,7 +185,7 @@ donc les trois points sont **alignés**. (On retrouve la même pente $\tfrac32$ 
 
 ## Indice
 
-Retourne à la théorie du cours : *Coordonnées cartésiennes*. Un vecteur de norme $r$ et d'angle $\theta$
+Retourne à la théorie du cours : *De la norme aux coordonnées*. Un vecteur de norme $r$ et d'angle $\theta$
 s'écrit $r\,(\cos\theta,\ \sin\theta)$. Le quadrant fixe les signes.
 
 ## Solution
@@ -123,8 +203,41 @@ En (b), oublier que cosinus **et** sinus sont négatifs au troisième quadrant.
 :::
 
 ::: {.callout-caution .exo title="Exercice|Renforcement|2|O3"}
-(a) Soient $A = (1, 2, 3)$ et $B = (3, 3, 5)$. Calculer $\overrightarrow{AB}$ et la distance $|AB|$.
-(b) Donner le vecteur de norme $1$ de même direction et de même sens que $\overrightarrow{AB}$.
+Sans calculatrice, donner le quadrant, $\tan\theta$ et l'angle $\theta \in [0°, 360°[$ que fait chaque
+vecteur avec l'axe des $x$.
+
+(a) $(3, 3)$
+(b) $(-\sqrt3, 1)$
+(c) $(-2, -2)$
+(d) $(1, -\sqrt3)$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Coordonnées et direction*. Les signes des coordonnées fixent le
+quadrant, puis $\tan\theta = \dfrac{v_y}{v_x}$ et les valeurs remarquables donnent l'angle.
+
+## Solution
+
+(a) Quadrant I, $\tan\theta = 1$ : $\theta = 45°$.
+(b) Quadrant II, $\tan\theta = -\dfrac{1}{\sqrt3} = -\dfrac{\sqrt3}{3}$ : $\theta = 180° - 30° = 150°$.
+(c) Quadrant III, $\tan\theta = 1$ : $\theta = 180° + 45° = 225°$.
+(d) Quadrant IV, $\tan\theta = -\sqrt3$ : $\theta = 360° - 60° = 300°$.
+
+## Piège
+
+Conclure avec la seule tangente : (a) et (c) ont la même tangente mais des sens opposés. C'est le
+quadrant qui tranche.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O3"}
+(a) Soient $A = (1, 2, 3)$ et $B = (3, 3, 5)$. Calculer $\overrightarrow{AB}$ et la distance $\left\Vert \overrightarrow{AB} \right\Vert$.
+(b) Donner le vecteur unitaire de même direction et de même sens que $\overrightarrow{AB}$.
 (c) Dans $\mathbb{R}^4$, calculer la distance entre $(1, 0, 2, 1)$ et $(2, 2, 4, 5)$.
 :::
 
@@ -133,12 +246,12 @@ En (b), oublier que cosinus **et** sinus sont négatifs au troisième quadrant.
 
 ## Indice
 
-Retourne à la théorie du cours : *Coordonnées dans $\mathbb{R}^3$ et $\mathbb{R}^n$*. La distance entre deux
+Retourne à la théorie du cours : *Passage à $\mathbb{R}^3$ et $\mathbb{R}^n$*. La distance entre deux
 points est la norme du vecteur qui les relie.
 
 ## Solution
 
-(a) $\overrightarrow{AB} = (2, 1, 2)$ et $|AB| = \sqrt{4 + 1 + 4} = 3$.
+(a) $\overrightarrow{AB} = (2, 1, 2)$ et $\left\Vert \overrightarrow{AB} \right\Vert = \sqrt{4 + 1 + 4} = 3$.
 (b) $\dfrac13\,(2, 1, 2) = \left(\dfrac23,\ \dfrac13,\ \dfrac23\right)$.
 (c) Le vecteur qui relie les deux points est $(1, 2, 2, 4)$ ; sa norme vaut $\sqrt{1 + 4 + 4 + 16} = 5$.
 
@@ -155,7 +268,7 @@ points est la norme du vecteur qui les relie.
 
 ## Indice
 
-Retourne à la théorie du cours : *Produit scalaire* et *Projection, angle et orthogonalité*. Dans
+Retourne à la théorie du cours : *Passage à $\mathbb{R}^3$ et $\mathbb{R}^n$* et *Angles via le produit scalaire*. Dans
 $\mathbb{R}^3$, $\vec u \cdot \vec v = u_1 v_1 + u_2 v_2 + u_3 v_3$.
 
 ## Solution
@@ -180,7 +293,7 @@ qui porte $\vec w$.
 
 ## Indice
 
-Retourne à la théorie du cours : *Projection, angle et orthogonalité*. La longueur de la projection de
+Retourne à la théorie du cours : *Produit scalaire via les angles*. La longueur de la projection de
 $\vec u$ sur la droite de $\vec w$ vaut $\left\Vert \vec u \right\Vert\cos\theta = \dfrac{\vec u \cdot \vec w}{\left\Vert \vec w \right\Vert}$.
 
 ## Solution
@@ -194,7 +307,43 @@ $\vec w$ font un petit angle.
 :::
 :::
 
+::: {.callout-caution .exo title="Exercice|Renforcement|3|O4"}
+(a) Pour trois vecteurs $\vec u$, $\vec v$, $\vec w$ du plan, l'expression $\vec u \cdot (\vec v \cdot \vec w)$
+a-t-elle un sens ? Et $(\vec u \cdot \vec v)\,\vec w$ ?
+(b) Montrer qu'aucun vecteur non nul $\vec w$ de $\mathbb{R}^2$ n'est orthogonal à la fois à
+$\vec u = (1, 2)$ et à $\vec v = (3, -1)$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Retourne à la théorie du cours : *Propriétés du produit scalaire* et *Orthogonalité*. En (a), demande-toi
+ce que donne le produit entre parenthèses. En (b), pose $\vec w = (w_x, w_y)$ : deux conditions
+d'orthogonalité donnent un système (séance 3).
+
+## Solution
+
+(a) $\vec v \cdot \vec w$ est un **scalaire** : $\vec u \cdot (\vec v \cdot \vec w)$ demanderait le produit scalaire
+d'un vecteur par un nombre, ce qui n'est **pas défini**. En revanche, $(\vec u \cdot \vec v)\,\vec w$ est le
+produit du nombre $\vec u \cdot \vec v$ par le vecteur $\vec w$ : c'est un vecteur, bien défini.
+(b) Il faut $\vec u \cdot \vec w = w_x + 2w_y = 0$ et $\vec v \cdot \vec w = 3w_x - w_y = 0$. La seconde
+donne $w_y = 3w_x$ ; dans la première, $w_x + 6w_x = 0$, donc $w_x = 0$ puis $w_y = 0$. Seul $\vec 0$
+convient : comme $\vec u$ et $\vec v$ ne sont pas colinéaires, aucune direction du plan n'est
+perpendiculaire aux deux.
+
+## Piège
+
+Parler d'« associativité » du produit scalaire : la question ne se pose même pas, puisque l'une des
+deux écritures n'a pas de sens.
+
+:::
+:::
+
 ::: {.callout-caution .exo title="Exercice|Renforcement|2|O5"}
+Le produit vectoriel se calcule aussi en coordonnées (formule admise, non vue au cours) :
+$$\vec u \times \vec v = \left(u_2 v_3 - u_3 v_2,\ u_3 v_1 - u_1 v_3,\ u_1 v_2 - u_2 v_1\right).$$
 Soient $\vec u = (1, 2, 3)$ et $\vec v = (0, 1, -1)$.
 
 (a) Calculer $\vec u \times \vec v$ et vérifier qu'il est orthogonal à $\vec u$ et à $\vec v$.
@@ -207,8 +356,8 @@ Soient $\vec u = (1, 2, 3)$ et $\vec v = (0, 1, -1)$.
 
 ## Indice
 
-Retourne à la théorie du cours : *Produit vectoriel*.
-$\vec u \times \vec v = \left(u_2 v_3 - u_3 v_2,\ u_3 v_1 - u_1 v_3,\ u_1 v_2 - u_2 v_1\right)$.
+Retourne à la théorie du cours : *Produit vectoriel dans $\mathbb{R}^3$*. Applique la formule de l'énoncé,
+puis contrôle par des produits scalaires.
 
 ## Solution
 
@@ -227,7 +376,9 @@ détecte l'erreur.
 :::
 
 ::: {.callout-caution .exo title="Exercice|Renforcement|3|O5"}
-Calculer l'aire du triangle de sommets $A = (1, 0, 0)$, $B = (0, 2, 0)$ et $C = (0, 0, 2)$.
+Calculer l'aire du triangle de sommets $A = (1, 0, 0)$, $B = (0, 2, 0)$ et $C = (0, 0, 2)$, à l'aide de la
+formule en coordonnées du produit vectoriel (admise, non vue au cours) :
+$$\vec u \times \vec v = \left(u_2 v_3 - u_3 v_2,\ u_3 v_1 - u_1 v_3,\ u_1 v_2 - u_2 v_1\right).$$
 :::
 
 ::: {.aides}
@@ -235,7 +386,7 @@ Calculer l'aire du triangle de sommets $A = (1, 0, 0)$, $B = (0, 2, 0)$ et $C = 
 
 ## Indice
 
-Retourne à la théorie du cours : *Produit vectoriel*. $\left\Vert \overrightarrow{AB} \times \overrightarrow{AC} \right\Vert$
+Retourne à la théorie du cours : *Produit vectoriel dans $\mathbb{R}^3$*. $\left\Vert \overrightarrow{AB} \times \overrightarrow{AC} \right\Vert$
 est l'aire du parallélogramme construit sur $\overrightarrow{AB}$ et $\overrightarrow{AC}$ ; le triangle en
 est la moitié.
 
@@ -263,8 +414,9 @@ chaque résultat avec la règle de la main droite.
 
 ## Indice
 
-Retourne à la théorie du cours : *Produit vectoriel*. Le produit vectoriel est orthogonal aux deux
-vecteurs ; son sens est donné par la main droite.
+Retourne à la théorie du cours : *Produit vectoriel dans $\mathbb{R}^3$*. Le produit vectoriel est
+orthogonal aux deux vecteurs, sa norme est l'aire du parallélogramme (ici un carré de côté $1$) et son
+sens est donné par la règle de la main droite.
 
 ## Solution
 

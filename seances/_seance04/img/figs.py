@@ -272,17 +272,25 @@ f.save("s-projection.svg")
 # S.8 — produit vectoriel : u = (3,0,0), v = (1,2,0), u × v = (0,0,6)
 class Fig3b(Fig3):
     K, ALPHA = 0.7, math.radians(30)
-f = Fig3b(-2.6, 4.2, -1.9, 6.6, unit=38)
-f.axes3(3.9, 3.9, 6.5)
-u, v, w = (3, 0, 0), (1, 2, 0), (4, 2, 0)
-f.poly([f.p3(0, 0, 0), f.p3(*u), f.p3(*w), f.p3(*v)], fill=FILL_B, stroke=BLUE, w=0.8, dash=(4, 3))
-f.arrow3((0, 0, 0), u, BLUE, w=2.4); f.arrow3((0, 0, 0), v, RED, w=2.4)
-f.arrow3((0, 0, 0), (0, 0, 6), GREEN, w=2.8)
-f.vlabel((f.p3(*u)[0] + 0.1, f.p3(*u)[1] + 0.45), "u", BLUE)
-f.vlabel((f.p3(*v)[0] + 0.35, f.p3(*v)[1] + 0.35), "v", RED)
-f.text((f.p3(0, 0, 6)[0] + 0.25, f.p3(0, 0, 6)[1] - 0.2), r"$\vec u\times\vec v$", GREEN, 17, ha="left")
-f.text(f.p3(0, 0, 0), "$O$", size=16, dx=-12, dy=4)
-f.save("s-vectoriel.svg")
+
+
+def vectoriel(sol):
+    top = 6.6 if sol else 3.2   # énoncé : axe des z court (la réponse n'y est pas)
+    f = Fig3b(-2.6, 4.2, -1.9, top, unit=38)
+    f.axes3(3.9, 3.9, top - 0.1)
+    u, v, w = (3, 0, 0), (1, 2, 0), (4, 2, 0)
+    f.poly([f.p3(0, 0, 0), f.p3(*u), f.p3(*w), f.p3(*v)], fill=FILL_B, stroke=BLUE, w=0.8, dash=(4, 3))
+    f.arrow3((0, 0, 0), u, BLUE, w=2.4); f.arrow3((0, 0, 0), v, RED, w=2.4)
+    if sol:
+        f.arrow3((0, 0, 0), (0, 0, 6), GREEN, w=2.8)
+        f.text((f.p3(0, 0, 6)[0] + 0.25, f.p3(0, 0, 6)[1] - 0.2), r"$\vec u\times\vec v$", GREEN, 17, ha="left")
+    f.vlabel((f.p3(*u)[0] + 0.1, f.p3(*u)[1] + 0.45), "u", BLUE)
+    f.vlabel((f.p3(*v)[0] + 0.35, f.p3(*v)[1] + 0.35), "v", RED)
+    f.text(f.p3(0, 0, 0), "$O$", size=16, dx=-12, dy=4)
+    f.save("s-vectoriel-sol.svg" if sol else "s-vectoriel.svg")
+
+
+vectoriel(False); vectoriel(True)
 
 # =====================================================================
 # TRANSFERT

@@ -7,7 +7,8 @@
        Indice 3 = une ÉTAPE (un pas concret, sans donner la solution).
      Numéro AUTOMATIQUE (pas écrit). Faisable SANS calculatrice.
      Notations : \vec u, \overrightarrow{AB}, \left\Vert \vec u \right\Vert, \vec u\cdot\vec v, \vec u\times\vec v,
-     coordonnées en ligne \vec u = (u_1, u_2). -->
+     coordonnées en ligne \vec v = (v_x, v_y) dans R^2, (v_1, …, v_n) dans R^n (comme au cours).
+     Indice 1 : titres des slides IMSV-4 (M. Randour). -->
 
 ::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
 On considère les six flèches ci-dessous.
@@ -26,7 +27,8 @@ On considère les six flèches ci-dessous.
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Point et vecteur* et *Norme, direction et sens*.
+Retourne à la théorie du cours : *Grandeurs scalaires et vectorielles*, *Point ou vecteur ?* et
+*Coordonnées et direction*.
 
 ## Indice 2
 
@@ -80,7 +82,7 @@ calcul sur les coordonnées.
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Addition, soustraction et multiplication par un scalaire*.
+Retourne à la théorie du cours : *Addition* et *Produit par un scalaire*.
 
 ## Indice 2
 
@@ -136,7 +138,7 @@ Dans le repère ci-dessous :
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Point et vecteur* et *Coordonnées cartésiennes*.
+Retourne à la théorie du cours : *Point ou vecteur ?*, *Coordonnées cartésiennes* et *Norme d'un vecteur*.
 
 ## Indice 2
 
@@ -185,7 +187,7 @@ Les vecteurs $\vec u$ et $\vec v$ sont donnés par leur norme et l'angle qu'ils 
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Coordonnées cartésiennes*, et à la séance 2 : *Cercle trigonométrique*.
+Retourne à la théorie du cours : *De la norme aux coordonnées* et *Coordonnées et direction*.
 
 ## Indice 2
 
@@ -222,7 +224,7 @@ regardant que $\left|\tfrac{y}{x}\right| = 1$, sans voir que $\vec w$ pointe ver
 Soient $\vec u = (2, -1)$ et $\vec v = (-3, 4)$.
 
 (a) Calculer $\vec u + \vec v$ et $3\vec u - 2\vec v$.
-(b) Calculer $\left\Vert \vec v \right\Vert$, puis donner le vecteur de norme $1$ qui a la même direction et le même
+(b) Calculer $\left\Vert \vec v \right\Vert$, puis donner le vecteur unitaire (de norme $1$) qui a la même direction et le même
 sens que $\vec v$.
 (c) Les vecteurs $(2, -6)$ et $(-1, 3)$ sont-ils colinéaires ? Et les vecteurs $(4, 6)$ et $(6, 8)$ ?
 :::
@@ -232,7 +234,7 @@ sens que $\vec v$.
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Coordonnées cartésiennes* et *Règles de calcul, colinéarité*.
+Retourne à la théorie du cours : *Norme d'un vecteur*, *Produit par un scalaire* et *Colinéarité*.
 
 ## Indice 2
 
@@ -245,7 +247,7 @@ vecteurs colinéaires, par quoi sont-ils reliés ?
 
 *Étape.*
 
-En (b), divise $\vec v$ par sa norme. En (c), cherche un nombre $k$ tel que le premier vecteur soit $k$
+En (b), divise $\vec v$ par sa norme. En (c), cherche un réel $\lambda$ tel que le premier vecteur soit $\lambda$
 fois le second, **pour les deux coordonnées à la fois**.
 
 ## Solution
@@ -255,8 +257,8 @@ $3\vec u - 2\vec v = (6, -3) - (-6, 8) = (12, -11)$.
 (b) $\left\Vert \vec v \right\Vert = \sqrt{9 + 16} = 5$. Le vecteur cherché est $\dfrac15\,\vec v = \left(-\dfrac35,\ \dfrac45\right)$ :
 multiplier par $\frac15 > 0$ garde la direction et le sens, et ramène la norme à $1$.
 (c) $(2, -6) = -2\,(-1, 3)$ : **colinéaires** (même direction, sens opposés).
-Pour $(4, 6)$ et $(6, 8)$ : il faudrait $k = \dfrac46 = \dfrac23$ pour la première coordonnée et
-$k = \dfrac68 = \dfrac34$ pour la seconde. Pas de $k$ commun : **non colinéaires**.
+Pour $(4, 6)$ et $(6, 8)$ : il faudrait $\lambda = \dfrac46 = \dfrac23$ pour la première coordonnée et
+$\lambda = \dfrac68 = \dfrac34$ pour la seconde. Pas de $\lambda$ commun : **non colinéaires**.
 
 ## Piège
 
@@ -271,7 +273,7 @@ Dans l'espace, on considère le point $P = (2, 4, 4)$ et son projeté $P' = (2, 
 
 ![](img/s-r3.svg){fig-alt="Point P dans un repère de l'espace, avec son projeté P' et la boîte de côtés 2, 4 et 4" width="7.9cm" fig-align="center"}
 
-(a) Calculer $|OP'|^2$ à l'aide de Pythagore dans le plan $(x, y)$.
+(a) Calculer $\left\Vert \overrightarrow{OP'} \right\Vert^2$ à l'aide de Pythagore dans le plan $(x, y)$.
 (b) Le triangle $OP'P$ est rectangle en $P'$. En déduire $\left\Vert \overrightarrow{OP} \right\Vert$.
 (c) En suivant le même raisonnement, écrire une formule pour la norme d'un vecteur $(x, y, z)$.
 (d) Par analogie, calculer la norme du vecteur $(2, 1, 2, 4)$ de $\mathbb{R}^4$.
@@ -282,7 +284,7 @@ Dans l'espace, on considère le point $P = (2, 4, 4)$ et son projeté $P' = (2, 
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Coordonnées dans $\mathbb{R}^3$ et $\mathbb{R}^n$*.
+Retourne à la théorie du cours : *Passage à $\mathbb{R}^3$ et $\mathbb{R}^n$*.
 
 ## Indice 2
 
@@ -295,13 +297,13 @@ $(x, y)$, puis dans le triangle vertical $OP'P$ ?
 
 *Étape.*
 
-Dans le plan, les côtés de l'angle droit mesurent $2$ et $4$. Dans le triangle $OP'P$, ce sont $|OP'|$
-et $|P'P| = 4$.
+Dans le plan, les côtés de l'angle droit mesurent $2$ et $4$. Dans le triangle $OP'P$, ce sont $\left\Vert \overrightarrow{OP'} \right\Vert$
+et $\left\Vert \overrightarrow{P'P} \right\Vert = 4$.
 
 ## Solution
 
-(a) $|OP'|^2 = 2^2 + 4^2 = 20$.
-(b) $\left\Vert \overrightarrow{OP} \right\Vert^2 = |OP'|^2 + |P'P|^2 = 20 + 16 = 36$, donc $\left\Vert \overrightarrow{OP} \right\Vert = 6$.
+(a) $\left\Vert \overrightarrow{OP'} \right\Vert^2 = 2^2 + 4^2 = 20$.
+(b) $\left\Vert \overrightarrow{OP} \right\Vert^2 = \left\Vert \overrightarrow{OP'} \right\Vert^2 + \left\Vert \overrightarrow{P'P} \right\Vert^2 = 20 + 16 = 36$, donc $\left\Vert \overrightarrow{OP} \right\Vert = 6$.
 (c) On applique deux fois Pythagore : $\left\Vert (x, y, z) \right\Vert^2 = (x^2 + y^2) + z^2$, soit
 $\left\Vert (x, y, z) \right\Vert = \sqrt{x^2 + y^2 + z^2}$.
 (d) On ajoute un carré par coordonnée : $\sqrt{4 + 1 + 4 + 16} = \sqrt{25} = 5$. On ne peut plus
@@ -328,7 +330,7 @@ Pour chacune des trois paires de vecteurs (1), (2) et (3) ci-dessous :
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Produit scalaire* et *Projection, angle et orthogonalité*.
+Retourne à la théorie du cours : *Produit scalaire : pourquoi ?* et *Produit scalaire en coordonnées*.
 
 ## Indice 2
 
@@ -342,7 +344,7 @@ peuvent être négatifs ?
 *Étape.*
 
 Regarde si l'angle entre les deux flèches est aigu, droit ou obtus. Pour le calcul,
-$\vec u \cdot \vec v = u_1 v_1 + u_2 v_2$.
+$\vec u \cdot \vec v = u_x v_x + u_y v_y$.
 
 ## Solution
 
@@ -360,6 +362,70 @@ soient **orthogonaux**.
 :::
 :::
 
+::: {.callout-caution .exo title="Exercice|Socle|1|O4"}
+(a) Les vecteurs $\vec u$ et $\vec v$ sont non nuls et $\vec u \cdot \vec v > 0$. Que peut-on conclure ?
+
+::: {.content-visible when-format="html"}
+::: {.columns}
+::: {.column width="50%"}
+(A) Ils ont la même direction et le même sens.
+(B) Ils sont orthogonaux.
+(C) L'angle entre eux est aigu.
+:::
+::: {.column width="50%"}
+(D) Ils sont nécessairement colinéaires.
+(E) $\left\Vert \vec u \right\Vert > \left\Vert \vec v \right\Vert$.
+:::
+:::
+:::
+
+```{=typst}
+#grid(columns: (1fr, 1fr), row-gutter: 0.65em,
+  [(A) Ils ont la même direction et le même sens.], [(D) Ils sont nécessairement colinéaires.],
+  [(B) Ils sont orthogonaux.], [(E) $norm(arrow(u)) > norm(arrow(v))$.],
+  [(C) L'angle entre eux est aigu.], [])
+```
+
+(b) Même question si $\vec u \cdot \vec v < 0$ : que peut-on dire de l'angle entre $\vec u$ et $\vec v$ ?
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Produit scalaire : pourquoi ?* et *Produit scalaire via les angles*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Dans $\vec u \cdot \vec v = \left\Vert \vec u \right\Vert\,\left\Vert \vec v \right\Vert\cos\theta$, avec
+$\theta \in [0, \pi]$, quel facteur peut changer de signe ?
+
+## Indice 3
+
+*Étape.*
+
+Repère sur le cercle trigonométrique les angles de $[0, \pi]$ dont le cosinus est positif, nul, puis
+négatif.
+
+## Solution
+
+(a) **(C)**. Les normes sont positives : $\vec u \cdot \vec v$ a le signe de $\cos\theta$, qui est positif
+pour $\theta \in [0, \tfrac{\pi}{2}[$. (A) n'est qu'un cas particulier ($\theta = 0$) ; (B) donnerait
+$\vec u \cdot \vec v = 0$ ; (D) est faux, $(3, 1) \cdot (1, 2) = 5 > 0$ alors que ces vecteurs ne sont pas
+colinéaires ; (E) ne dit rien sur l'angle.
+(b) $\cos\theta < 0$ pour $\theta \in \,]\tfrac{\pi}{2}, \pi]$ : l'angle est **obtus ou plat**.
+
+## Piège
+
+Confondre « même sens » et « angle aigu » : un produit scalaire positif dit seulement que les deux
+vecteurs vont « plutôt » dans le même sens.
+
+:::
+:::
+
 ::: {.callout-caution .exo title="Exercice|Socle|2|O4"}
 (a) Calculer l'angle entre $\vec u = (3, 0)$ et $\vec v = (2, 2)$.
 (b) Calculer l'angle entre $\vec u = (1, \sqrt3)$ et $\vec v = (\sqrt3, 1)$.
@@ -371,7 +437,7 @@ soient **orthogonaux**.
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Produit scalaire* et *Projection, angle et orthogonalité*.
+Retourne à la théorie du cours : *Angles via le produit scalaire* et *Orthogonalité*.
 
 ## Indice 2
 
@@ -412,7 +478,7 @@ l'extrémité de $\vec v$ sur la droite qui porte $\vec u$.
 
 (a) Lire les coordonnées de $H$, puis vérifier par un produit scalaire que l'angle en $H$ est droit.
 (b) Calculer $\vec u \cdot \vec v$.
-(c) Calculer $\left\Vert \vec u \right\Vert$ et $|OH|$, puis comparer $\left\Vert \vec u \right\Vert \cdot |OH|$ à $\vec u \cdot \vec v$.
+(c) Calculer $\left\Vert \vec u \right\Vert$ et $\left\Vert \overrightarrow{OH} \right\Vert$, puis comparer $\left\Vert \vec u \right\Vert \cdot \left\Vert \overrightarrow{OH} \right\Vert$ à $\vec u \cdot \vec v$.
 Qu'est-ce que cela dit du produit scalaire ?
 :::
 
@@ -421,7 +487,7 @@ Qu'est-ce que cela dit du produit scalaire ?
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Projection, angle et orthogonalité*.
+Retourne à la théorie du cours : *Produit scalaire via les angles*.
 
 ## Indice 2
 
@@ -441,8 +507,8 @@ En (a), calcule $\overrightarrow{OH} \cdot \overrightarrow{HV}$, où $V = (1, 3)
 (a) $H = (2, 1)$. $\overrightarrow{OH} = (2, 1)$ et $\overrightarrow{HV} = (1 - 2,\ 3 - 1) = (-1, 2)$ ;
 $\overrightarrow{OH} \cdot \overrightarrow{HV} = -2 + 2 = 0$ : l'angle en $H$ est droit. ✓
 (b) $\vec u \cdot \vec v = 4 + 6 = 10$.
-(c) $\left\Vert \vec u \right\Vert = \sqrt{20} = 2\sqrt5$ et $|OH| = \sqrt{4 + 1} = \sqrt5$, donc
-$\left\Vert \vec u \right\Vert \cdot |OH| = 2\sqrt5 \cdot \sqrt5 = 10 = \vec u \cdot \vec v$.
+(c) $\left\Vert \vec u \right\Vert = \sqrt{20} = 2\sqrt5$ et $\left\Vert \overrightarrow{OH} \right\Vert = \sqrt{4 + 1} = \sqrt5$, donc
+$\left\Vert \vec u \right\Vert \cdot \left\Vert \overrightarrow{OH} \right\Vert = 2\sqrt5 \cdot \sqrt5 = 10 = \vec u \cdot \vec v$.
 Le produit scalaire vaut la norme de $\vec u$ multipliée par la longueur de l'« ombre » de $\vec v$ sur
 la droite de $\vec u$ : c'est la signification de $\left\Vert \vec v \right\Vert\cos\theta$, la **projection** de
 $\vec v$ sur $\vec u$.
@@ -458,13 +524,12 @@ Projeter le long d'une direction quelconque (verticale, par exemple) : la projec
 ::: {.callout-caution .exo title="Exercice|Socle|2|O5"}
 Dans l'espace, on considère $\vec u = (3, 0, 0)$ et $\vec v = (1, 2, 0)$.
 
-![](img/s-vectoriel.svg){fig-alt="Parallélogramme construit sur u et v dans le plan (x, y), et le vecteur u × v dirigé selon l'axe des z" width="6.2cm" fig-align="center"}
+![](img/s-vectoriel.svg){fig-alt="Parallélogramme construit sur u et v dans le plan (x, y)" width="6.2cm" fig-align="center"}
 
-(a) Calculer $\vec u \times \vec v$.
-(b) Calculer l'aire du parallélogramme construit sur $\vec u$ et $\vec v$ (base $\times$ hauteur), et la
-comparer à $\left\Vert \vec u \times \vec v \right\Vert$.
+(a) Calculer l'aire du parallélogramme construit sur $\vec u$ et $\vec v$ (base $\times$ hauteur).
+(b) En déduire $\vec u \times \vec v$ : sa direction, sa norme, son sens, puis ses coordonnées.
 (c) Vérifier que $\vec u \times \vec v$ est orthogonal à $\vec u$ et à $\vec v$.
-(d) Calculer $\vec v \times \vec u$. Qu'est-ce qui change ?
+(d) Donner $\vec v \times \vec u$. Qu'est-ce qui change ?
 :::
 
 ::: {.aides}
@@ -472,7 +537,7 @@ comparer à $\left\Vert \vec u \times \vec v \right\Vert$.
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Produit vectoriel*.
+Retourne à la théorie du cours : *Produit vectoriel dans $\mathbb{R}^3$*.
 
 ## Indice 2
 
@@ -485,22 +550,27 @@ perpendiculairement à cette base ?
 
 *Étape.*
 
-Applique
-$\vec u \times \vec v = \left(u_2 v_3 - u_3 v_2,\ u_3 v_1 - u_1 v_3,\ u_1 v_2 - u_2 v_1\right)$.
+Un vecteur perpendiculaire au plan $(x, y)$ est porté par l'axe des $z$ : il s'écrit $(0, 0, w_z)$.
+Sa norme est l'aire trouvée en (a) ; son sens se lit avec la règle de la main droite.
 
 ## Solution
 
-(a) $\vec u \times \vec v = (0 \cdot 0 - 0 \cdot 2,\ 0 \cdot 1 - 3 \cdot 0,\ 3 \cdot 2 - 0 \cdot 1) = (0, 0, 6)$.
-(b) Base $3$, hauteur $2$ : aire $= 6 = \left\Vert \vec u \times \vec v \right\Vert$. La norme du produit vectoriel
-**est** l'aire du parallélogramme.
-(c) $(0, 0, 6) \cdot (3, 0, 0) = 0$ et $(0, 0, 6) \cdot (1, 2, 0) = 0$. ✓ Le produit vectoriel est
-perpendiculaire au plan de $\vec u$ et $\vec v$.
-(d) $\vec v \times \vec u = (0, 0, -6) = -\,\vec u \times \vec v$ : même direction, même norme, **sens
-opposé** (règle de la main droite). Le produit vectoriel n'est pas commutatif.
+(a) La base $\vec u$ mesure $3$ ; la hauteur, distance de l'extrémité de $\vec v$ à l'axe des $x$, vaut $2$.
+L'aire vaut $3 \cdot 2 = 6$.
+(b) $\vec u$ et $\vec v$ sont dans le plan $(x, y)$ : $\vec u \times \vec v$ est perpendiculaire à ce plan,
+donc porté par l'axe des $z$, et $\left\Vert \vec u \times \vec v \right\Vert = 6$. Main droite : l'index suit
+$\vec u$ (axe des $x$), le majeur suit $\vec v$ (vers les $y$ positifs), le pouce pointe vers les $z$
+positifs. Donc $\vec u \times \vec v = (0, 0, 6)$.
+
+![](img/s-vectoriel-sol.svg){fig-alt="Le vecteur u × v, porté par l'axe des z" width="6.2cm" fig-align="center"}
+
+(c) $(0, 0, 6) \cdot (3, 0, 0) = 0$ et $(0, 0, 6) \cdot (1, 2, 0) = 0$. ✓
+(d) $\vec v \times \vec u = -(\vec u \times \vec v) = (0, 0, -6)$ : même direction, même norme, **sens
+opposé**. L'ordre des vecteurs compte.
 
 ## Piège
 
-Se tromper d'ordre dans les produits croisés (le signe de chaque coordonnée change) ; croire que
+Donner la bonne norme mais le mauvais sens (main droite appliquée dans le mauvais ordre) ; croire que
 $\vec u \times \vec v = \vec v \times \vec u$.
 
 :::

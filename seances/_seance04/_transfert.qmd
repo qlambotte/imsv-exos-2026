@@ -26,7 +26,7 @@ On prend l'axe des $x$ horizontal (vers la droite) et l'axe des $y$ vertical (ve
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Coordonnées cartésiennes* et *Addition, soustraction et multiplication par un scalaire*.
+Retourne à la théorie du cours : *De la norme aux coordonnées* et *Addition*.
 
 ## Indice 2
 
@@ -88,8 +88,7 @@ presque à l'horizontale ?
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Addition, soustraction et multiplication par un scalaire* et
-*Coordonnées cartésiennes*.
+Retourne à la théorie du cours : *Addition* et *De la norme aux coordonnées*.
 
 ## Indice 2
 
@@ -149,7 +148,7 @@ Lequel ?
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Produit scalaire* et *Projection, angle et orthogonalité*.
+Retourne à la théorie du cours : *Application : travail d'une force* et *Produit scalaire via les angles*.
 
 ## Indice 2
 
@@ -188,66 +187,6 @@ compte ; oublier que la composante verticale ne travaille pas.
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Transfert|3|O2"}
-Un poisson traverse une rivière de $20$ m de large. Il nage perpendiculairement aux rives à $0{,}4$ m/s
-(par rapport à l'eau), et le courant l'entraîne à $0{,}3$ m/s parallèlement aux rives.
-
-![](img/t-riviere.svg){fig-alt="Rivière de 20 m ; vitesse de nage perpendiculaire aux rives et vitesse du courant" width="12.4cm" fig-align="center"}
-
-On prend l'axe des $x$ dans le sens du courant et l'axe des $y$ vers l'autre rive.
-
-(a) Calculer la vitesse du poisson par rapport à la rive : ses coordonnées et sa norme.
-(b) Combien de temps met-il pour traverser ?
-(c) À quelle distance en aval de son point de départ arrive-t-il ?
-(d) Un autre poisson nage à $0{,}6$ m/s et veut arriver **juste en face** de son point de départ.
-Dans quelle direction doit-il nager ?
-:::
-
-::: {.aides}
-::: {.panel-tabset}
-
-## Indice 1
-
-Retourne à la théorie du cours : *Addition, soustraction et multiplication par un scalaire* et
-*Coordonnées cartésiennes*.
-
-## Indice 2
-
-*Question à te poser.*
-
-Quelle composante de la vitesse rapproche le poisson de l'autre rive ? Le courant change-t-il le temps
-de traversée ?
-
-## Indice 3
-
-*Étape.*
-
-La vitesse par rapport à la rive est la somme $(0, 0{,}4) + (0{,}3, 0)$. En (d), la vitesse de nage doit
-avoir une composante $-0{,}3$ m/s selon $x$ pour annuler le courant.
-
-## Solution
-
-(a) $\vec v = (0{,}3 ;\ 0{,}4)$ et $\left\Vert \vec v \right\Vert = \sqrt{0{,}09 + 0{,}16} = \sqrt{0{,}25} = 0{,}5$ m/s.
-
-(b) Seule la composante selon $y$ fait traverser : $t = \dfrac{20}{0{,}4} = 50$ s. Le courant ne change
-pas ce temps.
-
-(c) Pendant ces $50$ s, le courant l'entraîne de $0{,}3 \cdot 50 = 15$ m vers l'aval.
-
-![](img/t-riviere-sol.svg){fig-alt="Vitesse résultante et trajectoire : arrivée 15 m en aval" width="12.4cm" fig-align="center"}
-
-(d) Il doit nager en remontant le courant : sa vitesse de nage a une composante $-0{,}3$ m/s selon $x$.
-Si $\alpha$ est l'angle entre sa direction de nage et la perpendiculaire aux rives,
-$\sin\alpha = \dfrac{0{,}3}{0{,}6} = \dfrac12$, donc $\alpha = 30°$, vers l'amont.
-
-## Piège
-
-Diviser la largeur par la norme $0{,}5$ m/s : la trajectoire est oblique et plus longue que $20$ m. On
-obtient le temps avec la seule composante perpendiculaire aux rives.
-
-:::
-:::
-
 ::: {.callout-caution .exo title="Exercice|Transfert|3|O5"}
 L'avant-bras est tenu à l'horizontale et porte une charge de poids $20$ N, à $30$ cm du coude $O$. Le
 biceps s'attache à $4$ cm du coude et tire verticalement vers le haut avec une force $\vec B$.
@@ -270,7 +209,7 @@ $\left\Vert \vec B \right\Vert$.
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Produit vectoriel*.
+Retourne à la théorie du cours : *Produit vectoriel dans $\mathbb{R}^3$*.
 
 ## Indice 2
 
@@ -283,16 +222,20 @@ moment obtenu pointe-t-il vers toi ou s'éloigne-t-il de toi ?
 
 *Étape.*
 
-Pour le poids : $\overrightarrow{OM} = (0{,}3 ;\ 0 ;\ 0)$ et $\vec P = (0 ;\ -20 ;\ 0)$. Pour le biceps :
-$(0{,}04 ;\ 0 ;\ 0)$ et $\vec B = (0 ;\ B ;\ 0)$.
+Dans chaque produit, les deux vecteurs sont dans le plan $(x, y)$ et perpendiculaires : le moment est
+porté par l'axe des $z$, sa norme est le produit des deux normes ($\sin 90° = 1$) et son sens se lit
+avec la règle de la main droite.
 
 ## Solution
 
-(a) $(0{,}3 ;\ 0 ;\ 0) \times (0 ;\ -20 ;\ 0) = \big(0 ;\ 0 ;\ 0{,}3 \cdot (-20) - 0 \cdot 0\big) = (0 ;\ 0 ;\ -6)$,
-en N·m. Il s'éloigne de toi : par la règle de la main droite, le poids fait tourner l'avant-bras dans le
+(a) $\overrightarrow{OM} = (0{,}3 ;\ 0 ;\ 0)$ et $\vec P = (0 ;\ -20 ;\ 0)$ sont perpendiculaires et dans le
+plan $(x, y)$ : le moment est porté par l'axe des $z$ et sa norme vaut $0{,}3 \cdot 20 \cdot \sin 90° = 6$ N·m.
+Main droite : l'index suit $\overrightarrow{OM}$ (vers la droite), le majeur suit $\vec P$ (vers le bas), le
+pouce s'éloigne de toi. Le moment vaut donc $(0 ;\ 0 ;\ -6)$ : le poids fait tourner l'avant-bras dans le
 sens des aiguilles d'une montre, vers le bas.
 
-(b) Le moment du biceps vaut $(0{,}04 ;\ 0 ;\ 0) \times (0 ;\ B ;\ 0) = (0 ;\ 0 ;\ 0{,}04\,B)$.
+(b) Pour le biceps, $(0{,}04 ;\ 0 ;\ 0)$ et $(0 ;\ B ;\ 0)$ : même raisonnement, norme $0{,}04\,B$, pouce
+vers toi. Le moment vaut $(0 ;\ 0 ;\ 0{,}04\,B)$.
 Équilibre : $0{,}04\,B - 6 = 0$, donc $B = \dfrac{6}{0{,}04} = 150$ N.
 
 (c) Le biceps tire avec $150$ N pour porter $20$ N, plus de sept fois plus. Il agit tout près du coude

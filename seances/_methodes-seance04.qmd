@@ -16,8 +16,8 @@ Dès qu'il faut construire une somme, une différence ou un multiple de vecteurs
 2. Pour $\vec u + \vec v$, place les flèches **bout à bout** (l'origine de $\vec v$ à l'extrémité de
    $\vec u$) ; la somme va de la première origine à la dernière extrémité.
 3. Pour $\vec u - \vec v$, ajoute $-\vec v$ (même direction et même norme que $\vec v$, sens opposé).
-4. Pour $k\,\vec u$ : même direction, norme multipliée par $|k|$, sens conservé si $k > 0$ et inversé si
-   $k < 0$.
+4. Pour $\lambda\,\vec u$ : même direction, norme multipliée par $|\lambda|$, sens conservé si $\lambda > 0$ et
+   inversé si $\lambda < 0$.
 :::
 
 ::: {.exemple}
@@ -42,8 +42,8 @@ faut retrouver norme et angle à partir des coordonnées.
 ::: {.etapes}
 1. Repère l'angle $\theta$ mesuré depuis l'axe des $x$ (sens trigonométrique) et le **quadrant**.
 2. Coordonnées : $\vec u = \left\Vert \vec u \right\Vert\,(\cos\theta,\ \sin\theta)$.
-3. Retour : $\left\Vert \vec u \right\Vert = \sqrt{u_1^2 + u_2^2}$, puis
-   $\cos\theta = \dfrac{u_1}{\left\Vert \vec u \right\Vert}$ et $\sin\theta = \dfrac{u_2}{\left\Vert \vec u \right\Vert}$.
+3. Retour : $\left\Vert \vec u \right\Vert = \sqrt{u_x^2 + u_y^2}$, puis
+   $\cos\theta = \dfrac{u_x}{\left\Vert \vec u \right\Vert}$ et $\sin\theta = \dfrac{u_y}{\left\Vert \vec u \right\Vert}$.
 4. **Contrôle** : les signes des coordonnées correspondent au quadrant du dessin.
 :::
 
@@ -70,7 +70,7 @@ Dès que les vecteurs sont donnés par leurs coordonnées, dans $\mathbb{R}^2$, 
 2. Coordonnées de $\overrightarrow{AB}$ : extrémité moins origine, $B - A$.
 3. Norme : racine de la somme des **carrés** des coordonnées (Pythagore, appliqué autant de fois qu'il le
    faut).
-4. Colinéarité : cherche un **même** $k$ tel que $\vec u = k\,\vec v$ pour toutes les coordonnées.
+4. Colinéarité : cherche un **même** réel $\lambda$ tel que $\vec v = \lambda\,\vec u$ pour toutes les coordonnées.
 :::
 
 ::: {.exemple}
@@ -93,7 +93,7 @@ direction, ou calculer un travail.
 :::
 
 ::: {.etapes}
-1. Calcule $\vec u \cdot \vec v = u_1 v_1 + u_2 v_2\ (+\,u_3 v_3)$.
+1. Calcule $\vec u \cdot \vec v = u_x v_x + u_y v_y$ (dans $\mathbb{R}^n$ : $u_1 v_1 + \dots + u_n v_n$).
 2. **Signe** : positif si l'angle est aigu, nul si les vecteurs sont orthogonaux, négatif s'il est obtus.
 3. **Angle** : $\cos\theta = \dfrac{\vec u \cdot \vec v}{\left\Vert \vec u \right\Vert\,\left\Vert \vec v \right\Vert}$, puis reconnais
    une valeur remarquable.
@@ -121,20 +121,24 @@ d'un triangle, ou le moment d'une force.
 :::
 
 ::: {.etapes}
-1. Calcule $\vec u \times \vec v = \left(u_2 v_3 - u_3 v_2,\ u_3 v_1 - u_1 v_3,\ u_1 v_2 - u_2 v_1\right)$.
-2. **Contrôle** : $(\vec u \times \vec v) \cdot \vec u = 0$ et $(\vec u \times \vec v) \cdot \vec v = 0$.
-3. **Sens** : règle de la main droite ; échanger les deux vecteurs change le signe.
-4. **Norme** : $\left\Vert \vec u \times \vec v \right\Vert$ est l'aire du parallélogramme construit sur $\vec u$ et
-   $\vec v$ (la moitié pour le triangle) ; elle est nulle si les vecteurs sont colinéaires.
+1. **Direction** : $\vec u \times \vec v$ est perpendiculaire au plan de $\vec u$ et $\vec v$ (si ce plan est
+   le plan $(x, y)$, il est porté par l'axe des $z$).
+2. **Norme** : l'aire du parallélogramme construit sur $\vec u$ et $\vec v$,
+   $\left\Vert \vec u \times \vec v \right\Vert = \left\Vert \vec u \right\Vert \left\Vert \vec v \right\Vert \sin\theta$
+   (la moitié pour un triangle) ; elle est nulle si les vecteurs sont colinéaires.
+3. **Sens** : règle de la main droite (index sur $\vec u$, majeur sur $\vec v$, le pouce donne le sens) ;
+   $\vec v \times \vec u = -(\vec u \times \vec v)$.
+4. **Contrôle** : $(\vec u \times \vec v) \cdot \vec u = 0$ et $(\vec u \times \vec v) \cdot \vec v = 0$.
 :::
 
 ::: {.exemple}
-$(3, 0, 0) \times (1, 2, 0) = (0, 0, 6)$ : perpendiculaire au plan $(x, y)$, et $6$ est l'aire du
-parallélogramme de base $3$ et de hauteur $2$.
+$(3, 0, 0) \times (1, 2, 0)$ : porté par l'axe des $z$ ; norme $6$, l'aire du parallélogramme de base $3$
+et de hauteur $2$ ; main droite : vers les $z$ positifs. Donc $(0, 0, 6)$.
 :::
 
 ::: {.piege}
-Se tromper d'ordre dans un produit croisé ; oublier de diviser par $2$ pour l'aire d'un triangle.
+Appliquer la main droite dans le mauvais ordre (le sens s'inverse) ; oublier de diviser par $2$ pour
+l'aire d'un triangle.
 :::
 
 :::
