@@ -341,66 +341,8 @@ deux écritures n'a pas de sens.
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Renforcement|2|O5"}
 
-Soient $\vec u = (1, 2, 3)$ et $\vec v = (0, 1, -1)$.
 
-(a) Calculer $\vec u \times \vec v$ et vérifier qu'il est orthogonal à $\vec u$ et à $\vec v$.
-(b) En déduire $\vec v \times \vec u$ sans refaire de calcul.
-(c) Que vaut $\vec u \times (2\vec u)$ ? Pourquoi ?
-:::
-
-::: {.aides}
-::: {.panel-tabset}
-
-## Indice
-
-Retourne à la théorie du cours : *Produit vectoriel dans $\mathbb{R}^3$*. Applique la formule de l'énoncé,
-puis contrôle par des produits scalaires.
-
-## Solution
-
-(a) $\vec u \times \vec v = \big(2 \cdot (-1) - 3 \cdot 1,\ 3 \cdot 0 - 1 \cdot (-1),\ 1 \cdot 1 - 2 \cdot 0\big) = (-5, 1, 1)$.
-Contrôle : $(-5, 1, 1) \cdot (1, 2, 3) = -5 + 2 + 3 = 0$ et $(-5, 1, 1) \cdot (0, 1, -1) = 0$. ✓
-(b) $\vec v \times \vec u = -\,\vec u \times \vec v = (5, -1, -1)$.
-(c) $\vec 0$ : $\vec u$ et $2\vec u$ sont colinéaires, le parallélogramme qu'ils forment est aplati et
-son aire est nulle.
-
-## Piège
-
-Oublier le signe « moins » du produit croisé dans une coordonnée : le contrôle par produit scalaire
-détecte l'erreur.
-
-:::
-:::
-
-::: {.callout-caution .exo title="Exercice|Renforcement|3|O5"}
-Calculer l'aire du triangle de sommets $A = (1, 0, 0)$, $B = (0, 2, 0)$ et $C = (0, 0, 2)$, à l'aide de la
-formule en coordonnées du produit vectoriel (admise, non vue au cours) :
-$$\vec u \times \vec v = \left(u_2 v_3 - u_3 v_2,\ u_3 v_1 - u_1 v_3,\ u_1 v_2 - u_2 v_1\right).$$
-:::
-
-::: {.aides}
-::: {.panel-tabset}
-
-## Indice
-
-Retourne à la théorie du cours : *Produit vectoriel dans $\mathbb{R}^3$*. $\left\Vert \overrightarrow{AB} \times \overrightarrow{AC} \right\Vert$
-est l'aire du parallélogramme construit sur $\overrightarrow{AB}$ et $\overrightarrow{AC}$ ; le triangle en
-est la moitié.
-
-## Solution
-
-$\overrightarrow{AB} = (-1, 2, 0)$ et $\overrightarrow{AC} = (-1, 0, 2)$, donc
-$\overrightarrow{AB} \times \overrightarrow{AC} = \big(2 \cdot 2 - 0 \cdot 0,\ 0 \cdot (-1) - (-1) \cdot 2,\ (-1) \cdot 0 - 2 \cdot (-1)\big) = (4, 2, 2)$.
-Sa norme vaut $\sqrt{16 + 4 + 4} = \sqrt{24} = 2\sqrt6$ : l'aire du triangle est $\sqrt6$.
-
-## Piège
-
-Oublier de diviser par $2$ : la norme du produit vectoriel donne l'aire du **parallélogramme**.
-
-:::
-:::
 
 ::: {.callout-caution .exo title="Exercice|Renforcement|1|O5"}
 Soient $\vec i = (1, 0, 0)$, $\vec j = (0, 1, 0)$ et $\vec k = (0, 0, 1)$. Calculer
@@ -420,8 +362,6 @@ sens est donné par la règle de la main droite.
 ## Solution
 
 $\vec i \times \vec j = \vec k$, $\vec j \times \vec k = \vec i$, $\vec k \times \vec i = \vec j$ et
-$\vec j \times \vec i = -\vec k$. On retient le cycle $\vec i \to \vec j \to \vec k \to \vec i$ : dans ce sens
-le résultat est positif, dans l'autre il change de signe.
-
+$\vec j \times \vec i = -\vec k$.
 :::
 :::
