@@ -342,8 +342,7 @@ deux écritures n'a pas de sens.
 :::
 
 ::: {.callout-caution .exo title="Exercice|Renforcement|2|O5"}
-Le produit vectoriel se calcule aussi en coordonnées (formule admise, non vue au cours) :
-$$\vec u \times \vec v = \left(u_2 v_3 - u_3 v_2,\ u_3 v_1 - u_1 v_3,\ u_1 v_2 - u_2 v_1\right).$$
+
 Soient $\vec u = (1, 2, 3)$ et $\vec v = (0, 1, -1)$.
 
 (a) Calculer $\vec u \times \vec v$ et vérifier qu'il est orthogonal à $\vec u$ et à $\vec v$.

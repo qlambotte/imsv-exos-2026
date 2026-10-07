@@ -129,8 +129,7 @@ Dans le repère ci-dessous :
 (a) Lire les coordonnées des points $A$, $B$ et $C$.
 (b) Calculer les coordonnées des vecteurs $\overrightarrow{AB}$, $\overrightarrow{BC}$ et $\overrightarrow{AC}$.
 (c) Vérifier que $\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}$.
-(d) Le point $B$ et le vecteur $\overrightarrow{AB}$ ont-ils les mêmes coordonnées ? Pourquoi ?
-(e) Calculer $\left\Vert \overrightarrow{AB} \right\Vert$ et $\left\Vert \overrightarrow{AC} \right\Vert$. Que peut-on dire du triangle $ABC$ ?
+(d) Calculer $\left\Vert \overrightarrow{AB} \right\Vert$ et $\left\Vert \overrightarrow{AC} \right\Vert$. Que peut-on dire du triangle $ABC$ ?
 :::
 
 ::: {.aides}
@@ -158,10 +157,8 @@ $\overrightarrow{AB} = (x_B - x_A,\ y_B - y_A)$. Pour la norme, pense à Pythago
 (a) $A = (-2, 1)$, $B = (2, 4)$, $C = (2, -2)$.
 (b) $\overrightarrow{AB} = (2 - (-2),\ 4 - 1) = (4, 3)$ ; $\overrightarrow{BC} = (0, -6)$ ;
 $\overrightarrow{AC} = (4, -3)$.
-(c) $(4, 3) + (0, -6) = (4, -3)$. ✓ Aller de $A$ à $B$ puis de $B$ à $C$ revient à aller de $A$ à $C$.
-(d) **Non** : $B = (2, 4)$ repère une **position**, $\overrightarrow{AB} = (4, 3)$ décrit un
-**déplacement**. Les deux coïncident seulement quand l'origine du vecteur est l'origine du repère.
-(e) $\left\Vert \overrightarrow{AB} \right\Vert = \sqrt{4^2 + 3^2} = \sqrt{25} = 5$ et
+(c) $(4, 3) + (0, -6) = (4, -3)$.  Aller de $A$ à $B$ puis de $B$ à $C$ revient à aller de $A$ à $C$.
+(d) $\left\Vert \overrightarrow{AB} \right\Vert = \sqrt{4^2 + 3^2} = \sqrt{25} = 5$ et
 $\left\Vert \overrightarrow{AC} \right\Vert = \sqrt{4^2 + (-3)^2} = 5$ : le triangle $ABC$ est **isocèle** en $A$.
 
 ## Piège
@@ -208,14 +205,11 @@ $r\,(\cos\theta,\ \sin\theta)$. Pour (c), place $\vec w$ sur un croquis pour rep
 (a) $\vec u = 4\,(\cos 60°,\ \sin 60°) = 4\left(\dfrac12,\ \dfrac{\sqrt3}{2}\right) = \left(2,\ 2\sqrt3\right)$.
 (b) $\vec v = 6\,(\cos 150°,\ \sin 150°) = 6\left(-\dfrac{\sqrt3}{2},\ \dfrac12\right) = \left(-3\sqrt3,\ 3\right)$.
 Le cosinus est négatif : $\vec v$ pointe vers la gauche, comme sur la figure.
-(c) $\left\Vert \vec w \right\Vert = \sqrt{(-2)^2 + 2^2} = \sqrt8 = 2\sqrt2$. Alors
-$\cos\theta = \dfrac{-2}{2\sqrt2} = -\dfrac{\sqrt2}{2}$ et $\sin\theta = \dfrac{2}{2\sqrt2} = \dfrac{\sqrt2}{2}$ :
-$\theta = 135°$ (deuxième quadrant).
+(c) $\left\Vert \vec w \right\Vert = \sqrt{(-2)^2 + 2^2} = \sqrt8 = 2\sqrt2$. $\vec w$ est dans le deuxième quadrant. Soit $\theta$ l'angle que fait $\vec w$ avec l'axe $x$. On a $\tan(\theta)=\dfrac{2}{-2}=-1$, ce qui donne $\theta=135^\circ$.
 
 ## Piège
 
-Oublier le **signe** imposé par le quadrant : $\cos 150° < 0$. En (c), trouver $\theta = 45°$ en ne
-regardant que $\left|\tfrac{y}{x}\right| = 1$, sans voir que $\vec w$ pointe vers la gauche.
+Oublier le **signe** imposé par le quadrant : $\cos 150° < 0$. En (c), trouver $\theta = -45°$ en ne prenant pas en compte le quadrant où se trouve $\vec w$.
 
 :::
 :::
@@ -275,8 +269,7 @@ Dans l'espace, on considère le point $P = (2, 4, 4)$ et son projeté $P' = (2, 
 
 (a) Calculer $\left\Vert \overrightarrow{OP'} \right\Vert^2$ à l'aide de Pythagore dans le plan $(x, y)$.
 (b) Le triangle $OP'P$ est rectangle en $P'$. En déduire $\left\Vert \overrightarrow{OP} \right\Vert$.
-(c) En suivant le même raisonnement, écrire une formule pour la norme d'un vecteur $(x, y, z)$.
-(d) Par analogie, calculer la norme du vecteur $(2, 1, 2, 4)$ de $\mathbb{R}^4$.
+
 :::
 
 ::: {.aides}
@@ -304,10 +297,6 @@ et $\left\Vert \overrightarrow{P'P} \right\Vert = 4$.
 
 (a) $\left\Vert \overrightarrow{OP'} \right\Vert^2 = 2^2 + 4^2 = 20$.
 (b) $\left\Vert \overrightarrow{OP} \right\Vert^2 = \left\Vert \overrightarrow{OP'} \right\Vert^2 + \left\Vert \overrightarrow{P'P} \right\Vert^2 = 20 + 16 = 36$, donc $\left\Vert \overrightarrow{OP} \right\Vert = 6$.
-(c) On applique deux fois Pythagore : $\left\Vert (x, y, z) \right\Vert^2 = (x^2 + y^2) + z^2$, soit
-$\left\Vert (x, y, z) \right\Vert = \sqrt{x^2 + y^2 + z^2}$.
-(d) On ajoute un carré par coordonnée : $\sqrt{4 + 1 + 4 + 16} = \sqrt{25} = 5$. On ne peut plus
-dessiner $\mathbb{R}^4$, mais le calcul se prolonge sans difficulté.
 
 ## Piège
 
@@ -350,9 +339,9 @@ $\vec u \cdot \vec v = u_x v_x + u_y v_y$.
 
 Le signe de $\vec u \cdot \vec v$ est celui de $\cos\theta$.
 
-(1) Angle aigu : **positif**. $\vec u = (3, 1)$, $\vec v = (1, 2)$ : $3 + 2 = 5 > 0$.
-(2) Angle droit : **nul**. $\vec u = (2, 1)$, $\vec v = (-1, 2)$ : $-2 + 2 = 0$.
-(3) Angle obtus : **négatif**. $\vec u = (3, 0)$, $\vec v = (-2, 2)$ : $-6 + 0 = -6 < 0$.
+(1) Angle aigu : le produit scalaire est  **positif**. On a $\vec u = (3, 1)$, $\vec v = (1, 2)$ : le produit scalaire vaut $3 + 2 = 5 > 0$.
+(2) Angle droit : le produit scalaire est  **nul**. On a $\vec u = (2, 1)$, $\vec v = (-1, 2)$ : le produit scalaire vaut $-2 + 2 = 0$.
+(3) Angle obtus : le produit scalaire est **négatif**. On a $\vec u = (3, 0)$, $\vec v = (-2, 2)$ : le produit scalaire vaut $-6 + 0 = -6 < 0$.
 
 ## Piège
 
@@ -363,7 +352,7 @@ soient **orthogonaux**.
 :::
 
 ::: {.callout-caution .exo title="Exercice|Socle|1|O4"}
-(a) Les vecteurs $\vec u$ et $\vec v$ sont non nuls et $\vec u \cdot \vec v > 0$. Que peut-on conclure ?
+(a) Les vecteurs $\vec u$ et $\vec v$ sont non nuls et $\vec u \cdot \vec v > 0$. Quelle affirmation est toujours vraie ?
 
 ::: {.content-visible when-format="html"}
 ::: {.columns}
@@ -386,7 +375,7 @@ soient **orthogonaux**.
   [(C) L'angle entre eux est aigu.], [])
 ```
 
-(b) Même question si $\vec u \cdot \vec v < 0$ : que peut-on dire de l'angle entre $\vec u$ et $\vec v$ ?
+(b) Même question si $\vec u \cdot \vec v < 0$ : que peut-on toujours dire de l'angle entre $\vec u$ et $\vec v$ ?
 :::
 
 ::: {.aides}
@@ -413,9 +402,13 @@ négatif.
 ## Solution
 
 (a) **(C)**. Les normes sont positives : $\vec u \cdot \vec v$ a le signe de $\cos\theta$, qui est positif
-pour $\theta \in [0, \tfrac{\pi}{2}[$. (A) n'est qu'un cas particulier ($\theta = 0$) ; (B) donnerait
-$\vec u \cdot \vec v = 0$ ; (D) est faux, $(3, 1) \cdot (1, 2) = 5 > 0$ alors que ces vecteurs ne sont pas
-colinéaires ; (E) ne dit rien sur l'angle.
+pour $\theta \in [0, \tfrac{\pi}{2}[$. 
+
+ La réponse (A) n'est qu'un cas particulier ($\theta = 0$) ; 
+ la réponse (B) donnerait $\vec u \cdot \vec v = 0$ ; 
+ la réponse (D) est fausse, $(3, 1) \cdot (1, 2) = 5 > 0$ alors que ces vecteurs ne sont pas colinéaires ;
+ la réponse (E) ne dit rien sur l'angle.
+
 (b) $\cos\theta < 0$ pour $\theta \in \,]\tfrac{\pi}{2}, \pi]$ : l'angle est **obtus ou plat**.
 
 ## Piège
@@ -515,8 +508,7 @@ $\vec v$ sur $\vec u$.
 
 ## Piège
 
-Projeter le long d'une direction quelconque (verticale, par exemple) : la projection est
-**orthogonale** à la droite de $\vec u$.
+Se tromper dans le calcul des normes en oubliant les carrés.
 
 :::
 :::
@@ -564,7 +556,7 @@ positifs. Donc $\vec u \times \vec v = (0, 0, 6)$.
 
 ![](img/s-vectoriel-sol.svg){fig-alt="Le vecteur u × v, porté par l'axe des z" width="6.2cm" fig-align="center"}
 
-(c) $(0, 0, 6) \cdot (3, 0, 0) = 0$ et $(0, 0, 6) \cdot (1, 2, 0) = 0$. ✓
+(c) $(0, 0, 6) \cdot (3, 0, 0) = 0$ et $(0, 0, 6) \cdot (1, 2, 0) = 0$. Dpnc $\vec u \times \vec v$ est bien othogonal à $\vec u$ et $\vec v$.
 (d) $\vec v \times \vec u = -(\vec u \times \vec v) = (0, 0, -6)$ : même direction, même norme, **sens
 opposé**. L'ordre des vecteurs compte.
 

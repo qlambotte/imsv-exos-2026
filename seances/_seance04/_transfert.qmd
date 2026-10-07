@@ -13,7 +13,7 @@ alignés les fragments d'un os fracturé.
 
 ![](img/t-traction.svg){fig-alt="Deux forces F1 et F2 appliquées au pied, à 30 degrés de part et d'autre de l'horizontale" width="9.1cm" fig-align="center"}
 
-On prend l'axe des $x$ horizontal (vers la droite) et l'axe des $y$ vertical (vers le haut).
+On place l'origine du repère au point de contact entre le pied et les brins. On prend l'axe des $x$ horizontal (vers la droite) et l'axe des $y$ vertical (vers le haut).
 
 (a) Donner les coordonnées de $\vec F_1$ et de $\vec F_2$.
 (b) Calculer la résultante $\vec R = \vec F_1 + \vec F_2$ : ses coordonnées, sa norme et sa direction.
@@ -74,10 +74,11 @@ d'attache est nulle, $\vec T_1 + \vec T_2 + \vec P = \vec 0$.
 
 ![](img/t-perfusion.svg){fig-alt="Poche suspendue à deux fils faisant 30 degrés avec le plafond" width="7.9cm" fig-align="center"}
 
+On place l'origine du repère au point d'attache. On prend l'axe des $x$ horizontal (vers la droite) et l'axe des $y$ vertical (vers le haut).
+
 (a) Représenter les trois forces qui s'exercent au point d'attache : le poids $\vec P$ et les tensions
 $\vec T_1$ et $\vec T_2$ des deux fils.
-(b) Par symétrie, $\left\Vert \vec T_1 \right\Vert = \left\Vert \vec T_2 \right\Vert = T$. Écrire l'équilibre selon la verticale et
-calculer $T$.
+(b) Par symétrie, $\left\Vert \vec T_1 \right\Vert = \left\Vert \vec T_2 \right\Vert = T$. Calculer $T$, en utilisant l'équation $\vec T_1 + \vec T_2 + \vec P = \vec 0$.
 (c) Chaque fil supporte-t-il la moitié du poids ? Expliquer.
 (d) Que vaudrait $T$ si les deux fils étaient verticaux ? Et que se passe-t-il si on tend les fils
 presque à l'horizontale ?
@@ -116,9 +117,11 @@ Verticalement, $T\sin 30° + T\sin 30° - 10 = 0$, soit $2T \cdot \dfrac12 = 10$
 de chaque tension ($T\sin 30° = 5$ N) porte la poche ; les composantes horizontales tirent l'une contre
 l'autre et se compensent.
 
-(d) Fils verticaux : $2T = 10$, donc $T = 5$ N (chaque fil porte bien la moitié). Plus les fils sont
-proches de l'horizontale, plus $\sin\theta$ est petit et plus $T = \dfrac{10}{2\sin\theta}$ devient
-grand : un fil tendu presque à plat peut casser sous une charge légère.
+(d) Si les fils sont verticaux, alors $\vec T_1=\vec T_2$. Donc l'équation  $\vec T_1 + \vec T_2 + \vec P = \vec 0$ donne $2\vec T_1 = -\vec P$. On en déduit que $2T=P$, où $T$ est la norme de $\vec T_1$ et $P$ est la norme de $\vec P$. Donc $T = 5$ N (chaque fil porte bien la moitié). 
+
+En reprenant les raisonnement en (b) avec un angle $\theta$ arbitraire au lieu de $30^\circ$, on obtient que $T=\dfrac{10}{2\sin(\theta)$. Dpnc les fils sont
+proches de l'horizontale, c'est-à-dire plus $\theta$ est proche de $0^\circ$, plus $\sin\theta$ est proche de $0$ et plus $T = \dfrac{10}{2\sin\theta}$ devient
+grand. La tension devient donc de plus en plus forte, ce qui pourrait faire compre le fil.
 
 ## Piège
 
@@ -128,83 +131,33 @@ avec les normes au lieu des composantes.
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Transfert|2|O4"}
-Un soignant pousse un brancard sur $10$ m, en ligne droite, sur un sol horizontal. Il exerce une force
-$\vec F$ de norme $60$ N, dirigée à $60°$ sous l'horizontale. Le **travail** de la force sur le
-déplacement $\vec d$ vaut $W = \vec F \cdot \vec d$ (en joules, si $\vec F$ est en newtons et $\vec d$
-en mètres).
 
-![](img/t-travail.svg){fig-alt="Brancard poussé par une force F à 60 degrés sous l'horizontale, déplacement d de 10 m" width="9.7cm" fig-align="center"}
 
-(a) Calculer $W$ à partir des normes et de l'angle.
-(b) Écrire $\vec F$ et $\vec d$ en coordonnées ($x$ vers la droite, $y$ vers le haut) et recalculer $W$.
-(c) Quelle partie de la force fait avancer le brancard ? À quoi sert l'autre ?
-(d) Pour une même norme de $\vec F$, quelle direction de poussée donnerait le plus grand travail ?
-Lequel ?
+::: {.callout-caution .exo title="Exercice|Transfert|2|O5"}
+
+Soient $\vec u = (1, 2, 3)$ et $\vec v = (0, 1, -1)$.
+
+a. On cherche à déterminer $\vec u \times \vec v$.
+
+   1. On pose $\vec w = \vec u \times \vec v = (x,y,z)$.  
+   Quelles propriétés géométriques permettent de caractériser la direction de $\vec w$ ?
+   2. Traduire ces propriétés à l'aide de produits scalaires et obtenir un système d'équations vérifié par $x,y,z$.
+   3. Résoudre ce système et montrer que $\vec w$ est de la forme
+   $$
+   \vec w=\lambda(-5,1,1).
+   $$
+   4. Quelle information supplémentaire permet de déterminer la valeur de $\lambda$ ? Calculer la norme de $\vec u\times\vec v$ à partir de la définition du produit vectoriel.
+   5. Il reste à déterminer le sens de $\vec w$. Utiliser la **règle de la main droite** pour déterminer si $\lambda$ est positif ou négatif.
+   6. Vérifier que le vecteur obtenu est bien orthogonal à $\vec u$ et à $\vec v$.
+
+b. En déduire $\vec v \times \vec u$ sans refaire de calcul.
+
+c. Que vaut $\vec u \times (2\vec u)$ ? Pourquoi ?
+
 :::
 
 ::: {.aides}
-::: {.panel-tabset}
 
-## Indice 1
-
-Retourne à la théorie du cours : *Application : travail d'une force* et *Produit scalaire via les angles*.
-
-## Indice 2
-
-*Question à te poser.*
-
-Quel est l'angle entre $\vec F$ et $\vec d$ ? Et en coordonnées, quel est le signe de la composante
-verticale de $\vec F$ ?
-
-## Indice 3
-
-*Étape.*
-
-$W = \left\Vert \vec F \right\Vert\,\left\Vert \vec d \right\Vert\cos 60°$. En coordonnées,
-$\vec F = 60\,(\cos(-60°),\ \sin(-60°))$ et $\vec d = (10, 0)$.
-
-## Solution
-
-(a) $W = 60 \cdot 10 \cdot \cos 60° = 600 \cdot \dfrac12 = 300$ J.
-
-(b) $\vec F = \left(30,\ -30\sqrt3\right)$ et $\vec d = (10, 0)$, donc
-$W = 30 \cdot 10 + \left(-30\sqrt3\right) \cdot 0 = 300$ J. ✓
-
-(c) Seule la composante **horizontale** ($30$ N), c'est-à-dire la projection de $\vec F$ sur la direction
-du déplacement, travaille. La composante verticale plaque le brancard contre le sol : elle est
-orthogonale au déplacement et son travail est nul.
-
-![](img/t-travail-sol.svg){fig-alt="Décomposition de F en une composante horizontale utile et une composante verticale" width="9.7cm" fig-align="center"}
-
-(d) Pousser à l'horizontale ($\cos 0° = 1$) : $W = 60 \cdot 10 = 600$ J, le double.
-
-## Piège
-
-Prendre $\sin 60°$ au lieu de $\cos 60°$ : c'est l'angle **entre** la force et le déplacement qui
-compte ; oublier que la composante verticale ne travaille pas.
-
-:::
-:::
-
-::: {.callout-caution .exo title="Exercice|Transfert|3|O5"}
-L'avant-bras est tenu à l'horizontale et porte une charge de poids $20$ N, à $30$ cm du coude $O$. Le
-biceps s'attache à $4$ cm du coude et tire verticalement vers le haut avec une force $\vec B$.
-
-![](img/t-biceps.svg){fig-alt="Avant-bras horizontal : biceps à 4 cm du coude, charge à 30 cm" width="8.9cm" fig-align="center"}
-
-Le **moment** d'une force $\vec F$ appliquée au point $M$, par rapport à $O$, est
-$\overrightarrow{OM} \times \vec F$ ; il décrit l'effet de rotation de la force autour de $O$. On prend
-$x$ le long de l'avant-bras, $y$ vers le haut et $z$ vers toi (hors de la feuille). Les longueurs sont
-en mètres.
-
-(a) Calculer le moment du poids $\vec P$. Dans quel sens fait-il tourner l'avant-bras ?
-(b) L'avant-bras est immobile : la somme des moments de $\vec B$ et $\vec P$ est nulle. Calculer
-$\left\Vert \vec B \right\Vert$.
-(c) Comparer $\left\Vert \vec B \right\Vert$ au poids porté. Pourquoi une telle différence ?
-:::
-
-::: {.aides}
 ::: {.panel-tabset}
 
 ## Indice 1
@@ -213,40 +166,132 @@ Retourne à la théorie du cours : *Produit vectoriel dans $\mathbb{R}^3$*.
 
 ## Indice 2
 
-*Question à te poser.*
-
-Quelles sont les coordonnées du point d'application de chaque force, et celles de chaque force ? Le
-moment obtenu pointe-t-il vers toi ou s'éloigne-t-il de toi ?
+Pour commencer, demande-toi : **dans quelle direction pointe le produit vectoriel $\vec u\times\vec v$ ?**
 
 ## Indice 3
 
-*Étape.*
+Une étape par sous-question :
 
-Dans chaque produit, les deux vecteurs sont dans le plan $(x, y)$ et perpendiculaires : le moment est
-porté par l'axe des $z$, sa norme est le produit des deux normes ($\sin 90° = 1$) et son sens se lit
-avec la règle de la main droite.
+1. $\vec u\times\vec v$ est perpendiculaire à $\vec u$ et à $\vec v$.
+2. Si $\vec w=(x,y,z)$, traduire ces deux perpendicularités par deux produits scalaires nuls.
+3. Résoudre le système obtenu.
+4. Utiliser
+   $$
+   \|\vec u\times\vec v\|
+   =\|\vec u\|\,\|\vec v\|\,|\sin\theta|.
+   $$
+5. Pour choisir entre les deux sens possibles, utiliser la **règle de la main droite** : les doigts suivent le mouvement de $\vec u$ vers $\vec v$ par l'angle le plus court et le pouce indique le sens de $\vec u\times\vec v$.
+6. Effectuer les deux produits scalaires pour contrôler.
 
 ## Solution
 
-(a) $\overrightarrow{OM} = (0{,}3 ;\ 0 ;\ 0)$ et $\vec P = (0 ;\ -20 ;\ 0)$ sont perpendiculaires et dans le
-plan $(x, y)$ : le moment est porté par l'axe des $z$ et sa norme vaut $0{,}3 \cdot 20 \cdot \sin 90° = 6$ N·m.
-Main droite : l'index suit $\overrightarrow{OM}$ (vers la droite), le majeur suit $\vec P$ (vers le bas), le
-pouce s'éloigne de toi. Le moment vaut donc $(0 ;\ 0 ;\ -6)$ : le poids fait tourner l'avant-bras dans le
-sens des aiguilles d'une montre, vers le bas.
+a. Soit $\vec w=(x,y,z)$.
 
-(b) Pour le biceps, $(0{,}04 ;\ 0 ;\ 0)$ et $(0 ;\ B ;\ 0)$ : même raisonnement, norme $0{,}04\,B$, pouce
-vers toi. Le moment vaut $(0 ;\ 0 ;\ 0{,}04\,B)$.
-Équilibre : $0{,}04\,B - 6 = 0$, donc $B = \dfrac{6}{0{,}04} = 150$ N.
+   1. Par définition, $\vec u\times\vec v$ est perpendiculaire à $\vec u$ et à $\vec v$.
+   2. Avec $\vec w=(x,y,z)$ :
 
-(c) Le biceps tire avec $150$ N pour porter $20$ N, plus de sept fois plus. Il agit tout près du coude
-($4$ cm) alors que la charge est loin ($30$ cm) : la norme du moment est « distance $\times$ force »
-(quand elles sont perpendiculaires), donc une petite distance impose une grande force.
-En contrepartie, un petit raccourcissement du muscle fait parcourir un grand chemin à la main.
+   $$
+   \begin{cases}
+   \vec w\cdot\vec u=0\\
+   \vec w\cdot\vec v=0
+   \end{cases}
+   $$
+
+   donc
+
+   $$
+   \begin{cases}
+   x+2y+3z=0\\
+   y-z=0.
+   \end{cases}
+   $$
+
+   3. De $y=z$, on obtient $x=-5z$. Ainsi,
+
+   $$
+   \vec w=(-5z,z,z)=z(-5,1,1).
+   $$
+
+   4. On calcule $\|\vec u\|=\sqrt{14}$ et $\|\vec v\|=\sqrt2$. De plus $\vec u\cdot\vec v=-1$.  Donc
+
+   $$
+   \cos\theta=\frac{-1}{\sqrt{28}}.
+   $$
+   
+   Comme $\sin^2(\theta)+\cos^2(\theta)=1$, on a    
+
+   $$
+   |\sin\theta|
+   =\sqrt{1-\frac1{28}}
+   =\sqrt{\frac{27}{28}}.
+   $$
+
+   Ainsi,
+
+   $$
+   \|\vec u\times\vec v\|
+   =\sqrt{14}\sqrt2\sqrt{\frac{27}{28}}
+   =3\sqrt3.
+   $$
+
+   5. Puisque $\vec w=z(-5,1,1)$
+
+   $$
+   \|\vec w\|=|z|\|(-5,1,1)\|=|z|\sqrt{27}=3\sqrt3|z|.
+   $$
+
+   Donc $|z|=1$, par le point 4.
+
+   Il reste à choisir entre les deux vecteurs possibles :
+
+   $$
+   (-5,1,1)
+   \qquad\text{ou}\qquad
+   (5,-1,-1).
+   $$
+
+   D'après la **règle de la main droite**, lorsque les doigts de la main droite tournent de $\vec u$ vers $\vec v$ par l'angle le plus court, le pouce indique le sens de $\vec u\times\vec v$.
+
+   Pour $\vec u=(1,2,3)$ et $\vec v=(0,1,-1)$, ce sens correspond à celui de
+
+   $$
+   (-5,1,1).
+   $$
+
+   Ainsi $z=1$ et
+
+   $$
+   {\vec u\times\vec v=(-5,1,1)}.
+   $$
+
+   6. Contrôle de l'orthogonalité:
+
+   $$
+   (-5,1,1)\cdot(1,2,3)=-5+2+3=0
+   $$
+
+   et
+
+   $$
+   (-5,1,1)\cdot(0,1,-1)=0+1-1=0.
+   $$
+
+
+b. On a $\vec v\times\vec u=-\,\vec u\times\vec v$. Donc ${\vec v\times\vec u=(5,-1,-1)}$.
+
+c. ${\vec u\times(2\vec u)=\vec0}$. En effet, $\vec u$ et $2\vec u$ sont colinéaires : le parallélogramme qu'ils forment est aplati et son aire est nulle.
 
 ## Piège
 
-Inverser l'ordre du produit ($\vec F \times \overrightarrow{OM}$) : le signe du moment change, donc le
-sens de rotation annoncé est faux.
+La perpendicularité permet de déterminer la **direction** du produit vectoriel, mais pas encore sa longueur ni son sens.
+
+Il faut donc compléter avec les deux autres éléments de la définition :
+
+- la **norme** $\|\vec u\times\vec v\|$ ;
+- le **sens**, déterminé par la **règle de la main droite**.
+
+Attention également : la règle de la main droite donne le sens de $\vec u\times\vec v$, tandis que celui de $\vec v\times\vec u$ est le sens opposé.
 
 :::
+
 :::
