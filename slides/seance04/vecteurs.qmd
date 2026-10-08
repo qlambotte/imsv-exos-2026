@@ -2,7 +2,7 @@
 title: "Séance 4 — Vecteurs et systèmes de coordonnées"
 subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie — séance d'exercices"
 description: "Déroulé complet de la séance — échauffement, méthodes, synthèse"
-author: "Quentin Lambotte · FMPB · UMONS"
+author: "Chloé Capon · FS · UMONS"
 date: 10/12/2026
 date-format: "D MMMM YYYY"
 lang: fr
@@ -27,49 +27,7 @@ format:
     include-after-body: ../seance01/annotate.html
 ---
 
-# Présentation {.divider background-color="#14304a"}
-
-## Le déroulé de la séance
-
-<table class="deroule">
-<thead><tr><th>Temps</th><th>Durée</th><th>Ce qu'on y fait</th></tr></thead>
-<tbody>
-<tr><td class="ph">1 · Échauffement</td><td class="du">10 min</td><td>Quatre questions rapides projetées. Tu réponds sur papier, puis on vote.</td></tr>
-<tr><td class="ph">2 · Socle</td><td class="du">35 min</td><td>Les exercices de base, à ton rythme, en t'auto-corrigeant sur un site.</td></tr>
-<tr><td class="ph">3 · Pause</td><td class="du">10 min</td><td>On souffle, on prend un café, ...</td></tr>
-<tr><td class="ph">4 · Transfert</td><td class="du">35 min</td><td>Des problèmes en contexte. Ici le travail avec les voisin·es est conseillé.</td></tr>
-<tr><td class="ph">5 · Méthodes</td><td class="du">20 min</td><td>On dégage ensemble deux méthodes réutilisables.</td></tr>
-</tbody>
-</table>
-
-## La gestion du bruit
-
-::::::: modes
-:::: {.mode .travail}
-::: m-titre
-Travail autonome
-:::
-
-Seul ou avec tes voisin·es : le bruit est normal, mais il doit rester **contenu**.
-::::
-
-:::: {.mode .jeparle}
-::: m-titre
-Travail collectif
-:::
-
-Quand je reprends la parole, j'ai besoin d'un **silence complet**.
-::::
-:::::::
-
-Le **niveau sonore projeté** reste affiché pendant les moments de travail :
-
-- **Bleu** — c'est bon, on continue.
-- **Rouge**, signalé par **un gong** — on baisse le volume d'un cran.
-
-::: {.aretenir .smaller}
-**Seul·es tes voisin·es doivent t'entendre.** Avec environ 400 étudiant·es dans la salle, quelques conversations de trop suffisent à rendre le travail impossible pour tout le monde.
-:::
+# Rappel {.divider background-color="#14304a"}
 
 ## Où trouver l'aide pendant la séance
 
@@ -93,7 +51,11 @@ C'est normal de bloquer : ça fait partie de l'apprentissage. Quand ça t'arrive
 
 ## Annonces
 
-<!-- >>> À COMPLÉTER <<< -->
+Deux séances de remédiations, à distance, sous forme de questions-réponses:
+
+1. Mardi: pour les biologistes. Posez vos questions pour aujourd'hui 13 via l'activité "Remédiation du 13/10" sur moodle.
+
+2. Jeudi: pour les biologistes et les biomeds. Posez vos questions pour mercredi 13 au plus tard via l'activité "Remédiation du 15/10" sur moodle.
 
 # Échauffement {.divider background-color="#14304a"}
 
@@ -284,6 +246,7 @@ Avec $A = (1, -1)$ et $B = (4, 3)$, quelles sont les coordonnées de $\overright
 ::: aretenir
 On fait « extrémité moins origine » : $\overrightarrow{AB} = (4 - 1,\ 3 - (-1)) = (3, 4)$.
 
+
 Calculer « origine moins extrémité » donne $(-3, -4) = \overrightarrow{BA}$ : même direction, **sens opposé**. C'est l'erreur classique.
 :::
 
@@ -294,7 +257,7 @@ Que vaut la norme du vecteur $(-6, 8)$ ?
 . . .
 
 ::: aretenir
-Par Pythagore : $\Vert (-6, 8)\Vert = \sqrt{(-6)^2 + 8^2} = \sqrt{36 + 64} = \sqrt{100} = 10$.
+$\Vert (-6, 8)\Vert = \sqrt{(-6)^2 + 8^2} = \sqrt{36 + 64} = \sqrt{100} = 10$.
 
 Une norme est **toujours positive** : le signe de $-6$ disparaît au carré. Additionner les coordonnées ($-6 + 8 = 2$) ou leurs valeurs absolues ($14$) sont les erreurs classiques.
 :::
@@ -344,7 +307,6 @@ Cette question amène la première méthode : passer de la norme et de l'angle a
 
 ## Avant de commencer
 
-Une force est souvent donnée par sa **norme** et son **angle** ; pour l'additionner à une autre, il faut ses **coordonnées**.
 
 Avec tes mots : comment obtiens-tu les coordonnées d'un vecteur dont tu connais la norme et l'angle avec l'horizontale ?
 
@@ -373,15 +335,15 @@ Norme et angle
 
 ## Notre fil rouge
 
-Un muscle exerce sur un tendon une force $\vec F$ de norme $8$ N, qui fait un angle de $150°$ avec l'horizontale.
+On considère un vecteur $\vec u$ de norme $8$, qui fait un angle de $150°$ avec l'horizontale.
 
-Quelles sont les coordonnées de $\vec F$ ?
+Quelles sont les coordonnées de $\vec u$ ?
 
 On va construire la réponse, une étape à la fois.
 
 ## Étape 1 — dessiner
 
-[1]{.step} **Dans quel quadrant se trouve $\vec F$ ?**
+[1]{.step} **Dans quel quadrant se trouve $\vec u$ ?**
 
 On dessine le vecteur à partir de l'origine du repère.
 
@@ -390,9 +352,9 @@ On dessine le vecteur à partir de l'origine du repère.
 :::::: columns
 ::::: {.column width="45%"}
 ::: aretenir
-$150°$ est entre $90°$ et $180°$ : $\vec F$ est dans le **deuxième quadrant**.
+$150°$ est entre $90°$ et $180°$ : $\vec u$ est dans le **deuxième quadrant**.
 
-On attend donc $F_x < 0$ et $F_y > 0$.
+On attend donc $u_x < 0$ et $u_y > 0$.
 :::
 :::::
 ::::: {.column width="55%"}
@@ -409,8 +371,8 @@ Sur le cercle trigonométrique, le point d'angle $\theta$ est $(\cos\theta,\ \si
 . . .
 
 ::: aretenir
-$\vec F$ a la même direction et le même sens, mais une norme $8$ fois plus grande : on multiplie par $8$.
-$$\vec F = \left(\Vert \vec F\Vert \cos\theta,\ \Vert \vec F\Vert \sin\theta\right) = \left(8 \cos 150°,\ 8 \sin 150°\right).$$
+$\vec u$ a la même direction et le même sens, mais une norme $8$ fois plus grande : on multiplie par $8$.
+$$\vec u = \left(\Vert \vec u\Vert \cos\theta,\ \Vert \vec u\Vert \sin\theta\right) = \left(8 \cos 150°,\ 8 \sin 150°\right).$$
 :::
 
 ## Étape 3 — les valeurs remarquables
@@ -422,7 +384,7 @@ $$\vec F = \left(\Vert \vec F\Vert \cos\theta,\ \Vert \vec F\Vert \sin\theta\rig
 ::: aretenir
 $150° = 180° - 30°$ : c'est le symétrique de $30°$ par rapport à l'axe vertical. Donc
 $$\cos 150° = -\cos 30° = -\frac{\sqrt3}{2} \quad\text{et}\quad \sin 150° = \sin 30° = \frac12.$$
-Ainsi $\vec F = \left(8 \cdot \left(-\dfrac{\sqrt3}{2}\right),\ 8 \cdot \dfrac12\right) = \left(-4\sqrt3,\ 4\right)$.
+Ainsi $\vec u = \left(8 \cdot \left(-\dfrac{\sqrt3}{2}\right),\ 8 \cdot \dfrac12\right) = \left(-4\sqrt3,\ 4\right)$.
 :::
 
 ## Étape 4 — contrôler
@@ -439,9 +401,9 @@ Ainsi $\vec F = \left(8 \cdot \left(-\dfrac{\sqrt3}{2}\right),\ 8 \cdot \dfrac12
 
 ## Et dans l'autre sens ?
 
-Le courant entraîne une algue à la vitesse $\vec v = \left(-1,\ -\sqrt3\right)$ m/s.
+Partons de $\vec v = \left(-1,\ -\sqrt3\right)$ .
 
-Quelle est la valeur de cette vitesse, et quel angle fait-elle avec l'horizontale ?
+Quelle est la norme de ce vecteur, et quel angle fait-il avec l'horizontale ?
 
 ## Étapes 1 et 2 — norme et quadrant
 
@@ -452,7 +414,7 @@ Quelle est la valeur de cette vitesse, et quel angle fait-elle avec l'horizontal
 :::::: columns
 ::::: {.column width="48%"}
 ::: aretenir
-**Norme** : $\Vert \vec v\Vert = \sqrt{(-1)^2 + \left(-\sqrt3\right)^2} = \sqrt{1 + 3} = 2$ m/s.
+**Norme** : $\Vert \vec v\Vert = \sqrt{(-1)^2 + \left(-\sqrt3\right)^2} = \sqrt{1 + 3} = 2$.
 
 **Quadrant** : $v_x < 0$ et $v_y < 0$, **troisième quadrant** : l'angle est entre $180°$ et $270°$.
 :::
@@ -531,7 +493,7 @@ Une grandeur orientée est donnée par sa norme et un angle, ou il faut retrouve
 ::: {.fiche-field .fragment}
 Exemple
 
-$8$ N à $150°$ : $\left(-4\sqrt3,\ 4\right)$. Inversement, $\left(-1, -\sqrt3\right)$ : norme $2$, $\tan\theta = \sqrt3$, quadrant III, $\theta = 240°$.
+Reprendre l'exemple des slides précédentes
 :::
 
 ::: {.fiche-field .fragment}
@@ -718,7 +680,7 @@ Dès qu'il faut un angle entre deux vecteurs non nuls, tester une perpendiculari
 ::: {.fiche-field .fragment}
 Exemple
 
-$\left(\sqrt3, 1\right) \cdot (0, 2) = 2$ ; normes $2$ et $2$, donc $\cos\theta = \frac12$ et $\theta = 60°$ ; projection $\frac22 = 1$ ; $(a, 3)$ orthogonal à $\left(\sqrt3, 1\right)$ si $a = -\sqrt3$.
+Reprendre ce qui a été fait dans les slides précédentes.
 :::
 
 ::: {.fiche-field .fragment}
