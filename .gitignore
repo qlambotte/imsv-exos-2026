@@ -1,9 +1,11 @@
 # ---- Sortie de rendu Quarto ----
 # Publiée séparément (branche gh-pages via `quarto publish gh-pages`) : à ne pas versionner.
 /_book/
+/a_supprimer/
 
 # ---- Cache / temporaires Quarto ----
 /.quarto/
+**/.quarto/
 /_freeze/
 
 # ---- Dossier temporaire de build-pdf.sh ----
