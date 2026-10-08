@@ -258,7 +258,7 @@ points est la norme du vecteur qui les relie.
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Renforcement|2|O4"}
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
 (a) Calculer l'angle entre $\vec u = (1, 1, 0)$ et $\vec v = (1, 0, 1)$.
 (b) Trouver $a$ pour que $(2, a, 1)$ et $(1, -1, 4)$ soient orthogonaux.
 :::
@@ -280,7 +280,7 @@ $\cos\theta = \dfrac{1}{2}$ et $\theta = 60°$.
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Renforcement|3|O4"}
+::: {.callout-caution .exo title="Exercice|Renforcement|3|O2"}
 Soient $\vec i = (1, 0)$, $\vec j = (0, 1)$ et $\vec u = (3, 4)$.
 
 (a) Calculer $\vec u \cdot \vec i$ et $\vec u \cdot \vec j$. Que retrouve-t-on ?
@@ -307,7 +307,7 @@ $\vec w$ font un petit angle.
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Renforcement|3|O4"}
+::: {.callout-caution .exo title="Exercice|Renforcement|3|O2"}
 (a) Pour trois vecteurs $\vec u$, $\vec v$, $\vec w$ du plan, l'expression $\vec u \cdot (\vec v \cdot \vec w)$
 a-t-elle un sens ? Et $(\vec u \cdot \vec v)\,\vec w$ ?
 (b) Montrer qu'aucun vecteur non nul $\vec w$ de $\mathbb{R}^2$ n'est orthogonal à la fois à
@@ -344,7 +344,7 @@ deux écritures n'a pas de sens.
 
 
 
-::: {.callout-caution .exo title="Exercice|Renforcement|1|O5"}
+::: {.callout-caution .exo title="Exercice|Renforcement|1|O2"}
 Soient $\vec i = (1, 0, 0)$, $\vec j = (0, 1, 0)$ et $\vec k = (0, 0, 1)$. Calculer
 $\vec i \times \vec j$, $\vec j \times \vec k$, $\vec k \times \vec i$ et $\vec j \times \vec i$, puis vérifier
 chaque résultat avec la règle de la main droite.

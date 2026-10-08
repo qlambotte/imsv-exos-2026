@@ -17,6 +17,7 @@ for page in "$SRC"/methodes/seance*.qmd; do
   [ -f "$FRAG" ] || { echo "  (pas de fragment pour $S, ignoré)"; continue; }
   rm -rf "$TMP"; mkdir -p "$TMP"
   cp "$FRAG" "$TMP/_frag.qmd"; cp "$ROOT/methode.lua" "$TMP/"
+  [ -d "$SRC/methodes/img" ] && cp -r "$SRC/methodes/img" "$TMP/"   # figures des cartes
   cat > "$TMP/_w.qmd" <<INNER
 ---
 title: "Méthodes — Séance $NUM"

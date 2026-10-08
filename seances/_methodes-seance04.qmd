@@ -2,7 +2,7 @@
      Fragment sans en-tête : inclus par la page methodes/seance04.qmd (site, correctif)
      et par build-boite.sh pour le PDF « méthodes » (une méthode par page).
      Mise en forme par le filtre methode.lua. Calc-free, notation du cours.
-     Pas de figure ici : build-boite.sh ne copie que le fragment. -->
+     Figures : seances/methodes/img/ (copié par build-boite.sh), générées par seances/_seance04/img/figs.py. -->
 
 ::: {.methode obj="O2" titre="Additionner et soustraire des vecteurs sur un dessin"}
 
@@ -11,11 +11,11 @@ Dès qu'il faut construire une somme, une différence ou un multiple de vecteurs
 :::
 
 ::: {.etapes}
-1. Un vecteur ne dépend que de sa **norme**, sa **direction** et son **sens** : tu peux déplacer une flèche
+1. Un vecteur non nul ne dépend que de sa **norme**, sa **direction** et son **sens** : tu peux déplacer une flèche
    parallèlement à elle-même.
 2. Pour $\vec u + \vec v$, place les flèches **bout à bout** (l'origine de $\vec v$ à l'extrémité de
    $\vec u$) ; la somme va de la première origine à la dernière extrémité.
-3. Pour $\vec u - \vec v$, ajoute $-\vec v$ (même direction et même norme que $\vec v$, sens opposé).
+3. Pour $\vec u - \vec v$, ajoute $-\vec v$ : $\vec u - \vec v = \vec u + (-\vec v)$.
 4. Pour $\lambda\,\vec u$ : même direction, norme multipliée par $|\lambda|$, sens conservé si $\lambda > 0$ et
    inversé si $\lambda < 0$.
 :::
@@ -23,6 +23,8 @@ Dès qu'il faut construire une somme, une différence ou un multiple de vecteurs
 ::: {.exemple}
 $\vec u = (3, 1)$, $\vec v = (1, 2)$ : bout à bout, on arrive à $\vec u + \vec v = (4, 3)$ ; avec
 $-\vec v$, on arrive à $\vec u - \vec v = (2, -1)$.
+
+![](img/m-somme.svg){fig-alt="u = (3, 1) et v = (1, 2) bout à bout : u + v = (4, 3) ; u plus −v : u − v = (2, −1)" width="8.6cm" fig-align="center"}
 :::
 
 ::: {.piege}
@@ -32,7 +34,7 @@ Dessiner les deux flèches à partir de la même origine et relier leurs extrém
 
 :::
 
-::: {.methode obj="O3" titre="Passer de la norme et de l'angle aux coordonnées (et retour)"}
+::: {.methode obj="O3" titre="Passer de la norme et de l'angle aux coordonnées (et réciproquement)"}
 
 ::: {.quand}
 Dès qu'une grandeur orientée (force, vitesse, déplacement) est donnée par sa norme et un angle, ou qu'il
@@ -40,16 +42,27 @@ faut retrouver norme et angle à partir des coordonnées.
 :::
 
 ::: {.etapes}
-1. Repère l'angle $\theta$ mesuré depuis l'axe des $x$ (sens trigonométrique) et le **quadrant**.
-2. Coordonnées : $\vec u = \left\Vert \vec u \right\Vert\,(\cos\theta,\ \sin\theta)$.
-3. Retour : $\left\Vert \vec u \right\Vert = \sqrt{u_x^2 + u_y^2}$, puis
-   $\cos\theta = \dfrac{u_x}{\left\Vert \vec u \right\Vert}$ et $\sin\theta = \dfrac{u_y}{\left\Vert \vec u \right\Vert}$.
-4. **Contrôle** : les signes des coordonnées correspondent au quadrant du dessin.
+1. Repère l'angle $\theta$ mesuré depuis l'axe des $x$ (dans le sens trigonométrique) et le **quadrant**.
+2. Pour calculer les coordonnées, on utilise l'équation $\vec u = \left\Vert \vec u \right\Vert\,(\cos\theta,\ \sin\theta)$.
+3. Pour obtenir la norme et l'angle : $\left\Vert \vec u \right\Vert = \sqrt{u_x^2 + u_y^2}$, puis, si $u_x\neq 0$, $\tan(\theta)=\dfrac{u_y}{u_x}$ et si $u_x=0$, $\theta=\pm 90^\circ$.
+4. **Contrôle** de la réponse : les signes des coordonnées correspondent au quadrant d'un dessin du vecteur, tracé à partir de l'origine du repère.
 :::
 
 ::: {.exemple}
-Norme $6$, angle $150°$ : $6\left(-\tfrac{\sqrt3}{2},\ \tfrac12\right) = \left(-3\sqrt3,\ 3\right)$.
-Inversement, $(-2, 2)$ a pour norme $2\sqrt2$ et fait un angle de $135°$.
+**Vers les coordonnées.** Un muscle exerce sur un tendon une force $\vec F$ de norme $8$ N, à $150°$ de
+l'horizontale. Dessin : $\vec F$ est dans le deuxième quadrant ($F_x < 0$, $F_y > 0$). Comme
+$\cos 150° = -\dfrac{\sqrt3}{2}$ et $\sin 150° = \dfrac12$ (symétrique de $30°$ par rapport à l'axe vertical),
+$$\vec F = \left(8 \cos 150°,\ 8 \sin 150°\right) = \left(-4\sqrt3,\ 4\right).$$
+Contrôle : $-4\sqrt3 < 0$ et $4 > 0$, deuxième quadrant. ✓
+
+
+**Vers la norme et l'angle.** Le courant entraîne une algue à la vitesse $\vec v = (-1, -\sqrt3)$ m/s.
+Norme : $\left\Vert \vec v \right\Vert = \sqrt{1 + 3} = 2$ m/s. Quadrant : $v_x < 0$ et $v_y < 0$, troisième
+quadrant. Angle : $\tan\theta = \dfrac{-\sqrt3}{-1} = \sqrt3$ ; l'angle aigu de tangente $\sqrt3$ est $60°$,
+et dans le troisième quadrant $\theta = 180° + 60° = 240°$.
+Contrôle : $2\left(\cos 240°,\ \sin 240°\right) = 2\left(-\dfrac12,\ -\dfrac{\sqrt3}{2}\right) = (-1, -\sqrt3)$. ✓
+
+![](img/m-norme-coord.svg){fig-alt="Force F de norme 8 à 150 degrés ; composantes −4√3 et 4" width="5.4cm"} ![](img/m-coord-norme.svg){fig-alt="Vecteur v = (−1, −√3) dans le troisième quadrant, angle de 240 degrés" width="4.4cm"}
 :::
 
 ::: {.piege}
@@ -66,108 +79,113 @@ Dès que les vecteurs sont donnés par leurs coordonnées, dans $\mathbb{R}^2$, 
 :::
 
 ::: {.etapes}
-1. Somme, différence et multiple se calculent **coordonnée par coordonnée**.
-2. Coordonnées de $\overrightarrow{AB}$ : extrémité moins origine, $B - A$.
-3. Norme : racine de la somme des **carrés** des coordonnées (Pythagore, appliqué autant de fois qu'il le
-   faut).
-4. Colinéarité : cherche un **même** réel $\lambda$ tel que $\vec v = \lambda\,\vec u$ pour toutes les coordonnées.
+1. La somme, différence et multiple de vecteurs se calculent **coordonnée par coordonnée**.
+2. Les coordonnées de $\overrightarrow{AB}$ sont $(x_B-x_A, y_B-y_A)$: on soustrait aux coordonnées de l'extrémité $B$ les coordonnées de l'origine $A$.
+3. La norme : c'est la racine de la somme des **carrés** des coordonnées.
+4. Colinéarité : cherche un réel $\lambda$ tel que $\vec v = \lambda\,\vec u$. On peut d'abord chercher un tel réel pour les premières coordonnées, puis vérifier si ce réel marche pour les autres. Si c'est le cas, les vecteurs sont colinéaires et si ce n'est pas le cas, ils ne le sont pas.
 :::
 
 ::: {.exemple}
 $(2, -1) + (-3, 4) = (-1, 3)$ ; $\left\Vert (2, 4, 4) \right\Vert = \sqrt{4 + 16 + 16} = 6$ ;
-$(2, -6) = -2\,(-1, 3)$ : colinéaires.
+$(2, -6) = -2\,(-1, 3)$ : colinéaires. $(-2,-6)$ et $(-1, 4)$ ne sont pas colinéaires : pour la première coordonnée, on doit avoir $-2=2\cdot (-1)$, mais $-6\neq 2\cdot 4$. 
+
+![](img/m-coordonnees.svg){fig-alt="À gauche : (2, −1) puis (−3, 4) bout à bout donnent (−1, 3). À droite : (2, −6) et (−1, 3) sur une même droite, de sens opposés" width="7.3cm" fig-align="center"}
 :::
 
 ::: {.piege}
-Calculer « origine moins extrémité » ; oublier la racine carrée dans la norme ; conclure à la
-colinéarité sur une seule coordonnée.
+Calculer « origine moins extrémité » pour calculer les coordonnées d'un vecteur donné par deux points ; oublier la racine carrée dans la norme ; conclure à la
+colinéarité sur une seule coordonnée et ne pas vérifier pour les autres.
 :::
 
 :::
 
-::: {.methode obj="O4" titre="Produit scalaire : angle, orthogonalité, projection"}
+::: {.methode obj="O2" titre="Produit scalaire : angle, orthogonalité, projection"}
 
 ::: {.quand}
-Dès qu'il faut un angle entre deux vecteurs, tester une perpendicularité, projeter un vecteur sur une
+Dès qu'il faut un angle entre deux vecteurs non nuls, tester une perpendicularité, projeter un vecteur sur une
 direction, ou calculer un travail.
 :::
 
 ::: {.etapes}
-1. Calcule $\vec u \cdot \vec v = u_x v_x + u_y v_y$ (dans $\mathbb{R}^n$ : $u_1 v_1 + \dots + u_n v_n$).
-2. **Signe** : positif si l'angle est aigu, nul si les vecteurs sont orthogonaux, négatif s'il est obtus.
-3. **Angle** : $\cos\theta = \dfrac{\vec u \cdot \vec v}{\left\Vert \vec u \right\Vert\,\left\Vert \vec v \right\Vert}$, puis reconnais
-   une valeur remarquable.
-4. **Projection** : la projection orthogonale de $\vec v$ sur la droite de $\vec u$ mesure
-   $\dfrac{\vec u \cdot \vec v}{\left\Vert \vec u \right\Vert}$.
+1. **Calcul** : dans $\mathbb{R}^2$, $\vec u \cdot \vec v = u_x v_x + u_y v_y$ ; dans $\mathbb{R}^n$, $\vec u \cdot \vec v = u_1 v_1 + \dots + u_n v_n$.
+2. **Signe** du produit scalaire : comme $\vec u\cdot \vec v=\left\Vert \vec u \right\Vert \left\Vert \vec v \right\Vert \cos\theta$, où $\theta$ est l'angle entre $\vec u$ et $\vec v$, le produit scalaire est positif si l'angle est aigu ($\cos(\theta)>0$), nul si les vecteurs sont orthogonaux ($\cos 90^\circ = 0$), négatif s'il est obtus ($\cos(\theta)<0$).
+3. Calcul de l'**angle** entre deux vecteurs non nuls : résoudre l'équation $\cos\theta = \dfrac{\vec u \cdot \vec v}{\left\Vert \vec u \right\Vert\,\left\Vert \vec v \right\Vert}$.
+4. **Projection** : la longueur signée de la projection orthogonale de $\vec v$ sur la droite qui porte $\vec u$ vaut
+   $\left\Vert \vec v \right\Vert \cos\theta = \dfrac{\vec u \cdot \vec v}{\left\Vert \vec u \right\Vert}$.
 :::
 
 ::: {.exemple}
-$(3, 0) \cdot (2, 2) = 6$ et $\cos\theta = \dfrac{6}{3 \cdot 2\sqrt2} = \dfrac{\sqrt2}{2}$, donc $\theta = 45°$.
-$(a, 2)$ et $(3, -6)$ sont orthogonaux si $3a - 12 = 0$, soit $a = 4$.
+Soient $\vec u = (\sqrt3, 1)$ et $\vec v = (0, 2)$.
+
+**Signe prévu.** Sur un dessin, $\vec u$ fait $30°$ avec l'axe des $x$ et $\vec v$ pointe vers le haut :
+l'angle est aigu, le produit scalaire sera positif.
+
+**Calcul.** $\vec u \cdot \vec v = \sqrt3 \cdot 0 + 1 \cdot 2 = 2 > 0$. ✓
+
+**Angle.** $\left\Vert \vec u \right\Vert = \sqrt{3 + 1} = 2$ et $\left\Vert \vec v \right\Vert = 2$, donc
+$\cos\theta = \dfrac{2}{2 \cdot 2} = \dfrac12$ et $\theta = 60°$. Contrôle sur le dessin : $90° - 30° = 60°$. ✓
+
+![](img/m-produit-scalaire.svg){fig-alt="u = (√3, 1) à 30 degrés, v = (0, 2) vertical : angle de 60 degrés ; la projection de v sur la droite de u mesure 1" width="5.1cm" fig-align="center"}
+
+
+**Projection.** La projection orthogonale de $\vec v$ sur la droite qui porte $\vec u$ mesure
+$\dfrac{\vec u \cdot \vec v}{\left\Vert \vec u \right\Vert} = \dfrac22 = 1$.
+
+**Orthogonalité.** $(a, 3)$ est orthogonal à $\vec u$ si $\sqrt3\,a + 3 = 0$, c'est-à-dire $a = -\sqrt3$.
 :::
 
 ::: {.piege}
-Oublier de diviser par le produit des normes (un cosinus reste entre $-1$ et $1$) ; croire qu'un
+Oublier de diviser par le produit des normes pour calculer un angle (un cosinus reste entre $-1$ et $1$) ; croire qu'un
 produit scalaire nul impose un vecteur nul.
 :::
 
 :::
 
-::: {.methode obj="O5" titre="Produit vectoriel : calcul et interprétation"}
+::: {.methode obj="O2" titre="Produit vectoriel : direction, norme, sens"}
 
 ::: {.quand}
-Dès qu'il faut un vecteur perpendiculaire à deux vecteurs de l'espace, l'aire d'un parallélogramme ou
-d'un triangle, ou le moment d'une force.
+Dès qu'il faut le produit vectoriel de deux vecteurs de l'espace, un vecteur perpendiculaire à deux
+vecteurs, ou l'aire d'un parallélogramme ou d'un triangle.
 :::
 
 ::: {.etapes}
-1. **Direction** : $\vec u \times \vec v$ est perpendiculaire au plan de $\vec u$ et $\vec v$ (si ce plan est
-   le plan $(x, y)$, il est porté par l'axe des $z$).
-2. **Norme** : l'aire du parallélogramme construit sur $\vec u$ et $\vec v$,
-   $\left\Vert \vec u \times \vec v \right\Vert = \left\Vert \vec u \right\Vert \left\Vert \vec v \right\Vert \sin\theta$
-   (la moitié pour un triangle) ; elle est nulle si les vecteurs sont colinéaires.
-3. **Sens** : règle de la main droite (index sur $\vec u$, majeur sur $\vec v$, le pouce donne le sens) ;
-   $\vec v \times \vec u = -(\vec u \times \vec v)$.
-4. **Contrôle** : $(\vec u \times \vec v) \cdot \vec u = 0$ et $(\vec u \times \vec v) \cdot \vec v = 0$.
+1. **Direction** : pose $\vec w = \vec u \times \vec v = (x, y, z)$. Il est perpendiculaire à $\vec u$ et à
+   $\vec v$ : écris $\vec w \cdot \vec u = 0$ et $\vec w \cdot \vec v = 0$, puis résous ce système. Tu obtiens
+   $\vec w = \lambda\,(a, b, c)$.
+2. **Norme** : calcule $\cos\theta = \dfrac{\vec u \cdot \vec v}{\left\Vert \vec u \right\Vert \left\Vert \vec v \right\Vert}$,
+   puis $\sin\theta = \sqrt{1 - \cos^2\theta}$ (positif, car $\theta \in [0, \pi]$), et enfin
+   $\left\Vert \vec u \times \vec v \right\Vert = \left\Vert \vec u \right\Vert \left\Vert \vec v \right\Vert \sin\theta$.
+   En égalant à $|\lambda| \left\Vert (a, b, c) \right\Vert$, tu trouves $|\lambda|$.
+3. **Sens** : règle de la main droite ; les doigts tournent de $\vec u$ vers $\vec v$ par le plus petit
+   angle, le pouce donne le sens de $\vec u \times \vec v$. Tu en déduis le signe de $\lambda$.
+   Rappel : $\vec v \times \vec u = -(\vec u \times \vec v)$.
+4. **Contrôle** : $\vec w \cdot \vec u = 0$ et $\vec w \cdot \vec v = 0$. Si $\vec u$ et $\vec v$ sont
+   colinéaires, $\vec u \times \vec v = \vec 0$.
 :::
 
 ::: {.exemple}
-$(3, 0, 0) \times (1, 2, 0)$ : porté par l'axe des $z$ ; norme $6$, l'aire du parallélogramme de base $3$
-et de hauteur $2$ ; main droite : vers les $z$ positifs. Donc $(0, 0, 6)$.
+Soient $\vec u = (3, 0, 0)$ et $\vec v = (1, 2, 0)$.
+
+**Direction.** Avec $\vec w = (x, y, z)$ : $\vec w \cdot \vec u = 3x = 0$ et $\vec w \cdot \vec v = x + 2y = 0$,
+donc $x = 0$ puis $y = 0$ ; $z$ est libre : $\vec w = z\,(0, 0, 1)$.
+
+**Norme.** $\vec u \cdot \vec v = 3$, $\left\Vert \vec u \right\Vert = 3$ et $\left\Vert \vec v \right\Vert = \sqrt5$, donc
+$\cos\theta = \dfrac{3}{3\sqrt5} = \dfrac{1}{\sqrt5}$ et $\sin\theta = \sqrt{1 - \dfrac15} = \dfrac{2}{\sqrt5}$.
+Ainsi $\left\Vert \vec u \times \vec v \right\Vert = 3 \cdot \sqrt5 \cdot \dfrac{2}{\sqrt5} = 6$, donc $|z| = 6$.
+C'est bien l'aire du parallélogramme de base $3$ et de hauteur $2$.
+
+**Sens.** Les doigts tournent de $\vec u$ (axe des $x$) vers $\vec v$ en suivant la flèche courbe, dans le
+plan $(x, y)$ : comme pour aller de l'axe des $x$ vers l'axe des $y$, le pouce pointe vers les $z$ positifs. Donc
+$z = 6$ et $\vec u \times \vec v = (0, 0, 6)$.
+
+![](img/m-vectoriel.svg){fig-alt="Repère x, y, z ; u = (3, 0, 0) et v = (1, 2, 0) dans le plan (x, y) ; flèche courbe de u vers v ; candidats (0, 0, 6) vers le haut et (0, 0, −6) vers le bas" width="5.8cm" fig-align="center"}
+
+**Contrôle.** $(0, 0, 6) \cdot (3, 0, 0) = 0$ et $(0, 0, 6) \cdot (1, 2, 0) = 0$.
 :::
 
 ::: {.piege}
-Appliquer la main droite dans le mauvais ordre (le sens s'inverse) ; oublier de diviser par $2$ pour
-l'aire d'un triangle.
-:::
-
-:::
-
-::: {.methode obj="O3" titre="Résoudre un problème de forces"}
-
-::: {.quand}
-Dès que plusieurs forces s'exercent sur un même point : chercher leur résultante, ou une force
-inconnue quand le point est immobile.
-:::
-
-::: {.etapes}
-1. **Représente** chaque force par une flèche partant du point où elle s'applique.
-2. **Choisis un repère** et écris chaque force en coordonnées : $F\,(\cos\theta,\ \sin\theta)$.
-3. **Additionne** coordonnée par coordonnée ; à l'équilibre, écris que chaque coordonnée de la somme est
-   nulle.
-4. **Reviens au dessin** : norme et direction de la résultante.
-5. **Contrôle** : la norme de la somme ne dépasse pas la somme des normes ; les symétries de la figure
-   se retrouvent dans les coordonnées.
-:::
-
-::: {.exemple}
-Deux forces de $40$ N à $\pm 30°$ de l'horizontale : $\left(20\sqrt3,\ 20\right) + \left(20\sqrt3,\ -20\right)
-= \left(40\sqrt3,\ 0\right)$, une résultante horizontale d'environ $69$ N, inférieure à $80$ N.
-:::
-
-::: {.piege}
-Additionner les **normes** au lieu des **vecteurs** ; oublier le signe d'une composante dirigée vers le
-bas ou vers la gauche.
+S'arrêter après le système : la perpendicularité ne donne que la **direction**, il faut encore la
+**norme** et le **sens**. Appliquer la main droite de $\vec v$ vers $\vec u$ inverse le résultat.
 :::
 
 :::

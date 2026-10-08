@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a question bank made for Moodle -->
+<!-- It was generated on 2026-10-05 11:43 by LuaLaTeX running -->
+<!-- on *NIX with the package moodle v1.0 (2023/01/28) -->
+
+<quiz>
+ 
+<question type="category">
+  <category>
+    <text>$course$/top/IMSV/Séance 4 — QCM de sortie</text>
+  </category>
+</question>
+ 
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[S4-Q1 Coordonnées et norme d&rsquo;un vecteur]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Soient les points \(A = (1, -2)\) et \(B = (4, 2)\). Quelles sont les coordonnées du vecteur \(\overrightarrow {AB}\) et sa norme ? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Le vecteur \(\overrightarrow {AB}\) décrit le déplacement de \(A\) vers \(B\) : \(\overrightarrow {AB} = (x_B - x_A, y_B - y_A)\). Sa norme se calcule par Pythagore. Voir <EM>Coordonnées cartésiennes</EM> et <EM>Norme d&rsquo;un vecteur</EM>.</p>]]></text>
+  </generalfeedback>
+  <penalty>0</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\overrightarrow {AB} = (3, 4)\) et \(\Vert \overrightarrow {AB}\Vert = 5\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Exact : extrémité moins origine, \((4 - 1, 2 - (-2)) = (3, 4)\), puis Pythagore : \(\sqrt {9 + 16} = 5\).</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\overrightarrow {AB} = (-3, -4)\) et \(\Vert \overrightarrow {AB}\Vert = 5\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Tu as calculé origine moins extrémité : c&rsquo;est \(\overrightarrow {BA} = -\overrightarrow {AB}\), le vecteur de sens opposé.</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\overrightarrow {AB} = (5, 0)\) et \(\Vert \overrightarrow {AB}\Vert = 5\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Tu as additionné les coordonnées des points. Les coordonnées d&rsquo;un vecteur s&rsquo;obtiennent par « extrémité moins origine ».</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\overrightarrow {AB} = (3, 4)\) et \(\Vert \overrightarrow {AB}\Vert = 7\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Les coordonnées sont justes, mais la norme n&rsquo;est pas la somme des coordonnées : c&rsquo;est \(\sqrt {3^2 + 4^2}\) (Pythagore).</p>]]></text></feedback>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[S4-Q2 De la norme aux coordonnées]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Un vecteur \(\vec v\) a pour norme \(4\) et fait un angle de \(120^\circ \) avec l&rsquo;horizontale (sens trigonométrique). Quelles sont ses coordonnées ? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Pour \(\vec v\) de norme \(r\) formant l&rsquo;angle \(\theta \) avec l&rsquo;horizontale : \(\vec v = (r\cos \theta , r\sin \theta )\). Les signes des coordonnées doivent correspondre au quadrant. Voir <EM>De la norme aux coordonnées</EM>.</p>]]></text>
+  </generalfeedback>
+  <penalty>0</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\left (-2, 2\sqrt 3\right )\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Exact : \(\vec v = 4(\cos 120^\circ , \sin 120^\circ ) = 4\left (-\frac 12, \frac {\sqrt 3}{2}\right )\). Deuxième quadrant : \(v_x &lt; 0\) et \(v_y &gt; 0\).</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\left (2, 2\sqrt 3\right )\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Ce sont les coordonnées pour \(60^\circ \). À \(120^\circ \), on est dans le deuxième quadrant : le cosinus est négatif.</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\left (-2\sqrt 3, 2\right )\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Tu as échangé cosinus et sinus (c&rsquo;est l&rsquo;angle de \(150^\circ \)). La première coordonnée est \(r\cos \theta \), la seconde \(r\sin \theta \).</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\left (-\frac 12, \frac {\sqrt 3}{2}\right )\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>C&rsquo;est le point du cercle trigonométrique (norme \(1\)). Il faut encore multiplier par la norme \(4\).</p>]]></text></feedback>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[S4-Q3 Colinéarité]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Lequel de ces vecteurs est colinéaire à \(\vec u = (2, -3)\) ? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>\(\vec u\) et \(\vec v\) (non nuls) sont colinéaires s&rsquo;il existe un réel \(\lambda \) tel que \(\vec v = \lambda \cdot \vec u\), le <B>même</B> \(\lambda \) pour toutes les coordonnées. Voir <EM>Colinéarité</EM>.</p>]]></text>
+  </generalfeedback>
+  <penalty>0</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\((-4, 6)\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Exact : \((-4, 6) = -2 \cdot (2, -3)\). Même direction, sens opposé.</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((3, -2)\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Échanger les coordonnées ne donne pas un multiple : il faudrait \(\lambda = \frac 32\) pour la première coordonnée et \(\lambda = \frac 23\) pour la seconde.</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((4, 6)\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>La première coordonnée demande \(\lambda = 2\), la seconde \(\lambda = -2\) : pas de \(\lambda \) commun, donc pas colinéaires.</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((-2, -3)\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Il faudrait \(\lambda = -1\) pour la première coordonnée et \(\lambda = 1\) pour la seconde : pas colinéaires.</p>]]></text></feedback>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[S4-Q4 Angle via le produit scalaire]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Quel est l&rsquo;angle entre \(\vec u = (2, 0)\) et \(\vec v = (1, 1)\) ? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>On calcule le produit scalaire en coordonnées, puis on l&rsquo;égale à \(\Vert \vec u\Vert \Vert \vec v\Vert \cos \theta \) avec \(\theta \in [0, \pi ]\). Le signe de \(\vec u \cdot \vec v\) annonce déjà si l&rsquo;angle est aigu, droit ou obtus. Voir <EM>Angles via le produit scalaire</EM>.</p>]]></text>
+  </generalfeedback>
+  <penalty>0</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\frac {\pi }{4}\) (soit \(45^\circ \))</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Exact : \(\vec u \cdot \vec v = 2\), \(\Vert \vec u\Vert = 2\), \(\Vert \vec v\Vert = \sqrt 2\), donc \(\cos \theta = \frac {2}{2\sqrt 2} = \frac {\sqrt 2}{2}\).</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\frac {\pi }{3}\) (soit \(60^\circ \))</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>\(\cos \frac {\pi }{3} = \frac 12\). Recalcule \(\cos \theta = \frac {\vec u \cdot \vec v}{\Vert \vec u\Vert \Vert \vec v\Vert }\) : on obtient \(\frac {\sqrt 2}{2}\).</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\frac {3\pi }{4}\) (soit \(135^\circ \))</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Le produit scalaire vaut \(2 &gt; 0\) : l&rsquo;angle est aigu, il ne peut pas être obtus.</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\frac {\pi }{2}\) (soit \(90^\circ \))</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Des vecteurs orthogonaux auraient un produit scalaire nul ; ici \(\vec u \cdot \vec v = 2\).</p>]]></text></feedback>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[S4-Q5 Produit vectoriel]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Dans \(\mathbb {R}^3\), soient \(\vec u = (2, 0, 0)\) et \(\vec v = (0, 3, 0)\). Que vaut \(\vec u \times \vec v\) ? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>\(\vec u \times \vec v\) est perpendiculaire au plan de \(\vec u\) et \(\vec v\), sa norme est l&rsquo;aire du parallélogramme construit sur eux (\(\Vert \vec u\Vert \Vert \vec v\Vert \sin \theta \)) et son sens est donné par la règle de la main droite ; \(\vec v \times \vec u = -(\vec u \times \vec v)\). Voir <EM>Produit vectoriel dans \(\mathbb {R}^3\)</EM>.</p>]]></text>
+  </generalfeedback>
+  <penalty>0</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\((0, 0, 6)\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>Exact : perpendiculaire au plan \((x, y)\), donc porté par l&rsquo;axe des \(z\) ; norme égale à l&rsquo;aire du rectangle, \(2 \cdot 3 = 6\) ; main droite (index sur \(\vec u\), majeur sur \(\vec v\)) : vers les \(z\) positifs.</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((0, 0, -6)\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>La direction et la norme sont justes, mais le sens est inversé : c&rsquo;est \(\vec v \times \vec u\). Applique la règle de la main droite dans l&rsquo;ordre \(\vec u\), puis \(\vec v\).</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((2, 3, 0)\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>C&rsquo;est \(\vec u + \vec v\). Le produit vectoriel est perpendiculaire au plan de \(\vec u\) et \(\vec v\).</p>]]></text></feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+    <feedback format="html"><text><![CDATA[<p>C&rsquo;est le produit scalaire (les vecteurs sont orthogonaux). Le produit vectoriel est un <B>vecteur</B>, de norme égale à l&rsquo;aire du parallélogramme construit sur \(\vec u\) et \(\vec v\).</p>]]></text></feedback>
+  </answer>
+</question>
+ 
+</quiz>

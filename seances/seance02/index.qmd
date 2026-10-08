@@ -36,7 +36,3 @@ Une grille d'**auto-évaluation** sur ces objectifs t'attend à la page
 Les slides de théorie associée sont sur
 **[Moodle](https://moodle.umons.ac.be/course/view.php?id=2657)** (chapitre IMSV-2).
 
-## Avant la séance
-
-- **QCM Moodle de préparation** — court, il amorce la théorie du jour. <!-- lien QCM -->
-- **Prépa de la séance précédente** — à avoir faite : elle réapparaît à l'échauffement.

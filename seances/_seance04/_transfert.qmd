@@ -119,9 +119,9 @@ l'autre et se compensent.
 
 (d) Si les fils sont verticaux, alors $\vec T_1=\vec T_2$. Donc l'équation  $\vec T_1 + \vec T_2 + \vec P = \vec 0$ donne $2\vec T_1 = -\vec P$. On en déduit que $2T=P$, où $T$ est la norme de $\vec T_1$ et $P$ est la norme de $\vec P$. Donc $T = 5$ N (chaque fil porte bien la moitié). 
 
-En reprenant les raisonnement en (b) avec un angle $\theta$ arbitraire au lieu de $30^\circ$, on obtient que $T=\dfrac{10}{2\sin(\theta)$. Dpnc les fils sont
+En reprenant le raisonnement de (b) avec un angle $\theta$ arbitraire au lieu de $30^\circ$, on obtient que $T=\dfrac{10}{2\sin\theta}$. Donc plus les fils sont
 proches de l'horizontale, c'est-à-dire plus $\theta$ est proche de $0^\circ$, plus $\sin\theta$ est proche de $0$ et plus $T = \dfrac{10}{2\sin\theta}$ devient
-grand. La tension devient donc de plus en plus forte, ce qui pourrait faire compre le fil.
+grand. La tension devient donc de plus en plus forte, ce qui pourrait faire rompre le fil.
 
 ## Piège
 
@@ -133,9 +133,9 @@ avec les normes au lieu des composantes.
 
 
 
-::: {.callout-caution .exo title="Exercice|Transfert|2|O5"}
+::: {.callout-caution .exo title="Exercice|Transfert|3|O2"}
 
-Soient $\vec u = (1, 2, 3)$ et $\vec v = (0, 1, -1)$.
+Soient $\vec u = (1, 1, -1)$ et $\vec v = (0, 2, -1)$.
 
 a. On cherche à déterminer $\vec u \times \vec v$.
 
@@ -144,10 +144,14 @@ a. On cherche à déterminer $\vec u \times \vec v$.
    2. Traduire ces propriétés à l'aide de produits scalaires et obtenir un système d'équations vérifié par $x,y,z$.
    3. Résoudre ce système et montrer que $\vec w$ est de la forme
    $$
-   \vec w=\lambda(-5,1,1).
+   \vec w=\lambda(1,1,2).
    $$
    4. Quelle information supplémentaire permet de déterminer la valeur de $\lambda$ ? Calculer la norme de $\vec u\times\vec v$ à partir de la définition du produit vectoriel.
-   5. Il reste à déterminer le sens de $\vec w$. Utiliser la **règle de la main droite** pour déterminer si $\lambda$ est positif ou négatif.
+   5. Il reste à déterminer le sens de $\vec w$. La figure ci-dessous représente $\vec u$, $\vec v$ et les deux
+   candidats $(1, 1, 2)$ et $(-1, -1, -2)$. Utiliser la **règle de la main droite** pour déterminer si $\lambda$
+   est positif ou négatif.
+
+      ![](img/t-main-droite.svg){fig-alt="Repère x, y, z ; u = (1, 1, −1) et v = (0, 2, −1) sous le plan (x, y), flèche courbe de u vers v ; candidats (1, 1, 2) vers le haut et (−1, −1, −2) vers le bas" width="6.9cm" fig-align="center"}
    6. Vérifier que le vecteur obtenu est bien orthogonal à $\vec u$ et à $\vec v$.
 
 b. En déduire $\vec v \times \vec u$ sans refaire de calcul.
@@ -166,9 +170,13 @@ Retourne à la théorie du cours : *Produit vectoriel dans $\mathbb{R}^3$*.
 
 ## Indice 2
 
-Pour commencer, demande-toi : **dans quelle direction pointe le produit vectoriel $\vec u\times\vec v$ ?**
+*Question à te poser.*
+
+Dans quelle direction pointe le produit vectoriel $\vec u\times\vec v$ ?
 
 ## Indice 3
+
+*Étape.*
 
 Une étape par sous-question :
 
@@ -177,10 +185,10 @@ Une étape par sous-question :
 3. Résoudre le système obtenu.
 4. Utiliser
    $$
-   \|\vec u\times\vec v\|
-   =\|\vec u\|\,\|\vec v\|\,|\sin\theta|.
+   \left\Vert \vec u\times\vec v \right\Vert
+   =\left\Vert \vec u \right\Vert\,\left\Vert \vec v \right\Vert\,\sin\theta.
    $$
-5. Pour choisir entre les deux sens possibles, utiliser la **règle de la main droite** : les doigts suivent le mouvement de $\vec u$ vers $\vec v$ par l'angle le plus court et le pouce indique le sens de $\vec u\times\vec v$.
+5. Pour choisir entre les deux sens possibles, utilise la figure et la **règle de la main droite** : les doigts suivent la flèche courbe, de $\vec u$ vers $\vec v$ par l'angle le plus court ; le pouce indique le sens de $\vec u\times\vec v$.
 6. Effectuer les deux produits scalaires pour contrôler.
 
 ## Solution
@@ -201,83 +209,82 @@ a. Soit $\vec w=(x,y,z)$.
 
    $$
    \begin{cases}
-   x+2y+3z=0\\
-   y-z=0.
+   x+y-z=0\\
+   2y-z=0.
    \end{cases}
    $$
 
-   3. De $y=z$, on obtient $x=-5z$. Ainsi,
+   3. La seconde équation donne $z=2y$ ; dans la première, $x=z-y=y$. Ainsi,
 
    $$
-   \vec w=(-5z,z,z)=z(-5,1,1).
+   \vec w=(y,y,2y)=y(1,1,2).
    $$
 
-   4. On calcule $\|\vec u\|=\sqrt{14}$ et $\|\vec v\|=\sqrt2$. De plus $\vec u\cdot\vec v=-1$.  Donc
+   4. On calcule $\left\Vert \vec u \right\Vert=\sqrt3$ et $\left\Vert \vec v \right\Vert=\sqrt5$. De plus $\vec u\cdot\vec v=0+2+1=3$. Donc
 
    $$
-   \cos\theta=\frac{-1}{\sqrt{28}}.
+   \cos\theta=\frac{3}{\sqrt3\,\sqrt5}=\frac{3}{\sqrt{15}}.
    $$
-   
-   Comme $\sin^2(\theta)+\cos^2(\theta)=1$, on a    
+
+   Comme $\sin^2\theta+\cos^2\theta=1$ et $\sin\theta\ge0$ (car $\theta\in[0,\pi]$), on a
 
    $$
-   |\sin\theta|
-   =\sqrt{1-\frac1{28}}
-   =\sqrt{\frac{27}{28}}.
+   \sin\theta
+   =\sqrt{1-\frac{9}{15}}
+   =\sqrt{\frac{6}{15}}.
    $$
 
    Ainsi,
 
    $$
-   \|\vec u\times\vec v\|
-   =\sqrt{14}\sqrt2\sqrt{\frac{27}{28}}
-   =3\sqrt3.
+   \left\Vert \vec u\times\vec v \right\Vert
+   =\sqrt{15}\,\sqrt{\frac{6}{15}}
+   =\sqrt6.
    $$
 
-   5. Puisque $\vec w=z(-5,1,1)$
+   5. Puisque $\vec w=y(1,1,2)$,
 
    $$
-   \|\vec w\|=|z|\|(-5,1,1)\|=|z|\sqrt{27}=3\sqrt3|z|.
+   \left\Vert \vec w \right\Vert=|y|\left\Vert (1,1,2) \right\Vert=|y|\sqrt6.
    $$
 
-   Donc $|z|=1$, par le point 4.
+   Donc $|y|=1$, par le point 4.
 
    Il reste à choisir entre les deux vecteurs possibles :
 
    $$
-   (-5,1,1)
+   (1,1,2)
    \qquad\text{ou}\qquad
-   (5,-1,-1).
+   (-1,-1,-2).
    $$
 
    D'après la **règle de la main droite**, lorsque les doigts de la main droite tournent de $\vec u$ vers $\vec v$ par l'angle le plus court, le pouce indique le sens de $\vec u\times\vec v$.
 
-   Pour $\vec u=(1,2,3)$ et $\vec v=(0,1,-1)$, ce sens correspond à celui de
+   Sur la figure, $\vec u$ et $\vec v$ pointent sous le plan $(x, y)$, et la flèche courbe qui va de $\vec u$
+   vers $\vec v$ tourne dans le sens inverse des aiguilles d'une montre. Les doigts de la main droite suivent
+   cette flèche : le pouce monte, du côté des $z$ positifs. C'est le cas de $(1, 1, 2)$, dont la
+   coordonnée $z$ vaut $2 > 0$, et non de $(-1, -1, -2)$.
+
+   Ainsi $y=1$ et
 
    $$
-   (-5,1,1).
+   {\vec u\times\vec v=(1,1,2)}.
    $$
 
-   Ainsi $z=1$ et
+   6. Contrôle de l'orthogonalité :
 
    $$
-   {\vec u\times\vec v=(-5,1,1)}.
-   $$
-
-   6. Contrôle de l'orthogonalité:
-
-   $$
-   (-5,1,1)\cdot(1,2,3)=-5+2+3=0
+   (1,1,2)\cdot(1,1,-1)=1+1-2=0
    $$
 
    et
 
    $$
-   (-5,1,1)\cdot(0,1,-1)=0+1-1=0.
+   (1,1,2)\cdot(0,2,-1)=0+2-2=0.
    $$
 
 
-b. On a $\vec v\times\vec u=-\,\vec u\times\vec v$. Donc ${\vec v\times\vec u=(5,-1,-1)}$.
+b. On a $\vec v\times\vec u=-\,\vec u\times\vec v$. Donc ${\vec v\times\vec u=(-1,-1,-2)}$.
 
 c. ${\vec u\times(2\vec u)=\vec0}$. En effet, $\vec u$ et $2\vec u$ sont colinéaires : le parallélogramme qu'ils forment est aplati et son aire est nulle.
 
@@ -287,7 +294,7 @@ La perpendicularité permet de déterminer la **direction** du produit vectoriel
 
 Il faut donc compléter avec les deux autres éléments de la définition :
 
-- la **norme** $\|\vec u\times\vec v\|$ ;
+- la **norme** $\left\Vert \vec u\times\vec v \right\Vert$ ;
 - le **sens**, déterminé par la **règle de la main droite**.
 
 Attention également : la règle de la main droite donne le sens de $\vec u\times\vec v$, tandis que celui de $\vec v\times\vec u$ est le sens opposé.

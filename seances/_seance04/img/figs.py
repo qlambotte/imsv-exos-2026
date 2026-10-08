@@ -433,4 +433,211 @@ f.arrow((8, 3), (12, 4), ORANGE); f.vlabel(mid((8, 3), (12, 4), 0.4), "c", ORANG
 f.dot(O)
 f.save("r-decomposer.svg")
 
+
+
+# =====================================================================
+# PRODUIT VECTORIEL — dessins pour choisir le SENS (règle de la main droite)
+# Vue « du dessus » du plan de u et v (côté où pointe u × v), légèrement inclinée :
+# de u vers v, la flèche courbe tourne dans le sens inverse des aiguilles d'une montre,
+# et u × v monte. Projection orthographique dans le repère (e1, e2, n) du plan.
+# =====================================================================
+def _norm(a): return math.sqrt(sum(x * x for x in a))
+def _unit(a): n = _norm(a); return tuple(x / n for x in a)
+def _dot(a, b): return sum(x * y for x, y in zip(a, b))
+def _cross(a, b): return (a[1]*b[2]-a[2]*b[1], a[2]*b[0]-a[0]*b[2], a[0]*b[1]-a[1]*b[0])
+
+
+def main_droite(u, v, name, lab_w, lab_mw, phi=-15, alpha=24, unit=46, box=None, axes_at=None,
+                arc_r=1.0, outdir=OUT, wlen=2.6, axlen=2.2):
+    w = _cross(u, v)
+    e1 = _unit(u); n = _unit(w); e2 = _cross(n, e1)
+    ph, al = math.radians(phi), math.radians(alpha)
+
+    def P(p):
+        a, b, h = _dot(p, e1), _dot(p, e2), _dot(p, n)
+        x = a * math.cos(ph) - b * math.sin(ph)
+        d = a * math.sin(ph) + b * math.cos(ph)
+        return (x, d * math.sin(al) + h * math.cos(al))
+
+    f = Fig(*box, unit=unit)
+    O = (0, 0, 0)
+    # repère : axes x, y, z depuis l'origine (partie négative en pointillés)
+    for e, lab in [((1, 0, 0), "x"), ((0, 1, 0), "y"), ((0, 0, 1), "z")]:
+        neg = P(tuple(-axlen * 0.6 * c for c in e)); pos = P(tuple(axlen * c for c in e))
+        f.line(neg, P(O), BLACK, 0.8, (2, 3))
+        f.arrow(P(O), pos, BLACK, 1.0, 8)
+        f.text(pos, f"${lab}$", size=15, dx=9 if pos[0] >= 0 else -9, dy=6)
+    # parallélogramme
+    f.poly([P(O), P(u), P(tuple(x + y for x, y in zip(u, v))), P(v)], fill=FILL_B, stroke=BLUE, w=0.8, dash=(4, 3))
+    # -w (en pointillés, sous le plan) puis w
+    w = tuple(wlen * x for x in _unit(w))   # longueur d'affichage (le sens seul compte ici)
+    mw = tuple(-x for x in w)
+    f.arrow(P(O), P(mw), BLACK, 1.6, 11, dash=(5, 4))
+    f.arrow(P(O), P(u), BLUE, 2.6, 13)
+    f.arrow(P(O), P(v), RED, 2.6, 13)
+    # flèche courbe de u vers v (plus petit angle), dans le plan
+    th = math.acos(_dot(u, v) / (_norm(u) * _norm(v)))
+    pts = [P(tuple(arc_r * (math.cos(t) * a + math.sin(t) * b) for a, b in zip(e1, e2)))
+           for t in [th * k / 40 for k in range(41)]]
+    f.ax.plot([p[0] for p in pts[:-3]], [p[1] for p in pts[:-3]], color=GREEN, lw=1.8 * PT, zorder=f._z())
+    f.arrow(pts[-6], pts[-1], GREEN, 1.8, 10)
+    f.arrow(P(O), P(w), GREEN, 2.8, 14)
+    f.dot(P(O))
+    f.vlabel((P(u)[0] + 0.35, P(u)[1] - 0.05), "u", BLUE, 20)
+    f.vlabel((P(v)[0] - 0.05, P(v)[1] + 0.4), "v", RED, 20)
+    f.text(P(w), lab_w, GREEN, 15, dx=10, dy=4, ha="left")
+    f.text(P(mw), lab_mw, BLACK, 15, dx=10, dy=-2, ha="left")
+    # petit trièdre des axes, pour situer la vue
+    if axes_at:
+        for e, lab in [((1, 0, 0), "x"), ((0, 1, 0), "y"), ((0, 0, 1), "z")]:
+            q = P(tuple(0.9 * c for c in e))
+            end = (axes_at[0] + q[0], axes_at[1] + q[1])
+            f.arrow(axes_at, end, BLACK, 1.0, 7)
+            f.text(end, f"${lab}$", size=13, dx=7 * (1 if q[0] >= 0 else -1), dy=5)
+    f.save(name) if outdir == OUT else _save_to(f, name, outdir)
+    return f
+
+
+def _save_to(f, name, outdir):
+    os.makedirs(outdir, exist_ok=True)
+    f.fig.savefig(os.path.join(outdir, name), facecolor="white", metadata={"Date": None})
+    plt.close(f.fig)
+    SIZES[name] = round(f.Wcm, 1)
+
+
+def main_droite_cav(u, v, name, lab_w, lab_mw, box, unit=40, wlen=2.6, ax=(3.2, 3.2, 3.2),
+                    arc_r=1.0, outdir=OUT, lab_off=None, cls=None):
+    """Dessin dans le repère habituel (projection cavalière : x vers toi, y à droite, z en haut)."""
+    f = (cls or Fig3b)(*box, unit=unit)
+    f.axes3(*ax)
+    O = (0, 0, 0)
+    w = _cross(u, v); w = tuple(wlen * x for x in _unit(w)); mw = tuple(-x for x in w)
+    s_uv = tuple(x + y for x, y in zip(u, v))
+    f.poly([f.p3(*O), f.p3(*u), f.p3(*s_uv), f.p3(*v)], fill=FILL_B, stroke=BLUE, w=0.8, dash=(4, 3))
+    f.arrow3(O, mw, BLACK, w=1.6, head=11, dash=(5, 4))
+    f.arrow3(O, u, BLUE, w=2.6, head=13); f.arrow3(O, v, RED, w=2.6, head=13)
+    e1 = _unit(u); n = _unit(_cross(u, v)); e2 = _cross(n, e1)
+    th = math.acos(_dot(u, v) / (_norm(u) * _norm(v)))
+    pts = [f.p3(*tuple(arc_r * (math.cos(t) * a + math.sin(t) * b) for a, b in zip(e1, e2)))
+           for t in [th * k / 40 for k in range(41)]]
+    f.ax.plot([p[0] for p in pts[:-3]], [p[1] for p in pts[:-3]], color=GREEN, lw=1.8 * PT, zorder=f._z())
+    f.arrow(pts[-6], pts[-1], GREEN, 1.8, 10)
+    f.arrow3(O, w, GREEN, w=2.8, head=14)
+    f.dot(f.p3(*O))
+    lo = lab_off or {}
+    pu, pv, pw, pm = f.p3(*u), f.p3(*v), f.p3(*w), f.p3(*mw)
+    f.vlabel((pu[0] + lo.get("u", (0.3, 0))[0], pu[1] + lo.get("u", (0.3, 0))[1]), "u", BLUE, 19)
+    f.vlabel((pv[0] + lo.get("v", (0.3, 0.3))[0], pv[1] + lo.get("v", (0.3, 0.3))[1]), "v", RED, 19)
+    f.text(pw, lab_w, GREEN, 14, dx=8, dy=6, ha="left")
+    if lo.get("mw_left"):
+        f.text(pm, lab_mw, BLACK, 14, dx=-8, dy=-2, ha="right")
+    else:
+        f.text(pm, lab_mw, BLACK, 14, dx=8, dy=-4, ha="left")
+    if outdir == OUT: f.save(name)
+    else: _save_to(f, name, outdir)
+
+
+class Fig3c(Fig3):
+    K, ALPHA = 0.7, math.radians(20)
+
+
+# Transfert : u = (1, 1, -1), v = (0, 2, -1), u × v = (1, 1, 2).
+# u et v pointent sous le plan (x, y) ; de u vers v, la flèche courbe tourne dans le sens inverse
+# des aiguilles d'une montre : le pouce monte, vers les z positifs.
+main_droite_cav((1, 1, -1), (0, 2, -1), "t-main-droite.svg", r"$(1,\,1,\,2)$", r"$(-1,\,-1,\,-2)$",
+                box=(-2.8, 3.9, -2.6, 3.6), unit=44, wlen=2.6, ax=(2.8, 3.2, 3.2), arc_r=0.85,
+                lab_off={"u": (0.35, -0.15), "v": (0.3, 0.3), "mw_left": True})
+
+# Fiche de méthode : u = (3, 0, 0), v = (1, 2, 0), u × v = (0, 0, 6)  -> seances/methodes/img/
+main_droite_cav((3, 0, 0), (1, 2, 0), "m-vectoriel.svg", r"$(0,\,0,\,6)$", r"$(0,\,0,\,-6)$",
+                box=(-2.6, 3.6, -3.0, 3.6), unit=40, wlen=2.6, ax=(3.6, 3.2, 3.2), arc_r=0.9,
+                outdir=os.path.join(OUT, "..", "..", "methodes", "img"),
+                lab_off={"u": (-0.35, -0.3), "v": (0.25, 0.35)})
+
+# =====================================================================
+# FICHES DE MÉTHODE — figures des exemples (-> seances/methodes/img/)
+# =====================================================================
+MDIR = os.path.join(OUT, "..", "..", "methodes", "img")
+
+
+def _msave(f, name):
+    _save_to(f, name, MDIR)
+
+
+# Additionner et soustraire sur un dessin : u = (3, 1), v = (1, 2)
+f = Fig(0, 12.5, -1.6, 4.4, unit=30)
+f.grid()
+O = (0.5, 0.5)
+f.arrow(O, (3.5, 1.5), BLUE); f.vlabel(mid(O, (3.5, 1.5), 0.42, -1), "u", BLUE, 16)
+f.arrow((3.5, 1.5), (4.5, 3.5), RED); f.vlabel(mid((3.5, 1.5), (4.5, 3.5), 0.42, -1), "v", RED, 16)
+f.arrow(O, (4.5, 3.5), GREEN, 2.6); f.text((2.4, 3.9), r"$\vec u+\vec v=(4,3)$", GREEN, 15)
+f.dot(O)
+O = (7, 1.5)
+f.arrow(O, (10, 2.5), BLUE); f.vlabel(mid(O, (10, 2.5), 0.42), "u", BLUE, 16)
+f.arrow((10, 2.5), (9, 0.5), RED); f.text(mid((10, 2.5), (9, 0.5), 0.5, -1), r"$-\vec v$", RED, 16)
+f.arrow(O, (9, 0.5), GREEN, 2.6); f.text((8.2, -0.7), r"$\vec u-\vec v=(2,-1)$", GREEN, 15)
+f.dot(O)
+_msave(f, "m-somme.svg")
+
+# Norme et angle -> coordonnées : 8 N à 150°
+f = Fig(-8, 1.6, -1, 5.2, unit=30)
+f.grid(); f.axes(ticks=False)
+F = (8 * math.cos(math.radians(150)), 8 * math.sin(math.radians(150)))
+f.line(F, (F[0], 0), BLACK, 1.0, (4, 3)); f.line(F, (0, F[1]), BLACK, 1.0, (4, 3))
+f.arrow((0, 0), F, BLUE, 2.4, 12)
+f.arc((0, 0), 1.0, 0, 150, BLUE, label="150°", lr=1.55, size=14)
+f.vlabel((F[0] - 0.1, F[1] + 0.55), "F", BLUE, 19)
+f.text((F[0], 0), r"$-4\sqrt{3}$", size=15, dy=-14)
+f.text((0, F[1]), r"$4$", size=15, dx=12)
+f.text(mid((0, 0), F, 0.55, -1), r"$\Vert\vec F\Vert=8$", BLUE, 15)
+_msave(f, "m-norme-coord.svg")
+
+# Coordonnées -> norme et angle : v = (-1, -sqrt3)
+S3 = math.sqrt(3)
+f = Fig(-2.3, 2.3, -2.3, 1.6, unit=58)
+f.grid(); f.axes(ticks=False)
+V = (-1, -S3)
+f.line(V, (-1, 0), BLACK, 1.0, (4, 3)); f.line(V, (0, -S3), BLACK, 1.0, (4, 3))
+f.arrow((0, 0), V, RED, 2.4, 12)
+f.arc((0, 0), 0.45, 0, 240, RED, label="240°", lr=0.78, size=14)
+f.arc((0, 0), 0.85, 180, 240, BLACK, label="60°", lr=1.12, size=13)
+f.vlabel((V[0] - 0.28, V[1] + 0.1), "v", RED, 19)
+f.text((-1, 0), "$-1$", size=15, dy=13); f.text((0, -S3), r"$-\sqrt{3}$", size=15, dx=24)
+_msave(f, "m-coord-norme.svg")
+
+# Calcul en coordonnées : somme (2,-1) + (-3,4) et colinéarité (2,-6) = -2 (-1,3)
+f = Fig(-3.5, 10.5, -5.0, 4.8, unit=24)
+f.grid()
+f.arrow((-3.5, 0), (2.6, 0), BLACK, 1.0, 8); f.arrow((0, -2.2), (0, 4.4), BLACK, 1.0, 8)
+f.text((2.6, 0), "$x$", size=14, dx=-4, dy=-11); f.text((0, 4.4), "$y$", size=14, dx=9, dy=-4)
+f.arrow((0, 0), (2, -1), BLUE, 2.2, 10); f.text((2, -1), r"$(2,-1)$", BLUE, 14, dx=4, dy=-10, ha="left")
+f.arrow((2, -1), (-1, 3), RED, 2.2, 10); f.text(mid((2, -1), (-1, 3), 0.55, -1), r"$(-3,4)$", RED, 14, ha="left")
+f.arrow((0, 0), (-1, 3), GREEN, 2.6, 11); f.text((-1, 3), r"$(-1,3)$", GREEN, 14, dx=-6, dy=8, ha="right")
+f.dot((0, 0))
+O2 = (6.5, 1.5)
+f.line((O2[0] + 2.6, O2[1] - 7.8), (O2[0] - 1.3, O2[1] + 3.9), BLACK, 0.8, (5, 4))
+f.arrow(O2, (O2[0] + 2, O2[1] - 6), ORANGE, 2.4, 11)
+f.arrow(O2, (O2[0] - 1, O2[1] + 3), PURPLE, 2.4, 11)
+f.text((O2[0] - 1, O2[1] + 3), r"$(-1,3)$", PURPLE, 14, dx=8, dy=-4, ha="left")
+f.text((O2[0] + 2, O2[1] - 6), r"$(2,-6)$", ORANGE, 14, dx=8, dy=4, ha="left")
+f.text((O2[0] + 1.5, O2[1] - 2.0), r"$=-2\,(-1,3)$", ORANGE, 13, ha="left")
+f.dot(O2)
+_msave(f, "m-coordonnees.svg")
+
+# Produit scalaire : u = (sqrt3, 1), v = (0, 2), projection de longueur 1
+f = Fig(-0.6, 2.4, -0.5, 2.4, unit=70)
+f.grid(); f.axes(ticks=False)
+U, V = (S3, 1), (0, 2)
+H = (S3 / 2, 0.5)
+f.line((-0.45, -0.45 / S3), (2.35, 2.35 / S3), BLUE, 0.9, (6, 4))
+f.line(V, H, BLACK, 1.0, (4, 3))
+f.right_angle(H, (-S3, -1), (-H[0], V[1] - H[1]), s=0.12)
+f.arrow((0, 0), H, GREEN, 3.6, 11)
+f.arrow((0, 0), U, BLUE, 2.4, 12); f.arrow((0, 0), V, RED, 2.4, 12)
+f.arc((0, 0), 0.42, 30, 90, BLACK, label="60°", lr=0.64, size=14)
+f.arc((0, 0), 0.72, 0, 30, BLUE, label="30°", lr=0.93, size=13)
+f.vlabel((U[0] + 0.12, U[1] + 0.14), "u", BLUE, 19); f.vlabel((0.2, 2.05), "v", RED, 19)
+f.text((0.95, 0.12), "longueur 1", GREEN, 14, ha="left")
+_msave(f, "m-produit-scalaire.svg")
+
 print("Largeurs naturelles (cm) — à reporter dans width=… :", SIZES)

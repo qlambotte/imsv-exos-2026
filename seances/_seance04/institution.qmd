@@ -3,30 +3,31 @@ title: "Institutionnalisation — méthode & auto-évaluation"
 subtitle: "Séance 4 · ce qu'on retient"
 ---
 
-## La méthode qu'on dégage ensemble
+## Les méthodes qu'on dégage ensemble
 
-En fin de séance, on formalise la méthode pour **résoudre un problème de forces** :
+En fin de séance, on formalise la méthode pour **passer de la norme et de l'angle aux coordonnées
+(et réciproquement)** :
 
-- **représenter** chaque force par une flèche partant du point où elle s'applique ;
-- **choisir un repère** et écrire chaque force en coordonnées, à partir de sa norme et de son angle :
-  $r\,(\cos\theta,\ \sin\theta)$ ;
-- **additionner** coordonnée par coordonnée (à l'équilibre, chaque coordonnée de la somme est nulle) ;
-- **revenir au dessin** : norme et direction de la résultante ;
-- **contrôler** : la norme de la somme ne dépasse jamais la somme des normes, et les symétries de la
-  figure se retrouvent dans les coordonnées.
+- **dessiner** le vecteur à partir de l'origine du repère et repérer son **quadrant** ;
+- **vers les coordonnées** : $\vec v = \left(\left\Vert \vec v \right\Vert \cos\theta,\ \left\Vert \vec v \right\Vert \sin\theta\right)$,
+  avec $\theta$ mesuré depuis l'axe des $x$, puis les valeurs remarquables du cercle trigonométrique ;
+- **vers la norme et l'angle** : $\left\Vert \vec v \right\Vert = \sqrt{v_x^2 + v_y^2}$, puis
+  $\tan\theta = \dfrac{v_y}{v_x}$ et le quadrant pour choisir le bon angle ;
+- **contrôler** : les signes des coordonnées correspondent au quadrant du dessin.
 
-Cette méthode rejoint ta **[boîte à outils](../methode.qmd)** — elle resservira à chaque séance. Tu y
+Si le temps le permet, on formalise aussi une deuxième méthode : **calculer et interpréter un produit
+scalaire** (signe, angle, orthogonalité, projection).
+
+Ces méthodes rejoignent ta **[boîte à outils](../methode.qmd)** — elles resserviront à chaque séance. Tu y
 trouveras le corrigé de quelques méthodes issues des exercices de la séance 4.
 
 ## Auto-évaluation — coche ce que tu sais faire
 
-Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **cinq objectifs**.
+Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **trois objectifs**.
 
-- [ ] **O1** — représenter une grandeur orientée par un vecteur ; distinguer point et vecteur, norme, direction et sens.
-- [ ] **O2** — additionner, soustraire et multiplier un vecteur par un scalaire, sur un dessin et en coordonnées ; reconnaître des vecteurs colinéaires.
-- [ ] **O3** — passer du dessin aux coordonnées et retour dans $\mathbb{R}^2$ et $\mathbb{R}^3$ ; calculer une norme.
-- [ ] **O4** — calculer un produit scalaire et l'utiliser pour trouver un angle, tester l'orthogonalité ou projeter.
-- [ ] **O5** — calculer un produit vectoriel et interpréter sa direction, son sens et sa norme.
+- [ ] **O1** — **représenter une grandeur orientée par un vecteur**.
+- [ ] **O2** — **effectuer somme, multiplication par un scalaire, produit scalaire et produit vectoriel ; comprendre ce qu’ils représentent**.
+- [ ] **O3** — **relier représentation géométrique et coordonnées**.
 
 ::: {.callout-important appearance="simple"}
 Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la
