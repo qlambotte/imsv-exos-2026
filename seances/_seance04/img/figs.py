@@ -579,17 +579,17 @@ f.arrow(O, (9, 0.5), GREEN, 2.6); f.text((8.2, -0.7), r"$\vec u-\vec v=(2,-1)$",
 f.dot(O)
 _msave(f, "m-somme.svg")
 
-# Norme et angle -> coordonnées : 8 N à 150°
+# Norme et angle -> coordonnées : vecteur u de norme 8 à 150°
 f = Fig(-8, 1.6, -1, 5.2, unit=30)
 f.grid(); f.axes(ticks=False)
 F = (8 * math.cos(math.radians(150)), 8 * math.sin(math.radians(150)))
 f.line(F, (F[0], 0), BLACK, 1.0, (4, 3)); f.line(F, (0, F[1]), BLACK, 1.0, (4, 3))
 f.arrow((0, 0), F, BLUE, 2.4, 12)
 f.arc((0, 0), 1.0, 0, 150, BLUE, label="150°", lr=1.55, size=14)
-f.vlabel((F[0] - 0.1, F[1] + 0.55), "F", BLUE, 19)
+f.vlabel((F[0] - 0.1, F[1] + 0.55), "u", BLUE, 19)
 f.text((F[0], 0), r"$-4\sqrt{3}$", size=15, dy=-14)
 f.text((0, F[1]), r"$4$", size=15, dx=12)
-f.text(mid((0, 0), F, 0.55, -1), r"$\Vert\vec F\Vert=8$", BLUE, 15)
+f.text(mid((0, 0), F, 0.55, -1), r"$\Vert\vec u\Vert=8$", BLUE, 15)
 _msave(f, "m-norme-coord.svg")
 
 # Coordonnées -> norme et angle : v = (-1, -sqrt3)

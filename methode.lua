@@ -51,7 +51,9 @@ function Div(el)
     out[#out + 1] = pandoc.RawBlock("typst", '#methodecard("' .. titre .. '", "' .. obj .. '")[')
     for _, key in ipairs(ORDER) do
       if sect[key] then
-        out[#out + 1] = pandoc.RawBlock("typst", '#msect("' .. LABELS[key] .. '")[')
+        -- l'exemple (souvent long, avec figure) peut se couper entre deux pages ; les autres non
+        local brk = (key == "exemple") and "true" or "false"
+        out[#out + 1] = pandoc.RawBlock("typst", '#msect("' .. LABELS[key] .. '", brk: ' .. brk .. ')[')
         for _, b in ipairs(sect[key]) do out[#out + 1] = b end
         out[#out + 1] = pandoc.RawBlock("typst", ']')
       end
@@ -104,7 +106,7 @@ function Pandoc(doc)
   ]
   #block(width:100%, inset:(x:12pt, y:11pt))[#body]
 ]
-#let msect(label, body) = block(width:100%, above:10pt, below:0pt, breakable:false)[
+#let msect(label, body, brk: false) = block(width:100%, above:10pt, below:0pt, breakable:brk)[
   #text(size:9.5pt, weight:700, fill:rgb("#2f6fb0"), upper(label))
   #v(2pt)
   #body

@@ -21,10 +21,18 @@ Dès qu'il faut construire une somme, une différence ou un multiple de vecteurs
 :::
 
 ::: {.exemple}
-$\vec u = (3, 1)$, $\vec v = (1, 2)$ : bout à bout, on arrive à $\vec u + \vec v = (4, 3)$ ; avec
-$-\vec v$, on arrive à $\vec u - \vec v = (2, -1)$.
+Soient les vecteurs $\vec u = (3, 1)$ et $\vec v = (1, 2)$. On va construire $\vec u + \vec v$ et $\vec u - \vec v$ sur le
+quadrillage.
 
-![](img/m-somme.svg){fig-alt="u = (3, 1) et v = (1, 2) bout à bout : u + v = (4, 3) ; u plus −v : u − v = (2, −1)" width="8.6cm" fig-align="center"}
+**Somme.** Pour cela, on dessine $\vec u$ à partir d'un point, puis on place l'origine de $\vec v$ à l'extrémité
+de $\vec u$. La flèche qui va de l'origine de $\vec u$ à l'extrémité de $\vec v$ représente $\vec u + \vec v$. On lit
+sur le quadrillage $4$ carreaux vers la droite et $3$ vers le haut : $\vec u + \vec v = (4, 3)$.
+
+**Différence.** On écrit $\vec u - \vec v = \vec u + (-\vec v)$, où $-\vec v = (-1, -2)$ a la même direction et la même
+norme que $\vec v$, mais le sens opposé. On place $-\vec v$ au bout de $\vec u$ et on lit $2$ carreaux vers la
+droite et $1$ vers le bas : $\vec u - \vec v = (2, -1)$.
+
+![](img/m-somme.svg){fig-alt="u = (3, 1) et v = (1, 2) bout à bout : u + v = (4, 3) ; u plus −v : u − v = (2, −1)" width="7cm" fig-align="center"}
 :::
 
 ::: {.piege}
@@ -49,20 +57,27 @@ faut retrouver norme et angle à partir des coordonnées.
 :::
 
 ::: {.exemple}
-**Vers les coordonnées.** Un muscle exerce sur un tendon une force $\vec F$ de norme $8$ N, à $150°$ de
-l'horizontale. Dessin : $\vec F$ est dans le deuxième quadrant ($F_x < 0$, $F_y > 0$). Comme
-$\cos 150° = -\dfrac{\sqrt3}{2}$ et $\sin 150° = \dfrac12$ (symétrique de $30°$ par rapport à l'axe vertical),
-$$\vec F = \left(8 \cos 150°,\ 8 \sin 150°\right) = \left(-4\sqrt3,\ 4\right).$$
-Contrôle : $-4\sqrt3 < 0$ et $4 > 0$, deuxième quadrant. ✓
+**Vers les coordonnées.** Soit $\vec u$ le vecteur de norme $8$ qui fait un angle de $150°$ avec l'axe des $x$.
+On va calculer ses coordonnées.
 
+On dessine d'abord $\vec u$ à partir de l'origine : $150°$ est entre $90°$ et $180°$, donc $\vec u$ est dans le
+deuxième quadrant, et on attend $u_x < 0$ et $u_y > 0$. On applique ensuite
+$\vec u = \left(\left\Vert \vec u \right\Vert \cos\theta,\ \left\Vert \vec u \right\Vert \sin\theta\right)$. Pour cela, on a besoin de
+$\cos 150°$ et $\sin 150°$ : $150°$ est le symétrique de $30°$ par rapport à l'axe vertical, donc
+$\cos 150° = -\dfrac{\sqrt3}{2}$ et $\sin 150° = \dfrac12$. Ainsi
+$$\vec u = \left(8 \cos 150°,\ 8 \sin 150°\right) = \left(-4\sqrt3,\ 4\right).$$
+Contrôle : $-4\sqrt3 < 0$ et $4 > 0$, c'est bien le deuxième quadrant. ✓
 
-**Vers la norme et l'angle.** Le courant entraîne une algue à la vitesse $\vec v = (-1, -\sqrt3)$ m/s.
-Norme : $\left\Vert \vec v \right\Vert = \sqrt{1 + 3} = 2$ m/s. Quadrant : $v_x < 0$ et $v_y < 0$, troisième
-quadrant. Angle : $\tan\theta = \dfrac{-\sqrt3}{-1} = \sqrt3$ ; l'angle aigu de tangente $\sqrt3$ est $60°$,
-et dans le troisième quadrant $\theta = 180° + 60° = 240°$.
+**Vers la norme et l'angle.** Soit le vecteur $\vec v = (-1, -\sqrt3)$. On va calculer sa norme et l'angle
+$\theta \in [0°, 360°[$ qu'il fait avec l'axe des $x$.
+
+Norme : $\left\Vert \vec v \right\Vert = \sqrt{(-1)^2 + \left(-\sqrt3\right)^2} = \sqrt{1 + 3} = 2$. Quadrant : $v_x < 0$ et
+$v_y < 0$, donc $\vec v$ est dans le troisième quadrant. Angle : $\tan\theta = \dfrac{v_y}{v_x} = \dfrac{-\sqrt3}{-1} = \sqrt3$ ;
+l'angle aigu dont la tangente vaut $\sqrt3$ est $60°$, et dans le troisième quadrant
+$\theta = 180° + 60° = 240°$.
 Contrôle : $2\left(\cos 240°,\ \sin 240°\right) = 2\left(-\dfrac12,\ -\dfrac{\sqrt3}{2}\right) = (-1, -\sqrt3)$. ✓
 
-![](img/m-norme-coord.svg){fig-alt="Force F de norme 8 à 150 degrés ; composantes −4√3 et 4" width="5.4cm"} ![](img/m-coord-norme.svg){fig-alt="Vecteur v = (−1, −√3) dans le troisième quadrant, angle de 240 degrés" width="4.4cm"}
+![](img/m-norme-coord.svg){fig-alt="Vecteur u de norme 8 à 150 degrés ; coordonnées −4√3 et 4" width="4.6cm"} ![](img/m-coord-norme.svg){fig-alt="Vecteur v = (−1, −√3) dans le troisième quadrant, angle de 240 degrés" width="3.8cm"}
 :::
 
 ::: {.piege}
@@ -86,10 +101,21 @@ Dès que les vecteurs sont donnés par leurs coordonnées, dans $\mathbb{R}^2$, 
 :::
 
 ::: {.exemple}
-$(2, -1) + (-3, 4) = (-1, 3)$ ; $\left\Vert (2, 4, 4) \right\Vert = \sqrt{4 + 16 + 16} = 6$ ;
-$(2, -6) = -2\,(-1, 3)$ : colinéaires. $(-2,-6)$ et $(-1, 4)$ ne sont pas colinéaires : pour la première coordonnée, on doit avoir $-2=2\cdot (-1)$, mais $-6\neq 2\cdot 4$. 
+**Somme.** Soient $\vec u = (2, -1)$ et $\vec v = (-3, 4)$. On va calculer $\vec u + \vec v$. Pour cela, on
+additionne coordonnée par coordonnée : $\vec u + \vec v = (2 + (-3),\ -1 + 4) = (-1, 3)$. Sur la figure, c'est
+bien le point d'arrivée quand on met $\vec u$ et $\vec v$ bout à bout.
 
-![](img/m-coordonnees.svg){fig-alt="À gauche : (2, −1) puis (−3, 4) bout à bout donnent (−1, 3). À droite : (2, −6) et (−1, 3) sur une même droite, de sens opposés" width="7.3cm" fig-align="center"}
+**Norme.** Soit $\vec w = (2, 4, 4)$. On va calculer sa norme. Pour cela, on prend la racine de la somme des
+carrés des coordonnées : $\left\Vert \vec w \right\Vert = \sqrt{2^2 + 4^2 + 4^2} = \sqrt{36} = 6$.
+
+**Colinéarité.** Soient $\vec a = (-1, 3)$ et $\vec b = (2, -6)$. On cherche un réel $\lambda$ tel que $\vec b = \lambda\,\vec a$.
+La première coordonnée impose $2 = \lambda \cdot (-1)$, donc $\lambda = -2$. On vérifie la seconde :
+$-2 \cdot 3 = -6$ ✓. Donc $\vec b = -2\,\vec a$ : les vecteurs sont colinéaires, de sens opposés.
+
+Soient maintenant $(-1, 4)$ et $(-2, -6)$. La première coordonnée impose $\lambda = 2$, mais $2 \cdot 4 = 8 \neq -6$ :
+aucun réel ne convient pour les deux coordonnées, ces vecteurs ne sont pas colinéaires.
+
+![](img/m-coordonnees.svg){fig-alt="À gauche : (2, −1) puis (−3, 4) bout à bout donnent (−1, 3). À droite : (2, −6) et (−1, 3) sur une même droite, de sens opposés" width="6cm" fig-align="center"}
 :::
 
 ::: {.piege}
@@ -115,23 +141,26 @@ direction, ou calculer un travail.
 :::
 
 ::: {.exemple}
-Soient $\vec u = (\sqrt3, 1)$ et $\vec v = (0, 2)$.
+Soient les vecteurs $\vec u = (\sqrt3, 1)$ et $\vec v = (0, 2)$. On va calculer leur produit scalaire, l'angle
+$\theta$ entre eux, puis la projection de $\vec v$ sur la droite qui porte $\vec u$.
 
-**Signe prévu.** Sur un dessin, $\vec u$ fait $30°$ avec l'axe des $x$ et $\vec v$ pointe vers le haut :
-l'angle est aigu, le produit scalaire sera positif.
+**Signe prévu.** On dessine d'abord les deux vecteurs : $\vec u$ fait $30°$ avec l'axe des $x$ et $\vec v$ pointe
+vers le haut. L'angle est aigu, donc on attend un produit scalaire positif.
 
-**Calcul.** $\vec u \cdot \vec v = \sqrt3 \cdot 0 + 1 \cdot 2 = 2 > 0$. ✓
+**Calcul.** On multiplie les coordonnées deux à deux et on additionne :
+$\vec u \cdot \vec v = \sqrt3 \cdot 0 + 1 \cdot 2 = 2 > 0$. ✓
 
-**Angle.** $\left\Vert \vec u \right\Vert = \sqrt{3 + 1} = 2$ et $\left\Vert \vec v \right\Vert = 2$, donc
-$\cos\theta = \dfrac{2}{2 \cdot 2} = \dfrac12$ et $\theta = 60°$. Contrôle sur le dessin : $90° - 30° = 60°$. ✓
+**Angle.** Pour cela, on calcule les normes : $\left\Vert \vec u \right\Vert = \sqrt{3 + 1} = 2$ et $\left\Vert \vec v \right\Vert = 2$.
+Donc $\cos\theta = \dfrac{\vec u \cdot \vec v}{\left\Vert \vec u \right\Vert \left\Vert \vec v \right\Vert} = \dfrac{2}{2 \cdot 2} = \dfrac12$
+et $\theta = 60°$. Contrôle sur le dessin : $90° - 30° = 60°$. ✓
 
 ![](img/m-produit-scalaire.svg){fig-alt="u = (√3, 1) à 30 degrés, v = (0, 2) vertical : angle de 60 degrés ; la projection de v sur la droite de u mesure 1" width="5.1cm" fig-align="center"}
-
 
 **Projection.** La projection orthogonale de $\vec v$ sur la droite qui porte $\vec u$ mesure
 $\dfrac{\vec u \cdot \vec v}{\left\Vert \vec u \right\Vert} = \dfrac22 = 1$.
 
-**Orthogonalité.** $(a, 3)$ est orthogonal à $\vec u$ si $\sqrt3\,a + 3 = 0$, c'est-à-dire $a = -\sqrt3$.
+**Orthogonalité.** On cherche $a$ tel que $(a, 3)$ soit orthogonal à $\vec u$. Pour cela, on écrit que le produit
+scalaire est nul : $\sqrt3\,a + 3 = 0$, donc $a = -\dfrac{3}{\sqrt3} = -\sqrt3$.
 :::
 
 ::: {.piege}
@@ -164,23 +193,26 @@ vecteurs, ou l'aire d'un parallélogramme ou d'un triangle.
 :::
 
 ::: {.exemple}
-Soient $\vec u = (3, 0, 0)$ et $\vec v = (1, 2, 0)$.
+Soient les vecteurs $\vec u = (3, 0, 0)$ et $\vec v = (1, 2, 0)$. On va calculer $\vec u \times \vec v$ en déterminant
+successivement sa direction, sa norme et son sens. On pose $\vec w = \vec u \times \vec v = (x, y, z)$.
 
-**Direction.** Avec $\vec w = (x, y, z)$ : $\vec w \cdot \vec u = 3x = 0$ et $\vec w \cdot \vec v = x + 2y = 0$,
-donc $x = 0$ puis $y = 0$ ; $z$ est libre : $\vec w = z\,(0, 0, 1)$.
+**Direction.** $\vec w$ est perpendiculaire à $\vec u$ et à $\vec v$. Pour cela, on écrit deux produits scalaires
+nuls : $\vec w \cdot \vec u = 3x = 0$ et $\vec w \cdot \vec v = x + 2y = 0$. Donc $x = 0$ puis $y = 0$, et $z$ reste
+libre : $\vec w = z\,(0, 0, 1)$.
 
-**Norme.** $\vec u \cdot \vec v = 3$, $\left\Vert \vec u \right\Vert = 3$ et $\left\Vert \vec v \right\Vert = \sqrt5$, donc
+**Norme.** On calcule $\left\Vert \vec u \times \vec v \right\Vert = \left\Vert \vec u \right\Vert \left\Vert \vec v \right\Vert \sin\theta$. Pour cela :
+$\vec u \cdot \vec v = 3$, $\left\Vert \vec u \right\Vert = 3$ et $\left\Vert \vec v \right\Vert = \sqrt5$, donc
 $\cos\theta = \dfrac{3}{3\sqrt5} = \dfrac{1}{\sqrt5}$ et $\sin\theta = \sqrt{1 - \dfrac15} = \dfrac{2}{\sqrt5}$.
-Ainsi $\left\Vert \vec u \times \vec v \right\Vert = 3 \cdot \sqrt5 \cdot \dfrac{2}{\sqrt5} = 6$, donc $|z| = 6$.
-C'est bien l'aire du parallélogramme de base $3$ et de hauteur $2$.
+Ainsi $\left\Vert \vec u \times \vec v \right\Vert = 3 \cdot \sqrt5 \cdot \dfrac{2}{\sqrt5} = 6$. Comme
+$\left\Vert \vec w \right\Vert = |z|$, on a $|z| = 6$. C'est bien l'aire du parallélogramme de base $3$ et de hauteur $2$.
 
-**Sens.** Les doigts tournent de $\vec u$ (axe des $x$) vers $\vec v$ en suivant la flèche courbe, dans le
-plan $(x, y)$ : comme pour aller de l'axe des $x$ vers l'axe des $y$, le pouce pointe vers les $z$ positifs. Donc
-$z = 6$ et $\vec u \times \vec v = (0, 0, 6)$.
+**Sens.** On applique la règle de la main droite : les doigts tournent de $\vec u$ (axe des $x$) vers $\vec v$ en
+suivant la flèche courbe, dans le plan $(x, y)$. Comme pour aller de l'axe des $x$ vers l'axe des $y$, le pouce
+pointe vers les $z$ positifs. Donc $z = 6$ et $\vec u \times \vec v = (0, 0, 6)$.
 
-![](img/m-vectoriel.svg){fig-alt="Repère x, y, z ; u = (3, 0, 0) et v = (1, 2, 0) dans le plan (x, y) ; flèche courbe de u vers v ; candidats (0, 0, 6) vers le haut et (0, 0, −6) vers le bas" width="5.8cm" fig-align="center"}
+![](img/m-vectoriel.svg){fig-alt="Repère x, y, z ; u = (3, 0, 0) et v = (1, 2, 0) dans le plan (x, y) ; flèche courbe de u vers v ; candidats (0, 0, 6) vers le haut et (0, 0, −6) vers le bas" width="4.8cm" fig-align="center"}
 
-**Contrôle.** $(0, 0, 6) \cdot (3, 0, 0) = 0$ et $(0, 0, 6) \cdot (1, 2, 0) = 0$.
+**Contrôle.** On vérifie l'orthogonalité : $(0, 0, 6) \cdot (3, 0, 0) = 0$ et $(0, 0, 6) \cdot (1, 2, 0) = 0$. ✓
 :::
 
 ::: {.piege}
