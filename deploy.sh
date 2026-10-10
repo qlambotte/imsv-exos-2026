@@ -39,7 +39,7 @@ build_view(){   # $1 = student|prof ; $2 = sous-dossier de destination ("" ou "p
       for d in seances/_seance[0-9][0-9]; do
         [ -e "$d" ] || continue
         n=$(basename "$d" | sed 's/^_seance0*//')
-        python3 seance-onoff.py "$n" on >/dev/null
+        python3 seance-onoff.py "$n" on --garder-statut >/dev/null   # garde l'étiquette « en construction »…
       done
       # site-url sous /prof pour des liens cohérents dans la vue prof
       sed -i 's#imsv-exos-2026/"#imsv-exos-2026/prof/"#' _quarto.yml

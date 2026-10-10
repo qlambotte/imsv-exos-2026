@@ -53,9 +53,9 @@ C'est normal de bloquer : ça fait partie de l'apprentissage. Quand ça t'arrive
 
 Deux séances de remédiations, à distance, sous forme de questions-réponses:
 
-1. Mardi: pour les biologistes. Posez vos questions pour aujourd'hui 13 via l'activité "Remédiation du 13/10" sur moodle.
+1. Mardi: pour les biologistes. Posez vos questions pour aujourd'hui 13h via l'activité "Remédiation du 13/10" sur moodle.
 
-2. Jeudi: pour les biologistes et les biomeds. Posez vos questions pour mercredi 13 au plus tard via l'activité "Remédiation du 15/10" sur moodle.
+2. Jeudi: pour les biologistes et les biomeds. Posez vos questions pour mercredi 14 au plus tard via l'activité "Remédiation du 15/10" sur moodle.
 
 # Échauffement {.divider background-color="#14304a"}
 
@@ -80,15 +80,14 @@ Deux séances de remédiations, à distance, sous forme de questions-réponses:
 **Vote sur Wooclap**
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : HSRYQMA
 :::
 ::::
 
-<!-- QR : python3 make-qr.py, puis décommenter le bloc suivant
 ::: {.wc-qr}
 ![](img/qr-echauffement.png)
 :::
--->
+
 
 :::::
 
@@ -323,13 +322,11 @@ Code : À COMPLÉTER
 :::
 ::::
 
-<!-- QR : python3 make-qr.py, puis décommenter le bloc suivant
 ::: {.wc-qr}
 ![](img/qr-methodes.png)
 
 Norme et angle
 :::
--->
 
 :::::::
 
@@ -401,7 +398,7 @@ Ainsi $\vec u = \left(8 \cdot \left(-\dfrac{\sqrt3}{2}\right),\ 8 \cdot \dfrac12
 
 ## Et dans l'autre sens ?
 
-Partons de $\vec v = \left(-1,\ -\sqrt3\right)$ .
+Partons de $\vec v = \left(-1,\ -\sqrt3\right)$.
 
 Quelle est la norme de ce vecteur, et quel angle fait-il avec l'horizontale ?
 
@@ -420,7 +417,7 @@ Quelle est la norme de ce vecteur, et quel angle fait-il avec l'horizontale ?
 :::
 :::::
 ::::: {.column width="52%"}
-![](img/m1-norme-angle.svg){fig-alt="Vecteur v = (−1, −√3) dans le troisième quadrant, angle de 240 degrés." width="100%"}
+![](img/m1-norme-angle-0.svg){fig-alt="Vecteur v = (−1, −√3) dans le troisième quadrant, angle de 240 degrés." width="100%"}
 :::::
 ::::::
 
@@ -526,17 +523,15 @@ Avec tes mots : que t'apprend le **signe** de $\vec u \cdot \vec v$ ?
 **Ouvre le Wooclap**
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : ZSBTHOJ
 :::
 ::::
 
-<!-- QR : python3 make-qr.py, puis décommenter le bloc suivant
 ::: {.wc-qr}
 ![](img/qr-methodes.png)
 
 Produit scalaire
 :::
--->
 
 :::::::
 
@@ -569,7 +564,7 @@ L'angle est **aigu** : on attend $\vec u \cdot \vec v > 0$.
 
 ## Étape 2 — calculer
 
-[2]{.step} **Que vaut $\vec u \cdot \vec v$ en coordonnées ?**
+[2]{.step} **Que vaut $\vec u \cdot \vec v$ en utilisant les coordonnées des vecteurs ?**
 
 . . .
 
@@ -606,7 +601,7 @@ $$\cos\theta = \frac{\vec u \cdot \vec v}{\Vert \vec u\Vert \Vert \vec v\Vert} =
 C'est la longueur (signée) de la **projection orthogonale** de $\vec v$ sur la droite qui porte $\vec u$ :
 $$\Vert \vec v\Vert \cos\theta = \frac{\vec u \cdot \vec v}{\Vert \vec u\Vert} = \frac22 = 1.$$
 
-Le produit scalaire vaut donc $\Vert \vec u\Vert \times$ (longueur de l'« ombre » de $\vec v$) $= 2 \times 1$.
+Le produit scalaire vaut donc $\Vert \vec u\Vert \cdot$ (longueur de l'« ombre » de $\vec v$) $= 2 \cdot 1$.
 :::
 :::::
 ::::: {.column width="45%"}

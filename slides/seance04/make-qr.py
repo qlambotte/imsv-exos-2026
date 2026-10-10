@@ -14,8 +14,8 @@ from pathlib import Path
 
 # >>> À COMPLÉTER : les deux liens Wooclap <<<
 LIENS = {
-    "qr-echauffement": "https://app.wooclap.com/A_COMPLETER",
-    "qr-methodes":     "https://app.wooclap.com/A_COMPLETER",
+    "qr-echauffement": "https://app.wooclap.com/HSRYQMA?from=instruction-slide",
+    "qr-methodes":     "https://app.wooclap.com/ZSBTHOJ?from=instruction-slide",
 }
 
 OUT = Path(__file__).parent / "img"

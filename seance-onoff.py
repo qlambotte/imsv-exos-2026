@@ -3,13 +3,16 @@
 d'affichage dans le tableau d'accueil (« à relire », « en construction »…).
 
     python3 seance-onoff.py 2 off "à relire"        # hors ligne + étiquette
-    python3 seance-onoff.py 3 off "en construction"
-    python3 seance-onoff.py 2 on                     # remet en ligne (ne touche PAS l'étiquette)
+    python3 seance-onoff.py 3 off                    # hors ligne ; « en construction » si aucune étiquette
+    python3 seance-onoff.py 2 on                     # remet en ligne ET efface l'étiquette
+    python3 seance-onoff.py 2 on --garder-statut     # remet en ligne, garde l'étiquette (vue prof du deploy)
     python3 seance-onoff.py 2 statut "à relire"      # change juste l'étiquette
     python3 seance-onoff.py 2 statut prête           # efface l'étiquette (redevient « en ligne »)
 
-L'étiquette est stockée dans _seances-statut.yml, indépendante du on/off (pour survivre
-à la réactivation « prof » du deploy). À lancer depuis la racine, puis quarto render / ./deploy.sh.
+L'étiquette est stockée dans _seances-statut.yml. Une séance remise en ligne est prête : `on`
+efface donc son étiquette, sauf avec --garder-statut (utilisé par deploy.sh pour la vue prof,
+qui active toutes les séances en préparation sans perdre leur étiquette).
+À lancer depuis la racine, puis quarto render (rendu complet) ou ./deploy.sh.
 """
 import os, re, sys
 
@@ -40,10 +43,12 @@ def set_statut(num, label):
         d[num] = label.strip(); print(f"statut : séance {num} → « {label.strip()} »")
     write_statut(d)
 
-if len(sys.argv) < 3 or sys.argv[2] not in ("off", "on", "statut"):
-    sys.exit('Usage : python3 seance-onoff.py <numéro> <on|off|statut> [étiquette]')
-num, action = int(sys.argv[1]), sys.argv[2]
-label = sys.argv[3] if len(sys.argv) > 3 else None
+GARDER = "--garder-statut" in sys.argv
+args = [a for a in sys.argv[1:] if a != "--garder-statut"]
+if len(args) < 2 or args[1] not in ("off", "on", "statut"):
+    sys.exit('Usage : python3 seance-onoff.py <numéro> <on|off|statut> [étiquette] [--garder-statut]')
+num, action = int(args[0]), args[1]
+label = args[2] if len(args) > 2 else None
 nn = f"{num:02d}"
 
 if action == "statut":
@@ -79,6 +84,11 @@ else:
 open(YML, "w", encoding="utf-8").write("\n".join(lines) + "\n")
 print(f"_quarto.yml : séance {nn} {'commentée (hors ligne)' if action == 'off' else 'réactivée'}.")
 
-if action == "off" and label is not None:
-    set_statut(num, label)
+if action == "off":
+    if label is not None:
+        set_statut(num, label)
+    elif num not in read_statut():   # pas d'étiquette existante : on en pose une par défaut
+        set_statut(num, "en construction")
+elif not GARDER:
+    set_statut(num, "")   # en ligne = prête : l'étiquette disparaît
 print("→ lance maintenant : quarto render  (ou ./deploy.sh)")
