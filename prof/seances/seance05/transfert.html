@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Transfert — problèmes – IMSV — Exercices</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../seances/seance05/supplementaires.html" rel="next">
+<link href="../../seances/seance05/socle.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-700ec0bb6adbe5778fda1d0f3c3bc38c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<script>
+// Applique le thème mémorisé AVANT le rendu (évite le clignotement clair→sombre).
+(function () {
+  try {
+    var t = localStorage.getItem('imsv-theme');
+    if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+})();
+</script>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seances/seance05/index.html">Séance 5 — Fonctions et représentations</a></li><li class="breadcrumb-item"><a href="../../seances/seance05/transfert.html"><span class="chapter-title">Transfert — problèmes</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">IMSV — Exercices</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Recherche"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bienvenue</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance01/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 1 — Langage et raisonnement</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance02/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 2 — Calcul fiable et trigonométrie</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance03/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 3 — Équations, proportions et géométrie analytique</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance04/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 4 — Vecteurs et systèmes de coordonnées</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance04/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance04/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance04/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance04/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance05/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 5 — Fonctions et représentations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance05/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance05/transfert.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance05/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance05/defis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Défis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance05/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/methode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Boîte à outils</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 1 — Langage et raisonnement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 2 — Calcul fiable et trigonométrie</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 3 — Équations, proportions et géométrie analytique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance04.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 4 — Vecteurs et systèmes de coordonnées</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance05.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 5 — Fonctions et représentations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seances/seance05/index.html">Séance 5 — Fonctions et représentations</a></li><li class="breadcrumb-item"><a href="../../seances/seance05/transfert.html"><span class="chapter-title">Transfert — problèmes</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Transfert — problèmes</span></h1>
+<p class="subtitle lead">Séance 5 · déployer l’outil sur du nouveau</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="dl">
+<details class="dl-menu">
+<summary>
+Télécharger (PDF · hors-ligne)
+</summary>
+<a href="../../pdf/seance05-enonces.pdf">Énoncés seuls (PDF)</a> <a href="../../pdf/seance05-complet.pdf">Énoncés + coups de pouce &amp; corrections (PDF)</a> <a href="../../pdf/seance05-offline.html" download="">Corrections hors-ligne — 1 fichier (à garder)</a>
+</details>
+</div>
+<div class="callout callout-style-simple callout-tip callout-titled" title="À lire d'abord">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>À lire d’abord
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cherche au brouillon <strong>d’abord</strong>. N’hésite pas à résoudre les exercices avec tes voisin.e.s. Ouvre les indices <strong>dans l’ordre</strong> (référence → question → étape → solution). La solution est le <strong>dernier</strong> recours.</p>
+</div>
+</div>
+<p>Le transfert, c’est le moment où l’outil du socle sert sur un <strong>contexte nouveau</strong> : de vrais problèmes, pas repris tels quels du cours. Travaille en binôme si tu veux.</p>
+<!-- TRANSFERT : appliquer les savoir-faire du socle à un contexte nouveau (sciences de la vie, données réelles sourcées).
+     T.1 = l'exercice « corrigé au milieu » : énoncé seul, SANS aides (la solution pas à pas est dans les slides).
+     HIÉRARCHIE DES INDICES : 1 = théorie ; 2 = une QUESTION (pas la réponse) ; 3 = une ÉTAPE.
+     Solutions des problèmes : les premières lignes disent ce qui est donné, ce qui est cherché, la relation du cours,
+     et l'origine de chaque donnée qui ne figure pas directement dans l'énoncé.
+     Numéro AUTOMATIQUE (catégorie Transfert -> T.1, T.2…). Faisable SANS calculatrice. -->
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Transfert|3|O3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-T1"></span>✎ <strong>Exercice T.1</strong> <a class="exo-hash" href="#exercice-T1" title="Lien vers cet exercice">#</a><span class="exo-meta">Transfert · O3 · ★★★</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La surface corporelle <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> d’un patient, exprimée en m², sert à ajuster la dose de certains médicaments, notamment en chimiothérapie. La formule de Mosteller<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> la calcule à partir de la taille <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math> du patient, en cm, et de sa masse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math>, en kg : <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><msqrt><mfrac><mrow><mi>h</mi><mspace width="0.167em"></mspace><mi>w</mi></mrow><mn>3600</mn></mfrac></msqrt><mi>.</mi></mrow><annotation encoding="application/x-tex">S = \sqrt{\frac{h\,w}{3600}}.</annotation></semantics></math> Un patient mesure <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>180</mn><annotation encoding="application/x-tex">180</annotation></semantics></math> cm.</p>
+<ol type="a">
+<li>Écris <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> comme une fonction de la masse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math> pour ce patient, sous la forme d’une racine carrée d’une expression simple de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math>. Calcule ensuite la surface corporelle de ce patient s’il pèse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>45</mn><annotation encoding="application/x-tex">45</annotation></semantics></math> kg. Donne le résultat en m².</li>
+<li>Le médecin veut ajuster la dose pour une surface corporelle de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> m². Calcule la masse correspondante, en kg.</li>
+<li>Écris la masse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math> en fonction de la surface corporelle <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> pour ce patient. Écris ensuite, sous la forme d’un intervalle, les valeurs de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> pour lesquelles cette expression a un sens dans le contexte.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>L’exercice <strong>T.1</strong> est résolu pas à pas, ensemble, pendant la séance : il n’a donc pas de coups de pouce. Cherche-le d’abord seul·e et repère l’endroit exact où tu bloques.</p>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Transfert|2|O1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-T2"></span>✎ <strong>Exercice T.2</strong> <a class="exo-hash" href="#exercice-T2" title="Lien vers cet exercice">#</a><span class="exo-meta">Transfert · O1 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une poche de sérum physiologique contient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>500</mn><annotation encoding="application/x-tex">500</annotation></semantics></math> mL de solution aqueuse de chlorure de sodium (NaCl) à la concentration de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>9</mn><annotation encoding="application/x-tex">9</annotation></semantics></math> g/L.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Dans un laboratoire, on ajoute à cette solution un volume <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> d’eau distillée, exprimé en litres, puis on homogénéise le mélange sans retirer de solution. On note <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C(V)</annotation></semantics></math> la concentration en NaCl du mélange, en g/L. Le graphe ci-dessous représente la fonction <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/t-dilution.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:6.9cm" alt="Graphe de la concentration en fonction du volume d'eau ajouté : courbe décroissante qui part du point (0 ; 9) et se rapproche de l'axe des abscisses"></p>
+</figure>
+</div>
+<ol type="a">
+<li>Calcule la masse de NaCl contenue dans la poche, en grammes. Écris ensuite la formule de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C(V)</annotation></semantics></math>.</li>
+<li>Complète le tableau suivant avec les valeurs de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C(V)</annotation></semantics></math>, en g/L.</li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> (L)</th>
+<th style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math></th>
+<th style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">0{,}5</annotation></semantics></math></th>
+<th style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math></th>
+<th style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">4{,}5</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C(V)</annotation></semantics></math> (g/L)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="a">
+<li>Lis sur le graphe le volume d’eau à ajouter pour obtenir une concentration de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math> g/L. Calcule ensuite, à l’aide de la formule, le volume d’eau à ajouter pour obtenir une concentration de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">0{,}9</annotation></semantics></math> g/L. Donne chaque volume en litres.</li>
+<li>Écris le domaine pratique de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>, puis l’image de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> pour ce domaine pratique, chacun sous la forme d’un intervalle. Explique en une phrase pourquoi la concentration n’est jamais égale à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> g/L.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Retourne à la théorie du cours : <em>Dilution : entrée, sortie et paramètres</em> pour (a), <em>De la formule au tableau et au graphe</em> pour (b), <em>Retour à la dilution</em> pour (c), et <em>Domaine mathématique vs.&nbsp;domaine pertinent</em> ainsi que <em>Image d’une fonction</em> pour (d).</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><em>Question à te poser.</em></p>
+<ol type="a">
+<li>Quelle quantité ne change pas quand on ajoute de l’eau ?</li>
+<li>Quelle valeur de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> faut-il remplacer dans la formule pour chaque colonne ?</li>
+<li>Pour la lecture, sur quel axe lit-on la concentration et sur quel axe lit-on le volume ? Pour le calcul, la concentration <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">0{,}9</annotation></semantics></math> g/L est-elle l’entrée ou la sortie de la fonction <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> ?</li>
+<li>Quel signe peut avoir le quotient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><mrow><mn>0</mn><mo>,</mo><mn>5</mn><mo>+</mo><mi>V</mi></mrow></mfrac></mstyle><annotation encoding="application/x-tex">\dfrac{4{,}5}{0{,}5 + V}</annotation></semantics></math> lorsque <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> est un volume d’eau ajouté ?</li>
+</ol>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><em>Étape.</em></p>
+<ol type="a">
+<li>Calcule la masse de NaCl dans la poche, en convertissant d’abord <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>500</mn><annotation encoding="application/x-tex">500</annotation></semantics></math> mL en litres.</li>
+<li>Remplace <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>, puis <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">0{,}5</annotation></semantics></math>, puis <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>, puis <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">4{,}5</annotation></semantics></math> dans la formule et calcule chaque quotient.</li>
+<li>Trace sur le graphe la droite horizontale à la hauteur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math> et lis l’abscisse du point commun avec la courbe ; pour le calcul, écris l’équation <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mo>,</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">C(V) = 0{,}9</annotation></semantics></math>, multiplie les deux membres par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>5</mn><mo>+</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">0{,}5 + V</annotation></semantics></math>, puis résous l’équation obtenue.</li>
+<li>Écris que le volume ajouté est positif ou nul, puis compare la valeur de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">V = 0</annotation></semantics></math> avec les valeurs de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> pour de grands volumes.</li>
+</ol>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p><strong>Données et relation.</strong> On donne le volume initial de solution (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>500</mn><annotation encoding="application/x-tex">500</annotation></semantics></math> mL), sa concentration initiale (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>9</mn><annotation encoding="application/x-tex">9</annotation></semantics></math> g/L) et le volume d’eau ajouté <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> (en litres). On cherche la concentration <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C(V)</annotation></semantics></math> après l’ajout, puis le volume <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> qui donne une concentration fixée. La relation du cours est <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><msub><mi>m</mi><mn>0</mn></msub><mrow><msub><mi>V</mi><mn>0</mn></msub><mo>+</mo><mi>V</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">C(V) = \dfrac{m_0}{V_0 + V}</annotation></semantics></math>, où <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mn>0</mn></msub><annotation encoding="application/x-tex">m_0</annotation></semantics></math> est la masse de soluté et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mn>0</mn></msub><annotation encoding="application/x-tex">V_0</annotation></semantics></math> le volume initial de solution.</p>
+<p><strong>Origine des données qui ne figurent pas directement dans l’énoncé.</strong> La masse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mn>0</mn></msub><annotation encoding="application/x-tex">m_0</annotation></semantics></math> n’est pas donnée : on la calcule à partir de la concentration et du volume initial (calcul préalable). Le volume initial est donné en millilitres alors que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> est en litres : on convertit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>500</mn><annotation encoding="application/x-tex">500</annotation></semantics></math> mL en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">0{,}5</annotation></semantics></math> L (conversion d’unité). Le volume correspondant à la concentration <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math> g/L est une lecture sur le graphe.</p>
+<ol type="a">
+<li>La masse de NaCl est le produit de la concentration par le volume : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mn>0</mn></msub><mo>=</mo><mn>9</mn><mspace width="0.222em"></mspace><mtext mathvariant="normal">g/L</mtext><mo>⋅</mo><mn>0</mn><mo>,</mo><mn>5</mn><mspace width="0.222em"></mspace><mtext mathvariant="normal">L</mtext><mo>=</mo><mn>4</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">m_0 = 9\ \text{g/L} \cdot 0{,}5\ \text{L} = 4{,}5</annotation></semantics></math> g. L’ajout d’eau ne retire aucune solution, donc la masse reste <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">4{,}5</annotation></semantics></math> g. Le volume total de solution devient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>5</mn><mo>+</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">0{,}5 + V</annotation></semantics></math> litres, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><mrow><mn>0</mn><mo>,</mo><mn>5</mn><mo>+</mo><mi>V</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">C(V) = \dfrac{4{,}5}{0{,}5 + V}</annotation></semantics></math> en g/L.</li>
+<li>On remplace <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> par chaque valeur : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><mrow><mn>0</mn><mo>,</mo><mn>5</mn></mrow></mfrac></mstyle><mo>=</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">C(0) = \dfrac{4{,}5}{0{,}5} = 9</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><mn>1</mn></mfrac></mstyle><mo>=</mo><mn>4</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">C(0{,}5) = \dfrac{4{,}5}{1} = 4{,}5</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><mrow><mn>1</mn><mo>,</mo><mn>5</mn></mrow></mfrac></mstyle><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">C(1) = \dfrac{4{,}5}{1{,}5} = 3</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><mn>5</mn></mfrac></mstyle><mo>=</mo><mn>0</mn><mo>,</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">C(4{,}5) = \dfrac{4{,}5}{5} = 0{,}9</annotation></semantics></math>, toutes en g/L. Contrôle : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">C(0) = 9</annotation></semantics></math> g/L est bien la concentration de départ.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/t-dilution-sol.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:6.9cm" alt="Les points (1 ; 3) et (4,5 ; 0,9) sur la courbe de la concentration"></p>
+</figure>
+</div>
+<ol start="3" type="a">
+<li>Sur le graphe, la droite horizontale à la hauteur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math> rencontre la courbe au point d’abscisse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> : il faut ajouter <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> L d’eau, ce que confirme <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">C(1) = 3</annotation></semantics></math> g/L. Pour la concentration <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">0{,}9</annotation></semantics></math> g/L, on connaît la sortie de la fonction et on cherche l’entrée, donc on résout <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><mrow><mn>0</mn><mo>,</mo><mn>5</mn><mo>+</mo><mi>V</mi></mrow></mfrac></mstyle><mo>=</mo><mn>0</mn><mo>,</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">\dfrac{4{,}5}{0{,}5 + V} = 0{,}9</annotation></semantics></math>. On multiplie les deux membres par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>5</mn><mo>+</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">0{,}5 + V</annotation></semantics></math>, qui est strictement positif : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>,</mo><mn>5</mn><mo>=</mo><mn>0</mn><mo>,</mo><mn>9</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo>+</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">4{,}5 = 0{,}9\,(0{,}5 + V)</annotation></semantics></math>. On divise par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">0{,}9</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>5</mn><mo>+</mo><mi>V</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">0{,}5 + V = 5</annotation></semantics></math>. On en déduit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mn>4</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">V = 4{,}5</annotation></semantics></math> L : il faut ajouter <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">4{,}5</annotation></semantics></math> L d’eau, ce qui correspond à la dernière colonne du tableau.</li>
+<li>Le volume d’eau ajouté est positif ou nul, donc le domaine pratique est <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mspace width="0.167em"></mspace><mo>+</mo><mi>∞</mi><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">[0,\,+\infty[</annotation></semantics></math>. Sur ce domaine, le dénominateur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>5</mn><mo>+</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">0{,}5 + V</annotation></semantics></math> augmente quand <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> augmente, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> décroît, et la valeur la plus grande est <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">C(0) = 9</annotation></semantics></math>. Les valeurs de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> sont toutes strictement positives, car <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C(V)</annotation></semantics></math> est le quotient d’un nombre positif non nul par un nombre strictement positif. Inversement, pour toute concentration <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">]</mo><mn>0</mn><mo>,</mo><mspace width="0.167em"></mspace><mn>9</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">]0,\,9]</annotation></semantics></math>, le volume <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><mi>c</mi></mfrac></mstyle><mo>−</mo><mn>0</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">V = \dfrac{4{,}5}{c} - 0{,}5</annotation></semantics></math> est positif ou nul et vérifie <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">C(V) = c</annotation></semantics></math> : toutes ces concentrations sont atteintes. L’image est donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">]</mo><mn>0</mn><mo>,</mo><mspace width="0.167em"></mspace><mn>9</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">]0,\,9]</annotation></semantics></math>, en g/L. La concentration n’est jamais égale à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> g/L, car la masse de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">4{,}5</annotation></semantics></math> g de NaCl reste dissoute dans le mélange, quel que soit le volume d’eau ajouté.</li>
+</ol>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p>Une erreur fréquente consiste à croire que doubler le volume d’eau ajouté divise la concentration par deux. Elle est tentante parce que la concentration baisse bien quand on ajoute de l’eau, mais elle est fausse : c’est le volume total <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>5</mn><mo>+</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">0{,}5 + V</annotation></semantics></math> qui intervient, et non le volume ajouté. Par exemple, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">C(1) = 3</annotation></semantics></math> g/L alors que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>4</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">C(0{,}5) = 4{,}5</annotation></semantics></math> g/L, et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>≠</mo><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><mn>2</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">3 \neq \dfrac{4{,}5}{2}</annotation></semantics></math>.</p>
+<p>Une autre erreur consiste à écrire <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><mrow><mn>500</mn><mo>+</mo><mi>V</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">C(V) = \dfrac{4{,}5}{500 + V}</annotation></semantics></math> sans convertir les <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>500</mn><annotation encoding="application/x-tex">500</annotation></semantics></math> mL en litres. Elle est tentante parce que le nombre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>500</mn><annotation encoding="application/x-tex">500</annotation></semantics></math> figure dans l’énoncé, mais elle est fausse : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> est en litres, donc tous les volumes de la formule doivent être en litres.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Transfert|3|O3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-T3"></span>✎ <strong>Exercice T.3</strong> <a class="exo-hash" href="#exercice-T3" title="Lien vers cet exercice">#</a><span class="exo-meta">Transfert · O3 · ★★★</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La clairance de la créatinine estime la capacité des reins à filtrer le sang. Pour un homme, la formule de Cockcroft et Gault<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> l’estime par <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>140</mn><mo>−</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>w</mi></mrow><mrow><mn>72</mn><mspace width="0.167em"></mspace><mi>s</mi></mrow></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathit{ClCr} = \frac{(140 - a)\,w}{72\,s},</annotation></semantics></math> où <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math> est l’âge en années, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math> la masse en kg et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> la concentration de créatinine dans le sang en mg/dL ; la clairance <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><annotation encoding="application/x-tex">\mathit{ClCr}</annotation></semantics></math> est alors exprimée en mL/min. Le tableau suivant donne les catégories de la maladie rénale chronique<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> selon le débit de filtration glomérulaire (DFG), en mL/min. Pour simplifier, on suppose que le DFG est égal à la clairance estimée.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Catégorie</th>
+<th style="text-align: center;">G1</th>
+<th style="text-align: center;">G2</th>
+<th style="text-align: center;">G3a</th>
+<th style="text-align: center;">G3b</th>
+<th style="text-align: center;">G4</th>
+<th style="text-align: center;">G5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">DFG (mL/min)</td>
+<td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo><mn>90</mn></mrow><annotation encoding="application/x-tex">\geq 90</annotation></semantics></math></td>
+<td style="text-align: center;">de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math> à moins de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>90</mn><annotation encoding="application/x-tex">90</annotation></semantics></math></td>
+<td style="text-align: center;">de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>45</mn><annotation encoding="application/x-tex">45</annotation></semantics></math> à moins de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math></td>
+<td style="text-align: center;">de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>30</mn><annotation encoding="application/x-tex">30</annotation></semantics></math> à moins de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>45</mn><annotation encoding="application/x-tex">45</annotation></semantics></math></td>
+<td style="text-align: center;">de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>15</mn><annotation encoding="application/x-tex">15</annotation></semantics></math> à moins de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>30</mn><annotation encoding="application/x-tex">30</annotation></semantics></math></td>
+<td style="text-align: center;">moins de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>15</mn><annotation encoding="application/x-tex">15</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p>Un patient masculin de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math> ans pèse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>81</mn><annotation encoding="application/x-tex">81</annotation></semantics></math> kg. Pour ce patient, la clairance est une fonction de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>, dont le graphe est dessiné ci-dessous ; les lignes en tirets marquent les seuils des catégories.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/t-clairance.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:10.7cm" alt="Graphe de la clairance en fonction de la créatinine : courbe décroissante, avec des lignes horizontales aux hauteurs 15, 30, 45, 60 et 90 qui délimitent les catégories G1 à G5"></p>
+</figure>
+</div>
+<ol type="a">
+<li>Calcule le nombre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> tel que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>c</mi><mi>s</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(s) = \dfrac{c}{s}</annotation></semantics></math> pour ce patient.</li>
+<li>Calcule <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(1{,}5)</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(3)</annotation></semantics></math>, en mL/min, puis donne la catégorie de ce patient dans chacun des deux cas.</li>
+<li>Écris sous la forme d’un intervalle l’ensemble des valeurs de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>, en mg/dL, pour lesquelles le patient est dans la catégorie G3a ou dans la catégorie G3b.</li>
+<li>Écris une phrase qui dit ce que devient la clairance lorsque la concentration de créatinine double.</li>
+<li>Écris <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> en fonction de la clairance <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><annotation encoding="application/x-tex">\mathit{ClCr}</annotation></semantics></math> pour ce patient, puis calcule la concentration de créatinine qui correspond à une clairance de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>45</mn><annotation encoding="application/x-tex">45</annotation></semantics></math> mL/min.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Retourne à la théorie du cours : <em>Dilution : entrée, sortie et paramètres</em> pour (a), <em>Une fonction, deux types de questions</em> pour (b) et (d), <em>Préimage</em> pour (c), et <em>Défaire une opération : fonction réciproque</em> ainsi que <em>Réciproque : vision graphique</em> pour (e).</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><em>Question à te poser.</em></p>
+<ol type="a">
+<li>Quelles quantités de la formule sont connues pour ce patient, et lesquelles restent des variables ?</li>
+<li>Dans <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(1{,}5)</annotation></semantics></math>, le nombre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">1{,}5</annotation></semantics></math> est-il l’entrée ou la sortie ? Dans quelle colonne du tableau des catégories se trouve la valeur obtenue ?</li>
+<li>Quelles valeurs de la clairance correspondent aux deux catégories réunies, et la clairance augmente-t-elle ou diminue-t-elle quand <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> augmente ?</li>
+<li>Que devient le dénominateur de la formule quand <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> double ?</li>
+<li>Quand on connaît la clairance, comment retrouve-t-on la créatinine ?</li>
+</ol>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p><em>Étape.</em></p>
+<ol type="a">
+<li>Remplace <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>81</mn><annotation encoding="application/x-tex">81</annotation></semantics></math>, puis simplifie le quotient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle displaystyle="true"><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>140</mn><mo>−</mo><mn>60</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mn>81</mn></mrow><mn>72</mn></mfrac></mstyle><annotation encoding="application/x-tex">\dfrac{(140 - 60) \cdot 81}{72}</annotation></semantics></math>.</li>
+<li>Remplace <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">1{,}5</annotation></semantics></math>, puis par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math>, dans l’expression trouvée en (a), puis compare chaque résultat aux colonnes du tableau des catégories.</li>
+<li>Traduis « catégorie G3a ou G3b » par une double inégalité portant sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(s)</annotation></semantics></math>, puis multiplie chaque membre par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>, qui est strictement positif.</li>
+<li>Calcule <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(2s)</annotation></semantics></math> et compare-la à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(s)</annotation></semantics></math>.</li>
+<li>Pose <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>c</mi><mi>s</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">C = \dfrac{c}{s}</annotation></semantics></math>, isole <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>, puis remplace <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>45</mn><annotation encoding="application/x-tex">45</annotation></semantics></math>.</li>
+</ol>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p><strong>Données et relation.</strong> On donne la formule de Cockcroft et Gault, l’âge <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">a = 60</annotation></semantics></math> ans, la masse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mn>81</mn></mrow><annotation encoding="application/x-tex">w = 81</annotation></semantics></math> kg et le tableau des catégories. On cherche l’expression de la clairance en fonction de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>, les valeurs de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> pour lesquelles le patient est dans les catégories G3a ou G3b, et la réciproque. La relation utilisée est la formule de Cockcroft et Gault : comme dans le cours, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> est la variable d’entrée, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(s)</annotation></semantics></math> est la sortie, et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math> jouent le rôle de paramètres.</p>
+<p><strong>Origine des données qui ne figurent pas directement dans l’énoncé.</strong> Le coefficient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> n’est pas donné : il se calcule à partir de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math> (calcul préalable). Les seuils <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>30</mn><annotation encoding="application/x-tex">30</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math> de la question (c) se lisent dans le tableau : la catégorie G3b commence à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>30</mn><annotation encoding="application/x-tex">30</annotation></semantics></math> mL/min et la catégorie G3a se termine juste avant <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math> mL/min (lecture dans le tableau).</p>
+<ol type="a">
+<li>On remplace <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>81</mn><annotation encoding="application/x-tex">81</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>140</mn><mo>−</mo><mn>60</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mn>81</mn></mrow><mrow><mn>72</mn><mspace width="0.167em"></mspace><mi>s</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>80</mn><mo>⋅</mo><mn>81</mn></mrow><mrow><mn>72</mn><mspace width="0.167em"></mspace><mi>s</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(s) = \dfrac{(140 - 60) \cdot 81}{72\,s} = \dfrac{80 \cdot 81}{72\,s}</annotation></semantics></math>. On simplifie le quotient : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="true"><mfrac><mn>81</mn><mn>72</mn></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>9</mn><mn>8</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\dfrac{81}{72} = \dfrac{9}{8}</annotation></semantics></math>, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>80</mn><mo>⋅</mo><mstyle displaystyle="true"><mfrac><mn>9</mn><mn>8</mn></mfrac></mstyle><mo>=</mo><mn>90</mn></mrow><annotation encoding="application/x-tex">80 \cdot \dfrac{9}{8} = 90</annotation></semantics></math>. On obtient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>90</mn><mi>s</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(s) = \dfrac{90}{s}</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>90</mn></mrow><annotation encoding="application/x-tex">c = 90</annotation></semantics></math>.</li>
+<li>La concentration <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> est connue, donc on évalue la fonction. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>90</mn><mrow><mn>1</mn><mo>,</mo><mn>5</mn></mrow></mfrac></mstyle><mo>=</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(1{,}5) = \dfrac{90}{1{,}5} = 60</annotation></semantics></math> mL/min : cette valeur est dans la colonne G2, « de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math> à moins de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>90</mn><annotation encoding="application/x-tex">90</annotation></semantics></math> », donc le patient est en catégorie G2. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>90</mn><mn>3</mn></mfrac></mstyle><mo>=</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(3) = \dfrac{90}{3} = 30</annotation></semantics></math> mL/min : cette valeur est dans la colonne G3b, « de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>30</mn><annotation encoding="application/x-tex">30</annotation></semantics></math> à moins de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>45</mn><annotation encoding="application/x-tex">45</annotation></semantics></math> », donc le patient est en catégorie G3b.</li>
+<li>Les catégories G3a et G3b réunies correspondent aux clairances de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>30</mn><annotation encoding="application/x-tex">30</annotation></semantics></math> inclus à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math> exclu, donc à la condition <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mo>≤</mo><mstyle displaystyle="true"><mfrac><mn>90</mn><mi>s</mi></mfrac></mstyle><mo>&lt;</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">30 \leq \dfrac{90}{s} &lt; 60</annotation></semantics></math>. La concentration <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> est strictement positive, donc on peut multiplier chaque membre par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> sans changer le sens des inégalités. L’inégalité <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mo>≤</mo><mstyle displaystyle="true"><mfrac><mn>90</mn><mi>s</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">30 \leq \dfrac{90}{s}</annotation></semantics></math> donne <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mspace width="0.167em"></mspace><mi>s</mi><mo>≤</mo><mn>90</mn></mrow><annotation encoding="application/x-tex">30\,s \leq 90</annotation></semantics></math>, soit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>≤</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">s \leq 3</annotation></semantics></math>. L’inégalité <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="true"><mfrac><mn>90</mn><mi>s</mi></mfrac></mstyle><mo>&lt;</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">\dfrac{90}{s} &lt; 60</annotation></semantics></math> donne <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>90</mn><mo>&lt;</mo><mn>60</mn><mspace width="0.167em"></mspace><mi>s</mi></mrow><annotation encoding="application/x-tex">90 &lt; 60\,s</annotation></semantics></math>, soit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>&gt;</mo><mn>1</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">s &gt; 1{,}5</annotation></semantics></math>. L’ensemble cherché est donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo>←</mo></msup><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">[</mo><mn>30</mn><mo>,</mo><mspace width="0.167em"></mspace><mn>60</mn><mo stretchy="false" form="prefix">[</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="postfix">]</mo><mn>1</mn><mo>,</mo><mn>5</mn><mspace width="0.167em"></mspace><mo>;</mo><mspace width="0.167em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\mathit{ClCr}^{\leftarrow}([30,\,60[) = ]1{,}5\,;\,3]</annotation></semantics></math> mg/dL. La clairance diminue quand <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> augmente, donc la borne haute <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math> de la clairance correspond à la borne basse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">1{,}5</annotation></semantics></math> de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>, exclue comme <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math>, et la borne basse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>30</mn><annotation encoding="application/x-tex">30</annotation></semantics></math> de la clairance correspond à la borne haute <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math> de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>, incluse comme <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>30</mn><annotation encoding="application/x-tex">30</annotation></semantics></math>. Sur le graphe, la partie de la courbe comprise entre les tirets <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>30</mn><annotation encoding="application/x-tex">30</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math> correspond bien aux abscisses entre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">1{,}5</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math>.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/t-clairance-sol.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:10.7cm" alt="Les points (1,5 ; 60) et (3 ; 30) sur la courbe, avec leurs projections sur les axes"></p>
+</figure>
+</div>
+<ol start="4" type="a">
+<li>On calcule <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>90</mn><mrow><mn>2</mn><mi>s</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⋅</mo><mstyle displaystyle="true"><mfrac><mn>90</mn><mi>s</mi></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(2s) = \dfrac{90}{2s} = \dfrac{1}{2} \cdot \dfrac{90}{s} = \dfrac{\mathit{ClCr}(s)}{2}</annotation></semantics></math>. Lorsque la concentration de créatinine double, la clairance est donc divisée par deux. Les résultats de (b) le confirment : le passage de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">s = 1{,}5</annotation></semantics></math> à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">s = 3</annotation></semantics></math> fait passer la clairance de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math> à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>30</mn><annotation encoding="application/x-tex">30</annotation></semantics></math> mL/min.</li>
+<li>La fonction <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><annotation encoding="application/x-tex">\mathit{ClCr}</annotation></semantics></math> est strictement décroissante sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">]</mo><mn>0</mn><mo>,</mo><mspace width="0.167em"></mspace><mo>+</mo><mi>∞</mi><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">]0,\,+\infty[</annotation></semantics></math>, donc deux concentrations différentes donnent deux clairances différentes : elle est injective et admet une réciproque. On pose <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>90</mn><mi>s</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">C = \dfrac{90}{s}</annotation></semantics></math> et on isole <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>90</mn><mi>C</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">s = \dfrac{90}{C}</annotation></semantics></math>, pour toute clairance <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> strictement positive. La concentration de créatinine s’écrit donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>90</mn><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">s = \dfrac{90}{\mathit{ClCr}}</annotation></semantics></math>. Pour une clairance de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>45</mn><annotation encoding="application/x-tex">45</annotation></semantics></math> mL/min, on obtient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>90</mn><mn>45</mn></mfrac></mstyle><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">s = \dfrac{90}{45} = 2</annotation></semantics></math> mg/dL. Contrôle : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑙</mi><mi mathvariant="italic">𝐶</mi><mi mathvariant="italic">𝑟</mi></mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>90</mn><mn>2</mn></mfrac></mstyle><mo>=</mo><mn>45</mn></mrow><annotation encoding="application/x-tex">\mathit{ClCr}(2) = \dfrac{90}{2} = 45</annotation></semantics></math> mL/min.</li>
+</ol>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<p>En (c), une erreur fréquente consiste à recopier l’intervalle de la clairance, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>30</mn><mo>,</mo><mspace width="0.167em"></mspace><mn>60</mn><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">[30,\,60[</annotation></semantics></math>, en le prenant pour l’intervalle de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>. Elle est tentante parce que les mêmes nombres reviennent, mais elle est fausse : la fonction est décroissante, donc l’ordre des bornes s’inverse. On obtient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">]</mo><mn>1</mn><mo>,</mo><mn>5</mn><mspace width="0.167em"></mspace><mo>;</mo><mspace width="0.167em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">]1{,}5\,;\,3]</annotation></semantics></math> et non <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>1</mn><mo>,</mo><mn>5</mn><mspace width="0.167em"></mspace><mo>;</mo><mspace width="0.167em"></mspace><mn>3</mn><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">[1{,}5\,;\,3[</annotation></semantics></math> : la borne incluse change de côté.</p>
+<p>En (d), une autre erreur consiste à croire que doubler <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> double la clairance. Elle est tentante parce que, dans une relation de proportionnalité, doubler l’entrée double la sortie, mais elle est fausse : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> est au dénominateur, donc la clairance est divisée par deux.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Fini ? Enchaîne avec les <strong><a href="../../seances/seance05/supplementaires.html">exercices supplémentaires</a></strong>.</p>
+</div>
+</div>
+</div>
+
+
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>R. D. Mosteller, « Simplified calculation of body-surface area », <em>The New England Journal of Medicine</em>, 317(17), 1987, p.&nbsp;1098.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Le sérum physiologique est une solution injectable de chlorure de sodium à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>9</mn><mspace width="0.167em"></mspace><mi>%</mi></mrow><annotation encoding="application/x-tex">0{,}9\,\%</annotation></semantics></math> (masse par volume), soit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>9</mn><annotation encoding="application/x-tex">9</annotation></semantics></math> g/L ; voir par exemple le résumé des caractéristiques du produit de <em>Chlorure de sodium Fresenius 0,9 %, solution pour perfusion</em> (Fresenius Kabi France), rubrique 2 : « 1 ml contient 9 mg de chlorure de sodium », base de données publique des médicaments (ANSM), mise à jour du 25 avril 2024.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>D. W. Cockcroft et M. H. Gault, « Prediction of creatinine clearance from serum creatinine », <em>Nephron</em>, 16(1), 1976, p.&nbsp;31-41.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>KDIGO, « 2012 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease », <em>Kidney International Supplements</em>, 3(1), 2013.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script>
+// Aides (indices / solution / piège) : repliées dans un menu « Coups de pouce ».
+//   - au départ : on ne voit que le bouton  ▶ COUPS DE POUCE  (les onglets sont cachés) ;
+//   - au clic : le bouton passe à  ▼ COUPS DE POUCE  et les onglets apparaissent,
+//     l'onglet « Indice 1 » étant affiché par défaut (comportement natif des tabs) ;
+//   - reclic sur le bouton : tout se referme.
+(function () {
+  function build(a) {
+    if (a.dataset.aidesWired) return;
+    a.dataset.aidesWired = '1';
+    var panel = a.querySelector('.panel-tabset');
+    if (!panel) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'aides-toggle';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span class="aides-caret">▶</span> Coups de pouce';
+    a.insertBefore(btn, a.firstChild);
+    btn.addEventListener('click', function () {
+      var open = a.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      a.querySelector('.aides-caret').textContent = open ? '▼' : '▶';
+    });
+  }
+  function setup() { document.querySelectorAll('.aides').forEach(build); }
+  document.addEventListener('DOMContentLoaded', function () {
+    setup();
+    setTimeout(setup, 100);
+  });
+})();
+</script>
+<script>
+// Trois outils à côté du titre (comme « bookup ») : GitHub · Téléchargement · Thème clair/sombre.
+(function () {
+  // >>> À COMPLÉTER : URL du dépôt GitHub du projet <<<
+  var GITHUB_URL = "https://github.com/qlambotte/imsv-exos-2026";
+
+  var SVG = {
+    github: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
+    download: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a.75.75 0 0 1 .75.75v6.44l1.97-1.97a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 1.06-1.06l1.97 1.97V1.75A.75.75 0 0 1 8 1zM2.75 12a.75.75 0 0 1 .75.75v.75a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-.75a.75.75 0 0 1 1.5 0v.75A2 2 0 0 1 12 15.5H4a2 2 0 0 1-2-2v-.75a.75.75 0 0 1 .75-.75z"/></svg>',
+    sun: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 4.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM8 0a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1A.75.75 0 0 1 8 0zm0 13a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1A.75.75 0 0 1 8 13zM16 8a.75.75 0 0 1-.75.75h-1a.75.75 0 0 1 0-1.5h1A.75.75 0 0 1 16 8zM3 8a.75.75 0 0 1-.75.75h-1a.75.75 0 0 1 0-1.5h1A.75.75 0 0 1 3 8zm10.66-5.66a.75.75 0 0 1 0 1.06l-.7.7a.75.75 0 1 1-1.06-1.06l.7-.7a.75.75 0 0 1 1.06 0zM4.1 11.9a.75.75 0 0 1 0 1.06l-.7.7a.75.75 0 0 1-1.06-1.06l.7-.7a.75.75 0 0 1 1.06 0zm9.56 1.76a.75.75 0 0 1-1.06 0l-.7-.7a.75.75 0 1 1 1.06-1.06l.7.7a.75.75 0 0 1 0 1.06zM4.1 4.1a.75.75 0 0 1-1.06 0l-.7-.7a.75.75 0 0 1 1.06-1.06l.7.7a.75.75 0 0 1 0 1.06z"/></svg>',
+    moon: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278z"/></svg>'
+  };
+
+  function makeTool(tag, cls, html, title) {
+    var el = document.createElement(tag);
+    el.className = 'imsv-tool ' + (cls || '');
+    el.setAttribute('title', title);
+    el.setAttribute('aria-label', title);
+    el.innerHTML = html;
+    return el;
+  }
+
+  function build() {
+    var host = document.querySelector('.sidebar-tools-main');
+    if (!host) {
+      var title = document.querySelector('#quarto-sidebar .sidebar-title');
+      if (!title) return;
+      host = document.createElement('div');
+      host.className = 'sidebar-tools-main';
+      title.appendChild(host);
+    }
+    if (host.dataset.imsvTools) return;
+    host.dataset.imsvTools = '1';
+
+    // 1) GitHub
+    var gh = makeTool('a', '', SVG.github, 'Code source (GitHub)');
+    gh.setAttribute('href', GITHUB_URL);
+    gh.setAttribute('target', '_blank');
+    gh.setAttribute('rel', 'noopener');
+
+    // 2) Téléchargement — repris du menu présent dans le corps de la page
+    //    (uniquement sur les pages qui ont des PDF : séances).
+    var bodyMenu = document.querySelector('.dl .dl-menu') || document.querySelector('.dl-menu');
+    var dlWrap = null;
+    if (bodyMenu && bodyMenu.querySelectorAll('a').length) {
+      dlWrap = makeTool('div', 'imsv-dl', SVG.download, 'Télécharger les PDF');
+      var menu = document.createElement('div');
+      menu.className = 'imsv-dl-menu';
+      menu.hidden = true;
+      var head = document.createElement('div');
+      head.className = 'imsv-dl-head';
+      head.textContent = 'Télécharger';
+      menu.appendChild(head);
+      bodyMenu.querySelectorAll('a').forEach(function (a) {
+        var link = document.createElement('a');
+        link.href = a.getAttribute('href');
+        link.textContent = a.textContent;
+        menu.appendChild(link);
+      });
+      var container = document.querySelector('.dl');
+      if (container) container.hidden = true;      // on masque le menu du corps (doublon)
+      dlWrap.appendChild(menu);
+      dlWrap.addEventListener('click', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        menu.hidden = !menu.hidden;
+      });
+      document.addEventListener('click', function () { menu.hidden = true; });
+      menu.addEventListener('click', function (e) { e.stopPropagation(); });
+    }
+
+    // 3) Thème clair / sombre
+    function isDark() { return document.documentElement.getAttribute('data-theme') === 'dark'; }
+    var themeBtn = makeTool('button', '', isDark() ? SVG.sun : SVG.moon,
+                            isDark() ? 'Passer en thème clair' : 'Passer en thème sombre');
+    themeBtn.type = 'button';
+    themeBtn.addEventListener('click', function () {
+      var dark = !isDark();
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      try { localStorage.setItem('imsv-theme', dark ? 'dark' : 'light'); } catch (e) {}
+      themeBtn.innerHTML = dark ? SVG.sun : SVG.moon;
+      themeBtn.setAttribute('title', dark ? 'Passer en thème clair' : 'Passer en thème sombre');
+    });
+
+    host.appendChild(gh);
+    if (dlWrap) host.appendChild(dlWrap);
+    host.appendChild(themeBtn);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    build();
+    setTimeout(build, 100);
+  });
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/qlambotte\.github\.io\/imsv-exos-2026\/prof\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../seances/seance05/socle.html" class="pagination-link" aria-label="Socle — exercices routiniers">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Socle — exercices routiniers</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../seances/seance05/supplementaires.html" class="pagination-link" aria-label="Exercices supplémentaires">
+        <span class="nav-page-text"><span class="chapter-title">Exercices supplémentaires</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>IMSV — Faculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Énoncés et correctif des exercices</p>
+</div>
+    <div class="nav-footer-right">
+<p>© Quentin Lambotte · FMPB · UMONS</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
