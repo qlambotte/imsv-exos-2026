@@ -12,10 +12,12 @@ Dépendance : pip install "qrcode[pil]"
 import qrcode
 from pathlib import Path
 
-# >>> À COMPLÉTER : les deux liens Wooclap (échauffement ; méthodes) <<<
+# >>> À COMPLÉTER : les liens Wooclap et du sondage <<<
 LIENS = {
     "qr-echauffement": "https://app.wooclap.com/A_COMPLETER?from=instruction-slide",
     "qr-methodes":     "https://app.wooclap.com/A_COMPLETER?from=instruction-slide",
+    "qr-sondage":      "https://app.wooclap.com/A_COMPLETER?from=instruction-slide",  # vote sur la correction de S.4
+    "qr-sondage-seances": "A_COMPLETER",  # lien du sondage final sur les séances
 }
 
 OUT = Path(__file__).parent / "img"

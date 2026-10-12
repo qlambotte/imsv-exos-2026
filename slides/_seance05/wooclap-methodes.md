@@ -6,7 +6,7 @@ fais la synthèse à voix haute. Ce document donne, pour chaque question, ce ver
 
 ---
 
-## Méthode 1 — Retrouver l'entrée à partir de la sortie
+## Retrouver l'entrée à partir de la sortie
 
 ### Question d'ouverture [O3]
 
@@ -61,55 +61,6 @@ que la valeur appartient au domaine.
 > Écris la formule qui donne $C$ à partir de $F$, puis convertis $98{,}6$ °F.
 
 **Cible de synthèse :** $C = \dfrac{F - 32}{1{,}8}$ (fonction réciproque) ; $98{,}6$ °F correspond à $37$ °C.
-
----
-
-## Méthode 2 — Étudier le signe d'une fonction
-
-### Question d'ouverture [O2]
-
-**Question à coller :**
-> Avec tes mots : comment sais-tu où une fonction est positive et où elle est négative ?
-
-**Cible de synthèse :** on cherche les **racines**, qui découpent le domaine en intervalles, puis on
-détermine le signe sur chaque intervalle. Les réponses « on regarde le graphe » sont valables : c'est un autre registre
-de la même information.
-
-### Étape 1
-
-**Question à coller :**
-> $f(x) = \dfrac{x - 1}{x + 2}$. Quel est son domaine, et quelles sont ses racines ?
-
-**Cible de synthèse :** le dénominateur s'annule en $-2$, donc $\mathit{Dom}(f) = \mathbb{R} \setminus \{-2\}$ et la valeur $-2$ est exclue ; la seule racine est $1$.
-
-### Étape 2
-
-**Question à coller :**
-> Quels points découpent le domaine en intervalles ? Écris ces intervalles.
-
-**Cible de synthèse :** la racine $1$ **et** la valeur exclue $-2$ : $]-\infty, -2[$, $]-2, 1[$ et $]1, +\infty[$. Les réponses qui oublient $-2$ montrent pourquoi la méthode place aussi les valeurs exclues.
-
-### Étape 3
-
-**Question à coller :**
-> Choisis un point dans chaque intervalle et donne le signe de $f$ en ce point.
-
-**Cible de synthèse :** $f(-3) = 4$, $f(0) = -\frac12$, $f(2) = \frac14$ : signes $+$, $-$, $+$.
-
-### Étape 4
-
-**Question à coller :**
-> Écris une phrase de conclusion.
-
-**Cible de synthèse :** $f$ est strictement positive sur $]-\infty, -2[$ et sur $]1, +\infty[$, strictement négative sur $]-2, 1[$ et nulle en $1$ ; elle change de signe en $-2$ sans s'y annuler.
-
-### Piège
-
-**Question à coller :**
-> $h(x) = x\,(x - 2)^2$ change-t-elle de signe en $2$ ? Pourquoi ?
-
-**Cible de synthèse :** non : le facteur $(x - 2)^2$ est positif ou nul des deux côtés de $2$, donc
-$h$ garde le signe de $x$ ($h(1) = 1$ et $h(3) = 3$).
 
 ---
 

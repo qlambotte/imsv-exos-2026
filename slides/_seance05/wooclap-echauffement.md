@@ -25,21 +25,23 @@ produits ; $(-3, 2)$ d'un produit coordonnée par coordonnée sans somme (le pro
 
 ---
 
-## Q2 — Pente d'une droite
+## Q2 — Lire un intervalle
 
 **Type Wooclap :** QCM · réponse unique
 
 **Énoncé à coller :**
-> Quelle est la pente de la droite qui passe par les points $(1, 2)$ et $(3, 8)$ ?
+> Parmi les nombres $-1$, $0$, $2{,}5$ et $3$, lesquels appartiennent à l'intervalle $[0,\,3[$ ?
 
 **Choix :**
-- (X) $3$
-- ( ) $\dfrac13$
-- ( ) $2$
-- ( ) $6$
+- (X) $0$ et $2{,}5$
+- ( ) $0$, $2{,}5$ et $3$
+- ( ) $2{,}5$ seulement
+- ( ) $-1$, $0$ et $2{,}5$
 
-**Justification :** $\dfrac{8 - 2}{3 - 1} = 3$. Le distracteur $\frac13$ inverse le rapport ; $2$ ne
-garde que la variation horizontale ; $6$ ne garde que la variation verticale.
+**Justification :** l'intervalle $[0,\,3[$ contient les nombres $x$ tels que $0 \leq x < 3$. Le
+distracteur « $0$, $2{,}5$ et $3$ » inclut la borne exclue $3$ ; « $2{,}5$ seulement » exclut la
+borne incluse $0$ ; « $-1$, $0$ et $2{,}5$ » ne lit pas la borne inférieure. Cette question prépare
+l'exercice S.4, corrigé ensemble après la pause.
 
 ---
 
@@ -58,7 +60,7 @@ garde que la variation horizontale ; $6$ ne garde que la variation verticale.
 
 **Justification :** $7 = 2C + 1$, donc $6 = 2C$ et $C = 3$. Le distracteur $2{,}5$ vient d'une
 division par $2$ avant la soustraction de $1$ ; $3{,}5$ de l'oubli de soustraire $1$ ; $15$ d'un calcul de
-$A$ à partir de $C = 7$. Cette question prépare le corrigé de T.1 et la méthode 1.
+$A$ à partir de $C = 7$. Cette question prépare la méthode « retrouver l'entrée à partir de la sortie ».
 
 ---
 
@@ -84,4 +86,4 @@ solution négative ; $\sqrt6$ vient de $11 - 5$ au lieu de $11 + 5$ ; $8$ d'une 
 
 - Affichage des résultats : après clôture du vote, pas en direct.
 - Chronomètre : 30 à 45 secondes par question.
-- Ordre : Q1, Q2, Q3, Q4. Q3 prépare T.1 et la méthode 1 ; Q4 prépare la notion d'antécédents multiples.
+- Ordre : Q1, Q2, Q3, Q4. Q2 prépare le corrigé de S.4 ; Q3 prépare la méthode « retrouver l'entrée à partir de la sortie » ; Q4 prépare la notion d'antécédents multiples.
