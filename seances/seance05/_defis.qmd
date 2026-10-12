@@ -1,0 +1,64 @@
+<!-- DÉFIS : page optionnelle, pour celles et ceux qui trouvent les exercices trop faciles.
+     Chaque défi est plus corsé que le transfert, reste dans les notions et la notation du cours, et demande
+     plusieurs étapes ou un choix de méthode que l'énoncé n'indique pas.
+     Titre : « Exercice|Défi|niveau|Ox » (numéro D.1, D.2… automatique ; le préfixe D est la première lettre de « Défi »).
+     Pas de solution rédigée : un seul onglet « Indice » (une phrase complète), puis « Réponse » (une phrase complète).
+     Faisable SANS calculatrice. Réponses vérifiées par verif/verif_seance05.py. -->
+
+::: {.callout-note appearance="simple"}
+Les défis sont **optionnels**. Ils s'adressent à celles et ceux qui trouvent les exercices du socle et du transfert trop faciles. Ils restent dans les notions et les notations de la séance, mais ils demandent plusieurs étapes et un choix de méthode que l'énoncé n'indique pas. Chaque défi propose un seul indice et la réponse finale, sans solution rédigée : c'est à toi de construire le raisonnement et de contrôler ta réponse.
+:::
+
+::: {.callout-caution .exo title="Exercice|Défi|3|O3"}
+Soient les fonctions $f$ et $g$ définies par $f(x) = \dfrac{x + 1}{x - 1}$ et $g(x) = \sqrt{x}$, et soit $h = g \circ f$. Détermine le domaine de $h$ et l'image de $h$. Justifie ensuite que $h$ admet une réciproque, puis donne l'expression de $h^{-1}$ et son domaine. Tu peux utiliser la notation $A \setminus B$ pour écrire un ensemble $A$ privé des éléments de l'ensemble $B$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Détermine d'abord le domaine, puis étudie les valeurs de $f(x)$ séparément sur chacun des morceaux qui le composent, en écrivant $f(x) = 1 + \dfrac{2}{x - 1}$.
+
+## Réponse
+
+Le domaine de $h$ est $\mathbb{R} \setminus\, ]-1,\,1]$, l'image de $h$ est $[0,\,+\infty[\, \setminus \{1\}$, et la réciproque est la fonction $h^{-1}$ de domaine $[0,\,+\infty[\, \setminus \{1\}$ définie par $h^{-1}(x) = \dfrac{x^2 + 1}{x^2 - 1}$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Défi|3|O3"}
+Soit la fonction $f$ définie par $f(x) = \dfrac{p\,x + q}{x - 2}$, où $p$ et $q$ sont des nombres réels. Détermine tous les couples $(p,\,q)$ pour lesquels la fonction $f$ est injective et vérifie $f^{-1} = f$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Isole $x$ dans l'équation $y = \dfrac{p\,x + q}{x - 2}$ pour obtenir $f^{-1}$, compare-la avec $f$, puis vérifie pour quelles valeurs de $q$ la fonction obtenue n'est pas injective.
+
+## Réponse
+
+La fonction $f$ est injective et égale à sa réciproque exactement lorsque $p = 2$ et $q \neq -4$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Défi|3|O2"}
+Soit la fonction $g$ définie sur $\mathbb{R}$ par $g(x) = |x^2 - 4x + 3|$. Détermine, selon la valeur du nombre réel $a$, le nombre de solutions de l'équation $g(x) = a$, puis donne les solutions dans le cas où il y en a exactement trois.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Écris l'équation $g(x) = a$ sous la forme de deux équations sans valeur absolue, puis compte les solutions de chacune selon la valeur de $a$.
+
+## Réponse
+
+L'équation n'a aucune solution si $a < 0$, deux solutions ($1$ et $3$) si $a = 0$, quatre solutions si $0 < a < 1$, trois solutions si $a = 1$ (à savoir $2 - \sqrt{2}$, $2$ et $2 + \sqrt{2}$), et deux solutions si $a > 1$.
+
+:::
+:::

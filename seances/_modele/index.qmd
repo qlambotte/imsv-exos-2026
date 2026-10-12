@@ -30,6 +30,9 @@ Une grille d'**auto-évaluation** sur ces objectifs t'attend à la page
 3. **[Exercices supplémentaires](supplementaires.qmd)** — des variations pour consolider, en séance ou à la maison.
 4. **[Institutionnalisation](institution.qmd)** — la méthode qu'on dégage ensemble, et l'auto-évaluation.
 
+Une page de **[défis](defis.qmd)** est aussi proposée. Ils sont **optionnels** : ils ne font pas partie du
+parcours, et tu peux les ignorer sans rien manquer de la séance.
+
 ## Les slides du cours
 
 Les slides de théorie associée sont sur

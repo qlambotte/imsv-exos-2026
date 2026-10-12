@@ -1,0 +1,7 @@
+::: {.seance-meta}
+**Thème.** Fonctions (définition, domaine, image, préimage, graphe), quatre représentations d'une même
+fonction (formule, tableau, graphe, texte), racines et étude de signe, croissance et extrema,
+composition et fonction réciproque.
+
+**Théorie associée :** IMSV-5, *« Fonctions et représentations »*.
+:::

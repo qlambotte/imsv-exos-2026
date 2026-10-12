@@ -1,0 +1,29 @@
+<!-- DÉFIS : page optionnelle, pour celles et ceux qui trouvent les exercices trop faciles (2 à 4 défis).
+     Chaque défi est plus corsé que le transfert, reste dans les notions et la notation du cours, et demande
+     plusieurs étapes ou un choix de méthode que l'énoncé n'indique pas.
+     Titre : « Exercice|Défi|niveau|Ox » (numéro D.1, D.2… automatique ; le préfixe D est la première lettre de « Défi »).
+     Pas de solution rédigée : un seul onglet « Indice » (une phrase complète), puis « Réponse » (une phrase complète).
+     Faisable SANS calculatrice. Réponses à vérifier par script (dossier verif/ de la séance).
+     Si la séance n'a pas de défis : ne pas ajouter defis.qmd au sommaire de _quarto.yml, et supprimer ces deux fichiers. -->
+
+::: {.callout-note appearance="simple"}
+Les défis sont **optionnels**. Ils s'adressent à celles et ceux qui trouvent les exercices du socle et du transfert trop faciles. Ils restent dans les notions et les notations de la séance, mais ils demandent plusieurs étapes et un choix de méthode que l'énoncé n'indique pas. Chaque défi propose un seul indice et la réponse finale, sans solution rédigée : c'est à toi de construire le raisonnement et de contrôler ta réponse.
+:::
+
+::: {.callout-caution .exo title="Exercice|Défi|3|O3"}
+………
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+………
+
+## Réponse
+
+………
+
+:::
+:::

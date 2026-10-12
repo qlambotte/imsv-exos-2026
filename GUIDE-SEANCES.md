@@ -16,10 +16,12 @@ Il contient des **pages** (affichées dans le site) et des **fragments** (préfi
 | `socle.qmd` | Page Socle (inclut `_consignes` + `_socle`) | oui |
 | `transfert.qmd` | Page Transfert (inclut `_consignes` + `_transfert`) | oui |
 | `supplementaires.qmd` | Page Exercices supplémentaires (inclut `_supplementaires`) | oui |
+| `defis.qmd` | Page Défis, optionnelle (inclut `_defis`) | oui |
 | `institution.qmd` | Page Institutionnalisation : méthode + **auto-évaluation** | oui |
 | `_socle.qmd` | **Contenu** des exercices du socle | non (inclus) |
 | `_transfert.qmd` | **Contenu** des exercices de transfert | non (inclus) |
 | `_supplementaires.qmd` | **Contenu** des exercices supplémentaires (renforcement) | non (inclus) |
+| `_defis.qmd` | **Contenu** des défis optionnels (un indice, puis la réponse) | non (inclus) |
 | `_consignes.qmd` | Notation + encadré « À lire d'abord » | non (inclus) |
 | `_download.qmd` | Le menu de téléchargement des PDF | non (inclus) |
 | `_pdf.qmd` | Source d'assemblage de la **feuille PDF** unique | non (rendu par `build-pdf.sh`) |
@@ -52,12 +54,13 @@ Dans `_quarto.yml`, sous `chapters:` :
         - seances/seance02/socle.qmd
         - seances/seance02/transfert.qmd
         - seances/seance02/supplementaires.qmd
+        - seances/seance02/defis.qmd
         - seances/seance02/institution.qmd
 ```
 
 ### Étape B — rédiger le contenu
 
-- **`_socle.qmd`**, **`_transfert.qmd`** et **`_supplementaires.qmd`** : les exercices (voir §3).
+- **`_socle.qmd`**, **`_transfert.qmd`**, **`_supplementaires.qmd`** et **`_defis.qmd`** : les exercices (voir §3). Les défis sont optionnels : s'il n'y en a pas, retire `defis.qmd` du sommaire.
 - **`index.qmd`** : les objectifs mesurables + le lien vers les slides + « avant la séance ».
 - **`institution.qmd`** : la méthode dégagée + la grille d'auto-évaluation (reprend les objectifs).
 

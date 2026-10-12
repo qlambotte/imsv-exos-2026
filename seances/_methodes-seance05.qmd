@@ -1,0 +1,71 @@
+<!-- Cartes de méthode — SÉANCE 5 (Fonctions et représentations).
+     Fragment sans en-tête : inclus par la page methodes/seance05.qmd (site, correctif)
+     et par build-boite.sh pour le PDF « méthodes » (une méthode par page).
+     Mise en forme par le filtre methode.lua. Calc-free, notation du cours.
+     Les titres et objectifs (titre="…", obj="…") alimentent AUSSI la feuille à compléter
+     (feuille-auto.py) : ne les écris qu'ici. Pas de figure : build-boite.sh ne copie que ce fragment. -->
+
+::: {.methode obj="O3" titre="Retrouver l'entrée d'une fonction à partir de sa sortie"}
+
+::: {.quand}
+Dès qu'une formule donne une grandeur à partir d'une autre et que l'on connaît la grandeur obtenue (la sortie), alors que l'on cherche la grandeur de départ (l'entrée).
+:::
+
+::: {.etapes}
+1. Nomme l'entrée et la sortie, puis écris la formule qui donne la sortie en fonction de l'entrée.
+2. Remplace la sortie par sa valeur dans la formule : tu obtiens une équation dont l'inconnue est l'entrée.
+3. Résous cette équation en défaisant les opérations de la formule dans l'ordre inverse.
+4. Vérifie que chaque solution appartient au domaine de la fonction, ou au domaine pratique imposé par le contexte, puis qu'elle redonne la sortie de départ quand on la remet dans la formule.
+5. Si l'équation a plusieurs solutions, garde celles qui appartiennent au domaine pratique ; s'il en reste plusieurs, la fonction n'a pas de réciproque tant que l'on ne restreint pas son domaine.
+6. Si la valeur de la sortie change d'un cas à l'autre, isole l'entrée une seule fois dans la formule : tu obtiens la fonction réciproque.
+7. Conclus par une phrase qui donne l'entrée avec son unité.
+:::
+
+::: {.exemple}
+La température se mesure en degrés Fahrenheit ($F$) aux États-Unis et en degrés Celsius ($C$) en Belgique. La conversion est $F = 1{,}8\,C + 32$. Un thermomètre américain indique $104$ °F. On va calculer la température en °C.
+
+L'entrée cherchée est $C$ et la sortie connue est $F = 104$. On remplace la sortie par sa valeur : $104 = 1{,}8\,C + 32$. On défait les opérations dans l'ordre inverse : on soustrait d'abord $32$, ce qui donne $72 = 1{,}8\,C$, puis on divise par $1{,}8$, ce qui donne $C = 40$. On vérifie : $1{,}8 \cdot 40 + 32 = 72 + 32 = 104$. La température est donc de $40$ °C.
+
+Pour convertir plusieurs valeurs, on isole $C$ une seule fois : $C = \dfrac{F - 32}{1{,}8}$. C'est la fonction réciproque de la conversion.
+
+**Plusieurs solutions.** Soit la fonction $f(x) = x^2 - 4$, où $x$ est une longueur en cm, de sorte que le domaine pratique est $[0,\,+\infty[$. On cherche l'entrée qui donne la sortie $5$. On remplace : $x^2 - 4 = 5$, donc $x^2 = 9$, et l'équation a deux solutions, $3$ et $-3$. Une longueur n'est pas négative, donc on ne garde que $x = 3$ cm. Vérification : $3^2 - 4 = 5$.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à défaire les opérations dans le même ordre que dans la formule, par exemple à diviser par $1{,}8$ avant de soustraire $32$. Elle est tentante parce qu'on lit la formule de gauche à droite, mais elle est fausse : il faut défaire d'abord la dernière opération effectuée par la formule, c'est-à-dire l'ordre inverse. Une autre erreur consiste à oublier la vérification du domaine. Elle est tentante parce que le calcul semble terminé dès que l'équation est résolue, mais elle est fausse : une équation peut avoir une solution qui n'a aucun sens pour la grandeur étudiée, comme $-3$ cm dans l'exemple.
+:::
+
+:::
+
+::: {.methode obj="O2" titre="Étudier le signe d'une fonction"}
+
+::: {.quand}
+Dès qu'il faut savoir où une fonction est positive ou négative, ou résoudre une inégalité du type $f(x) > 0$.
+:::
+
+::: {.etapes}
+1. Détermine le domaine de la fonction et note les valeurs exclues.
+2. Résous l'équation $f(x) = 0$ dans le domaine : les solutions sont les racines.
+3. Place sur une droite les racines et les valeurs exclues du domaine : elles découpent le domaine en intervalles sur lesquels le signe de $f$ est constant.
+4. Choisis un point dans chaque intervalle et évalue le signe de $f$ en ce point, ou le signe de chaque facteur quand la formule est un produit.
+5. Écris un tableau de signes avec les racines, les valeurs exclues et les signes de $f$ sur chaque intervalle.
+6. Conclus par une phrase qui donne, intervalle par intervalle, où $f$ est positive et où elle est négative.
+:::
+
+::: {.exemple}
+Soit la fonction $f(x) = \dfrac{x - 1}{x + 2}$. On va étudier son signe.
+
+Le dénominateur s'annule en $x = -2$, donc $\mathit{Dom}(f) = \mathbb{R} \setminus \{-2\}$ et la valeur $-2$ est exclue. Un quotient est nul quand son numérateur est nul et son dénominateur non nul, donc la seule racine est $1$. La valeur exclue $-2$ et la racine $1$ découpent le domaine en trois intervalles : $]-\infty,\,-2[$, $]-2,\,1[$ et $]1,\,+\infty[$. On évalue le signe de $f$ en un point de chaque intervalle : $f(-3) = \dfrac{-4}{-1} = 4$, $f(0) = -\dfrac12$ et $f(2) = \dfrac14$.
+
+| $x$ | $]-\infty,\,-2[$ | $-2$ | $]-2,\,1[$ | $1$ | $]1,\,+\infty[$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| signe de $f(x)$ | $+$ | exclu | $-$ | $0$ | $+$ |
+
+La fonction $f$ est donc strictement positive sur $]-\infty,\,-2[$ et sur $]1,\,+\infty[$, strictement négative sur $]-2,\,1[$, et nulle en $1$. Elle change de signe en $-2$ sans s'y annuler, car $-2$ n'appartient pas au domaine.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à conclure que le signe change à chaque racine. Elle est tentante parce que c'est le cas de la plupart des exemples simples, mais elle est fausse quand une racine provient d'un facteur élevé au carré : ce facteur reste positif de part et d'autre de la racine, donc le signe de $f$ ne change pas. Il faut évaluer le signe sur chaque intervalle, et ne pas supposer l'alternance. Une autre erreur consiste à oublier les valeurs exclues du domaine. Elle est tentante parce que la méthode commence par les racines, mais elle est fausse : un quotient peut changer de signe là où son dénominateur s'annule, sans avoir de racine en ce point.
+:::
+
+:::

@@ -45,6 +45,7 @@ cat <<EOF
             - seances/seance$NN/socle.qmd
             - seances/seance$NN/transfert.qmd
             - seances/seance$NN/supplementaires.qmd
+            - seances/seance$NN/defis.qmd          (page de défis optionnels : à retirer s'il n'y en a pas)
             - seances/seance$NN/institution.qmd
 
      et, sous la partie « seances/methode.qmd », la page de méthodes :
@@ -55,6 +56,7 @@ cat <<EOF
         seances/seance$NN/_socle.qmd            (socle)
         seances/seance$NN/_transfert.qmd        (transfert)
         seances/seance$NN/_supplementaires.qmd  (renforcement)
+        seances/seance$NN/_defis.qmd            (défis optionnels, 2 à 4)
      Numérotation AUTOMATIQUE (filtre exercice.lua) : par catégorie (Socle → S.1, S.2… ;
      Transfert → T.1… ; Renforcement → R.1…). Titre source « Exercice|Catégorie|niveau|Objectif »,
      SANS numéro écrit ; réordonner un exercice le renumérote tout seul.

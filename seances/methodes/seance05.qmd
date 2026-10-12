@@ -1,0 +1,20 @@
+---
+title: "Séance 5 — Fonctions et représentations"
+description: "Fonctions et représentations"
+order: 5
+nom: "[Fonctions et représentations](methodes/seance05.html)"
+correction: "✅ en ligne"
+filters:
+  - ../../methode.lua
+---
+
+::: {.content-visible when-format="html"}
+::: {.dl}
+<details class="dl-menu">
+<summary>Télécharger (PDF)</summary>
+<a href="../../pdf/feuille-seance05.pdf" download>Feuille à compléter — séance 5 (PDF)</a>
+</details>
+:::
+:::
+
+{{< include _corrige-seance05.qmd >}}

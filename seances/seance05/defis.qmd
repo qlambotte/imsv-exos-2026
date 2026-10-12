@@ -1,0 +1,8 @@
+---
+title: "Défis"
+subtitle: "Séance 5 · pour aller plus loin"
+filters:
+  - ../../exercice.lua
+---
+
+{{< include _defis.qmd >}}
