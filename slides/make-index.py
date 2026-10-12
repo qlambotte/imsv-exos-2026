@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Génère slides/index.html à partir des decks trouvés dans slides/seanceNN/*.qmd.
+"""Génère slides/index.html à partir des decks trouvés dans slides/seanceNN/*.qmd
+(section « Séances d'exercices ») et slides/remed_*/*.qmd (section « Remédiations »).
 
 Appelé automatiquement par deploy.sh (build_slides), qui écrit directement dans
 le stage de déploiement : le fichier n'est plus une source versionnée, il n'y a
@@ -52,6 +53,7 @@ def find_decks():
             sub = fm.get("description") or fm.get("subtitle", "")
             html_name = os.path.splitext(os.path.basename(qmd))[0] + ".html"
             found.append({
+                "kind": "exo",
                 "num": num,
                 "title": title,
                 "label": label,
@@ -61,32 +63,74 @@ def find_decks():
     return found
 
 
+def find_remed():
+    """Dossiers remed_<nom>_<jjmmaa>/ : une section « Remédiations » distincte."""
+    found = []
+    for d in sorted(glob.glob(os.path.join(ROOT, "remed_*"))):
+        n = os.path.basename(d)
+        m = re.match(r"^remed_(.+)_(\d\d)(\d\d)(\d\d)$", n)
+        group = (f"Remédiation {m.group(1)} — {m.group(2)}/{m.group(3)}/20{m.group(4)}"
+                 if m else n)
+        for qmd in sorted(glob.glob(os.path.join(d, "*.qmd"))):
+            if os.path.basename(qmd).startswith("_"):
+                continue
+            fm = frontmatter(qmd)
+            html_name = os.path.splitext(os.path.basename(qmd))[0] + ".html"
+            found.append({
+                "kind": "remed",
+                "group": group,
+                "label": fm.get("title", n),
+                "sub": fm.get("description") or fm.get("subtitle", ""),
+                "href": f"{n}/{html_name}",
+            })
+    return found
+
+
 def esc(s):
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def render_groups(decks):
-    groups = {}
-    for d in decks:
-        groups.setdefault((d["num"], d["title"]), []).append(d)
-
-    parts = []
-    for (num, title), items in sorted(groups.items()):
-        items_html = "\n".join(f'''      <li>
+def _item(d, icon):
+    return f'''      <li>
         <a href="{esc(d['href'])}">
-          <span class="deck-icon">S{num}</span>
+          <span class="deck-icon">{esc(icon)}</span>
           <span class="deck-info">
             <div class="deck-title">{esc(d['label'])}</div>
             <div class="deck-sub">{esc(d['sub'])}</div>
           </span>
         </a>
-      </li>''' for d in items)
-        parts.append(f'''  <div class="seance-group">
+      </li>'''
+
+
+def _group(title, items_html):
+    return f'''  <div class="seance-group">
     <h2>{esc(title)}</h2>
     <ul class="decks">
 {items_html}
     </ul>
-  </div>''')
+  </div>'''
+
+
+def render_groups(decks):
+    exo = [d for d in decks if d["kind"] == "exo"]
+    remed = [d for d in decks if d["kind"] == "remed"]
+
+    parts = []
+    if exo:
+        parts.append('  <h2 class="part">Séances d\'exercices</h2>')
+    groups = {}
+    for d in exo:
+        groups.setdefault((d["num"], d["title"]), []).append(d)
+    for (num, title), items in sorted(groups.items()):
+        parts.append(_group(title, "\n".join(_item(d, f"S{num}") for d in items)))
+
+    if remed:
+        parts.append('  <h2 class="part">Remédiations</h2>')
+    rgroups = {}
+    for d in remed:
+        rgroups.setdefault(d["group"], []).append(d)
+    for title, items in sorted(rgroups.items()):
+        parts.append(_group(title, "\n".join(_item(d, "R") for d in items)))
     return "\n\n".join(parts)
 
 
@@ -151,6 +195,15 @@ TEMPLATE = """<!doctype html>
     color:var(--muted);
     margin:0 0 2.5rem;
     font-size:1.05rem;
+  }}
+  h2.part{{
+    font-family:"Roboto Slab", Georgia, serif;
+    font-weight:700;
+    color:var(--h);
+    font-size:1.45rem;
+    margin:2.6rem 0 1.2rem;
+    padding-bottom:.4rem;
+    border-bottom:2px solid var(--accent);
   }}
   .seance-group{{
     margin-bottom:2.2rem;
@@ -224,8 +277,8 @@ TEMPLATE = """<!doctype html>
 </head>
 <body>
 <div class="wrap">
-  <h1>Slides d'exercices</h1>
-  <p class="subtitle">IMSV — supports de projection pour les séances d'exercices.</p>
+  <h1>Slides</h1>
+  <p class="subtitle">IMSV — supports de projection : séances d'exercices et remédiations.</p>
 
 {body}
 
@@ -238,7 +291,7 @@ TEMPLATE = """<!doctype html>
 """
 
 if __name__ == "__main__":
-    html = TEMPLATE.format(body=render_groups(find_decks()))
+    html = TEMPLATE.format(body=render_groups(find_decks() + find_remed()))
     out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "index.html")
     with open(out, "w", encoding="utf-8") as f:
         f.write(html)

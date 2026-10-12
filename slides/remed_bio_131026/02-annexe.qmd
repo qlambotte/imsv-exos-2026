@@ -27,6 +27,11 @@ format:
     include-after-body: ../seance01/annotate.html
 ---
 
+
+
+# Thème 1 — Calcul fiable et trigonométrie {.divider background-color="#14304a"}
+
+
 <style>
 .qrow{display:flex;gap:.8em;border-bottom:1px solid #e5e9ef;padding:.28em .2em;font-size:.6em;line-height:1.35;align-items:flex-start}
 .qrow .qans{flex:0 0 27%;font-weight:600}
@@ -36,19 +41,20 @@ format:
 .qrow.ok .qans::before{content:"✓ ";color:#276a2e;font-weight:700}
 .qstem{font-size:.78em}
 .qflex{display:flex;gap:1em;align-items:center}
-.qflex img{max-width:330px;height:auto}
+.qflex img{max-width:330px;max-height:230px;width:auto;height:auto}
 .reveal table.deroule a{font-weight:600}
 .back{margin-top:.5em}
+.qfoot{display:flex;gap:1.2em;align-items:center;margin-top:.45em;font-size:.55em}
+.qfoot .back-btn{font-size:1em}
+.qfoot .muted{color:#5a6b7b}
 .back-btn{display:inline-block;font-size:.5em;font-weight:600;padding:.3em .8em;border:1.5px solid #1f5fbf;border-radius:.5em;color:#1f5fbf;background:#fff}
 .back-btn:hover{background:#1f5fbf;color:#fff;text-decoration:none!important}
 .exo-foot{margin-top:.8em;font-size:.55em}
-.sol{font-size:.78em}
-.sol.long{font-size:.62em}
-.sol.xlong{font-size:.55em}
+.sol{font-size:.8em}
+.sol.long{font-size:.68em}
+.sol.xlong{font-size:.6em}
 </style>
 
-
-# Thème 1 — Calcul fiable et trigonométrie {.divider background-color="#14304a"}
 
 
 # Questions de réserve {.divider background-color="#14304a"}
@@ -97,9 +103,7 @@ Une erreur d'opération a été commise : il s'agit ici d'une addition de fracti
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="01-remediation.html#/t1-R3">R.3</a></div>
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t1-R3">R.3</a></span></div>
 
 ## Réserve 2 · Estimer une longueur {#q1-P4}
 
@@ -143,9 +147,7 @@ Cette estimation est beaucoup trop élevée. Une feuille A4 mesure environ $30$ 
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="01-remediation.html#/t1-R7">R.7(b)</a></div>
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t1-R7">R.7(b)</a></span></div>
 
 ## Réserve 3 · Relations trigonométriques {#q1-P5}
 
@@ -193,9 +195,7 @@ Les deux angles correspondent à des points symétriques par rapport à l'axe de
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="01-remediation.html#/t1-R10">R.10(c)</a></div>
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t1-R10">R.10(c)</a></span></div>
 
 ## Réserve 4 · Dépréciation successive {#q1-Q1}
 
@@ -239,9 +239,7 @@ Cette réponse correspond à la valeur obtenue après seulement trois diminution
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="01-remediation.html#/t1-R6">R.6(c)</a></div>
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t1-R6">R.6(c)</a></span></div>
 
 ## Réserve 5 · Priorités des opérations {#q1-Q2}
 
@@ -287,9 +285,7 @@ Cette réponse peut être obtenue en interprétant $6(3+1)$ comme $6\cdot3+1$. O
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="01-remediation.html#/t1-R1">R.1</a></div>
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t1-R1">R.1</a></span></div>
 
 
 # Solutions des exercices de renforcement {.divider background-color="#14304a"}
@@ -299,140 +295,140 @@ Cette réponse peut être obtenue en interprétant $6(3+1)$ comme $6\cdot3+1$. O
 Pour chaque égalité, dis si elle est **vraie** ou **fausse**, et nomme
 la propriété (ou son absence) en jeu.
 
-(a) $(20 - 8) - 5 = 20 - (8 - 5)$
+\(a) $(20 - 8) - 5 = 20 - (8 - 5)$
 
-(b) $10 - 4 = 4 - 10$
+\(b) $10 - 4 = 4 - 10$
 
-(c) $3 \cdot (6 + 4) = 3 \cdot 6 + 3 \cdot 4$
+\(c) $3 \cdot (6 + 4) = 3 \cdot 6 + 3 \cdot 4$
 
-(d) $(30 + 12) : 6 = 30 : 6 + 12 : 6$
+\(d) $(30 + 12) : 6 = 30 : 6 + 12 : 6$
 
-(e) $48 : (8 : 2) = (48 : 8) : 2$
+\(e) $48 : (8 : 2) = (48 : 8) : 2$
 
-(f) $60 : (4 + 6) = 60 : 4 + 60 : 6$
+\(f) $60 : (4 + 6) = 60 : 4 + 60 : 6$
 
 ## Solution R.1 {#sol-t1-R1}
 
-::: {.sol .xlong}
-(a) Faux : à gauche $(20 - 8) - 5 = 7$, à droite $20 - (8 - 5) = 17$. Déplacer les parenthèses change le résultat : la soustraction n'est pas associative.
+::: {.sol}
+\(a) Faux : à gauche $(20 - 8) - 5 = 7$, à droite $20 - (8 - 5) = 17$. Déplacer les parenthèses change le résultat : la soustraction n'est pas associative.
 
-(b) Faux : $10 - 4 = 6$ tandis que $4 - 10 = -6$. L'ordre des termes compte : la soustraction n'est pas commutative.
+\(b) Faux : $10 - 4 = 6$ tandis que $4 - 10 = -6$. L'ordre des termes compte : la soustraction n'est pas commutative.
 
-(c) Vrai : $3 \cdot (6 + 4) = 3 \cdot 10 = 30$ et $3 \cdot 6 + 3 \cdot 4 = 18 + 12 = 30$. C'est la distributivité de la multiplication sur l'addition.
+\(c) Vrai : $3 \cdot (6 + 4) = 3 \cdot 10 = 30$ et $3 \cdot 6 + 3 \cdot 4 = 18 + 12 = 30$. C'est la distributivité de la multiplication sur l'addition.
 
-(d) Vrai : $(30 + 12) : 6 = 42 : 6 = 7$ et $30 : 6 + 12 : 6 = 5 + 2 = 7$. La division est distributive à droite, c'est-à-dire quand la somme est au numérateur.
+\(d) Vrai : $(30 + 12) : 6 = 42 : 6 = 7$ et $30 : 6 + 12 : 6 = 5 + 2 = 7$. La division est distributive à droite, c'est-à-dire quand la somme est au numérateur.
 
-(e) Faux : $48 : (8 : 2) = 48 : 4 = 12$ mais $(48 : 8) : 2 = 6 : 2 = 3$. La division n'est pas associative.
+\(e) Faux : $48 : (8 : 2) = 48 : 4 = 12$ mais $(48 : 8) : 2 = 6 : 2 = 3$. La division n'est pas associative.
 
-(f) Faux : $60 : (4 + 6) = 60 : 10 = 6$ mais $60 : 4 + 60 : 6 = 15 + 10 = 25$. La division n'est pas distributive à gauche (somme au dénominateur) : c'est le piège classique.
+\(f) Faux : $60 : (4 + 6) = 60 : 10 = 6$ mais $60 : 4 + 60 : 6 = 15 + 10 = 25$. La division n'est pas distributive à gauche (somme au dénominateur) : c'est le piège classique.
 :::
 
 ## Énoncé R.2 <span class="obj">O1</span> {#st-t1-R2}
 
-(a) Développer $(2x - 3)^2$.
+\(a) Développer $(2x - 3)^2$.
 
-(b) Développer $(5 + 2b)(5 - 2b)$.
+\(b) Développer $(5 + 2b)(5 - 2b)$.
 
-(c) Factoriser $7a^2 - 28$.
+\(c) Factoriser $7a^2 - 28$.
 
-(d) Factoriser $6x^2 + 15x$.
+\(d) Factoriser $6x^2 + 15x$.
 
 ## Solution R.2 {#sol-t1-R2}
 
 ::: {.sol}
-(a) $4x^2 - 12x + 9$.
+\(a) $4x^2 - 12x + 9$.
 
-(b) $25 - 4b^2$.
+\(b) $25 - 4b^2$.
 
-(c) $7(a^2 - 4) = 7(a - 2)(a + 2)$.
+\(c) $7(a^2 - 4) = 7(a - 2)(a + 2)$.
 
-(d) $3x(2x + 5)$.
+\(d) $3x(2x + 5)$.
 :::
 
 ## Énoncé R.3 <span class="obj">O1</span> {#st-t1-R3}
 
 Réduis au même dénominateur, puis simplifie si possible.
 
-(a) $\dfrac{3}{x + 2} - \dfrac{6}{x - 2}$
+\(a) $\dfrac{3}{x + 2} - \dfrac{6}{x - 2}$
 
-(b) $\dfrac{3}{x + 2} : \dfrac{6}{x - 2}$
+\(b) $\dfrac{3}{x + 2} : \dfrac{6}{x - 2}$
 
 ## Solution R.3 {#sol-t1-R3}
 
 ::: {.sol}
-(a) $\dfrac{3(x - 2) - 6(x + 2)}{(x + 2)(x - 2)} = \dfrac{-3x - 18}{x^2 - 4}$.
+\(a) $\dfrac{3(x - 2) - 6(x + 2)}{(x + 2)(x - 2)} = \dfrac{-3x - 18}{x^2 - 4}$.
 
-(b) $\dfrac{3}{x + 2} \cdot \dfrac{x - 2}{6} = \dfrac{x - 2}{2(x + 2)}$.
+\(b) $\dfrac{3}{x + 2} \cdot \dfrac{x - 2}{6} = \dfrac{x - 2}{2(x + 2)}$.
 :::
 
 ## Énoncé R.5 <span class="obj">O3</span> ★★★ {#st-t1-R5}
 
-(a) Montre qu'on **ne peut pas** avoir $\sqrt{x^2} = x$ pour tout $x$, en testant $x = -3$.
+\(a) Montre qu'on **ne peut pas** avoir $\sqrt{x^2} = x$ pour tout $x$, en testant $x = -3$.
 
-(b) Énonce la règle correcte, puis calcule $\sqrt{(5 - 9)^2}$.
+\(b) Énonce la règle correcte, puis calcule $\sqrt{(5 - 9)^2}$.
 
 ## Solution R.5 {#sol-t1-R5}
 
 ::: {.sol}
-(a) Pour $x = -3$ : d'un côté $\sqrt{(-3)^2} = \sqrt{9} = 3$ ; de l'autre, l'hypothèse donnerait $-3$. On
+\(a) Pour $x = -3$ : d'un côté $\sqrt{(-3)^2} = \sqrt{9} = 3$ ; de l'autre, l'hypothèse donnerait $-3$. On
 aurait $3 = -3$, ce qui est absurde. L'égalité $\sqrt{x^2} = x$ est donc fausse dès que $x < 0$.
 
-(b) La règle correcte est $\sqrt{x^2} = |x|$. Donc $\sqrt{(5 - 9)^2} = |5 - 9| = |-4| = 4$.
+\(b) La règle correcte est $\sqrt{x^2} = |x|$. Donc $\sqrt{(5 - 9)^2} = |5 - 9| = |-4| = 4$.
 :::
 
 ## Énoncé R.6 <span class="obj">O2</span> {#st-t1-R6}
 
-(a) Écris $\dfrac{5}{8}$ en décimal et en pourcentage ; écris $0{,}45$ en fraction irréductible et en
+\(a) Écris $\dfrac{5}{8}$ en décimal et en pourcentage ; écris $0{,}45$ en fraction irréductible et en
 pourcentage.
 
-(b) Prendre $\dfrac{2}{5}$ de $35$ mL : combien de mL ?
+\(b) Prendre $\dfrac{2}{5}$ de $35$ mL : combien de mL ?
 
-(c) Après une hausse de $25\,\%$, une population de bactéries atteint $500$. Quel était l'effectif
+\(c) Après une hausse de $25\,\%$, une population de bactéries atteint $500$. Quel était l'effectif
 **initial** ?
 
 ## Solution R.6 {#sol-t1-R6}
 
 ::: {.sol}
-(a) $\dfrac{5}{8} = 0{,}625 = 62{,}5\,\%$ ; $0{,}45 = \dfrac{9}{20} = 45\,\%$.
+\(a) $\dfrac{5}{8} = 0{,}625 = 62{,}5\,\%$ ; $0{,}45 = \dfrac{9}{20} = 45\,\%$.
 
-(b) $\dfrac{2}{5} \cdot 35 = 14$ mL.
+\(b) $\dfrac{2}{5} \cdot 35 = 14$ mL.
 
-(c) $1{,}25 \cdot x = 500$, d'où $x = 500 : 1{,}25 = 400$.
+\(c) $1{,}25 \cdot x = 500$, d'où $x = 500 : 1{,}25 = 400$.
 :::
 
 ## Énoncé R.7 <span class="obj">O3</span> {#st-t1-R7}
 
-(a) Calcule, en notation scientifique : $(4 \times 10^{7}) \cdot (2{,}5 \times 10^{-3})$.
+\(a) Calcule, en notation scientifique : $(4 \times 10^{7}) \cdot (2{,}5 \times 10^{-3})$.
 
-(b) **Estime** (sans calculatrice) $\dfrac{5{,}1 \times 10^{6}}{2{,}05 \times 10^{2}}$.
+\(b) **Estime** (sans calculatrice) $\dfrac{5{,}1 \times 10^{6}}{2{,}05 \times 10^{2}}$.
 
-(c) Une longueur est mesurée au dixième de millimètre près. Est-il justifié d'annoncer le résultat
+\(c) Une longueur est mesurée au dixième de millimètre près. Est-il justifié d'annoncer le résultat
 final d'un calcul au **nanomètre** près ? Explique.
 
 ## Solution R.7 {#sol-t1-R7}
 
-::: {.sol .long}
-(a) $4 \cdot 2{,}5 \times 10^{7 - 3} = 10 \times 10^{4} = 1 \times 10^{5}$.
+::: {.sol}
+\(a) $4 \cdot 2{,}5 \times 10^{7 - 3} = 10 \times 10^{4} = 1 \times 10^{5}$.
 
-(b) $\approx \dfrac{5 \times 10^{6}}{2 \times 10^{2}} = 2{,}5 \times 10^{4}$.
+\(b) $\approx \dfrac{5 \times 10^{6}}{2 \times 10^{2}} = 2{,}5 \times 10^{4}$.
 
-(c) Non : un résultat calculé ne peut pas être plus précis que les données qui l'alimentent (règle des chiffres significatifs). Le dixième de millimètre ($10^{-4}$ m) est un million de fois plus grossier que le nanomètre ($10^{-9}$ m) ; annoncer le résultat « au nanomètre près » afficherait des décimales que la mesure ne garantit pas — c'est une fausse précision.
+\(c) Non : un résultat calculé ne peut pas être plus précis que les données qui l'alimentent (règle des chiffres significatifs). Le dixième de millimètre ($10^{-4}$ m) est un million de fois plus grossier que le nanomètre ($10^{-9}$ m) ; annoncer le résultat « au nanomètre près » afficherait des décimales que la mesure ne garantit pas — c'est une fausse précision.
 :::
 
 ## Énoncé R.8 <span class="obj">O4</span> {#st-t1-R8}
 
-(a) Ramène-toi à un angle du premier quandrant : $\cos(420°)$ et $\sin\!\left(\dfrac{7\pi}{3}\right)$.
+\(a) Ramène-toi à un angle du premier quandrant : $\cos(420°)$ et $\sin\!\left(\dfrac{7\pi}{3}\right)$.
 
-(b) On sait que $\cos\theta = \dfrac{3}{5}$ et que $\theta \in \left[0,\ \tfrac{\pi}{2}\right]$. Calcule
+\(b) On sait que $\cos\theta = \dfrac{3}{5}$ et que $\theta \in \left[0,\ \tfrac{\pi}{2}\right]$. Calcule
 $\sin\theta$, puis $\tan\theta$.
 
 ## Solution R.8 {#sol-t1-R8}
 
 ::: {.sol}
-(a) $\cos(420°) = \cos(420° - 360°) = \cos(60°) = \dfrac{1}{2}$ ;
+\(a) $\cos(420°) = \cos(420° - 360°) = \cos(60°) = \dfrac{1}{2}$ ;
 $\sin\!\left(\dfrac{7\pi}{3}\right) = \sin\!\left(\dfrac{7\pi}{3} - 2\pi\right) = \sin\dfrac{\pi}{3} = \dfrac{\sqrt3}{2}$.
 
-(b) $\sin\theta = \sqrt{1 - \tfrac{9}{25}} = \sqrt{\tfrac{16}{25}} = \dfrac{4}{5}$ (positif au quadrant I) ;
+\(b) $\sin\theta = \sqrt{1 - \tfrac{9}{25}} = \sqrt{\tfrac{16}{25}} = \dfrac{4}{5}$ (positif au quadrant I) ;
 $\tan\theta = \dfrac{\sin\theta}{\cos\theta} = \dfrac{4/5}{3/5} = \dfrac{4}{3}$.
 :::
 
@@ -440,21 +436,21 @@ $\tan\theta = \dfrac{\sin\theta}{\cos\theta} = \dfrac{4/5}{3/5} = \dfrac{4}{3}$.
 
 On sait que $\cos\theta = -\dfrac{1}{2}$ et que $\theta \in \left[\dfrac{\pi}{2},\ \pi\right]$.
 
-(a) Calcule $\sin\theta$.
+\(a) Calcule $\sin\theta$.
 
-(b) Donne la valeur exacte de $\theta$.
+\(b) Donne la valeur exacte de $\theta$.
 
-(c) Déduis-en $\cos(-\theta)$ et $\sin(\pi - \theta)$.
+\(c) Déduis-en $\cos(-\theta)$ et $\sin(\pi - \theta)$.
 
 ## Solution R.10 {#sol-t1-R10}
 
 ::: {.sol}
-(a) $\sin^2\theta = 1 - \dfrac{1}{4} = \dfrac{3}{4}$, donc $\sin\theta = \pm\dfrac{\sqrt3}{2}$. Au
+\(a) $\sin^2\theta = 1 - \dfrac{1}{4} = \dfrac{3}{4}$, donc $\sin\theta = \pm\dfrac{\sqrt3}{2}$. Au
 quadrant II, $\sin\theta > 0$ : $\sin\theta = \dfrac{\sqrt3}{2}$.
 
-(b) L'angle du quadrant II dont le cosinus vaut $-\dfrac{1}{2}$ est $\theta = \dfrac{2\pi}{3}$ ($= 120°$).
+\(b) L'angle du quadrant II dont le cosinus vaut $-\dfrac{1}{2}$ est $\theta = \dfrac{2\pi}{3}$ ($= 120°$).
 
-(c) $\cos(-\theta) = \cos\theta = -\dfrac{1}{2}$ (angles opposés) ; $\sin(\pi - \theta) = \sin\theta = \dfrac{\sqrt3}{2}$ (angles supplémentaires).
+\(c) $\cos(-\theta) = \cos\theta = -\dfrac{1}{2}$ (angles opposés) ; $\sin(\pi - \theta) = \sin\theta = \dfrac{\sqrt3}{2}$ (angles supplémentaires).
 :::
 
 
@@ -507,9 +503,7 @@ Le nombre 3 est déplacé de l'autre côté en soustrayant 3, puis il faut divis
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="01-remediation.html#/nav-t2">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="01-remediation.html#/t2-R2">R.2</a></div>
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t2-R2">R.2</a></span></div>
 
 ## Réserve 2 · Résolution d'un système linéaire {#q2-P3}
 
@@ -555,11 +549,9 @@ Le point $(1,-2)$ ne vérifie pas la deuxième équation, puisque $-3\cdot1+2\cd
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="01-remediation.html#/nav-t2">← Où aller selon les résultats</a></div>
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t2-R8">R.8</a> · <a href="01-remediation.html#/t2-R9">R.9(c)</a></span></div>
 
-<div class="exo-foot muted">Exercices : <a href="01-remediation.html#/t2-R8">R.8</a> · <a href="01-remediation.html#/t2-R9">R.9(c)</a></div>
-
-## Réserve 3 · Équation du second degré avec un paramètre {#q2-P5}
+## Réserve 3 · Équation du second degré avec un paramètre {#q2-P5 .smaller}
 
 ::: {.qstem}
 Considérons l'équation 
@@ -605,9 +597,7 @@ Cette affirmation est fausse. Le discriminant est $\Delta=m^2+4$, et il est stri
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="01-remediation.html#/nav-t2">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="01-remediation.html#/t2-R10">R.10</a></div>
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t2-R10">R.10</a></span></div>
 
 ## Réserve 4 · Production de légumes {#q2-Q1}
 
@@ -655,9 +645,7 @@ En remplaçant $t$ par $-5$, on obtient $q=5(-5)+10=-15$. Le couple $(-5,-3)$ ne
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="01-remediation.html#/nav-t2">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="01-remediation.html#/t2-R12">R.12(b)</a> · <a href="01-remediation.html#/t2-R13">R.13</a></div>
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t2-R12">R.12(b)</a> · <a href="01-remediation.html#/t2-R13">R.13</a></span></div>
 
 
 # Solutions des exercices de renforcement {.divider background-color="#14304a"}
@@ -666,16 +654,16 @@ En remplaçant $t$ par $-5$, on obtient $q=5(-5)+10=-15$. Le couple $(-5,-3)$ ne
 
 Résous chaque inéquation, et donne l'ensemble solution en intervalle.
 
-(a) $5 - 2x < 1$
+\(a) $5 - 2x < 1$
 
-(b) $-3x + 2 \ge -7$
+\(b) $-3x + 2 \ge -7$
 
 ## Solution R.2 {#sol-t2-R2}
 
 ::: {.sol}
-(a) $5 - 2x < 1 \;\Leftrightarrow\; -2x < -4 \;\Leftrightarrow\; x > 2$ (division par $-2$, négatif : le sens s'inverse). $\mathrm{Sol} = \,]2,\, +\infty[$.
+\(a) $5 - 2x < 1 \;\Leftrightarrow\; -2x < -4 \;\Leftrightarrow\; x > 2$ (division par $-2$, négatif : le sens s'inverse). $\mathrm{Sol} = \,]2,\, +\infty[$.
 
-(b) $-3x + 2 \ge -7 \;\Leftrightarrow\; -3x \ge -9 \;\Leftrightarrow\; x \le 3$ (division par $-3$, négatif : le sens s'inverse). $\mathrm{Sol} = \,]{-}\infty,\, 3]$.
+\(b) $-3x + 2 \ge -7 \;\Leftrightarrow\; -3x \ge -9 \;\Leftrightarrow\; x \le 3$ (division par $-3$, négatif : le sens s'inverse). $\mathrm{Sol} = \,]{-}\infty,\, 3]$.
 :::
 
 ## Énoncé R.3 <span class="obj">O1</span> {#st-t2-R3}
@@ -685,7 +673,7 @@ dimensions (mise en équation, résolution, réponse).
 
 ## Solution R.3 {#sol-t2-R3}
 
-::: {.sol .long}
+::: {.sol}
 - Inconnue : soit $x$ la largeur (en cm) ; la longueur vaut alors $x + 3$ (en cm).
 
 - Équation : le périmètre vaut $2 \cdot (\text{longueur} + \text{largeur})$, donc $2\big(x + (x + 3)\big) = 26$.
@@ -701,20 +689,20 @@ dimensions (mise en équation, résolution, réponse).
 
 Calcule la pente de la droite passant par chaque paire de points.
 
-(a) $(0,\, 1)$ et $(2,\, 5)$
+\(a) $(0,\, 1)$ et $(2,\, 5)$
 
-(b) $(-1,\, 4)$ et $(1,\, 0)$
+\(b) $(-1,\, 4)$ et $(1,\, 0)$
 
-(c) $(2,\, 3)$ et $(5,\, 3)$
+\(c) $(2,\, 3)$ et $(5,\, 3)$
 
 ## Solution R.4 {#sol-t2-R4}
 
 ::: {.sol}
-(a) $m = \dfrac{5 - 1}{2 - 0} = \dfrac{4}{2} = 2$.
+\(a) $m = \dfrac{5 - 1}{2 - 0} = \dfrac{4}{2} = 2$.
 
-(b) $m = \dfrac{0 - 4}{1 - (-1)} = \dfrac{-4}{2} = -2$.
+\(b) $m = \dfrac{0 - 4}{1 - (-1)} = \dfrac{-4}{2} = -2$.
 
-(c) $m = \dfrac{3 - 3}{5 - 2} = 0$ : la droite est horizontale ($y = 3$).
+\(c) $m = \dfrac{3 - 3}{5 - 2} = 0$ : la droite est horizontale ($y = 3$).
 :::
 
 ## Énoncé R.5 <span class="obj">O4</span> {#st-t2-R5}
@@ -733,38 +721,38 @@ Vérification avec $(3,7)$ : $2 \cdot 3 + 1 = 7$.
 Un spectrophotomètre relie l'absorbance $A$ à la concentration $C$ (en mmol/L) par une **droite**.
 Deux étalons donnent $(C,\, A) = (1\, ;\, 0{,}20)$ et $(5\, ;\, 0{,}60)$.
 
-(a) Détermine la droite d'étalonnage $A(C) = m\, C + p$.
+\(a) Détermine la droite d'étalonnage $A(C) = m\, C + p$.
 
-(b) Un échantillon inconnu donne $A = 0{,}50$. Quelle est sa concentration ?
+\(b) Un échantillon inconnu donne $A = 0{,}50$. Quelle est sa concentration ?
 
-(c) Que représente concrètement l'ordonnée à l'origine $p$ ?
+\(c) Que représente concrètement l'ordonnée à l'origine $p$ ?
 
 ## Solution R.6 {#sol-t2-R6}
 
-::: {.sol .long}
-(a) $m = \dfrac{0{,}60 - 0{,}20}{5 - 1} = \dfrac{0{,}40}{4} = 0{,}10$ ; $p = 0{,}20 - 0{,}10 \cdot 1 = 0{,}10$.
+::: {.sol}
+\(a) $m = \dfrac{0{,}60 - 0{,}20}{5 - 1} = \dfrac{0{,}40}{4} = 0{,}10$ ; $p = 0{,}20 - 0{,}10 \cdot 1 = 0{,}10$.
 Donc $A(C) = 0{,}10\, C + 0{,}10$. Vérification avec $(5\, ;\, 0{,}60)$ : $0{,}10 \cdot 5 + 0{,}10 = 0{,}60$. 
 
-(b) On résout $0{,}50 = 0{,}10\, C + 0{,}10 \;\Leftrightarrow\; 0{,}10\, C = 0{,}40 \;\Leftrightarrow\; C = 4$. L'échantillon a une concentration de $4$ mmol/L.
+\(b) On résout $0{,}50 = 0{,}10\, C + 0{,}10 \;\Leftrightarrow\; 0{,}10\, C = 0{,}40 \;\Leftrightarrow\; C = 4$. L'échantillon a une concentration de $4$ mmol/L.
 
-(c) $p = 0{,}10$ est l'absorbance mesurée pour une concentration nulle : c'est le biais instrumental (le signal résiduel de l'appareil).
+\(c) $p = 0{,}10$ est l'absorbance mesurée pour une concentration nulle : c'est le biais instrumental (le signal résiduel de l'appareil).
 :::
 
 ## Énoncé R.7 <span class="obj">O4</span> {#st-t2-R7}
 
 On considère la droite $d : y = 2x + 1$.
 
-(a) Écris l'équation de la droite **parallèle** à $d$ passant par $(0,\, 4)$.
+\(a) Écris l'équation de la droite **parallèle** à $d$ passant par $(0,\, 4)$.
 
-(b) Quelle est la pente d'une droite **orthogonale** à $d$ ?
+\(b) Quelle est la pente d'une droite **orthogonale** à $d$ ?
 
 ## Solution R.7 {#sol-t2-R7}
 
 ::: {.sol}
-(a) La pente de $d$ vaut $2$. Une droite parallèle à $d$ a la même pente, donc elle s'écrit $y = 2x + p$.
+\(a) La pente de $d$ vaut $2$. Une droite parallèle à $d$ a la même pente, donc elle s'écrit $y = 2x + p$.
 Elle passe par $(0,\, 4)$ : $4 = 2 \cdot 0 + p$, donc $p = 4$. La droite cherchée est $y = 2x + 4$.
 
-(b) Deux droites de pentes $m_1$ et $m_2$ sont orthogonales si $m_1 \cdot m_2 = -1$. Ici $2 \cdot m = -1$, donc
+\(b) Deux droites de pentes $m_1$ et $m_2$ sont orthogonales si $m_1 \cdot m_2 = -1$. Ici $2 \cdot m = -1$, donc
 une droite orthogonale à $d$ a pour pente $m = -\dfrac{1}{2}$.
 :::
 
@@ -772,18 +760,18 @@ une droite orthogonale à $d$ a pour pente $m = -\dfrac{1}{2}$.
 
 Résous chaque système ; indique clairement la méthode utilisée.
 
-(a) $\begin{cases} 2x + y = 8, \\ x - y = 1. \end{cases}$
+\(a) $\begin{cases} 2x + y = 8, \\ x - y = 1. \end{cases}$
 
-(b) $\begin{cases} x + 2y = 5, \\ 3x - 2y = 7. \end{cases}$
+\(b) $\begin{cases} x + 2y = 5, \\ 3x - 2y = 7. \end{cases}$
 
 ## Solution R.8 {#sol-t2-R8}
 
-::: {.sol .long}
-(a) Par élimination : les coefficients de $y$ sont opposés. En additionnant les deux équations terme à terme,
+::: {.sol}
+\(a) Par élimination : les coefficients de $y$ sont opposés. En additionnant les deux équations terme à terme,
 $(2x + y) + (x - y) = 8 + 1$, soit $3x = 9$, donc $x = 3$. On reporte dans $x - y = 1$ : $3 - y = 1$, donc $y = 2$.
 Vérification : $2 \cdot 3 + 2 = 8$  et $3 - 2 = 1$ . $\mathrm{Sol} = \{(3,\, 2)\}$.
 
-(b) Par élimination : les coefficients de $y$ sont opposés. En additionnant les deux équations terme à terme,
+\(b) Par élimination : les coefficients de $y$ sont opposés. En additionnant les deux équations terme à terme,
 $(x + 2y) + (3x - 2y) = 5 + 7$, soit $4x = 12$, donc $x = 3$. On reporte dans $x + 2y = 5$ : $3 + 2y = 5$, donc $y = 1$.
 Vérification : $3 + 2 \cdot 1 = 5$  et $3 \cdot 3 - 2 \cdot 1 = 7$ . $\mathrm{Sol} = \{(3,\, 1)\}$.
 :::
@@ -793,22 +781,22 @@ Vérification : $3 + 2 \cdot 1 = 5$  et $3 \cdot 3 - 2 \cdot 1 = 7$ . $\mathrm{S
 Pour chaque système, dis s'il admet une **solution unique**, **aucune** solution, ou une **infinité**
 de solutions — et justifie.
 
-(a) $\begin{cases} x + y = 4, \\ x + y = 6. \end{cases}$
+\(a) $\begin{cases} x + y = 4, \\ x + y = 6. \end{cases}$
 
-(b) $\begin{cases} x + y = 4, \\ 2x + 2y = 8. \end{cases}$
+\(b) $\begin{cases} x + y = 4, \\ 2x + 2y = 8. \end{cases}$
 
-(c) $\begin{cases} x + y = 4, \\ x - y = 0. \end{cases}$
+\(c) $\begin{cases} x + y = 4, \\ x - y = 0. \end{cases}$
 
 ## Solution R.9 {#sol-t2-R9}
 
-::: {.sol .long}
-(a) En soustrayant la première équation de la seconde, on obtient $0 = 2$ : cette égalité est toujours fausse.
+::: {.sol}
+\(a) En soustrayant la première équation de la seconde, on obtient $0 = 2$ : cette égalité est toujours fausse.
 Le système n'a aucune solution : les deux droites sont parallèles et distinctes ($x + y$ ne peut valoir à la fois $4$ et $6$). $\mathrm{Sol} = \varnothing$.
 
-(b) La seconde équation est le double de la première : en retranchant deux fois la première, on obtient $0 = 0$, toujours vrai.
+\(b) La seconde équation est le double de la première : en retranchant deux fois la première, on obtient $0 = 0$, toujours vrai.
 Le système a une infinité de solutions : les deux droites sont confondues. $\mathrm{Sol} = \{(x, y) \mid x + y = 4\}$.
 
-(c) En additionnant les deux équations terme à terme, $2x = 4$, donc $x = 2$ ; on reporte dans $x - y = 0$ : $y = 2$.
+\(c) En additionnant les deux équations terme à terme, $2x = 4$, donc $x = 2$ ; on reporte dans $x - y = 0$ : $y = 2$.
 Le système a une solution unique : les deux droites sont sécantes. $\mathrm{Sol} = \{(2,\, 2)\}$.
 :::
 
@@ -816,40 +804,40 @@ Le système a une solution unique : les deux droites sont sécantes. $\mathrm{So
 
 Résous chaque équation du second degré (calcule d'abord le discriminant).
 
-(a) $x^2 - 4x + 3 = 0$
+\(a) $x^2 - 4x + 3 = 0$
 
-(b) $x^2 - 6x + 9 = 0$
+\(b) $x^2 - 6x + 9 = 0$
 
-(c) $x^2 + x + 1 = 0$
+\(c) $x^2 + x + 1 = 0$
 
 ## Solution R.10 {#sol-t2-R10}
 
-::: {.sol .long}
-(a) $a = 1$, $b = -4$, $c = 3$ : $\Delta = (-4)^2 - 4 \cdot 1 \cdot 3 = 16 - 12 = 4 > 0$, deux solutions.
+::: {.sol}
+\(a) $a = 1$, $b = -4$, $c = 3$ : $\Delta = (-4)^2 - 4 \cdot 1 \cdot 3 = 16 - 12 = 4 > 0$, deux solutions.
 $x_{1,2} = \dfrac{4 \pm 2}{2}$, donc $x_1 = 1$ et $x_2 = 3$. $\mathrm{Sol} = \{1,\, 3\}$.
 
-(b) $a = 1$, $b = -6$, $c = 9$ : $\Delta = (-6)^2 - 4 \cdot 1 \cdot 9 = 36 - 36 = 0$, une seule solution,
+\(b) $a = 1$, $b = -6$, $c = 9$ : $\Delta = (-6)^2 - 4 \cdot 1 \cdot 9 = 36 - 36 = 0$, une seule solution,
 $x = \dfrac{6}{2} = 3$. $\mathrm{Sol} = \{3\}$.
 
-(c) $a = 1$, $b = 1$, $c = 1$ : $\Delta = 1^2 - 4 \cdot 1 \cdot 1 = 1 - 4 = -3 < 0$, aucune solution réelle. $\mathrm{Sol} = \varnothing$.
+\(c) $a = 1$, $b = 1$, $c = 1$ : $\Delta = 1^2 - 4 \cdot 1 \cdot 1 = 1 - 4 = -3 < 0$, aucune solution réelle. $\mathrm{Sol} = \varnothing$.
 :::
 
 ## Énoncé R.12 <span class="obj">O1</span> {#st-t2-R12}
 
 Le carré d'un nombre vaut $25$.
 
-(a) Quelles sont les valeurs possibles si ce nombre peut être quelconque ?
+\(a) Quelles sont les valeurs possibles si ce nombre peut être quelconque ?
 
-(b) Et si ce nombre représente la longueur d'un segment ?
+\(b) Et si ce nombre représente la longueur d'un segment ?
 
 ## Solution R.12 {#sol-t2-R12}
 
 ::: {.sol}
 Soit $x$ le nombre cherché. Mise en équation : $x^2 = 25 \;\Leftrightarrow\; x = -5$ ou $x = 5$, donc $\mathrm{Sol} = \{-5,\, 5\}$.
 
-(a) Le nombre peut être quelconque : les deux valeurs conviennent, $x = -5$ ou $x = 5$.
+\(a) Le nombre peut être quelconque : les deux valeurs conviennent, $x = -5$ ou $x = 5$.
 
-(b) Une longueur est positive : $-5$ n'est pas admissible, seule $x = 5$ convient.
+\(b) Une longueur est positive : $-5$ n'est pas admissible, seule $x = 5$ convient.
 :::
 
 ## Énoncé R.13 <span class="obj">O1</span> {#st-t2-R13}
@@ -868,18 +856,18 @@ Une longueur est positive : la seule solution admissible dans le contexte est $c
 Un projectile suit la trajectoire $y = -x^2 + 6x$, où $y$ est la hauteur et $x$ la distance
 horizontale (toutes deux en mètres).
 
-(a) À quelle(s) distance(s) le projectile est-il à la hauteur $y = 5$ m ?
+\(a) À quelle(s) distance(s) le projectile est-il à la hauteur $y = 5$ m ?
 
-(b) À quelle distance retombe-t-il au sol ($y = 0$) ?
+\(b) À quelle distance retombe-t-il au sol ($y = 0$) ?
 
 ## Solution R.14 {#sol-t2-R14}
 
-::: {.sol .long}
-(a) $-x^2 + 6x = 5 \;\Leftrightarrow\; x^2 - 6x + 5 = 0$. On a $\Delta = (-6)^2 - 4 \cdot 1 \cdot 5 = 36 - 20 = 16 > 0$ : deux solutions,
+::: {.sol}
+\(a) $-x^2 + 6x = 5 \;\Leftrightarrow\; x^2 - 6x + 5 = 0$. On a $\Delta = (-6)^2 - 4 \cdot 1 \cdot 5 = 36 - 20 = 16 > 0$ : deux solutions,
 $$x_1 = \dfrac{6 - 4}{2} = 1, \qquad x_2 = \dfrac{6 + 4}{2} = 5.$$
 $\mathrm{Sol} = \{1,\, 5\}$. Le projectile est à $5$ m de haut à $x = 1$ m (en montant) et à $x = 5$ m (en descendant).
 
-(b) $-x^2 + 6x = 0 \;\Leftrightarrow\; x(6 - x) = 0 \;\Leftrightarrow\; x = 0$ ou $x = 6$, donc $\mathrm{Sol} = \{0,\, 6\}$.
+\(b) $-x^2 + 6x = 0 \;\Leftrightarrow\; x(6 - x) = 0 \;\Leftrightarrow\; x = 0$ ou $x = 6$, donc $\mathrm{Sol} = \{0,\, 6\}$.
 $x = 0$ est le point de départ : le projectile retombe au sol à $x = 6$ m.
 :::
 

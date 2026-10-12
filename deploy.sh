@@ -59,7 +59,7 @@ build_view prof   "prof"  # vue prof       -> /prof
 # copiés dans le stage. Volontairement non référencé dans le livre/menus : accessible
 # seulement par lien direct.
 #
-# Chaque deck slides/seanceNN/<nom>.qmd (hors fragments _*.qmd) est découvert et
+# Chaque deck slides/seanceNN/<nom>.qmd ou slides/remed_*/<nom>.qmd (hors fragments _*.qmd) est découvert et
 # rendu automatiquement : ajouter une séance n'implique de toucher ni ce script,
 # ni index.html (regénéré à chaque déploiement par make-index.py).
 build_slides(){
@@ -70,18 +70,18 @@ build_slides(){
   git worktree add --detach "$wt" HEAD >/dev/null
   (
     cd "$wt/slides"
-    for qmd in seance[0-9][0-9]/*.qmd; do
+    for qmd in seance[0-9][0-9]/*.qmd remed_*/*.qmd; do
       [ -f "$qmd" ] || continue
       base="${qmd##*/}"
       case "$base" in _*) continue ;; esac   # saute les fragments _*.qmd
       quarto render "$qmd" >/dev/null
     done
   )
-  for qmd in "$wt"/slides/seance[0-9][0-9]/*.qmd; do
+  for qmd in "$wt"/slides/seance[0-9][0-9]/*.qmd "$wt"/slides/remed_*/*.qmd; do
     [ -f "$qmd" ] || continue
     base="${qmd##*/}"
     case "$base" in _*) continue ;; esac
-    rel="${qmd#"$wt"/slides/}"      # seanceNN/nom.qmd
+    rel="${qmd#"$wt"/slides/}"      # seanceNN/nom.qmd ou remed_xxx/nom.qmd
     html="${rel%.qmd}.html"         # seanceNN/nom.html
     mkdir -p "$dest/$(dirname "$html")"
     cp "$wt/slides/$html" "$dest/$html"

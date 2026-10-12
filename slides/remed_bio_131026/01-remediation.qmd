@@ -27,6 +27,11 @@ format:
     include-after-body: ../seance01/annotate.html
 ---
 
+
+
+# Ouverture {.divider background-color="#14304a"}
+
+
 <style>
 .qrow{display:flex;gap:.8em;border-bottom:1px solid #e5e9ef;padding:.28em .2em;font-size:.6em;line-height:1.35;align-items:flex-start}
 .qrow .qans{flex:0 0 27%;font-weight:600}
@@ -36,22 +41,23 @@ format:
 .qrow.ok .qans::before{content:"✓ ";color:#276a2e;font-weight:700}
 .qstem{font-size:.78em}
 .qflex{display:flex;gap:1em;align-items:center}
-.qflex img{max-width:330px;height:auto}
+.qflex img{max-width:330px;max-height:230px;width:auto;height:auto}
 .reveal table.deroule a{font-weight:600}
 .et-box{display:flex;flex-direction:column;align-items:center;gap:.5em;padding:.6em 1.4em;background:#f2f7ff;border:1px solid #dbe7fb;border-radius:.6em}
 .et-timer{margin-top:.8em;display:flex;justify-content:center}
 @keyframes et-pulse{0%,100%{opacity:1}50%{opacity:.35}}
 .back{margin-top:.5em}
+.qfoot{display:flex;gap:1.2em;align-items:center;margin-top:.45em;font-size:.55em}
+.qfoot .back-btn{font-size:1em}
+.qfoot .muted{color:#5a6b7b}
 .back-btn{display:inline-block;font-size:.5em;font-weight:600;padding:.3em .8em;border:1.5px solid #1f5fbf;border-radius:.5em;color:#1f5fbf;background:#fff}
 .back-btn:hover{background:#1f5fbf;color:#fff;text-decoration:none!important}
 .exo-foot{margin-top:.8em;font-size:.55em}
-.sol{font-size:.78em}
-.sol.long{font-size:.62em}
-.sol.xlong{font-size:.55em}
+.sol{font-size:.8em}
+.sol.long{font-size:.68em}
+.sol.xlong{font-size:.6em}
 </style>
 
-
-# Ouverture {.divider background-color="#14304a"}
 
 ## Déroulé
 
@@ -238,9 +244,7 @@ La simplification conduit ici à tort à une valeur numérique constante. L'expr
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="#/nav-t1">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="#/t1-R2">R.2(c)(d)</a> · <a href="#/t1-R3">R.3(b)</a></div>
+<div class="qfoot"><a class="back-btn" href="#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/t1-R2">R.2(c)(d)</a> · <a href="#/t1-R3">R.3(b)</a></span></div>
 
 ## Q2 · Pourcentages {#q1-P3}
 
@@ -284,9 +288,7 @@ La seconde variation a été appliquée dans le mauvais sens : une augmentation 
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="#/nav-t1">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="#/t1-R6">R.6(c)</a></div>
+<div class="qfoot"><a class="back-btn" href="#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/t1-R6">R.6(c)</a></span></div>
 
 ## Q3 · Racine carrée et valeur absolue {#q1-Q3}
 
@@ -332,9 +334,7 @@ La soustraction $10-35$ a été remplacée par une addition. Il faut respecter l
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="#/nav-t1">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="#/t1-R5">R.5</a></div>
+<div class="qfoot"><a class="back-btn" href="#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/t1-R5">R.5</a></span></div>
 
 ## Q4 · Ordre de grandeur {#q1-Q4}
 
@@ -380,9 +380,7 @@ Les exposants ont ici été multipliés entre eux. Pour un produit de puissances
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="#/nav-t1">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="#/t1-R7">R.7(a)(b)</a></div>
+<div class="qfoot"><a class="back-btn" href="#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/t1-R7">R.7(a)(b)</a></span></div>
 
 ## Q5 · Sinus et cosinus {#q1-Q5}
 
@@ -430,9 +428,7 @@ Cette réponse correspond à un raisonnement du type $\sin(\theta)+\cos(\theta)=
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="#/nav-t1">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="#/t1-R8">R.8(b)</a> · <a href="#/t1-R10">R.10(a)</a></div>
+<div class="qfoot"><a class="back-btn" href="#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/t1-R8">R.8(b)</a> · <a href="#/t1-R10">R.10(a)</a></span></div>
 
 ## Q6 · Sinus d'un angle remarquable {#q1-Q6}
 
@@ -488,9 +484,7 @@ Cette égalité n'est pas correcte. Les angles $\frac{7\pi}{6}$ et $-\frac{7\pi}
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="#/nav-t1">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="#/t1-R8">R.8(a)</a> · <a href="#/t1-R10">R.10(a)</a></div>
+<div class="qfoot"><a class="back-btn" href="#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/t1-R8">R.8(a)</a> · <a href="#/t1-R10">R.10(a)</a></span></div>
 
 
 # Thème 1 — exercices de renforcement {.divider background-color="#14304a"}
@@ -511,109 +505,93 @@ Cette égalité n'est pas correcte. Les angles $\frac{7\pi}{6}$ et $-\frac{7\pi}
 Pour chaque égalité, dis si elle est **vraie** ou **fausse**, et nomme
 la propriété (ou son absence) en jeu.
 
-(a) $(20 - 8) - 5 = 20 - (8 - 5)$
+\(a) $(20 - 8) - 5 = 20 - (8 - 5)$
 
-(b) $10 - 4 = 4 - 10$
+\(b) $10 - 4 = 4 - 10$
 
-(c) $3 \cdot (6 + 4) = 3 \cdot 6 + 3 \cdot 4$
+\(c) $3 \cdot (6 + 4) = 3 \cdot 6 + 3 \cdot 4$
 
-(d) $(30 + 12) : 6 = 30 : 6 + 12 : 6$
+\(d) $(30 + 12) : 6 = 30 : 6 + 12 : 6$
 
-(e) $48 : (8 : 2) = (48 : 8) : 2$
+\(e) $48 : (8 : 2) = (48 : 8) : 2$
 
-(f) $60 : (4 + 6) = 60 : 4 + 60 : 6$
+\(f) $60 : (4 + 6) = 60 : 4 + 60 : 6$
 
-<div class="back"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R1">annexe — R.1</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R1">annexe — R.1</a></span></div>
 
 ## Exercice R.2 <span class="obj">O1</span> {#t1-R2}
 
-(a) Développer $(2x - 3)^2$.
+\(a) Développer $(2x - 3)^2$.
 
-(b) Développer $(5 + 2b)(5 - 2b)$.
+\(b) Développer $(5 + 2b)(5 - 2b)$.
 
-(c) Factoriser $7a^2 - 28$.
+\(c) Factoriser $7a^2 - 28$.
 
-(d) Factoriser $6x^2 + 15x$.
+\(d) Factoriser $6x^2 + 15x$.
 
-<div class="back"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R2">annexe — R.2</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R2">annexe — R.2</a></span></div>
 
 ## Exercice R.3 <span class="obj">O1</span> {#t1-R3}
 
 Réduis au même dénominateur, puis simplifie si possible.
 
-(a) $\dfrac{3}{x + 2} - \dfrac{6}{x - 2}$
+\(a) $\dfrac{3}{x + 2} - \dfrac{6}{x - 2}$
 
-(b) $\dfrac{3}{x + 2} : \dfrac{6}{x - 2}$
+\(b) $\dfrac{3}{x + 2} : \dfrac{6}{x - 2}$
 
-<div class="back"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R3">annexe — R.3</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R3">annexe — R.3</a></span></div>
 
 ## Exercice R.5 <span class="obj">O3</span> ★★★ {#t1-R5}
 
-(a) Montre qu'on **ne peut pas** avoir $\sqrt{x^2} = x$ pour tout $x$, en testant $x = -3$.
+\(a) Montre qu'on **ne peut pas** avoir $\sqrt{x^2} = x$ pour tout $x$, en testant $x = -3$.
 
-(b) Énonce la règle correcte, puis calcule $\sqrt{(5 - 9)^2}$.
+\(b) Énonce la règle correcte, puis calcule $\sqrt{(5 - 9)^2}$.
 
-<div class="back"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R5">annexe — R.5</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R5">annexe — R.5</a></span></div>
 
 ## Exercice R.6 <span class="obj">O2</span> {#t1-R6}
 
-(a) Écris $\dfrac{5}{8}$ en décimal et en pourcentage ; écris $0{,}45$ en fraction irréductible et en
+\(a) Écris $\dfrac{5}{8}$ en décimal et en pourcentage ; écris $0{,}45$ en fraction irréductible et en
 pourcentage.
 
-(b) Prendre $\dfrac{2}{5}$ de $35$ mL : combien de mL ?
+\(b) Prendre $\dfrac{2}{5}$ de $35$ mL : combien de mL ?
 
-(c) Après une hausse de $25\,\%$, une population de bactéries atteint $500$. Quel était l'effectif
+\(c) Après une hausse de $25\,\%$, une population de bactéries atteint $500$. Quel était l'effectif
 **initial** ?
 
-<div class="back"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R6">annexe — R.6</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R6">annexe — R.6</a></span></div>
 
 ## Exercice R.7 <span class="obj">O3</span> {#t1-R7}
 
-(a) Calcule, en notation scientifique : $(4 \times 10^{7}) \cdot (2{,}5 \times 10^{-3})$.
+\(a) Calcule, en notation scientifique : $(4 \times 10^{7}) \cdot (2{,}5 \times 10^{-3})$.
 
-(b) **Estime** (sans calculatrice) $\dfrac{5{,}1 \times 10^{6}}{2{,}05 \times 10^{2}}$.
+\(b) **Estime** (sans calculatrice) $\dfrac{5{,}1 \times 10^{6}}{2{,}05 \times 10^{2}}$.
 
-(c) Une longueur est mesurée au dixième de millimètre près. Est-il justifié d'annoncer le résultat
+\(c) Une longueur est mesurée au dixième de millimètre près. Est-il justifié d'annoncer le résultat
 final d'un calcul au **nanomètre** près ? Explique.
 
-<div class="back"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R7">annexe — R.7</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R7">annexe — R.7</a></span></div>
 
 ## Exercice R.8 <span class="obj">O4</span> {#t1-R8}
 
-(a) Ramène-toi à un angle du premier quandrant : $\cos(420°)$ et $\sin\!\left(\dfrac{7\pi}{3}\right)$.
+\(a) Ramène-toi à un angle du premier quandrant : $\cos(420°)$ et $\sin\!\left(\dfrac{7\pi}{3}\right)$.
 
-(b) On sait que $\cos\theta = \dfrac{3}{5}$ et que $\theta \in \left[0,\ \tfrac{\pi}{2}\right]$. Calcule
+\(b) On sait que $\cos\theta = \dfrac{3}{5}$ et que $\theta \in \left[0,\ \tfrac{\pi}{2}\right]$. Calcule
 $\sin\theta$, puis $\tan\theta$.
 
-<div class="back"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R8">annexe — R.8</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R8">annexe — R.8</a></span></div>
 
 ## Exercice R.10 <span class="obj">O4</span> ★★★ {#t1-R10}
 
 On sait que $\cos\theta = -\dfrac{1}{2}$ et que $\theta \in \left[\dfrac{\pi}{2},\ \pi\right]$.
 
-(a) Calcule $\sin\theta$.
+\(a) Calcule $\sin\theta$.
 
-(b) Donne la valeur exacte de $\theta$.
+\(b) Donne la valeur exacte de $\theta$.
 
-(c) Déduis-en $\cos(-\theta)$ et $\sin(\pi - \theta)$.
+\(c) Déduis-en $\cos(-\theta)$ et $\sin(\pi - \theta)$.
 
-<div class="back"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R10">annexe — R.10</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t1">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t1-R10">annexe — R.10</a></span></div>
 
 ## Questions restantes — thème 1
 
@@ -702,9 +680,7 @@ Cette relation est incorrecte car le prix augmente de 2 euros par heure. Il ne p
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="#/nav-t2">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="#/t2-R6">R.6(a)</a> · <a href="#/t2-R3">R.3</a></div>
+<div class="qfoot"><a class="back-btn" href="#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/t2-R6">R.6(a)</a> · <a href="#/t2-R3">R.3</a></span></div>
 
 ## Q2 · Résolution d'une inéquation {#q2-Q4}
 
@@ -750,9 +726,7 @@ Il faut à la fois tenir compte correctement des signes lors du regroupement des
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="#/nav-t2">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="#/t2-R2">R.2</a></div>
+<div class="qfoot"><a class="back-btn" href="#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/t2-R2">R.2</a></span></div>
 
 ## Q3 · Système non linéaire {#q2-Q2}
 
@@ -798,9 +772,7 @@ Le système possède bien des solutions. Il faut d'abord simplifier la seconde �
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="#/nav-t2">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="#/t2-R14">R.14(a)</a> · <a href="#/t2-R8">R.8</a></div>
+<div class="qfoot"><a class="back-btn" href="#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/t2-R14">R.14(a)</a> · <a href="#/t2-R8">R.8</a></span></div>
 
 ## Q4 · Lecture graphique de la pente {#q2-P4}
 
@@ -848,9 +820,7 @@ La pente n'est pas égale à $-1$. La variation verticale est bien de $-1$, mais
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="#/nav-t2">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="#/t2-R4">R.4</a></div>
+<div class="qfoot"><a class="back-btn" href="#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/t2-R4">R.4</a></span></div>
 
 ## Q5 · Équation d'une droite {#q2-Q5}
 
@@ -898,9 +868,7 @@ Entre les points $A$ et $B$, on a $y_2-y_1=10-1=9$ et $x_2-x_1=4-(-2)=6$. La pen
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="#/nav-t2">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="#/t2-R5">R.5</a> · <a href="#/t2-R4">R.4</a> · <a href="#/t2-R6">R.6(a)</a></div>
+<div class="qfoot"><a class="back-btn" href="#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/t2-R5">R.5</a> · <a href="#/t2-R4">R.4</a> · <a href="#/t2-R6">R.6(a)</a></span></div>
 
 ## Q6 · Position relative de deux droites {#q2-Q3}
 
@@ -948,9 +916,7 @@ Les pentes sont $m_1=\frac{3}{2}$ et $m_2=-\frac{2}{3}$. Elles ne sont pas égal
 :::
 :::::
 
-<div class="back"><a class="back-btn" href="#/nav-t2">← Où aller selon les résultats</a></div>
-
-<div class="exo-foot muted">Exercices : <a href="#/t2-R7">R.7</a> · <a href="#/t2-R9">R.9</a></div>
+<div class="qfoot"><a class="back-btn" href="#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/t2-R7">R.7</a> · <a href="#/t2-R9">R.9</a></span></div>
 
 
 # Thème 2 — exercices de renforcement {.divider background-color="#14304a"}
@@ -970,145 +936,121 @@ Les pentes sont $m_1=\frac{3}{2}$ et $m_2=-\frac{2}{3}$. Elles ne sont pas égal
 
 Résous chaque inéquation, et donne l'ensemble solution en intervalle.
 
-(a) $5 - 2x < 1$
+\(a) $5 - 2x < 1$
 
-(b) $-3x + 2 \ge -7$
+\(b) $-3x + 2 \ge -7$
 
-<div class="back"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R2">annexe — R.2</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R2">annexe — R.2</a></span></div>
 
 ## Exercice R.3 <span class="obj">O1</span> {#t2-R3}
 
 Un rectangle a un périmètre de $26$ cm ; sa longueur dépasse sa largeur de $3$ cm. Trouve ses
 dimensions (mise en équation, résolution, réponse).
 
-<div class="back"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R3">annexe — R.3</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R3">annexe — R.3</a></span></div>
 
 ## Exercice R.4 <span class="obj">O4</span> {#t2-R4}
 
 Calcule la pente de la droite passant par chaque paire de points.
 
-(a) $(0,\, 1)$ et $(2,\, 5)$
+\(a) $(0,\, 1)$ et $(2,\, 5)$
 
-(b) $(-1,\, 4)$ et $(1,\, 0)$
+\(b) $(-1,\, 4)$ et $(1,\, 0)$
 
-(c) $(2,\, 3)$ et $(5,\, 3)$
+\(c) $(2,\, 3)$ et $(5,\, 3)$
 
-<div class="back"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R4">annexe — R.4</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R4">annexe — R.4</a></span></div>
 
 ## Exercice R.5 <span class="obj">O4</span> {#t2-R5}
 
 Détermine l'équation de la droite passant par les points $(1,\, 3)$ et $(3,\, 7)$.
 
-<div class="back"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R5">annexe — R.5</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R5">annexe — R.5</a></span></div>
 
 ## Exercice R.6 <span class="obj">O4</span> {#t2-R6}
 
 Un spectrophotomètre relie l'absorbance $A$ à la concentration $C$ (en mmol/L) par une **droite**.
 Deux étalons donnent $(C,\, A) = (1\, ;\, 0{,}20)$ et $(5\, ;\, 0{,}60)$.
 
-(a) Détermine la droite d'étalonnage $A(C) = m\, C + p$.
+\(a) Détermine la droite d'étalonnage $A(C) = m\, C + p$.
 
-(b) Un échantillon inconnu donne $A = 0{,}50$. Quelle est sa concentration ?
+\(b) Un échantillon inconnu donne $A = 0{,}50$. Quelle est sa concentration ?
 
-(c) Que représente concrètement l'ordonnée à l'origine $p$ ?
+\(c) Que représente concrètement l'ordonnée à l'origine $p$ ?
 
-<div class="back"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R6">annexe — R.6</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R6">annexe — R.6</a></span></div>
 
 ## Exercice R.7 <span class="obj">O4</span> {#t2-R7}
 
 On considère la droite $d : y = 2x + 1$.
 
-(a) Écris l'équation de la droite **parallèle** à $d$ passant par $(0,\, 4)$.
+\(a) Écris l'équation de la droite **parallèle** à $d$ passant par $(0,\, 4)$.
 
-(b) Quelle est la pente d'une droite **orthogonale** à $d$ ?
+\(b) Quelle est la pente d'une droite **orthogonale** à $d$ ?
 
-<div class="back"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R7">annexe — R.7</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R7">annexe — R.7</a></span></div>
 
 ## Exercice R.8 <span class="obj">O2</span> {#t2-R8}
 
 Résous chaque système ; indique clairement la méthode utilisée.
 
-(a) $\begin{cases} 2x + y = 8, \\ x - y = 1. \end{cases}$
+\(a) $\begin{cases} 2x + y = 8, \\ x - y = 1. \end{cases}$
 
-(b) $\begin{cases} x + 2y = 5, \\ 3x - 2y = 7. \end{cases}$
+\(b) $\begin{cases} x + 2y = 5, \\ 3x - 2y = 7. \end{cases}$
 
-<div class="back"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R8">annexe — R.8</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R8">annexe — R.8</a></span></div>
 
 ## Exercice R.9 <span class="obj">O4</span> ★★★ {#t2-R9}
 
 Pour chaque système, dis s'il admet une **solution unique**, **aucune** solution, ou une **infinité**
 de solutions — et justifie.
 
-(a) $\begin{cases} x + y = 4, \\ x + y = 6. \end{cases}$
+\(a) $\begin{cases} x + y = 4, \\ x + y = 6. \end{cases}$
 
-(b) $\begin{cases} x + y = 4, \\ 2x + 2y = 8. \end{cases}$
+\(b) $\begin{cases} x + y = 4, \\ 2x + 2y = 8. \end{cases}$
 
-(c) $\begin{cases} x + y = 4, \\ x - y = 0. \end{cases}$
+\(c) $\begin{cases} x + y = 4, \\ x - y = 0. \end{cases}$
 
-<div class="back"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R9">annexe — R.9</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R9">annexe — R.9</a></span></div>
 
 ## Exercice R.10 <span class="obj">O5</span> {#t2-R10}
 
 Résous chaque équation du second degré (calcule d'abord le discriminant).
 
-(a) $x^2 - 4x + 3 = 0$
+\(a) $x^2 - 4x + 3 = 0$
 
-(b) $x^2 - 6x + 9 = 0$
+\(b) $x^2 - 6x + 9 = 0$
 
-(c) $x^2 + x + 1 = 0$
+\(c) $x^2 + x + 1 = 0$
 
-<div class="back"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R10">annexe — R.10</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R10">annexe — R.10</a></span></div>
 
 ## Exercice R.12 <span class="obj">O1</span> {#t2-R12}
 
 Le carré d'un nombre vaut $25$.
 
-(a) Quelles sont les valeurs possibles si ce nombre peut être quelconque ?
+\(a) Quelles sont les valeurs possibles si ce nombre peut être quelconque ?
 
-(b) Et si ce nombre représente la longueur d'un segment ?
+\(b) Et si ce nombre représente la longueur d'un segment ?
 
-<div class="back"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R12">annexe — R.12</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R12">annexe — R.12</a></span></div>
 
 ## Exercice R.13 <span class="obj">O1</span> {#t2-R13}
 
 L'aire d'un carré vaut $36$ m². Quelle est la longueur (en mètres) de son côté ?
 
-<div class="back"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R13">annexe — R.13</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R13">annexe — R.13</a></span></div>
 
 ## Exercice R.14 <span class="obj">O5</span> ★★★ {#t2-R14}
 
 Un projectile suit la trajectoire $y = -x^2 + 6x$, où $y$ est la hauteur et $x$ la distance
 horizontale (toutes deux en mètres).
 
-(a) À quelle(s) distance(s) le projectile est-il à la hauteur $y = 5$ m ?
+\(a) À quelle(s) distance(s) le projectile est-il à la hauteur $y = 5$ m ?
 
-(b) À quelle distance retombe-t-il au sol ($y = 0$) ?
+\(b) À quelle distance retombe-t-il au sol ($y = 0$) ?
 
-<div class="back"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a></div>
-
-<div class="exo-foot muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R14">annexe — R.14</a></div>
+<div class="qfoot"><a class="back-btn" href="#/ex-t2">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-t2-R14">annexe — R.14</a></span></div>
 
 ## Questions restantes — thème 2
 
