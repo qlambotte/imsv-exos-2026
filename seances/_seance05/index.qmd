@@ -14,24 +14,28 @@ correction: "✅ en ligne"
 ## Objectifs de la séance
 
 Ces objectifs sont repris du cours théorique (IMSV-5, ses AAVs). **Chaque exercice indique
-l'objectif qu'il travaille** — la pastille **O1 / O2 / O3** dans son en-tête.
+l'objectif qu'il travaille** — la pastille **O1** à **O7** dans son en-tête.
 
-- **O1** — ……… .
-- **O2** — ……… .
-- **O3** — ……… .
+- **O1** — Modéliser une relation simple par une fonction, et interpréter son domaine, son image, ses préimages, ses racines, ses variations, ses paramètres et son graphe.
+- **O2** — Réaliser l'étude de signe d'une fonction.
+- **O3** — Comprendre et appliquer les notions de fonction, de croissance, de décroissance, d'extrema locaux et globaux, d'injectivité, de surjectivité et de bijectivité.
+- **O4** — Passer d'un registre à un autre pour une même relation.
+- **O5** — Composer des fonctions et en déduire leur effet global.
+- **O6** — Identifier quand une fonction réciproque existe, la calculer et l'exploiter.
+- **O7** — Lire sur un graphe les racines, le signe, les variations et les extrema.
 
 Une grille d'**auto-évaluation** sur ces objectifs t'attend à la page
 [Institutionnalisation](institution.qmd).
 
 ## Le parcours de la séance
 
-1. **[Socle](socle.qmd)** — les exercices routiniers, à ton rythme.
-2. **[Transfert](transfert.qmd)** — des problèmes en contexte nouveau.
-3. **[Exercices supplémentaires](supplementaires.qmd)** — des variations pour consolider, en séance ou à la maison.
+1. **[Socle](socle.qmd)** — les exercices routiniers, en séance (environ 30 minutes).
+2. **[Transfert](transfert.qmd)** — des problèmes en contexte nouveau, en séance (environ 30 minutes).
+3. **[Exercices supplémentaires](supplementaires.qmd)** — des variations pour consolider, à la maison.
 4. **[Institutionnalisation](institution.qmd)** — la méthode qu'on dégage ensemble, et l'auto-évaluation.
 
-Une page de **[défis](defis.qmd)** est aussi proposée. Ils sont **optionnels** : ils ne font pas partie du
-parcours, et tu peux les ignorer sans rien manquer de la séance.
+Une page de **[défis](defis.qmd)** est aussi proposée. Ils sont **optionnels** : si tu maîtrises déjà le socle, tu peux
+les faire en séance ; sinon, tu peux les ignorer sans rien manquer de la séance.
 
 ## Les slides du cours
 

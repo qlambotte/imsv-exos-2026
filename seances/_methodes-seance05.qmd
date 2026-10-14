@@ -5,34 +5,53 @@
      Les titres et objectifs (titre="…", obj="…") alimentent AUSSI la feuille à compléter
      (feuille-auto.py) : ne les écris qu'ici. Pas de figure : build-boite.sh ne copie que ce fragment. -->
 
-::: {.methode obj="O3" titre="Retrouver l'entrée d'une fonction à partir de sa sortie"}
+::: {.methode obj="O1" titre="Déterminer le domaine d'une fonction"}
 
 ::: {.quand}
-Dès qu'une formule donne une grandeur à partir d'une autre et que l'on connaît la grandeur obtenue (la sortie), alors que l'on cherche la grandeur de départ (l'entrée).
+Dès qu'une fonction est donnée par une formule et qu'il faut savoir pour quels nombres elle a un sens, ou quel domaine impose le contexte.
 :::
 
 ::: {.etapes}
-1. Nomme l'entrée et la sortie, puis écris la formule qui donne la sortie en fonction de l'entrée.
-2. Remplace la sortie par sa valeur dans la formule : tu obtiens une équation dont l'inconnue est l'entrée.
-3. Résous cette équation en défaisant les opérations de la formule dans l'ordre inverse.
-4. Vérifie que chaque solution appartient au domaine de la fonction, ou au domaine pratique imposé par le contexte, puis qu'elle redonne la sortie de départ quand on la remet dans la formule.
-5. Si l'équation a plusieurs solutions, garde celles qui appartiennent au domaine pratique ; s'il en reste plusieurs, la fonction n'a pas de réciproque tant que l'on ne restreint pas son domaine.
-6. Si la valeur de la sortie change d'un cas à l'autre, isole l'entrée une seule fois dans la formule : tu obtiens la fonction réciproque.
-7. Conclus par une phrase qui donne l'entrée avec son unité.
+1. Repère dans la formule les opérations qui imposent une condition : une racine carrée exige un nombre positif ou nul, et un quotient exige un dénominateur non nul.
+2. Écris une condition pour chacune de ces opérations.
+3. Résous chaque condition, puis garde les nombres qui vérifient toutes les conditions à la fois.
+4. Si la fonction décrit une situation réelle, ajoute les conditions du contexte, par exemple qu'une taille, une masse ou un volume ne sont pas négatifs : tu obtiens le domaine pratique.
+5. Écris le domaine sous la forme d'un intervalle, ou d'un ensemble privé de certaines valeurs.
 :::
 
 ::: {.exemple}
-La température se mesure en degrés Fahrenheit ($F$) aux États-Unis et en degrés Celsius ($C$) en Belgique. La conversion est $F = 1{,}8\,C + 32$. Un thermomètre américain indique $104$ °F. On va calculer la température en °C.
+Soit la fonction $f(x) = \dfrac{\sqrt{3 - x}}{x + 1}$. On va déterminer son domaine.
 
-L'entrée cherchée est $C$ et la sortie connue est $F = 104$. On remplace la sortie par sa valeur : $104 = 1{,}8\,C + 32$. On défait les opérations dans l'ordre inverse : on soustrait d'abord $32$, ce qui donne $72 = 1{,}8\,C$, puis on divise par $1{,}8$, ce qui donne $C = 40$. On vérifie : $1{,}8 \cdot 40 + 32 = 72 + 32 = 104$. La température est donc de $40$ °C.
-
-Pour convertir plusieurs valeurs, on isole $C$ une seule fois : $C = \dfrac{F - 32}{1{,}8}$. C'est la fonction réciproque de la conversion.
-
-**Plusieurs solutions.** Soit la fonction $f(x) = x^2 - 4$, où $x$ est une longueur en cm, de sorte que le domaine pratique est $[0,\,+\infty[$. On cherche l'entrée qui donne la sortie $5$. On remplace : $x^2 - 4 = 5$, donc $x^2 = 9$, et l'équation a deux solutions, $3$ et $-3$. Une longueur n'est pas négative, donc on ne garde que $x = 3$ cm. Vérification : $3^2 - 4 = 5$.
+La formule contient une racine carrée et un quotient, donc deux conditions. La racine carrée impose $3 - x \geq 0$, soit $x \leq 3$. Le quotient impose $x + 1 \neq 0$, soit $x \neq -1$. Le nombre $-1$ vérifie la première condition, donc il faut le retirer de l'intervalle $]-\infty,\,3]$ : $\mathit{Dom}(f) = ]-\infty,\,3] \setminus \{-1\}$.
 :::
 
 ::: {.piege}
-Une erreur fréquente consiste à défaire les opérations dans le même ordre que dans la formule, par exemple à diviser par $1{,}8$ avant de soustraire $32$. Elle est tentante parce qu'on lit la formule de gauche à droite, mais elle est fausse : il faut défaire d'abord la dernière opération effectuée par la formule, c'est-à-dire l'ordre inverse. Une autre erreur consiste à oublier la vérification du domaine. Elle est tentante parce que le calcul semble terminé dès que l'équation est résolue, mais elle est fausse : une équation peut avoir une solution qui n'a aucun sens pour la grandeur étudiée, comme $-3$ cm dans l'exemple.
+Une erreur fréquente consiste à n'écrire qu'une seule condition quand la formule en contient plusieurs. Elle est tentante parce que la racine carrée attire l'attention, mais elle est fausse : le dénominateur impose aussi une condition, et la valeur qui l'annule doit être retirée du domaine.
+:::
+
+:::
+
+::: {.methode obj="O7" titre="Lire une image, des antécédents et l'image d'une fonction sur un graphe"}
+
+::: {.quand}
+Dès qu'une fonction est donnée par son graphe et qu'il faut trouver l'image d'un nombre, les antécédents d'une valeur ou l'image de la fonction.
+:::
+
+::: {.etapes}
+1. Pour l'image d'un nombre $a$, trace la droite verticale d'abscisse $a$ : l'ordonnée de son point commun avec le graphe est $f(a)$.
+2. Pour les antécédents d'une valeur $b$, trace la droite horizontale à la hauteur $b$ : les abscisses de ses points communs avec le graphe sont les antécédents de $b$. Si elle ne rencontre pas le graphe, $b$ n'a aucun antécédent.
+3. Pour l'image de la fonction, repère l'ordonnée la plus basse et l'ordonnée la plus haute du graphe, et vérifie que la courbe passe par toutes les hauteurs intermédiaires.
+4. Si une formule est donnée, vérifie chaque lecture par un calcul et contrôle que chaque antécédent appartient au domaine.
+:::
+
+::: {.exemple}
+Soit la fonction $f(x) = (x - 1)^2$ définie sur $[-1,\,4]$, dont le graphe est une portion de parabole de point le plus bas $(1\,;\,0)$.
+
+L'image de $2$ se lit sur la droite verticale d'abscisse $2$ : $f(2) = 1$. Les antécédents de $4$ se lisent sur la droite horizontale à la hauteur $4$ : elle rencontre le graphe aux abscisses $-1$ et $3$, et le calcul le confirme, car $(-1 - 1)^2 = 4$ et $(3 - 1)^2 = 4$. La droite horizontale à la hauteur $9$ ne rencontre le graphe qu'en l'abscisse $4$ : l'équation $(x - 1)^2 = 9$ a aussi la solution $-2$, mais $-2$ n'appartient pas au domaine. Enfin, l'ordonnée la plus basse est $0$ et la plus haute est $f(4) = 9$, et la courbe passe par toutes les hauteurs intermédiaires, donc $\mathit{Im}(f) = [0,\,9]$.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à chercher les antécédents avec une droite verticale. Elle est tentante parce que la droite verticale sert à lire une image, mais elle est fausse : un antécédent est une abscisse dont on connaît l'ordonnée, donc il se lit avec une droite horizontale. Une autre erreur consiste à garder une solution de l'équation qui n'appartient pas au domaine, comme $-2$ dans l'exemple. Elle est tentante parce que le calcul la fournit, mais elle est fausse : un antécédent doit appartenir au domaine de la fonction.
 :::
 
 :::
@@ -66,6 +85,91 @@ La fonction $f$ est donc strictement positive sur $]-\infty,\,-2[$ et sur $]1,\,
 
 ::: {.piege}
 Une erreur fréquente consiste à conclure que le signe change à chaque racine. Elle est tentante parce que c'est le cas de la plupart des exemples simples, mais elle est fausse quand une racine provient d'un facteur élevé au carré : ce facteur reste positif de part et d'autre de la racine, donc le signe de $f$ ne change pas. Il faut évaluer le signe sur chaque intervalle, et ne pas supposer l'alternance. Une autre erreur consiste à oublier les valeurs exclues du domaine. Elle est tentante parce que la méthode commence par les racines, mais elle est fausse : un quotient peut changer de signe là où son dénominateur s'annule, sans avoir de racine en ce point.
+:::
+
+:::
+
+::: {.methode obj="O3" titre="Déterminer les extrema d'une fonction sur un intervalle"}
+
+::: {.quand}
+Dès qu'il faut savoir si une fonction admet un maximum ou un minimum sur un intervalle, en particulier quand une borne de l'intervalle est exclue.
+:::
+
+::: {.etapes}
+1. Repère, sur le graphe ou à partir de la formule, où la fonction croît et où elle décroît sur l'intervalle étudié.
+2. Repère les candidats : les abscisses où la fonction change de sens, et les deux bornes de l'intervalle.
+3. Pour chaque borne, regarde si elle est incluse ou exclue : une borne exclue n'appartient pas à l'intervalle, donc la valeur de la fonction en ce point n'est pas atteinte.
+4. Compare les valeurs atteintes aux candidats inclus avec les valeurs dont la fonction s'approche près des bornes exclues. Si, près d'une borne exclue, la fonction s'approche d'une valeur plus grande que toutes les valeurs atteintes, il n'y a pas de maximum ; raisonne de même pour le minimum.
+5. Conclus par une phrase qui donne l'abscisse et la valeur de chaque extremum, ou qui dit qu'il n'existe pas.
+:::
+
+::: {.exemple}
+Soit la fonction $g(x) = 2x - 1$, qui est croissante sur $\mathbb{R}$. On va étudier ses extrema sur trois intervalles.
+
+Sur $[0,\,3]$, les deux bornes sont incluses et $g$ croît : le minimum vaut $g(0) = -1$, atteint en $0$, et le maximum vaut $g(3) = 5$, atteint en $3$. Sur $[0,\,3[$, le minimum reste $-1$, atteint en $0$. En revanche, les valeurs de $g$ s'approchent de $5$ quand $x$ s'approche de $3$, sans l'atteindre, car $3$ est exclu : aucune abscisse ne donne la plus grande valeur, donc $g$ n'a pas de maximum. Sur $]0,\,3[$, le même raisonnement s'applique aux deux bornes : $g$ n'a ni maximum ni minimum.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à donner comme maximum la valeur de la fonction en une borne exclue. Elle est tentante parce que la courbe semble arriver à cette hauteur, mais elle est fausse : un maximum doit être atteint en une abscisse de l'intervalle. Une autre erreur consiste à croire qu'une borne exclue supprime toujours un extremum. Elle est tentante parce que c'est le cas pour une fonction croissante ou décroissante, mais elle est fausse : si la même valeur, ou une valeur plus grande, est atteinte ailleurs dans l'intervalle, le maximum existe.
+:::
+
+:::
+
+::: {.methode obj="O1" titre="Retrouver l'entrée d'une fonction à partir de sa sortie"}
+
+::: {.quand}
+Dès qu'une formule donne une grandeur à partir d'une autre et que l'on connaît la grandeur obtenue (la sortie), alors que l'on cherche la grandeur de départ (l'entrée).
+:::
+
+::: {.etapes}
+1. Nomme l'entrée et la sortie, puis écris la formule qui donne la sortie en fonction de l'entrée.
+2. Remplace la sortie par sa valeur dans la formule : tu obtiens une équation dont l'inconnue est l'entrée.
+3. Résous cette équation en défaisant les opérations de la formule dans l'ordre inverse.
+4. Vérifie que chaque solution appartient au domaine de la fonction, ou au domaine pratique imposé par le contexte, puis qu'elle redonne la sortie de départ quand on la remet dans la formule.
+5. Si l'équation a plusieurs solutions, garde celles qui appartiennent au domaine pratique ; s'il en reste plusieurs, la fonction n'a pas de réciproque tant que l'on ne restreint pas son domaine.
+6. Si la valeur de la sortie change d'un cas à l'autre, isole l'entrée une seule fois dans la formule : tu obtiens la fonction réciproque.
+7. Conclus par une phrase qui donne l'entrée avec son unité.
+:::
+
+::: {.exemple}
+La température se mesure en degrés Fahrenheit ($F$) aux États-Unis et en degrés Celsius ($C$) en Belgique. La conversion est $F = 1{,}8\,C + 32$. Un thermomètre américain indique $104$ °F. On va calculer la température en °C.
+
+L'entrée cherchée est $C$ et la sortie connue est $F = 104$. On remplace la sortie par sa valeur : $104 = 1{,}8\,C + 32$. On défait les opérations dans l'ordre inverse : on soustrait d'abord $32$, ce qui donne $72 = 1{,}8\,C$, puis on divise par $1{,}8$, ce qui donne $C = 40$. On vérifie : $1{,}8 \cdot 40 + 32 = 72 + 32 = 104$. La température est donc de $40$ °C.
+
+Pour convertir plusieurs valeurs, on isole $C$ une seule fois : $C = \dfrac{F - 32}{1{,}8}$. C'est la fonction réciproque de la conversion.
+
+**Plusieurs solutions.** Soit la fonction $f(x) = x^2 - 4$, où $x$ est une longueur en cm, de sorte que le domaine pratique est $[0,\,+\infty[$. On cherche l'entrée qui donne la sortie $5$. On remplace : $x^2 - 4 = 5$, donc $x^2 = 9$, et l'équation a deux solutions, $3$ et $-3$. Une longueur n'est pas négative, donc on ne garde que $x = 3$ cm. Vérification : $3^2 - 4 = 5$.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à défaire les opérations dans le même ordre que dans la formule, par exemple à diviser par $1{,}8$ avant de soustraire $32$. Elle est tentante parce qu'on lit la formule de gauche à droite, mais elle est fausse : il faut défaire d'abord la dernière opération effectuée par la formule, c'est-à-dire l'ordre inverse. Une autre erreur consiste à oublier la vérification du domaine. Elle est tentante parce que le calcul semble terminé dès que l'équation est résolue, mais elle est fausse : une équation peut avoir une solution qui n'a aucun sens pour la grandeur étudiée, comme $-3$ cm dans l'exemple.
+:::
+
+:::
+
+::: {.methode obj="O6" titre="Calculer la fonction réciproque"}
+
+::: {.quand}
+Dès qu'il faut défaire une fonction, c'est-à-dire écrire l'entrée en fonction de la sortie pour toutes les valeurs à la fois.
+:::
+
+::: {.etapes}
+1. Vérifie que la fonction est injective sur son domaine : deux entrées différentes doivent donner deux sorties différentes. Si ce n'est pas le cas, restreins le domaine.
+2. Pose $y = f(x)$.
+3. Isole $x$ en fonction de $y$ ; si tu prends une racine carrée, choisis le signe imposé par le domaine.
+4. Échange les noms $x$ et $y$ pour écrire $f^{-1}(x)$.
+5. Écris le domaine de $f^{-1}$ : c'est l'image de $f$.
+6. Vérifie que $(f^{-1} \circ f)(x) = x$ pour tout $x$ du domaine de $f$.
+:::
+
+::: {.exemple}
+Soit la fonction $f(x) = \sqrt{x - 1}$ définie sur $[1,\,+\infty[$. On va calculer sa réciproque.
+
+Deux nombres différents de $[1,\,+\infty[$ ont des racines différentes, donc $f$ est injective. On pose $y = \sqrt{x - 1}$, où $y \geq 0$. On élève au carré : $y^2 = x - 1$, donc $x = y^2 + 1$. On échange les noms $x$ et $y$ : $f^{-1}(x) = x^2 + 1$. Une racine carrée prend toutes les valeurs positives ou nulles, donc l'image de $f$ est $[0,\,+\infty[$, et $\mathit{Dom}(f^{-1}) = [0,\,+\infty[$. Vérification : $(f^{-1} \circ f)(x) = \left(\sqrt{x - 1}\right)^2 + 1 = x - 1 + 1 = x$.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à oublier le domaine de $f^{-1}$. Elle est tentante parce que l'expression $x^2 + 1$ existe pour tout nombre réel, mais elle est fausse : la réciproque n'est définie que sur l'image de $f$, ici $[0,\,+\infty[$, car une racine carrée n'est jamais négative.
 :::
 
 :::

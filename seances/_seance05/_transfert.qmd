@@ -1,11 +1,10 @@
 <!-- TRANSFERT : appliquer les savoir-faire du socle à un contexte nouveau (sciences de la vie, données réelles sourcées).
-     T.1 = l'exercice « corrigé au milieu » : énoncé seul, SANS aides (la solution pas à pas est dans les slides).
      HIÉRARCHIE DES INDICES : 1 = théorie ; 2 = une QUESTION (pas la réponse) ; 3 = une ÉTAPE.
      Solutions des problèmes : les premières lignes disent ce qui est donné, ce qui est cherché, la relation du cours,
      et l'origine de chaque donnée qui ne figure pas directement dans l'énoncé.
      Numéro AUTOMATIQUE (catégorie Transfert -> T.1, T.2…). Faisable SANS calculatrice. -->
 
-::: {.callout-caution .exo title="Exercice|Transfert|3|O3"}
+::: {.callout-caution .exo title="Exercice|Transfert|3|O6"}
 La surface corporelle $S$ d'un patient, exprimée en m², sert à ajuster la dose de certains médicaments, notamment en chimiothérapie. La formule de Mosteller[^mosteller-t1] la calcule à partir de la taille $h$ du patient, en cm, et de sa masse $w$, en kg :
 $$S = \sqrt{\frac{h\,w}{3600}}.$$
 Un patient mesure $180$ cm.
@@ -17,8 +16,52 @@ Un patient mesure $180$ cm.
 (c) Écris la masse $w$ en fonction de la surface corporelle $S$ pour ce patient. Écris ensuite, sous la forme d'un intervalle, les valeurs de $S$ pour lesquelles cette expression a un sens dans le contexte.
 :::
 
-::: {.callout-note appearance="simple"}
-L'exercice **T.1** est résolu pas à pas, ensemble, pendant la séance : il n'a donc pas de coups de pouce. Cherche-le d'abord seul·e et repère l'endroit exact où tu bloques.
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Dilution : entrée, sortie et paramètres* pour (a), *Une fonction, deux types de questions* pour (b), et *Défaire une opération : fonction réciproque* ainsi que *Domaine mathématique vs. domaine pertinent* pour (c).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Quelle grandeur de la formule est fixée pour ce patient, et laquelle reste variable ?
+(b) Dans l'égalité $S = 2$, le nombre $2$ est-il l'entrée ou la sortie de la fonction ?
+(c) Quelle opération défait une racine carrée ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Remplace $h$ par $180$, puis simplifie la fraction $\dfrac{180}{3600}$ avant de remplacer $w$ par $45$.
+(b) Remplace $S$ par $2$ dans l'expression obtenue en (a), puis élève les deux membres au carré.
+(c) Élève au carré les deux membres de l'expression obtenue en (a) et isole $w$, puis écris la condition que doit vérifier une masse.
+
+## Solution
+
+**Données et relation.** On donne la formule de Mosteller, la taille $h = 180$ cm du patient et les unités : $S$ en m² et $w$ en kg. On cherche l'expression de $S$ en fonction de $w$, la surface corporelle pour une masse de $45$ kg, la masse qui correspond à une surface de $2$ m², puis l'expression de $w$ en fonction de $S$ et l'intervalle des valeurs de $S$ qui ont un sens. La relation utilisée est la formule de Mosteller : comme dans le cours, la masse $w$ est l'entrée, la surface $S$ est la sortie, et la taille $h$ est un paramètre que l'on fixe à $180$ cm.
+
+**Origine des données.** Toutes les valeurs utilisées figurent dans l'énoncé : aucune donnée n'est à chercher ailleurs.
+
+(a) On fixe le paramètre en remplaçant $h$ par $180$, puis on simplifie la fraction, car $\dfrac{180}{3600} = \dfrac{1}{20}$ :
+$$S(w) = \sqrt{\frac{180\,w}{3600}} = \sqrt{\frac{w}{20}}.$$
+Pour une masse de $45$ kg, l'entrée est connue, donc on évalue la fonction : $S(45) = \sqrt{\dfrac{45}{20}} = \sqrt{\dfrac{9}{4}} = \dfrac{3}{2} = 1{,}5$. Ce patient a donc une surface corporelle de $1{,}5$ m² s'il pèse $45$ kg.
+
+(b) La surface corporelle $S = 2$ m² est la sortie, et on cherche l'entrée $w$ : on résout l'équation $\sqrt{\dfrac{w}{20}} = 2$. Les deux membres sont positifs, donc on peut les élever au carré sans changer les solutions : $\dfrac{w}{20} = 4$. On multiplie les deux membres par $20$ : $w = 80$. Vérification : $S(80) = \sqrt{\dfrac{80}{20}} = \sqrt{4} = 2$, ce qui redonne la surface demandée. La masse correspondante est donc de $80$ kg.
+
+(c) On isole $w$ une seule fois, pour toutes les valeurs de $S$. On élève au carré les deux membres de $S = \sqrt{\dfrac{w}{20}}$, ce qui donne $S^2 = \dfrac{w}{20}$, puis on multiplie par $20$ : $w = 20\,S^2$. Dans le contexte, $w$ est une masse, donc $w > 0$, et $S$, racine carrée du nombre strictement positif $\dfrac{w}{20}$, est strictement positive. Inversement, toute valeur $S > 0$ donne la masse $w = 20\,S^2 > 0$. Les valeurs de $S$ qui ont un sens forment donc l'intervalle $]0,\,+\infty[$, en m². Contrôle : $20 \cdot 1{,}5^2 = 20 \cdot 2{,}25 = 45$, ce qui redonne la masse de la question (a).
+
+## Piège
+
+En (b), une erreur fréquente consiste à écrire $\dfrac{w}{20} = 2$ et à trouver $40$ kg. Elle est tentante parce qu'on remplace $S$ par $2$ sans voir la racine carrée, mais elle est fausse : pour défaire la racine, il faut élever $2$ au carré. La vérification le montre, car $S(40) = \sqrt{2}$, qui n'est pas égal à $2$.
+
+En (a), une autre erreur consiste à oublier la racine carrée et à écrire $S(45) = \dfrac{45}{20} = 2{,}25$ m². Elle est tentante parce que la fraction se simplifie facilement, mais elle est fausse : la formule de Mosteller prend la racine carrée de ce quotient.
+
+En (c), une dernière erreur consiste à accepter toutes les valeurs de $S$, parce que l'expression $20\,S^2$ existe pour tout nombre réel. Elle est tentante parce que la formule ne contient ni dénominateur ni racine, mais elle est fausse : $S$ est une surface, obtenue comme racine carrée, et elle ne peut pas être négative ou nulle.
+
+:::
 :::
 
 ::: {.callout-caution .exo title="Exercice|Transfert|2|O1"}
@@ -87,7 +130,7 @@ Une autre erreur consiste à écrire $C(V) = \dfrac{4{,}5}{500 + V}$ sans conver
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Transfert|3|O3"}
+::: {.callout-caution .exo title="Exercice|Transfert|3|O1"}
 La clairance de la créatinine estime la capacité des reins à filtrer le sang. Pour un homme, la formule de Cockcroft et Gault[^cg-t3] l'estime par
 $$\mathit{ClCr} = \frac{(140 - a)\,w}{72\,s},$$
 où $a$ est l'âge en années, $w$ la masse en kg et $s$ la concentration de créatinine dans le sang en mg/dL ; la clairance $\mathit{ClCr}$ est alors exprimée en mL/min. Le tableau suivant donne les catégories de la maladie rénale chronique[^kdigo-t3] selon le débit de filtration glomérulaire (DFG), en mL/min. Pour simplifier, on suppose que le DFG est égal à la clairance estimée.
@@ -107,8 +150,7 @@ Un patient masculin de $60$ ans pèse $81$ kg. Pour ce patient, la clairance est
 (a) Calcule le nombre $c$ tel que $\mathit{ClCr}(s) = \dfrac{c}{s}$ pour ce patient.
 (b) Calcule $\mathit{ClCr}(1{,}5)$ et $\mathit{ClCr}(3)$, en mL/min, puis donne la catégorie de ce patient dans chacun des deux cas.
 (c) Écris sous la forme d'un intervalle l'ensemble des valeurs de $s$, en mg/dL, pour lesquelles le patient est dans la catégorie G3a ou dans la catégorie G3b.
-(d) Écris une phrase qui dit ce que devient la clairance lorsque la concentration de créatinine double.
-(e) Écris $s$ en fonction de la clairance $\mathit{ClCr}$ pour ce patient, puis calcule la concentration de créatinine qui correspond à une clairance de $45$ mL/min.
+(d) Écris $s$ en fonction de la clairance $\mathit{ClCr}$ pour ce patient, puis calcule la concentration de créatinine qui correspond à une clairance de $45$ mL/min.
 :::
 
 ::: {.aides}
@@ -116,7 +158,7 @@ Un patient masculin de $60$ ans pèse $81$ kg. Pour ce patient, la clairance est
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Dilution : entrée, sortie et paramètres* pour (a), *Une fonction, deux types de questions* pour (b) et (d), *Préimage* pour (c), et *Défaire une opération : fonction réciproque* ainsi que *Réciproque : vision graphique* pour (e).
+Retourne à la théorie du cours : *Dilution : entrée, sortie et paramètres* pour (a), *Une fonction, deux types de questions* pour (b), *Préimage* pour (c), et *Défaire une opération : fonction réciproque* ainsi que *Réciproque : vision graphique* pour (d).
 
 ## Indice 2
 
@@ -125,8 +167,7 @@ Retourne à la théorie du cours : *Dilution : entrée, sortie et paramètres* p
 (a) Quelles quantités de la formule sont connues pour ce patient, et lesquelles restent des variables ?
 (b) Dans $\mathit{ClCr}(1{,}5)$, le nombre $1{,}5$ est-il l'entrée ou la sortie ? Dans quelle colonne du tableau des catégories se trouve la valeur obtenue ?
 (c) Quelles valeurs de la clairance correspondent aux deux catégories réunies, et la clairance augmente-t-elle ou diminue-t-elle quand $s$ augmente ?
-(d) Que devient le dénominateur de la formule quand $s$ double ?
-(e) Quand on connaît la clairance, comment retrouve-t-on la créatinine ?
+(d) Quand on connaît la clairance, comment retrouve-t-on la créatinine ?
 
 ## Indice 3
 
@@ -135,8 +176,7 @@ Retourne à la théorie du cours : *Dilution : entrée, sortie et paramètres* p
 (a) Remplace $a$ par $60$ et $w$ par $81$, puis simplifie le quotient $\dfrac{(140 - 60) \cdot 81}{72}$.
 (b) Remplace $s$ par $1{,}5$, puis par $3$, dans l'expression trouvée en (a), puis compare chaque résultat aux colonnes du tableau des catégories.
 (c) Traduis « catégorie G3a ou G3b » par une double inégalité portant sur $\mathit{ClCr}(s)$, puis multiplie chaque membre par $s$, qui est strictement positif.
-(d) Calcule $\mathit{ClCr}(2s)$ et compare-la à $\mathit{ClCr}(s)$.
-(e) Pose $C = \dfrac{c}{s}$, isole $s$, puis remplace $C$ par $45$.
+(d) Pose $C = \dfrac{c}{s}$, isole $s$, puis remplace $C$ par $45$.
 
 ## Solution
 
@@ -145,19 +185,16 @@ Retourne à la théorie du cours : *Dilution : entrée, sortie et paramètres* p
 **Origine des données qui ne figurent pas directement dans l'énoncé.** Le coefficient $c$ n'est pas donné : il se calcule à partir de $a$ et $w$ (calcul préalable). Les seuils $30$ et $60$ de la question (c) se lisent dans le tableau : la catégorie G3b commence à $30$ mL/min et la catégorie G3a se termine juste avant $60$ mL/min (lecture dans le tableau).
 
 (a) On remplace $a$ par $60$ et $w$ par $81$ : $\mathit{ClCr}(s) = \dfrac{(140 - 60) \cdot 81}{72\,s} = \dfrac{80 \cdot 81}{72\,s}$. On simplifie le quotient : $\dfrac{81}{72} = \dfrac{9}{8}$, donc $80 \cdot \dfrac{9}{8} = 90$. On obtient $\mathit{ClCr}(s) = \dfrac{90}{s}$ et $c = 90$.
-(b) La concentration $s$ est connue, donc on évalue la fonction. $\mathit{ClCr}(1{,}5) = \dfrac{90}{1{,}5} = 60$ mL/min : cette valeur est dans la colonne G2, « de $60$ à moins de $90$ », donc le patient est en catégorie G2. $\mathit{ClCr}(3) = \dfrac{90}{3} = 30$ mL/min : cette valeur est dans la colonne G3b, « de $30$ à moins de $45$ », donc le patient est en catégorie G3b.
+(b) La concentration $s$ est connue, donc on évalue la fonction. $\mathit{ClCr}(1{,}5) = \dfrac{90}{1{,}5} = 60$ mL/min : cette valeur est dans la colonne G2, « de $60$ à moins de $90$ », donc le patient est en catégorie G2. $\mathit{ClCr}(3) = \dfrac{90}{3} = 30$ mL/min : cette valeur est dans la colonne G3b, « de $30$ à moins de $45$ », donc le patient est en catégorie G3b. Le passage de $s = 1{,}5$ à $s = 3$, qui double la concentration de créatinine, divise donc la clairance par deux.
 (c) Les catégories G3a et G3b réunies correspondent aux clairances de $30$ inclus à $60$ exclu, donc à la condition $30 \leq \dfrac{90}{s} < 60$. La concentration $s$ est strictement positive, donc on peut multiplier chaque membre par $s$ sans changer le sens des inégalités. L'inégalité $30 \leq \dfrac{90}{s}$ donne $30\,s \leq 90$, soit $s \leq 3$. L'inégalité $\dfrac{90}{s} < 60$ donne $90 < 60\,s$, soit $s > 1{,}5$. L'ensemble cherché est donc $\mathit{ClCr}^{\leftarrow}([30,\,60[) = ]1{,}5\,;\,3]$ mg/dL. La clairance diminue quand $s$ augmente, donc la borne haute $60$ de la clairance correspond à la borne basse $1{,}5$ de $s$, exclue comme $60$, et la borne basse $30$ de la clairance correspond à la borne haute $3$ de $s$, incluse comme $30$. Sur le graphe, la partie de la courbe comprise entre les tirets $30$ et $60$ correspond bien aux abscisses entre $1{,}5$ et $3$.
 
 ![](img/t-clairance-sol.svg){fig-alt="Les points (1,5 ; 60) et (3 ; 30) sur la courbe, avec leurs projections sur les axes" width="10.7cm" fig-align="center"}
 
-(d) On calcule $\mathit{ClCr}(2s) = \dfrac{90}{2s} = \dfrac{1}{2} \cdot \dfrac{90}{s} = \dfrac{\mathit{ClCr}(s)}{2}$. Lorsque la concentration de créatinine double, la clairance est donc divisée par deux. Les résultats de (b) le confirment : le passage de $s = 1{,}5$ à $s = 3$ fait passer la clairance de $60$ à $30$ mL/min.
-(e) La fonction $\mathit{ClCr}$ est strictement décroissante sur $]0,\,+\infty[$, donc deux concentrations différentes donnent deux clairances différentes : elle est injective et admet une réciproque. On pose $C = \dfrac{90}{s}$ et on isole $s$ : $s = \dfrac{90}{C}$, pour toute clairance $C$ strictement positive. La concentration de créatinine s'écrit donc $s = \dfrac{90}{\mathit{ClCr}}$. Pour une clairance de $45$ mL/min, on obtient $s = \dfrac{90}{45} = 2$ mg/dL. Contrôle : $\mathit{ClCr}(2) = \dfrac{90}{2} = 45$ mL/min.
+(d) La fonction $\mathit{ClCr}$ est strictement décroissante sur $]0,\,+\infty[$, donc deux concentrations différentes donnent deux clairances différentes : elle est injective et admet une réciproque. On pose $C = \dfrac{90}{s}$ et on isole $s$ : $s = \dfrac{90}{C}$, pour toute clairance $C$ strictement positive. La concentration de créatinine s'écrit donc $s = \dfrac{90}{\mathit{ClCr}}$. Pour une clairance de $45$ mL/min, on obtient $s = \dfrac{90}{45} = 2$ mg/dL. Contrôle : $\mathit{ClCr}(2) = \dfrac{90}{2} = 45$ mL/min.
 
 ## Piège
 
 En (c), une erreur fréquente consiste à recopier l'intervalle de la clairance, $[30,\,60[$, en le prenant pour l'intervalle de $s$. Elle est tentante parce que les mêmes nombres reviennent, mais elle est fausse : la fonction est décroissante, donc l'ordre des bornes s'inverse. On obtient $]1{,}5\,;\,3]$ et non $[1{,}5\,;\,3[$ : la borne incluse change de côté.
-
-En (d), une autre erreur consiste à croire que doubler $s$ double la clairance. Elle est tentante parce que, dans une relation de proportionnalité, doubler l'entrée double la sortie, mais elle est fausse : $s$ est au dénominateur, donc la clairance est divisée par deux.
 
 :::
 :::

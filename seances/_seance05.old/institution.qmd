@@ -1,0 +1,37 @@
+---
+title: "Institutionnalisation — méthode & auto-évaluation"
+subtitle: "Séance 5 · ce qu'on retient"
+---
+
+## La méthode qu'on dégage ensemble
+
+En fin de séance, on formalise deux méthodes.
+
+La première est la méthode pour **retrouver l'entrée d'une fonction à partir de sa sortie** :
+
+- **identifier** la sortie donnée et l'entrée cherchée, puis écrire la formule de la fonction ;
+- **remplacer** la sortie par sa valeur dans la formule, et **résoudre** l'équation obtenue ;
+- **vérifier** que chaque solution appartient au domaine, ou au domaine pratique, puis qu'elle redonne bien la sortie de départ ; s'il reste plusieurs solutions, la fonction n'a pas de réciproque sans restreindre son domaine ;
+- **inverser** la formule, quand l'entrée cherchée change d'une donnée à l'autre, pour obtenir la fonction réciproque.
+
+La seconde est la méthode pour **étudier le signe d'une fonction** :
+
+- **déterminer** le domaine, puis **résoudre** $f(x)=0$ pour trouver les racines ;
+- **placer** sur une droite les racines et les valeurs exclues du domaine, puis **évaluer** le signe de $f$ en un point de chaque intervalle ;
+- **conclure** en indiquant, intervalle par intervalle, où $f$ est positive et où elle est négative.
+
+Cette méthode rejoint ta **[boîte à outils](../methode.qmd)** — elle resservira à chaque séance. Tu y
+trouveras le corrigé de quelques méthodes issues des exercices de la séance 5.
+
+## Auto-évaluation — coche ce que tu sais faire
+
+Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **objectifs** de la séance.
+
+- [ ] **O1** — ……… .
+- [ ] **O2** — ……… .
+- [ ] **O3** — ……… .
+
+::: {.callout-important appearance="simple"}
+Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la
+**remédiation** (une séance chaque semaine pour reprendre les bases).
+:::

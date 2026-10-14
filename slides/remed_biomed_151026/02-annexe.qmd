@@ -1,0 +1,563 @@
+---
+title: "Remédiation IMSV biomed — Annexe"
+subtitle: "Corrections de réserve et solutions rédigées"
+description: "Questions de réserve du QCM, énoncés et solutions des exercices de renforcement (logique et trigonométrie des vecteurs)"
+author: "Quentin Lambotte · FMPB · UMONS"
+date: 10/15/2026
+date-format: "D MMMM YYYY"
+lang: fr
+format:
+  revealjs:
+    theme: [default, ../seance01/theme.scss]
+    slide-number: c/t
+    show-slide-number: all
+    width: 1280
+    height: 800
+    margin: 0.06
+    center: false
+    transition: fade
+    transition-speed: fast
+    hash: true
+    history: false
+    html-math-method: katex
+    embed-resources: true
+    fig-align: center
+    menu:
+      side: right
+    include-after-body: ../seance01/annotate.html
+---
+
+
+
+# Questions de réserve {.divider background-color="#14304a"}
+
+
+<style>
+.qrow{display:flex;gap:.8em;border-bottom:1px solid #e5e9ef;padding:.28em .2em;font-size:.6em;line-height:1.35;align-items:flex-start}
+.qrow .qans{flex:0 0 36%;font-weight:600}
+.qrow .qwhy{flex:1 1 auto}
+.qrow .qans p,.qrow .qwhy p{margin:0}
+.qrow.ok{background:#f2f7ff}
+.qrow.ok .qans::before{content:"✓ ";color:#276a2e;font-weight:700}
+.qstem{font-size:.78em}
+.reveal table.deroule a{font-weight:600}
+.back{margin-top:.5em}
+.qfoot{display:flex;gap:1.2em;align-items:center;margin-top:.45em;font-size:.55em}
+.qfoot .back-btn{font-size:1em}
+.qfoot .muted{color:#5a6b7b}
+.back-btn{display:inline-block;font-size:.5em;font-weight:600;padding:.3em .8em;border:1.5px solid #1f5fbf;border-radius:.5em;color:#1f5fbf;background:#fff}
+.back-btn:hover{background:#1f5fbf;color:#fff;text-decoration:none!important}
+.exo-foot{margin-top:.8em;font-size:.55em}
+.sol{font-size:.8em}
+.sol.long{font-size:.68em}
+.sol.xlong{font-size:.6em}
+.tv table{margin:.3em auto;border-collapse:collapse;font-size:.8em}
+.tv th,.tv td{border:1px solid #cfd8e3;padding:.22em .9em;text-align:center}
+.tv th{background:#f4f7fa;color:#14304a}
+.tv .f{color:#b5381f;font-weight:700}
+</style>
+
+
+## Réserve 1 · Condition non remplie, conclusion vraie {#q-R1}
+
+::: {.qstem}
+Engagement de la SNCB : « Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » Un train arrive avec 20 minutes de retard et, par geste commercial, la SNCB rembourse 100 % du trajet. L'engagement est-il rompu ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+Non : la condition n'est pas remplie, l'engagement ne s'applique pas.
+:::
+::: qwhy
+$\alpha$ est faux et $\beta$ est vrai : c'est la ligne 3 de la table, où l'implication est vraie.
+:::
+:::::
+
+::::: qrow
+::: qans
+Oui : la SNCB verse une compensation alors que la condition n'est pas remplie.
+:::
+::: qwhy
+Verser plus que prévu ne rompt rien. Seule la ligne « $\alpha$ vrai, $\beta$ faux » rompt l'engagement.
+:::
+:::::
+
+::::: qrow
+::: qans
+Non, mais seulement parce que la compensation a été versée.
+:::
+::: qwhy
+La compensation n'intervient pas dans le raisonnement : avec $\alpha$ faux, l'engagement est tenu même sans compensation (ligne 4).
+:::
+:::::
+
+::::: qrow
+::: qans
+On ne peut pas le savoir sans connaître la cause du retard.
+:::
+::: qwhy
+La valeur de l'implication se lit sur les valeurs de $\alpha$ et de $\beta$ : ici $\alpha$ est faux, l'implication est vraie.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/ex-R2">R.2(c)</a> · <a href="01-remediation.html#/ex-R10">R.10(a)</a></span></div>
+
+::: {.footer-note}
+Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.
+:::
+
+## Réserve 2 · Écriture équivalente {#q-R2}
+
+::: {.qstem}
+Laquelle de ces propositions est équivalente à $\alpha \Rightarrow \beta$ ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$\lnot\alpha \lor \beta$
+:::
+::: qwhy
+Colonne V, F, V, V : vraie si la condition n'est pas remplie ou si la promesse est exécutée.
+:::
+:::::
+
+::::: qrow
+::: qans
+$\alpha \lor \lnot\beta$
+:::
+::: qwhy
+Colonne V, V, F, V : c'est la colonne de $\beta \Rightarrow \alpha$, la réciproque.
+:::
+:::::
+
+::::: qrow
+::: qans
+$\lnot\alpha \land \beta$
+:::
+::: qwhy
+Colonne F, F, V, F : vraie seulement quand $\alpha$ est faux et $\beta$ vrai. Or l'implication est aussi vraie quand $\alpha$ et $\beta$ sont vrais, ou quand $\alpha$ et $\beta$ sont faux.
+:::
+:::::
+
+::::: qrow
+::: qans
+$\alpha \land \lnot\beta$
+:::
+::: qwhy
+Colonne F, V, F, F : c'est la négation de $\alpha \Rightarrow \beta$, la rupture.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/ex-R10">R.10(a)</a></span></div>
+
+## Réserve 3 · Contraposée {#q-R3}
+
+::: {.qstem}
+Critère diagnostique : « Si l'HbA1c d'une personne est d'au moins 6,5 %, alors cette personne a un diabète. » Quelle est la contraposée de cette implication ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+Si une personne n'a pas de diabète, alors son HbA1c est inférieure à 6,5 %.
+:::
+::: qwhy
+On nie les deux propositions **et** on les échange : $\lnot\beta \Rightarrow \lnot\alpha$.
+:::
+:::::
+
+::::: qrow
+::: qans
+Si l'HbA1c est inférieure à 6,5 %, alors la personne n'a pas de diabète.
+:::
+::: qwhy
+Les deux propositions sont niées, mais pas échangées : $\lnot\alpha \Rightarrow \lnot\beta$.
+:::
+:::::
+
+::::: qrow
+::: qans
+Si une personne a un diabète, alors son HbA1c est d'au moins 6,5 %.
+:::
+::: qwhy
+On a échangé sans nier : c'est la réciproque $\beta \Rightarrow \alpha$.
+:::
+:::::
+
+::::: qrow
+::: qans
+Si une personne n'a pas de diabète, alors son HbA1c est d'au moins 6,5 %.
+:::
+::: qwhy
+Après l'échange, seule la nouvelle condition a été niée : $\lnot\beta \Rightarrow \alpha$ n'est pas la contraposée, qui s'écrit $\lnot\beta \Rightarrow \lnot\alpha$.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/ex-R6">R.6</a> · <a href="01-remediation.html#/ex-R14">R.14(a)</a></span></div>
+
+::: {.footer-note}
+Source : Manuel MSD, version professionnelle, « Revue générale du diabète sucré », msdmanuals.com (consulté le 13 octobre 2026). Critère simplifié.
+:::
+
+## Réserve 4 · Négation {#q-R4}
+
+::: {.qstem}
+Critère diagnostique : « Si la glycémie à jeun d'une personne est d'au moins 7,0 mmol/L, alors cette personne a un diabète. » Quelle est la négation de cette implication ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+La glycémie à jeun est d'au moins 7,0 mmol/L et la personne n'a pas de diabète.
+:::
+::: qwhy
+$\lnot(\alpha \Rightarrow \beta) \iff \alpha \land \lnot\beta$ : la négation décrit la rupture du critère.
+:::
+:::::
+
+::::: qrow
+::: qans
+Si la glycémie à jeun est inférieure à 7,0 mmol/L, alors la personne n'a pas de diabète.
+:::
+::: qwhy
+Les deux propositions sont niées sans que l'ordre change : on obtient $\lnot\alpha \Rightarrow \lnot\beta$, une autre implication, pas la rupture.
+:::
+:::::
+
+::::: qrow
+::: qans
+Si la glycémie à jeun est d'au moins 7,0 mmol/L, alors la personne n'a pas de diabète.
+:::
+::: qwhy
+Seule la conclusion est niée et l'implication est conservée : c'est un autre critère, pas la rupture de celui-ci.
+:::
+:::::
+
+::::: qrow
+::: qans
+La glycémie à jeun est inférieure à 7,0 mmol/L et la personne a un diabète.
+:::
+::: qwhy
+La condition est niée alors qu'elle doit rester vraie : la rupture exige $\alpha$ vrai.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/ex-R10">R.10(b)</a></span></div>
+
+::: {.footer-note}
+Source : Manuel MSD, version professionnelle, « Revue générale du diabète sucré », msdmanuals.com (consulté le 13 octobre 2026). Critère simplifié.
+:::
+
+
+## Réserve 5 · Suffisant, nécessaire {#q-R5}
+
+::: {.qstem}
+Critère diagnostique : « Si la glycémie à jeun d'une personne est d'au moins 7,0 mmol/L, alors cette personne a un diabète. » Une glycémie à jeun d'au moins 7,0 mmol/L est…
+:::
+
+::::: {.qrow .ok}
+::: qans
+une condition suffisante, mais pas nécessaire, pour retenir un diabète.
+:::
+::: qwhy
+Elle suffit ($\alpha \Rightarrow \beta$). Elle n'est pas nécessaire : une HbA1c d'au moins 6,5 % suffit aussi, donc $\beta \Rightarrow \alpha$ n'est pas affirmé.
+:::
+:::::
+
+::::: qrow
+::: qans
+une condition suffisante et nécessaire pour retenir un diabète.
+:::
+::: qwhy
+« Nécessaire » demanderait la réciproque $\beta \Rightarrow \alpha$ : un diabète retenu avec une HbA1c élevée seule la contredit.
+:::
+:::::
+
+::::: qrow
+::: qans
+une condition nécessaire, mais pas suffisante, pour retenir un diabète.
+:::
+::: qwhy
+Le sens est inversé : quand la condition est remplie, le critère conclut au diabète. Elle suffit.
+:::
+:::::
+
+::::: qrow
+::: qans
+ni suffisante ni nécessaire pour retenir un diabète.
+:::
+::: qwhy
+Le critère affirme précisément $\alpha \Rightarrow \beta$ : la condition est suffisante.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/ex-R6">R.6</a> (réciproque)</span></div>
+
+::: {.footer-note}
+Source : Manuel MSD, version professionnelle, « Revue générale du diabète sucré », msdmanuals.com (consulté le 13 octobre 2026). Critère simplifié.
+:::
+
+
+# Solutions des exercices de renforcement {.divider background-color="#14304a"}
+
+## Énoncé R.2 <span class="obj">O2</span> {#st-R2}
+
+Soient $A=\{a,b,c\}$ et $B=\{c,d\}$.
+
+\(c) Vrai ou faux : $a\in A$ ; $\{a\}\in A$ ; $\{a\}\subseteq A$ ; $\varnothing\subseteq A$ ; $c\in A\cap B$.
+
+## Solution R.2 {#sol-R2}
+
+::: {.sol .long}
+$a\in A$ : vrai. L'élément $a$ appartient à $A$.
+
+$\{a\}\in A$ : faux. $\{a\}$ est un ensemble ; les éléments de $A$ sont $a$, $b$ et $c$.
+
+$\{a\}\subseteq A$ : vrai. $\{a\}\subseteq A$ signifie $\forall\, x,\ (x\in\{a\} \Rightarrow x\in A)$. Le seul $x$ tel que $x\in\{a\}$ est $a$, et $a\in A$.
+
+$\varnothing\subseteq A$ : vrai. $\varnothing\subseteq A$ signifie $\forall\, x,\ (x\in\varnothing \Rightarrow x\in A)$. Pour tout $x$, la prémisse $x\in\varnothing$ est fausse : l'implication est vraie pour tout $x$.
+
+$c\in A\cap B$ : vrai. $A\cap B=\{c\}$.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a></div>
+
+## Énoncé R.3 <span class="obj">O2</span> {#st-R3}
+
+Voici la table de vérité de deux propositions $a$ et $b$ et d'une proposition cachée « ? ». Parmi les propositions proposées, laquelle correspond à cette colonne ?
+
+| $a$ | $b$ | ? |
+|:--:|:--:|:--:|
+| V | V | V |
+| V | F | V |
+| F | V | F |
+| F | F | V |
+
+Choix : (A) $a \Rightarrow b$ ; (B) $b \Rightarrow a$ ; (C) $a \land b$ ; (D) $a \lor b$.
+
+## Solution R.3 {#sol-R3}
+
+::: {.sol .long}
+La colonne « ? » vaut F sur la seule ligne $a=F$, $b=V$.
+
+Une implication $x \Rightarrow y$ n'est fausse que si $x$ est vrai et $y$ faux. Ici $x=b$ (vrai) et $y=a$ (faux), donc « ? » $= b \Rightarrow a$.
+
+Vérification sur les autres lignes : en $(V,V)$, $b\Rightarrow a$ vaut V ; en $(V,F)$, $b$ est faux donc $b\Rightarrow a$ vaut V ; en $(F,F)$, $b$ est faux donc $b\Rightarrow a$ vaut V.
+
+Les autres choix sont exclus : (A) vaut V en $(F,V)$ alors que « ? » vaut F ; (C) vaut F en $(V,F)$ alors que « ? » vaut V ; (D) vaut F en $(F,F)$ alors que « ? » vaut V.
+
+Réponse : (B).
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a></div>
+
+## Énoncé R.6 <span class="obj">O2</span> {#st-R6}
+
+Soit $\alpha$ l'implication : « si $n$ est multiple de $6$, alors $n$ est multiple de $3$ ».
+
+\(a) Écrire la **réciproque** et la **contraposée** de $\alpha$.
+
+\(b) Dire lesquelles des trois sont vraies, par un contre-exemple si nécessaire.
+
+## Solution R.6 {#sol-R6}
+
+::: {.sol .long}
+\(a) Réciproque : « si $n$ est multiple de $3$, alors $n$ est multiple de $6$ ».
+
+Contraposée : « si $n$ n'est pas multiple de $3$, alors $n$ n'est pas multiple de $6$ ».
+
+\(b) $\alpha$ est vraie : si $n=6k$, alors $n=3\cdot 2k$ est multiple de $3$.
+
+La réciproque est fausse : $n=3$ est multiple de $3$ et n'est pas multiple de $6$.
+
+La contraposée est vraie : elle serait fausse pour un $n$ multiple de $6$ qui n'est pas multiple de $3$, et un tel $n$ n'existe pas puisque $\alpha$ est vraie. Elle est équivalente à $\alpha$.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a></div>
+
+## Énoncé R.8 <span class="obj">O2</span> {#st-R8}
+
+Pour chaque proposition : dire si elle est **vraie** ou **fausse**, écrire sa **négation**, puis l'évaluer.
+
+\(a) $\forall\, n\in\mathbb{N},\ n+1 > n$.
+
+\(b) $\exists\, x\in\mathbb{R},\ x^2 = 2$.
+
+\(c) $\forall\, x\in\mathbb{R},\ x^2 \ne x$.
+
+## Solution R.8 {#sol-R8}
+
+::: {.sol .long}
+\(a) Vraie : pour tout $n\in\mathbb{N}$, $n+1>n$. Négation : $\exists\, n\in\mathbb{N},\ n+1\le n$. Elle est fausse.
+
+\(b) Vraie : $x=\sqrt2$ convient. Négation : $\forall\, x\in\mathbb{R},\ x^2\ne 2$. Elle est fausse.
+
+\(c) Fausse : $x=0$ donne $0^2=0$. Négation : $\exists\, x\in\mathbb{R},\ x^2=x$. Elle est vraie : $x=0$ convient.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a></div>
+
+## Énoncé R.9 <span class="obj">O2</span> {#st-R9}
+
+Voici la table de vérité de $a$, $b$ et d'une proposition cachée « ? ». Parmi les choix, laquelle a **exactement** cette colonne ?
+
+| $a$ | $b$ | ? |
+|:--:|:--:|:--:|
+| V | V | V |
+| V | F | F |
+| F | V | V |
+| F | F | V |
+
+Choix : (A) $a\Rightarrow b$ ; (B) $b\Rightarrow a$ ; (C) $a\lor b$ ; (D) $a\land b$.
+
+## Solution R.9 {#sol-R9}
+
+::: {.sol .long}
+La colonne « ? » vaut F sur la seule ligne $a=V$, $b=F$ : la prémisse $a$ est vraie et la conclusion $b$ est fausse. Donc « ? » $= a \Rightarrow b$.
+
+Vérification sur les autres lignes : en $(V,V)$, la conclusion est vraie, donc V ; en $(F,V)$ et en $(F,F)$, la prémisse est fausse, donc V.
+
+Les autres choix sont exclus : (B) vaut V en $(V,F)$ alors que « ? » vaut F ; (C) vaut V en $(V,F)$ alors que « ? » vaut F ; (D) vaut F en $(F,V)$ alors que « ? » vaut V.
+
+Réponse : (A).
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a></div>
+
+## Énoncé R.10 <span class="obj">O2</span> {#st-R10}
+
+On veut relier l'implication aux connecteurs $\lnot$, $\lor$, $\land$.
+
+\(a) Dresser la table de vérité de $\alpha\Rightarrow\beta$ et celle de $\lnot\alpha\lor\beta$, et constater qu'elles coïncident.
+
+\(b) En déduire une écriture de $\lnot(\alpha\Rightarrow\beta)$ *sans* le symbole $\Rightarrow$.
+
+## Solution R.10 {#sol-R10}
+
+::: {.sol .long}
+\(a)
+
+::: {.tv}
+| $\alpha$ | $\beta$ | $\alpha\Rightarrow\beta$ | $\lnot\alpha$ | $\lnot\alpha\lor\beta$ |
+|:--:|:--:|:--:|:--:|:--:|
+| V | V | V | F | V |
+| V | F | F | F | F |
+| F | V | V | V | V |
+| F | F | V | V | V |
+:::
+
+Les colonnes de $\alpha\Rightarrow\beta$ et de $\lnot\alpha\lor\beta$ sont identiques : $\alpha\Rightarrow\beta \iff \lnot\alpha\lor\beta$.
+
+\(b) $\lnot(\alpha\Rightarrow\beta) \iff \lnot(\lnot\alpha\lor\beta) \iff \lnot\lnot\alpha\land\lnot\beta \iff \alpha\land\lnot\beta$ (loi de De Morgan, puis $\lnot\lnot\alpha \iff \alpha$).
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a></div>
+
+## Énoncé R.14 <span class="obj">O2</span> {#st-R14}
+
+À l'aide de tables de vérité, dire si les équivalences sont vraies (les deux membres de l'équivalence ont la même colonne dans la table de vérité) ou fausses (une des lignes de la table de vérité distingue les deux membres).
+
+\(a) $(\alpha\Rightarrow\beta)\ \Leftrightarrow\ (\lnot\beta\Rightarrow\lnot\alpha)$
+
+\(b) $(\alpha\Rightarrow\beta)\ \Leftrightarrow\ (\beta\Rightarrow\alpha)$
+
+## Solution R.14 {#sol-R14}
+
+::: {.sol .xlong}
+\(a) Vraie.
+
+::: {.tv}
+| $\alpha$ | $\beta$ | $\lnot\alpha$ | $\lnot\beta$ | $\alpha\Rightarrow\beta$ | $\lnot\beta\Rightarrow\lnot\alpha$ |
+|:--:|:--:|:--:|:--:|:--:|:--:|
+| V | V | F | F | V | V |
+| V | F | F | V | F | F |
+| F | V | V | F | V | V |
+| F | F | V | V | V | V |
+:::
+
+Les deux dernières colonnes sont identiques sur les quatre lignes : l'équivalence est vraie.
+
+\(b) Fausse.
+
+::: {.tv}
+| $\alpha$ | $\beta$ | $\alpha\Rightarrow\beta$ | $\beta\Rightarrow\alpha$ |
+|:--:|:--:|:--:|:--:|
+| V | V | V | V |
+| V | F | F | V |
+| F | V | V | F |
+| F | F | V | V |
+:::
+
+Les deux dernières colonnes diffèrent aux lignes 2 et 3 : l'équivalence est fausse.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a></div>
+
+
+# Solutions — trigonométrie des vecteurs (séance 4) {.divider background-color="#14304a"}
+
+## Énoncé R.5(d) — séance 4 <span class="obj">O2</span> {#st-s4-R5}
+
+Un courant de $0{,}3$ m/s, parallèle aux rives, entraîne un poisson. On prend l'axe des $x$ dans le sens du courant et l'axe des $y$ vers l'autre rive.
+
+Un poisson nage à $0{,}6$ m/s par rapport à l'eau et veut arriver **juste en face** de son point de départ. Dans quelle direction doit-il nager ? On donnera l'angle avec la perpendiculaire aux rives.
+
+## Solution R.5(d) — séance 4 {#sol-s4-R5}
+
+::: {.sol .long}
+Soit $\alpha \in [0°, 90°[$ l'angle entre la direction de nage et la perpendiculaire aux rives, la nage étant dirigée vers l'amont. La vitesse de nage est $0{,}6\,(-\sin\alpha,\ \cos\alpha)$ et celle du courant est $(0{,}3,\ 0)$.
+
+Arriver juste en face signifie que la composante selon $x$ de la vitesse résultante est nulle :
+$$-0{,}6\sin\alpha + 0{,}3 = 0, \quad\text{donc}\quad \sin\alpha = \frac{0{,}3}{0{,}6} = \frac12.$$
+
+Donc $\alpha = 30°$ : le poisson doit nager en remontant le courant, à $30°$ de la perpendiculaire aux rives.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-trig">← Exercices de trigonométrie</a></div>
+
+## Énoncé R.6 — séance 4 <span class="obj">O3</span> {#st-s4-R6}
+
+\(a) Une vitesse de norme $10$ m/s fait un angle de $45°$ avec l'axe des $x$. Donner ses coordonnées.
+
+\(b) Une force de norme $6$ N fait un angle de $240°$ avec l'axe des $x$. Donner ses coordonnées.
+
+\(c) Donner la norme de $\vec w = (\sqrt3, -1)$ et l'angle qu'il fait avec l'axe des $x$.
+
+## Solution R.6 — séance 4 {#sol-s4-R6}
+
+::: {.sol .long}
+\(a) $10\,(\cos 45°,\ \sin 45°) = 10\left(\dfrac{\sqrt2}{2},\ \dfrac{\sqrt2}{2}\right) = \left(5\sqrt2,\ 5\sqrt2\right)$ m/s.
+
+\(b) $240° = 180° + 60°$ : troisième quadrant, angle aigu $60°$ avec l'axe des $x$. Le cosinus et le sinus sont négatifs : $\cos 240° = -\dfrac12$ et $\sin 240° = -\dfrac{\sqrt3}{2}$. La force vaut $6\left(-\dfrac12,\ -\dfrac{\sqrt3}{2}\right) = \left(-3,\ -3\sqrt3\right)$ N.
+
+\(c) $\left\Vert \vec w \right\Vert = \sqrt{3 + 1} = 2$. Donc $\cos\theta = \dfrac{\sqrt3}{2}$ et $\sin\theta = -\dfrac12$ : quatrième quadrant, angle aigu $30°$, donc $\theta = 360° - 30° = 330°$ (ou $-30°$).
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-trig">← Exercices de trigonométrie</a></div>
+
+## Énoncé R.7 — séance 4 <span class="obj">O3</span> {#st-s4-R7}
+
+Sans calculatrice, donner le quadrant, $\tan\theta$ et l'angle $\theta \in [0°, 360°[$ que fait chaque vecteur avec l'axe des $x$.
+
+\(a) $(3, 3)$
+
+\(b) $(-\sqrt3, 1)$
+
+\(c) $(-2, -2)$
+
+\(d) $(1, -\sqrt3)$
+
+## Solution R.7 — séance 4 {#sol-s4-R7}
+
+::: {.sol .long}
+\(a) Quadrant I, $\tan\theta = 1$, angle aigu $45°$ : $\theta = 45°$.
+
+\(b) Quadrant II, $\tan\theta = -\dfrac{1}{\sqrt3} = -\dfrac{\sqrt3}{3}$, angle aigu $30°$ : $\theta = 180° - 30° = 150°$.
+
+\(c) Quadrant III, $\tan\theta = 1$, angle aigu $45°$ : $\theta = 180° + 45° = 225°$.
+
+\(d) Quadrant IV, $\tan\theta = -\sqrt3$, angle aigu $60°$ : $\theta = 360° - 60° = 300°$.
+
+Les vecteurs de (a) et (c) ont la même tangente : le quadrant, donné par les signes des coordonnées, détermine l'angle.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-trig">← Exercices de trigonométrie</a></div>
+

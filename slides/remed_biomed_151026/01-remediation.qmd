@@ -1,0 +1,1025 @@
+---
+title: "Remédiation IMSV biomed — 15 octobre 2026"
+subtitle: "La logique : l'implication comme contrat"
+description: "QCM, section sur l'implication, corrections ciblées, exercices de renforcement et mini-bloc de trigonométrie des vecteurs"
+author: "Quentin Lambotte · FMPB · UMONS"
+date: 10/15/2026
+date-format: "D MMMM YYYY"
+lang: fr
+format:
+  revealjs:
+    theme: [default, ../seance01/theme.scss]
+    slide-number: c/t
+    show-slide-number: all
+    width: 1280
+    height: 800
+    margin: 0.06
+    center: false
+    transition: fade
+    transition-speed: fast
+    hash: true
+    history: false
+    html-math-method: katex
+    embed-resources: true
+    fig-align: center
+    menu:
+      side: right
+    include-after-body: ../seance01/annotate.html
+---
+
+
+
+# Ouverture {.divider background-color="#14304a"}
+
+
+<style>
+.qrow{display:flex;gap:.8em;border-bottom:1px solid #e5e9ef;padding:.28em .2em;font-size:.6em;line-height:1.35;align-items:flex-start}
+.qrow .qans{flex:0 0 36%;font-weight:600}
+.qrow .qwhy{flex:1 1 auto}
+.qrow .qans p,.qrow .qwhy p{margin:0}
+.qrow.ok{background:#f2f7ff}
+.qrow.ok .qans::before{content:"✓ ";color:#276a2e;font-weight:700}
+.qstem{font-size:.78em}
+.qflex{display:flex;gap:1em;align-items:center}
+.qflex img{max-width:330px;max-height:230px;width:auto;height:auto}
+.reveal table.deroule a{font-weight:600}
+.et-box{display:flex;flex-direction:column;align-items:center;gap:.5em;padding:.6em 1.4em;background:#f2f7ff;border:1px solid #dbe7fb;border-radius:.6em}
+.et-timer{margin-top:.8em;display:flex;justify-content:center}
+@keyframes et-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.back{margin-top:.5em}
+.qfoot{display:flex;gap:1.2em;align-items:center;margin-top:.45em;font-size:.55em}
+.qfoot .back-btn{font-size:1em}
+.qfoot .muted{color:#5a6b7b}
+.back-btn{display:inline-block;font-size:.5em;font-weight:600;padding:.3em .8em;border:1.5px solid #1f5fbf;border-radius:.5em;color:#1f5fbf;background:#fff}
+.back-btn:hover{background:#1f5fbf;color:#fff;text-decoration:none!important}
+.exo-foot{margin-top:.8em;font-size:.55em}
+.sol{font-size:.8em}
+.sol.long{font-size:.68em}
+.sol.xlong{font-size:.6em}
+.tv table{margin:.3em auto;border-collapse:collapse;font-size:.8em}
+.tv th,.tv td{border:1px solid #cfd8e3;padding:.22em .9em;text-align:center}
+.tv th{background:#f4f7fa;color:#14304a}
+.tv .f{color:#b5381f;font-weight:700}
+.sit table{font-size:.72em;margin:.3em auto;border-collapse:collapse}
+.sit th,.sit td{border:1px solid #cfd8e3;padding:.25em .7em}
+.sit th{background:#f4f7fa;color:#14304a}
+.sit .f{color:#b5381f;font-weight:700}
+.promesse{border:2px solid #1f5fbf;border-radius:14px;background:#f2f7ff;padding:.6em 1em;text-align:center;font-size:1.05em;margin:.5em 0}
+</style>
+
+
+## Déroulé
+
+<table class="deroule" style="font-size:.7em">
+<thead><tr><th>Temps</th><th>Durée</th><th>Contenu</th></tr></thead>
+<tbody>
+<tr><td class="ph">Ouverture</td><td class="du">3 min</td><td>Principe de la séance, mur de questions</td></tr>
+<tr><td class="ph">QCM</td><td class="du">9 min</td><td>Sept questions sur Wooclap, seul·e, sans discuter</td></tr>
+<tr><td class="ph">Le contrat</td><td class="du">17 min</td><td>L'implication lue comme un engagement entre deux parties</td></tr>
+<tr><td class="ph">Corrections ciblées</td><td class="du">7 min</td><td>Seules les questions les moins réussies sont reprises</td></tr>
+<tr><td class="ph">Exercices de logique</td><td class="du">8 min</td><td>Recherche sur papier, choisie d'après tes résultats au QCM</td></tr>
+<tr><td class="ph">Trigonométrie des vecteurs</td><td class="du">12 min</td><td>Angles associés, sinus ou cosinus, exercices de la séance 4</td></tr>
+<tr><td class="ph">Questions</td><td class="du">4 min</td><td>Questions du mur restantes</td></tr>
+</tbody>
+</table>
+
+## Le mur de questions
+
+::: wooclap
+::: wc-play
+▶
+:::
+
+:::: wc-body
+**Pose tes questions, anonymement**
+
+::: wc-lien
+Code : À COMPLÉTER
+:::
+::::
+
+::: {.wc-qr}
+![](img/qr-mur.png)
+:::
+:::
+
+- **2 à 3 questions au maximum** par personne.
+- **Vote** pour les questions des autres : celles qui reçoivent le plus de votes passent en premier.
+- Je ne répondrai pas à toutes les questions.
+- Les réponses se donnent en séance : il n'y aura pas de réponse écrite ensuite.
+
+
+# QCM {.divider background-color="#14304a"}
+
+## QCM — Wooclap (9 min) {#qcm}
+
+::: wooclap
+::: wc-play
+▶
+:::
+
+:::: wc-body
+**Ouvre le Wooclap, réponds seul·e**
+
+::: wc-lien
+Code : À COMPLÉTER
+:::
+::::
+
+::: {.wc-qr}
+![](img/qr-logique.png)
+:::
+:::
+
+7 questions, une seule réponse correcte par question.
+
+<div class="et-timer"><div class="et-box" data-default="540">
+<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">09:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
+<div class="et-row"><button class="et-btn et-primary et-toggle" type="button">Démarrer</button><button class="et-btn et-reset" type="button">↺ Réinitialiser</button></div>
+</div></div>
+
+```{=html}
+<script>
+(function () {
+  var audioCtx = null;
+  function beep() {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      var t0 = audioCtx.currentTime;
+      [0, 0.35].forEach(function (o) {
+        var osc = audioCtx.createOscillator(), g = audioCtx.createGain();
+        osc.type = 'sine'; osc.frequency.value = 880;
+        g.gain.setValueAtTime(0.0001, t0 + o);
+        g.gain.exponentialRampToValueAtTime(0.3, t0 + o + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + o + 0.28);
+        osc.connect(g); g.connect(audioCtx.destination);
+        osc.start(t0 + o); osc.stop(t0 + o + 0.3);
+      });
+    } catch (e) {}
+  }
+  function fmt(s) { s = Math.max(0, s); var m = Math.floor(s / 60), r = s % 60; return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r; }
+  function init() {
+  Array.prototype.forEach.call(document.querySelectorAll('.et-box'), function (box) {
+    var DEFAULT = parseInt(box.getAttribute('data-default'), 10) || 600;
+    var display = box.querySelector('.et-display'), btn = box.querySelector('.et-toggle');
+    var remaining = DEFAULT, running = false, id = null;
+    function render() {
+      display.textContent = fmt(remaining);
+      display.classList.toggle('et-warn', running && remaining <= 60 && remaining > 0);
+      display.classList.toggle('et-done', remaining === 0);
+    }
+    function stop() { running = false; btn.textContent = remaining > 0 ? 'Reprendre' : 'Démarrer'; if (id) { clearInterval(id); id = null; } }
+    function tick() { remaining -= 1; if (remaining <= 0) { remaining = 0; stop(); beep(); } render(); }
+    function start() {
+      if (running) return;
+      try { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); if (audioCtx.state === 'suspended') audioCtx.resume(); } catch (e) {}
+      if (remaining <= 0) remaining = DEFAULT;
+      render(); running = true; btn.textContent = 'Pause'; id = setInterval(tick, 1000);
+    }
+    btn.addEventListener('click', function () { running ? stop() : start(); });
+    box.querySelector('.et-minus').addEventListener('click', function () { remaining = Math.max(0, remaining - 60); render(); if (remaining === 0) stop(); });
+    box.querySelector('.et-plus').addEventListener('click', function () { remaining += 60; render(); });
+    box.querySelector('.et-reset').addEventListener('click', function () { stop(); remaining = DEFAULT; btn.textContent = 'Démarrer'; render(); });
+    render();
+  });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+```
+
+
+# Le contrat {.divider background-color="#14304a"}
+
+## Une promesse {#contrat-1}
+
+La SNCB s'engage :
+
+::: {.promesse}
+« Si un train arrive avec **60 minutes de retard ou plus**, alors le voyageur reçoit **100 % du prix de son trajet**. »
+:::
+
+On note $\alpha$ : « le train arrive avec 60 minutes de retard ou plus » et $\beta$ : « le voyageur reçoit 100 % du prix de son trajet ».
+
+L'engagement s'écrit $\alpha \Rightarrow \beta$.
+
+::: {.footer-note}
+Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié : les exceptions et le délai de demande ne sont pas pris en compte.
+:::
+
+## Promesse tenue ou rompue ? {#contrat-2}
+
+Quatre situations imaginées. Pour chacune, note sur papier : la SNCB tient-elle sa promesse ?
+
+::: {.sit}
+| | Situation | $\alpha$ | $\beta$ |
+|:--:|:--|:--:|:--:|
+| 1 | Retard de 75 minutes, 100 % du trajet reçu | V | V |
+| 2 | Retard de 75 minutes, aucune compensation | V | F |
+| 3 | Retard de 45 minutes, 100 % du trajet reçu | F | V |
+| 4 | Retard de 45 minutes, aucune compensation | F | F |
+:::
+
+## Une seule rupture possible {#contrat-3}
+
+::: {.sit}
+| | Situation | $\alpha$ | $\beta$ | Promesse |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | Retard de 75 minutes, 100 % du trajet reçu | V | V | tenue |
+| 2 | Retard de 75 minutes, aucune compensation | V | F | [rompue]{.f} |
+| 3 | Retard de 45 minutes, 100 % du trajet reçu | F | V | tenue |
+| 4 | Retard de 45 minutes, aucune compensation | F | F | tenue |
+:::
+
+. . .
+
+::: {.aretenir .smaller}
+La promesse n'est rompue que dans **un seul** cas : la condition est remplie ($\alpha$ vrai) et la promesse n'est pas exécutée ($\beta$ faux).
+
+Aux lignes 3 et 4, la condition n'est pas remplie : la promesse ne dit rien, elle est automatiquement vérifiée.
+:::
+
+## La table de vérité {#contrat-4}
+
+Écrivons V pour « promesse tenue » et F pour « promesse rompue » :
+
+::: {.tv}
+| $\alpha$ | $\beta$ | $\alpha \Rightarrow \beta$ |
+|:--:|:--:|:--:|
+| V | V | V |
+| V | F | [F]{.f} |
+| F | V | V |
+| F | F | V |
+:::
+
+::: {.aretenir .smaller}
+La table de vérité de $\alpha \Rightarrow \beta$ n'est pas à apprendre : elle se relit comme un contrat. Elle vaut F sur la seule ligne où $\alpha$ est vrai et $\beta$ est faux.
+:::
+
+## La réciproque : un autre contrat {#contrat-5}
+
+On échange les rôles de $\alpha$ et $\beta$ :
+
+::: {.promesse}
+« Si le voyageur reçoit 100 % du prix de son trajet, alors le train a eu 60 minutes de retard ou plus. » $\quad \beta \Rightarrow \alpha$
+:::
+
+**Quand ce contrat est-il rompu ?**
+
+. . .
+
+Quand sa condition est remplie ($\beta$ vrai) et que sa conclusion ne l'est pas ($\alpha$ faux) : 100 % du trajet reçu sans 60 minutes de retard. C'est la ligne 3, celle où $\alpha \Rightarrow \beta$ était tenue.
+
+## La réciproque : une autre colonne {#contrat-6}
+
+::: {.tv}
+| $\alpha$ | $\beta$ | $\alpha \Rightarrow \beta$ | $\beta \Rightarrow \alpha$ |
+|:--:|:--:|:--:|:--:|
+| V | V | V | V |
+| V | F | [F]{.f} | V |
+| F | V | V | [F]{.f} |
+| F | F | V | V |
+:::
+
+::: {.aretenir .smaller}
+La réciproque est rompue sur une autre ligne : ce n'est pas le même contrat. Une implication et sa réciproque ne sont pas équivalentes.
+:::
+
+## La contraposée : le même contrat {#contrat-7}
+
+::: {.promesse}
+« Si le voyageur ne reçoit pas 100 % du prix de son trajet, alors le train a eu moins de 60 minutes de retard. » $\quad \lnot\beta \Rightarrow \lnot\alpha$
+:::
+
+**Quand ce contrat est-il rompu ?**
+
+. . .
+
+Quand $\lnot\beta$ est vrai et $\lnot\alpha$ est faux, c'est-à-dire quand $\beta$ est faux et $\alpha$ est vrai : retard de 60 minutes ou plus, sans compensation. C'est exactement la rupture de $\alpha \Rightarrow \beta$.
+
+## La contraposée : la même colonne {#contrat-8}
+
+::: {.tv}
+| $\alpha$ | $\beta$ | $\lnot\alpha$ | $\lnot\beta$ | $\alpha \Rightarrow \beta$ | $\lnot\beta \Rightarrow \lnot\alpha$ |
+|:--:|:--:|:--:|:--:|:--:|:--:|
+| V | V | F | F | V | V |
+| V | F | F | V | [F]{.f} | [F]{.f} |
+| F | V | V | F | V | V |
+| F | F | V | V | V | V |
+:::
+
+::: {.aretenir .smaller}
+Même rupture, donc même contrat : la contraposée est équivalente à l'implication.
+:::
+
+## Suffisant et nécessaire {#contrat-sn1 .smaller}
+
+::: {.promesse}
+« Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » $\quad \alpha \Rightarrow \beta$
+:::
+
+**Un train a 60 minutes de retard ou plus. Le voyageur est-il sûr d'être compensé ?**
+
+. . .
+
+Oui : il suffit que $\alpha$ soit vrai pour obtenir $\beta$. On dit que $\alpha$ est une **condition suffisante** pour $\beta$.
+
+. . .
+
+**Un voyageur n'est pas compensé et l'engagement est tenu. Que sait-on du retard ?**
+
+. . .
+
+Il est inférieur à 60 minutes (contraposée) : sans $\beta$, pas de $\alpha$. On dit que $\beta$ est une **condition nécessaire** pour $\alpha$.
+
+::: {.footer-note}
+Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.
+:::
+
+## Suffisant, nécessaire : le test {#contrat-sn2}
+
+<table class="deroule" style="font-size:.66em">
+<thead><tr><th>Phrase</th><th>Implication</th><th>Engagement de la SNCB</th></tr></thead>
+<tbody>
+<tr><td>« Un retard d'au moins 60 min est suffisant pour être compensé. »</td><td>$\alpha \Rightarrow \beta$</td><td>Promis</td></tr>
+<tr><td>« Être compensé est nécessaire pour avoir un retard d'au moins 60 min. »</td><td>$\alpha \Rightarrow \beta$</td><td>Promis (même implication)</td></tr>
+<tr><td>« Un retard d'au moins 60 min est nécessaire pour être compensé. »</td><td>$\beta \Rightarrow \alpha$</td><td>Non promis (réciproque)</td></tr>
+<tr><td>« Être compensé est suffisant pour avoir un retard d'au moins 60 min. »</td><td>$\beta \Rightarrow \alpha$</td><td>Non promis (réciproque)</td></tr>
+</tbody>
+</table>
+
+. . .
+
+::: {.aretenir .smaller}
+Dans $\alpha \Rightarrow \beta$, la proposition de départ ($\alpha$) est **suffisante** et celle d'arrivée ($\beta$) est **nécessaire**. Pour traduire une phrase, on écrit d'abord l'implication : la flèche part toujours de la proposition suffisante.
+:::
+
+::: {.footer-note}
+Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncés simplifiés.
+:::
+
+## Suffisant n'est pas nécessaire {#contrat-sn3 .smaller}
+
+**Critère diagnostique :** « Si la glycémie à jeun d'une personne est d'au moins 7,0 mmol/L, alors cette personne a un diabète. »
+
+. . .
+
+Une glycémie à jeun d'au moins 7,0 mmol/L est une condition **suffisante** pour retenir un diabète : $\alpha \Rightarrow \beta$.
+
+. . .
+
+Elle n'est pas **nécessaire** : une HbA1c d'au moins 6,5 % suffit aussi à retenir un diabète. Une condition nécessaire demanderait $\beta \Rightarrow \alpha$, la réciproque, que le critère n'affirme pas.
+
+::: {.piege}
+::: {.pg-titre}
+Pièges
+:::
+Dire « nécessaire » pour la proposition de départ : cela renverse la flèche et donne la réciproque.
+:::
+
+::: {.footer-note}
+Source : Manuel MSD, version professionnelle, « Revue générale du diabète sucré », msdmanuals.com (consulté le 13 octobre 2026). Critère simplifié.
+:::
+
+## La négation : la rupture {#contrat-9}
+
+Nier la promesse, c'est dire qu'elle est rompue.
+
+. . .
+
+La rupture est le cas « $\alpha$ vrai et $\beta$ faux » :
+
+$$\lnot(\alpha \Rightarrow \beta) \iff \alpha \land \lnot\beta$$
+
+::: {.tv}
+| $\alpha$ | $\beta$ | $\alpha \Rightarrow \beta$ | $\lnot(\alpha \Rightarrow \beta)$ | $\alpha \land \lnot\beta$ |
+|:--:|:--:|:--:|:--:|:--:|
+| V | V | V | F | F |
+| V | F | [F]{.f} | [V]{.f} | [V]{.f} |
+| F | V | V | F | F |
+| F | F | V | F | F |
+:::
+
+. . .
+
+::: {.aretenir .smaller}
+La promesse est tenue quand elle n'est pas rompue : $\alpha \Rightarrow \beta \iff \lnot(\alpha \land \lnot\beta) \iff \lnot\alpha \lor \beta$. Autrement dit, la condition n'est pas remplie, ou la promesse est exécutée.
+:::
+
+## Synthèse {#contrat-10}
+
+<table class="deroule" style="font-size:.7em">
+<thead><tr><th>Énoncé</th><th>Rompu quand</th><th>Colonne de $\alpha \Rightarrow \beta$</th></tr></thead>
+<tbody>
+<tr><td class="ph">Implication $\alpha \Rightarrow \beta$</td><td>$\alpha$ vrai et $\beta$ faux</td><td>—</td></tr>
+<tr><td class="ph">Réciproque $\beta \Rightarrow \alpha$</td><td>$\beta$ vrai et $\alpha$ faux</td><td>différente</td></tr>
+<tr><td class="ph">Contraposée $\lnot\beta \Rightarrow \lnot\alpha$</td><td>$\beta$ faux et $\alpha$ vrai</td><td>identique</td></tr>
+<tr><td class="ph">Négation $\lnot(\alpha \Rightarrow \beta)$</td><td>elle décrit la rupture : $\alpha \land \lnot\beta$</td><td>opposée</td></tr>
+<tr><td class="ph">Vocabulaire</td><td>$\alpha$ suffisante pour $\beta$ ; $\beta$ nécessaire pour $\alpha$</td><td>—</td></tr>
+</tbody>
+</table>
+
+::: {.piege}
+::: {.pg-titre}
+Pièges
+:::
+Croire que $\beta$ faux suffit à rompre la promesse : il faut aussi que $\alpha$ soit vrai. Confondre réciproque (on échange) et contraposée (on échange **et** on nie). Nier une implication par une autre implication.
+:::
+
+
+# Corrections ciblées {.divider background-color="#14304a"}
+
+## Où aller selon les résultats {#nav-logique}
+
+<table class="deroule" style="font-size:.7em"><thead><tr><th>QCM</th><th>Correction</th><th>Exercices</th></tr></thead><tbody>
+<tr><td class="ph">Q1</td><td><a href="#/q-Q1">Rupture d'un engagement</a></td><td><a href="#/ex-R3">R.3</a> · <a href="#/ex-R9">R.9</a></td></tr>
+<tr><td class="ph">Q2</td><td><a href="#/q-Q2">Colonne de l'implication</a></td><td><a href="#/ex-R10">R.10(a)</a> · <a href="#/ex-R14">R.14(a)</a></td></tr>
+<tr><td class="ph">Q3</td><td><a href="#/q-Q3">Condition non remplie</a></td><td><a href="#/ex-R2">R.2(c)</a> · <a href="#/ex-R10">R.10(a)</a></td></tr>
+<tr><td class="ph">Q4</td><td><a href="#/q-Q4">Réciproque</a></td><td><a href="#/ex-R6">R.6</a> · <a href="#/ex-R14">R.14(b)</a></td></tr>
+<tr><td class="ph">Q5</td><td><a href="#/q-Q5">Contraposée</a></td><td><a href="#/ex-R6">R.6</a> · <a href="#/ex-R14">R.14(a)</a></td></tr>
+<tr><td class="ph">Q6</td><td><a href="#/q-Q6">Négation d'une implication</a></td><td><a href="#/ex-R10">R.10(b)</a> · <a href="#/ex-R8">R.8</a></td></tr>
+<tr><td class="ph">Q7</td><td><a href="#/q-Q7">Suffisant, nécessaire</a></td><td><a href="#/ex-R6">R.6</a> (réciproque)</td></tr>
+</tbody></table>
+
+## Q1 · Rupture d'un engagement {#q-Q1}
+
+::: {.qstem}
+Engagement de la SNCB : « Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » Dans quelle situation la SNCB ne tient-elle pas son engagement ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+Retard de 75 minutes et aucune compensation.
+:::
+::: qwhy
+La condition est remplie ($\alpha$ vrai) et la promesse n'est pas exécutée ($\beta$ faux) : c'est la seule rupture possible.
+:::
+:::::
+
+::::: qrow
+::: qans
+Retard de 45 minutes et aucune compensation.
+:::
+::: qwhy
+Ici, la condition n'est pas remplie : l'engagement ne s'applique pas. Que la compensation soit absente ne suffit pas à le rompre.
+:::
+:::::
+
+::::: qrow
+::: qans
+Retard de 45 minutes et 100 % du prix du trajet reçu.
+:::
+::: qwhy
+Une compensation versée n'est jamais une rupture. L'engagement n'interdit pas de compenser sous 60 minutes ; il oblige à compenser à partir de 60 minutes.
+:::
+:::::
+
+::::: qrow
+::: qans
+Retard de 90 minutes et 100 % du prix du trajet reçu.
+:::
+::: qwhy
+La condition est remplie et la promesse est exécutée : l'engagement est tenu.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R3">R.3</a> · <a href="#/ex-R9">R.9</a></span></div>
+
+::: {.footer-note}
+Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.
+:::
+
+## Q2 · Colonne de l'implication {#q-Q2}
+
+::: {.qstem}
+Les colonnes de $\alpha$ et de $\beta$, de haut en bas, sont : $\alpha$ : V, V, F, F et $\beta$ : V, F, V, F. Quelle est la colonne de $\alpha \Rightarrow \beta$ ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+V, F, V, V
+:::
+::: qwhy
+F uniquement sur la ligne $\alpha$ vrai, $\beta$ faux (2<sup>e</sup> ligne), V partout ailleurs.
+:::
+:::::
+
+::::: qrow
+::: qans
+V, V, F, V
+:::
+::: qwhy
+C'est la colonne de $\beta \Rightarrow \alpha$ (la réciproque), rompue sur la ligne $\alpha$ faux, $\beta$ vrai. Pour $\alpha \Rightarrow \beta$, la rupture a lieu quand $\alpha$ est vrai et $\beta$ faux.
+:::
+:::::
+
+::::: qrow
+::: qans
+V, F, F, V
+:::
+::: qwhy
+C'est la colonne de $\alpha \iff \beta$, fausse dès que $\alpha$ et $\beta$ diffèrent. Sur la ligne $\alpha$ faux, $\beta$ vrai, la promesse $\alpha \Rightarrow \beta$ n'est pas rompue.
+:::
+:::::
+
+::::: qrow
+::: qans
+V, F, F, F
+:::
+::: qwhy
+C'est la colonne de $\alpha \land \beta$, vraie seulement quand les deux sont vraies. Quand $\alpha$ est faux, l'implication est automatiquement vérifiée.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R10">R.10(a)</a> · <a href="#/ex-R14">R.14(a)</a></span></div>
+
+## Q3 · Condition non remplie {#q-Q3}
+
+::: {.qstem}
+Critère diagnostique : « Si la glycémie à jeun d'une personne est d'au moins 7,0 mmol/L, alors cette personne a un diabète. » Une personne a une glycémie à jeun de 5,0 mmol/L. Que peut-on dire de l'implication pour cette personne ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+Elle est vraie, mais elle ne permet pas de conclure sur le diabète.
+:::
+::: qwhy
+La condition n'est pas remplie ($\alpha$ faux) : l'implication est automatiquement vérifiée, et elle ne dit rien de $\beta$.
+:::
+:::::
+
+::::: qrow
+::: qans
+Elle est fausse, car le diabète n'est pas établi.
+:::
+::: qwhy
+Une implication n'est fausse que si $\alpha$ est vrai et $\beta$ faux. Ici $\alpha$ est faux : rien n'est violé.
+:::
+:::::
+
+::::: qrow
+::: qans
+Cette personne n'a pas de diabète.
+:::
+::: qwhy
+Cela suppose « si glycémie inférieure à 7,0, alors pas de diabète », qui n'est pas affirmé : un diabète peut aussi être retenu avec une HbA1c d'au moins 6,5 %.
+:::
+:::::
+
+::::: qrow
+::: qans
+On ne peut pas savoir sans connaître le diagnostic.
+:::
+::: qwhy
+La valeur de l'implication se lit sur la ligne $\alpha$ faux : elle est vraie quelle que soit la valeur de $\beta$.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R2">R.2(c)</a> · <a href="#/ex-R10">R.10(a)</a></span></div>
+
+::: {.footer-note}
+Source : Manuel MSD, version professionnelle, « Revue générale du diabète sucré », msdmanuals.com (consulté le 13 octobre 2026). Critère simplifié.
+:::
+
+## Q4 · Réciproque {#q-Q4}
+
+::: {.qstem}
+Critère diagnostique : « Si la glycémie à jeun d'une personne est d'au moins 7,0 mmol/L, alors cette personne a un diabète. » Quelle est la réciproque de cette implication ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+Si une personne a un diabète, alors sa glycémie à jeun est d'au moins 7,0 mmol/L.
+:::
+::: qwhy
+On échange $\alpha$ et $\beta$ sans les nier : $\beta \Rightarrow \alpha$. Ce contrat n'est pas promis : une HbA1c d'au moins 6,5 % suffit aussi à retenir un diabète.
+:::
+:::::
+
+::::: qrow
+::: qans
+Si la glycémie à jeun est inférieure à 7,0 mmol/L, alors la personne n'a pas de diabète.
+:::
+::: qwhy
+Les deux propositions sont niées, mais pas échangées : ce n'est pas la réciproque.
+:::
+:::::
+
+::::: qrow
+::: qans
+Si une personne n'a pas de diabète, alors sa glycémie à jeun est inférieure à 7,0 mmol/L.
+:::
+::: qwhy
+On a échangé **et** nié : c'est la contraposée, pas la réciproque.
+:::
+:::::
+
+::::: qrow
+::: qans
+Si une personne a un diabète, alors sa glycémie à jeun est inférieure à 7,0 mmol/L.
+:::
+::: qwhy
+Après l'échange, la conclusion a été niée : la réciproque échange $\alpha$ et $\beta$ sans rien nier.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R6">R.6</a> · <a href="#/ex-R14">R.14(b)</a></span></div>
+
+::: {.footer-note}
+Source : Manuel MSD, version professionnelle, « Revue générale du diabète sucré », msdmanuals.com (consulté le 13 octobre 2026). Critère simplifié.
+:::
+
+## Q5 · Contraposée {#q-Q5}
+
+::: {.qstem}
+Engagement de la SNCB : « Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » Un voyageur ne reçoit aucune compensation, et la SNCB a tenu son engagement. Que peut-on en déduire ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+Le train a eu moins de 60 minutes de retard.
+:::
+::: qwhy
+C'est la contraposée $\lnot\beta \Rightarrow \lnot\alpha$ : pas de compensation et engagement tenu imposent que la condition ne soit pas remplie.
+:::
+:::::
+
+::::: qrow
+::: qans
+Le train a eu 60 minutes de retard ou plus.
+:::
+::: qwhy
+Avec ce retard, l'engagement imposait une compensation. Il n'y en a pas et l'engagement est tenu : cette situation est exclue.
+:::
+:::::
+
+::::: qrow
+::: qans
+Le train n'a eu aucun retard.
+:::
+::: qwhy
+La négation de $\alpha$ est « moins de 60 minutes de retard », pas « aucun retard ». Un retard de 20 minutes est possible.
+:::
+:::::
+
+::::: qrow
+::: qans
+On ne peut rien en déduire sur le retard.
+:::
+::: qwhy
+La contraposée a la même valeur que l'implication : de $\lnot\beta$ et de l'implication vraie, on déduit $\lnot\alpha$.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R6">R.6</a> · <a href="#/ex-R14">R.14(a)</a></span></div>
+
+::: {.footer-note}
+Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.
+:::
+
+## Q6 · Négation d'une implication {#q-Q6}
+
+::: {.qstem}
+Engagement de la SNCB : « Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » Quelle est la négation de cet engagement ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+Le train a 60 minutes de retard ou plus et le voyageur ne reçoit pas 100 % du prix de son trajet.
+:::
+::: qwhy
+$\lnot(\alpha \Rightarrow \beta) \iff \alpha \land \lnot\beta$ : la négation décrit la rupture.
+:::
+:::::
+
+::::: qrow
+::: qans
+Si le train a 60 minutes de retard ou plus, alors le voyageur ne reçoit pas 100 % du prix de son trajet.
+:::
+::: qwhy
+Seule la conclusion est niée et l'implication est conservée : c'est un autre engagement, qui interdirait la compensation.
+:::
+:::::
+
+::::: qrow
+::: qans
+Le train a moins de 60 minutes de retard et le voyageur reçoit 100 % du prix de son trajet.
+:::
+::: qwhy
+La condition est niée alors qu'elle doit rester vraie. La rupture exige une condition remplie.
+:::
+:::::
+
+::::: qrow
+::: qans
+Le train a moins de 60 minutes de retard ou le voyageur ne reçoit pas 100 % du prix de son trajet.
+:::
+::: qwhy
+C'est $\lnot\alpha \lor \lnot\beta$, la négation de $\alpha \land \beta$, pas celle de $\alpha \Rightarrow \beta$.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R10">R.10(b)</a> · <a href="#/ex-R8">R.8</a></span></div>
+
+::: {.footer-note}
+Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.
+:::
+
+
+## Q7 · Suffisant, nécessaire {#q-Q7}
+
+::: {.qstem}
+Engagement de la SNCB : « Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » Quelle affirmation est correcte ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+Un retard d'au moins 60 minutes est une condition suffisante pour recevoir 100 % du prix du trajet.
+:::
+::: qwhy
+C'est $\alpha \Rightarrow \beta$ : la proposition de départ est suffisante.
+:::
+:::::
+
+::::: qrow
+::: qans
+Un retard d'au moins 60 minutes est une condition nécessaire pour recevoir 100 % du prix du trajet.
+:::
+::: qwhy
+« $\alpha$ nécessaire pour $\beta$ » se lit $\beta \Rightarrow \alpha$ : c'est la réciproque, que l'engagement n'affirme pas.
+:::
+:::::
+
+::::: qrow
+::: qans
+Recevoir 100 % du prix du trajet est une condition suffisante pour avoir eu un retard d'au moins 60 minutes.
+:::
+::: qwhy
+« $\beta$ suffisante pour $\alpha$ » se lit aussi $\beta \Rightarrow \alpha$ : même réciproque, même erreur de sens de la flèche.
+:::
+:::::
+
+::::: qrow
+::: qans
+Ne pas recevoir 100 % du prix du trajet est une condition nécessaire pour avoir un retard d'au moins 60 minutes.
+:::
+::: qwhy
+Ce serait $\alpha \Rightarrow \lnot\beta$ : exactement la rupture de l'engagement. Ce qui est nécessaire pour $\alpha$ est $\beta$, pas $\lnot\beta$.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R6">R.6</a> (réciproque)</span></div>
+
+::: {.footer-note}
+Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.
+:::
+
+
+# Exercices de renforcement {.divider background-color="#14304a"}
+
+## Exercices à réaliser pour consolider {#ex-logique}
+
+<table class="deroule" style="font-size:.62em"><thead><tr><th>QCM</th><th>Sujet</th><th>Exercices</th></tr></thead><tbody>
+<tr><td class="ph">Q1</td><td>Rupture d'un engagement</td><td><a href="#/ex-R3">R.3</a> · <a href="#/ex-R9">R.9</a></td></tr>
+<tr><td class="ph">Q2</td><td>Colonne de l'implication</td><td><a href="#/ex-R10">R.10(a)</a> · <a href="#/ex-R14">R.14(a)</a></td></tr>
+<tr><td class="ph">Q3</td><td>Condition non remplie</td><td><a href="#/ex-R2">R.2(c)</a> · <a href="#/ex-R10">R.10(a)</a></td></tr>
+<tr><td class="ph">Q4</td><td>Réciproque</td><td><a href="#/ex-R6">R.6</a> · <a href="#/ex-R14">R.14(b)</a></td></tr>
+<tr><td class="ph">Q5</td><td>Contraposée</td><td><a href="#/ex-R6">R.6</a> · <a href="#/ex-R14">R.14(a)</a></td></tr>
+<tr><td class="ph">Q6</td><td>Négation d'une implication</td><td><a href="#/ex-R10">R.10(b)</a> · <a href="#/ex-R8">R.8</a></td></tr>
+<tr><td class="ph">Q7</td><td>Suffisant, nécessaire</td><td><a href="#/ex-R6">R.6</a> (réciproque)</td></tr>
+</tbody></table>
+
+<div class="et-timer"><div class="et-box" data-default="480">
+<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">08:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
+<div class="et-row"><button class="et-btn et-primary et-toggle" type="button">Démarrer</button><button class="et-btn et-reset" type="button">↺ Réinitialiser</button></div>
+</div></div>
+
+## Exercice R.2 <span class="obj">O2</span> {#ex-R2}
+
+Soient $A=\{a,b,c\}$ et $B=\{c,d\}$.
+
+\(c) Vrai ou faux : $a\in A$ ; $\{a\}\in A$ ; $\{a\}\subseteq A$ ; $\varnothing\subseteq A$ ; $c\in A\cap B$.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R2">annexe — R.2</a></span></div>
+
+## Exercice R.3 <span class="obj">O2</span> {#ex-R3}
+
+Voici la table de vérité de deux propositions $a$ et $b$ et d'une proposition cachée « ? ». Parmi les propositions proposées, laquelle correspond à cette colonne ?
+
+| $a$ | $b$ | ? |
+|:--:|:--:|:--:|
+| V | V | V |
+| V | F | V |
+| F | V | F |
+| F | F | V |
+
+Choix : (A) $a \Rightarrow b$ ; (B) $b \Rightarrow a$ ; (C) $a \land b$ ; (D) $a \lor b$.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R3">annexe — R.3</a></span></div>
+
+## Exercice R.6 <span class="obj">O2</span> {#ex-R6}
+
+Soit $\alpha$ l'implication : « si $n$ est multiple de $6$, alors $n$ est multiple de $3$ ».
+
+\(a) Écrire la **réciproque** et la **contraposée** de $\alpha$.
+
+\(b) Dire lesquelles des trois sont vraies, par un contre-exemple si nécessaire.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R6">annexe — R.6</a></span></div>
+
+## Exercice R.8 <span class="obj">O2</span> {#ex-R8}
+
+Pour chaque proposition : dire si elle est **vraie** ou **fausse**, écrire sa **négation**, puis l'évaluer.
+
+\(a) $\forall\, n\in\mathbb{N},\ n+1 > n$.
+
+\(b) $\exists\, x\in\mathbb{R},\ x^2 = 2$.
+
+\(c) $\forall\, x\in\mathbb{R},\ x^2 \ne x$.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R8">annexe — R.8</a></span></div>
+
+## Exercice R.9 <span class="obj">O2</span> {#ex-R9}
+
+Voici la table de vérité de $a$, $b$ et d'une proposition cachée « ? ». Parmi les choix, laquelle a **exactement** cette colonne ?
+
+| $a$ | $b$ | ? |
+|:--:|:--:|:--:|
+| V | V | V |
+| V | F | F |
+| F | V | V |
+| F | F | V |
+
+Choix : (A) $a\Rightarrow b$ ; (B) $b\Rightarrow a$ ; (C) $a\lor b$ ; (D) $a\land b$.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R9">annexe — R.9</a></span></div>
+
+## Exercice R.10 <span class="obj">O2</span> {#ex-R10}
+
+On veut relier l'implication aux connecteurs $\lnot$, $\lor$, $\land$.
+
+\(a) Dresser la table de vérité de $\alpha\Rightarrow\beta$ et celle de $\lnot\alpha\lor\beta$, et constater qu'elles coïncident.
+
+\(b) En déduire une écriture de $\lnot(\alpha\Rightarrow\beta)$ *sans* le symbole $\Rightarrow$.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R10">annexe — R.10</a></span></div>
+
+## Exercice R.14 <span class="obj">O2</span> {#ex-R14}
+
+À l'aide de tables de vérité, dire si les équivalences sont vraies (les deux membres de l'équivalence ont la même colonne dans la table de vérité) ou fausses (une des lignes de la table de vérité distingue les deux membres).
+
+\(a) $(\alpha\Rightarrow\beta)\ \Leftrightarrow\ (\lnot\beta\Rightarrow\lnot\alpha)$
+
+\(b) $(\alpha\Rightarrow\beta)\ \Leftrightarrow\ (\beta\Rightarrow\alpha)$
+
+<div class="qfoot"><a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R14">annexe — R.14</a></span></div>
+
+# Trigonométrie des vecteurs {.divider background-color="#14304a"}
+
+## Où aller selon la difficulté {#nav-trig}
+
+Demande d'abord quel énoncé pose problème, puis choisis le chemin.
+
+<table class="deroule" style="font-size:.7em"><thead><tr><th>Difficulté</th><th>Slide</th><th>Exercices (séance 4)</th></tr></thead><tbody>
+<tr><td class="ph">Angle aigu avec l'axe des $x$ et angles associés</td><td><a href="#/trig-1">Les angles associés</a></td><td><a href="#/ex-s4-R7">R.7</a> · <a href="#/ex-s4-R6">R.6</a></td></tr>
+<tr><td class="ph">Retrouver l'angle à partir des coordonnées</td><td><a href="#/trig-2">De l'angle aux coordonnées, et retour</a></td><td><a href="#/ex-s4-R7">R.7</a> · <a href="#/ex-s4-R6">R.6(c)</a></td></tr>
+<tr><td class="ph">Sinus ou cosinus pour une composante</td><td><a href="#/trig-3">Sinus ou cosinus ?</a></td><td><a href="#/ex-s4-R5">R.5(d)</a> · <a href="#/ex-s4-R6">R.6</a></td></tr>
+</tbody></table>
+
+## Les angles associés {#trig-1 .smaller}
+
+<div style="display:flex;gap:1.2em;align-items:center">
+<div style="flex:0 0 330px"><svg viewBox="0 0 360 360" width="330" height="330" role="img" aria-label="Cercle trigonométrique avec les points d'angles 30, 150, 210 et 330 degrés"><circle cx="180" cy="180" r="140" fill="none" stroke="#14304a" stroke-width="2"/><line x1="10" y1="180" x2="350" y2="180" stroke="#14304a"/><line x1="180" y1="10" x2="180" y2="350" stroke="#14304a"/><text x="346" y="200" font-size="16" text-anchor="end" fill="#14304a">x</text><text x="192" y="22" font-size="16" fill="#14304a">y</text><line x1="301.2" y1="110.0" x2="301.2" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="301.2" cy="110.0" r="6" fill="#b5381f"/><text x="323.8" y="102.0" text-anchor="middle" font-size="18" fill="#14304a">30°</text><line x1="58.8" y1="110.0" x2="58.8" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="58.8" cy="110.0" r="6" fill="#b5381f"/><text x="36.2" y="102.0" text-anchor="middle" font-size="18" fill="#14304a">150°</text><line x1="58.8" y1="250.0" x2="58.8" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="58.8" cy="250.0" r="6" fill="#b5381f"/><text x="36.2" y="268.0" text-anchor="middle" font-size="18" fill="#14304a">210°</text><line x1="301.2" y1="250.0" x2="301.2" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="301.2" cy="250.0" r="6" fill="#b5381f"/><text x="323.8" y="268.0" text-anchor="middle" font-size="18" fill="#14304a">330°</text></svg></div>
+<div style="flex:1 1 auto">
+
+Le point d'angle $\theta$ du cercle trigonométrique a pour coordonnées $(\cos\theta,\ \sin\theta)$. **Que remarques-tu sur ces quatre points ?**
+
+. . .
+
+::: {.tv}
+| $\theta$ | Quadrant | Angle aigu avec l'axe des $x$ | $\cos\theta$ | $\sin\theta$ |
+|:--:|:--:|:--:|:--:|:--:|
+| $30°$ | I | $30°$ | $+\frac{\sqrt3}{2}$ | $+\frac12$ |
+| $150°$ | II | $180° - 150° = 30°$ | $-\frac{\sqrt3}{2}$ | $+\frac12$ |
+| $210°$ | III | $210° - 180° = 30°$ | $-\frac{\sqrt3}{2}$ | $-\frac12$ |
+| $330°$ | IV | $360° - 330° = 30°$ | $+\frac{\sqrt3}{2}$ | $-\frac12$ |
+:::
+
+</div>
+</div>
+
+. . .
+
+::: {.aretenir .smaller}
+L'angle aigu avec l'axe des $x$ (l'angle de référence) fixe les valeurs de $\cos$ et de $\sin$ au signe près. Le quadrant fixe les signes.
+:::
+
+## De l'angle aux coordonnées, et retour {#trig-2 .smaller}
+
+**Retrouver l'angle $\theta \in [0°, 360°[$ du vecteur $\vec w = (-1,\ \sqrt3)$.**
+
+. . .
+
+1. **Quadrant** : $w_x < 0$ et $w_y > 0$, donc le deuxième quadrant.
+
+. . .
+
+2. **Angle aigu avec l'axe des $x$** : $\tan = \dfrac{w_y}{w_x} = -\sqrt3$. La valeur absolue $\sqrt3$ correspond à $60°$.
+
+. . .
+
+3. **Angle** : dans le deuxième quadrant, $\theta = 180° - 60° = 120°$.
+
+. . .
+
+**Contrôle** : $\left\Vert \vec w \right\Vert = \sqrt{1 + 3} = 2$ et $2\,(\cos 120°,\ \sin 120°) = 2\left(-\dfrac12,\ \dfrac{\sqrt3}{2}\right) = (-1,\ \sqrt3)$.
+
+::: {.aretenir .smaller}
+La tangente seule ne suffit pas : $(-1, \sqrt3)$ et $(1, -\sqrt3)$ ont la même tangente, $-\sqrt3$. C'est le quadrant qui tranche.
+:::
+
+## Sinus ou cosinus ? {#trig-3 .smaller}
+
+Une force de $10$ N fait un angle de $30°$ avec un axe. Quelles sont ses composantes ?
+
+<div style="display:flex;gap:1em;justify-content:center;align-items:flex-start">
+<div><svg viewBox="0 0 260 200" width="170" height="129" role="img" aria-label="Force de 10 newtons, 30° depuis l'horizontale"><line x1="30" y1="170" x2="250" y2="170" stroke="#14304a"/><line x1="30" y1="170" x2="30" y2="20" stroke="#14304a"/><line x1="159.9" y1="95.0" x2="159.9" y2="170" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="95.0" x2="159.9" y2="95.0" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="170" x2="159.9" y2="95.0" stroke="#1f5fbf" stroke-width="4"/><circle cx="159.9" cy="95.0" r="5" fill="#1f5fbf"/><text x="92" y="162" font-size="16" fill="#14304a">30°</text><text x="169.9" y="89.0" font-size="16" fill="#1f5fbf">10 N</text></svg><div style="font-size:.6em;text-align:center">30° depuis l'horizontale</div></div>
+<div><svg viewBox="0 0 260 200" width="170" height="129" role="img" aria-label="Force de 10 newtons, 30° depuis la verticale"><line x1="30" y1="170" x2="250" y2="170" stroke="#14304a"/><line x1="30" y1="170" x2="30" y2="20" stroke="#14304a"/><line x1="105.0" y1="40.1" x2="105.0" y2="170" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="40.1" x2="105.0" y2="40.1" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="170" x2="105.0" y2="40.1" stroke="#1f5fbf" stroke-width="4"/><circle cx="105.0" cy="40.1" r="5" fill="#1f5fbf"/><text x="38" y="90" font-size="16" fill="#14304a">30°</text><text x="115.0" y="34.1" font-size="16" fill="#1f5fbf">10 N</text></svg><div style="font-size:.6em;text-align:center">30° depuis la verticale</div></div>
+</div>
+
+**Fais tendre l'angle vers $0°$ : quelle composante devient toute la force ?**
+
+. . .
+
+::: {.tv}
+| Angle mesuré depuis | Composante horizontale | Composante verticale |
+|:--:|:--:|:--:|
+| l'horizontale | $10\cos 30° = 5\sqrt3$ | $10\sin 30° = 5$ |
+| la verticale | $10\sin 30° = 5$ | $10\cos 30° = 5\sqrt3$ |
+:::
+
+. . .
+
+::: {.aretenir .smaller}
+La composante le long de l'axe depuis lequel l'angle est mesuré porte le cosinus ($\cos 0° = 1$) ; l'autre porte le sinus ($\sin 0° = 0$). Le quadrant donne ensuite les signes.
+:::
+
+## Exercices de trigonométrie à réaliser {#ex-trig}
+
+<table class="deroule" style="font-size:.72em"><thead><tr><th>Difficulté</th><th>Exercices (séance 4)</th></tr></thead><tbody>
+<tr><td class="ph">Angle aigu avec l'axe des $x$, angles associés</td><td><a href="#/ex-s4-R7">R.7</a> · <a href="#/ex-s4-R6">R.6</a></td></tr>
+<tr><td class="ph">Retrouver l'angle à partir des coordonnées</td><td><a href="#/ex-s4-R7">R.7</a> · <a href="#/ex-s4-R6">R.6(c)</a></td></tr>
+<tr><td class="ph">Sinus ou cosinus pour une composante</td><td><a href="#/ex-s4-R5">R.5(d)</a> · <a href="#/ex-s4-R6">R.6</a></td></tr>
+</tbody></table>
+
+Les numéros R.5, R.6 et R.7 de cette partie sont ceux de la **séance 4**.
+
+<div class="et-timer"><div class="et-box" data-default="480">
+<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">08:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
+<div class="et-row"><button class="et-btn et-primary et-toggle" type="button">Démarrer</button><button class="et-btn et-reset" type="button">↺ Réinitialiser</button></div>
+</div></div>
+
+## Exercice R.5(d) — séance 4 <span class="obj">O2</span> {#ex-s4-R5}
+
+Un courant de $0{,}3$ m/s, parallèle aux rives, entraîne un poisson. On prend l'axe des $x$ dans le sens du courant et l'axe des $y$ vers l'autre rive.
+
+Un poisson nage à $0{,}6$ m/s par rapport à l'eau et veut arriver **juste en face** de son point de départ. Dans quelle direction doit-il nager ? On donnera l'angle avec la perpendiculaire aux rives.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-trig">← Exercices de trigonométrie</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-s4-R5">annexe — R.5(d)</a></span></div>
+
+## Exercice R.6 — séance 4 <span class="obj">O3</span> {#ex-s4-R6}
+
+\(a) Une vitesse de norme $10$ m/s fait un angle de $45°$ avec l'axe des $x$. Donner ses coordonnées.
+
+\(b) Une force de norme $6$ N fait un angle de $240°$ avec l'axe des $x$. Donner ses coordonnées.
+
+\(c) Donner la norme de $\vec w = (\sqrt3, -1)$ et l'angle qu'il fait avec l'axe des $x$.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-trig">← Exercices de trigonométrie</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-s4-R6">annexe — R.6</a></span></div>
+
+## Exercice R.7 — séance 4 <span class="obj">O3</span> {#ex-s4-R7}
+
+Sans calculatrice, donner le quadrant, $\tan\theta$ et l'angle $\theta \in [0°, 360°[$ que fait chaque vecteur avec l'axe des $x$.
+
+\(a) $(3, 3)$
+
+\(b) $(-\sqrt3, 1)$
+
+\(c) $(-2, -2)$
+
+\(d) $(1, -\sqrt3)$
+
+<div class="qfoot"><a class="back-btn" href="#/ex-trig">← Exercices de trigonométrie</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-s4-R7">annexe — R.7</a></span></div>
+
+
+## Questions restantes
+
+À remplir pendant la recherche d'exercices (tri du mur).
+
+
+# Clôture {.divider background-color="#14304a"}
+
+## Pour la suite
+
+- Les **solutions rédigées** des exercices et les corrections des questions de réserve sont dans le deck « Annexe » (page des slides, rubrique Remédiations).
+- Les questions du mur qui n'ont pas été traitées en séance n'auront pas de réponse écrite.

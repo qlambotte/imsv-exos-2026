@@ -358,6 +358,14 @@ for p in [(-2, 2), (0, 1), (2, 0), (4, -1)]:
 g.tx(-1.6, 2.5, r"$k$", BLUE, 17)
 g.save("s-registres-k.svg")
 
+
+# S.9 — extrema sur un intervalle : f(x) = x^2 - 4x + 3
+g = G((-1, 6), (-2, 9), unit=32)
+g.grid_xy(1, 1); g.axes_xy(range(-1, 6), range(-2, 9))
+g.curve(lambda x: x * x - 4 * x + 3, -0.15, 5.15, BLUE)
+g.tx(5.15, 8.4, r"$f$", BLUE, 17, dx=14)
+g.save("s-extrema.svg")
+
 # =====================================================================
 # TRANSFERT
 # =====================================================================
@@ -435,6 +443,14 @@ g.curve(lambda x: x ** 3 - 3 * x, -2, 2, BLUE)
 g.pt(-2, -2, None, BLUE); g.pt(2, 2, None, BLUE)
 g.tx(1.85, 3.0, r"$h$", BLUE, 17)
 g.save("r-cubique.svg")
+
+
+# R.7 — extrema sur un intervalle : h(x) = |x - 1| + 1
+g = G((-2, 4), (-1, 5), unit=40)
+g.grid_xy(1, 1); g.axes_xy(range(-2, 4), range(-1, 5))
+g.curve(lambda x: abs(x - 1) + 1, -1.9, 3.9, BLUE)
+g.tx(3.6, 4.2, r"$h$", BLUE, 17, dx=12)
+g.save("r-extrema.svg")
 
 print("figures écrites :", len([n for n in os.listdir(OUT) if n.endswith(".svg")]))
 print(json.dumps(SIZES))

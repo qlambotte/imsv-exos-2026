@@ -3,33 +3,37 @@ title: "Institutionnalisation — méthode & auto-évaluation"
 subtitle: "Séance 5 · ce qu'on retient"
 ---
 
-## La méthode qu'on dégage ensemble
+## Les méthodes qu'on dégage ensemble
 
-En fin de séance, on formalise deux méthodes.
+À la fin du socle, la confrontation puis la correction de l'exercice S.4 dégagent la méthode pour **déterminer les extrema d'une fonction sur un intervalle** :
 
-La première est la méthode pour **retrouver l'entrée d'une fonction à partir de sa sortie** :
+- **repérer** où la fonction croît et où elle décroît sur l'intervalle ;
+- **lister** les candidats : les abscisses où la fonction change de sens et les bornes de l'intervalle ;
+- **regarder** si chaque borne est incluse ou exclue : la valeur en une borne exclue n'est pas atteinte ;
+- **comparer** les valeurs atteintes avec les valeurs dont la fonction s'approche près des bornes exclues, puis **conclure** par une phrase.
+
+En fin de séance, on formalise la méthode pour **retrouver l'entrée d'une fonction à partir de sa sortie**, utilisée dans les trois exercices de transfert :
 
 - **identifier** la sortie donnée et l'entrée cherchée, puis écrire la formule de la fonction ;
 - **remplacer** la sortie par sa valeur dans la formule, et **résoudre** l'équation obtenue ;
 - **vérifier** que chaque solution appartient au domaine, ou au domaine pratique, puis qu'elle redonne bien la sortie de départ ; s'il reste plusieurs solutions, la fonction n'a pas de réciproque sans restreindre son domaine ;
 - **inverser** la formule, quand l'entrée cherchée change d'une donnée à l'autre, pour obtenir la fonction réciproque.
 
-La seconde est la méthode pour **étudier le signe d'une fonction** :
-
-- **déterminer** le domaine, puis **résoudre** $f(x)=0$ pour trouver les racines ;
-- **placer** sur une droite les racines et les valeurs exclues du domaine, puis **évaluer** le signe de $f$ en un point de chaque intervalle ;
-- **conclure** en indiquant, intervalle par intervalle, où $f$ est positive et où elle est négative.
-
-Cette méthode rejoint ta **[boîte à outils](../methode.qmd)** — elle resservira à chaque séance. Tu y
-trouveras le corrigé de quelques méthodes issues des exercices de la séance 5.
+Ces méthodes rejoignent ta **[boîte à outils](../methode.qmd)** : elles resserviront à chaque séance. Tu y
+trouveras aussi quatre autres méthodes de la séance 5 : déterminer le domaine d'une fonction, lire images et
+antécédents sur un graphe, étudier le signe d'une fonction, et calculer une fonction réciproque.
 
 ## Auto-évaluation — coche ce que tu sais faire
 
 Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **objectifs** de la séance.
 
-- [ ] **O1** — ……… .
-- [ ] **O2** — ……… .
-- [ ] **O3** — ……… .
+- [ ] **O1** — Modéliser une relation simple par une fonction, et interpréter son domaine, son image, ses préimages, ses racines, ses variations, ses paramètres et son graphe.
+- [ ] **O2** — Réaliser l'étude de signe d'une fonction.
+- [ ] **O3** — Comprendre et appliquer les notions de fonction, de croissance, de décroissance, d'extrema locaux et globaux, d'injectivité, de surjectivité et de bijectivité.
+- [ ] **O4** — Passer d'un registre à un autre pour une même relation.
+- [ ] **O5** — Composer des fonctions et en déduire leur effet global.
+- [ ] **O6** — Identifier quand une fonction réciproque existe, la calculer et l'exploiter.
+- [ ] **O7** — Lire sur un graphe les racines, le signe, les variations et les extrema.
 
 ::: {.callout-important appearance="simple"}
 Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la
