@@ -878,7 +878,6 @@ On veut relier l'implication aux connecteurs $\lnot$, $\lor$, $\land$.
 
 ## Où aller selon la difficulté {#nav-trig}
 
-Demande d'abord quel énoncé pose problème, puis choisis le chemin.
 
 <table class="deroule" style="font-size:.7em"><thead><tr><th>Difficulté</th><th>Slide</th><th>Exercices (séance 4)</th></tr></thead><tbody>
 <tr><td class="ph">Angle aigu avec l'axe des $x$ et angles associés</td><td><a href="#/trig-1">Les angles associés</a></td><td><a href="#/ex-s4-R7">R.7</a> · <a href="#/ex-s4-R6">R.6</a></td></tr>
