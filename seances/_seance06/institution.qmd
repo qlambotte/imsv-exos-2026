@@ -1,0 +1,35 @@
+---
+title: "Institutionnalisation — méthode & auto-évaluation"
+subtitle: "Séance 6 · ce qu'on retient"
+---
+
+## Les méthodes qu'on dégage ensemble
+
+À la fin du socle, la confrontation puis la correction de l'exercice S.7 dégagent la méthode pour **résoudre une équation exponentielle** :
+
+- **isoler** la puissance dans un membre de l'équation, en divisant par le facteur qui la multiplie ;
+- **écrire** la puissance avec la base $e$ si sa base est différente, grâce à $a^{u} = e^{u \ln a}$ ;
+- **appliquer** le logarithme népérien aux deux membres, qui sont strictement positifs, puis **isoler** l'inconnue ;
+- **vérifier** le résultat en le remettant dans l'équation et en l'encadrant par des puissances entières, puis **conclure** par une phrase avec l'unité.
+
+En fin de séance, on formalise la méthode pour **déterminer les paramètres d'un modèle périodique**, utilisée dans l'exercice de transfert T.2 :
+
+- **lire** l'amplitude, la valeur centrale et la période dans les données ;
+- **calculer** $\omega$ à partir de la période, puis $\varphi$ à partir de l'instant d'un maximum ou d'un minimum ;
+- **vérifier** le modèle en calculant ses valeurs en quelques instants remarquables.
+
+Ces méthodes rejoignent ta **[boîte à outils](../methode.qmd)** : elles resserviront à chaque séance. Tu y
+trouveras aussi trois autres méthodes de la séance 6 : reconnaître le type de croissance, lire les paramètres d'un modèle exponentiel, et lire une échelle logarithmique.
+
+## Auto-évaluation — coche ce que tu sais faire
+
+Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **objectifs** de la séance.
+
+- [ ] **O1** — choisir et exploiter un modèle affine, polynomial, exponentiel, logarithmique ou périodique dans une situation élémentaire de sciences de la vie ;
+- [ ] **O2** — interpréter les paramètres des fonctions usuelles ;
+- [ ] **O3** — utiliser le logarithme pour résoudre une équation exponentielle et lire une échelle logarithmique.
+
+::: {.callout-important appearance="simple"}
+Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la
+**remédiation** (une séance chaque semaine pour reprendre les bases).
+:::

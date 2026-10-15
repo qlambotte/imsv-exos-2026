@@ -9,6 +9,9 @@ d'affichage dans le tableau d'accueil (« à relire », « en construction »…
     python3 seance-onoff.py 2 statut "à relire"      # change juste l'étiquette
     python3 seance-onoff.py 2 statut prête           # efface l'étiquette (redevient « en ligne »)
 
+Le dossier des slides (slides/seanceNN <-> slides/_seanceNN) suit le même interrupteur :
+une séance hors ligne n'est ni dans le livre ni dans /slides (visible seulement dans /prof/slides).
+
 L'étiquette est stockée dans _seances-statut.yml. Une séance remise en ligne est prête : `on`
 efface donc son étiquette, sauf avec --garder-statut (utilisé par deploy.sh pour la vue prof,
 qui active toutes les séances en préparation sans perdre leur étiquette).
@@ -57,7 +60,8 @@ if action == "statut":
 
 # --- on/off : renommage + _quarto.yml ---
 YML, MARK = "_quarto.yml", f"#OFF{nn}# "
-paths = [f"seances/seance{nn}", f"seances/methodes/seance{nn}.qmd", f"seances/feuille-seance{nn}.qmd"]
+paths = [f"seances/seance{nn}", f"seances/methodes/seance{nn}.qmd", f"seances/feuille-seance{nn}.qmd",
+         f"slides/seance{nn}"]   # le(s) deck(s) de la séance suivent le même interrupteur
 for p in paths:
     d, b = os.path.split(p); u = os.path.join(d, "_" + b)
     if action == "off" and os.path.exists(p): os.rename(p, u); print(f"hors ligne : {p} -> {u}")

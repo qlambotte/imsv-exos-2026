@@ -67,7 +67,7 @@ Dès qu'il faut savoir où une fonction est positive ou négative, ou résoudre 
 2. Résous l'équation $f(x) = 0$ dans le domaine : les solutions sont les racines.
 3. Place sur une droite les racines et les valeurs exclues du domaine : elles découpent le domaine en intervalles sur lesquels le signe de $f$ est constant.
 4. Choisis un point dans chaque intervalle et évalue le signe de $f$ en ce point, ou le signe de chaque facteur quand la formule est un produit.
-5. Écris un tableau de signes avec les racines, les valeurs exclues et les signes de $f$ sur chaque intervalle.
+5. Écris un tableau de signes avec les racines, les valeurs exclues et les signes de $f$ sur chaque intervalle ; le symbole $\nexists$ indique que $f$ n'est pas définie en une valeur exclue.
 6. Conclus par une phrase qui donne, intervalle par intervalle, où $f$ est positive et où elle est négative.
 :::
 
@@ -78,7 +78,7 @@ Le dénominateur s'annule en $x = -2$, donc $\mathit{Dom}(f) = \mathbb{R} \setmi
 
 | $x$ | $]-\infty,\,-2[$ | $-2$ | $]-2,\,1[$ | $1$ | $]1,\,+\infty[$ |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| signe de $f(x)$ | $+$ | exclu | $-$ | $0$ | $+$ |
+| signe de $f(x)$ | $+$ | $\nexists$ | $-$ | $0$ | $+$ |
 
 La fonction $f$ est donc strictement positive sur $]-\infty,\,-2[$ et sur $]1,\,+\infty[$, strictement négative sur $]-2,\,1[$, et nulle en $1$. Elle change de signe en $-2$ sans s'y annuler, car $-2$ n'appartient pas au domaine.
 :::

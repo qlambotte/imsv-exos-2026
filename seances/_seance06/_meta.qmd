@@ -1,0 +1,5 @@
+::: {.seance-meta}
+**Thème.** Comparaison des croissances, polynômes, fonctions racines, exponentielle (temps de doublement, demi-vie, formes $a^t$ et $e^{kt}$), logarithme et échelles logarithmiques (pH, décibels), fonctions trigonométriques comme modèles périodiques.
+
+**Théorie associée :** IMSV-6, *« Modèles polynomiaux, exponentiels, logarithmiques et périodiques »*.
+:::

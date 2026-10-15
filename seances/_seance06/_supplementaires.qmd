@@ -1,0 +1,331 @@
+<!-- RENFORCEMENT : variations du socle (même compétence, entraînement en plus).
+     Faisable SANS calculatrice ; valeurs différentes du socle.
+     Numéro AUTOMATIQUE (catégorie Renforcement -> R.1, R.2…). Mêmes aides que le socle : Indice 1 (théorie), Indice 2 (question),
+     Indice 3 (étape), chacun avec une ligne par sous-question, puis Solution et Piège. -->
+
+::: {.callout-note appearance="simple"}
+Ces exercices restent **dans les objectifs** de la séance : à faire une fois le socle et le transfert
+bouclés, à la maison : ils ne sont pas prévus pendant la séance.
+:::
+
+### Renforcement — le socle, un cran plus loin
+
+::: {.callout-caution .exo title="Exercice|Renforcement|1|O1"}
+Le tableau suivant donne les valeurs de quatre fonctions $A$, $B$, $C$ et $D$ pour quatre valeurs du temps $t$.
+
+| $t$ | $0$ | $1$ | $2$ | $3$ |
+|:---:|:---:|:---:|:---:|:---:|
+| $A(t)$ | $5$ | $8$ | $11$ | $14$ |
+| $B(t)$ | $5$ | $10$ | $20$ | $40$ |
+| $C(t)$ | $81$ | $27$ | $9$ | $3$ |
+| $D(t)$ | $0$ | $1$ | $4$ | $9$ |
+
+(a) Pour chaque fonction, calcule les trois différences successives $f(t+1) - f(t)$. Pour les fonctions $A$, $B$ et $C$, calcule aussi les trois quotients successifs $\dfrac{f(t+1)}{f(t)}$.
+(b) Écris pour chaque fonction si un modèle affine, un modèle exponentiel ou aucun de ces deux modèles convient, en justifiant par une phrase qui utilise les résultats de (a).
+(c) Écris une formule pour $A(t)$, $B(t)$ et $C(t)$. Écris ensuite une formule simple pour $D(t)$ qui vérifie les quatre colonnes du tableau.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Comparaison qualitative des croissances* pour (a) et (b), *Exponentielle : facteur multiplicatif constant* pour (b) et (c), et *Polynômes* pour la formule de $D$ en (c). La méthode est la fiche **Reconnaître le type de croissance**.
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Pour quelle fonction les différences successives sont-elles toutes égales, et pour quelle fonction les quotients successifs le sont-ils ?
+(b) Quelle propriété de ces différences ou de ces quotients caractérise un modèle affine, et laquelle caractérise un modèle exponentiel ?
+(c) Quelles sont la valeur initiale et la valeur constante de la différence ou du quotient pour chaque fonction ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Soustrais deux valeurs consécutives de chaque ligne, puis divise deux valeurs consécutives des lignes $A$, $B$ et $C$.
+(b) Classe chaque fonction selon que ses différences sont constantes, ou que ses quotients sont constants, ou qu'aucune des deux propriétés n'est vérifiée.
+(c) Écris les formules $b + m\,t$ et $b \cdot a^{t}$ avec les nombres lus en (a), puis cherche pour $D$ une formule qui relie chaque valeur de $t$ à la valeur de $D(t)$ du tableau.
+
+## Solution
+
+On reconnaît un modèle à partir des différences successives, constantes pour un modèle affine, et des quotients successifs, constants pour un modèle exponentiel.
+
+(a) On calcule les différences et les quotients de deux colonnes consécutives.
+
+    | | différences | quotients |
+    |:---:|:---:|:---:|
+    | $A$ | $3$, $3$, $3$ | $\tfrac{8}{5}$, $\tfrac{11}{8}$, $\tfrac{14}{11}$ |
+    | $B$ | $5$, $10$, $20$ | $2$, $2$, $2$ |
+    | $C$ | $-54$, $-18$, $-6$ | $\tfrac{1}{3}$, $\tfrac{1}{3}$, $\tfrac{1}{3}$ |
+    | $D$ | $1$, $3$, $5$ | |
+
+(b) Un modèle affine ajoute le même nombre à chaque pas, donc ses différences sont constantes. Un modèle exponentiel multiplie par le même nombre à chaque pas, donc ses quotients sont constants. La fonction $A$ a des différences constantes, donc un modèle affine convient. Les fonctions $B$ et $C$ ont des quotients constants, donc un modèle exponentiel convient. La fonction $D$ a des différences $1$, $3$ et $5$ qui ne sont pas constantes, et son premier quotient n'est pas défini, car $D(0) = 0$ : aucun des deux modèles ne convient.
+
+(c) On écrit chaque formule avec la valeur initiale et la différence ou le quotient constant.
+
+    1. La fonction $A$ a pour valeur initiale $5$ et pour différence constante $3$, donc $A(t) = 5 + 3t$.
+    2. La fonction $B$ a pour valeur initiale $5$ et pour quotient constant $2$, donc $B(t) = 5 \cdot 2^{t}$.
+    3. La fonction $C$ a pour valeur initiale $81$ et pour quotient constant $\tfrac{1}{3}$, donc $C(t) = 81 \cdot \left(\tfrac{1}{3}\right)^{t}$.
+    4. Les valeurs de $D$ sont les carrés $0$, $1$, $4$ et $9$ des nombres $0$, $1$, $2$ et $3$, donc $D(t) = t^{2}$.
+
+    Contrôle : $C(2) = 81 \cdot \tfrac{1}{9} = 9$ et $D(3) = 9$, ce qui correspond au tableau.
+
+## Piège
+
+Une erreur fréquente consiste à conclure qu'une fonction est exponentielle parce que ses valeurs augmentent de plus en plus vite. Elle est tentante parce que c'est ce que fait une exponentielle, mais elle est fausse : la fonction $D$ augmente de plus en plus vite, avec des différences $1$, $3$ et $5$, sans avoir de quotients constants. Il faut vérifier que les quotients sont égaux.
+
+Une autre erreur consiste à écrire $A(t) = 5 \cdot 3^{t}$ à cause de la différence $3$. Elle est tentante parce que le nombre $3$ apparaît dans les calculs, mais elle est fausse : une différence constante donne un terme ajouté à chaque pas, donc $A(t) = 5 + 3t$, alors que $5 \cdot 3^{t}$ vaut $15$ pour $t = 1$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
+Soit le polynôme $q$ défini par $q(x) = (x + 3)(x - 1)(x - 2)$.
+
+(a) Écris $q(x)$ sous forme développée, puis écris le degré de $q$ et le coefficient du terme de plus haut degré.
+(b) Écris les racines de $q$.
+(c) Étudie le signe de $q$ dans un tableau de signes qui contient une ligne pour chacun des trois facteurs et une ligne pour $q(x)$. Écris ensuite les intervalles sur lesquels $q(x) \geq 0$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Polynômes* pour (a) et (b), et *Racines et étude de signe* de la séance 5 pour (b) et (c).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Quelle est la puissance de $x$ la plus élevée qui apparaît quand on développe le produit ?
+(b) Quelle condition doit vérifier un des trois facteurs pour que le produit soit nul ?
+(c) Quel est le signe de chaque facteur dans chaque intervalle délimité par les racines ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Développe d'abord $(x + 3)(x - 1)$, puis multiplie le résultat par $x - 2$.
+(b) Annule chacun des trois facteurs et résous les trois équations obtenues.
+(c) Range les racines dans l'ordre croissant, remplis une ligne par facteur, puis applique la règle des signes d'un produit à chaque colonne.
+
+## Solution
+
+On développe pour lire le degré, on annule chaque facteur pour trouver les racines, puis on étudie le signe des facteurs pour en déduire celui du produit.
+
+(a) On développe en deux temps.
+
+    1. On développe les deux premiers facteurs : $(x + 3)(x - 1) = x^2 - x + 3x - 3 = x^2 + 2x - 3$.
+    2. On multiplie le résultat par $x - 2$ : $q(x) = (x^2 + 2x - 3)(x - 2) = x^3 - 2x^2 + 2x^2 - 4x - 3x + 6 = x^3 - 7x + 6$.
+
+    Le degré de $q$ est $3$ et le coefficient du terme de plus haut degré est $1$.
+
+(b) Un produit est nul si et seulement si l'un de ses facteurs est nul : $x + 3 = 0$, ou $x - 1 = 0$, ou $x - 2 = 0$. Les racines de $q$ sont donc $-3$, $1$ et $2$.
+
+(c) On étudie le signe de chaque facteur de part et d'autre de sa racine, puis on applique la règle des signes d'un produit : le produit est positif quand le nombre de facteurs négatifs est pair.
+
+    | $x$ | $]-\infty,\,-3[$ | $-3$ | $]-3,\,1[$ | $1$ | $]1,\,2[$ | $2$ | $]2,\,+\infty[$ |
+    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+    | signe de $x + 3$ | $-$ | $0$ | $+$ | | $+$ | | $+$ |
+    | signe de $x - 1$ | $-$ | | $-$ | $0$ | $+$ | | $+$ |
+    | signe de $x - 2$ | $-$ | | $-$ | | $-$ | $0$ | $+$ |
+    | signe de $q(x)$ | $-$ | $0$ | $+$ | $0$ | $-$ | $0$ | $+$ |
+
+    Contrôle : $q(0) = 3 \cdot (-1) \cdot (-2) = 6 > 0$, ce qui correspond à la colonne $]-3,\,1[$.
+
+    Les colonnes de $q(x)$ qui contiennent $+$ ou $0$ donnent $q(x) \geq 0$ sur $[-3,\,1]$ et sur $[2,\,+\infty[$.
+
+## Piège
+
+Une erreur fréquente consiste à développer $(x + 3)(x - 1)(x - 2)$ en oubliant un terme croisé, par exemple en écrivant $x^3 + 6$. Elle est tentante parce que l'on multiplie seulement les termes de même rang, mais elle est fausse : chaque terme d'un facteur doit être multiplié par chaque terme des autres facteurs, ce qui fait apparaître les termes en $x^2$ et en $x$.
+
+Une autre erreur consiste à oublier les racines dans la réponse de (c) et à écrire $]-3,\,1[$ et $]2,\,+\infty[$. Elle est tentante parce que ce sont les intervalles où $q$ est strictement positive, mais elle est fausse : l'inégalité est large, donc les racines $-3$, $1$ et $2$ appartiennent à l'ensemble des solutions.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
+Le technétium-99m est un radioélément utilisé en imagerie médicale. Sa demi-vie est de six heures.[^tc-r3] On note $N_0$ le nombre d'atomes de technétium-99m d'un échantillon à l'instant $t = 0$. Le nombre d'atomes restants à l'instant $t$ suit le modèle $N(t) = N_0 \cdot 2^{-t/6}$, où $t$ est le temps en heures.
+
+[^tc-r3]: Washington State Department of Health, Office of Radiation Protection, « Technetium-99m (99mTc) », Fact Sheet 320-083, juillet 2002 : « It has a half-life of six hours ».
+
+(a) Écris la fraction de $N_0$ qui reste après $18$ heures.
+(b) Écris $N(t)$ sous la forme $N_0\,e^{-kt}$, en donnant la valeur exacte du nombre $k$ avec son unité.
+(c) Calcule l'instant $t$ pour lequel il reste $\tfrac{N_0}{32}$ atomes, en heures.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Temps de doublement et demi-vie* pour (a) et (c), et *Lien entre les formes $a^t$ et $e^{kt}$* pour (b).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Combien de demi-vies de six heures contiennent $18$ heures ?
+(b) Comment écrit-on la puissance $2^{u}$ à l'aide de la base $e$ ?
+(c) Quelle puissance de $2$ est égale à $\tfrac{1}{32}$ ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Remplace $t$ par $18$ dans l'exposant $-\tfrac{t}{6}$ et calcule la puissance de $2$.
+(b) Écris $2^{-t/6}$ avec la base $e$, puis identifie le coefficient de $t$ dans l'exposant.
+(c) Écris l'équation $2^{-t/6} = \tfrac{1}{32}$, écris $\tfrac{1}{32}$ comme une puissance de $2$, puis compare les exposants.
+
+## Solution
+
+On utilise la forme $N_0 \cdot 2^{-t/6}$ d'une décroissance exponentielle de demi-vie six heures, puis le lien avec la forme $e^{-kt}$.
+
+(a) Pour $t = 18$, l'exposant vaut $-\tfrac{18}{6} = -3$, donc $\dfrac{N(18)}{N_0} = 2^{-3} = \dfrac{1}{8}$. Après $18$ heures, il reste donc un huitième de $N_0$, ce qui correspond à trois demi-vies successives.
+
+(b) On écrit la puissance de $2$ avec la base $e$.
+
+    1. Le lien entre les deux formes est $2^{u} = e^{u \ln 2}$ pour tout nombre $u$.
+    2. Avec $u = -\tfrac{t}{6}$, on obtient $2^{-t/6} = e^{-(t/6)\ln 2} = e^{-(\ln 2/6)\,t}$.
+
+    On a donc $N(t) = N_0\,e^{-kt}$ avec $k = \dfrac{\ln 2}{6}$ par heure.
+
+(c) On cherche l'instant $t$ tel que $N(t) = \dfrac{N_0}{32}$.
+
+    1. On écrit l'équation $N_0 \cdot 2^{-t/6} = \dfrac{N_0}{32}$ et on divise les deux membres par $N_0$, qui est strictement positif : $2^{-t/6} = \dfrac{1}{32}$.
+    2. On écrit $\tfrac{1}{32} = 2^{-5}$, car $2^5 = 32$, donc $2^{-t/6} = 2^{-5}$.
+    3. La fonction $2^x$ est strictement croissante, donc deux puissances de $2$ égales ont le même exposant : $-\tfrac{t}{6} = -5$, donc $t = 30$.
+
+    Il reste donc un trente-deuxième de $N_0$ au bout de $30$ heures, soit cinq demi-vies de six heures.
+
+## Piège
+
+En (c), une erreur fréquente consiste à écrire $t = \dfrac{6}{32}$ ou $t = 6 \cdot 32 = 192$ heures. Elle est tentante parce que les nombres $6$ et $32$ figurent dans le problème et que l'on cherche à les combiner par une opération simple, mais elle est fausse : le nombre $32$ est une puissance de $2$, qui compte des demi-vies, et non une durée à multiplier par $6$. Il faut compter le nombre de demi-vies, qui est $5$, puis multiplier par six heures.
+
+En (b), une autre erreur consiste à écrire $k = \ln 2$ en oubliant le facteur $\tfrac{1}{6}$. Elle est tentante parce que $\ln 2$ apparaît quand on change de base, mais elle est fausse : l'exposant de $2^{-t/6}$ est $-\tfrac{t}{6}$, donc le coefficient de $t$ est $\tfrac{\ln 2}{6}$ et non $\ln 2$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O3"}
+(a) Résous l'équation $3\,e^{2x} = 12$. Écris la solution sous forme exacte.
+(b) Résous l'équation $2 \cdot 5^{t} = 50$. Écris la solution sous la forme d'un nombre entier.
+(c) Résous l'équation $\ln(x + 1) = 2$. Écris la solution sous forme exacte, puis vérifie qu'elle appartient au domaine de l'équation.
+(d) Le niveau sonore $L$ d'un son d'intensité $I$ est donné par $L = 10\log_{10}\dfrac{I}{I_0}$, où $I_0$ est l'intensité de référence. Écris le quotient $\dfrac{I}{I_0}$ sous la forme d'une puissance de $10$ pour un son de niveau $60$ dB.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Logarithme comme fonction réciproque* pour (a), (b) et (c), et *Échelles logarithmiques : décibels* pour (d). La méthode de (a) et (b) est la fiche **Résoudre une équation exponentielle**.
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Quelle expression faut-il isoler dans un membre avant d'appliquer le logarithme népérien ?
+(b) Quelle puissance de $5$ est égale au nombre obtenu après avoir isolé $5^{t}$ ?
+(c) Quelle fonction défait le logarithme népérien, et pour quels nombres $x$ l'expression $\ln(x + 1)$ existe-t-elle ?
+(d) Quelle est la valeur du logarithme décimal de $\tfrac{I}{I_0}$ quand $L = 60$ ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Divise les deux membres par $3$, puis applique le logarithme népérien aux deux membres et divise par $2$.
+(b) Divise les deux membres par $2$, puis écris le résultat comme une puissance de $5$ et compare les exposants.
+(c) Applique l'exponentielle de base $e$ aux deux membres, isole $x$, puis compare la valeur obtenue avec la condition $x + 1 > 0$.
+(d) Divise la formule par $10$, puis applique la puissance de $10$ aux deux membres.
+
+## Solution
+
+Dans chaque équation, on isole d'abord l'expression qui contient l'inconnue, puis on applique la fonction réciproque.
+
+(a) On résout l'équation en quatre étapes.
+
+    1. On divise les deux membres par $3$ pour isoler l'exponentielle : $e^{2x} = 4$.
+    2. Les deux membres sont strictement positifs, donc on applique le logarithme népérien aux deux membres : $2x = \ln 4$.
+    3. On divise par $2$ : $x = \dfrac{\ln 4}{2}$.
+
+    Contrôle : $3\,e^{2x} = 3\,e^{\ln 4} = 3 \cdot 4 = 12$.
+
+(b) On isole la puissance en divisant les deux membres par $2$ : $5^{t} = 25$. Comme $25 = 5^2$, on a $5^{t} = 5^2$, et la fonction $5^x$ est strictement croissante, donc deux puissances de $5$ égales ont le même exposant : $t = 2$. Contrôle : $2 \cdot 5^2 = 50$.
+
+(c) L'expression $\ln(x + 1)$ n'existe que si $x + 1 > 0$, c'est-à-dire si $x > -1$. On applique l'exponentielle de base $e$ aux deux membres : $x + 1 = e^{2}$, donc $x = e^{2} - 1$. Comme $e^{2} > 0$, on a $x = e^{2} - 1 > -1$, donc la solution appartient au domaine.
+
+(d) On divise la formule par $10$ : $\log_{10}\dfrac{I}{I_0} = \dfrac{L}{10}$. Pour $L = 60$, on obtient $\log_{10}\dfrac{I}{I_0} = 6$. Le logarithme décimal est l'exposant de $10$, donc $\dfrac{I}{I_0} = 10^{6}$. Un son de $60$ dB a donc une intensité égale à un million de fois l'intensité de référence.
+
+## Piège
+
+En (a), une erreur fréquente consiste à soustraire $3$ au lieu de diviser par $3$ et à écrire $e^{2x} = 12 - 3 = 9$. Elle est tentante parce que l'on veut « enlever » le nombre qui accompagne l'exponentielle, mais elle est fausse : le nombre $3$ multiplie l'exponentielle, donc on le supprime en divisant les deux membres par $3$, ce qui donne $e^{2x} = 4$.
+
+En (c), une autre erreur consiste à oublier de vérifier le domaine de l'équation. Elle est tentante parce que le calcul donne directement une valeur, mais elle est fausse : une solution n'est acceptable que si elle vérifie $x + 1 > 0$, car sinon $\ln(x + 1)$ n'existe pas.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
+Soit la fonction $f$ définie par $f(x) = 3\sin\!\left(2x - \dfrac{\pi}{2}\right) + 1$.
+
+(a) Écris l'amplitude, la période et l'image de $f$.
+(b) Calcule $f(0)$, $f\!\left(\dfrac{\pi}{4}\right)$ et $f\!\left(\dfrac{\pi}{2}\right)$.
+(c) Écris les transformations qui permettent de passer du graphe de la fonction $\sin$ à celui de $f$. Écris-les dans l'ordre, en indiquant pour chacune le nombre qui la caractérise.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Fonctions trigonométriques comme modèles périodiques*, et plus précisément *Amplitude*, *Périodicité* et *Graphes, domaine et image* pour (a) et (b), et *Translation et changement d'échelle* pour (c).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Quelle est la distance entre la valeur centrale $1$ et le maximum, et par quel nombre faut-il diviser $2\pi$ pour obtenir la période ?
+(b) Quelle est la valeur de l'argument $2x - \tfrac{\pi}{2}$ pour chacune des trois valeurs de $x$ ?
+(c) Comment écrit-on $2x - \tfrac{\pi}{2}$ sous la forme $2(x - \dots)$ ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Repère les nombres $3$, $2$ et $1$ dans la formule de $f$, puis calcule le minimum et le maximum de $f$.
+(b) Remplace $x$ par chaque valeur, calcule l'argument du sinus, puis utilise les valeurs du sinus pour les angles remarquables.
+(c) Écris $f(x) = 3\sin\!\left(2\left(x - \dots\right)\right) + 1$, puis lis dans cette écriture, dans l'ordre, la transformation de l'axe horizontal, puis celle de l'axe vertical.
+
+## Solution
+
+On lit les paramètres de $f(x) = A\sin(\omega x + \varphi) + D$ pour décrire le graphe, puis on évalue la fonction en quelques valeurs.
+
+(a) Dans la formule, on lit $A = 3$, $\omega = 2$, $\varphi = -\tfrac{\pi}{2}$ et $D = 1$. L'amplitude est $A = 3$. La période vaut $\dfrac{2\pi}{\omega} = \dfrac{2\pi}{2} = \pi$. Le sinus varie entre $-1$ et $1$, donc $f$ varie entre $3 \cdot (-1) + 1 = -2$ et $3 \cdot 1 + 1 = 4$, et l'image de $f$ est $[-2,\,4]$.
+
+(b) On remplace $x$ par chaque valeur.
+
+    1. Pour $x = 0$, l'argument vaut $-\tfrac{\pi}{2}$ et $\sin\left(-\tfrac{\pi}{2}\right) = -1$, donc $f(0) = 3 \cdot (-1) + 1 = -2$.
+    2. Pour $x = \tfrac{\pi}{4}$, l'argument vaut $\tfrac{\pi}{2} - \tfrac{\pi}{2} = 0$ et $\sin 0 = 0$, donc $f\left(\tfrac{\pi}{4}\right) = 1$.
+    3. Pour $x = \tfrac{\pi}{2}$, l'argument vaut $\pi - \tfrac{\pi}{2} = \tfrac{\pi}{2}$ et $\sin\tfrac{\pi}{2} = 1$, donc $f\left(\tfrac{\pi}{2}\right) = 3 \cdot 1 + 1 = 4$.
+
+    Ces valeurs sont cohérentes avec l'image : $-2$ est le minimum et $4$ est le maximum.
+
+(c) On met $2$ en facteur dans l'argument : $2x - \tfrac{\pi}{2} = 2\left(x - \tfrac{\pi}{4}\right)$, donc $f(x) = 3\sin\!\left(2\left(x - \tfrac{\pi}{4}\right)\right) + 1$. On passe du graphe de $\sin x$ à celui de $f$ par les quatre transformations suivantes, dans cet ordre.
+
+    1. Le changement d'échelle horizontal de facteur $\tfrac{1}{2}$ : le graphe est comprimé horizontalement, ce qui donne $\sin(2x)$ et divise la période par $2$.
+    2. La translation de $\tfrac{\pi}{4}$ vers la droite : cela donne $\sin\left(2\left(x - \tfrac{\pi}{4}\right)\right)$.
+    3. Le changement d'échelle vertical de facteur $3$ : le graphe est étiré verticalement, ce qui multiplie l'amplitude par $3$.
+    4. La translation de $1$ vers le haut.
+
+## Piège
+
+En (c), une erreur fréquente consiste à dire que le graphe est translaté de $\tfrac{\pi}{2}$ vers la droite, parce que le nombre $\tfrac{\pi}{2}$ figure dans la formule. Elle est tentante parce que l'on lit le nombre soustrait sans tenir compte du facteur $2$ de $x$, mais elle est fausse : $2x - \tfrac{\pi}{2} = 2\left(x - \tfrac{\pi}{4}\right)$, donc la translation est de $\tfrac{\pi}{4}$ et non de $\tfrac{\pi}{2}$. Un contrôle le montre, car le sinus vaut $0$ en $x = \tfrac{\pi}{4}$.
+
+En (a), une autre erreur consiste à écrire que la période est $2\pi \cdot 2 = 4\pi$. Elle est tentante parce que le facteur $2$ semble étirer le graphe, mais elle est fausse : multiplier $x$ par $2$ comprime le graphe horizontalement, donc la période est divisée par $2$ et vaut $\pi$.
+
+:::
+:::

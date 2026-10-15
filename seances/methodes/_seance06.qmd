@@ -1,0 +1,20 @@
+---
+title: "Séance 6 — Modèles polynomiaux, exponentiels, logarithmiques et périodiques"
+description: "Modèles polynomiaux, exponentiels, logarithmiques et périodiques"
+order: 6
+nom: "[Modèles polynomiaux, exponentiels, logarithmiques et périodiques](methodes/seance06.html)"
+correction: "✅ en ligne"
+filters:
+  - ../../methode.lua
+---
+
+::: {.content-visible when-format="html"}
+::: {.dl}
+<details class="dl-menu">
+<summary>Télécharger (PDF)</summary>
+<a href="../../pdf/feuille-seance06.pdf" download>Feuille à compléter — séance 6 (PDF)</a>
+</details>
+:::
+:::
+
+{{< include _corrige-seance06.qmd >}}

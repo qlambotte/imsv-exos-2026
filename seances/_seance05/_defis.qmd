@@ -10,7 +10,7 @@ Les défis sont **optionnels**. Ils s'adressent à celles et ceux qui maîtrisen
 :::
 
 ::: {.callout-caution .exo title="Exercice|Défi|3|O5"}
-Soient les fonctions $f$ et $g$ définies par $f(x) = \dfrac{x + 1}{x - 1}$ et $g(x) = \sqrt{x}$, et soit $h = g \circ f$. Détermine le domaine de $h$ et l'image de $h$. Justifie ensuite que $h$ admet une réciproque, puis donne l'expression de $h^{-1}$ et son domaine. Tu peux utiliser la notation $A \setminus B$ pour écrire un ensemble $A$ privé des éléments de l'ensemble $B$.
+Soient les fonctions $f$ et $g$ définies par $f(x) = \dfrac{x + 1}{x - 1}$ et $g(x) = \sqrt{x}$, et soit $h = g \circ f$. Détermine le domaine de $h$ et l'image de $h$. Justifie ensuite que $h$ admet une réciproque, puis donne l'expression de $h^{-1}$ et son domaine. Tu peux utiliser la notation $A \setminus B$ pour écrire un ensemble $A$ privé des éléments de l'ensemble $B$, et le symbole $\cup$ pour écrire la réunion de deux intervalles.
 :::
 
 ::: {.aides}
@@ -22,7 +22,7 @@ Détermine d'abord le domaine, puis étudie les valeurs de $f(x)$ séparément s
 
 ## Réponse
 
-Le domaine de $h$ est $\mathbb{R} \setminus\, ]-1,\,1]$, l'image de $h$ est $[0,\,+\infty[\, \setminus \{1\}$, et la réciproque est la fonction $h^{-1}$ de domaine $[0,\,+\infty[\, \setminus \{1\}$ définie par $h^{-1}(x) = \dfrac{x^2 + 1}{x^2 - 1}$.
+Le domaine de $h$ est $\mathbb{R} \setminus\, ]-1,\,1]$, c'est-à-dire $]-\infty,\,-1] \cup\, ]1,\,+\infty[$, l'image de $h$ est $[0,\,+\infty[\, \setminus \{1\}$, et la réciproque est la fonction $h^{-1}$ de domaine $[0,\,+\infty[\, \setminus \{1\}$ définie par $h^{-1}(x) = \dfrac{x^2 + 1}{x^2 - 1}$.
 
 :::
 :::

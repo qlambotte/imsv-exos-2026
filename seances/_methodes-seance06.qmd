@@ -1,0 +1,141 @@
+<!-- Cartes de méthode — SÉANCE 6 (Modèles polynomiaux, exponentiels, logarithmiques et périodiques).
+     Fragment sans en-tête : inclus par la page methodes/seance06.qmd (site, correctif)
+     et par build-boite.sh pour le PDF « méthodes » (une méthode par page).
+     Mise en forme par le filtre methode.lua. Calc-free, notation du cours.
+     Les titres et objectifs (titre="…", obj="…") alimentent AUSSI la feuille à compléter
+     (feuille-auto.py) : ne les écris qu'ici. Pas de figure : build-boite.sh ne copie que ce fragment.
+     Les exemples sont différents des exercices de la séance. -->
+
+::: {.methode obj="O1" titre="Reconnaître le type de croissance"}
+
+::: {.quand}
+Dès qu'une grandeur est donnée par un tableau de valeurs à pas régulier et qu'il faut choisir un modèle.
+:::
+
+::: {.etapes}
+1. Vérifie que les valeurs de la variable sont régulièrement espacées.
+2. Calcule les différences successives. Si elles sont toutes égales, le modèle est affine, de la forme $b + m\,t$.
+3. Calcule les quotients successifs, si aucune valeur n'est nulle. S'ils sont tous égaux, le modèle est exponentiel, de la forme $b \cdot a^{t}$, où $a$ est la valeur du quotient.
+4. Si ni les différences ni les quotients ne sont constants, compare la vitesse de croissance du tableau à celle d'un polynôme, d'une racine et d'un logarithme.
+5. Écris la formule avec les nombres lus, puis vérifie-la sur toutes les colonnes du tableau.
+:::
+
+::: {.exemple}
+Soit une fonction $f$ dont le tableau de valeurs est le suivant.
+
+| $x$ | $0$ | $1$ | $2$ | $3$ |
+|:---:|:---:|:---:|:---:|:---:|
+| $f(x)$ | $4$ | $6$ | $9$ | $13{,}5$ |
+
+Les différences successives valent $2$, $3$ et $4{,}5$, donc elles ne sont pas constantes et le modèle n'est pas affine. Les quotients successifs valent $\tfrac{6}{4} = 1{,}5$, $\tfrac{9}{6} = 1{,}5$ et $\tfrac{13{,}5}{9} = 1{,}5$, donc ils sont constants et le modèle est exponentiel avec $a = 1{,}5$ et $b = f(0) = 4$. On écrit $f(x) = 4 \cdot 1{,}5^{x}$, et on vérifie sur la dernière colonne : $4 \cdot 1{,}5^3 = 4 \cdot 3{,}375 = 13{,}5$.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à conclure d'après les deux premières colonnes seulement. Elle est tentante parce que deux valeurs vérifient toujours un modèle affine et un modèle exponentiel, mais elle est fausse : il faut calculer toutes les différences et tous les quotients du tableau, car un seul écart suffit à exclure un modèle.
+:::
+
+:::
+
+::: {.methode obj="O2" titre="Lire les paramètres d'un modèle exponentiel"}
+
+::: {.quand}
+Dès qu'une grandeur est donnée par une formule de la forme $b \cdot a^{t/T}$ ou $b\,e^{kt}$ et qu'il faut l'interpréter ou changer de forme.
+:::
+
+::: {.etapes}
+1. Identifie la valeur initiale $b$ : c'est la valeur de la grandeur pour $t = 0$.
+2. Compare la base $a$ au nombre $1$ : si $a > 1$, la grandeur croît, et si $0 < a < 1$, elle décroît.
+3. Cherche la durée $T$ qui rend l'exposant égal à $1$ : c'est la durée par laquelle la grandeur est multipliée par $a$, donc le temps de doublement si $a = 2$ et la demi-vie si $a = \tfrac{1}{2}$.
+4. Pour passer à la forme $e^{kt}$, écris $a^{u} = e^{u \ln a}$ avec l'exposant de la formule, puis identifie le coefficient de $t$ : c'est $k$.
+5. Contrôle le signe de $k$ : il est positif pour une croissance et négatif pour une décroissance.
+:::
+
+::: {.exemple}
+Soit une grandeur $A(t) = 90 \cdot 3^{t/2}$, où $t$ est exprimé en jours.
+
+La valeur initiale est $b = 90$. La base $3$ est supérieure à $1$, donc la grandeur croît. L'exposant $\tfrac{t}{2}$ vaut $1$ pour $t = 2$, donc la grandeur est multipliée par $3$ tous les $2$ jours. Pour changer de forme, on écrit $3^{t/2} = e^{(t/2)\ln 3} = e^{(\ln 3/2)\,t}$, donc $A(t) = 90\,e^{kt}$ avec $k = \dfrac{\ln 3}{2}$ par jour. Ce nombre est positif, ce qui correspond à une croissance.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à écrire $k = \ln 3$ en oubliant le facteur de l'exposant. Elle est tentante parce que $\ln 3$ est le nombre qui apparaît quand on change de base, mais elle est fausse : l'exposant est $\tfrac{t}{2}$ et non $t$, donc le coefficient de $t$ est $\tfrac{\ln 3}{2}$.
+:::
+
+:::
+
+::: {.methode obj="O3" titre="Résoudre une équation exponentielle"}
+
+::: {.quand}
+Dès que l'inconnue figure dans un exposant et qu'il faut la calculer, par exemple pour trouver le temps nécessaire pour atteindre une valeur donnée.
+:::
+
+::: {.etapes}
+1. Isole la puissance dans un membre de l'équation : soustrais les termes ajoutés, puis divise par le facteur qui la multiplie.
+2. Si les deux membres s'écrivent comme des puissances de la même base, compare directement les exposants et passe à l'étape 5.
+3. Sinon, écris la puissance avec la base $e$ grâce à $a^{u} = e^{u \ln a}$, puis vérifie que les deux membres sont strictement positifs.
+4. Applique le logarithme népérien aux deux membres, puis isole l'inconnue en divisant par le coefficient qui la multiplie.
+5. Vérifie le résultat en le remettant dans l'équation, ou en l'encadrant entre deux puissances entières.
+6. Conclus par une phrase qui donne l'inconnue avec son unité.
+:::
+
+::: {.exemple}
+Soit l'équation $7\,e^{-0{,}5\,x} = 3$. On va calculer $x$.
+
+On isole l'exponentielle en divisant les deux membres par $7$ : $e^{-0{,}5\,x} = \tfrac{3}{7}$. Les deux membres sont strictement positifs, donc on applique le logarithme népérien aux deux membres : $-0{,}5\,x = \ln\tfrac{3}{7}$. On divise par $-0{,}5$ : $x = \dfrac{\ln(3/7)}{-0{,}5} = -2\ln\tfrac{3}{7}$. Contrôle : $\tfrac{3}{7} < 1$, donc $\ln\tfrac{3}{7}$ est négatif et $x$ est positif, ce qui est cohérent avec $e^{-0{,}5\,x} < 1$.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à oublier de diviser par le coefficient de l'inconnue après avoir appliqué le logarithme, et à écrire $x = \ln\tfrac{3}{7}$. Elle est tentante parce que le logarithme semble avoir terminé le travail, mais elle est fausse : l'inconnue est multipliée par $-0{,}5$ dans l'exposant, donc il faut encore diviser par $-0{,}5$. Une autre erreur consiste à appliquer le logarithme avant d'avoir isolé la puissance, ce qui rend le calcul inextricable.
+:::
+
+:::
+
+::: {.methode obj="O3" titre="Lire une échelle logarithmique"}
+
+::: {.quand}
+Dès qu'une grandeur est donnée par un pH, un niveau sonore en décibels ou un autre logarithme, et qu'il faut comparer deux quantités.
+:::
+
+::: {.etapes}
+1. Écris la formule de l'échelle, par exemple $\mathrm{pH} = -\log_{10}[\mathrm{H}^+]$ ou $L = 10\log_{10}\dfrac{I}{I_0}$.
+2. Isole la quantité en appliquant la puissance de $10$ aux deux membres : tu obtiens $[\mathrm{H}^+] = 10^{-\mathrm{pH}}$ ou $I = I_0 \cdot 10^{L/10}$.
+3. Écris le quotient des deux quantités à comparer : les constantes comme $I_0$ disparaissent, et le quotient est une puissance de $10$ dont l'exposant dépend de la différence des niveaux.
+4. Conclus par une phrase : une même différence de niveau donne le même facteur, quel que soit le niveau de départ.
+:::
+
+::: {.exemple}
+On compare un son de niveau $50$ dB et un son de niveau $80$ dB, de formule $L = 10\log_{10}\dfrac{I}{I_0}$.
+
+On isole l'intensité : $I = I_0 \cdot 10^{L/10}$. Le quotient des intensités est $\dfrac{I_{80}}{I_{50}} = \dfrac{I_0 \cdot 10^{8}}{I_0 \cdot 10^{5}} = 10^{3}$, et $I_0$ disparaît. Le son de $80$ dB a donc une intensité $1000$ fois plus grande que celle du son de $50$ dB.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à comparer directement les niveaux et à dire que $80$ dB est $\tfrac{80}{50} = 1{,}6$ fois plus fort que $50$ dB. Elle est tentante parce qu'on traite l'échelle comme une échelle linéaire, mais elle est fausse : le niveau est un logarithme de l'intensité, donc c'est la différence des niveaux qui fixe le facteur sur les intensités.
+:::
+
+:::
+
+::: {.methode obj="O2" titre="Déterminer les paramètres d'un modèle périodique"}
+
+::: {.quand}
+Dès qu'une grandeur périodique est modélisée par $D + A\sin(\omega t + \varphi)$ et que l'on connaît son maximum, son minimum, sa période et l'instant d'un extremum.
+:::
+
+::: {.etapes}
+1. Calcule la valeur centrale $D$ : c'est la moyenne du maximum et du minimum.
+2. Calcule l'amplitude $A$ : c'est la moitié de la différence entre le maximum et le minimum.
+3. Calcule $\omega = \dfrac{2\pi}{\text{période}}$.
+4. Écris que l'argument $\omega t_{\max} + \varphi$ vaut $\tfrac{\pi}{2}$ augmenté d'un multiple de $2\pi$ à l'instant $t_{\max}$ du maximum, puis isole $\varphi$ et garde la valeur qui appartient à l'intervalle demandé.
+5. Vérifie le modèle en calculant sa valeur à l'instant du minimum et à un instant intermédiaire.
+:::
+
+::: {.exemple}
+Une grandeur périodique a pour maximum $6$, atteint en $x = 3$, pour minimum $-2$, et pour période $6$. On cherche $f(x) = D + A\sin(\omega x + \varphi)$ avec $-\pi < \varphi \leq \pi$.
+
+La valeur centrale est $D = \tfrac{6 + (-2)}{2} = 2$ et l'amplitude est $A = \tfrac{6 - (-2)}{2} = 4$. Le nombre $\omega$ vaut $\tfrac{2\pi}{6} = \tfrac{\pi}{3}$. Au maximum, l'argument vaut $\tfrac{\pi}{3}\cdot 3 + \varphi = \pi + \varphi$, et il doit valoir $\tfrac{\pi}{2} + 2k\pi$, donc $\varphi = -\tfrac{\pi}{2} + 2k\pi$ ; la seule valeur de l'intervalle est $\varphi = -\tfrac{\pi}{2}$. On a donc $f(x) = 2 + 4\sin\!\left(\tfrac{\pi}{3}x - \tfrac{\pi}{2}\right)$. Vérification : $f(0) = 2 + 4\sin\left(-\tfrac{\pi}{2}\right) = -2$, qui est le minimum.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à écrire $\varphi = -3$ pour décaler le maximum en $x = 3$. Elle est tentante parce que le décalage se lit comme une abscisse, mais elle est fausse : $\varphi$ est un angle qui s'ajoute à l'argument $\omega x$, donc il faut écrire que l'argument vaut $\tfrac{\pi}{2}$ à l'instant du maximum.
+:::
+
+:::

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # deploy.sh — publie sur gh-pages, depuis la branche courante (main), DEUX vues :
 #   /       = site étudiant  (séances prêtes ; les séances en cours, préfixe « _ », exclues)
-#   /prof/  = vue prof complète (TOUTES les séances activées, y compris celles en cours),
+#   /prof/  = vue prof complète (TOUTES les séances et TOUS les slides activés, y compris ceux en cours),
 #             NON référencée depuis le site étudiant.
 #
 # Une seule branche, pas de bascule à la main. Chaque vue est rendue dans un WORKTREE
@@ -59,15 +59,26 @@ build_view prof   "prof"  # vue prof       -> /prof
 # copiés dans le stage. Volontairement non référencé dans le livre/menus : accessible
 # seulement par lien direct.
 #
+# Deux vues, comme pour le livre :
+#   /slides        = decks des séances EN LIGNE (slides/seanceNN) + remédiations
+#   /prof/slides   = TOUS les decks, y compris ceux hors ligne (slides/_seanceNN, activés
+#                    dans le worktree de rendu uniquement ; ton arbre n'est pas touché)
+#
 # Chaque deck slides/seanceNN/<nom>.qmd ou slides/remed_*/<nom>.qmd (hors fragments _*.qmd) est découvert et
 # rendu automatiquement : ajouter une séance n'implique de toucher ni ce script,
 # ni index.html (regénéré à chaque déploiement par make-index.py).
-build_slides(){
+build_slides(){   # $1 = student|prof ; $2 = dossier de destination
   [ -d "$ROOT/slides" ] || return 0
-  local wt dest="$STAGE/slides" qmd base rel html
+  local mode="$1" dest="$2" wt qmd base rel html d
   wt="$(mktemp -d)"; WTS+=("$wt")
-  echo "→ rendu (slides)"
+  echo "→ rendu (slides, $mode)"
   git worktree add --detach "$wt" HEAD >/dev/null
+  if [ "$mode" = prof ]; then
+    for d in "$wt"/slides/_seance[0-9][0-9]; do
+      [ -d "$d" ] || continue
+      mv "$d" "$wt/slides/${d##*/_}"      # _seanceNN -> seanceNN (worktree seulement)
+    done
+  fi
   (
     cd "$wt/slides"
     for qmd in seance[0-9][0-9]/*.qmd remed_*/*.qmd; do
@@ -89,7 +100,8 @@ build_slides(){
   python3 "$wt/slides/make-index.py" "$dest/index.html"
   git worktree remove --force "$wt"
 }
-build_slides
+build_slides student "$STAGE/slides"
+build_slides prof    "$STAGE/prof/slides"
 
 echo "→ publication gh-pages"
 WGH="$(mktemp -d)"; WTS+=("$WGH")
@@ -108,4 +120,4 @@ echo ""
 echo "✓ Publié :"
 echo "   étudiants : $BASE_URL/"
 echo "   prof      : $BASE_URL/prof/"
-[ -d "$ROOT/slides" ] && echo "   slides    : $BASE_URL/slides"
+[ -d "$ROOT/slides" ] && echo "   slides    : $BASE_URL/slides   (prof : $BASE_URL/prof/slides)"

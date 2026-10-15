@@ -349,8 +349,6 @@ ok([x for x in (-1, 0, 2.5, 3) if 0 <= x < 3] == [0, 2.5], "Échauffement Q2 : 0
 ok((-3 + 3) >= 0 and 1 > -3, "S.5 (a) Dom = [-3, +inf[ privé de 1")
 ok(F(500, 125) == 4 and F(500, 5) == 100 and F(500, 100) == 5, "S.5 (b) t(125) = 4 h ; t(d) = 5 donne d = 100 mL/h")
 
-print(f"Toutes les vérifications passent ({n_ok} contrôles).")
-
 # ---------- R.7 (d) : extrema locaux, extrémités comprises ----------
 h7 = lambda x: x**3 - 3 * x
 xs7 = np.linspace(-2, 2, 400001)
@@ -368,3 +366,5 @@ ok(np.all(ys6[xs6 < -1] < 0) and np.all(ys6[(xs6 > -1) & (xs6 < 0)] > 0), "S.6 s
 ok(np.all(ys6[(xs6 > 0) & (xs6 < 3)] < 0) and np.all(ys6[xs6 > 3] > 0), "S.6 signe sur ]0,3[ et ]3,+inf[")
 ok(g6(-2) == -10 and abs(g6(-0.5) - 3.5) < 1e-12, "S.6 contrôles f(-2) = -10 et f(-1/2) = 7/2")
 ok(set(np.where(ys6 >= 0, 1, 0)[(xs6 > -1) & (xs6 <= 0)]) == {1} and set(np.where(ys6 >= 0, 1, 0)[(xs6 >= 3)]) == {1}, "S.6 f >= 0 sur ]-1,0] et [3,+inf[")
+
+print(f"Toutes les vérifications passent ({n_ok} contrôles).")

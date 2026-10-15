@@ -27,13 +27,13 @@ antécédents sur un graphe, étudier le signe d'une fonction, et calculer une f
 
 Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **objectifs** de la séance.
 
-- [ ] **O1** — Modéliser une relation simple par une fonction, et interpréter son domaine, son image, ses préimages, ses racines, ses variations, ses paramètres et son graphe.
-- [ ] **O2** — Réaliser l'étude de signe d'une fonction.
-- [ ] **O3** — Comprendre et appliquer les notions de fonction, de croissance, de décroissance, d'extrema locaux et globaux, d'injectivité, de surjectivité et de bijectivité.
-- [ ] **O4** — Passer d'un registre à un autre pour une même relation.
-- [ ] **O5** — Composer des fonctions et en déduire leur effet global.
-- [ ] **O6** — Identifier quand une fonction réciproque existe, la calculer et l'exploiter.
-- [ ] **O7** — Lire sur un graphe les racines, le signe, les variations et les extrema.
+- [ ] **O1** — modéliser une relation simple par une fonction et interpréter domaine, image, préimage, racines, variations, paramètres et graphe ;
+- [ ] **O2** — réaliser l'étude de signe d'une fonction ;
+- [ ] **O3** — comprendre et pouvoir appliquer les notions de fonction, croissance, décroissance, extrema locaux et globaux, injectivité, surjectivité et bijectivité ;
+- [ ] **O4** — passer entre les différentes représentations d’une même relation ;
+- [ ] **O5** — savoir composer des fonctions et en déduire leur effet global ;
+- [ ] **O6** — identifier quand une fonction réciproque existe, la calculer et l'exploiter le cas échéant ;
+- [ ] **O7** — lire racines, signe, variations et extrema sur un graphe ;
 
 ::: {.callout-important appearance="simple"}
 Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la
