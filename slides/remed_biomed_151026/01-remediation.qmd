@@ -94,7 +94,7 @@ format:
 **Pose tes questions, anonymement**
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : XELAEPI
 :::
 ::::
 
@@ -122,7 +122,7 @@ Code : À COMPLÉTER
 **Ouvre le Wooclap, réponds seul·e**
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : SDBMMIA
 :::
 ::::
 

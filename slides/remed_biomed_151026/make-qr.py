@@ -13,8 +13,8 @@ from pathlib import Path
 A_COMPLETER = "À COMPLÉTER"
 
 CODES = {
-    "qr-mur":     "https://app.wooclap.com/XELAEPI?from=instruction-slide",   # mur de questions
-    "qr-logique": "https://app.wooclap.com/SDBMMIA?from=instruction-slide",   # QCM Wooclap « logique »
+    "qr-mur":     "XELAEPI",   # mur de questions
+    "qr-logique": "SDBMMIA",   # QCM Wooclap « logique »
 }
 OUT = Path(__file__).parent / "img"
 OUT.mkdir(exist_ok=True)
