@@ -6,61 +6,57 @@ fais la synthèse à voix haute. Ce document donne, pour chaque question, ce ver
 
 ---
 
-## Retrouver l'entrée à partir de la sortie
+## Calculer une fonction réciproque
 
-### Question d'ouverture [O1]
+### Question d'ouverture [O6]
 
 **Question à coller :**
-> Avec tes mots : comment retrouves-tu la valeur de départ d'une formule quand tu connais le résultat ?
+> Avec tes mots : comment obtiens-tu la formule de la fonction qui « défait » une fonction donnée ?
 
-**Cible de synthèse :** on remplace la sortie par sa valeur dans la formule, puis on **défait les
-opérations dans l'ordre inverse**. Les réponses « on essaie des valeurs » sont l'occasion de dire que
-la méthode évite de tâtonner.
+**Cible de synthèse :** on pose $y = f(x)$, on isole $x$, puis on échange les noms $x$ et $y$.
+Si des réponses évoquent « une condition sur la fonction », s'en servir pour introduire l'injectivité.
 
 ### Étape 1
 
 **Question à coller :**
-> Un thermomètre américain indique $104$ °F et la conversion est $F = 1{,}8\,C + 32$. Qu'est-ce qui est donné, et qu'est-ce qui est cherché ?
+> $h(x) = x^2 - 4$. Quelles entrées donnent la sortie $5$ ? La fonction « qui défait $h$ » existe-t-elle sur $\mathbb{R}$ ?
 
-**Cible de synthèse :** la sortie $F = 104$ est donnée, l'entrée $C$ est cherchée.
+**Cible de synthèse :** $x = 3$ ou $x = -3$ ; $h(3) = h(-3)$, donc $h$ n'est pas injective sur $\mathbb{R}$ et n'a pas de réciproque.
 
 ### Étape 2
 
 **Question à coller :**
-> Écris l'équation obtenue quand on remplace la sortie par sa valeur.
+> On trace le symétrique du graphe de $h$ par rapport à la droite $y = x$. Est-ce le graphe d'une fonction ?
 
-**Cible de synthèse :** $104 = 1{,}8\,C + 32$.
+**Cible de synthèse :** non : une droite verticale, par exemple $x = 5$, coupe la courbe en $(5\,;\,3)$ et $(5\,;\,-3)$ ; une même entrée aurait deux sorties.
 
 ### Étape 3
 
 **Question à coller :**
-> Résous cette équation. Dans quel ordre défais-tu les opérations ?
+> Comment restreindre le domaine de $h$ pour qu'elle devienne injective ?
 
-**Cible de synthèse :** la formule multiplie par $1{,}8$ puis ajoute $32$ ; on soustrait donc $32$
-d'abord, puis on divise par $1{,}8$ : $C = 72 / 1{,}8 = 40$. Les réponses qui divisent d'abord
-montrent le piège : $104/1{,}8 - 32 \approx 25{,}8$ ne redonne pas $104$.
+**Cible de synthèse :** $x$ est une longueur, donc on garde $[0,\,+\infty[$ (la restriction à $]-\infty,\,0]$ conviendrait aussi, avec l'autre signe de racine).
 
 ### Étape 4
 
 **Question à coller :**
-> Comment vérifies-tu ton résultat ?
+> Écris la réciproque de la restriction : isole $x$, puis échange les noms.
 
-**Cible de synthèse :** on remet $C = 40$ dans la formule : $1{,}8 \cdot 40 + 32 = 104$ ; on vérifie aussi
-que la valeur appartient au domaine.
+**Cible de synthèse :** $x^2 = y + 4$, $x = \sqrt{y + 4}$ car $x \geq 0$ ; $h^{-1}(x) = \sqrt{x + 4}$, de domaine $[-4,\,+\infty[$.
 
-### Plusieurs solutions
+### Étape 5
 
 **Question à coller :**
-> $f(x) = x^2 - 4$, où $x$ est une longueur en cm. Quelle entrée donne la sortie $5$ ?
+> Comment vérifies-tu ton résultat ?
 
-**Cible de synthèse :** $x^2 = 9$ donne $3$ et $-3$ ; une longueur n'est pas négative, donc on garde $3$ cm. Sans contexte, deux solutions resteraient possibles : pas de réciproque sans restreindre le domaine.
+**Cible de synthèse :** $h^{-1}(h(3)) = \sqrt{9} = 3$ ; le point $(0\,;\,-4)$ devient $(-4\,;\,0)$ ; la courbe est le symétrique du graphe par rapport à $y = x$.
 
 ### Pour aller plus loin
 
 **Question à coller :**
-> Écris la formule qui donne $C$ à partir de $F$, puis convertis $98{,}6$ °F.
+> $f(x) = 1{,}8\,x + 32$ convertit des °C en °F. Écris la formule qui donne les °C à partir des °F, puis convertis $98{,}6$ °F.
 
-**Cible de synthèse :** $C = \dfrac{F - 32}{1{,}8}$ (fonction réciproque) ; $98{,}6$ °F correspond à $37$ °C.
+**Cible de synthèse :** $f^{-1}(x) = \dfrac{x - 32}{1{,}8}$, sans restriction car $f$ est injective ; $98{,}6$ °F correspond à $37$ °C.
 
 ---
 
