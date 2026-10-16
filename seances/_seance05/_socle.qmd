@@ -185,7 +185,6 @@ Justifie ensuite chaque réponse par une phrase qui donne l'abscisse et la valeu
 (b) $[0,\,5[$
 (c) $]2,\,5]$
 (d) $[0,\,4[$
-(e) Explique en une phrase pourquoi exclure la borne $5$ fait disparaître le maximum en (b), alors qu'exclure la borne $4$ ne le fait pas disparaître en (d).
 :::
 
 ::: {.callout-note appearance="simple"}
@@ -240,7 +239,7 @@ La fonction $f$ est définie par $f(x) = \dfrac{x\,(x - 3)}{x + 1}$.
 
 (a) Écris le domaine de $f$, puis calcule les racines de $f$.
 (b) Étudie le signe de $f$ : présente le résultat dans un tableau de signes qui contient une ligne pour chacun des trois facteurs $x$, $x - 3$ et $x + 1$, et une ligne pour $f(x)$. Indique par le symbole $\nexists$ la valeur de $x$ en laquelle $f$ n'est pas définie.
-(c) Déduis de (b) les intervalles sur lesquels $f(x) \geq 0$.
+(c) Déduis du tableau de (b) l'ensemble des solutions de l'inéquation $f(x) \geq 0$.
 :::
 
 ::: {.aides}
@@ -264,7 +263,7 @@ Retourne à la théorie du cours : *Domaine d'une fonction* pour (a), *Racines e
 
 (a) Écris que le dénominateur doit être différent de $0$, puis écris que le numérateur est égal à $0$ et résous cette équation.
 (b) Place sur une droite les trois valeurs qui annulent un facteur, puis remplis une ligne par facteur, et applique la règle des signes d'un produit et d'un quotient dans chaque colonne.
-(c) Garde les colonnes où la dernière ligne contient $+$ ou $0$, et écris-les comme intervalles en soignant les crochets.
+(c) Garde les colonnes où la dernière ligne contient $+$ ou $0$, puis écris l'ensemble des solutions comme une réunion d'intervalles, en soignant les crochets.
 
 ## Solution
 
@@ -281,7 +280,7 @@ On détermine d'abord le domaine et les racines, puis on étudie le signe de cha
 | signe de $f(x)$ | $-$ | $\nexists$ | $+$ | $0$ | $-$ | $0$ | $+$ |
 
 Contrôle : $f(-2) = \dfrac{(-2)(-5)}{-1} = -10 < 0$ et $f(-\tfrac{1}{2}) = \dfrac{(-\tfrac{1}{2})(-\tfrac{7}{2})}{\tfrac{1}{2}} = \tfrac{7}{2} > 0$, ce qui correspond au tableau.
-(c) Les colonnes de $f(x)$ qui contiennent $+$ ou $0$ sont $]-1,\,0[$, $0$, $3$ et $]3,\,+\infty[$. On a donc $f(x) \geq 0$ sur l'intervalle $]-1,\,0]$ et sur l'intervalle $[3,\,+\infty[$. La valeur $-1$ est exclue, car $f$ n'y est pas définie.
+(c) Les colonnes de $f(x)$ qui contiennent $+$ ou $0$ sont $]-1,\,0[$, $0$, $3$ et $]3,\,+\infty[$. L'ensemble des solutions de $f(x) \geq 0$ est donc $]-1,\,0] \cup [3,\,+\infty[$. La valeur $-1$ est exclue, car $f$ n'y est pas définie.
 
 ## Piège
 
@@ -293,10 +292,11 @@ En (c), une autre erreur consiste à écrire $[-1,\,0]$ avec un crochet fermé e
 :::
 
 ::: {.callout-caution .exo title="Exercice|Socle|2|O5"}
-Soient les fonctions $h(x) = x - 2$ et $k(x) = \sqrt{x}$.
+Soient les fonctions $h(x) = x - 2$ et $k(x) = -\sqrt{x}$.
 
 (a) Écris les expressions de $(k \circ h)(x)$ et de $(h \circ k)(x)$, puis le domaine de chacune de ces deux fonctions.
 (b) Calcule $(k \circ h)(4)$ et $(h \circ k)(4)$, puis conclus sur l'égalité de $k \circ h$ et de $h \circ k$.
+(c) La fonction $k \circ h$ est-elle croissante sur son domaine ? Justifie ta réponse avec la définition de la croissance.
 :::
 
 ::: {.aides}
@@ -304,7 +304,7 @@ Soient les fonctions $h(x) = x - 2$ et $k(x) = \sqrt{x}$.
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Calculer une composition* pour (a) et (b), et *Domaine d'une fonction* pour les domaines demandés en (a).
+Retourne à la théorie du cours : *Calculer une composition* pour (a) et (b), *Domaine d'une fonction* pour les domaines demandés en (a), et *Croissance et décroissance* pour (c).
 
 ## Indice 2
 
@@ -312,6 +312,7 @@ Retourne à la théorie du cours : *Calculer une composition* pour (a) et (b), e
 
 (a) Dans $(k \circ h)(x)$, par quelle expression remplace-t-on la variable de $k$ ? Et dans $(h \circ k)(x)$ ?
 (b) Que suffit-il de trouver pour montrer que deux fonctions ne sont pas égales ?
+(c) Que doit-on trouver pour montrer qu'une fonction n'est pas croissante ? Si $x_1 < x_2$, comment se comparent $x_1 - 2$ et $x_2 - 2$, puis leurs racines carrées, puis les opposés de ces racines ?
 
 ## Indice 3
 
@@ -319,17 +320,21 @@ Retourne à la théorie du cours : *Calculer une composition* pour (a) et (b), e
 
 (a) Écris $(k \circ h)(x) = k(h(x))$, remplace $h(x)$ par son expression, puis procède de même pour $h \circ k$.
 (b) Remplace $x$ par $4$ dans chacune des deux expressions obtenues en (a).
+(c) Calcule $(k \circ h)(2)$ et $(k \circ h)(6)$ et compare-les, puis, pour deux nombres quelconques $x_1 < x_2$ de $[2,\,+\infty[$, compare $(k \circ h)(x_1)$ et $(k \circ h)(x_2)$ en suivant les étapes de la composition.
 
 ## Solution
 
 On compose deux fonctions : pour calculer $(k \circ h)(x) = k(h(x))$, on applique d'abord $h$ à $x$, puis $k$ au résultat.
 
-(a) On remplace la variable de $k$ par $h(x)$ : $(k \circ h)(x) = k(x - 2) = \sqrt{x - 2}$. Elle existe si $x - 2 \geq 0$, donc $\mathit{Dom}(k \circ h) = [2,\,+\infty[$. On remplace la variable de $h$ par $k(x)$ : $(h \circ k)(x) = h(\sqrt{x}) = \sqrt{x} - 2$. Elle existe si $x \geq 0$, donc $\mathit{Dom}(h \circ k) = [0,\,+\infty[$.
-(b) On a $(k \circ h)(4) = \sqrt{4 - 2} = \sqrt{2}$ et $(h \circ k)(4) = \sqrt{4} - 2 = 0$. Ces deux nombres sont différents, donc $k \circ h \neq h \circ k$ : la composition n'est pas commutative.
+(a) On remplace la variable de $k$ par $h(x)$ : $(k \circ h)(x) = k(x - 2) = -\sqrt{x - 2}$. Elle existe si $x - 2 \geq 0$, donc $\mathit{Dom}(k \circ h) = [2,\,+\infty[$. On remplace la variable de $h$ par $k(x)$ : $(h \circ k)(x) = h(-\sqrt{x}) = -\sqrt{x} - 2$. Elle existe si $x \geq 0$, donc $\mathit{Dom}(h \circ k) = [0,\,+\infty[$.
+(b) On a $(k \circ h)(4) = -\sqrt{4 - 2} = -\sqrt{2}$ et $(h \circ k)(4) = -\sqrt{4} - 2 = -4$. Ces deux nombres sont différents, donc $k \circ h \neq h \circ k$ : la composition n'est pas commutative.
+(c) Non. On a $(k \circ h)(2) = -\sqrt{0} = 0$ et $(k \circ h)(6) = -\sqrt{4} = -2$ : on a $2 < 6$ mais $(k \circ h)(2) > (k \circ h)(6)$, donc $k \circ h$ n'est pas croissante. Plus précisément, soient $x_1 < x_2$ deux nombres de $[2,\,+\infty[$. Alors $x_1 - 2 < x_2 - 2$, donc $\sqrt{x_1 - 2} \leq \sqrt{x_2 - 2}$ car la racine carrée est croissante, donc $-\sqrt{x_1 - 2} \geq -\sqrt{x_2 - 2}$ car on change le sens d'une inégalité en passant aux opposés. Ainsi $(k \circ h)(x_1) \geq (k \circ h)(x_2)$ : $k \circ h$ est décroissante sur $[2,\,+\infty[$.
 
 ## Piège
 
 Une erreur fréquente consiste à lire $k \circ h$ de gauche à droite et à appliquer $k$ en premier. Elle est tentante parce qu'on lit de gauche à droite, mais elle est fausse : $(k \circ h)(x) = k(h(x))$ applique $h$ en premier.
+
+En (c), une autre erreur consiste à conclure que $k \circ h$ est croissante parce que $h$ l'est, ou à ne regarder que le sens de variation de $k$. Elle est tentante parce qu'on lit le sens de variation d'une seule des deux fonctions, mais elle est fausse : le sens de variation de la composée dépend des deux fonctions à la fois. Ici $h$ est croissante et $k$ est décroissante, et la composée est décroissante.
 
 :::
 :::

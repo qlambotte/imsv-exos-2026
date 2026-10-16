@@ -367,4 +367,13 @@ ok(np.all(ys6[(xs6 > 0) & (xs6 < 3)] < 0) and np.all(ys6[xs6 > 3] > 0), "S.6 sig
 ok(g6(-2) == -10 and abs(g6(-0.5) - 3.5) < 1e-12, "S.6 contrôles f(-2) = -10 et f(-1/2) = 7/2")
 ok(set(np.where(ys6 >= 0, 1, 0)[(xs6 > -1) & (xs6 <= 0)]) == {1} and set(np.where(ys6 >= 0, 1, 0)[(xs6 >= 3)]) == {1}, "S.6 f >= 0 sur ]-1,0] et [3,+inf[")
 
+# ---------- S.7 : k(x) = -sqrt(x), h(x) = x-2 ----------
+koh = lambda x: -math.sqrt(x - 2)
+hok = lambda x: -math.sqrt(x) - 2
+ok(close(koh(4), -math.sqrt(2)) and hok(4) == -4 and koh(4) != hok(4), "S.7 (b) valeurs en 4 : -sqrt2 et -4")
+ok(koh(2) == 0 and koh(6) == -2 and koh(2) > koh(6), "S.7 (c) contre-exemple à la croissance : 2<6 mais koh(2)>koh(6)")
+xs7c = [2 + i / 50 for i in range(0, 1001)]
+ok(all(koh(a_) >= koh(b_) for a_, b_ in zip(xs7c, xs7c[1:])), "S.7 (c) k o h décroissante sur [2,+inf[")
+ok(sorted(set((-1 < x <= 0) or x >= 3 for x in (-0.5, 0, 3, 5))) == [True], "S.6 (c) ensemble des solutions ]-1,0] U [3,+inf[")
+
 print(f"Toutes les vérifications passent ({n_ok} contrôles).")
