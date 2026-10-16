@@ -167,7 +167,7 @@ En (b), une seconde erreur consiste à donner $4$ comme maximum de $f$ sur $[-3,
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Socle|2|O3"}
+::: {#exercice-S4 .callout-caution .exo title="Exercice|Socle|2|O3"}
 La fonction $f$ est définie sur $\mathbb{R}$ par $f(x) = x^2 - 4x + 3$. Une partie de son graphe est dessinée ci-dessous.
 
 ![](img/s-extrema.svg){fig-alt="Parabole d'équation y = x² − 4x + 3, dont le point le plus bas est (2 ; −1) ; elle passe par (0 ; 3), (4 ; 3) et (5 ; 8)" width="7.6cm" fig-align="center"}
@@ -388,5 +388,5 @@ En (a), une autre erreur consiste à oublier d'échanger $x$ et $y$ à la fin. E
 :::
 
 ::: {.callout-note appearance="simple"}
-**Annonce.** L'exercice [S.4](#exercice-S4) sera corrigé ensemble à la fin du temps consacré au socle, après la confrontation de vos réponses. Cherche-le seul·e pendant le socle, puis passe au [transfert](transfert.qmd).
+**Annonce.** L'exercice  @exercice-S4 sera corrigé ensemble à la fin du temps consacré au socle, après la confrontation de vos réponses. Cherche-le seul·e pendant le socle, puis passe au [transfert](transfert.qmd).
 :::
