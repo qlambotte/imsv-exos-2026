@@ -461,5 +461,5 @@ En (b), une autre erreur consiste à oublier le facteur $2$ de l'exposant et à 
 :::
 
 ::: {.callout-note appearance="simple"}
-**Annonce.** L'exercice [S.7](#exercice-S7) sera corrigé ensemble à la fin du temps consacré au socle, après la confrontation de vos réponses. Cherche-le seul·e pendant le socle, puis passe au [transfert](transfert.qmd).
+**Annonce.** L'exercice [S.7] sera corrigé ensemble à la fin du temps consacré au socle, après la confrontation de vos réponses. Cherche-le seul·e pendant le socle, puis passe au [transfert](transfert.qmd).
 :::
