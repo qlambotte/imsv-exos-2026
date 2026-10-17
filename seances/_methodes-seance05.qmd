@@ -76,9 +76,9 @@ Soit la fonction $f(x) = \dfrac{x - 1}{x + 2}$. On va étudier son signe.
 
 Le dénominateur s'annule en $x = -2$, donc $\mathit{Dom}(f) = \mathbb{R} \setminus \{-2\}$ et la valeur $-2$ est exclue. Un quotient est nul quand son numérateur est nul et son dénominateur non nul, donc la seule racine est $1$. La valeur exclue $-2$ et la racine $1$ découpent le domaine en trois intervalles : $]-\infty,\,-2[$, $]-2,\,1[$ et $]1,\,+\infty[$. On évalue le signe de $f$ en un point de chaque intervalle : $f(-3) = \dfrac{-4}{-1} = 4$, $f(0) = -\dfrac12$ et $f(2) = \dfrac14$.
 
-| $x$ | $]-\infty,\,-2[$ | $-2$ | $]-2,\,1[$ | $1$ | $]1,\,+\infty[$ |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| signe de $f(x)$ | $+$ | $\nexists$ | $-$ | $0$ | $+$ |
+| $x$ | $-\infty$ |  | $-2$ |  | $1$ |  | $+\infty$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| signe de $f(x)$ | $+$ | $+$ | $\nexists$ | $-$ | $0$ | $+$ | $+$ |
 
 La fonction $f$ est donc strictement positive sur $]-\infty,\,-2[$ et sur $]1,\,+\infty[$, strictement négative sur $]-2,\,1[$, et nulle en $1$. Elle change de signe en $-2$ sans s'y annuler, car $-2$ n'appartient pas au domaine.
 :::

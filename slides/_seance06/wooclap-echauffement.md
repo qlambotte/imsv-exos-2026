@@ -81,7 +81,7 @@ $\frac{1}{2x + 1}$ confond fonction réciproque et inverse. Cette question prép
 
 **Justification :** les racines $-1$ et $2$ découpent la droite en trois intervalles ; le produit est positif en dehors des
 racines et nul en $-1$ et en $2$. Le distracteur $[-1,\,2]$ inverse le signe ; $]-\infty,\,-1[ \cup ]2,\,+\infty[$ oublie que
-l'inégalité est large ; $]-1,\,2[$ cumule les deux erreurs. Cette question prépare l'étude de signe du polynôme de l'exercice S.2.
+l'inégalité est large ; $]-1,\,2[$ cumule les deux erreurs. Cette question prépare l'étude de signe du polynôme de l'exercice S.8.
 
 ---
 
@@ -89,4 +89,4 @@ l'inégalité est large ; $]-1,\,2[$ cumule les deux erreurs. Cette question pr�
 
 - Affichage des résultats : après clôture du vote, pas en direct.
 - Chronomètre : 30 à 45 secondes par question.
-- Ordre : Q1, Q2, Q3, Q4. Q1 prépare les puissances de $2$ de l'exercice S.7 ; Q4 prépare le tableau de signes de l'exercice S.2.
+- Ordre : Q1, Q2, Q3, Q4. Q1 prépare les puissances de $2$ de l'exercice S.13 ; Q4 prépare le tableau de signes de l'exercice S.8.

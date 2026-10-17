@@ -407,9 +407,9 @@ On factorise $h$ pour trouver ses racines et son signe, puis on lit ses variatio
 (a) Les racines de $h$ sont les valeurs de $x$ telles que $h(x) = 0$. On écrit $h(x) = x(x^2 - 3) = x(x - \sqrt{3})(x + \sqrt{3})$. Un produit est nul si et seulement si l'un de ses facteurs est nul, donc $x = 0$, $x = \sqrt{3}$ ou $x = -\sqrt{3}$. Ces trois racines appartiennent à $[-2,\,2]$, car $\sqrt{3} < 2$.
 (b) Le signe de $h$ est constant entre deux racines successives. Les racines $-\sqrt{3}$, $0$ et $\sqrt{3}$ découpent $[-2,\,2]$ en quatre intervalles. On évalue $h$ en un point de chacun : $h(-2) = -8 + 6 = -2 < 0$, $h(-1) = -1 + 3 = 2 > 0$, $h(1) = 1 - 3 = -2 < 0$ et $h(2) = 8 - 6 = 2 > 0$. On obtient le tableau suivant.
 
-| $x$ | $[-2,\,-\sqrt{3}[$ | $-\sqrt{3}$ | $]-\sqrt{3},\,0[$ | $0$ | $]0,\,\sqrt{3}[$ | $\sqrt{3}$ | $]\sqrt{3},\,2]$ |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| signe de $h(x)$ | $-$ | $0$ | $+$ | $0$ | $-$ | $0$ | $+$ |
+| $x$ | $-2$ |  | $-\sqrt{3}$ |  | $0$ |  | $\sqrt{3}$ |  | $2$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| signe de $h(x)$ | $-$ | $-$ | $0$ | $+$ | $0$ | $-$ | $0$ | $+$ | $+$ |
 
 (c) La courbe monte jusqu'au point d'abscisse $-1$, descend jusqu'au point d'abscisse $1$, puis remonte. La fonction $h$ est croissante sur $[-2,\,-1]$ et sur $[1,\,2]$, et décroissante sur $[-1,\,1]$.
 (d) Un extremum local se lit dans un voisinage d'un point, en ne gardant que les abscisses du domaine. En $x = -1$, la courbe change de sens et atteint localement sa hauteur maximale : $h$ a un maximum local en $-1$, de valeur $h(-1) = 2$. En $x = 1$, elle atteint localement sa hauteur minimale : $h$ a un minimum local en $1$, de valeur $h(1) = -2$. Aux extrémités, la courbe monte immédiatement à droite de $-2$ et monte jusqu'en $2$ : $h$ a un minimum local en $-2$, de valeur $h(-2) = -2$, et un maximum local en $2$, de valeur $h(2) = 2$. Il y a donc quatre extrema locaux. Sur $[-2,\,2]$, le maximum global vaut $2$, atteint en $x = -1$ et en $x = 2$, et le minimum global vaut $-2$, atteint en $x = -2$ et en $x = 1$ : ici, chaque extremum local est aussi un extremum global.

@@ -51,7 +51,7 @@ Pour une masse de $45$ kg, l'entrée est connue, donc on évalue la fonction : $
 
 (b) La surface corporelle $S = 2$ m² est la sortie, et on cherche l'entrée $w$ : on résout l'équation $\sqrt{\dfrac{w}{20}} = 2$. Les deux membres sont positifs, donc on peut les élever au carré sans changer les solutions : $\dfrac{w}{20} = 4$. On multiplie les deux membres par $20$ : $w = 80$. Vérification : $S(80) = \sqrt{\dfrac{80}{20}} = \sqrt{4} = 2$, ce qui redonne la surface demandée. La masse correspondante est donc de $80$ kg.
 
-(c) On isole $w$ une seule fois, pour toutes les valeurs de $S$. On élève au carré les deux membres de $S = \sqrt{\dfrac{w}{20}}$, ce qui donne $S^2 = \dfrac{w}{20}$, puis on multiplie par $20$ : $w = 20\,S^2$. Dans le contexte, $w$ est une masse, donc $w > 0$, et $S$, racine carrée du nombre strictement positif $\dfrac{w}{20}$, est strictement positive. Inversement, toute valeur $S > 0$ donne la masse $w = 20\,S^2 > 0$. Les valeurs de $S$ qui ont un sens forment donc l'intervalle $]0,\,+\infty[$, en m². Contrôle : $20 \cdot 1{,}5^2 = 20 \cdot 2{,}25 = 45$, ce qui redonne la masse de la question (a).
+(c) On isole $w$ dans l'équation $S = \sqrt{\dfrac{w}{20}}$. On élève au carré les deux membres de $S = \sqrt{\dfrac{w}{20}}$, ce qui donne $S^2 = \dfrac{w}{20}$, puis on multiplie par $20$ : $w = 20\,S^2$. Dans le contexte, $w$ est une masse, donc $w > 0$, et $S$, racine carrée du nombre strictement positif $\dfrac{w}{20}$, est strictement positive. Inversement, toute valeur $S > 0$ donne la masse $w = 20\,S^2 > 0$. Les valeurs de $S$ qui ont un sens forment donc l'intervalle $]0,\,+\infty[$, en m². Contrôle : $20 \cdot 1{,}5^2 = 20 \cdot 2{,}25 = 45$, ce qui redonne la masse de la question (a).
 
 ## Piège
 
@@ -79,7 +79,6 @@ Une poche de sérum physiologique contient $500$ mL de solution aqueuse de chlor
 | $C(V)$ (g/L) | | | | |
 
 (c) Lis sur le graphe le volume d'eau à ajouter pour obtenir une concentration de $3$ g/L. Calcule ensuite, à l'aide de la formule, le volume d'eau à ajouter pour obtenir une concentration de $0{,}9$ g/L. Donne chaque volume en litres.
-(d) Écris le domaine pratique de $C$, puis l'image de $C$ pour ce domaine pratique, chacun sous la forme d'un intervalle. Explique en une phrase pourquoi la concentration n'est jamais égale à $0$ g/L.
 :::
 
 ::: {.aides}
@@ -87,7 +86,7 @@ Une poche de sérum physiologique contient $500$ mL de solution aqueuse de chlor
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Dilution : entrée, sortie et paramètres* pour (a), *De la formule au tableau et au graphe* pour (b), *Retour à la dilution* pour (c), et *Domaine mathématique vs. domaine pertinent* ainsi que *Image d'une fonction* pour (d).
+Retourne à la théorie du cours : *Dilution : entrée, sortie et paramètres* pour (a), *De la formule au tableau et au graphe* pour (b), et *Retour à la dilution* pour (c).
 
 ## Indice 2
 
@@ -96,7 +95,6 @@ Retourne à la théorie du cours : *Dilution : entrée, sortie et paramètres* p
 (a) Quelle quantité ne change pas quand on ajoute de l'eau ?
 (b) Quelle valeur de $V$ faut-il remplacer dans la formule pour chaque colonne ?
 (c) Pour la lecture, sur quel axe lit-on la concentration et sur quel axe lit-on le volume ? Pour le calcul, la concentration $0{,}9$ g/L est-elle l'entrée ou la sortie de la fonction $C$ ?
-(d) Quel signe peut avoir le quotient $\dfrac{4{,}5}{0{,}5 + V}$ lorsque $V$ est un volume d'eau ajouté ?
 
 ## Indice 3
 
@@ -105,7 +103,6 @@ Retourne à la théorie du cours : *Dilution : entrée, sortie et paramètres* p
 (a) Calcule la masse de NaCl dans la poche, en convertissant d'abord $500$ mL en litres.
 (b) Remplace $V$ par $0$, puis $0{,}5$, puis $1$, puis $4{,}5$ dans la formule et calcule chaque quotient.
 (c) Trace sur le graphe la droite horizontale à la hauteur $3$ et lis l'abscisse du point commun avec la courbe ; pour le calcul, écris l'équation $C(V) = 0{,}9$, multiplie les deux membres par $0{,}5 + V$, puis résous l'équation obtenue.
-(d) Écris que le volume ajouté est positif ou nul, puis compare la valeur de $C$ pour $V = 0$ avec les valeurs de $C$ pour de grands volumes.
 
 ## Solution
 
@@ -119,7 +116,6 @@ Retourne à la théorie du cours : *Dilution : entrée, sortie et paramètres* p
 ![](img/t-dilution-sol.svg){fig-alt="Les points (1 ; 3) et (4,5 ; 0,9) sur la courbe de la concentration" width="6.9cm" fig-align="center"}
 
 (c) Sur le graphe, la droite horizontale à la hauteur $3$ rencontre la courbe au point d'abscisse $1$ : il faut ajouter $1$ L d'eau, ce que confirme $C(1) = 3$ g/L. Pour la concentration $0{,}9$ g/L, on connaît la sortie de la fonction et on cherche l'entrée, donc on résout $\dfrac{4{,}5}{0{,}5 + V} = 0{,}9$. On multiplie les deux membres par $0{,}5 + V$, qui est strictement positif : $4{,}5 = 0{,}9\,(0{,}5 + V)$. On divise par $0{,}9$ : $0{,}5 + V = 5$. On en déduit $V = 4{,}5$ L : il faut ajouter $4{,}5$ L d'eau, ce qui correspond à la dernière colonne du tableau.
-(d) Le volume d'eau ajouté est positif ou nul, donc le domaine pratique est $[0,\,+\infty[$. Sur ce domaine, le dénominateur $0{,}5 + V$ augmente quand $V$ augmente, donc $C$ décroît, et la valeur la plus grande est $C(0) = 9$. Les valeurs de $C$ sont toutes strictement positives, car $C(V)$ est le quotient d'un nombre positif non nul par un nombre strictement positif. Inversement, pour toute concentration $c$ de $]0,\,9]$, le volume $V = \dfrac{4{,}5}{c} - 0{,}5$ est positif ou nul et vérifie $C(V) = c$ : toutes ces concentrations sont atteintes. L'image est donc $]0,\,9]$, en g/L. La concentration n'est jamais égale à $0$ g/L, car la masse de $4{,}5$ g de NaCl reste dissoute dans le mélange, quel que soit le volume d'eau ajouté.
 
 ## Piège
 
@@ -180,9 +176,9 @@ Retourne à la théorie du cours : *Dilution : entrée, sortie et paramètres* p
 
 ## Solution
 
-**Données et relation.** On donne la formule de Cockcroft et Gault, l'âge $a = 60$ ans, la masse $w = 81$ kg et le tableau des catégories. On cherche l'expression de la clairance en fonction de $s$, les valeurs de $s$ pour lesquelles le patient est dans les catégories G3a ou G3b, et la réciproque. La relation utilisée est la formule de Cockcroft et Gault : comme dans le cours, $s$ est la variable d'entrée, $\mathit{ClCr}(s)$ est la sortie, et $a$ et $w$ jouent le rôle de paramètres.
+**Données et relation.** On donne la formule de Cockcroft et Gault, l'âge $a = 60$ ans, la masse $w = 81$ kg et le tableau des catégories. On cherche l'expression de la clairance en fonction de $s$, les valeurs de $s$ pour lesquelles le patient est dans les catégories G3a ou G3b, et la réciproque. La relation utilisée est la formule de Cockcroft et Gault : $s$ est la variable d'entrée, $\mathit{ClCr}(s)$ est la sortie, et $a$ et $w$ jouent le rôle de paramètres.
 
-**Origine des données qui ne figurent pas directement dans l'énoncé.** Le coefficient $c$ n'est pas donné : il se calcule à partir de $a$ et $w$ (calcul préalable). Les seuils $30$ et $60$ de la question (c) se lisent dans le tableau : la catégorie G3b commence à $30$ mL/min et la catégorie G3a se termine juste avant $60$ mL/min (lecture dans le tableau).
+**Origine des données qui ne figurent pas directement dans l'énoncé.** Le coefficient $c$ n'est pas donné : il se calcule à partir de $a$ et $w$. Les seuils $30$ et $60$ de la question (c) se lisent dans le tableau : la catégorie G3b commence à $30$ mL/min et la catégorie G3a se termine juste avant $60$ mL/min (lecture dans le tableau).
 
 (a) On remplace $a$ par $60$ et $w$ par $81$ : $\mathit{ClCr}(s) = \dfrac{(140 - 60) \cdot 81}{72\,s} = \dfrac{80 \cdot 81}{72\,s}$. On simplifie le quotient : $\dfrac{81}{72} = \dfrac{9}{8}$, donc $80 \cdot \dfrac{9}{8} = 90$. On obtient $\mathit{ClCr}(s) = \dfrac{90}{s}$ et $c = 90$.
 (b) La concentration $s$ est connue, donc on évalue la fonction. $\mathit{ClCr}(1{,}5) = \dfrac{90}{1{,}5} = 60$ mL/min : cette valeur est dans la colonne G2, « de $60$ à moins de $90$ », donc le patient est en catégorie G2. $\mathit{ClCr}(3) = \dfrac{90}{3} = 30$ mL/min : cette valeur est dans la colonne G3b, « de $30$ à moins de $45$ », donc le patient est en catégorie G3b. Le passage de $s = 1{,}5$ à $s = 3$, qui double la concentration de créatinine, divise donc la clairance par deux.

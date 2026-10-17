@@ -127,16 +127,16 @@ On développe pour lire le degré, on annule chaque facteur pour trouver les rac
 
 (c) On étudie le signe de chaque facteur de part et d'autre de sa racine, puis on applique la règle des signes d'un produit : le produit est positif quand le nombre de facteurs négatifs est pair.
 
-    | $x$ | $]-\infty,\,-3[$ | $-3$ | $]-3,\,1[$ | $1$ | $]1,\,2[$ | $2$ | $]2,\,+\infty[$ |
-    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-    | signe de $x + 3$ | $-$ | $0$ | $+$ | | $+$ | | $+$ |
-    | signe de $x - 1$ | $-$ | | $-$ | $0$ | $+$ | | $+$ |
-    | signe de $x - 2$ | $-$ | | $-$ | | $-$ | $0$ | $+$ |
-    | signe de $q(x)$ | $-$ | $0$ | $+$ | $0$ | $-$ | $0$ | $+$ |
+    | $x$ | $-\infty$ |  | $-3$ |  | $1$ |  | $2$ |  | $+\infty$ |
+    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+    | signe de $x + 3$ | $-$ | $-$ | $0$ | $+$ | $+$ | $+$ | $+$ | $+$ | $+$ |
+    | signe de $x - 1$ | $-$ | $-$ | $-$ | $-$ | $0$ | $+$ | $+$ | $+$ | $+$ |
+    | signe de $x - 2$ | $-$ | $-$ | $-$ | $-$ | $-$ | $-$ | $0$ | $+$ | $+$ |
+    | signe de $q(x)$ | $-$ | $-$ | $0$ | $+$ | $0$ | $-$ | $0$ | $+$ | $+$ |
 
-    Contrôle : $q(0) = 3 \cdot (-1) \cdot (-2) = 6 > 0$, ce qui correspond à la colonne $]-3,\,1[$.
+    Contrôle : $q(0) = 3 \cdot (-1) \cdot (-2) = 6 > 0$, ce qui correspond au signe $+$ entre $-3$ et $1$.
 
-    Les colonnes de $q(x)$ qui contiennent $+$ ou $0$ donnent $q(x) \geq 0$ sur $[-3,\,1]$ et sur $[2,\,+\infty[$.
+    Dans la ligne de $q(x)$, les signes $+$ ou $0$ se trouvent entre $-3$ et $1$, aux valeurs $-3$, $1$ et $2$, et à droite de $2$ : on a donc $q(x) \geq 0$ sur $[-3,\,1]$ et sur $[2,\,+\infty[$.
 
 ## Piège
 

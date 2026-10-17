@@ -6,10 +6,411 @@
        Indice 3 = une ÉTAPE, en une phrase complète (un pas concret, sans donner la réponse).
      Chaque sous-question a ses propres indices. Numéro AUTOMATIQUE (pas écrit). Faisable SANS calculatrice.
      Solutions : une phrase d'ouverture (ce qu'on cherche, méthode du cours), des étapes numérotées, une conclusion avec l'unité.
-     S.7 = l'exercice corrigé ensemble à la fin du socle (vers le milieu du bloc autonome) : il illustre la fiche « Résoudre une équation exponentielle ».
+     S.1 à S.6 = exercices systématiques sur chaque objet (polynômes, racine, exponentielle, logarithme, sin/cos, paramètres du sinus) ; S.7 à S.13 = exercices de transfert du socle (à trier).
+     S.13 = l'exercice corrigé ensemble à la fin du socle : il illustre la fiche « Résoudre une équation exponentielle ».
      Notations : f(t), \log_{10}, \ln, \log_2, e^{kt}, b\,a^{t}, \sin(\omega t+\varphi).
      TITRES DES SECTIONS DE THÉORIE cités dans les indices 1 : repris du plan de la séance 6 (à aligner sur les slides IMSV-6 quand elles existeront).
      Objectifs : voir index.qmd (O1 à O3). -->
+
+<!-- ========== EXERCICES SYSTÉMATIQUES SUR LES OBJETS (ajoutés en tête du socle ; à trier avec les exercices qui suivent) ========== -->
+
+::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
+Soient les polynômes $p(x) = 2x^3 - x^2 + 4$, $q(x) = -x^4 + 3x$ et $r(x) = x^2 - 6x + 5$.
+
+(a) Pour chaque polynôme, écris son degré et le coefficient de son terme de plus haut degré.
+(b) Calcule $p(0)$, $q(0)$ et $r(0)$, puis $p(1)$, $q(1)$ et $r(1)$.
+(c) Pour chaque polynôme, écris le signe de ses valeurs quand $x$ est un très grand nombre positif, puis quand $x$ est un très grand nombre négatif. Justifie chaque réponse par une phrase qui utilise le terme de plus haut degré.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Polynômes* pour (a) et (b), et *Comparaison qualitative des croissances* pour (c).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Quel est le plus grand exposant de $x$ dans chaque polynôme, et quel nombre multiplie la puissance correspondante ?
+(b) Que deviennent les puissances de $x$ quand on remplace $x$ par $0$, puis par $1$ ?
+(c) Quand $x$ est très grand en valeur absolue, quel terme du polynôme l'emporte sur tous les autres ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Repère dans chaque formule le terme dont l'exposant est le plus grand, puis lis son exposant et son coefficient.
+(b) Remplace $x$ par $0$ dans chaque formule et calcule, puis remplace $x$ par $1$ et calcule.
+(c) Écris le terme de plus haut degré de chaque polynôme, puis détermine son signe pour $x$ positif et pour $x$ négatif.
+
+## Solution
+
+Un polynôme est une somme de termes de la forme (nombre) $\cdot\, x^{n}$ : son degré est le plus grand exposant, et le coefficient du terme de plus haut degré est le nombre qui multiplie cette puissance.
+
+(a) On repère le terme de plus haut degré de chaque polynôme.
+
+    1. Dans $p(x) = 2x^3 - x^2 + 4$, le plus grand exposant est $3$ et le coefficient correspondant est $2$ : $p$ est de degré $3$.
+    2. Dans $q(x) = -x^4 + 3x$, le plus grand exposant est $4$ et le coefficient correspondant est $-1$ : $q$ est de degré $4$.
+    3. Dans $r(x) = x^2 - 6x + 5$, le plus grand exposant est $2$ et le coefficient correspondant est $1$ : $r$ est de degré $2$.
+
+(b) On remplace $x$ par $0$, puis par $1$.
+
+    1. Pour $x = 0$, toutes les puissances de $x$ valent $0$, donc il ne reste que le terme constant : $p(0) = 4$, $q(0) = 0$ et $r(0) = 5$.
+    2. Pour $x = 1$, toutes les puissances de $x$ valent $1$, donc on additionne les coefficients : $p(1) = 2 - 1 + 4 = 5$, $q(1) = -1 + 3 = 2$ et $r(1) = 1 - 6 + 5 = 0$.
+
+(c) Quand $|x|$ est très grand, le terme de plus haut degré croît beaucoup plus vite que les autres, d'après la comparaison des croissances du cours : le polynôme a le signe de ce terme.
+
+    1. Pour $p$, le terme dominant est $2x^3$. Il est positif pour $x$ très grand positif et négatif pour $x$ très grand négatif, car un nombre négatif élevé au cube est négatif. Les valeurs de $p$ sont donc positives, puis négatives.
+    2. Pour $q$, le terme dominant est $-x^4$. Une puissance quatrième est positive pour tout nombre non nul, donc $-x^4$ est négatif dans les deux cas. Les valeurs de $q$ sont négatives, puis négatives.
+    3. Pour $r$, le terme dominant est $x^2$. Un carré est positif pour tout nombre non nul, donc les valeurs de $r$ sont positives, puis positives.
+
+## Piège
+
+En (a), une erreur fréquente consiste à lire le degré dans l'ordre d'écriture et à prendre le coefficient du premier terme écrit. Elle est tentante parce que le terme de plus haut degré est souvent écrit en premier, mais elle est fausse pour un polynôme écrit dans un autre ordre, comme $4 + 3x - x^4$ : le degré est toujours le plus grand exposant, et ici le coefficient est $-1$.
+
+En (c), une autre erreur consiste à écrire que $q(x)$ est positif pour $x$ très grand négatif parce que $x^4$ est positif. Elle est tentante parce qu'une puissance paire est positive, mais elle est fausse : le coefficient du terme dominant est $-1$, donc $-x^4$ est négatif.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
+Soient les fonctions $f(x) = \sqrt{x}$ et $g(x) = \sqrt{x - 2} + 1$.
+
+(a) Écris le domaine de $f$ et l'image de $f$, chacun sous la forme d'un intervalle.
+(b) Calcule $f(0)$, $f(4)$ et $f(9)$, puis écris en une phrase si la fonction $f$ est croissante ou décroissante sur son domaine.
+(c) Écris le domaine de $g$ et l'image de $g$, chacun sous la forme d'un intervalle.
+(d) Résous l'équation $\sqrt{x + 1} = 3$, puis l'équation $\sqrt{x} = -2$. Si une équation n'a pas de solution, écris-le et explique pourquoi en une phrase.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Fonctions « racines »* pour (a), (b) et (c), et *Défaire une opération : fonction réciproque* de la séance 5 pour (d).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Pour quels nombres $x$ la racine carrée existe-t-elle, et quelles valeurs peut-elle prendre ?
+(b) Quand $x$ augmente, la valeur de $\sqrt{x}$ augmente-t-elle ou diminue-t-elle ?
+(c) Quelle condition sur $x$ impose la racine carrée de $g$, et par quelle opération passe-t-on de $\sqrt{x - 2}$ à $g(x)$ ?
+(d) Une racine carrée peut-elle être égale à un nombre négatif ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Écris la condition d'existence de la racine carrée, puis l'ensemble des valeurs qu'elle prend.
+(b) Remplace $x$ par chacune des trois valeurs, puis compare les résultats dans l'ordre des valeurs de $x$.
+(c) Écris la condition $x - 2 \geq 0$, puis ajoute $1$ aux valeurs de $\sqrt{x - 2}$.
+(d) Pour la première équation, élève les deux membres au carré, puis vérifie la solution ; pour la seconde, compare le signe des deux membres.
+
+## Solution
+
+La racine carrée $\sqrt{x}$ existe pour les nombres positifs ou nuls et ne prend que des valeurs positives ou nulles ; c'est la fonction réciproque de la fonction $x \mapsto x^2$ restreinte à $[0,\,+\infty[$.
+
+(a) La racine carrée existe si et seulement si $x \geq 0$, donc $\mathit{Dom}(f) = [0,\,+\infty[$. Elle prend toutes les valeurs positives ou nulles, car tout nombre $y \geq 0$ est la racine carrée de $y^2 \geq 0$, donc $\mathit{Im}(f) = [0,\,+\infty[$.
+
+(b) On calcule $f(0) = 0$, $f(4) = 2$ et $f(9) = 3$. Ces valeurs augmentent quand $x$ augmente : la fonction $f$ est croissante sur son domaine.
+
+(c) On passe de $f$ à $g$ en deux transformations.
+
+    1. La racine carrée de $x - 2$ existe si et seulement si $x - 2 \geq 0$, soit $x \geq 2$, donc $\mathit{Dom}(g) = [2,\,+\infty[$.
+    2. Sur ce domaine, $\sqrt{x - 2}$ prend toutes les valeurs positives ou nulles, et on ajoute $1$ : $g(x) \geq 1$ et toutes les valeurs supérieures ou égales à $1$ sont atteintes. On a donc $\mathit{Im}(g) = [1,\,+\infty[$.
+
+(d) On résout les deux équations séparément.
+
+    1. Pour $\sqrt{x + 1} = 3$, les deux membres sont positifs, donc on élève au carré : $x + 1 = 9$, soit $x = 8$. Vérification : $\sqrt{8 + 1} = \sqrt{9} = 3$. La solution est donc $x = 8$.
+    2. Pour $\sqrt{x} = -2$, le membre de gauche est positif ou nul et le membre de droite est négatif, donc ils ne peuvent pas être égaux. L'équation n'a aucune solution.
+
+## Piège
+
+En (d), une erreur fréquente consiste à élever $\sqrt{x} = -2$ au carré et à écrire $x = 4$. Elle est tentante parce que l'opération donne un résultat, mais elle est fausse : élever au carré peut introduire une solution qui ne vérifie pas l'équation de départ. Ici, $\sqrt{4} = 2$ et non $-2$, donc la vérification montre que $4$ n'est pas solution.
+
+En (c), une autre erreur consiste à écrire $\mathit{Dom}(g) = [1,\,+\infty[$ ou $[3,\,+\infty[$ en mélangeant les nombres $2$ et $1$. Elle est tentante parce que les deux nombres figurent dans la formule, mais elle est fausse : le nombre $2$, soustrait à l'intérieur de la racine, décale le domaine, tandis que le nombre $1$, ajouté à l'extérieur, décale l'image.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
+Soient les fonctions $f(x) = 2^{x}$ et $g(x) = \left(\tfrac{1}{2}\right)^{x}$.
+
+(a) Complète le tableau ci-dessous. Écris chaque valeur sous la forme d'un nombre entier ou d'une fraction.
+
+| $x$ | $-2$ | $-1$ | $0$ | $1$ | $2$ | $3$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| $f(x)$ | | | | | | |
+| $g(x)$ | | | | | | |
+
+(b) Écris le domaine et l'image de $f$, chacun sous la forme d'un intervalle, puis écris en une phrase si $f$ est croissante ou décroissante et si $g$ est croissante ou décroissante.
+(c) Vérifie l'égalité $f(x + y) = f(x) \cdot f(y)$ pour $x = 3$ et $y = -1$, en calculant séparément chacun des deux membres.
+(d) Compare dans le tableau les valeurs de $g(x)$ et de $f(-x)$, puis écris en une phrase ce que tu observes.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Exponentielle : facteur multiplicatif constant* pour (a) et (b), *Motivation via $f(x + y) = f(x) \cdot f(y)$* pour (c), et *Croissance et décroissance* pour (b) et (d).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Par quel nombre la valeur est-elle multipliée quand $x$ augmente de $1$, pour $f$ et pour $g$ ?
+(b) Une puissance de $2$ peut-elle être nulle ou négative, et comment varient les valeurs du tableau quand $x$ augmente ?
+(c) Que valent $f(3 + (-1))$ d'une part, et $f(3) \cdot f(-1)$ d'autre part ?
+(d) À quelle colonne du tableau correspond la valeur de $f(-x)$ pour chaque valeur de $x$ ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Calcule d'abord la colonne $x = 0$, puis multiplie ou divise par la base pour passer d'une colonne à la suivante.
+(b) Observe le signe des valeurs du tableau et le sens dans lequel elles évoluent de gauche à droite.
+(c) Calcule $f(2)$ pour le membre de gauche, puis $f(3)$ et $f(-1)$ pour le membre de droite.
+(d) Pour $x = 2$, lis $g(2)$ puis $f(-2)$ dans le tableau, et compare ; fais de même pour une autre colonne.
+
+## Solution
+
+Une fonction exponentielle $a^{x}$ a pour valeur $1$ en $x = 0$ et multiplie sa valeur par $a$ chaque fois que $x$ augmente de $1$.
+
+(a) Pour $f$, la valeur en $x = 0$ est $1$, et chaque pas de $+1$ multiplie par $2$ ; chaque pas de $-1$ divise par $2$. Pour $g$, chaque pas de $+1$ multiplie par $\tfrac{1}{2}$ ; chaque pas de $-1$ multiplie par $2$.
+
+    | $x$ | $-2$ | $-1$ | $0$ | $1$ | $2$ | $3$ |
+    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+    | $f(x)$ | $\tfrac{1}{4}$ | $\tfrac{1}{2}$ | $1$ | $2$ | $4$ | $8$ |
+    | $g(x)$ | $4$ | $2$ | $1$ | $\tfrac{1}{2}$ | $\tfrac{1}{4}$ | $\tfrac{1}{8}$ |
+
+(b) Une puissance de $2$ est toujours strictement positive, et elle prend toutes les valeurs strictement positives. Le domaine de $f$ est donc $\mathbb{R}$ et son image est $]0,\,+\infty[$. Les valeurs de $f$ augmentent de gauche à droite : $f$ est croissante, car sa base $2$ est supérieure à $1$. Les valeurs de $g$ diminuent de gauche à droite : $g$ est décroissante, car sa base $\tfrac{1}{2}$ est comprise entre $0$ et $1$.
+
+(c) On calcule séparément chaque membre.
+
+    1. Le membre de gauche vaut $f(3 + (-1)) = f(2) = 2^2 = 4$.
+    2. Le membre de droite vaut $f(3) \cdot f(-1) = 8 \cdot \tfrac{1}{2} = 4$.
+
+    Les deux membres sont égaux, donc l'égalité est vérifiée pour ces valeurs.
+
+(d) Dans le tableau, $f(-2) = \tfrac{1}{4}$ est égal à $g(2) = \tfrac{1}{4}$, et $f(-1) = \tfrac{1}{2}$ est égal à $g(1) = \tfrac{1}{2}$. On observe que $g(x) = f(-x)$ dans toutes les colonnes : multiplier par $\tfrac{1}{2}$ revient à diviser par $2$, donc parcourir les valeurs de $f$ de droite à gauche donne celles de $g$.
+
+## Piège
+
+En (b), une erreur fréquente consiste à écrire que l'image de $f$ est $\mathbb{R}$, ou qu'elle contient $0$, parce que le domaine est $\mathbb{R}$. Elle est tentante parce que l'on confond l'ensemble des entrées avec celui des sorties, mais elle est fausse : une puissance de $2$ est toujours strictement positive, donc l'image est $]0,\,+\infty[$.
+
+En (c), une autre erreur consiste à écrire $f(x + y) = f(x) + f(y)$. Elle est tentante parce que l'on additionne $x$ et $y$ dans l'argument, mais elle est fausse : le calcul donne $f(2) = 4$ alors que $f(3) + f(-1) = 8 + \tfrac{1}{2} = 8{,}5$. Pour une exponentielle, l'addition des arguments correspond à la multiplication des valeurs.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|1|O3"}
+Soit la fonction $\ln$, c'est-à-dire le logarithme népérien.
+
+(a) Écris le domaine de $\ln$ et son image, chacun sous la forme d'un intervalle.
+(b) Écris les valeurs exactes de $\ln 1$, de $\ln e$, de $\ln\left(e^{2}\right)$ et de $\ln\left(\tfrac{1}{e}\right)$.
+(c) Écris pour quelles valeurs de $x$ les expressions $\ln(x - 3)$ et $\log_{10}(5 - x)$ existent. Écris chaque réponse sous la forme d'un intervalle.
+(d) Écris sans calculatrice le signe de $\ln\left(\tfrac{1}{2}\right)$ et celui de $\ln 3$, puis écris en une phrase lequel des deux nombres $\ln 2$ et $\ln 3$ est le plus grand.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Logarithme comme fonction réciproque* pour les quatre questions, et *Exponentielle : croissance et décroissance* pour (d).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) De quelle fonction le logarithme népérien est-il la fonction réciproque, et que valent le domaine et l'image de cette fonction ?
+(b) À quelle puissance de $e$ chacun des quatre nombres est-il égal ?
+(c) Quelle condition doit vérifier l'argument d'un logarithme ?
+(d) Un nombre plus petit que $1$ est-il une puissance de $e$ à exposant positif ou négatif ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Échange le domaine et l'image de la fonction exponentielle de base $e$.
+(b) Écris chaque nombre sous la forme $e^{u}$, puis lis l'exposant $u$.
+(c) Écris l'inégalité qui exprime que l'argument est strictement positif, puis résous-la.
+(d) Compare chaque nombre à $1$, puis utilise le fait que la fonction $\ln$ est croissante.
+
+## Solution
+
+Le logarithme népérien est la fonction réciproque de la fonction exponentielle de base $e$ : le domaine de l'une est l'image de l'autre, et inversement.
+
+(a) La fonction $x \mapsto e^{x}$ a pour domaine $\mathbb{R}$ et pour image $]0,\,+\infty[$. Pour la fonction réciproque, on échange ces deux ensembles : $\mathit{Dom}(\ln) = ]0,\,+\infty[$ et $\mathit{Im}(\ln) = \mathbb{R}$.
+
+(b) Le logarithme népérien d'un nombre est l'exposant à donner à $e$ pour obtenir ce nombre.
+
+    1. On a $1 = e^{0}$, donc $\ln 1 = 0$.
+    2. On a $e = e^{1}$, donc $\ln e = 1$.
+    3. On a $e^{2} = e^{2}$, donc $\ln\left(e^{2}\right) = 2$.
+    4. On a $\tfrac{1}{e} = e^{-1}$, donc $\ln\left(\tfrac{1}{e}\right) = -1$.
+
+(c) L'argument d'un logarithme doit être strictement positif.
+
+    1. Pour $\ln(x - 3)$, la condition est $x - 3 > 0$, soit $x > 3$ : l'expression existe sur $]3,\,+\infty[$.
+    2. Pour $\log_{10}(5 - x)$, la condition est $5 - x > 0$, soit $x < 5$ : l'expression existe sur $]-\infty,\,5[$.
+
+(d) La fonction $\ln$ est croissante, car sa fonction réciproque, l'exponentielle de base $e$, est croissante. Comme $\ln 1 = 0$ et que $\tfrac{1}{2} < 1$, on a $\ln\left(\tfrac{1}{2}\right) < \ln 1 = 0$ : ce logarithme est négatif. Comme $3 > 1$, on a $\ln 3 > \ln 1 = 0$ : ce logarithme est positif. Enfin $2 < 3$ entraîne $\ln 2 < \ln 3$ : le plus grand des deux nombres est $\ln 3$.
+
+## Piège
+
+En (c), une erreur fréquente consiste à écrire $x < 3$ ou $x \geq 3$ pour $\ln(x - 3)$. Elle est tentante parce que l'on lit « moins $3$ » et que l'on inverse l'inégalité, ou parce que l'on autorise le cas d'égalité, mais elle est fausse : il faut $x - 3 > 0$ strictement, donc $x > 3$, et le logarithme de $0$ n'existe pas.
+
+En (b), une autre erreur consiste à écrire $\ln\left(\tfrac{1}{e}\right) = \tfrac{1}{1} = 1$ ou $\tfrac{1}{\ln e} = 1$. Elle est tentante parce que l'on traite l'inverse comme un quotient de logarithmes, mais elle est fausse : $\tfrac{1}{e} = e^{-1}$, donc le logarithme est $-1$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
+Soient les fonctions $\sin$ et $\cos$.
+
+(a) Complète le tableau ci-dessous avec les valeurs exactes.
+
+| $x$ | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{2}$ | $\pi$ | $\dfrac{3\pi}{2}$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| $\sin x$ | | | | | |
+| $\cos x$ | | | | | |
+
+(b) Écris le domaine de $\sin$, son image et sa période.
+(c) Calcule $\sin\left(\dfrac{13\pi}{6}\right)$ en justifiant par une phrase qui utilise la période.
+(d) D'après le graphe de $\sin$, écris le signe de $\sin x$ sur l'intervalle $]0,\,\pi[$, puis sur l'intervalle $]\pi,\,2\pi[$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Fonctions trigonométriques comme modèles périodiques*, et plus précisément *Graphes, domaine et image* pour (a), (b) et (d), et *Périodicité* pour (b) et (c).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Quelles sont les coordonnées du point du cercle trigonométrique associé à chaque angle ?
+(b) Entre quelles valeurs le sinus varie-t-il, et au bout de combien le graphe se répète-t-il ?
+(c) Combien de périodes entières faut-il retrancher à $\tfrac{13\pi}{6}$ pour obtenir un angle du tableau ?
+(d) Le graphe de $\sin$ est-il au-dessus ou au-dessous de l'axe des abscisses entre $0$ et $\pi$, puis entre $\pi$ et $2\pi$ ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Pour chaque angle, lis l'ordonnée du point du cercle trigonométrique pour le sinus et son abscisse pour le cosinus.
+(b) Repère sur le graphe la plus petite et la plus grande valeur du sinus, puis la longueur d'un motif complet.
+(c) Écris $\tfrac{13\pi}{6}$ comme la somme d'un angle du tableau et d'un multiple de la période.
+(d) Repère sur le graphe la position de l'arche entre $0$ et $\pi$, puis celle de l'arche entre $\pi$ et $2\pi$.
+
+## Solution
+
+Le sinus et le cosinus d'un angle $x$ sont l'ordonnée et l'abscisse du point du cercle trigonométrique associé à l'angle $x$.
+
+(a) On lit les coordonnées du point associé à chaque angle.
+
+    | $x$ | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{2}$ | $\pi$ | $\dfrac{3\pi}{2}$ |
+    |:---:|:---:|:---:|:---:|:---:|:---:|
+    | $\sin x$ | $0$ | $\dfrac{1}{2}$ | $1$ | $0$ | $-1$ |
+    | $\cos x$ | $1$ | $\dfrac{\sqrt{3}}{2}$ | $0$ | $-1$ | $0$ |
+
+(b) Le sinus est défini pour tout angle, donc $\mathit{Dom}(\sin) = \mathbb{R}$. Ses valeurs sont des ordonnées de points du cercle de rayon $1$, et toutes les valeurs de $-1$ à $1$ sont atteintes, donc $\mathit{Im}(\sin) = [-1,\,1]$. Le graphe se répète tous les tours complets, donc la période est $2\pi$.
+
+(c) On ramène l'angle dans le tableau.
+
+    1. On écrit $\dfrac{13\pi}{6} = \dfrac{\pi}{6} + \dfrac{12\pi}{6} = \dfrac{\pi}{6} + 2\pi$.
+    2. Le sinus est de période $2\pi$, donc $\sin\left(\dfrac{\pi}{6} + 2\pi\right) = \sin\dfrac{\pi}{6}$.
+
+    On a donc $\sin\left(\dfrac{13\pi}{6}\right) = \dfrac{1}{2}$.
+
+(d) Le graphe de $\sin$ est au-dessus de l'axe des abscisses entre $0$ et $\pi$, avec un maximum $1$ en $\tfrac{\pi}{2}$, donc $\sin x > 0$ sur $]0,\,\pi[$. Il est au-dessous de l'axe entre $\pi$ et $2\pi$, avec un minimum $-1$ en $\tfrac{3\pi}{2}$, donc $\sin x < 0$ sur $]\pi,\,2\pi[$.
+
+## Piège
+
+En (c), une erreur fréquente consiste à écrire $\sin\left(\dfrac{13\pi}{6}\right) = \sin\left(\dfrac{13}{6}\right) \cdot \pi$ ou à diviser l'angle par la période. Elle est tentante parce qu'on cherche à simplifier le nombre $13$, mais elle est fausse : il faut retrancher la période $2\pi$ autant de fois que nécessaire, et non diviser l'angle par la période.
+
+En (a), une autre erreur consiste à échanger les valeurs du sinus et du cosinus en $\tfrac{\pi}{2}$ et en $\pi$. Elle est tentante parce que les deux fonctions prennent les mêmes valeurs $0$, $1$ et $-1$, mais elle est fausse : le sinus est l'ordonnée du point, donc $\sin\tfrac{\pi}{2} = 1$ et $\sin \pi = 0$, tandis que le cosinus est son abscisse, donc $\cos\tfrac{\pi}{2} = 0$ et $\cos \pi = -1$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O2"}
+Soient les trois fonctions $f_1(x) = 2\sin x$, $f_2(x) = \sin(3x) + 1$ et $f_3(x) = \sin\left(x - \dfrac{\pi}{2}\right)$.
+
+(a) Complète le tableau suivant. Pour la dernière colonne, écris le décalage horizontal du graphe de $\sin$ nécessaire pour obtenir le graphe de la fonction, avec son sens, ou écris « aucun ».
+
+| fonction | amplitude | période | valeur centrale | image | décalage horizontal |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| $f_1$ | | | | | |
+| $f_2$ | | | | | |
+| $f_3$ | | | | | |
+
+(b) Calcule $f_3(0)$, $f_3\left(\dfrac{\pi}{2}\right)$ et $f_3(\pi)$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Fonctions trigonométriques comme modèles périodiques*, et plus précisément *Amplitude*, *Périodicité* et *Déphasage* pour (a), et *Graphes, domaine et image* pour (b).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Dans chaque formule, quel nombre multiplie le sinus, quel nombre multiplie $x$ dans l'argument, quel nombre est ajouté ou soustrait dans l'argument, et quel nombre est ajouté à l'extérieur ?
+(b) Quelle est la valeur de l'argument de $f_3$ pour chacune des trois valeurs de $x$ ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Compare chaque formule à la forme $A\sin(\omega x + \varphi) + D$ et lis $A$, $\omega$, $\varphi$ et $D$, puis calcule la période $\tfrac{2\pi}{\omega}$ et l'image $[D - A,\,D + A]$.
+(b) Remplace $x$ par chaque valeur dans l'argument $x - \tfrac{\pi}{2}$, puis lis la valeur du sinus dans le tableau de l'exercice précédent.
+
+## Solution
+
+On compare chaque fonction à la forme $A\sin(\omega x + \varphi) + D$ : $A$ est l'amplitude, $\tfrac{2\pi}{\omega}$ est la période, $D$ est la valeur centrale, l'image est $[D - A,\,D + A]$, et le graphe de $\sin$ est décalé de $-\tfrac{\varphi}{\omega}$ horizontalement.
+
+(a) On lit les paramètres de chaque fonction.
+
+    1. Pour $f_1(x) = 2\sin x$ : $A = 2$, $\omega = 1$, $\varphi = 0$ et $D = 0$. L'amplitude est $2$, la période est $2\pi$, la valeur centrale est $0$, l'image est $[-2,\,2]$ et il n'y a aucun décalage horizontal.
+    2. Pour $f_2(x) = \sin(3x) + 1$ : $A = 1$, $\omega = 3$, $\varphi = 0$ et $D = 1$. L'amplitude est $1$, la période est $\tfrac{2\pi}{3}$, la valeur centrale est $1$, l'image est $[0,\,2]$ et il n'y a aucun décalage horizontal.
+    3. Pour $f_3(x) = \sin\left(x - \tfrac{\pi}{2}\right)$ : $A = 1$, $\omega = 1$, $\varphi = -\tfrac{\pi}{2}$ et $D = 0$. L'amplitude est $1$, la période est $2\pi$, la valeur centrale est $0$, l'image est $[-1,\,1]$ et le décalage est $-\tfrac{\varphi}{\omega} = \tfrac{\pi}{2}$ vers la droite.
+
+    | fonction | amplitude | période | valeur centrale | image | décalage horizontal |
+    |:---:|:---:|:---:|:---:|:---:|:---:|
+    | $f_1$ | $2$ | $2\pi$ | $0$ | $[-2,\,2]$ | aucun |
+    | $f_2$ | $1$ | $\dfrac{2\pi}{3}$ | $1$ | $[0,\,2]$ | aucun |
+    | $f_3$ | $1$ | $2\pi$ | $0$ | $[-1,\,1]$ | $\dfrac{\pi}{2}$ vers la droite |
+
+(b) On remplace $x$ par chaque valeur dans $f_3(x) = \sin\left(x - \tfrac{\pi}{2}\right)$.
+
+    1. Pour $x = 0$, l'argument vaut $-\tfrac{\pi}{2}$, donc $f_3(0) = \sin\left(-\tfrac{\pi}{2}\right) = -1$.
+    2. Pour $x = \tfrac{\pi}{2}$, l'argument vaut $0$, donc $f_3\left(\tfrac{\pi}{2}\right) = \sin 0 = 0$.
+    3. Pour $x = \pi$, l'argument vaut $\tfrac{\pi}{2}$, donc $f_3(\pi) = \sin\tfrac{\pi}{2} = 1$.
+
+    Ces valeurs sont cohérentes avec le décalage : le graphe de $\sin$ vaut $0$ en $0$ et $1$ en $\tfrac{\pi}{2}$, et celui de $f_3$ vaut $0$ en $\tfrac{\pi}{2}$ et $1$ en $\pi$, soit $\tfrac{\pi}{2}$ plus à droite.
+
+## Piège
+
+En (a), une erreur fréquente consiste à écrire que la période de $f_2$ est $2\pi \cdot 3 = 6\pi$. Elle est tentante parce que le facteur $3$ semble étirer le graphe, mais elle est fausse : multiplier $x$ par $3$ comprime le graphe horizontalement, donc la période est divisée par $3$ et vaut $\tfrac{2\pi}{3}$.
+
+En (a), une autre erreur consiste à écrire que le graphe de $f_3$ est décalé de $\tfrac{\pi}{2}$ vers la gauche. Elle est tentante parce que le signe moins de l'argument fait penser à un décalage vers les valeurs négatives, mais elle est fausse : la valeur de $\sin$ en $0$ se retrouve pour $f_3$ en $x = \tfrac{\pi}{2}$, donc le graphe est décalé vers la droite.
+
+:::
+:::
+
+<!-- ========== FIN DES EXERCICES SYSTÉMATIQUES ========== -->
+
 
 ::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
 On compare quatre fonctions définies pour $x > 0$ : $\sqrt{x}$, $\log_2 x$, $x^2$ et $2^x$.
@@ -137,16 +538,16 @@ On développe le produit pour lire le degré, on trouve les racines en annulant 
     2. Le facteur $x$ est négatif pour $x < 0$ et positif pour $x > 0$. Le facteur $x - 1$ est négatif pour $x < 1$ et positif pour $x > 1$. Le facteur $x - 3$ est négatif pour $x < 3$ et positif pour $x > 3$.
     3. Un produit est positif quand le nombre de facteurs négatifs est pair, et négatif quand il est impair.
 
-    | $x$ | $]-\infty,\,0[$ | $0$ | $]0,\,1[$ | $1$ | $]1,\,3[$ | $3$ | $]3,\,+\infty[$ |
-    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-    | signe de $x$ | $-$ | $0$ | $+$ | | $+$ | | $+$ |
-    | signe de $x - 1$ | $-$ | | $-$ | $0$ | $+$ | | $+$ |
-    | signe de $x - 3$ | $-$ | | $-$ | | $-$ | $0$ | $+$ |
-    | signe de $p(x)$ | $-$ | $0$ | $+$ | $0$ | $-$ | $0$ | $+$ |
+    | $x$ | $-\infty$ |  | $0$ |  | $1$ |  | $3$ |  | $+\infty$ |
+    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+    | signe de $x$ | $-$ | $-$ | $0$ | $+$ | $+$ | $+$ | $+$ | $+$ | $+$ |
+    | signe de $x - 1$ | $-$ | $-$ | $-$ | $-$ | $0$ | $+$ | $+$ | $+$ | $+$ |
+    | signe de $x - 3$ | $-$ | $-$ | $-$ | $-$ | $-$ | $-$ | $0$ | $+$ | $+$ |
+    | signe de $p(x)$ | $-$ | $-$ | $0$ | $+$ | $0$ | $-$ | $0$ | $+$ | $+$ |
 
-    Contrôle : $p(2) = 2 \cdot 1 \cdot (-1) = -2 < 0$, ce qui correspond à la colonne $]1,\,3[$.
+    Contrôle : $p(2) = 2 \cdot 1 \cdot (-1) = -2 < 0$, ce qui correspond au signe $-$ entre $1$ et $3$.
 
-    Les colonnes de $p(x)$ qui contiennent $+$ ou $0$ donnent $p(x) \geq 0$ sur $[0,\,1]$ et sur $[3,\,+\infty[$.
+    Dans la ligne de $p(x)$, les signes $+$ ou $0$ se trouvent entre $0$ et $1$, aux valeurs $0$, $1$ et $3$, et à droite de $3$ : on a donc $p(x) \geq 0$ sur $[0,\,1]$ et sur $[3,\,+\infty[$.
 
 ## Piège
 
@@ -461,5 +862,5 @@ En (b), une autre erreur consiste à oublier le facteur $2$ de l'exposant et à 
 :::
 
 ::: {.callout-note appearance="simple"}
-**Annonce.** L'exercice [S.7] sera corrigé ensemble à la fin du temps consacré au socle, après la confrontation de vos réponses. Cherche-le seul·e pendant le socle, puis passe au [transfert](transfert.qmd).
+**Annonce.** L'exercice [S.13] sera corrigé ensemble à la fin du temps consacré au socle, après la confrontation de vos réponses. Cherche-le seul·e pendant le socle, puis passe au [transfert](transfert.qmd).
 :::

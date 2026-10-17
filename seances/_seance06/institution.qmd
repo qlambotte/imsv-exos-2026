@@ -5,7 +5,7 @@ subtitle: "Séance 6 · ce qu'on retient"
 
 ## Les méthodes qu'on dégage ensemble
 
-À la fin du socle, la confrontation puis la correction de l'exercice S.7 dégagent la méthode pour **résoudre une équation exponentielle** :
+À la fin du socle, la confrontation puis la correction de l'exercice S.13 dégagent la méthode pour **résoudre une équation exponentielle** :
 
 - **isoler** la puissance dans un membre de l'équation, en divisant par le facteur qui la multiplie ;
 - **écrire** la puissance avec la base $e$ si sa base est différente, grâce à $a^{u} = e^{u \ln a}$ ;

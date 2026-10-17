@@ -109,6 +109,8 @@ On passe d'un registre à l'autre, comme dans *Quatre représentations pour une 
 
 On place les points $(-1\,;\,-5)$, $(0\,;\,-3)$, $(1\,;\,-1)$, $(2\,;\,1)$ et $(3\,;\,3)$. Ils sont alignés, car $g(x)$ augmente de $2$ chaque fois que $x$ augmente de $1$ : le graphe de $g$ est une droite.
 
+![](img/s-registres-sol.svg){fig-alt="Repère quadrillé avec les cinq points (−1 ; −5), (0 ; −3), (1 ; −1), (2 ; 1) et (3 ; 3) alignés sur la droite qui représente g" width="7.6cm" fig-align="center"}
+
 (b) Le tableau donne $f(1) = 0$, donc on cherche une expression de $x$ qui s'annule en $x = 1$, par exemple $x - 1$. Pour les cinq valeurs du tableau, $x - 1$ vaut $-2$, $-1$, $0$, $1$ et $2$. Les valeurs $4$, $1$, $0$, $1$ et $4$ du tableau sont exactement les carrés de ces nombres, donc on propose $f(x) = (x - 1)^2$. Le texte correspondant est : « on soustrait $1$ au nombre, puis on élève le résultat au carré ». Un tableau de cinq valeurs ne détermine pas la fonction à lui seul : on a choisi la formule la plus simple qui vérifie les cinq colonnes.
 
 
@@ -149,7 +151,7 @@ Retourne à la théorie du cours : *Croissance et décroissance* pour (a), et *E
 *Étape.*
 
 (a) Suis la courbe de gauche à droite et note les abscisses où elle change de sens.
-(b) Examine successivement les quatre abscisses $-3$, $-1$, $1$ et $3$ : compare chaque valeur de $f$ aux valeurs prises tout près, à l'intérieur du domaine, puis compare les quatre valeurs entre elles.
+(b) Repère sur la courbe les sommets et les creux, puis les deux extrémités du graphe ; pour chacun de ces quatre points, compare la valeur de $f$ aux valeurs prises tout près, à l'intérieur du domaine, puis compare les quatre valeurs entre elles.
 
 ## Solution
 
@@ -272,15 +274,15 @@ On détermine d'abord le domaine et les racines, puis on étudie le signe de cha
 (a) La fraction n'existe que si le dénominateur est non nul : $x + 1 \neq 0$, donc $x \neq -1$ et le domaine de $f$ est $\mathbb{R} \setminus \{-1\}$. Une fraction est nulle si et seulement si son numérateur est nul et son dénominateur ne l'est pas : $x(x - 3) = 0$ donne $x = 0$ ou $x = 3$, et ces deux valeurs appartiennent au domaine. Les racines de $f$ sont donc $0$ et $3$.
 (b) Les valeurs $-1$, $0$ et $3$ annulent respectivement le dénominateur et chacun des facteurs du numérateur : elles découpent la droite en quatre intervalles. Le facteur $x + 1$ est négatif pour $x < -1$ et positif pour $x > -1$ ; le facteur $x$ est négatif pour $x < 0$ et positif pour $x > 0$ ; le facteur $x - 3$ est négatif pour $x < 3$ et positif pour $x > 3$. Un quotient est positif quand le nombre de facteurs négatifs est pair, et négatif quand il est impair. On obtient le tableau suivant.
 
-| $x$ | $]-\infty,\,-1[$ | $-1$ | $]-1,\,0[$ | $0$ | $]0,\,3[$ | $3$ | $]3,\,+\infty[$ |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| signe de $x$ | $-$ | | $-$ | $0$ | $+$ | | $+$ |
-| signe de $x - 3$ | $-$ | | $-$ | | $-$ | $0$ | $+$ |
-| signe de $x + 1$ | $-$ | $0$ | $+$ | | $+$ | | $+$ |
-| signe de $f(x)$ | $-$ | $\nexists$ | $+$ | $0$ | $-$ | $0$ | $+$ |
+| $x$ | $-\infty$ | | $-1$ | | $0$ | | $3$ | | $+\infty$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| signe de $x$ | $-$ | $-$ | $-$ | $-$ | $0$ | $+$ | $+$ | $+$ | $+$ |
+| signe de $x - 3$ | $-$ | $-$ | $-$ | $-$ | $-$ | $-$ | $0$ | $+$ | $+$ |
+| signe de $x + 1$ | $-$ | $-$ | $0$ | $+$ | $+$ | $+$ | $+$ | $+$ | $+$ |
+| signe de $f(x)$ | $-$ | $-$ | $\nexists$ | $+$ | $0$ | $-$ | $0$ | $+$ | $+$ |
 
 Contrôle : $f(-2) = \dfrac{(-2)(-5)}{-1} = -10 < 0$ et $f(-\tfrac{1}{2}) = \dfrac{(-\tfrac{1}{2})(-\tfrac{7}{2})}{\tfrac{1}{2}} = \tfrac{7}{2} > 0$, ce qui correspond au tableau.
-(c) Les colonnes de $f(x)$ qui contiennent $+$ ou $0$ sont $]-1,\,0[$, $0$, $3$ et $]3,\,+\infty[$. L'ensemble des solutions de $f(x) \geq 0$ est donc $]-1,\,0] \cup [3,\,+\infty[$. La valeur $-1$ est exclue, car $f$ n'y est pas définie.
+(c) Dans la ligne de $f(x)$, les signes $+$ ou $0$ se trouvent entre $-1$ et $0$, en $0$, en $3$ et à droite de $3$ : l'inégalité $f(x) \geq 0$ est vérifiée sur $]-1,\,0[$, en $0$, en $3$ et sur $]3,\,+\infty[$. L'ensemble des solutions de $f(x) \geq 0$ est donc $]-1,\,0] \cup [3,\,+\infty[$. La valeur $-1$ est exclue, car $f$ n'y est pas définie.
 
 ## Piège
 
