@@ -44,13 +44,13 @@ book:
         - seances/seance04/transfert.qmd
         - seances/seance04/supplementaires.qmd
         - seances/seance04/institution.qmd
-    - part: seances/seance05/index.qmd
-      chapters:
-        - seances/seance05/socle.qmd
-        - seances/seance05/transfert.qmd
-        - seances/seance05/supplementaires.qmd
-        - seances/seance05/defis.qmd
-        - seances/seance05/institution.qmd
+    #OFF05# - part: seances/seance05/index.qmd
+      #OFF05# chapters:
+        #OFF05# - seances/seance05/socle.qmd
+        #OFF05# - seances/seance05/transfert.qmd
+        #OFF05# - seances/seance05/supplementaires.qmd
+        #OFF05# - seances/seance05/defis.qmd
+        #OFF05# - seances/seance05/institution.qmd
     #OFF06# - part: seances/seance06/index.qmd
       #OFF06# chapters:
         #OFF06# - seances/seance06/socle.qmd
@@ -64,7 +64,7 @@ book:
         - seances/methodes/seance02.qmd
         - seances/methodes/seance03.qmd
         - seances/methodes/seance04.qmd
-        - seances/methodes/seance05.qmd
+        #OFF05# - seances/methodes/seance05.qmd
         #OFF06# - seances/methodes/seance06.qmd
   page-footer:
     left: "IMSV — Faculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS"
