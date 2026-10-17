@@ -8,13 +8,39 @@
 # ISOLÉ : ton arbre de travail n'est jamais touché et le cache .quarto ne se mélange pas
 # (c'était la cause de l'erreur « Deno.cwd() »).
 #
-# Usage :  ./deploy.sh      (depuis main)
+# INCRÉMENTAL : rien n'est reconstruit si ses sources n'ont pas changé. Les PDF, feuilles,
+# méthodes, decks de slides et le site HTML de chaque vue sont rangés dans .deploy-cache/
+# (ignoré par git), par empreinte de contenu — voir incremental.py. Une modification dans un
+# seul deck ne reconstruit que ce deck ; une modification dans une séance ne reconstruit que
+# les PDF de cette séance (+ le rendu HTML du livre, que Quarto ne sait pas faire par morceaux).
+# Le déploiement part de HEAD : ce qui n'est pas commité n'est pas publié.
+#
+# Usage :  ./deploy.sh            (depuis main)
+#          ./deploy.sh --force    (tout reconstruire, cache ignoré en lecture ; en cas de doute)
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"; cd "$ROOT"
 BASE_URL="https://qlambotte.github.io/imsv-exos-2026"
 
+for a in "$@"; do
+  case "$a" in
+    --force) export IMSV_FORCE=1 ;;
+    -h|--help) sed -n '2,22p' "$0"; exit 0 ;;
+    *) echo "Option inconnue : $a   (usage : ./deploy.sh [--force])" >&2; exit 2 ;;
+  esac
+done
+export IMSV_CACHE="${IMSV_CACHE:-$ROOT/.deploy-cache}"   # le MÊME cache pour tous les worktrees
+
 rm -f .git/index.lock 2>/dev/null || true
 git rev-parse --verify -q gh-pages >/dev/null || { echo "✗ branche gh-pages absente." >&2; exit 1; }
+
+# Les worktrees sont extraits de HEAD : l'outillage de build doit donc y être commité.
+git cat-file -e HEAD:incremental.py 2>/dev/null \
+  || { echo "✗ incremental.py n'est pas commité sur HEAD : commite-le (et les build-*.sh modifiés) avant de déployer." >&2; exit 1; }
+if ! git diff --quiet HEAD -- incremental.py deploy.sh build-all.sh build-pdf.sh build-boite.sh build-methodes.sh post-render.py 2>/dev/null; then
+  echo "⚠ outillage de build modifié mais non commité : le déploiement utilise la version de HEAD." >&2
+fi
+NDIRTY="$(git status --porcelain --untracked-files=no | wc -l | tr -d ' ')"
+[ "$NDIRTY" = 0 ] || echo "⚠ $NDIRTY fichier(s) modifié(s) non commité(s) : ils ne seront PAS publiés (le déploiement part de HEAD)." >&2
 
 STAGE="$(mktemp -d)"; WTS=()
 cleanup(){
@@ -24,10 +50,11 @@ cleanup(){
 trap cleanup EXIT
 
 build_view(){   # $1 = student|prof ; $2 = sous-dossier de destination ("" ou "prof")
-  local mode="$1" dest="$STAGE${2:+/$2}" wt
+  local mode="$1" dest="$STAGE${2:+/$2}" wt orphans=()
   wt="$(mktemp -d)"; WTS+=("$wt")
-  echo "→ rendu ($mode)"
+  echo "→ site ($mode)"
   git worktree add --detach "$wt" HEAD >/dev/null
+  [ "$mode" = student ] && orphans=(--warn-orphans)
   (
     cd "$wt"
     # Auto-guérison : ce worktree est extrait depuis l'index git, qui peut ne pas
@@ -44,9 +71,9 @@ build_view(){   # $1 = student|prof ; $2 = sous-dossier de destination ("" ou "p
       # site-url sous /prof pour des liens cohérents dans la vue prof
       sed -i 's#imsv-exos-2026/"#imsv-exos-2026/prof/"#' _quarto.yml
     fi
-    ./build-all.sh >/dev/null
+    # PDF / feuilles / méthodes (cache), puis site HTML (cache) → copié dans le stage
+    python3 incremental.py site --view "$mode" --dest "$dest" ${orphans[@]+"${orphans[@]}"}
   )
-  mkdir -p "$dest"; cp -a "$wt/_book/." "$dest"/
   git worktree remove --force "$wt"
 }
 
@@ -67,11 +94,13 @@ build_view prof   "prof"  # vue prof       -> /prof
 # Chaque deck slides/seanceNN/<nom>.qmd ou slides/remed_*/<nom>.qmd (hors fragments _*.qmd) est découvert et
 # rendu automatiquement : ajouter une séance n'implique de toucher ni ce script,
 # ni index.html (regénéré à chaque déploiement par make-index.py).
+# Un deck n'est re-rendu que si lui-même, ses fragments, ses images ou les fichiers qu'il cite
+# (« ../seance01/theme.scss »…) ont changé ; le même deck, dans les deux vues, n'est rendu qu'une fois.
 build_slides(){   # $1 = student|prof ; $2 = dossier de destination
   [ -d "$ROOT/slides" ] || return 0
-  local mode="$1" dest="$2" wt qmd base rel html d
+  local mode="$1" dest="$2" wt d
   wt="$(mktemp -d)"; WTS+=("$wt")
-  echo "→ rendu (slides, $mode)"
+  echo "→ slides ($mode)"
   git worktree add --detach "$wt" HEAD >/dev/null
   if [ "$mode" = prof ]; then
     for d in "$wt"/slides/_seance[0-9][0-9]; do
@@ -79,25 +108,7 @@ build_slides(){   # $1 = student|prof ; $2 = dossier de destination
       mv "$d" "$wt/slides/${d##*/_}"      # _seanceNN -> seanceNN (worktree seulement)
     done
   fi
-  (
-    cd "$wt/slides"
-    for qmd in seance[0-9][0-9]/*.qmd remed_*/*.qmd; do
-      [ -f "$qmd" ] || continue
-      base="${qmd##*/}"
-      case "$base" in _*) continue ;; esac   # saute les fragments _*.qmd
-      quarto render "$qmd" >/dev/null
-    done
-  )
-  for qmd in "$wt"/slides/seance[0-9][0-9]/*.qmd "$wt"/slides/remed_*/*.qmd; do
-    [ -f "$qmd" ] || continue
-    base="${qmd##*/}"
-    case "$base" in _*) continue ;; esac
-    rel="${qmd#"$wt"/slides/}"      # seanceNN/nom.qmd ou remed_xxx/nom.qmd
-    html="${rel%.qmd}.html"         # seanceNN/nom.html
-    mkdir -p "$dest/$(dirname "$html")"
-    cp "$wt/slides/$html" "$dest/$html"
-  done
-  python3 "$wt/slides/make-index.py" "$dest/index.html"
+  ( cd "$wt" && python3 incremental.py slides --dest "$dest" )
   git worktree remove --force "$wt"
 }
 build_slides student "$STAGE/slides"
@@ -117,7 +128,7 @@ git -C "$WGH" push origin gh-pages
 git worktree remove --force "$WGH"
 
 echo ""
-echo "✓ Publié :"
+echo "✓ Publié en ${SECONDS} s :"
 echo "   étudiants : $BASE_URL/"
 echo "   prof      : $BASE_URL/prof/"
 [ -d "$ROOT/slides" ] && echo "   slides    : $BASE_URL/slides   (prof : $BASE_URL/prof/slides)"

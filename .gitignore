@@ -51,3 +51,8 @@ scrcpy/
 /git-filter-repo.py
 /git-filter-repo
 /purge-history.sh
+
+# ---- Cache du build incrémental (deploy.sh / incremental.py) ----
+# PDF, decks et sites déjà construits, rangés par empreinte de contenu. Se vide avec
+# `python3 incremental.py clean` ; `./deploy.sh --force` reconstruit tout.
+/.deploy-cache/

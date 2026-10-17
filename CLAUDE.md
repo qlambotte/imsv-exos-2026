@@ -10,8 +10,15 @@ ARCHITECTURE (pour ne pas la redécouvrir).
   contenu — éditer le fragment.
 - Filtres Lua : `exercice.lua` (numérotation automatique des exercices par catégorie + boîtes
   d'aide en PDF) ; `methode.lua` (cartes de méthode, site + PDF).
-- Les PDF sont produits par `post-render.py`, qui appelle les `build-*.sh` (typst, copie à plat).
-  Tout est générique : ça boucle sur les séances, rien n'est codé en dur.
+- Les PDF sont produits par `incremental.py` (appelé par `post-render.py`, `build-all.sh` et
+  `deploy.sh`), qui appelle les `build-*.sh` (typst, copie à plat). Tout est générique : ça boucle
+  sur les séances, rien n'est codé en dur.
+- Build incrémental : `incremental.py` range chaque produit (PDF d'une séance, feuille, méthodes,
+  deck de slides, site HTML de chaque vue) dans `.deploy-cache/` (ignoré par git), par empreinte de
+  contenu (sources + filtres Lua + thème + script de build + version de Quarto). `deploy.sh` l'appelle
+  depuis des worktrees jetables et part de HEAD ; `./deploy.sh --force` reconstruit tout. Si un build
+  se met à lire un nouveau fichier, l'ajouter à l'empreinte du produit dans `incremental.py` : une
+  dépendance oubliée = un résultat périmé publié.
 - « Boîte à outils » : une page d'accueil qui liste les séances (tableau dynamique) ; chaque séance
   a sa page de méthodes. Feuilles à compléter par séance + une feuille vierge.
 - La taxonomie des exercices (socle / transfert / renforcement) est INTERNE : elle n'apparaît pas

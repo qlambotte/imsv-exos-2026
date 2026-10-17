@@ -8,10 +8,15 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 SRC="$ROOT/seances"; OUT="$ROOT/pdf"; TMP="$ROOT/.pdfbuild-meth"
+ONLY=("$@")
 mkdir -p "$OUT"
 shopt -s nullglob
 for q in "$SRC"/feuille-seance*.qmd "$SRC"/feuille-vierge.qmd; do
   b=$(basename "$q" .qmd)
+  if [ "${#ONLY[@]}" -gt 0 ]; then
+    keep=0; for o in "${ONLY[@]}"; do if [ "$o" = "$b" ]; then keep=1; fi; done
+    [ "$keep" = 1 ] || continue
+  fi
   rm -rf "$TMP"; mkdir -p "$TMP"; python3 "$ROOT/feuille-auto.py" "$q" > "$TMP/$b.qmd"
   echo "→ $b"
   ( cd "$TMP" && quarto render "$b.qmd" --to typst --output "$b.pdf" >/dev/null )

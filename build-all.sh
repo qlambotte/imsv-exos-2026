@@ -1,36 +1,30 @@
 #!/usr/bin/env bash
-# Construit tout le site en une commande :
-#   1) génère les 2 PDF (+ version hors-ligne) de chaque séance ;
-#   2) génère la feuille de méthodes ;
-#   3) rend le site (_book/).
+# Construit tout le site en une commande, de façon INCRÉMENTALE :
+#   1) PDF (+ version hors-ligne) de chaque séance, feuilles de méthodes, méthodes remplies :
+#      seuls ceux dont une source a changé sont reconstruits (cache par empreinte de contenu,
+#      voir incremental.py) ;
+#   2) rend le site (_book/).
 #
-# Note : le hook post-render de Quarto (post-render.sh) régénère déjà chaque PDF
-# dont une source a changé, à chaque `quarto render`. Ce script force, lui, une
-# reconstruction complète.
+# Usage :  ./build-all.sh            (incrémental)
+#          ./build-all.sh --force    (tout reconstruire, cache ignoré en lecture)
+#
+# Note : le hook post-render de Quarto (post-render.py) appelle le même moteur à chaque
+# `quarto render` complet ; ici on le passe d'abord, puis on rend le site sans relancer le hook.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 cd "$ROOT"
 
-# Auto-guérison : un `git worktree add` (voir deploy.sh) peut extraire ces scripts
-# sans leur bit exécutable si git ne l'a pas enregistré. On le remet ici à chaque
-# lancement, pour ne plus jamais retomber sur « Permission non accordée ».
-chmod +x build-pdf.sh build-methodes.sh build-boite.sh 2>/dev/null || true
+case "${1:-}" in
+  "") ;;
+  --force) export IMSV_FORCE=1 ;;
+  *) echo "Usage : ./build-all.sh [--force]" >&2; exit 2 ;;
+esac
 
-for d in seances/seance*/; do
-  s=$(basename "$d")
-  [ -f "$d/_pdf.qmd" ] || continue
-  echo "→ PDF $s"
-  ./build-pdf.sh "$s" >/dev/null
-done
-
-echo "→ Feuille méthodes"
-./build-methodes.sh >/dev/null
-
-echo "→ Boîte à outils"
-./build-boite.sh >/dev/null
+echo "→ PDF, feuilles de méthodes, boîte à outils"
+python3 incremental.py assets
 
 echo "→ Site"
-quarto render >/dev/null
+IMSV_POSTRENDER=1 quarto render >/dev/null
 
 echo ""
 echo "✔ Terminé : site dans _book/ , PDF et hors-ligne dans pdf/"

@@ -5,13 +5,21 @@
 # Source unique : seances/_methodes-seanceNN.qmd, mis en forme par methode.lua.
 # Typst interdit dans un projet « book » : rendu dans une copie plate hors projet.
 # Les séances hors ligne (préfixe « _ ») ne sont pas prises : rien de codé en dur.
+#
+# Usage :  ./build-boite.sh [seanceNN ...]   (sans argument : toutes les séances en ligne ;
+#          avec arguments : seulement celles-là — c'est ce qu'utilise incremental.py)
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 SRC="$ROOT/seances"; OUT="$ROOT/pdf"; TMP="$ROOT/.pdfbuild-boite"
+ONLY=("$@")
 mkdir -p "$OUT"
 shopt -s nullglob
 for page in "$SRC"/methodes/seance*.qmd; do
   S=$(basename "$page" .qmd)
+  if [ "${#ONLY[@]}" -gt 0 ]; then
+    keep=0; for o in "${ONLY[@]}"; do if [ "$o" = "$S" ]; then keep=1; fi; done
+    [ "$keep" = 1 ] || continue
+  fi
   NUM=$(echo "$S" | sed 's/seance0*//')
   FRAG="$SRC/_methodes-$S.qmd"
   [ -f "$FRAG" ] || { echo "  (pas de fragment pour $S, ignoré)"; continue; }
