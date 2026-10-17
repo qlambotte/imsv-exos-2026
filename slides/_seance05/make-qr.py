@@ -15,6 +15,7 @@ from pathlib import Path
 # >>> À COMPLÉTER : les liens Wooclap et du sondage <<<
 LIENS = {
     "qr-echauffement": "https://app.wooclap.com/A_COMPLETER?from=instruction-slide",
+    "qr-confrontation": "https://app.wooclap.com/A_COMPLETER?from=instruction-slide",  # vote A-D de la confrontation de S.4
     "qr-methodes":     "https://app.wooclap.com/A_COMPLETER?from=instruction-slide",
     "qr-sondage":      "https://app.wooclap.com/A_COMPLETER?from=instruction-slide",  # vote sur la correction de S.4
     "qr-sondage-seances": "A_COMPLETER",  # lien du sondage final sur les séances

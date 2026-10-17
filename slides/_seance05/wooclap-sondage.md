@@ -29,7 +29,7 @@ Proposition à adapter : reprendre la forme et l'échelle du sondage sur la thé
 ### Déroulé
 
 1. Le temps prévu pour le socle (30 minutes) est suffisant.
-2. Le temps prévu pour le transfert (30 minutes) est suffisant.
+2. Le temps prévu pour le transfert (25 minutes) est suffisant.
 3. L'échauffement du début de séance m'aide à démarrer.
 4. Les fiches de méthode de fin de séance m'aident à retenir ce qu'il faut savoir faire.
 

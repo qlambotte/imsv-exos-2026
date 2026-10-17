@@ -48,15 +48,47 @@ C'est normal de bloquer : ça fait partie de l'apprentissage. Quand ça t'arrive
 :::
 
 
+## Retour sur le sondage d'octobre
+
+[1]{.step} **Merci** d'avoir répondu au sondage.
+
+[2]{.step} J'ai revu les **indices**, les **énoncés** et les **solutions** pour les rendre encore plus explicites.
+
+[3]{.step} Aujourd'hui, on **teste ensemble la correction d'un exercice du socle**. Tu me diras si tu veux la garder à chaque séance.
+
+[4]{.step} Certains retours demandent plus d'éclaircissements : à la fin de la séance, je te demanderai plus de détails sur ton avis sur le dispositif.
+
+::: notes
+Cinq à dix minutes pour ce retour, avec la diapositive suivante.
+:::
+
+## Ce que je veux garder
+
+Je suis ouvert au changement. Je veux garder un principe : sur les deux heures d'exercices, **tu es actif·ve la majorité du temps**.
+
+| | Temps actif | Part du temps de travail |
+|:---|:---:|:---:|
+| Avant | $30 + 30 + 15 = 75$ min sur $110$ | environ $70\,\%$ |
+| À garder | au moins $65$ min sur $110$ | au moins $60\,\%$ |
+
+::: aretenir
+Tout changement du dispositif doit respecter ce seuil.
+:::
+
+::: notes
+Temps de travail : 120 minutes moins la pause de 10 minutes, soit 110 minutes. Avec le déroulé du jour : socle 30 min, transfert 25 min, méthodes 15 min d'activité, soit 70 minutes sur 110 (environ 64 %), au-dessus du seuil de 60 %. Laisser les étudiant·es réagir, sans ouvrir de discussion longue : le sondage de fin de séance recueillera le détail.
+:::
+
 ## Le déroulé de la séance
 
 | Moment | Durée |
 |:---|:---:|
+| Retour sur le sondage d'octobre | 5 min |
 | Échauffement | 10 min |
 | Socle, en autonomie | 30 min |
 | Exercice S.4 : confrontation et correction | 10 min |
 | Pause | 10 min |
-| Transfert, en autonomie | 30 min |
+| Transfert, en autonomie | 25 min |
 | Méthodes de la séance | 20 min |
 | Sondage sur les séances | 10 min |
 
@@ -65,7 +97,7 @@ Les défis peuvent être faits en séance par celles et ceux qui maîtrisent dé
 :::
 
 ::: notes
-Total prévu : 120 minutes, sans battement. L'échauffement doit tenir en 10 minutes, et le vote sur la correction de S.4 (1 minute) se fait dans les 10 minutes de S.4. Si la séance prend du retard, raccourcir la fiche « Calculer une réciproque » (les deux diapositives facultatives : registres et diagramme sagittal ; si besoin, passer l'étape 6), jamais le sondage final.
+Total prévu : 120 minutes, sans battement. Le retour sur le sondage peut aller jusqu'à 10 minutes en prenant sur l'échauffement, qui ne compte plus que deux questions. L'échauffement doit tenir en 10 minutes, et le vote sur la correction de S.4 (1 minute) se fait dans les 10 minutes de S.4. Si la séance prend du retard, raccourcir la fiche « Calculer une réciproque » (les deux diapositives facultatives : registres et diagramme sagittal ; si besoin, passer l'étape 6), jamais le sondage final.
 :::
 
 # Échauffement {.divider background-color="#14304a"}
@@ -79,11 +111,7 @@ Total prévu : 120 minutes, sans battement. L'échauffement doit tenir en 10 min
 
 ![](img/q1-croissance.svg){fig-alt="Trois graphes, nommés A, B et C, représentant chacun une fonction sur un intervalle, lus de gauche à droite" width="100%"}
 
-**Q2** [[Rappel]{.obj}]{style="float:right"} — parmi les nombres $-1$, $0$, $2{,}5$ et $3$, lesquels appartiennent à l'intervalle $[0,\,3[$ ?
-
-**Q3** [[Rappel]{.obj}]{style="float:right"} — la relation $A = 2C + 1$ donne $A$ à partir de $C$. Quelle valeur de $C$ donne $A = 7$ ?
-
-**Q4** [[Rappel]{.obj}]{style="float:right"} — quelles sont les solutions de l'équation $x^2 - 5 = 11$ ?
+**Q2** [[Rappel]{.obj}]{style="float:right"} — quelles sont les solutions de l'équation $x^2 - 5 = 11$ ?
 ::::
 :::::
 
@@ -257,57 +285,19 @@ Pour chacun des trois graphes, la fonction est-elle croissante, décroissante, o
 
 ![](img/q1-croissance.svg){fig-alt="Trois graphes, nommés A, B et C, représentant chacun une fonction sur un intervalle, lus de gauche à droite" width="95%" fig-align="center"}
 
-. . .
-
-::: aretenir
-On lit un graphe **de gauche à droite** : la fonction est **croissante** si la courbe monte quand on avance vers la droite, et **décroissante** si elle descend.
-
-Graphe A : la fonction est croissante, car la courbe monte de gauche à droite, même si ses valeurs restent négatives. Graphe B : la fonction est décroissante, car la courbe descend de gauche à droite, même si ses valeurs restent positives. Graphe C : la fonction n'est ni croissante ni décroissante, car la courbe descend d'abord, puis monte.
-
-Confondre le sens de variation avec le signe des valeurs est l'erreur classique : être au-dessus ou en dessous de l'axe horizontal ne dit rien sur la croissance.
-:::
-
 ::: notes
 Faire lire chaque graphe de gauche à droite à voix haute avant de donner la réponse. Cette question prépare la question (a) de l'exercice S.3 et la définition de la croissance.
 :::
 
+## Q1 : réponse [[O3]{.obj}]{style="float:right"}
+
+![](img/q1-solution.svg){fig-alt="Les trois graphes A, B et C. Le graphe A est entièrement en vert : la fonction est croissante. Le graphe B est entièrement en rouge : la fonction est décroissante. Le graphe C est en rouge jusqu'à son point le plus bas, puis en vert : la fonction décroît d'abord, puis croît." width="95%" fig-align="center"}
+
+::: notes
+Vert : partie croissante ; rouge : partie décroissante. A : croissante, même si ses valeurs restent négatives. B : décroissante, même si ses valeurs restent positives. C : ni croissante ni décroissante, car elle descend d'abord puis monte. Confondre le sens de variation avec le signe des valeurs est l'erreur classique : être au-dessus ou en dessous de l'axe horizontal ne dit rien sur la croissance.
+:::
+
 ## Q2 [[Rappel]{.obj}]{style="float:right"}
-
-Parmi les nombres $-1$, $0$, $2{,}5$ et $3$, lesquels appartiennent à l'intervalle $[0,\,3[$ ?
-
-. . .
-
-::: aretenir
-L'intervalle $[0,\,3[$ contient les nombres $x$ tels que $0 \leq x < 3$ : le crochet tourné vers l'intérieur inclut la borne $0$, le crochet tourné vers l'extérieur exclut la borne $3$.
-
-Les nombres $0$ et $2{,}5$ appartiennent à l'intervalle ; $-1$ et $3$ n'y appartiennent pas.
-
-Inclure la borne $3$ est l'erreur classique.
-:::
-
-::: notes
-Cette question prépare l'exercice S.4 : une borne exclue n'est pas une abscisse de l'intervalle, ce qui peut faire disparaître un extremum.
-:::
-
-## Q3 [[Rappel]{.obj}]{style="float:right"}
-
-La relation $A = 2C + 1$ donne $A$ à partir de $C$. Quelle valeur de $C$ donne $A = 7$ ?
-
-. . .
-
-::: aretenir
-On remplace $A$ par $7$ : $7 = 2C + 1$. On soustrait $1$ : $6 = 2C$. On divise par $2$ : $C = 3$.
-
-Vérification : $2 \cdot 3 + 1 = 7$, ce qui redonne bien la sortie.
-
-Ici, on connaissait la **sortie** et on cherchait l'**entrée** : c'est la situation des exercices de transfert, que la méthode « calculer une réciproque » généralise à toutes les sorties.
-:::
-
-::: notes
-Cette question prépare la méthode 2, calculer une réciproque : on défait les opérations dans l'ordre inverse. L'erreur typique est de diviser par 2 avant de soustraire 1, ce qui donne $2{,}5$ au lieu de $3$.
-:::
-
-## Q4 [[Rappel]{.obj}]{style="float:right"}
 
 Quelles sont les solutions de l'équation $x^2 - 5 = 11$ ?
 
@@ -366,66 +356,90 @@ Pour chaque intervalle, vote **A**, **B**, **C** ou **D**, puis compare ta répo
 Faire voter (main levée ou cartes A, B, C, D) intervalle par intervalle, puis laisser 2 minutes de discussion entre voisins avant la correction. Les intervalles (b) et (d) devraient diviser la classe.
 :::
 
-## Étape 1 : ce que dit la définition
+## (a) Sur $[0,\,5]$
 
-[1]{.step} **Que faut-il pour qu'une fonction admette un maximum sur un intervalle $I$ ?**
-
+:::::: columns
+::::: {.column width="42%"}
 . . .
 
 ::: aretenir
-Le cours dit que $f$ atteint son maximum sur $I$ en $x_{\mathrm{max}} \in I$ si $f(x) \leq f(x_{\mathrm{max}})$ pour tout $x$ de $I$. Le minimum se définit de la même façon.
+Le minimum vaut $-1$, atteint en $2$. Le maximum vaut $8$, atteint en $5$.
 
-Un extremum doit donc être **atteint en une abscisse qui appartient à l'intervalle**. Une borne exclue n'est pas une abscisse de l'intervalle.
+**Réponse A.**
+:::
+:::::
+::::: {.column width="58%"}
+![](img/s4-a.svg){fig-alt="Parabole y = x² − 4x + 3 en trait pâle. La portion au-dessus de l'intervalle [0 ; 5] est en couleur, avec un point plein en (0 ; 3) et un point plein en (5 ; 8). Le segment [0 ; 5] est marqué sur l'axe des abscisses, avec deux points pleins." width="100%"}
+:::::
+::::::
+
+::: notes
+Un extremum doit être atteint en une abscisse qui appartient à l'intervalle : c'est la définition du cours. Les étapes de la méthode seront reprises avec la fiche méthode.
 :::
 
-## Étape 2 : les variations et les candidats
+## (b) Sur $[0,\,5[$
 
-[2]{.step} **Où $f$ croît-elle, où décroît-elle, et quelles abscisses faut-il examiner ?**
-
+:::::: columns
+::::: {.column width="42%"}
 . . .
 
 ::: aretenir
-Sur le graphe, $f$ décroît jusqu'à l'abscisse $2$, puis croît. Les candidats sont l'abscisse $2$, où $f$ change de sens, et les bornes des intervalles.
+Le minimum vaut $-1$, atteint en $2$.
 
-| $x$ | $0$ | $2$ | $4$ | $5$ |
-|:---:|:---:|:---:|:---:|:---:|
-| $f(x)$ | $3$ | $-1$ | $3$ | $8$ |
+Les valeurs s'approchent de $8$ quand $x$ s'approche de $5$, mais $5$ est exclu : une abscisse plus proche de $5$ donne toujours une valeur plus grande. Il n'y a pas de maximum.
+
+**Réponse C.**
 :::
+:::::
+::::: {.column width="58%"}
+![](img/s4-b.svg){fig-alt="Parabole y = x² − 4x + 3 en trait pâle. La portion au-dessus de l'intervalle [0 ; 5[ est en couleur, avec un point plein en (0 ; 3) et un point creux en (5 ; 8). Le segment [0 ; 5[ est marqué sur l'axe des abscisses, avec un point plein en 0 et un point creux en 5." width="100%"}
+:::::
+::::::
 
-## Étape 3 : les bornes incluses, puis une borne exclue
+## (c) Sur $]2,\,5]$
 
-[3]{.step} **Que change le passage de $[0,\,5]$ à $[0,\,5[$ ?**
-
+:::::: columns
+::::: {.column width="42%"}
 . . .
 
 ::: aretenir
-**(a)** Sur $[0,\,5]$, le minimum vaut $-1$, atteint en $2$, et le maximum vaut $8$, atteint en $5$ : **réponse A**.
+Le maximum vaut $8$, atteint en $5$.
 
-**(b)** Sur $[0,\,5[$, le minimum reste $-1$, atteint en $2$. Les valeurs de $f$ s'approchent de $8$ quand $x$ s'approche de $5$, mais $5$ n'appartient pas à l'intervalle : quelle que soit l'abscisse choisie, une abscisse plus proche de $5$ donne une valeur plus grande. Il n'y a pas de maximum : **réponse C**.
+Les valeurs s'approchent de $-1$ quand $x$ s'approche de $2$, mais $2$ est exclu. Il n'y a pas de minimum.
+
+**Réponse B.**
 :::
+:::::
+::::: {.column width="58%"}
+![](img/s4-c.svg){fig-alt="Parabole y = x² − 4x + 3 en trait pâle. La portion au-dessus de l'intervalle ]2 ; 5] est en couleur, avec un point creux en (2 ; −1) et un point plein en (5 ; 8). Le segment ]2 ; 5] est marqué sur l'axe des abscisses, avec un point creux en 2 et un point plein en 5." width="100%"}
+:::::
+::::::
 
-## Étape 4 : exclure le point le plus bas
+## (d) Sur $[0,\,4[$
 
-[4]{.step} **Que se passe-t-il quand l'abscisse $2$ est exclue ?**
-
+:::::: columns
+::::: {.column width="42%"}
 . . .
 
 ::: aretenir
-**(c)** Sur $]2,\,5]$, $f$ croît. Le maximum vaut $8$, atteint en $5$. Les valeurs s'approchent de $-1$ quand $x$ s'approche de $2$, mais $2$ est exclu : il n'y a pas de minimum. **Réponse B**.
+Le minimum vaut $-1$, atteint en $2$.
 
-Si les deux bornes étaient exclues, sur $]2,\,5[$, il n'y aurait ni maximum ni minimum : ce serait la **réponse D**.
+Près de la borne exclue $4$, les valeurs s'approchent de $3$ sans l'atteindre, mais la valeur $3$ est **déjà atteinte en $0$**. Aucune valeur ne dépasse $3$ : le maximum vaut $3$, atteint en $0$.
+
+**Réponse A.**
 :::
+:::::
+::::: {.column width="58%"}
+![](img/s4-d.svg){fig-alt="Parabole y = x² − 4x + 3 en trait pâle. La portion au-dessus de l'intervalle [0 ; 4[ est en couleur, avec un point plein en (0 ; 3) et un point creux en (4 ; 3). Le segment [0 ; 4[ est marqué sur l'axe des abscisses, avec un point plein en 0 et un point creux en 4." width="100%"}
+:::::
+::::::
 
-## Étape 5 : une borne exclue qui ne change rien
-
-[5]{.step} **Sur $[0,\,4[$, la borne exclue $4$ fait-elle disparaître le maximum ?**
-
-. . .
+## (e) Pourquoi exclure $5$ change tout, et pas exclure $4$ ?
 
 ::: aretenir
-**(d)** Le minimum vaut $-1$, atteint en $2$. Près de la borne exclue $4$, les valeurs s'approchent de $3$ sans l'atteindre, mais la valeur $3$ est **déjà atteinte en $0$**, qui appartient à l'intervalle. Aucune valeur ne dépasse $3$ : le maximum vaut $3$, atteint en $0$. **Réponse A**.
+En (b), la valeur dont $f$ s'approche près de la borne exclue, $8$, est plus grande que toutes les valeurs atteintes.
 
-**(e)** En (b), la valeur dont $f$ s'approche près de la borne exclue, $8$, est plus grande que toutes les valeurs atteintes ; en (d), la valeur $3$ dont elle s'approche est déjà atteinte ailleurs dans l'intervalle.
+En (d), la valeur dont $f$ s'approche, $3$, est déjà atteinte ailleurs dans l'intervalle.
 :::
 
 ## Le piège à connaître
@@ -473,7 +487,7 @@ Une minute de vote. Les choix sont dans wooclap-sondage.md (question 1). Annonce
 
 # Pause — 10 minutes {.divider background-color="#14304a"}
 
-# Transfert — 30 minutes {.divider background-color="#14304a"}
+# Transfert — 25 minutes {.divider background-color="#14304a"}
 
 ::: notes
 Les étudiant·es travaillent le transfert (T.1 à T.3) avec les coups de pouce du site.
@@ -519,7 +533,7 @@ Il faut savoir si une fonction admet un maximum ou un minimum sur un intervalle,
 
 ::: incremental
 1.  **Repérer** où la fonction croît et où elle décroît sur l'intervalle.
-2.  **Lister** les candidats : changements de sens et bornes.
+2.  **Lister** les candidats : changements de variation et bornes.
 3.  **Regarder** si chaque borne est incluse ou exclue.
 4.  **Comparer** les valeurs atteintes avec les valeurs approchées près des bornes exclues.
 5.  **Conclure** : abscisse et valeur de chaque extremum, ou absence.
