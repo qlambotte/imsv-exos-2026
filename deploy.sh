@@ -29,6 +29,7 @@ for a in "$@"; do
   esac
 done
 export IMSV_CACHE="${IMSV_CACHE:-$ROOT/.deploy-cache}"   # le MÊME cache pour tous les worktrees
+export IMSV_STATS_FILE="$(mktemp)"                          # détail des produits, pour le récapitulatif
 
 rm -f .git/index.lock 2>/dev/null || true
 git rev-parse --verify -q gh-pages >/dev/null || { echo "✗ branche gh-pages absente." >&2; exit 1; }
@@ -45,7 +46,7 @@ NDIRTY="$(git status --porcelain --untracked-files=no | wc -l | tr -d ' ')"
 STAGE="$(mktemp -d)"; WTS=()
 cleanup(){
   for w in "${WTS[@]:-}"; do [ -n "$w" ] && git worktree remove --force "$w" 2>/dev/null || true; done
-  rm -rf "$STAGE"; git worktree prune 2>/dev/null || true
+  rm -rf "$STAGE" "$IMSV_STATS_FILE"; git worktree prune 2>/dev/null || true
 }
 trap cleanup EXIT
 
@@ -108,7 +109,7 @@ build_slides(){   # $1 = student|prof ; $2 = dossier de destination
       mv "$d" "$wt/slides/${d##*/_}"      # _seanceNN -> seanceNN (worktree seulement)
     done
   fi
-  ( cd "$wt" && python3 incremental.py slides --dest "$dest" )
+  ( cd "$wt" && python3 incremental.py slides --view "$mode" --dest "$dest" )
   git worktree remove --force "$wt"
 }
 build_slides student "$STAGE/slides"
@@ -127,6 +128,8 @@ git -C "$WGH" commit -q -m "Deploy : étudiants (/) + prof (/prof) — $(date '+
 git -C "$WGH" push origin gh-pages
 git worktree remove --force "$WGH"
 
+echo ""
+python3 "$ROOT/incremental.py" recap || true   # ce qui a été reconstruit / réutilisé, slides comprises
 echo ""
 echo "✓ Publié en ${SECONDS} s :"
 echo "   étudiants : $BASE_URL/"

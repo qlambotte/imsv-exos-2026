@@ -16,9 +16,11 @@ ARCHITECTURE (pour ne pas la redécouvrir).
 - Build incrémental : `incremental.py` range chaque produit (PDF d'une séance, feuille, méthodes,
   deck de slides, site HTML de chaque vue) dans `.deploy-cache/` (ignoré par git), par empreinte de
   contenu (sources + filtres Lua + thème + script de build + version de Quarto). `deploy.sh` l'appelle
-  depuis des worktrees jetables et part de HEAD ; `./deploy.sh --force` reconstruit tout. Si un build
-  se met à lire un nouveau fichier, l'ajouter à l'empreinte du produit dans `incremental.py` : une
-  dépendance oubliée = un résultat périmé publié.
+  depuis des worktrees jetables et part de HEAD ; `./deploy.sh --force` reconstruit tout. Déploiement ciblé : `./deploy.sh seance N` (fichiers), `slides N`, `seance N tout` (fichiers + slides), `tout` ou sans argument (tout). Un ciblé ne remplace sur gh-pages que les chemins de la séance ; menu, accueil et recherche ne bougent qu'avec `tout`. Les builds de
+  PDF, feuilles, méthodes et decks sont tracés avec `strace` : les fichiers réellement lus sont
+  enregistrés avec chaque entrée du cache, donc rien à déclarer quand un build lit un nouveau fichier
+  (`python3 incremental.py deps` les liste ; `IMSV_NOTRACE=1` désactive le traçage). Le site HTML n'est
+  pas tracé : son empreinte couvre tout le dépôt sauf les exclusions de `book_ignore()`.
 - « Boîte à outils » : une page d'accueil qui liste les séances (tableau dynamique) ; chaque séance
   a sa page de méthodes. Feuilles à compléter par séance + une feuille vierge.
 - La taxonomie des exercices (socle / transfert / renforcement) est INTERNE : elle n'apparaît pas
