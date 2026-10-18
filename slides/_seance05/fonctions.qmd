@@ -461,7 +461,7 @@ Près de la borne exclue $4$, les valeurs s'approchent de $3$ sans l'atteindre, 
 :::::
 ::::::
 
-## (e) Pourquoi exclure $5$ change tout, et pas exclure $4$ ?
+## (e) Pourquoi $5$ et pas $4$ ?
 
 :::::: columns
 ::::: {.column width="50%"}
@@ -476,10 +476,8 @@ Près de la borne exclue $4$, les valeurs s'approchent de $3$ sans l'atteindre, 
 :::::
 ::::::
 
-. . .
-
-::: aretenir
-En (b), la valeur dont $f$ s'approche près de la borne exclue, $8$, est plus grande que toutes les valeurs atteintes. En (d), la valeur dont elle s'approche, $3$, est déjà atteinte ailleurs dans l'intervalle.
+::: notes
+En (b), la valeur dont f s'approche près de la borne exclue, 8, est plus grande que toutes les valeurs atteintes : pas de maximum. En (d), la valeur dont elle s'approche, 3, est déjà atteinte en 0 : le maximum existe.
 :::
 
 ## Le piège à connaître
@@ -492,39 +490,80 @@ Piège
 Donner comme maximum la valeur en une borne exclue, par exemple $8$ sur $[0,\,5[$ : un maximum doit être atteint en une abscisse de l'intervalle. À l'inverse, croire qu'une borne exclue supprime **toujours** un extremum : sur $[0,\,4[$, le maximum existe.
 ::::
 
-## Rappel : tracer une fonction du 1er degré
+## Rappel : tracer une fonction du 1er degré {.smaller}
 
 :::::: columns
 ::::: {.column width="44%"}
 $$g(x) = \textcolor{#c76e00}{2}\,x \;\textcolor{#1f5fbf}{-\,3}$$
 
+::: {.fragment fragment-index=1}
 [1]{.step} [L'ordonnée à l'origine]{style="color:#1f5fbf;font-weight:600"} $-3$ donne le point $(0\,;\,-3)$ : le graphe coupe l'axe vertical en ce point.
+:::
 
+::: {.fragment fragment-index=2}
 [2]{.step} [La pente]{style="color:#c76e00;font-weight:600"} $2$ dit comment monter : quand $x$ augmente de $1$, $g(x)$ augmente de $2$.
+:::
 
+::: {.fragment fragment-index=3}
 [3]{.step} On trace la droite par le point $(0\,;\,-3)$ et le point obtenu en avançant de $1$ et en montant de $2$.
+:::
 :::::
 ::::: {.column width="56%"}
-![](img/x2-premier-degre.svg){fig-alt="Droite y = 2x − 3. Le point (0 ; −3), en bleu, est l'ordonnée à l'origine. Un petit escalier orange, un pas de 1 vers la droite puis une montée de 2, représente la pente." width="100%"}
+:::: r-stack
+![](img/x2-premier-0.svg){width="100%"}
+![](img/x2-premier-1.svg){.fragment fragment-index=1 width="100%"}
+![](img/x2-premier-2.svg){.fragment fragment-index=2 width="100%"}
+![](img/x2-premier-3.svg){.fragment fragment-index=3 width="100%" fig-alt="Droite y = 2x − 3 construite en trois étapes : le point (0 ; −3) en bleu, l'escalier orange d'un pas de 1 vers la droite et d'une montée de 2, puis la droite elle-même."}
+::::
 :::::
 ::::::
 
-## Rappel : tracer une fonction du 2e degré
+## La fonction du 2e degré : deux écritures {.smaller}
+
+| | Forme développée $f(x) = ax^2 + bx + c$ | Forme canonique $f(x) = a(x - \alpha)^2 + \beta$ |
+|:---|:---:|:---:|
+| [Ordonnée à l'origine]{style="color:#1f5fbf;font-weight:600"} | $f(0) = c$ | $f(0) = a\alpha^2 + \beta$ |
+| [Axe de symétrie]{style="color:#2e7d46;font-weight:600"} | $x = -\dfrac{b}{2a}$ | $x = \alpha$ |
+| [Sommet]{style="color:#7b3fa0;font-weight:600"} | $\left(-\dfrac{b}{2a}\ ;\ f\!\left(-\dfrac{b}{2a}\right)\right)$ | $(\alpha\ ;\ \beta)$ |
+| [Racines]{style="color:#c76e00;font-weight:600"} | $x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, si $b^2 - 4ac \geq 0$ | $x = \alpha \pm \sqrt{-\dfrac{\beta}{a}}$, si $-\dfrac{\beta}{a} \geq 0$ |
+
+Si $a > 0$, la parabole est ouverte vers le haut et le sommet est son point le plus bas ; si $a < 0$, elle est ouverte vers le bas et le sommet est son point le plus haut.
+
+## Rappel : tracer une fonction du 2e degré {.smaller}
 
 :::::: columns
 ::::: {.column width="44%"}
-$$f(x) = x^2 - 4x + 3 = (x-1)(x-3)$$
+$$f(x) = x^2 - 4x + 3 = (x-1)(x-3) = (x-2)^2 - 1$$
 
+::: {.fragment fragment-index=1}
 [1]{.step} [Les racines]{style="color:#c76e00;font-weight:600"} : $f(x) = 0$ donne $x = 1$ et $x = 3$.
+:::
 
+::: {.fragment fragment-index=2}
 [2]{.step} [L'ordonnée à l'origine]{style="color:#1f5fbf;font-weight:600"} : $f(0) = 3$, point $(0\,;\,3)$.
+:::
 
-[3]{.step} [L'axe de symétrie]{style="color:#2e7d46;font-weight:600"} passe au milieu des racines : $x = \dfrac{1 + 3}{2} = 2$. Le point $(0\,;\,3)$ a pour symétrique $(4\,;\,3)$.
+::: {.fragment fragment-index=3}
+[3]{.step} [L'axe de symétrie]{style="color:#2e7d46;font-weight:600"} passe au milieu des racines : $x = \dfrac{1 + 3}{2} = 2$. Le symétrique de $(0\,;\,3)$ est $(4\,;\,3)$.
+:::
 
+::: {.fragment fragment-index=4}
 [4]{.step} [Le sommet]{style="color:#7b3fa0;font-weight:600"} est sur l'axe : $f(2) = -1$, point $(2\,;\,-1)$.
+:::
+
+::: {.fragment fragment-index=5}
+[5]{.step} On trace la parabole par tous ces points.
+:::
 :::::
 ::::: {.column width="56%"}
-![](img/x2-second-degre.svg){fig-alt="Parabole y = x² − 4x + 3. Les racines 1 et 3, en orange, sont sur l'axe horizontal. Le point (0 ; 3), en bleu, est l'ordonnée à l'origine, et son symétrique (4 ; 3) est en cercle blanc. L'axe de symétrie x = 2 est une droite verte en pointillés. Le sommet (2 ; −1), en violet, est le point le plus bas." width="100%"}
+:::: r-stack
+![](img/x2-second-0.svg){width="100%"}
+![](img/x2-second-1.svg){.fragment fragment-index=1 width="100%"}
+![](img/x2-second-2.svg){.fragment fragment-index=2 width="100%"}
+![](img/x2-second-3.svg){.fragment fragment-index=3 width="100%"}
+![](img/x2-second-4.svg){.fragment fragment-index=4 width="100%"}
+![](img/x2-second-5.svg){.fragment fragment-index=5 width="100%" fig-alt="Parabole y = x² − 4x + 3 construite en cinq étapes : racines 1 et 3 en orange, point (0 ; 3) en bleu, axe de symétrie x = 2 en vert avec le symétrique (4 ; 3), sommet (2 ; −1) en violet, puis la parabole."}
+::::
 :::::
 ::::::
 

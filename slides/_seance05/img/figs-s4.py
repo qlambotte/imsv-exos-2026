@@ -146,34 +146,55 @@ fig.savefig(os.path.join(OUT, "x1-borne-exclue.svg"), facecolor="white", metadat
 GREEN, PURPLE, RED = "#2e7d46", "#7b3fa0", "#c0392b"
 NAVY = "#14304a"
 
-# 1er degré : g(x) = 2x - 3 ; pente (orange) et ordonnée à l'origine (bleu)
-fig, ax = repere_x((-1.3, 4.3), (-4.6, 4.4), range(-1, 5), [-3, -1, 1, 3])
-xs = np.linspace(-0.6, 3.7, 50)
-ax.plot(xs, 2 * xs - 3, color=NAVY, lw=3.4, zorder=4)
-ax.plot([0, 1], [-3, -3], color=ORANGE, lw=4, zorder=6, solid_capstyle="butt")
-ax.plot([1, 1], [-3, -1], color=ORANGE, lw=4, zorder=6, solid_capstyle="butt")
-ax.annotate(r"$+1$", (0.5, -3), xytext=(0, -8), textcoords="offset points", fontsize=19, color=ORANGE, ha="center", va="top")
-ax.annotate(r"$+2$", (1, -2), xytext=(10, 0), textcoords="offset points", fontsize=19, color=ORANGE, ha="left", va="center")
-ax.plot([0], [-3], "o", ms=12, color=BLUE, zorder=8)
-ax.plot([1.5], [0], "o", ms=0)
-ax.annotate(r"$(0\,;\,-3)$", (0, -3), xytext=(-14, 12), textcoords="offset points", fontsize=19, color=BLUE, ha="right", va="bottom")
-ax.annotate(r"$g$", (3.45, 3.9), xytext=(12, 0), textcoords="offset points", fontsize=21, color=NAVY, ha="left", va="center")
-fig.savefig(os.path.join(OUT, "x2-premier-degre.svg"), facecolor="white", metadata={"Date": None}); plt.close(fig)
+# 1er degré : g(x) = 2x - 3 ; pente (orange) et ordonnée à l'origine (bleu).
+# Une figure par étape (cumulatives, même cadre) : x2-premier-0.svg (repère vide) … x2-premier-3.svg (tracé).
+def premier(k):
+    fig, ax = repere_x((-1.3, 4.3), (-4.6, 4.4), range(-1, 5), [-3, -1, 1, 3])
+    if k >= 1:
+        ax.plot([0], [-3], "o", ms=12, color=BLUE, zorder=8)
+        ax.annotate(r"$(0\,;\,-3)$", (0, -3), xytext=(-14, 12), textcoords="offset points", fontsize=19, color=BLUE, ha="right", va="bottom")
+    if k >= 2:
+        ax.plot([0, 1], [-3, -3], color=ORANGE, lw=4, zorder=6, solid_capstyle="butt")
+        ax.plot([1, 1], [-3, -1], color=ORANGE, lw=4, zorder=6, solid_capstyle="butt")
+        ax.plot([1], [-1], "o", ms=10, color=ORANGE, zorder=8)
+        ax.annotate(r"$+1$", (0.5, -3), xytext=(0, -8), textcoords="offset points", fontsize=19, color=ORANGE, ha="center", va="top")
+        ax.annotate(r"$+2$", (1, -2), xytext=(10, 0), textcoords="offset points", fontsize=19, color=ORANGE, ha="left", va="center")
+    if k >= 3:
+        xs = np.linspace(-0.6, 3.7, 50)
+        ax.plot(xs, 2 * xs - 3, color=NAVY, lw=3.4, zorder=4)
+        ax.annotate(r"$g$", (3.45, 3.9), xytext=(12, 0), textcoords="offset points", fontsize=21, color=NAVY, ha="left", va="center")
+    fig.savefig(os.path.join(OUT, f"x2-premier-{k}.svg"), facecolor="white", metadata={"Date": None}); plt.close(fig)
 
-# 2e degré : f(x) = x^2 - 4x + 3 ; racines, ordonnée à l'origine, axe de symétrie, sommet
-fig, ax = repere_x((-0.9, 5.0), (-2, 5.4), range(0, 5), [-1, 3])
-xs = np.linspace(-0.55, 4.55, 400)
-ax.plot(xs, f(xs), color=NAVY, lw=3.4, zorder=4)
-ax.plot([2, 2], [-2, 5.4], color=GREEN, lw=2.6, ls=(0, (6, 4)), zorder=5)
-ax.plot([1, 3], [0, 0], "o", ms=12, color=ORANGE, zorder=8)
-ax.plot([0], [3], "o", ms=12, color=BLUE, zorder=8)
-ax.plot([4], [3], "o", ms=12, mfc="white", mec=BLUE, mew=2.4, zorder=8)
-ax.plot([0, 4], [3, 3], color=BLUE, lw=1.6, ls=(0, (2, 3)), zorder=5)
-ax.plot([2], [-1], "o", ms=12, color=PURPLE, zorder=8)
-ax.annotate(r"$1$", (1, 0), xytext=(-2, 12), textcoords="offset points", fontsize=19, color=ORANGE, ha="right", va="bottom")
-ax.annotate(r"$3$", (3, 0), xytext=(4, 12), textcoords="offset points", fontsize=19, color=ORANGE, ha="left", va="bottom")
-ax.annotate(r"$(0\,;\,3)$", (0, 3), xytext=(12, 8), textcoords="offset points", fontsize=19, color=BLUE, ha="left", va="bottom")
-ax.annotate(r"$x = 2$", (2, 5.4), xytext=(8, -4), textcoords="offset points", fontsize=19, color=GREEN, ha="left", va="top")
-ax.annotate(r"$(2\,;\,-1)$", (2, -1), xytext=(12, -6), textcoords="offset points", fontsize=19, color=PURPLE, ha="left", va="top")
-ax.annotate(r"$f$", (4.55, f(4.55)), xytext=(10, 0), textcoords="offset points", fontsize=21, color=NAVY, ha="left", va="center")
-fig.savefig(os.path.join(OUT, "x2-second-degre.svg"), facecolor="white", metadata={"Date": None}); plt.close(fig)
+
+for k in range(4):
+    premier(k)
+
+
+# 2e degré : f(x) = x^2 - 4x + 3 ; racines (orange), ordonnée à l'origine (bleu), axe de symétrie (vert), sommet (violet).
+# x2-second-0.svg (repère vide) … x2-second-5.svg (tracé de la parabole).
+def second(k):
+    fig, ax = repere_x((-0.9, 5.0), (-2, 5.4), range(0, 5), [-1, 3])
+    if k >= 1:
+        ax.plot([1, 3], [0, 0], "o", ms=12, color=ORANGE, zorder=8)
+        ax.annotate(r"$1$", (1, 0), xytext=(-2, 12), textcoords="offset points", fontsize=19, color=ORANGE, ha="right", va="bottom")
+        ax.annotate(r"$3$", (3, 0), xytext=(4, 12), textcoords="offset points", fontsize=19, color=ORANGE, ha="left", va="bottom")
+    if k >= 2:
+        ax.plot([0], [3], "o", ms=12, color=BLUE, zorder=8)
+        ax.annotate(r"$(0\,;\,3)$", (0, 3), xytext=(12, 8), textcoords="offset points", fontsize=19, color=BLUE, ha="left", va="bottom")
+    if k >= 3:
+        ax.plot([2, 2], [-2, 5.4], color=GREEN, lw=2.6, ls=(0, (6, 4)), zorder=5)
+        ax.annotate(r"$x = 2$", (2, 5.4), xytext=(8, -4), textcoords="offset points", fontsize=19, color=GREEN, ha="left", va="top")
+        ax.plot([0, 4], [3, 3], color=BLUE, lw=1.6, ls=(0, (2, 3)), zorder=5)
+        ax.plot([4], [3], "o", ms=12, mfc="white", mec=BLUE, mew=2.4, zorder=8)
+    if k >= 4:
+        ax.plot([2], [-1], "o", ms=12, color=PURPLE, zorder=8)
+        ax.annotate(r"$(2\,;\,-1)$", (2, -1), xytext=(12, -6), textcoords="offset points", fontsize=19, color=PURPLE, ha="left", va="top")
+    if k >= 5:
+        xs = np.linspace(-0.55, 4.55, 400)
+        ax.plot(xs, f(xs), color=NAVY, lw=3.4, zorder=4)
+        ax.annotate(r"$f$", (4.55, f(4.55)), xytext=(10, 0), textcoords="offset points", fontsize=21, color=NAVY, ha="left", va="center")
+    fig.savefig(os.path.join(OUT, f"x2-second-{k}.svg"), facecolor="white", metadata={"Date": None}); plt.close(fig)
+
+
+for k in range(6):
+    second(k)
