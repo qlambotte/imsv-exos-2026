@@ -319,6 +319,10 @@ Cette question prépare la notion d'antécédents multiples, rencontrée dans le
 Lancer le socle. Annoncer que l'exercice S.4 sera confronté puis corrigé ensemble à la fin du socle : chacun doit l'avoir cherché.
 :::
 
+## Au travail {.travail data-minutes="30"}
+
+{{< include ../seance01/_travail.md >}}
+
 # Exercice S.4 : confrontation et correction {.divider background-color="#1f5fbf"}
 
 ::: notes
@@ -346,14 +350,37 @@ Soit $f(x) = x^2 - 4x + 3$. Pour chaque intervalle, $f$ admet-elle sur cet inter
 
 ## Confrontation des réponses
 
-Pour chaque intervalle, vote **A**, **B**, **C** ou **D**, puis compare ta réponse avec celle de ton voisin ou de ta voisine.
+Pour chaque intervalle, vote **A**, **B**, **C** ou **D** sur Wooclap, puis compare ta réponse avec celle de ton voisin ou de ta voisine.
 
 | Intervalle | (a) $[0,\,5]$ | (b) $[0,\,5[$ | (c) $]2,\,5]$ | (d) $[0,\,4[$ |
 |:---:|:---:|:---:|:---:|:---:|
 | Votre réponse | | | | |
 
+::::::: wooclap
+::: wc-play
+▶
+:::
+
+:::: wc-body
+**Vote sur Wooclap**
+
+::: wc-lien
+Code : À COMPLÉTER
+:::
+::::
+
+<!--
+::: {.wc-qr}
+![](img/qr-confrontation.png)
+
+Confrontation de S.4
+:::
+-->
+
+:::::::
+
 ::: notes
-Faire voter (main levée ou cartes A, B, C, D) intervalle par intervalle, puis laisser 2 minutes de discussion entre voisins avant la correction. Les intervalles (b) et (d) devraient diviser la classe.
+Faire voter intervalle par intervalle sur Wooclap (les choix sont dans wooclap-confrontation.md), puis laisser 2 minutes de discussion entre voisins avant la correction. Les intervalles (b) et (d) devraient diviser la classe.
 :::
 
 ## (a) Sur $[0,\,5]$
@@ -436,10 +463,23 @@ Près de la borne exclue $4$, les valeurs s'approchent de $3$ sans l'atteindre, 
 
 ## (e) Pourquoi exclure $5$ change tout, et pas exclure $4$ ?
 
-::: aretenir
-En (b), la valeur dont $f$ s'approche près de la borne exclue, $8$, est plus grande que toutes les valeurs atteintes.
+:::::: columns
+::::: {.column width="50%"}
+**(b)** $[0,\,5[$
 
-En (d), la valeur dont $f$ s'approche, $3$, est déjà atteinte ailleurs dans l'intervalle.
+![](img/s4-e1.svg){fig-alt="Parabole y = x² − 4x + 3 en trait pâle ; portion au-dessus de [0 ; 5[ en orange, point plein en (0 ; 3), point creux en (5 ; 8). Une droite en pointillés à la hauteur 8 passe par le point creux : la valeur 8 n'est jamais atteinte." width="100%"}
+:::::
+::::: {.column width="50%"}
+**(d)** $[0,\,4[$
+
+![](img/s4-e2.svg){fig-alt="Parabole y = x² − 4x + 3 en trait pâle ; portion au-dessus de [0 ; 4[ en orange, point plein en (0 ; 3), point creux en (4 ; 3). Une droite en pointillés à la hauteur 3 passe par les deux points : la valeur 3 est atteinte en 0." width="100%"}
+:::::
+::::::
+
+. . .
+
+::: aretenir
+En (b), la valeur dont $f$ s'approche près de la borne exclue, $8$, est plus grande que toutes les valeurs atteintes. En (d), la valeur dont elle s'approche, $3$, est déjà atteinte ailleurs dans l'intervalle.
 :::
 
 ## Le piège à connaître
@@ -493,10 +533,33 @@ Une minute de vote. Les choix sont dans wooclap-sondage.md (question 1). Annonce
 Les étudiant·es travaillent le transfert (T.1 à T.3) avec les coups de pouce du site.
 :::
 
+## Au travail {.travail data-minutes="25"}
+
+{{< include ../seance01/_travail.md >}}
+
 # Méthodes de la séance — 20 minutes {.divider background-color="#1f5fbf"}
 
 ::: notes
 Deux fiches : environ 5 minutes pour la carte « Extrema » (la méthode vient d'être vue avec S.4), puis environ 15 minutes pour « Calculer une réciproque ».
+:::
+
+## Pour se rafraîchir la mémoire : les extrema
+
+:::::: columns
+::::: {.column width="50%"}
+**Sur $[-3,\,3]$**
+
+![](img/x1-locaux-globaux.svg){fig-alt="Graphe de f(x) = (x + 2)(x − 1)² sur [−3 ; 3]. Points orange aux extrémités : minimum global en (−3 ; −16) et maximum global en (3 ; 20). Points bleus : maximum local en (−1 ; 4) et minimum local en (1 ; 0)." width="100%"}
+:::::
+::::: {.column width="50%"}
+**Sur $[0,\,3[$**
+
+![](img/x1-borne-exclue.svg){fig-alt="Droite y = 2x − 1 sur [0 ; 3[. Point plein en (0 ; −1) : c'est le minimum. Point creux en (3 ; 5) : cette valeur n'est pas atteinte, donc il n'y a pas de maximum." width="100%"}
+:::::
+::::::
+
+::: notes
+Rafraîchir avant la fiche : un extremum est local (valeurs voisines) ou global (sur tout l'intervalle) ; il doit être atteint en une abscisse de l'intervalle. À gauche, orange : extremum global ; bleu : extremum local seulement. À droite : une borne exclue ne donne pas d'extremum (c'est l'exemple de la fiche).
 :::
 
 ## La carte « Extrema sur un intervalle » {.smaller}

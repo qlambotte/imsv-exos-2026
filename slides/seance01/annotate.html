@@ -15,7 +15,10 @@
      aussi dans les scripts que Quarto ajoute par-dessus (export PDF, scroll).
      Les slides blanches ajoutées (et leur contenu) sont retenues d'une session
      à l'autre via localStorage, pour CE fichier précis — le reste (annotations
-     sur les slides d'origine) reste volatile, comme avant. -->
+     sur les slides d'origine) reste volatile, comme avant.
+     NOUVEAU : l'outil est INACTIF au départ (dock masqué, pointeur) ; le bouton crayon en bas à droite (ou Y)
+     l'active. Couleurs : bouton rond du dock → palette de 12 couleurs + sélecteur « + » pour une couleur libre.
+     (1-4 = les quatre premières couleurs de la palette.) -->
 <style>
   #tla-canvas {
     position: absolute;
@@ -54,29 +57,29 @@
     pointer-events: none;
   }
 
-  /* Poignée résiduelle quand le dock est masqué : discrète, ancrée au bord
-     de l'écran, ne recouvre aucun contenu de slide. */
+  /* Bouton d'activation (outil inactif) : rond, en bas à droite, discret ; réaffiche le dock.
+     Ajuster `right` si le bouton gêne les flèches ou le numéro de slide. */
   #tla-handle {
     position: fixed;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
+    right: 130px;
+    bottom: 10px;
     z-index: 100;
-    width: 52px;
-    height: 15px;
+    width: 40px;
+    height: 40px;
     display: none;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(20, 48, 74, 0.1);
-    border-bottom: none;
-    border-radius: 8px 8px 0 0;
-    background: rgba(20, 48, 74, 0.14);
-    color: rgba(20, 48, 74, 0.55);
+    border: 1px solid rgba(20, 48, 74, 0.25);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: #14304a;
     cursor: pointer;
+    opacity: .45;
+    transition: opacity .15s ease;
   }
-  #tla-handle:hover { background: rgba(20, 48, 74, 0.26); color: rgba(20,48,74,.8); }
+  #tla-handle:hover { opacity: 1; }
   #tla-handle.tla-show { display: flex; }
-  #tla-handle svg { width: 13px; height: 13px; }
+  #tla-handle svg { width: 20px; height: 20px; }
 
   .tla-group { display: flex; gap: 2px; padding: 0 2px; }
   .tla-sep { width: 1px; align-self: stretch; margin: 4px 2px; background: rgba(20,48,74,.12); }
@@ -102,6 +105,24 @@
     cursor: pointer; padding: 0;
   }
   .tla-swatch.tla-selected { box-shadow: 0 0 0 2px #14304a; }
+
+  .tla-color-wrap { position: relative; }
+  #tla-color-dot { width: 20px; height: 20px; border-radius: 999px; border: 2px solid #fff; box-shadow: 0 0 0 1.5px rgba(20,48,74,.35); display: block; }
+  .tla-palette {
+    position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%);
+    display: none; grid-template-columns: repeat(7, auto); gap: 0; padding: 6px;
+    background: rgba(255, 255, 255, 0.97); border: 1px solid rgba(20, 48, 74, 0.1);
+    border-radius: 13px; box-shadow: 0 6px 20px rgba(20, 48, 74, 0.18);
+  }
+  .tla-palette.tla-open { display: grid; }
+  .tla-palette .tla-swatch { margin: 4px; }
+  .tla-custom {
+    position: relative; width: 22px; height: 22px; margin: 4px; border-radius: 999px; border: 2px solid #fff;
+    box-shadow: 0 0 0 1.5px rgba(20,48,74,.35); cursor: pointer; overflow: hidden;
+    background: conic-gradient(#e63946, #ffd60a, #7bc043, #00a6a6, #1f5fbf, #7b3fa0, #e63946);
+  }
+  .tla-custom input { position: absolute; inset: -6px; width: 40px; height: 40px; opacity: 0; cursor: pointer; padding: 0; border: 0; }
+  .tla-custom.tla-selected { box-shadow: 0 0 0 2px #14304a; }
 
   .tla-shape-wrap { position: relative; }
   .tla-shape-menu {
@@ -176,11 +197,23 @@
 
   <div class="tla-sep"></div>
 
-  <div class="tla-group" id="tla-swatches">
-    <button class="tla-swatch tla-selected" data-color="#e63946" style="background:#e63946" title="Rouge (1)"></button>
-    <button class="tla-swatch" data-color="#1f5fbf" style="background:#1f5fbf" title="Bleu (2)"></button>
-    <button class="tla-swatch" data-color="#14304a" style="background:#14304a" title="Noir (3)"></button>
-    <button class="tla-swatch" data-color="#ffd60a" style="background:#ffd60a" title="Jaune (4)"></button>
+  <div class="tla-group tla-color-wrap" id="tla-swatches">
+    <button class="tla-btn" id="tla-color-btn" title="Couleur"><span id="tla-color-dot" style="background:#e63946"></span></button>
+    <div class="tla-palette" id="tla-palette">
+      <button class="tla-swatch tla-selected" data-color="#e63946" style="background:#e63946" title="Rouge (1)"></button>
+      <button class="tla-swatch" data-color="#1f5fbf" style="background:#1f5fbf" title="Bleu (2)"></button>
+      <button class="tla-swatch" data-color="#14304a" style="background:#14304a" title="Noir (3)"></button>
+      <button class="tla-swatch" data-color="#ffd60a" style="background:#ffd60a" title="Jaune (4)"></button>
+      <button class="tla-swatch" data-color="#f77f00" style="background:#f77f00" title="Orange"></button>
+      <button class="tla-swatch" data-color="#2e7d46" style="background:#2e7d46" title="Vert"></button>
+      <button class="tla-swatch" data-color="#7bc043" style="background:#7bc043" title="Vert clair"></button>
+      <button class="tla-swatch" data-color="#00a6a6" style="background:#00a6a6" title="Turquoise"></button>
+      <button class="tla-swatch" data-color="#4ea8de" style="background:#4ea8de" title="Bleu clair"></button>
+      <button class="tla-swatch" data-color="#7b3fa0" style="background:#7b3fa0" title="Violet"></button>
+      <button class="tla-swatch" data-color="#f06fa8" style="background:#f06fa8" title="Rose"></button>
+      <button class="tla-swatch" data-color="#8a5a2b" style="background:#8a5a2b" title="Marron"></button>
+      <label class="tla-custom" id="tla-custom-wrap" title="Autre couleur"><input type="color" id="tla-custom" value="#e63946"></label>
+    </div>
   </div>
 
   <div class="tla-sep"></div>
@@ -208,14 +241,14 @@
   <div class="tla-sep"></div>
 
   <div class="tla-group">
-    <button class="tla-btn" id="tla-hide" title="Masquer le dock (Y)">
+    <button class="tla-btn" id="tla-hide" title="Désactiver l'annotation (Y)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
     </button>
   </div>
 </div>
 
-<button id="tla-handle" title="Ré-afficher le dock d'annotation (Y)">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+<button id="tla-handle" title="Activer l'annotation (Y)">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L16.5 4.5a2.1 2.1 0 013 3L8 19z"/><path d="M14.5 6.5l3 3"/></svg>
 </button>
 
 <script>
@@ -255,6 +288,11 @@
     var hideBtn = document.getElementById('tla-hide');
     var handle = document.getElementById('tla-handle');
     var shapeMenu = document.getElementById('tla-shape-menu');
+    var colorBtn = document.getElementById('tla-color-btn');
+    var colorDot = document.getElementById('tla-color-dot');
+    var palette = document.getElementById('tla-palette');
+    var customInput = document.getElementById('tla-custom');
+    var customWrap = document.getElementById('tla-custom-wrap');
     var shapeOpts = Array.prototype.slice.call(document.querySelectorAll('.tla-shape-opt'));
     var shapeIconSlot = toolBtns.shape.querySelector('.tla-icon-slot');
 
@@ -473,9 +511,22 @@
 
     function selectColor(btn) {
       swatches.forEach(function (s) { s.classList.remove('tla-selected'); });
+      customWrap.classList.remove('tla-selected');
       btn.classList.add('tla-selected');
       color = btn.getAttribute('data-color');
+      colorDot.style.background = color;
       if (tool === 'eraser') selectTool('pencil');
+    }
+    function selectCustomColor(value) {
+      swatches.forEach(function (s) { s.classList.remove('tla-selected'); });
+      customWrap.classList.add('tla-selected');
+      color = value;
+      colorDot.style.background = value;
+      if (tool === 'eraser') selectTool('pencil');
+    }
+    function openPalette(open) {
+      palette.classList.toggle('tla-open', open);
+      if (open) openShapeMenu(false);
     }
 
     // Masquer le dock : en plus de le sortir de l'écran, on repasse en
@@ -486,7 +537,7 @@
       dockHidden = hidden;
       dock.classList.toggle('tla-hidden', hidden);
       handle.classList.toggle('tla-show', hidden);
-      if (hidden) selectTool('pointer');
+      if (hidden) { selectTool('pointer'); openPalette(false); openShapeMenu(false); }
     }
 
     function strokeWidth(s) {
@@ -632,7 +683,13 @@
     toolBtns.pencil.addEventListener('click', function () { selectTool('pencil'); openShapeMenu(false); });
     toolBtns.highlighter.addEventListener('click', function () { selectTool('highlighter'); openShapeMenu(false); });
     toolBtns.eraser.addEventListener('click', function () { selectTool('eraser'); openShapeMenu(false); });
-    swatches.forEach(function (sw) { sw.addEventListener('click', function () { selectColor(sw); }); });
+    swatches.forEach(function (sw) { sw.addEventListener('click', function () { selectColor(sw); openPalette(false); }); });
+    colorBtn.addEventListener('click', function (evt) { evt.stopPropagation(); openPalette(!palette.classList.contains('tla-open')); });
+    customInput.addEventListener('input', function () { selectCustomColor(customInput.value); });
+    customInput.addEventListener('change', function () { customInput.blur(); openPalette(false); });
+    document.addEventListener('pointerdown', function (evt) {
+      if (palette.classList.contains('tla-open') && !palette.contains(evt.target) && !colorBtn.contains(evt.target)) openPalette(false);
+    }, true);
 
     // Bouton « Formes » : sélectionne tout de suite la forme mémorisée (ou
     // « carré » par défaut) et ouvre/ferme le menu pour en choisir une autre.
@@ -749,6 +806,7 @@
 
     loadState();
     redraw();
+    setDockHidden(true);   // outil inactif au départ : le bouton crayon (ou Y) l'active
   }
 
   if (document.readyState === 'complete' || document.readyState === 'interactive') init();
