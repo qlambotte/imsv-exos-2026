@@ -8,8 +8,6 @@ Ces exercices restent **dans les objectifs** de la séance : à faire une fois l
 bouclés, à la maison : ils ne sont pas prévus pendant la séance.
 :::
 
-### Renforcement — le socle, un cran plus loin
-
 ::: {.callout-caution .exo title="Exercice|Renforcement|1|O3"}
 Les quatre courbes ci-dessous sont dessinées dans un repère d'axes $x$ et $y$.
 

@@ -27,21 +27,20 @@ le troisième ne regarde que la fin de la courbe C ; le quatrième lit A de droi
 
 ---
 
-## Q2 — Une équation avec un carré
+## Q2 — Retrouver l'entrée à partir de la sortie
 
 **Type Wooclap :** QCM · réponse unique
 
 **Énoncé à coller :**
-> Quelles sont les solutions de l'équation $x^2 - 5 = 11$ ?
+> La relation $A = 2C + 1$ donne $A$ à partir de $C$. Quelle valeur de $C$ donne $A = 7$ ?
 
 **Choix :**
-- (X) $4$ et $-4$
-- ( ) $4$ seulement
-- ( ) $\sqrt6$ et $-\sqrt6$
-- ( ) $8$ et $-8$
+- (X) $C = 3$
+- ( ) $C = 2{,}5$
+- ( ) $C = 4$
+- ( ) $C = 6$
 
-**Justification :** $x^2 = 16$, donc $x = 4$ ou $x = -4$. Le distracteur « $4$ seulement » oublie la
-solution négative ; $\sqrt6$ vient de $11 - 5$ au lieu de $11 + 5$ ; $8$ d'une division de $16$ par $2$ au lieu d'une racine carrée.
+**Justification :** $7 = 2C + 1$, donc $6 = 2C$ et $C = 3$. Le distracteur $2{,}5$ divise par $2$ avant de soustraire $1$ ; $4$ ajoute $1$ au lieu de le soustraire ; $6$ oublie de diviser par $2$.
 
 ---
 
@@ -49,4 +48,4 @@ solution négative ; $\sqrt6$ vient de $11 - 5$ au lieu de $11 + 5$ ; $8$ d'une 
 
 - Affichage des résultats : après clôture du vote, pas en direct.
 - Chronomètre : 30 à 45 secondes par question.
-- Ordre : Q1, Q2. Q1 prépare la définition de la croissance (S.3) ; Q2 prépare la notion d'antécédents multiples.
+- Ordre : Q1, Q2. Q1 prépare la définition de la croissance (S.3) ; Q2 prépare les exercices de transfert, où l'on connaît la sortie et cherche l'entrée.

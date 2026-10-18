@@ -8,8 +8,6 @@ Ces exercices restent **dans les objectifs** de la séance : à faire une fois l
 bouclés, à la maison : ils ne sont pas prévus pendant la séance.
 :::
 
-### Renforcement — le socle, un cran plus loin
-
 ::: {.callout-caution .exo title="Exercice|Renforcement|1|O1"}
 Le tableau suivant donne les valeurs de quatre fonctions $A$, $B$, $C$ et $D$ pour quatre valeurs du temps $t$.
 

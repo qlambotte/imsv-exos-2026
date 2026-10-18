@@ -10,8 +10,6 @@ Ces exercices restent **dans les objectifs** de la séance : à faire une fois l
 bouclés, en séance ou à la maison.
 :::
 
-### Renforcement — le socle, un cran plus loin
-
 ::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
 Pour chaque égalité, dis si elle est **vraie** ou **fausse**, et nomme
 la propriété (ou son absence) en jeu.

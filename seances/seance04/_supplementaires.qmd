@@ -8,8 +8,6 @@ Ces exercices restent **dans les objectifs** de la séance : à faire une fois l
 bouclés, en séance ou à la maison.
 :::
 
-### Renforcement — le socle, un cran plus loin
-
 ::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
 Écrire comme un seul vecteur, pour des points $A$, $B$, $C$, $D$, $M$ quelconques.
 

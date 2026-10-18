@@ -92,13 +92,15 @@ Temps de travail : 120 minutes moins la pause de 10 minutes, soit 110 minutes. A
 | Méthodes de la séance | 10 min |
 | Sondage sur les séances | 10 min |
 
-::: aretenir
-Les défis peuvent être faits en séance par celles et ceux qui maîtrisent déjà le socle. Les exercices supplémentaires se font à la maison.
-:::
-
 ::: notes
 Total prévu : 115 minutes, avec 5 minutes de battement. Le retour sur le sondage peut aller jusqu'à 10 minutes en prenant sur ce battement ou sur l'échauffement, qui ne compte plus que deux questions. L'échauffement doit tenir en 10 minutes, et le vote sur la correction de S.4 (1 minute) se fait dans les 10 minutes de S.4. Si la séance prend du retard, raccourcir la diapositive de rappel sur les extrema ou les rappels de tracé, jamais le sondage final. La méthode « Calculer une réciproque » a été retirée de la séance (archivée en commentaire dans ce fichier).
 :::
+
+## Et si tu avances vite ?
+
+[1]{.step} **Le socle est maîtrisé ?** Passe au **transfert**, ou aux **défis**.
+
+[2]{.step} Les **exercices supplémentaires** se font **à la maison**.
 
 # Échauffement {.divider background-color="#14304a"}
 
@@ -111,7 +113,7 @@ Total prévu : 115 minutes, avec 5 minutes de battement. Le retour sur le sondag
 
 ![](img/q1-croissance.svg){fig-alt="Trois graphes, nommés A, B et C, représentant chacun une fonction sur un intervalle, lus de gauche à droite" width="100%"}
 
-**Q2** [[Rappel]{.obj}]{style="float:right"} — quelles sont les solutions de l'équation $x^2 - 5 = 11$ ?
+**Q2** [[Rappel]{.obj}]{style="float:right"} — la relation $A = 2C + 1$ donne $A$ à partir de $C$. Quelle valeur de $C$ donne $A = 7$ ?
 ::::
 :::::
 
@@ -121,15 +123,15 @@ Total prévu : 115 minutes, avec 5 minutes de battement. Le retour sur le sondag
 **Vote sur Wooclap**
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : DGFDDZN
 :::
 ::::
 
-<!--
+
 ::: {.wc-qr}
 ![](img/qr-echauffement.png)
 :::
--->
+
 
 
 :::::
@@ -299,18 +301,20 @@ Vert : partie croissante ; rouge : partie décroissante. A : croissante, même s
 
 ## Q2 [[Rappel]{.obj}]{style="float:right"}
 
-Quelles sont les solutions de l'équation $x^2 - 5 = 11$ ?
+La relation $A = 2C + 1$ donne $A$ à partir de $C$. Quelle valeur de $C$ donne $A = 7$ ?
 
 . . .
 
 ::: aretenir
-On ajoute $5$ : $x^2 = 16$. Il y a **deux** nombres dont le carré vaut $16$ : $x = 4$ et $x = -4$.
+On remplace $A$ par $7$ : $7 = 2C + 1$. On soustrait $1$ : $6 = 2C$. On divise par $2$ : $C = 3$.
 
-Oublier la solution négative est l'erreur classique. Elle explique pourquoi une même sortie peut avoir deux antécédents.
+Vérification : $2 \cdot 3 + 1 = 7$, ce qui redonne bien la sortie.
+
+Ici, on connaissait la **sortie** et on cherchait l'**entrée** : c'est la situation des exercices de transfert.
 :::
 
 ::: notes
-Cette question prépare la notion d'antécédents multiples, rencontrée dans le socle (S.1) et dans le renforcement (R.2).
+On défait les opérations dans l'ordre inverse. L'erreur typique est de diviser par $2$ avant de soustraire $1$, ce qui donne $2{,}5$ au lieu de $3$.
 :::
 
 # Socle — 30 minutes {.divider background-color="#14304a"}
@@ -356,6 +360,8 @@ Pour chaque intervalle, vote **A**, **B**, **C** ou **D** sur Wooclap, puis comp
 |:---:|:---:|:---:|:---:|:---:|
 | Votre réponse | | | | |
 
+::::::::: columns
+::::: {.column width="62%"}
 ::::::: wooclap
 ::: wc-play
 ▶
@@ -365,22 +371,28 @@ Pour chaque intervalle, vote **A**, **B**, **C** ou **D** sur Wooclap, puis comp
 **Vote sur Wooclap**
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : INZSBAI
 :::
 ::::
 
-<!--
+
 ::: {.wc-qr}
 ![](img/qr-confrontation.png)
 
 Confrontation de S.4
 :::
--->
 
 :::::::
+:::::
+::::: {.column width="38%"}
+::: {.minuteur data-minutes="2"}
+{{< include ../seance01/_minuteur.md >}}
+:::
+:::::
+:::::::::
 
 ::: notes
-Faire voter intervalle par intervalle sur Wooclap (les choix sont dans wooclap-confrontation.md), puis laisser 2 minutes de discussion entre voisins avant la correction. Les intervalles (b) et (d) devraient diviser la classe.
+Faire voter intervalle par intervalle sur Wooclap (les choix sont dans wooclap-confrontation.md), puis laisser 2 minutes de discussion entre voisins avant la correction (minuteur à droite de l'encadré Wooclap). Les intervalles (b) et (d) devraient diviser la classe.
 :::
 
 ## (a) Sur $[0,\,5]$
@@ -496,38 +508,35 @@ Donner comme maximum la valeur en une borne exclue, par exemple $8$ sur $[0,\,5[
 ::::: {.column width="44%"}
 $$g(x) = \textcolor{#c76e00}{2}\,x \;\textcolor{#1f5fbf}{-\,3}$$
 
-::: {.fragment fragment-index=1}
+::: {.fragment data-fragment-index=1}
 [1]{.step} [L'ordonnée à l'origine]{style="color:#1f5fbf;font-weight:600"} $-3$ donne le point $(0\,;\,-3)$ : le graphe coupe l'axe vertical en ce point.
 :::
 
-::: {.fragment fragment-index=2}
+::: {.fragment data-fragment-index=2}
 [2]{.step} [La pente]{style="color:#c76e00;font-weight:600"} $2$ dit comment monter : quand $x$ augmente de $1$, $g(x)$ augmente de $2$.
 :::
 
-::: {.fragment fragment-index=3}
+::: {.fragment data-fragment-index=3}
 [3]{.step} On trace la droite par le point $(0\,;\,-3)$ et le point obtenu en avançant de $1$ et en montant de $2$.
 :::
 :::::
 ::::: {.column width="56%"}
 :::: r-stack
+::: {.fragment .fade-out data-fragment-index=1}
 ![](img/x2-premier-0.svg){width="100%"}
-![](img/x2-premier-1.svg){.fragment fragment-index=1 width="100%"}
-![](img/x2-premier-2.svg){.fragment fragment-index=2 width="100%"}
-![](img/x2-premier-3.svg){.fragment fragment-index=3 width="100%" fig-alt="Droite y = 2x − 3 construite en trois étapes : le point (0 ; −3) en bleu, l'escalier orange d'un pas de 1 vers la droite et d'une montée de 2, puis la droite elle-même."}
+:::
+::: {.fragment .fade-in-then-out data-fragment-index=1}
+![](img/x2-premier-1.svg){width="100%"}
+:::
+::: {.fragment .fade-in-then-out data-fragment-index=2}
+![](img/x2-premier-2.svg){width="100%"}
+:::
+::: {.fragment data-fragment-index=3}
+![](img/x2-premier-3.svg){width="100%" fig-alt="Droite y = 2x − 3 construite en trois étapes : le point (0 ; −3) en bleu, l'escalier orange d'un pas de 1 vers la droite et d'une montée de 2, puis la droite elle-même."}
+:::
 ::::
 :::::
 ::::::
-
-## La fonction du 2e degré : deux écritures {.smaller}
-
-| | Forme développée $f(x) = ax^2 + bx + c$ | Forme canonique $f(x) = a(x - \alpha)^2 + \beta$ |
-|:---|:---:|:---:|
-| [Ordonnée à l'origine]{style="color:#1f5fbf;font-weight:600"} | $f(0) = c$ | $f(0) = a\alpha^2 + \beta$ |
-| [Axe de symétrie]{style="color:#2e7d46;font-weight:600"} | $x = -\dfrac{b}{2a}$ | $x = \alpha$ |
-| [Sommet]{style="color:#7b3fa0;font-weight:600"} | $\left(-\dfrac{b}{2a}\ ;\ f\!\left(-\dfrac{b}{2a}\right)\right)$ | $(\alpha\ ;\ \beta)$ |
-| [Racines]{style="color:#c76e00;font-weight:600"} | $x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, si $b^2 - 4ac \geq 0$ | $x = \alpha \pm \sqrt{-\dfrac{\beta}{a}}$, si $-\dfrac{\beta}{a} \geq 0$ |
-
-Si $a > 0$, la parabole est ouverte vers le haut et le sommet est son point le plus bas ; si $a < 0$, elle est ouverte vers le bas et le sommet est son point le plus haut.
 
 ## Rappel : tracer une fonction du 2e degré {.smaller}
 
@@ -535,35 +544,108 @@ Si $a > 0$, la parabole est ouverte vers le haut et le sommet est son point le p
 ::::: {.column width="44%"}
 $$f(x) = x^2 - 4x + 3 = (x-1)(x-3) = (x-2)^2 - 1$$
 
-::: {.fragment fragment-index=1}
+::: {.fragment data-fragment-index=1}
 [1]{.step} [Les racines]{style="color:#c76e00;font-weight:600"} : $f(x) = 0$ donne $x = 1$ et $x = 3$.
 :::
 
-::: {.fragment fragment-index=2}
+::: {.fragment data-fragment-index=2}
 [2]{.step} [L'ordonnée à l'origine]{style="color:#1f5fbf;font-weight:600"} : $f(0) = 3$, point $(0\,;\,3)$.
 :::
 
-::: {.fragment fragment-index=3}
+::: {.fragment data-fragment-index=3}
 [3]{.step} [L'axe de symétrie]{style="color:#2e7d46;font-weight:600"} passe au milieu des racines : $x = \dfrac{1 + 3}{2} = 2$. Le symétrique de $(0\,;\,3)$ est $(4\,;\,3)$.
 :::
 
-::: {.fragment fragment-index=4}
+::: {.fragment data-fragment-index=4}
 [4]{.step} [Le sommet]{style="color:#7b3fa0;font-weight:600"} est sur l'axe : $f(2) = -1$, point $(2\,;\,-1)$.
 :::
 
-::: {.fragment fragment-index=5}
+::: {.fragment data-fragment-index=5}
 [5]{.step} On trace la parabole par tous ces points.
 :::
 :::::
 ::::: {.column width="56%"}
 :::: r-stack
+::: {.fragment .fade-out data-fragment-index=1}
 ![](img/x2-second-0.svg){width="100%"}
-![](img/x2-second-1.svg){.fragment fragment-index=1 width="100%"}
-![](img/x2-second-2.svg){.fragment fragment-index=2 width="100%"}
-![](img/x2-second-3.svg){.fragment fragment-index=3 width="100%"}
-![](img/x2-second-4.svg){.fragment fragment-index=4 width="100%"}
-![](img/x2-second-5.svg){.fragment fragment-index=5 width="100%" fig-alt="Parabole y = x² − 4x + 3 construite en cinq étapes : racines 1 et 3 en orange, point (0 ; 3) en bleu, axe de symétrie x = 2 en vert avec le symétrique (4 ; 3), sommet (2 ; −1) en violet, puis la parabole."}
+:::
+::: {.fragment .fade-in-then-out data-fragment-index=1}
+![](img/x2-second-1.svg){width="100%"}
+:::
+::: {.fragment .fade-in-then-out data-fragment-index=2}
+![](img/x2-second-2.svg){width="100%"}
+:::
+::: {.fragment .fade-in-then-out data-fragment-index=3}
+![](img/x2-second-3.svg){width="100%"}
+:::
+::: {.fragment .fade-in-then-out data-fragment-index=4}
+![](img/x2-second-4.svg){width="100%"}
+:::
+::: {.fragment data-fragment-index=5}
+![](img/x2-second-5.svg){width="100%" fig-alt="Parabole y = x² − 4x + 3 construite en cinq étapes : racines 1 et 3 en orange, point (0 ; 3) en bleu, axe de symétrie x = 2 en vert avec le symétrique (4 ; 3), sommet (2 ; −1) en violet, puis la parabole."}
+:::
 ::::
+:::::
+::::::
+
+## La fonction du 2e degré : comment la tracer ? {.smaller}
+
+:::::: columns
+::::: {.column width="48%"}
+
+**Forme développée** $\quad f(x) = ax^2 + bx + c$
+
+| | |
+|:---|:---|
+| [Ordonnée à l'origine]{style="color:#1f5fbf;font-weight:600"} | $f(0) = c$ |
+| [Axe de symétrie]{style="color:#2e7d46;font-weight:600"} | $x = -\dfrac{b}{2a}$ |
+| [Sommet]{style="color:#7b3fa0;font-weight:600"} | $\left(-\dfrac{b}{2a}\ ;\ f\!\left(-\dfrac{b}{2a}\right)\right)$ |
+| [Racines]{style="color:#c76e00;font-weight:600"} | $x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, si $b^2 - 4ac \geq 0$ |
+
+Si $a > 0$, la parabole est ouverte vers le haut et le sommet est son point le plus bas ; si $a < 0$, elle est ouverte vers le bas et le sommet est son point le plus haut.
+:::::
+::::: {.column width="52%"}
+![](img/x2-second-5.svg){width="100%" fig-alt="Parabole y = x² − 4x + 3 avec ses racines en orange, son ordonnée à l'origine en bleu, son axe de symétrie en vert et son sommet en violet."}
+:::::
+::::::
+
+## La fonction du 2e degré : comment la tracer ? {.smaller}
+
+:::::: columns
+::::: {.column width="48%"}
+
+**Forme canonique** $\quad f(x) = a(x - \alpha)^2 + \beta$
+
+| | |
+|:---|:---|
+| [Ordonnée à l'origine]{style="color:#1f5fbf;font-weight:600"} | $f(0) = a\alpha^2 + \beta$ |
+| [Axe de symétrie]{style="color:#2e7d46;font-weight:600"} | $x = \alpha$ |
+| [Sommet]{style="color:#7b3fa0;font-weight:600"} | $(\alpha\ ;\ \beta)$ |
+| [Racines]{style="color:#c76e00;font-weight:600"} | $x = \alpha \pm \sqrt{-\dfrac{\beta}{a}}$, si $-\dfrac{\beta}{a} \geq 0$ |
+:::::
+::::: {.column width="52%"}
+![](img/x2-second-5.svg){width="100%" fig-alt="Parabole y = x² − 4x + 3 avec ses racines en orange, son ordonnée à l'origine en bleu, son axe de symétrie en vert et son sommet en violet."}
+:::::
+::::::
+
+## La fonction du 2e degré : comment la tracer ? {.smaller}
+
+:::::: columns
+::::: {.column width="48%"}
+
+**Forme factorisée** $\quad f(x) = a(x - x_1)(x - x_2)$
+
+| | |
+|:---|:---|
+| [Ordonnée à l'origine]{style="color:#1f5fbf;font-weight:600"} | $f(0) = a\,x_1 x_2$ |
+| [Axe de symétrie]{style="color:#2e7d46;font-weight:600"} | $x = \dfrac{x_1 + x_2}{2}$ |
+| [Sommet]{style="color:#7b3fa0;font-weight:600"} | $\left(\dfrac{x_1 + x_2}{2}\ ;\ f\!\left(\dfrac{x_1 + x_2}{2}\right)\right)$ |
+| [Racines]{style="color:#c76e00;font-weight:600"} | $x_1$ et $x_2$ |
+
+Cette forme existe seulement si $f$ a des racines.
+:::::
+::::: {.column width="52%"}
+![](img/x2-second-5.svg){width="100%" fig-alt="Parabole y = x² − 4x + 3 avec ses racines en orange, son ordonnée à l'origine en bleu, son axe de symétrie en vert et son sommet en violet."}
 :::::
 ::::::
 
@@ -582,17 +664,17 @@ Suite au sondage d'octobre, on a testé aujourd'hui la correction d'un exercice 
 **Vote sur Wooclap**
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : XXFLAMP
 :::
 ::::
 
-<!--
+
 ::: {.wc-qr}
 ![](img/qr-sondage.png)
 
 Correction en commun
 :::
--->
+
 
 :::::::
 
@@ -714,17 +796,17 @@ Il est anonyme et prend environ 10 minutes.
 **Ouvre le sondage**
 
 ::: wc-lien
-Lien : À COMPLÉTER
+Lien :XXFLAMP
 :::
 ::::
 
-<!--
+
 ::: {.wc-qr}
 ![](img/qr-sondage-seances.png)
 
 Sondage sur les séances
 :::
--->
+
 
 :::::::
 

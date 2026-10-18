@@ -9,8 +9,6 @@ Ces exercices restent **dans les objectifs** de la séance : à faire une fois l
 bouclés, en séance ou à la maison.
 :::
 
-### Renforcement — le socle, un cran plus loin
-
 ::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
 Variation d'un exercice du socle (même savoir-faire, valeurs ou contexte nouveaux)………
 :::
