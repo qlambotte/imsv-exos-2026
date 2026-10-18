@@ -1,3 +1,5 @@
+> **Archive : la méthode « Calculer une fonction réciproque » a été retirée de la séance 5 (timing). Ce Wooclap n'est plus utilisé.**
+
 # Wooclap — Méthodes (questions ouvertes)
 
 Un événement Wooclap, **type « question ouverte »** (texte libre, pas de QCM) : à chaque étape,

@@ -125,16 +125,55 @@ ax.annotate("min. global", (-3, -16), xytext=(14, 8), textcoords="offset points"
 ax.annotate("max. global", (3, 20), xytext=(-10, -2), textcoords="offset points", fontsize=17, ha="right", va="center")
 fig.savefig(os.path.join(OUT, "x1-locaux-globaux.svg"), facecolor="white", metadata={"Date": None}); plt.close(fig)
 
-# 2. g(x) = 2x - 1 sur [0, 3[ : le minimum existe, pas le maximum
-fig, ax = repere_x((-0.8, 3.9), (-2, 6.6), [0, 1, 2, 3], [-1, 5])
-g = lambda x: 2 * x - 1
-ax.plot(np.linspace(-0.6, 3.7, 50), g(np.linspace(-0.6, 3.7, 50)), color=BLUE, lw=3.4, alpha=0.35, zorder=3, solid_capstyle="butt")
-ax.plot([0, 3], [-1, 5], color=ORANGE, lw=4.6, zorder=5, solid_capstyle="butt")
-ax.plot([0, 3], [0, 0], color=ORANGE, lw=5, zorder=5, solid_capstyle="butt")
-ax.plot([0, 3.4], [5, 5], color=BLACK, lw=1.8, ls=(0, (5, 4)), zorder=4)
-for xv, incl in ((0, True), (3, False)):
-    for yv in (g(xv), 0):
+# 2. S.4 : f(x) = x^2 - 4x + 3 sur [0, 5[ : le minimum existe, pas le maximum
+fig, ax = repere_x(XLIM, YLIM, range(0, 6), [-1, 3, 8])
+ax.plot(np.linspace(-0.45, 5.25, 400), f(np.linspace(-0.45, 5.25, 400)), color=BLUE, lw=3.4, alpha=0.35, zorder=3, solid_capstyle="butt")
+xs = np.linspace(0, 5, 300)
+ax.plot(xs, f(xs), color=ORANGE, lw=4.6, zorder=5, solid_capstyle="butt")
+ax.plot([0, 5], [0, 0], color=ORANGE, lw=5, zorder=5, solid_capstyle="butt")
+ax.plot([0, 5.5], [8, 8], color=BLACK, lw=1.8, ls=(0, (5, 4)), zorder=4)
+for xv, incl in ((0, True), (5, False)):
+    for yv in (f(xv), 0):
         ax.plot([xv], [yv], "o", ms=11, zorder=7, mfc=ORANGE if incl else "white", mec=ORANGE, mew=2.4)
-ax.annotate("min. : $-1$, atteint en $0$", (0, -1), xytext=(14, -4), textcoords="offset points", fontsize=17, ha="left", va="top")
-ax.annotate("pas de max.", (1.4, 5), xytext=(0, 8), textcoords="offset points", fontsize=17, ha="center", va="bottom")
+ax.plot([2], [-1], "o", ms=11, zorder=7, mfc=ORANGE, mec=ORANGE)
+ax.annotate("min. : $-1$, en $2$", (2, -1), xytext=(14, -3), textcoords="offset points", fontsize=17, ha="left", va="top")
+ax.annotate("pas de max.", (2.6, 8), xytext=(0, 8), textcoords="offset points", fontsize=17, ha="center", va="bottom")
 fig.savefig(os.path.join(OUT, "x1-borne-exclue.svg"), facecolor="white", metadata={"Date": None}); plt.close(fig)
+
+
+# ---------------------------------------------------------------------------
+# Rappels : tracer une fonction du 1er degré, puis du 2e degré
+GREEN, PURPLE, RED = "#2e7d46", "#7b3fa0", "#c0392b"
+NAVY = "#14304a"
+
+# 1er degré : g(x) = 2x - 3 ; pente (orange) et ordonnée à l'origine (bleu)
+fig, ax = repere_x((-1.3, 4.3), (-4.6, 4.4), range(-1, 5), [-3, -1, 1, 3])
+xs = np.linspace(-0.6, 3.7, 50)
+ax.plot(xs, 2 * xs - 3, color=NAVY, lw=3.4, zorder=4)
+ax.plot([0, 1], [-3, -3], color=ORANGE, lw=4, zorder=6, solid_capstyle="butt")
+ax.plot([1, 1], [-3, -1], color=ORANGE, lw=4, zorder=6, solid_capstyle="butt")
+ax.annotate(r"$+1$", (0.5, -3), xytext=(0, -8), textcoords="offset points", fontsize=19, color=ORANGE, ha="center", va="top")
+ax.annotate(r"$+2$", (1, -2), xytext=(10, 0), textcoords="offset points", fontsize=19, color=ORANGE, ha="left", va="center")
+ax.plot([0], [-3], "o", ms=12, color=BLUE, zorder=8)
+ax.plot([1.5], [0], "o", ms=0)
+ax.annotate(r"$(0\,;\,-3)$", (0, -3), xytext=(-14, 12), textcoords="offset points", fontsize=19, color=BLUE, ha="right", va="bottom")
+ax.annotate(r"$g$", (3.45, 3.9), xytext=(12, 0), textcoords="offset points", fontsize=21, color=NAVY, ha="left", va="center")
+fig.savefig(os.path.join(OUT, "x2-premier-degre.svg"), facecolor="white", metadata={"Date": None}); plt.close(fig)
+
+# 2e degré : f(x) = x^2 - 4x + 3 ; racines, ordonnée à l'origine, axe de symétrie, sommet
+fig, ax = repere_x((-0.9, 5.0), (-2, 5.4), range(0, 5), [-1, 3])
+xs = np.linspace(-0.55, 4.55, 400)
+ax.plot(xs, f(xs), color=NAVY, lw=3.4, zorder=4)
+ax.plot([2, 2], [-2, 5.4], color=GREEN, lw=2.6, ls=(0, (6, 4)), zorder=5)
+ax.plot([1, 3], [0, 0], "o", ms=12, color=ORANGE, zorder=8)
+ax.plot([0], [3], "o", ms=12, color=BLUE, zorder=8)
+ax.plot([4], [3], "o", ms=12, mfc="white", mec=BLUE, mew=2.4, zorder=8)
+ax.plot([0, 4], [3, 3], color=BLUE, lw=1.6, ls=(0, (2, 3)), zorder=5)
+ax.plot([2], [-1], "o", ms=12, color=PURPLE, zorder=8)
+ax.annotate(r"$1$", (1, 0), xytext=(-2, 12), textcoords="offset points", fontsize=19, color=ORANGE, ha="right", va="bottom")
+ax.annotate(r"$3$", (3, 0), xytext=(4, 12), textcoords="offset points", fontsize=19, color=ORANGE, ha="left", va="bottom")
+ax.annotate(r"$(0\,;\,3)$", (0, 3), xytext=(12, 8), textcoords="offset points", fontsize=19, color=BLUE, ha="left", va="bottom")
+ax.annotate(r"$x = 2$", (2, 5.4), xytext=(8, -4), textcoords="offset points", fontsize=19, color=GREEN, ha="left", va="top")
+ax.annotate(r"$(2\,;\,-1)$", (2, -1), xytext=(12, -6), textcoords="offset points", fontsize=19, color=PURPLE, ha="left", va="top")
+ax.annotate(r"$f$", (4.55, f(4.55)), xytext=(10, 0), textcoords="offset points", fontsize=21, color=NAVY, ha="left", va="center")
+fig.savefig(os.path.join(OUT, "x2-second-degre.svg"), facecolor="white", metadata={"Date": None}); plt.close(fig)

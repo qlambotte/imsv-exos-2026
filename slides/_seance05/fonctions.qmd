@@ -76,7 +76,7 @@ Tout changement du dispositif doit respecter ce seuil.
 :::
 
 ::: notes
-Temps de travail : 120 minutes moins la pause de 10 minutes, soit 110 minutes. Avec le déroulé du jour : socle 30 min, transfert 25 min, méthodes 15 min d'activité, soit 70 minutes sur 110 (environ 64 %), au-dessus du seuil de 60 %. Laisser les étudiant·es réagir, sans ouvrir de discussion longue : le sondage de fin de séance recueillera le détail.
+Temps de travail : 120 minutes moins la pause de 10 minutes, soit 110 minutes. Avec le déroulé du jour : socle 30 min, transfert 30 min et environ 5 min pour remplir la carte « Extrema », soit environ 65 minutes sur 110 (environ 59 %), à la limite du seuil de 60 %. Laisser les étudiant·es réagir, sans ouvrir de discussion longue : le sondage de fin de séance recueillera le détail.
 :::
 
 ## Le déroulé de la séance
@@ -88,8 +88,8 @@ Temps de travail : 120 minutes moins la pause de 10 minutes, soit 110 minutes. A
 | Socle, en autonomie | 30 min |
 | Exercice S.4 : confrontation et correction | 10 min |
 | Pause | 10 min |
-| Transfert, en autonomie | 25 min |
-| Méthodes de la séance | 20 min |
+| Transfert, en autonomie | 30 min |
+| Méthodes de la séance | 10 min |
 | Sondage sur les séances | 10 min |
 
 ::: aretenir
@@ -97,7 +97,7 @@ Les défis peuvent être faits en séance par celles et ceux qui maîtrisent dé
 :::
 
 ::: notes
-Total prévu : 120 minutes, sans battement. Le retour sur le sondage peut aller jusqu'à 10 minutes en prenant sur l'échauffement, qui ne compte plus que deux questions. L'échauffement doit tenir en 10 minutes, et le vote sur la correction de S.4 (1 minute) se fait dans les 10 minutes de S.4. Si la séance prend du retard, raccourcir la fiche « Calculer une réciproque » (les deux diapositives facultatives : registres et diagramme sagittal ; si besoin, passer l'étape 6), jamais le sondage final.
+Total prévu : 115 minutes, avec 5 minutes de battement. Le retour sur le sondage peut aller jusqu'à 10 minutes en prenant sur ce battement ou sur l'échauffement, qui ne compte plus que deux questions. L'échauffement doit tenir en 10 minutes, et le vote sur la correction de S.4 (1 minute) se fait dans les 10 minutes de S.4. Si la séance prend du retard, raccourcir la diapositive de rappel sur les extrema ou les rappels de tracé, jamais le sondage final. La méthode « Calculer une réciproque » a été retirée de la séance (archivée en commentaire dans ce fichier).
 :::
 
 # Échauffement {.divider background-color="#14304a"}
@@ -492,6 +492,42 @@ Piège
 Donner comme maximum la valeur en une borne exclue, par exemple $8$ sur $[0,\,5[$ : un maximum doit être atteint en une abscisse de l'intervalle. À l'inverse, croire qu'une borne exclue supprime **toujours** un extremum : sur $[0,\,4[$, le maximum existe.
 ::::
 
+## Rappel : tracer une fonction du 1er degré
+
+:::::: columns
+::::: {.column width="44%"}
+$$g(x) = \textcolor{#c76e00}{2}\,x \;\textcolor{#1f5fbf}{-\,3}$$
+
+[1]{.step} [L'ordonnée à l'origine]{style="color:#1f5fbf;font-weight:600"} $-3$ donne le point $(0\,;\,-3)$ : le graphe coupe l'axe vertical en ce point.
+
+[2]{.step} [La pente]{style="color:#c76e00;font-weight:600"} $2$ dit comment monter : quand $x$ augmente de $1$, $g(x)$ augmente de $2$.
+
+[3]{.step} On trace la droite par le point $(0\,;\,-3)$ et le point obtenu en avançant de $1$ et en montant de $2$.
+:::::
+::::: {.column width="56%"}
+![](img/x2-premier-degre.svg){fig-alt="Droite y = 2x − 3. Le point (0 ; −3), en bleu, est l'ordonnée à l'origine. Un petit escalier orange, un pas de 1 vers la droite puis une montée de 2, représente la pente." width="100%"}
+:::::
+::::::
+
+## Rappel : tracer une fonction du 2e degré
+
+:::::: columns
+::::: {.column width="44%"}
+$$f(x) = x^2 - 4x + 3 = (x-1)(x-3)$$
+
+[1]{.step} [Les racines]{style="color:#c76e00;font-weight:600"} : $f(x) = 0$ donne $x = 1$ et $x = 3$.
+
+[2]{.step} [L'ordonnée à l'origine]{style="color:#1f5fbf;font-weight:600"} : $f(0) = 3$, point $(0\,;\,3)$.
+
+[3]{.step} [L'axe de symétrie]{style="color:#2e7d46;font-weight:600"} passe au milieu des racines : $x = \dfrac{1 + 3}{2} = 2$. Le point $(0\,;\,3)$ a pour symétrique $(4\,;\,3)$.
+
+[4]{.step} [Le sommet]{style="color:#7b3fa0;font-weight:600"} est sur l'axe : $f(2) = -1$, point $(2\,;\,-1)$.
+:::::
+::::: {.column width="56%"}
+![](img/x2-second-degre.svg){fig-alt="Parabole y = x² − 4x + 3. Les racines 1 et 3, en orange, sont sur l'axe horizontal. Le point (0 ; 3), en bleu, est l'ordonnée à l'origine, et son symétrique (4 ; 3) est en cercle blanc. L'axe de symétrie x = 2 est une droite verte en pointillés. Le sommet (2 ; −1), en violet, est le point le plus bas." width="100%"}
+:::::
+::::::
+
 ## Ton avis : faut-il garder cette correction en commun ?
 
 Suite au sondage d'octobre, on a testé aujourd'hui la correction d'un exercice du socle, ensemble, après confrontation de vos réponses.
@@ -527,39 +563,39 @@ Une minute de vote. Les choix sont dans wooclap-sondage.md (question 1). Annonce
 
 # Pause — 10 minutes {.divider background-color="#14304a"}
 
-# Transfert — 25 minutes {.divider background-color="#14304a"}
+# Transfert — 30 minutes {.divider background-color="#14304a"}
 
 ::: notes
 Les étudiant·es travaillent le transfert (T.1 à T.3) avec les coups de pouce du site.
 :::
 
-## Au travail {.travail data-minutes="25"}
+## Au travail {.travail data-minutes="30"}
 
 {{< include ../seance01/_travail.md >}}
 
-# Méthodes de la séance — 20 minutes {.divider background-color="#1f5fbf"}
+# Méthodes de la séance — 10 minutes {.divider background-color="#1f5fbf"}
 
 ::: notes
-Deux fiches : environ 5 minutes pour la carte « Extrema » (la méthode vient d'être vue avec S.4), puis environ 15 minutes pour « Calculer une réciproque ».
+Une seule fiche : la carte « Extrema » (la méthode vient d'être vue avec S.4), environ 10 minutes avec le rappel. La méthode « Calculer une réciproque » est retirée.
 :::
 
 ## Pour se rafraîchir la mémoire : les extrema
 
 :::::: columns
 ::::: {.column width="50%"}
-**Sur $[-3,\,3]$**
+**S.3 : $f(x) = (x+2)(x-1)^2$ sur $[-3,\,3]$**
 
 ![](img/x1-locaux-globaux.svg){fig-alt="Graphe de f(x) = (x + 2)(x − 1)² sur [−3 ; 3]. Points orange aux extrémités : minimum global en (−3 ; −16) et maximum global en (3 ; 20). Points bleus : maximum local en (−1 ; 4) et minimum local en (1 ; 0)." width="100%"}
 :::::
 ::::: {.column width="50%"}
-**Sur $[0,\,3[$**
+**S.4 : $f(x) = x^2 - 4x + 3$ sur $[0,\,5[$**
 
-![](img/x1-borne-exclue.svg){fig-alt="Droite y = 2x − 1 sur [0 ; 3[. Point plein en (0 ; −1) : c'est le minimum. Point creux en (3 ; 5) : cette valeur n'est pas atteinte, donc il n'y a pas de maximum." width="100%"}
+![](img/x1-borne-exclue.svg){fig-alt="Parabole y = x² − 4x + 3 ; portion au-dessus de [0 ; 5[ en orange. Point plein en (2 ; −1) : c'est le minimum. Point creux en (5 ; 8) : la valeur 8 n'est pas atteinte, donc il n'y a pas de maximum." width="100%"}
 :::::
 ::::::
 
 ::: notes
-Rafraîchir avant la fiche : un extremum est local (valeurs voisines) ou global (sur tout l'intervalle) ; il doit être atteint en une abscisse de l'intervalle. À gauche, orange : extremum global ; bleu : extremum local seulement. À droite : une borne exclue ne donne pas d'extremum (c'est l'exemple de la fiche).
+Les graphes des exercices S.3 et S.4. À gauche, orange : extremum global ; bleu : extremum local seulement. À droite : la borne exclue 5 supprime le maximum.
 :::
 
 ## La carte « Extrema sur un intervalle » {.smaller}
@@ -622,6 +658,10 @@ Prendre la valeur en une borne exclue comme extremum ; croire qu'une borne exclu
 Cette fiche rejoint ta **boîte à outils** sur le site.
 :::
 
+<!-- MÉTHODE 2 « Calculer une fonction réciproque » : RETIRÉE de la séance 5 (trop long pour le timing), gardée ici comme archive.
+     Pour la remettre : supprimer ce commentaire et rétablir, dans le bloc, les marqueurs d'origine « <!-- » et « --> »
+     (neutralisés ici en « < !-- » et « -- > » pour ne pas fermer le commentaire).
+
 # Méthode 2 : calculer une fonction réciproque {.divider background-color="#1f5fbf"}
 
 ## Avant de commencer
@@ -641,13 +681,13 @@ Code : À COMPLÉTER
 :::
 ::::
 
-<!--
+< !--
 ::: {.wc-qr}
 ![](img/qr-methodes.png)
 
 Entrée et sortie
 :::
--->
+-- >
 
 :::::::
 
@@ -893,6 +933,7 @@ Ne pas se demander si $f$ est injective ; choisir le mauvais signe de la racine 
 ::: footer-note
 Cette fiche rejoint ta **boîte à outils** sur le site.
 :::
+-->
 
 # Sondage sur les séances — 10 minutes {.divider background-color="#14304a"}
 
