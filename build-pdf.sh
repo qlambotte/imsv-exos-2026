@@ -70,5 +70,5 @@ echo "OK :"
 echo "   $OUT/$SEANCE-enonces.pdf    (énoncés seuls)"
 if [ "$CORRIGE" = 1 ]; then
   echo "   $OUT/$SEANCE-complet.pdf    (énoncés + aides)"
-  [ -f "$OUT/$SEANCE-offline.html" ] && echo "   $OUT/$SEANCE-offline.html  (site hors-ligne, 1 fichier)"
+  if [ -f "$OUT/$SEANCE-offline.html" ]; then echo "   $OUT/$SEANCE-offline.html  (site hors-ligne, 1 fichier)"; fi
 fi
