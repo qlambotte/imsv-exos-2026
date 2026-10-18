@@ -660,8 +660,7 @@ Cette fiche rejoint ta **boîte à outils** sur le site.
 
 <!-- MÉTHODE 2 « Calculer une fonction réciproque » : RETIRÉE de la séance 5 (trop long pour le timing), gardée ici comme archive.
      Pour la remettre : supprimer ce commentaire et rétablir, dans le bloc, les marqueurs d'origine « <!-- » et « --> »
-     (neutralisés ici en « < !-- » et « -- > » pour ne pas fermer le commentaire).
-
+<!--
 # Méthode 2 : calculer une fonction réciproque {.divider background-color="#1f5fbf"}
 
 ## Avant de commencer
