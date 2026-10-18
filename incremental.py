@@ -815,6 +815,9 @@ def slides(cache: Cache, dest: Path) -> None:
         return
     dest.mkdir(parents=True, exist_ok=True)
     decks = slide_decks()
+    only = {x for x in os.environ.get("IMSV_ONLY_SEANCES", "").replace(",", " ").split() if x}
+    if only:        # déploiement ciblé : seuls les decks des séances demandées sont (re)construits
+        decks = [q for q in decks if q.parent.name.startswith("seance") and q.parent.name[6:] in only]
     print(f"  slides ({VIEW}) : {len(decks)} deck(s) — "
           + ", ".join(q.relative_to(sl).with_suffix("").as_posix() for q in decks), flush=True)
     for i, q in enumerate(decks, 1):
