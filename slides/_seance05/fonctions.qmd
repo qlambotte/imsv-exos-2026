@@ -542,7 +542,7 @@ $$g(x) = \textcolor{#c76e00}{2}\,x \;\textcolor{#1f5fbf}{-\,3}$$
 
 :::::: columns
 ::::: {.column width="44%"}
-$$f(x) = x^2 - 4x + 3 = (x-1)(x-3) = (x-2)^2 - 1$$
+$$f(x) = x^2 - 4x + 3 $$
 
 ::: {.fragment data-fragment-index=1}
 [1]{.step} [Les racines]{style="color:#c76e00;font-weight:600"} : $f(x) = 0$ donne $x = 1$ et $x = 3$.
