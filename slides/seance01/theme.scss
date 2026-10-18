@@ -244,7 +244,7 @@ $font-family-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, m
 
 // Minuteur (échauffement)
 .et-timer { margin-top: 1em; display: flex; justify-content: center; }
-#et-timer-box {
+#et-timer-box, .et-box {
   display: flex; flex-direction: column; align-items: center; gap: .5em;
   padding: .6em 1.4em; background: $tip-bg; border: 1px solid $tip-brd; border-radius: .6em;
 }

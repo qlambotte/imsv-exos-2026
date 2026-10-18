@@ -802,7 +802,7 @@ Lien :XXFLAMP
 
 
 ::: {.wc-qr}
-![](img/qr-sondage-seances.png)
+![](img/qr-sondage.png)
 
 Sondage sur les séances
 :::
