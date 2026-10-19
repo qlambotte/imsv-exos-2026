@@ -442,7 +442,7 @@
   <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Quentin Lambotte · FMPB · UMONS">
-  <title>Remédiation IMSV biomed — Annexe</title>
+  <title>Remédiation IMSV biomed — La logique</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -1043,8 +1043,8 @@ margin-right: 0; }
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Remédiation IMSV biomed — Annexe</h1>
-  <p class="subtitle">Corrections de réserve et solutions rédigées</p>
+  <h1 class="title">Remédiation IMSV biomed — La logique</h1>
+  <p class="subtitle">La logique : l’implication comme contrat</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -1054,11 +1054,10 @@ Quentin Lambotte · FMPB · UMONS
 </div>
 </div>
 
-  <p class="date">15 octobre 2026</p>
 </section>
 <section>
-<section id="questions-de-réserve" class="title-slide slide level1 divider center" data-background-color="#14304a">
-<h1>Questions de réserve</h1>
+<section id="ouverture" class="title-slide slide level1 divider center" data-background-color="#14304a">
+<h1>Ouverture</h1>
 <style>
 .qrow{display:flex;gap:.8em;border-bottom:1px solid #e5e9ef;padding:.28em .2em;font-size:.6em;line-height:1.35;align-items:flex-start}
 .qrow .qans{flex:0 0 36%;font-weight:600}
@@ -1067,7 +1066,12 @@ Quentin Lambotte · FMPB · UMONS
 .qrow.ok{background:#f2f7ff}
 .qrow.ok .qans::before{content:"✓ ";color:#276a2e;font-weight:700}
 .qstem{font-size:.78em}
+.qflex{display:flex;gap:1em;align-items:center}
+.qflex img{max-width:330px;max-height:230px;width:auto;height:auto}
 .reveal table.deroule a{font-weight:600}
+.et-box{display:flex;flex-direction:column;align-items:center;gap:.5em;padding:.6em 1.4em;background:#f2f7ff;border:1px solid #dbe7fb;border-radius:.6em}
+.et-timer{margin-top:.8em;display:flex;justify-content:center}
+@keyframes et-pulse{0%,100%{opacity:1}50%{opacity:.35}}
 .back{margin-top:.5em}
 .qfoot{display:flex;gap:1.2em;align-items:center;margin-top:.45em;font-size:.55em}
 .qfoot .back-btn{font-size:1em}
@@ -1082,148 +1086,995 @@ Quentin Lambotte · FMPB · UMONS
 .tv th,.tv td{border:1px solid #cfd8e3;padding:.22em .9em;text-align:center}
 .tv th{background:#f4f7fa;color:#14304a}
 .tv .f{color:#b5381f;font-weight:700}
+.sit table{font-size:.72em;margin:.3em auto;border-collapse:collapse}
+.sit th,.sit td{border:1px solid #cfd8e3;padding:.25em .7em}
+.sit th{background:#f4f7fa;color:#14304a}
+.sit .f{color:#b5381f;font-weight:700}
+.promesse{border:2px solid #1f5fbf;border-radius:14px;background:#f2f7ff;padding:.6em 1em;text-align:center;font-size:1.05em;margin:.5em 0}
 </style>
 </section>
-<section id="q-R1" class="slide level2">
-<h2>Réserve 1 · Condition non remplie, conclusion vraie</h2>
+<section id="déroulé" class="slide level2">
+<h2>Déroulé</h2>
+<table class="deroule" style="font-size:.7em">
+<thead>
+<tr>
+<th>
+Temps
+</th>
+<th>
+Durée
+</th>
+<th>
+Contenu
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ph">
+Ouverture
+</td>
+<td class="du">
+3 min
+</td>
+<td>
+Principe de la séance, mur de questions
+</td>
+</tr>
+<tr>
+<td class="ph">
+QCM
+</td>
+<td class="du">
+9 min
+</td>
+<td>
+Sept questions sur Wooclap, seul·e, sans discuter
+</td>
+</tr>
+<tr>
+<td class="ph">
+Le contrat
+</td>
+<td class="du">
+17 min
+</td>
+<td>
+L’implication lue comme un engagement entre deux parties
+</td>
+</tr>
+<tr>
+<td class="ph">
+Corrections ciblées
+</td>
+<td class="du">
+7 min
+</td>
+<td>
+Seules les questions les moins réussies sont reprises
+</td>
+</tr>
+<tr>
+<td class="ph">
+Exercices de logique
+</td>
+<td class="du">
+20 min
+</td>
+<td>
+Recherche sur papier, choisie d’après tes résultats au QCM
+</td>
+</tr>
+<tr>
+<td class="ph">
+Questions
+</td>
+<td class="du">
+4 min
+</td>
+<td>
+Questions du mur restantes
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="le-mur-de-questions" class="slide level2">
+<h2>Le mur de questions</h2>
+<div class="wooclap">
+<div class="wc-play">
+<p>▶</p>
+</div>
+<div class="wc-body">
+<p><strong>Pose tes questions, anonymement</strong></p>
+<div class="wc-lien">
+<p>Code : XELAEPI</p>
+</div>
+</div>
+<div class="wc-qr">
+<p><img role="img" data-src="data:image/png;base64,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"></p>
+</div>
+</div>
+<ul>
+<li><strong>2 à 3 questions au maximum</strong> par personne.</li>
+<li><strong>Vote</strong> pour les questions des autres : celles qui reçoivent le plus de votes passent en premier.</li>
+<li>Je ne répondrai pas à toutes les questions.</li>
+<li>Les réponses se donnent en séance : il n’y aura pas de réponse écrite ensuite.</li>
+</ul>
+</section></section>
+<section>
+<section id="qcm" class="title-slide slide level1 divider center" data-background-color="#14304a">
+<h1>QCM</h1>
+
+</section>
+<section id="qcm" class="slide level2">
+<h2>QCM — Wooclap (9 min)</h2>
+<div class="wooclap">
+<div class="wc-play">
+<p>▶</p>
+</div>
+<div class="wc-body">
+<p><strong>Ouvre le Wooclap, réponds seul·e</strong></p>
+<div class="wc-lien">
+<p>Code : SDBMMIA</p>
+</div>
+</div>
+<div class="wc-qr">
+<p><img role="img" data-src="data:image/png;base64,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"></p>
+</div>
+</div>
+<p>7 questions, une seule réponse correcte par question.</p>
+<div class="et-timer">
+<div class="et-box" data-default="540">
+<div class="et-row">
+<button class="et-btn et-minus" type="button">
+−1 min
+</button>
+<div class="et-display">
+09:00
+</div>
+<button class="et-btn et-plus" type="button">
++1 min
+</button>
+</div>
+<div class="et-row">
+<button class="et-btn et-primary et-toggle" type="button">
+Démarrer
+</button>
+<button class="et-btn et-reset" type="button">
+↺ Réinitialiser
+</button>
+</div>
+</div>
+</div>
+<script>
+(function () {
+  var audioCtx = null;
+  function beep() {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      var t0 = audioCtx.currentTime;
+      [0, 0.35].forEach(function (o) {
+        var osc = audioCtx.createOscillator(), g = audioCtx.createGain();
+        osc.type = 'sine'; osc.frequency.value = 880;
+        g.gain.setValueAtTime(0.0001, t0 + o);
+        g.gain.exponentialRampToValueAtTime(0.3, t0 + o + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + o + 0.28);
+        osc.connect(g); g.connect(audioCtx.destination);
+        osc.start(t0 + o); osc.stop(t0 + o + 0.3);
+      });
+    } catch (e) {}
+  }
+  function fmt(s) { s = Math.max(0, s); var m = Math.floor(s / 60), r = s % 60; return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r; }
+  function init() {
+  Array.prototype.forEach.call(document.querySelectorAll('.et-box'), function (box) {
+    var DEFAULT = parseInt(box.getAttribute('data-default'), 10) || 600;
+    var display = box.querySelector('.et-display'), btn = box.querySelector('.et-toggle');
+    var remaining = DEFAULT, running = false, id = null;
+    function render() {
+      display.textContent = fmt(remaining);
+      display.classList.toggle('et-warn', running && remaining <= 60 && remaining > 0);
+      display.classList.toggle('et-done', remaining === 0);
+    }
+    function stop() { running = false; btn.textContent = remaining > 0 ? 'Reprendre' : 'Démarrer'; if (id) { clearInterval(id); id = null; } }
+    function tick() { remaining -= 1; if (remaining <= 0) { remaining = 0; stop(); beep(); } render(); }
+    function start() {
+      if (running) return;
+      try { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); if (audioCtx.state === 'suspended') audioCtx.resume(); } catch (e) {}
+      if (remaining <= 0) remaining = DEFAULT;
+      render(); running = true; btn.textContent = 'Pause'; id = setInterval(tick, 1000);
+    }
+    btn.addEventListener('click', function () { running ? stop() : start(); });
+    box.querySelector('.et-minus').addEventListener('click', function () { remaining = Math.max(0, remaining - 60); render(); if (remaining === 0) stop(); });
+    box.querySelector('.et-plus').addEventListener('click', function () { remaining += 60; render(); });
+    box.querySelector('.et-reset').addEventListener('click', function () { stop(); remaining = DEFAULT; btn.textContent = 'Démarrer'; render(); });
+    render();
+  });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+</section></section>
+<section>
+<section id="le-contrat" class="title-slide slide level1 divider center" data-background-color="#14304a">
+<h1>Le contrat</h1>
+
+</section>
+<section id="contrat-1" class="slide level2">
+<h2>Une promesse</h2>
+<p>La SNCB s’engage :</p>
+<div class="promesse">
+<p>« Si un train arrive avec <strong>60 minutes de retard ou plus</strong>, alors le voyageur reçoit <strong>100 % du prix de son trajet</strong>. »</p>
+</div>
+<p>On note <span class="math inline">\alpha</span> : « le train arrive avec 60 minutes de retard ou plus » et <span class="math inline">\beta</span> : « le voyageur reçoit 100 % du prix de son trajet ».</p>
+<p>L’engagement s’écrit <span class="math inline">\alpha \Rightarrow \beta</span>.</p>
+<div class="footer-note">
+<p>Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié : les exceptions et le délai de demande ne sont pas pris en compte.</p>
+</div>
+</section>
+<section id="contrat-2" class="slide level2">
+<h2>Promesse tenue ou rompue ?</h2>
+<p>Quatre situations imaginées. Pour chacune, note sur papier : la SNCB tient-elle sa promesse ?</p>
+<div class="sit">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: left;">Situation</th>
+<th style="text-align: center;"><span class="math inline">\alpha</span></th>
+<th style="text-align: center;"><span class="math inline">\beta</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Retard de 75 minutes, 100 % du trajet reçu</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Retard de 75 minutes, aucune compensation</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Retard de 45 minutes, 100 % du trajet reçu</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Retard de 45 minutes, aucune compensation</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="contrat-3" class="slide level2">
+<h2>Une seule rupture possible</h2>
+<div class="sit">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: left;">Situation</th>
+<th style="text-align: center;"><span class="math inline">\alpha</span></th>
+<th style="text-align: center;"><span class="math inline">\beta</span></th>
+<th style="text-align: center;">Promesse</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Retard de 75 minutes, 100 % du trajet reçu</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">tenue</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Retard de 75 minutes, aucune compensation</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><span class="f">rompue</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Retard de 45 minutes, 100 % du trajet reçu</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">tenue</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Retard de 45 minutes, aucune compensation</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">tenue</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment">
+<div class="aretenir smaller">
+<p>La promesse n’est rompue que dans <strong>un seul</strong> cas : la condition est remplie (<span class="math inline">\alpha</span> vrai) et la promesse n’est pas exécutée (<span class="math inline">\beta</span> faux).</p>
+<p>Aux lignes 3 et 4, la condition n’est pas remplie : la promesse ne dit rien, elle est automatiquement vérifiée.</p>
+</div>
+</div>
+</section>
+<section id="contrat-4" class="slide level2">
+<h2>La table de vérité</h2>
+<p>Écrivons V pour « promesse tenue » et F pour « promesse rompue » :</p>
+<div class="tv">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\alpha</span></th>
+<th style="text-align: center;"><span class="math inline">\beta</span></th>
+<th style="text-align: center;"><span class="math inline">\alpha \Rightarrow \beta</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><span class="f">F</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="aretenir smaller">
+<p>La table de vérité de <span class="math inline">\alpha \Rightarrow \beta</span> n’est pas à apprendre : elle se relit comme un contrat. Elle vaut F sur la seule ligne où <span class="math inline">\alpha</span> est vrai et <span class="math inline">\beta</span> est faux.</p>
+</div>
+</section>
+<section id="contrat-5" class="slide level2">
+<h2>La réciproque : un autre contrat</h2>
+<p>On échange les rôles de <span class="math inline">\alpha</span> et <span class="math inline">\beta</span> :</p>
+<div class="promesse">
+<p>« Si le voyageur reçoit 100 % du prix de son trajet, alors le train a eu 60 minutes de retard ou plus. » <span class="math inline">\quad \beta \Rightarrow \alpha</span></p>
+</div>
+<p><strong>Quand ce contrat est-il rompu ?</strong></p>
+<div class="fragment">
+<p>Quand sa condition est remplie (<span class="math inline">\beta</span> vrai) et que sa conclusion ne l’est pas (<span class="math inline">\alpha</span> faux) : 100 % du trajet reçu sans 60 minutes de retard. C’est la ligne 3, celle où <span class="math inline">\alpha \Rightarrow \beta</span> était tenue.</p>
+</div>
+</section>
+<section id="contrat-6" class="slide level2">
+<h2>La réciproque : une autre colonne</h2>
+<div class="tv">
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\alpha</span></th>
+<th style="text-align: center;"><span class="math inline">\beta</span></th>
+<th style="text-align: center;"><span class="math inline">\alpha \Rightarrow \beta</span></th>
+<th style="text-align: center;"><span class="math inline">\beta \Rightarrow \alpha</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><span class="f">F</span></td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;"><span class="f">F</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="aretenir smaller">
+<p>La réciproque est rompue sur une autre ligne : ce n’est pas le même contrat. Une implication et sa réciproque ne sont pas équivalentes.</p>
+</div>
+</section>
+<section id="contrat-7" class="slide level2">
+<h2>La contraposée : le même contrat</h2>
+<div class="promesse">
+<p>« Si le voyageur ne reçoit pas 100 % du prix de son trajet, alors le train a eu moins de 60 minutes de retard. » <span class="math inline">\quad \lnot\beta \Rightarrow \lnot\alpha</span></p>
+</div>
+<p><strong>Quand ce contrat est-il rompu ?</strong></p>
+<div class="fragment">
+<p>Quand <span class="math inline">\lnot\beta</span> est vrai et <span class="math inline">\lnot\alpha</span> est faux, c’est-à-dire quand <span class="math inline">\beta</span> est faux et <span class="math inline">\alpha</span> est vrai : retard de 60 minutes ou plus, sans compensation. C’est exactement la rupture de <span class="math inline">\alpha \Rightarrow \beta</span>.</p>
+</div>
+</section>
+<section id="contrat-8" class="slide level2">
+<h2>La contraposée : la même colonne</h2>
+<div class="tv">
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\alpha</span></th>
+<th style="text-align: center;"><span class="math inline">\beta</span></th>
+<th style="text-align: center;"><span class="math inline">\lnot\alpha</span></th>
+<th style="text-align: center;"><span class="math inline">\lnot\beta</span></th>
+<th style="text-align: center;"><span class="math inline">\alpha \Rightarrow \beta</span></th>
+<th style="text-align: center;"><span class="math inline">\lnot\beta \Rightarrow \lnot\alpha</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;"><span class="f">F</span></td>
+<td style="text-align: center;"><span class="f">F</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="aretenir smaller">
+<p>Même rupture, donc même contrat : la contraposée est équivalente à l’implication.</p>
+</div>
+</section>
+<section id="contrat-sn1" class="slide level2 smaller">
+<h2>Suffisant et nécessaire</h2>
+<div class="promesse">
+<p>« Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » <span class="math inline">\quad \alpha \Rightarrow \beta</span></p>
+</div>
+<p><strong>Un train a 60 minutes de retard ou plus. Le voyageur est-il sûr d’être compensé ?</strong></p>
+<div class="fragment">
+<p>Oui : il suffit que <span class="math inline">\alpha</span> soit vrai pour obtenir <span class="math inline">\beta</span>. On dit que <span class="math inline">\alpha</span> est une <strong>condition suffisante</strong> pour <span class="math inline">\beta</span>.</p>
+</div>
+<div class="fragment">
+<p><strong>Un voyageur n’est pas compensé et l’engagement est tenu. Que sait-on du retard ?</strong></p>
+</div>
+<div class="fragment">
+<p>Il est inférieur à 60 minutes (contraposée) : sans <span class="math inline">\beta</span>, pas de <span class="math inline">\alpha</span>. On dit que <span class="math inline">\beta</span> est une <strong>condition nécessaire</strong> pour <span class="math inline">\alpha</span>.</p>
+<div class="footer-note">
+<p>Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.</p>
+</div>
+</div>
+</section>
+<section id="contrat-sn2" class="slide level2">
+<h2>Suffisant, nécessaire : le test</h2>
+<table class="deroule" style="font-size:.66em">
+<thead>
+<tr>
+<th>
+Phrase
+</th>
+<th>
+Implication
+</th>
+<th>
+Engagement de la SNCB
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+« Un retard d’au moins 60 min est suffisant pour être compensé. »
+</td>
+<td>
+<span class="math inline">\alpha \Rightarrow \beta</span>
+</td>
+<td>
+Promis
+</td>
+</tr>
+<tr>
+<td>
+« Être compensé est nécessaire pour avoir un retard d’au moins 60 min. »
+</td>
+<td>
+<span class="math inline">\alpha \Rightarrow \beta</span>
+</td>
+<td>
+Promis (même implication)
+</td>
+</tr>
+<tr>
+<td>
+« Un retard d’au moins 60 min est nécessaire pour être compensé. »
+</td>
+<td>
+<span class="math inline">\beta \Rightarrow \alpha</span>
+</td>
+<td>
+Non promis (réciproque)
+</td>
+</tr>
+<tr>
+<td>
+« Être compensé est suffisant pour avoir un retard d’au moins 60 min. »
+</td>
+<td>
+<span class="math inline">\beta \Rightarrow \alpha</span>
+</td>
+<td>
+Non promis (réciproque)
+</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<div class="aretenir smaller">
+<p>Dans <span class="math inline">\alpha \Rightarrow \beta</span>, la proposition de départ (<span class="math inline">\alpha</span>) est <strong>suffisante</strong> et celle d’arrivée (<span class="math inline">\beta</span>) est <strong>nécessaire</strong>. Pour traduire une phrase, on écrit d’abord l’implication : la flèche part toujours de la proposition suffisante.</p>
+</div>
+<div class="footer-note">
+<p>Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncés simplifiés.</p>
+</div>
+</div>
+</section>
+<section id="contrat-sn3" class="slide level2 smaller">
+<h2>Suffisant n’est pas nécessaire</h2>
+<p><strong>Critère diagnostique :</strong> « Si la glycémie à jeun d’une personne est d’au moins 7,0 mmol/L, alors cette personne a un diabète. »</p>
+<div class="fragment">
+<p>Une glycémie à jeun d’au moins 7,0 mmol/L est une condition <strong>suffisante</strong> pour retenir un diabète : <span class="math inline">\alpha \Rightarrow \beta</span>.</p>
+</div>
+<div class="fragment">
+<p>Elle n’est pas <strong>nécessaire</strong> : une HbA1c d’au moins 6,5 % suffit aussi à retenir un diabète. Une condition nécessaire demanderait <span class="math inline">\beta \Rightarrow \alpha</span>, la réciproque, que le critère n’affirme pas.</p>
+<div class="piege">
+<div class="pg-titre">
+<p>Pièges</p>
+</div>
+<p>Dire « nécessaire » pour la proposition de départ : cela renverse la flèche et donne la réciproque.</p>
+</div>
+<div class="footer-note">
+<p>Source : Manuel MSD, version professionnelle, « Revue générale du diabète sucré », msdmanuals.com (consulté le 13 octobre 2026). Critère simplifié.</p>
+</div>
+</div>
+</section>
+<section id="contrat-9" class="slide level2 smaller">
+<h2>La négation : la rupture</h2>
+<p>Nier la promesse, c’est dire qu’elle est rompue.</p>
+<div class="fragment">
+<p>La rupture est le cas « <span class="math inline">\alpha</span> vrai et <span class="math inline">\beta</span> faux » :</p>
+<p><span class="math display">\lnot(\alpha \Rightarrow \beta) \iff \alpha \land \lnot\beta</span></p>
+<div class="tv">
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\alpha</span></th>
+<th style="text-align: center;"><span class="math inline">\beta</span></th>
+<th style="text-align: center;"><span class="math inline">\alpha \Rightarrow \beta</span></th>
+<th style="text-align: center;"><span class="math inline">\lnot(\alpha \Rightarrow \beta)</span></th>
+<th style="text-align: center;"><span class="math inline">\alpha \land \lnot\beta</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><span class="f">F</span></td>
+<td style="text-align: center;"><span class="f">V</span></td>
+<td style="text-align: center;"><span class="f">V</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="fragment">
+<div class="aretenir smaller">
+<p>La promesse est tenue quand elle n’est pas rompue : <span class="math inline">\alpha \Rightarrow \beta \iff \lnot(\alpha \land \lnot\beta) \iff \lnot\alpha \lor \beta</span>. Autrement dit, la condition n’est pas remplie, ou la promesse est exécutée.</p>
+</div>
+</div>
+</section>
+<section id="contrat-10" class="slide level2">
+<h2>Synthèse</h2>
+<table class="deroule" style="font-size:.7em">
+<thead>
+<tr>
+<th>
+Énoncé
+</th>
+<th>
+Rompu quand
+</th>
+<th>
+Colonne de <span class="math inline">\alpha \Rightarrow \beta</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ph">
+Implication <span class="math inline">\alpha \Rightarrow \beta</span>
+</td>
+<td>
+<span class="math inline">\alpha</span> vrai et <span class="math inline">\beta</span> faux
+</td>
+<td>
+—
+</td>
+</tr>
+<tr>
+<td class="ph">
+Réciproque <span class="math inline">\beta \Rightarrow \alpha</span>
+</td>
+<td>
+<span class="math inline">\beta</span> vrai et <span class="math inline">\alpha</span> faux
+</td>
+<td>
+différente
+</td>
+</tr>
+<tr>
+<td class="ph">
+Contraposée <span class="math inline">\lnot\beta \Rightarrow \lnot\alpha</span>
+</td>
+<td>
+<span class="math inline">\beta</span> faux et <span class="math inline">\alpha</span> vrai
+</td>
+<td>
+identique
+</td>
+</tr>
+<tr>
+<td class="ph">
+Négation <span class="math inline">\lnot(\alpha \Rightarrow \beta)</span>
+</td>
+<td>
+elle décrit la rupture : <span class="math inline">\alpha \land \lnot\beta</span>
+</td>
+<td>
+opposée
+</td>
+</tr>
+<tr>
+<td class="ph">
+Vocabulaire
+</td>
+<td>
+<span class="math inline">\alpha</span> suffisante pour <span class="math inline">\beta</span> ; <span class="math inline">\beta</span> nécessaire pour <span class="math inline">\alpha</span>
+</td>
+<td>
+—
+</td>
+</tr>
+</tbody>
+</table>
+<div class="piege">
+<div class="pg-titre">
+<p>Pièges</p>
+</div>
+<p>Croire que <span class="math inline">\beta</span> faux suffit à rompre la promesse : il faut aussi que <span class="math inline">\alpha</span> soit vrai. Confondre réciproque (on échange) et contraposée (on échange <strong>et</strong> on nie). Nier une implication par une autre implication.</p>
+</div>
+</section></section>
+<section>
+<section id="corrections-ciblées" class="title-slide slide level1 divider center" data-background-color="#14304a">
+<h1>Corrections ciblées</h1>
+
+</section>
+<section id="nav-logique" class="slide level2">
+<h2>Où aller selon les résultats</h2>
+<table class="deroule" style="font-size:.7em">
+<thead>
+<tr>
+<th>
+QCM
+</th>
+<th>
+Correction
+</th>
+<th>
+Exercices
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ph">
+Q1
+</td>
+<td>
+<a href="#/q-Q1">Rupture d’un engagement</a>
+</td>
+<td>
+<a href="#/ex-R3">R.3</a> · <a href="#/ex-R9">R.9</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+Q2
+</td>
+<td>
+<a href="#/q-Q2">Colonne de l’implication</a>
+</td>
+<td>
+<a href="#/ex-R10">R.10(a)</a> · <a href="#/ex-R14">R.14(a)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+Q3
+</td>
+<td>
+<a href="#/q-Q3">Condition non remplie</a>
+</td>
+<td>
+<a href="#/ex-R2">R.2(c)</a> · <a href="#/ex-R10">R.10(a)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+Q4
+</td>
+<td>
+<a href="#/q-Q4">Réciproque</a>
+</td>
+<td>
+<a href="#/ex-R6">R.6</a> · <a href="#/ex-R14">R.14(b)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+Q5
+</td>
+<td>
+<a href="#/q-Q5">Contraposée</a>
+</td>
+<td>
+<a href="#/ex-R6">R.6</a> · <a href="#/ex-R14">R.14(a)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+Q6
+</td>
+<td>
+<a href="#/q-Q6">Négation d’une implication</a>
+</td>
+<td>
+<a href="#/ex-R10">R.10(b)</a> · <a href="#/ex-R8">R.8</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+Q7
+</td>
+<td>
+<a href="#/q-Q7">Suffisant, nécessaire</a>
+</td>
+<td>
+<a href="#/ex-R6">R.6</a> (réciproque)
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="q-Q1" class="slide level2">
+<h2>Q1 · Rupture d’un engagement</h2>
 <div class="qstem">
-<p>Engagement de la SNCB : « Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » Un train arrive avec 20 minutes de retard et, par geste commercial, la SNCB rembourse 100 % du trajet. L’engagement est-il rompu ?</p>
+<p>Engagement de la SNCB : « Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » Dans quelle situation la SNCB ne tient-elle pas son engagement ?</p>
 </div>
 <div class="qrow ok">
 <div class="qans">
-<p>Non : la condition n’est pas remplie, l’engagement ne s’applique pas.</p>
+<p>Retard de 75 minutes et aucune compensation.</p>
 </div>
 <div class="qwhy">
-<p><span class="math inline">\alpha</span> est faux et <span class="math inline">\beta</span> est vrai : c’est la ligne 3 de la table, où l’implication est vraie.</p>
+<p>La condition est remplie (<span class="math inline">\alpha</span> vrai) et la promesse n’est pas exécutée (<span class="math inline">\beta</span> faux) : c’est la seule rupture possible.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p>Oui : la SNCB verse une compensation alors que la condition n’est pas remplie.</p>
+<p>Retard de 45 minutes et aucune compensation.</p>
 </div>
 <div class="qwhy">
-<p>Verser plus que prévu ne rompt rien. Seule la ligne « <span class="math inline">\alpha</span> vrai, <span class="math inline">\beta</span> faux » rompt l’engagement.</p>
+<p>Ici, la condition n’est pas remplie : l’engagement ne s’applique pas. Que la compensation soit absente ne suffit pas à le rompre.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p>Non, mais seulement parce que la compensation a été versée.</p>
+<p>Retard de 45 minutes et 100 % du prix du trajet reçu.</p>
 </div>
 <div class="qwhy">
-<p>La compensation n’intervient pas dans le raisonnement : avec <span class="math inline">\alpha</span> faux, l’engagement est tenu même sans compensation (ligne 4).</p>
+<p>Une compensation versée n’est jamais une rupture. L’engagement n’interdit pas de compenser sous 60 minutes ; il oblige à compenser à partir de 60 minutes.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p>On ne peut pas le savoir sans connaître la cause du retard.</p>
+<p>Retard de 90 minutes et 100 % du prix du trajet reçu.</p>
 </div>
 <div class="qwhy">
-<p>La valeur de l’implication se lit sur les valeurs de <span class="math inline">\alpha</span> et de <span class="math inline">\beta</span> : ici <span class="math inline">\alpha</span> est faux, l’implication est vraie.</p>
+<p>La condition est remplie et la promesse est exécutée : l’engagement est tenu.</p>
 </div>
 </div>
 <div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/ex-R2">R.2(c)</a> · <a href="01-remediation.html#/ex-R10">R.10(a)</a></span>
+<a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R3">R.3</a> · <a href="#/ex-R9">R.9</a></span>
 </div>
 <div class="footer-note">
 <p>Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.</p>
 </div>
 </section>
-<section id="q-R2" class="slide level2">
-<h2>Réserve 2 · Écriture équivalente</h2>
+<section id="q-Q2" class="slide level2">
+<h2>Q2 · Colonne de l’implication</h2>
 <div class="qstem">
-<p>Laquelle de ces propositions est équivalente à <span class="math inline">\alpha \Rightarrow \beta</span> ?</p>
+<p>Les colonnes de <span class="math inline">\alpha</span> et de <span class="math inline">\beta</span>, de haut en bas, sont : <span class="math inline">\alpha</span> : V, V, F, F et <span class="math inline">\beta</span> : V, F, V, F. Quelle est la colonne de <span class="math inline">\alpha \Rightarrow \beta</span> ?</p>
 </div>
 <div class="qrow ok">
 <div class="qans">
-<p><span class="math inline">\lnot\alpha \lor \beta</span></p>
+<p>V, F, V, V</p>
 </div>
 <div class="qwhy">
-<p>Colonne V, F, V, V : vraie si la condition n’est pas remplie ou si la promesse est exécutée.</p>
+<p>F uniquement sur la ligne <span class="math inline">\alpha</span> vrai, <span class="math inline">\beta</span> faux (2<sup>e</sup> ligne), V partout ailleurs.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p><span class="math inline">\alpha \lor \lnot\beta</span></p>
+<p>V, V, F, V</p>
 </div>
 <div class="qwhy">
-<p>Colonne V, V, F, V : c’est la colonne de <span class="math inline">\beta \Rightarrow \alpha</span>, la réciproque.</p>
+<p>C’est la colonne de <span class="math inline">\beta \Rightarrow \alpha</span> (la réciproque), rompue sur la ligne <span class="math inline">\alpha</span> faux, <span class="math inline">\beta</span> vrai. Pour <span class="math inline">\alpha \Rightarrow \beta</span>, la rupture a lieu quand <span class="math inline">\alpha</span> est vrai et <span class="math inline">\beta</span> faux.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p><span class="math inline">\lnot\alpha \land \beta</span></p>
+<p>V, F, F, V</p>
 </div>
 <div class="qwhy">
-<p>Colonne F, F, V, F : vraie seulement quand <span class="math inline">\alpha</span> est faux et <span class="math inline">\beta</span> vrai. Or l’implication est aussi vraie quand <span class="math inline">\alpha</span> et <span class="math inline">\beta</span> sont vrais, ou quand <span class="math inline">\alpha</span> et <span class="math inline">\beta</span> sont faux.</p>
+<p>C’est la colonne de <span class="math inline">\alpha \iff \beta</span>, fausse dès que <span class="math inline">\alpha</span> et <span class="math inline">\beta</span> diffèrent. Sur la ligne <span class="math inline">\alpha</span> faux, <span class="math inline">\beta</span> vrai, la promesse <span class="math inline">\alpha \Rightarrow \beta</span> n’est pas rompue.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p><span class="math inline">\alpha \land \lnot\beta</span></p>
+<p>V, F, F, F</p>
 </div>
 <div class="qwhy">
-<p>Colonne F, V, F, F : c’est la négation de <span class="math inline">\alpha \Rightarrow \beta</span>, la rupture.</p>
+<p>C’est la colonne de <span class="math inline">\alpha \land \beta</span>, vraie seulement quand les deux sont vraies. Quand <span class="math inline">\alpha</span> est faux, l’implication est automatiquement vérifiée.</p>
 </div>
 </div>
 <div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/ex-R10">R.10(a)</a></span>
+<a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R10">R.10(a)</a> · <a href="#/ex-R14">R.14(a)</a></span>
 </div>
 </section>
-<section id="q-R3" class="slide level2">
-<h2>Réserve 3 · Contraposée</h2>
+<section id="q-Q3" class="slide level2">
+<h2>Q3 · Condition non remplie</h2>
 <div class="qstem">
-<p>Critère diagnostique : « Si l’HbA1c d’une personne est d’au moins 6,5 %, alors cette personne a un diabète. » Quelle est la contraposée de cette implication ?</p>
+<p>Critère diagnostique : « Si la glycémie à jeun d’une personne est d’au moins 7,0 mmol/L, alors cette personne a un diabète. » Une personne a une glycémie à jeun de 5,0 mmol/L. Que peut-on dire de l’implication pour cette personne ?</p>
 </div>
 <div class="qrow ok">
 <div class="qans">
-<p>Si une personne n’a pas de diabète, alors son HbA1c est inférieure à 6,5 %.</p>
+<p>Elle est vraie, mais elle ne permet pas de conclure sur le diabète.</p>
 </div>
 <div class="qwhy">
-<p>On nie les deux propositions <strong>et</strong> on les échange : <span class="math inline">\lnot\beta \Rightarrow \lnot\alpha</span>.</p>
+<p>La condition n’est pas remplie (<span class="math inline">\alpha</span> faux) : l’implication est automatiquement vérifiée, et elle ne dit rien de <span class="math inline">\beta</span>.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p>Si l’HbA1c est inférieure à 6,5 %, alors la personne n’a pas de diabète.</p>
+<p>Elle est fausse, car le diabète n’est pas établi.</p>
 </div>
 <div class="qwhy">
-<p>Les deux propositions sont niées, mais pas échangées : <span class="math inline">\lnot\alpha \Rightarrow \lnot\beta</span>.</p>
+<p>Une implication n’est fausse que si <span class="math inline">\alpha</span> est vrai et <span class="math inline">\beta</span> faux. Ici <span class="math inline">\alpha</span> est faux : rien n’est violé.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p>Si une personne a un diabète, alors son HbA1c est d’au moins 6,5 %.</p>
+<p>Cette personne n’a pas de diabète.</p>
 </div>
 <div class="qwhy">
-<p>On a échangé sans nier : c’est la réciproque <span class="math inline">\beta \Rightarrow \alpha</span>.</p>
+<p>Cela suppose « si glycémie inférieure à 7,0, alors pas de diabète », qui n’est pas affirmé : un diabète peut aussi être retenu avec une HbA1c d’au moins 6,5 %.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p>Si une personne n’a pas de diabète, alors son HbA1c est d’au moins 6,5 %.</p>
+<p>On ne peut pas savoir sans connaître le diagnostic.</p>
 </div>
 <div class="qwhy">
-<p>Après l’échange, seule la nouvelle condition a été niée : <span class="math inline">\lnot\beta \Rightarrow \alpha</span> n’est pas la contraposée, qui s’écrit <span class="math inline">\lnot\beta \Rightarrow \lnot\alpha</span>.</p>
+<p>La valeur de l’implication se lit sur la ligne <span class="math inline">\alpha</span> faux : elle est vraie quelle que soit la valeur de <span class="math inline">\beta</span>.</p>
 </div>
 </div>
 <div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/ex-R6">R.6</a> · <a href="01-remediation.html#/ex-R14">R.14(a)</a></span>
+<a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R2">R.2(c)</a> · <a href="#/ex-R10">R.10(a)</a></span>
 </div>
 <div class="footer-note">
 <p>Source : Manuel MSD, version professionnelle, « Revue générale du diabète sucré », msdmanuals.com (consulté le 13 octobre 2026). Critère simplifié.</p>
 </div>
 </section>
-<section id="q-R4" class="slide level2">
-<h2>Réserve 4 · Négation</h2>
+<section id="q-Q4" class="slide level2">
+<h2>Q4 · Réciproque</h2>
 <div class="qstem">
-<p>Critère diagnostique : « Si la glycémie à jeun d’une personne est d’au moins 7,0 mmol/L, alors cette personne a un diabète. » Quelle est la négation de cette implication ?</p>
+<p>Critère diagnostique : « Si la glycémie à jeun d’une personne est d’au moins 7,0 mmol/L, alors cette personne a un diabète. » Quelle est la réciproque de cette implication ?</p>
 </div>
 <div class="qrow ok">
 <div class="qans">
-<p>La glycémie à jeun est d’au moins 7,0 mmol/L et la personne n’a pas de diabète.</p>
+<p>Si une personne a un diabète, alors sa glycémie à jeun est d’au moins 7,0 mmol/L.</p>
 </div>
 <div class="qwhy">
-<p><span class="math inline">\lnot(\alpha \Rightarrow \beta) \iff \alpha \land \lnot\beta</span> : la négation décrit la rupture du critère.</p>
+<p>On échange <span class="math inline">\alpha</span> et <span class="math inline">\beta</span> sans les nier : <span class="math inline">\beta \Rightarrow \alpha</span>. Ce contrat n’est pas promis : une HbA1c d’au moins 6,5 % suffit aussi à retenir un diabète.</p>
 </div>
 </div>
 <div class="qrow">
@@ -1231,101 +2082,299 @@ Quentin Lambotte · FMPB · UMONS
 <p>Si la glycémie à jeun est inférieure à 7,0 mmol/L, alors la personne n’a pas de diabète.</p>
 </div>
 <div class="qwhy">
-<p>Les deux propositions sont niées sans que l’ordre change : on obtient <span class="math inline">\lnot\alpha \Rightarrow \lnot\beta</span>, une autre implication, pas la rupture.</p>
+<p>Les deux propositions sont niées, mais pas échangées : ce n’est pas la réciproque.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p>Si la glycémie à jeun est d’au moins 7,0 mmol/L, alors la personne n’a pas de diabète.</p>
+<p>Si une personne n’a pas de diabète, alors sa glycémie à jeun est inférieure à 7,0 mmol/L.</p>
 </div>
 <div class="qwhy">
-<p>Seule la conclusion est niée et l’implication est conservée : c’est un autre critère, pas la rupture de celui-ci.</p>
+<p>On a échangé <strong>et</strong> nié : c’est la contraposée, pas la réciproque.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p>La glycémie à jeun est inférieure à 7,0 mmol/L et la personne a un diabète.</p>
+<p>Si une personne a un diabète, alors sa glycémie à jeun est inférieure à 7,0 mmol/L.</p>
 </div>
 <div class="qwhy">
-<p>La condition est niée alors qu’elle doit rester vraie : la rupture exige <span class="math inline">\alpha</span> vrai.</p>
+<p>Après l’échange, la conclusion a été niée : la réciproque échange <span class="math inline">\alpha</span> et <span class="math inline">\beta</span> sans rien nier.</p>
 </div>
 </div>
 <div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/ex-R10">R.10(b)</a></span>
+<a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R6">R.6</a> · <a href="#/ex-R14">R.14(b)</a></span>
 </div>
 <div class="footer-note">
 <p>Source : Manuel MSD, version professionnelle, « Revue générale du diabète sucré », msdmanuals.com (consulté le 13 octobre 2026). Critère simplifié.</p>
 </div>
 </section>
-<section id="q-R5" class="slide level2">
-<h2>Réserve 5 · Suffisant, nécessaire</h2>
+<section id="q-Q5" class="slide level2">
+<h2>Q5 · Contraposée</h2>
 <div class="qstem">
-<p>Critère diagnostique : « Si la glycémie à jeun d’une personne est d’au moins 7,0 mmol/L, alors cette personne a un diabète. » Une glycémie à jeun d’au moins 7,0 mmol/L est…</p>
+<p>Engagement de la SNCB : « Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » Un voyageur ne reçoit aucune compensation, et la SNCB a tenu son engagement. Que peut-on en déduire ?</p>
 </div>
 <div class="qrow ok">
 <div class="qans">
-<p>une condition suffisante, mais pas nécessaire, pour retenir un diabète.</p>
+<p>Le train a eu moins de 60 minutes de retard.</p>
 </div>
 <div class="qwhy">
-<p>Elle suffit (<span class="math inline">\alpha \Rightarrow \beta</span>). Elle n’est pas nécessaire : une HbA1c d’au moins 6,5 % suffit aussi, donc <span class="math inline">\beta \Rightarrow \alpha</span> n’est pas affirmé.</p>
+<p>C’est la contraposée <span class="math inline">\lnot\beta \Rightarrow \lnot\alpha</span> : pas de compensation et engagement tenu imposent que la condition ne soit pas remplie.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p>une condition suffisante et nécessaire pour retenir un diabète.</p>
+<p>Le train a eu 60 minutes de retard ou plus.</p>
 </div>
 <div class="qwhy">
-<p>« Nécessaire » demanderait la réciproque <span class="math inline">\beta \Rightarrow \alpha</span> : un diabète retenu avec une HbA1c élevée seule la contredit.</p>
+<p>Avec ce retard, l’engagement imposait une compensation. Il n’y en a pas et l’engagement est tenu : cette situation est exclue.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p>une condition nécessaire, mais pas suffisante, pour retenir un diabète.</p>
+<p>Le train n’a eu aucun retard.</p>
 </div>
 <div class="qwhy">
-<p>Le sens est inversé : quand la condition est remplie, le critère conclut au diabète. Elle suffit.</p>
+<p>La négation de <span class="math inline">\alpha</span> est « moins de 60 minutes de retard », pas « aucun retard ». Un retard de 20 minutes est possible.</p>
 </div>
 </div>
 <div class="qrow">
 <div class="qans">
-<p>ni suffisante ni nécessaire pour retenir un diabète.</p>
+<p>On ne peut rien en déduire sur le retard.</p>
 </div>
 <div class="qwhy">
-<p>Le critère affirme précisément <span class="math inline">\alpha \Rightarrow \beta</span> : la condition est suffisante.</p>
+<p>La contraposée a la même valeur que l’implication : de <span class="math inline">\lnot\beta</span> et de l’implication vraie, on déduit <span class="math inline">\lnot\alpha</span>.</p>
 </div>
 </div>
 <div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/ex-R6">R.6</a> (réciproque)</span>
+<a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R6">R.6</a> · <a href="#/ex-R14">R.14(a)</a></span>
 </div>
 <div class="footer-note">
-<p>Source : Manuel MSD, version professionnelle, « Revue générale du diabète sucré », msdmanuals.com (consulté le 13 octobre 2026). Critère simplifié.</p>
+<p>Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.</p>
+</div>
+</section>
+<section id="q-Q6" class="slide level2">
+<h2>Q6 · Négation d’une implication</h2>
+<div class="qstem">
+<p>Engagement de la SNCB : « Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » Quelle est la négation de cet engagement ?</p>
+</div>
+<div class="qrow ok">
+<div class="qans">
+<p>Le train a 60 minutes de retard ou plus et le voyageur ne reçoit pas 100 % du prix de son trajet.</p>
+</div>
+<div class="qwhy">
+<p><span class="math inline">\lnot(\alpha \Rightarrow \beta) \iff \alpha \land \lnot\beta</span> : la négation décrit la rupture.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p>Si le train a 60 minutes de retard ou plus, alors le voyageur ne reçoit pas 100 % du prix de son trajet.</p>
+</div>
+<div class="qwhy">
+<p>Seule la conclusion est niée et l’implication est conservée : c’est un autre engagement, qui interdirait la compensation.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p>Le train a moins de 60 minutes de retard et le voyageur reçoit 100 % du prix de son trajet.</p>
+</div>
+<div class="qwhy">
+<p>La condition est niée alors qu’elle doit rester vraie. La rupture exige une condition remplie.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p>Le train a moins de 60 minutes de retard ou le voyageur ne reçoit pas 100 % du prix de son trajet.</p>
+</div>
+<div class="qwhy">
+<p>C’est <span class="math inline">\lnot\alpha \lor \lnot\beta</span>, la négation de <span class="math inline">\alpha \land \beta</span>, pas celle de <span class="math inline">\alpha \Rightarrow \beta</span>.</p>
+</div>
+</div>
+<div class="qfoot">
+<a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R10">R.10(b)</a> · <a href="#/ex-R8">R.8</a></span>
+</div>
+<div class="footer-note">
+<p>Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.</p>
+</div>
+</section>
+<section id="q-Q7" class="slide level2">
+<h2>Q7 · Suffisant, nécessaire</h2>
+<div class="qstem">
+<p>Engagement de la SNCB : « Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » Quelle affirmation est correcte ?</p>
+</div>
+<div class="qrow ok">
+<div class="qans">
+<p>Un retard d’au moins 60 minutes est une condition suffisante pour recevoir 100 % du prix du trajet.</p>
+</div>
+<div class="qwhy">
+<p>C’est <span class="math inline">\alpha \Rightarrow \beta</span> : la proposition de départ est suffisante.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p>Un retard d’au moins 60 minutes est une condition nécessaire pour recevoir 100 % du prix du trajet.</p>
+</div>
+<div class="qwhy">
+<p>« <span class="math inline">\alpha</span> nécessaire pour <span class="math inline">\beta</span> » se lit <span class="math inline">\beta \Rightarrow \alpha</span> : c’est la réciproque, que l’engagement n’affirme pas.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p>Recevoir 100 % du prix du trajet est une condition suffisante pour avoir eu un retard d’au moins 60 minutes.</p>
+</div>
+<div class="qwhy">
+<p>« <span class="math inline">\beta</span> suffisante pour <span class="math inline">\alpha</span> » se lit aussi <span class="math inline">\beta \Rightarrow \alpha</span> : même réciproque, même erreur de sens de la flèche.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p>Ne pas recevoir 100 % du prix du trajet est une condition nécessaire pour avoir un retard d’au moins 60 minutes.</p>
+</div>
+<div class="qwhy">
+<p>Ce serait <span class="math inline">\alpha \Rightarrow \lnot\beta</span> : exactement la rupture de l’engagement. Ce qui est nécessaire pour <span class="math inline">\alpha</span> est <span class="math inline">\beta</span>, pas <span class="math inline">\lnot\beta</span>.</p>
+</div>
+</div>
+<div class="qfoot">
+<a class="back-btn" href="#/nav-logique">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="#/ex-R6">R.6</a> (réciproque)</span>
+</div>
+<div class="footer-note">
+<p>Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.</p>
 </div>
 </section></section>
 <section>
-<section id="solutions-des-exercices-de-renforcement" class="title-slide slide level1 divider center" data-background-color="#14304a">
-<h1>Solutions des exercices de renforcement</h1>
+<section id="exercices-de-renforcement" class="title-slide slide level1 divider center" data-background-color="#14304a">
+<h1>Exercices de renforcement</h1>
 
 </section>
-<section id="st-R2" class="slide level2">
-<h2>Énoncé R.2 <span class="obj">O2</span></h2>
+<section id="ex-logique" class="slide level2">
+<h2>Exercices à réaliser pour consolider</h2>
+<table class="deroule" style="font-size:.62em">
+<thead>
+<tr>
+<th>
+QCM
+</th>
+<th>
+Sujet
+</th>
+<th>
+Exercices
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ph">
+Q1
+</td>
+<td>
+Rupture d’un engagement
+</td>
+<td>
+<a href="#/ex-R3">R.3</a> · <a href="#/ex-R9">R.9</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+Q2
+</td>
+<td>
+Colonne de l’implication
+</td>
+<td>
+<a href="#/ex-R10">R.10(a)</a> · <a href="#/ex-R14">R.14(a)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+Q3
+</td>
+<td>
+Condition non remplie
+</td>
+<td>
+<a href="#/ex-R2">R.2(c)</a> · <a href="#/ex-R10">R.10(a)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+Q4
+</td>
+<td>
+Réciproque
+</td>
+<td>
+<a href="#/ex-R6">R.6</a> · <a href="#/ex-R14">R.14(b)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+Q5
+</td>
+<td>
+Contraposée
+</td>
+<td>
+<a href="#/ex-R6">R.6</a> · <a href="#/ex-R14">R.14(a)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+Q6
+</td>
+<td>
+Négation d’une implication
+</td>
+<td>
+<a href="#/ex-R10">R.10(b)</a> · <a href="#/ex-R8">R.8</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+Q7
+</td>
+<td>
+Suffisant, nécessaire
+</td>
+<td>
+<a href="#/ex-R6">R.6</a> (réciproque)
+</td>
+</tr>
+</tbody>
+</table>
+<div class="et-timer">
+<div class="et-box" data-default="1200">
+<div class="et-row">
+<button class="et-btn et-minus" type="button">
+−1 min
+</button>
+<div class="et-display">
+20:00
+</div>
+<button class="et-btn et-plus" type="button">
++1 min
+</button>
+</div>
+<div class="et-row">
+<button class="et-btn et-primary et-toggle" type="button">
+Démarrer
+</button>
+<button class="et-btn et-reset" type="button">
+↺ Réinitialiser
+</button>
+</div>
+</div>
+</div>
+</section>
+<section id="ex-R2" class="slide level2">
+<h2>Exercice R.2 <span class="obj">O2</span></h2>
 <p>Soient <span class="math inline">A=\{a,b,c\}</span> et <span class="math inline">B=\{c,d\}</span>.</p>
 <p>(c) Vrai ou faux : <span class="math inline">a\in A</span> ; <span class="math inline">\{a\}\in A</span> ; <span class="math inline">\{a\}\subseteq A</span> ; <span class="math inline">\varnothing\subseteq A</span> ; <span class="math inline">c\in A\cap B</span>.</p>
-</section>
-<section id="sol-R2" class="slide level2">
-<h2>Solution R.2</h2>
-<div class="sol long">
-<p><span class="math inline">a\in A</span> : vrai. L’élément <span class="math inline">a</span> appartient à <span class="math inline">A</span>.</p>
-<p><span class="math inline">\{a\}\in A</span> : faux. <span class="math inline">\{a\}</span> est un ensemble ; les éléments de <span class="math inline">A</span> sont <span class="math inline">a</span>, <span class="math inline">b</span> et <span class="math inline">c</span>.</p>
-<p><span class="math inline">\{a\}\subseteq A</span> : vrai. <span class="math inline">\{a\}\subseteq A</span> signifie <span class="math inline">\forall\, x,\ (x\in\{a\} \Rightarrow x\in A)</span>. Le seul <span class="math inline">x</span> tel que <span class="math inline">x\in\{a\}</span> est <span class="math inline">a</span>, et <span class="math inline">a\in A</span>.</p>
-<p><span class="math inline">\varnothing\subseteq A</span> : vrai. <span class="math inline">\varnothing\subseteq A</span> signifie <span class="math inline">\forall\, x,\ (x\in\varnothing \Rightarrow x\in A)</span>. Pour tout <span class="math inline">x</span>, la prémisse <span class="math inline">x\in\varnothing</span> est fausse : l’implication est vraie pour tout <span class="math inline">x</span>.</p>
-<p><span class="math inline">c\in A\cap B</span> : vrai. <span class="math inline">A\cap B=\{c\}</span>.</p>
-</div>
 <div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a>
+<a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R2">annexe — R.2</a></span>
 </div>
 </section>
-<section id="st-R3" class="slide level2">
-<h2>Énoncé R.3 <span class="obj">O2</span></h2>
+<section id="ex-R3" class="slide level2">
+<h2>Exercice R.3 <span class="obj">O2</span></h2>
 <p>Voici la table de vérité de deux propositions <span class="math inline">a</span> et <span class="math inline">b</span> et d’une proposition cachée « ? ». Parmi les propositions proposées, laquelle correspond à cette colonne ?</p>
 <table class="caption-top">
 <thead>
@@ -1359,59 +2408,31 @@ Quentin Lambotte · FMPB · UMONS
 </tbody>
 </table>
 <p>Choix : (A) <span class="math inline">a \Rightarrow b</span> ; (B) <span class="math inline">b \Rightarrow a</span> ; (C) <span class="math inline">a \land b</span> ; (D) <span class="math inline">a \lor b</span>.</p>
-</section>
-<section id="sol-R3" class="slide level2">
-<h2>Solution R.3</h2>
-<div class="sol long">
-<p>La colonne « ? » vaut F sur la seule ligne <span class="math inline">a=F</span>, <span class="math inline">b=V</span>.</p>
-<p>Une implication <span class="math inline">x \Rightarrow y</span> n’est fausse que si <span class="math inline">x</span> est vrai et <span class="math inline">y</span> faux. Ici <span class="math inline">x=b</span> (vrai) et <span class="math inline">y=a</span> (faux), donc « ? » <span class="math inline">= b \Rightarrow a</span>.</p>
-<p>Vérification sur les autres lignes : en <span class="math inline">(V,V)</span>, <span class="math inline">b\Rightarrow a</span> vaut V ; en <span class="math inline">(V,F)</span>, <span class="math inline">b</span> est faux donc <span class="math inline">b\Rightarrow a</span> vaut V ; en <span class="math inline">(F,F)</span>, <span class="math inline">b</span> est faux donc <span class="math inline">b\Rightarrow a</span> vaut V.</p>
-<p>Les autres choix sont exclus : (A) vaut V en <span class="math inline">(F,V)</span> alors que « ? » vaut F ; (C) vaut F en <span class="math inline">(V,F)</span> alors que « ? » vaut V ; (D) vaut F en <span class="math inline">(F,F)</span> alors que « ? » vaut V.</p>
-<p>Réponse : (B).</p>
-</div>
 <div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a>
+<a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R3">annexe — R.3</a></span>
 </div>
 </section>
-<section id="st-R6" class="slide level2">
-<h2>Énoncé R.6 <span class="obj">O2</span></h2>
+<section id="ex-R6" class="slide level2">
+<h2>Exercice R.6 <span class="obj">O2</span></h2>
 <p>Soit <span class="math inline">\alpha</span> l’implication : « si <span class="math inline">n</span> est multiple de <span class="math inline">6</span>, alors <span class="math inline">n</span> est multiple de <span class="math inline">3</span> ».</p>
 <p>(a) Écrire la <strong>réciproque</strong> et la <strong>contraposée</strong> de <span class="math inline">\alpha</span>.</p>
 <p>(b) Dire lesquelles des trois sont vraies, par un contre-exemple si nécessaire.</p>
-</section>
-<section id="sol-R6" class="slide level2">
-<h2>Solution R.6</h2>
-<div class="sol long">
-<p>(a) Réciproque : « si <span class="math inline">n</span> est multiple de <span class="math inline">3</span>, alors <span class="math inline">n</span> est multiple de <span class="math inline">6</span> ».</p>
-<p>Contraposée : « si <span class="math inline">n</span> n’est pas multiple de <span class="math inline">3</span>, alors <span class="math inline">n</span> n’est pas multiple de <span class="math inline">6</span> ».</p>
-<p>(b) <span class="math inline">\alpha</span> est vraie : si <span class="math inline">n=6k</span>, alors <span class="math inline">n=3\cdot 2k</span> est multiple de <span class="math inline">3</span>.</p>
-<p>La réciproque est fausse : <span class="math inline">n=3</span> est multiple de <span class="math inline">3</span> et n’est pas multiple de <span class="math inline">6</span>.</p>
-<p>La contraposée est vraie : elle serait fausse pour un <span class="math inline">n</span> multiple de <span class="math inline">6</span> qui n’est pas multiple de <span class="math inline">3</span>, et un tel <span class="math inline">n</span> n’existe pas puisque <span class="math inline">\alpha</span> est vraie. Elle est équivalente à <span class="math inline">\alpha</span>.</p>
-</div>
 <div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a>
+<a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R6">annexe — R.6</a></span>
 </div>
 </section>
-<section id="st-R8" class="slide level2">
-<h2>Énoncé R.8 <span class="obj">O2</span></h2>
+<section id="ex-R8" class="slide level2">
+<h2>Exercice R.8 <span class="obj">O2</span></h2>
 <p>Pour chaque proposition : dire si elle est <strong>vraie</strong> ou <strong>fausse</strong>, écrire sa <strong>négation</strong>, puis l’évaluer.</p>
 <p>(a) <span class="math inline">\forall\, n\in\mathbb{N},\ n+1 &gt; n</span>.</p>
 <p>(b) <span class="math inline">\exists\, x\in\mathbb{R},\ x^2 = 2</span>.</p>
 <p>(c) <span class="math inline">\forall\, x\in\mathbb{R},\ x^2 \ne x</span>.</p>
-</section>
-<section id="sol-R8" class="slide level2">
-<h2>Solution R.8</h2>
-<div class="sol long">
-<p>(a) Vraie : pour tout <span class="math inline">n\in\mathbb{N}</span>, <span class="math inline">n+1&gt;n</span>. Négation : <span class="math inline">\exists\, n\in\mathbb{N},\ n+1\le n</span>. Elle est fausse.</p>
-<p>(b) Vraie : <span class="math inline">x=\sqrt2</span> convient. Négation : <span class="math inline">\forall\, x\in\mathbb{R},\ x^2\ne 2</span>. Elle est fausse.</p>
-<p>(c) Fausse : <span class="math inline">x=0</span> donne <span class="math inline">0^2=0</span>. Négation : <span class="math inline">\exists\, x\in\mathbb{R},\ x^2=x</span>. Elle est vraie : <span class="math inline">x=0</span> convient.</p>
-</div>
 <div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a>
+<a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R8">annexe — R.8</a></span>
 </div>
 </section>
-<section id="st-R9" class="slide level2">
-<h2>Énoncé R.9 <span class="obj">O2</span></h2>
+<section id="ex-R9" class="slide level2">
+<h2>Exercice R.9 <span class="obj">O2</span></h2>
 <p>Voici la table de vérité de <span class="math inline">a</span>, <span class="math inline">b</span> et d’une proposition cachée « ? ». Parmi les choix, laquelle a <strong>exactement</strong> cette colonne ?</p>
 <table class="caption-top">
 <thead>
@@ -1445,262 +2466,43 @@ Quentin Lambotte · FMPB · UMONS
 </tbody>
 </table>
 <p>Choix : (A) <span class="math inline">a\Rightarrow b</span> ; (B) <span class="math inline">b\Rightarrow a</span> ; (C) <span class="math inline">a\lor b</span> ; (D) <span class="math inline">a\land b</span>.</p>
-</section>
-<section id="sol-R9" class="slide level2">
-<h2>Solution R.9</h2>
-<div class="sol long">
-<p>La colonne « ? » vaut F sur la seule ligne <span class="math inline">a=V</span>, <span class="math inline">b=F</span> : la prémisse <span class="math inline">a</span> est vraie et la conclusion <span class="math inline">b</span> est fausse. Donc « ? » <span class="math inline">= a \Rightarrow b</span>.</p>
-<p>Vérification sur les autres lignes : en <span class="math inline">(V,V)</span>, la conclusion est vraie, donc V ; en <span class="math inline">(F,V)</span> et en <span class="math inline">(F,F)</span>, la prémisse est fausse, donc V.</p>
-<p>Les autres choix sont exclus : (B) vaut V en <span class="math inline">(V,F)</span> alors que « ? » vaut F ; (C) vaut V en <span class="math inline">(V,F)</span> alors que « ? » vaut F ; (D) vaut F en <span class="math inline">(F,V)</span> alors que « ? » vaut V.</p>
-<p>Réponse : (A).</p>
-</div>
 <div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a>
+<a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R9">annexe — R.9</a></span>
 </div>
 </section>
-<section id="st-R10" class="slide level2">
-<h2>Énoncé R.10 <span class="obj">O2</span></h2>
+<section id="ex-R10" class="slide level2">
+<h2>Exercice R.10 <span class="obj">O2</span></h2>
 <p>On veut relier l’implication aux connecteurs <span class="math inline">\lnot</span>, <span class="math inline">\lor</span>, <span class="math inline">\land</span>.</p>
 <p>(a) Dresser la table de vérité de <span class="math inline">\alpha\Rightarrow\beta</span> et celle de <span class="math inline">\lnot\alpha\lor\beta</span>, et constater qu’elles coïncident.</p>
 <p>(b) En déduire une écriture de <span class="math inline">\lnot(\alpha\Rightarrow\beta)</span> <em>sans</em> le symbole <span class="math inline">\Rightarrow</span>.</p>
-</section>
-<section id="sol-R10" class="slide level2">
-<h2>Solution R.10</h2>
-<div class="sol long">
-<p>(a)</p>
-<div class="tv">
-<table class="caption-top">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\alpha</span></th>
-<th style="text-align: center;"><span class="math inline">\beta</span></th>
-<th style="text-align: center;"><span class="math inline">\alpha\Rightarrow\beta</span></th>
-<th style="text-align: center;"><span class="math inline">\lnot\alpha</span></th>
-<th style="text-align: center;"><span class="math inline">\lnot\alpha\lor\beta</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Les colonnes de <span class="math inline">\alpha\Rightarrow\beta</span> et de <span class="math inline">\lnot\alpha\lor\beta</span> sont identiques : <span class="math inline">\alpha\Rightarrow\beta \iff \lnot\alpha\lor\beta</span>.</p>
-<p>(b) <span class="math inline">\lnot(\alpha\Rightarrow\beta) \iff \lnot(\lnot\alpha\lor\beta) \iff \lnot\lnot\alpha\land\lnot\beta \iff \alpha\land\lnot\beta</span> (loi de De Morgan, puis <span class="math inline">\lnot\lnot\alpha \iff \alpha</span>).</p>
-</div>
 <div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a>
+<a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R10">annexe — R.10</a></span>
 </div>
 </section>
-<section id="st-R14" class="slide level2">
-<h2>Énoncé R.14 <span class="obj">O2</span></h2>
+<section id="ex-R14" class="slide level2">
+<h2>Exercice R.14 <span class="obj">O2</span></h2>
 <p>À l’aide de tables de vérité, dire si les équivalences sont vraies (les deux membres de l’équivalence ont la même colonne dans la table de vérité) ou fausses (une des lignes de la table de vérité distingue les deux membres).</p>
 <p>(a) <span class="math inline">(\alpha\Rightarrow\beta)\ \Leftrightarrow\ (\lnot\beta\Rightarrow\lnot\alpha)</span></p>
 <p>(b) <span class="math inline">(\alpha\Rightarrow\beta)\ \Leftrightarrow\ (\beta\Rightarrow\alpha)</span></p>
-</section>
-<section id="sol-R14" class="slide level2">
-<h2>Solution R.14</h2>
-<div class="sol xlong">
-<p>(a) Vraie.</p>
-<div class="tv">
-<table class="caption-top" style="width:100%;">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\alpha</span></th>
-<th style="text-align: center;"><span class="math inline">\beta</span></th>
-<th style="text-align: center;"><span class="math inline">\lnot\alpha</span></th>
-<th style="text-align: center;"><span class="math inline">\lnot\beta</span></th>
-<th style="text-align: center;"><span class="math inline">\alpha\Rightarrow\beta</span></th>
-<th style="text-align: center;"><span class="math inline">\lnot\beta\Rightarrow\lnot\alpha</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Les deux dernières colonnes sont identiques sur les quatre lignes : l’équivalence est vraie.</p>
-<p>(b) Fausse.</p>
-<div class="tv">
-<table class="caption-top">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\alpha</span></th>
-<th style="text-align: center;"><span class="math inline">\beta</span></th>
-<th style="text-align: center;"><span class="math inline">\alpha\Rightarrow\beta</span></th>
-<th style="text-align: center;"><span class="math inline">\beta\Rightarrow\alpha</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Les deux dernières colonnes diffèrent aux lignes 2 et 3 : l’équivalence est fausse.</p>
-</div>
 <div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/ex-logique">← Exercices à réaliser pour consolider</a>
+<a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R14">annexe — R.14</a></span>
 </div>
+</section>
+<section id="questions-restantes" class="slide level2">
+<h2>Questions restantes</h2>
+<p>À remplir pendant la recherche d’exercices (tri du mur).</p>
 </section></section>
 <section>
-<section id="solutions-trigonométrie-des-vecteurs-séance-4" class="title-slide slide level1 divider center" data-background-color="#14304a">
-<h1>Solutions — trigonométrie des vecteurs (séance 4)</h1>
+<section id="clôture" class="title-slide slide level1 divider center" data-background-color="#14304a">
+<h1>Clôture</h1>
 
 </section>
-<section id="st-s4-R5" class="slide level2">
-<h2>Énoncé R.5(d) — séance 4 <span class="obj">O2</span></h2>
-<p>Un courant de <span class="math inline">0{,}3</span> m/s, parallèle aux rives, entraîne un poisson. On prend l’axe des <span class="math inline">x</span> dans le sens du courant et l’axe des <span class="math inline">y</span> vers l’autre rive.</p>
-<p>Un poisson nage à <span class="math inline">0{,}6</span> m/s par rapport à l’eau et veut arriver <strong>juste en face</strong> de son point de départ. Dans quelle direction doit-il nager ? On donnera l’angle avec la perpendiculaire aux rives.</p>
-</section>
-<section id="sol-s4-R5" class="slide level2">
-<h2>Solution R.5(d) — séance 4</h2>
-<div class="sol long">
-<p>Soit <span class="math inline">\alpha \in [0°, 90°[</span> l’angle entre la direction de nage et la perpendiculaire aux rives, la nage étant dirigée vers l’amont. La vitesse de nage est <span class="math inline">0{,}6\,(-\sin\alpha,\ \cos\alpha)</span> et celle du courant est <span class="math inline">(0{,}3,\ 0)</span>.</p>
-<p>Arriver juste en face signifie que la composante selon <span class="math inline">x</span> de la vitesse résultante est nulle : <span class="math display">-0{,}6\sin\alpha + 0{,}3 = 0, \quad\text{donc}\quad \sin\alpha = \frac{0{,}3}{0{,}6} = \frac12.</span></p>
-<p>Donc <span class="math inline">\alpha = 30°</span> : le poisson doit nager en remontant le courant, à <span class="math inline">30°</span> de la perpendiculaire aux rives.</p>
-</div>
-<div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/ex-trig">← Exercices de trigonométrie</a>
-</div>
-</section>
-<section id="st-s4-R6" class="slide level2">
-<h2>Énoncé R.6 — séance 4 <span class="obj">O3</span></h2>
-<p>(a) Une vitesse de norme <span class="math inline">10</span> m/s fait un angle de <span class="math inline">45°</span> avec l’axe des <span class="math inline">x</span>. Donner ses coordonnées.</p>
-<p>(b) Une force de norme <span class="math inline">6</span> N fait un angle de <span class="math inline">240°</span> avec l’axe des <span class="math inline">x</span>. Donner ses coordonnées.</p>
-<p>(c) Donner la norme de <span class="math inline">\vec w = (\sqrt3, -1)</span> et l’angle qu’il fait avec l’axe des <span class="math inline">x</span>.</p>
-</section>
-<section id="sol-s4-R6" class="slide level2">
-<h2>Solution R.6 — séance 4</h2>
-<div class="sol long">
-<p>(a) <span class="math inline">10\,(\cos 45°,\ \sin 45°) = 10\left(\dfrac{\sqrt2}{2},\ \dfrac{\sqrt2}{2}\right) = \left(5\sqrt2,\ 5\sqrt2\right)</span> m/s.</p>
-<p>(b) <span class="math inline">240° = 180° + 60°</span> : troisième quadrant, angle aigu <span class="math inline">60°</span> avec l’axe des <span class="math inline">x</span>. Le cosinus et le sinus sont négatifs : <span class="math inline">\cos 240° = -\dfrac12</span> et <span class="math inline">\sin 240° = -\dfrac{\sqrt3}{2}</span>. La force vaut <span class="math inline">6\left(-\dfrac12,\ -\dfrac{\sqrt3}{2}\right) = \left(-3,\ -3\sqrt3\right)</span> N.</p>
-<p>(c) <span class="math inline">\left\Vert \vec w \right\Vert = \sqrt{3 + 1} = 2</span>. Donc <span class="math inline">\cos\theta = \dfrac{\sqrt3}{2}</span> et <span class="math inline">\sin\theta = -\dfrac12</span> : quatrième quadrant, angle aigu <span class="math inline">30°</span>, donc <span class="math inline">\theta = 360° - 30° = 330°</span> (ou <span class="math inline">-30°</span>).</p>
-</div>
-<div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/ex-trig">← Exercices de trigonométrie</a>
-</div>
-</section>
-<section id="st-s4-R7" class="slide level2">
-<h2>Énoncé R.7 — séance 4 <span class="obj">O3</span></h2>
-<p>Sans calculatrice, donner le quadrant, <span class="math inline">\tan\theta</span> et l’angle <span class="math inline">\theta \in [0°, 360°[</span> que fait chaque vecteur avec l’axe des <span class="math inline">x</span>.</p>
-<p>(a) <span class="math inline">(3, 3)</span></p>
-<p>(b) <span class="math inline">(-\sqrt3, 1)</span></p>
-<p>(c) <span class="math inline">(-2, -2)</span></p>
-<p>(d) <span class="math inline">(1, -\sqrt3)</span></p>
-</section>
-<section id="sol-s4-R7" class="slide level2">
-<h2>Solution R.7 — séance 4</h2>
-<div class="sol long">
-<p>(a) Quadrant I, <span class="math inline">\tan\theta = 1</span>, angle aigu <span class="math inline">45°</span> : <span class="math inline">\theta = 45°</span>.</p>
-<p>(b) Quadrant II, <span class="math inline">\tan\theta = -\dfrac{1}{\sqrt3} = -\dfrac{\sqrt3}{3}</span>, angle aigu <span class="math inline">30°</span> : <span class="math inline">\theta = 180° - 30° = 150°</span>.</p>
-<p>(c) Quadrant III, <span class="math inline">\tan\theta = 1</span>, angle aigu <span class="math inline">45°</span> : <span class="math inline">\theta = 180° + 45° = 225°</span>.</p>
-<p>(d) Quadrant IV, <span class="math inline">\tan\theta = -\sqrt3</span>, angle aigu <span class="math inline">60°</span> : <span class="math inline">\theta = 360° - 60° = 300°</span>.</p>
-<p>Les vecteurs de (a) et (c) ont la même tangente : le quadrant, donné par les signes des coordonnées, détermine l’angle.</p>
-</div>
-<div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/ex-trig">← Exercices de trigonométrie</a>
-</div>
+<section id="pour-la-suite" class="slide level2">
+<h2>Pour la suite</h2>
+<ul>
+<li>Les <strong>solutions rédigées</strong> des exercices et les corrections des questions de réserve sont dans le deck « Annexe » (page des slides, rubrique Remédiations).</li>
+<li>Les questions du mur qui n’ont pas été traitées en séance n’auront pas de réponse écrite.</li>
+</ul>
 
 </section></section>
     </div>

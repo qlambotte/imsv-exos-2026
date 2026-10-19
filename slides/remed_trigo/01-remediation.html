@@ -442,7 +442,7 @@
   <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Quentin Lambotte · FMPB · UMONS">
-  <title>Remédiation IMSV bio — Annexe</title>
+  <title>Remédiation IMSV biomed — La trigonométrie</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -1043,8 +1043,8 @@ margin-right: 0; }
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Remédiation IMSV bio — Annexe</h1>
-  <p class="subtitle">Corrections de réserve et solutions rédigées</p>
+  <h1 class="title">Remédiation IMSV biomed — La trigonométrie</h1>
+  <p class="subtitle">Angles associés, coordonnées d’un vecteur, sinus ou cosinus (exercices de la séance 4)</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -1054,13 +1054,13 @@ Quentin Lambotte · FMPB · UMONS
 </div>
 </div>
 
-  <p class="date">13 octobre 2026</p>
 </section>
-<section id="thème-1-calcul-fiable-et-trigonométrie" class="title-slide slide level1 divider center" data-background-color="#14304a">
-<h1>Thème 1 — Calcul fiable et trigonométrie</h1>
+<section>
+<section id="ouverture" class="title-slide slide level1 divider center" data-background-color="#14304a">
+<h1>Ouverture</h1>
 <style>
 .qrow{display:flex;gap:.8em;border-bottom:1px solid #e5e9ef;padding:.28em .2em;font-size:.6em;line-height:1.35;align-items:flex-start}
-.qrow .qans{flex:0 0 27%;font-weight:600}
+.qrow .qans{flex:0 0 36%;font-weight:600}
 .qrow .qwhy{flex:1 1 auto}
 .qrow .qans p,.qrow .qwhy p{margin:0}
 .qrow.ok{background:#f2f7ff}
@@ -1069,6 +1069,9 @@ Quentin Lambotte · FMPB · UMONS
 .qflex{display:flex;gap:1em;align-items:center}
 .qflex img{max-width:330px;max-height:230px;width:auto;height:auto}
 .reveal table.deroule a{font-weight:600}
+.et-box{display:flex;flex-direction:column;align-items:center;gap:.5em;padding:.6em 1.4em;background:#f2f7ff;border:1px solid #dbe7fb;border-radius:.6em}
+.et-timer{margin-top:.8em;display:flex;justify-content:center}
+@keyframes et-pulse{0%,100%{opacity:1}50%{opacity:.35}}
 .back{margin-top:.5em}
 .qfoot{display:flex;gap:1.2em;align-items:center;margin-top:.45em;font-size:.55em}
 .qfoot .back-btn{font-size:1em}
@@ -1079,692 +1082,951 @@ Quentin Lambotte · FMPB · UMONS
 .sol{font-size:.8em}
 .sol.long{font-size:.68em}
 .sol.xlong{font-size:.6em}
+.tv table{margin:.3em auto;border-collapse:collapse;font-size:.8em}
+.tv th,.tv td{border:1px solid #cfd8e3;padding:.22em .9em;text-align:center}
+.tv th{background:#f4f7fa;color:#14304a}
+.tv .f{color:#b5381f;font-weight:700}
+.sit table{font-size:.72em;margin:.3em auto;border-collapse:collapse}
+.sit th,.sit td{border:1px solid #cfd8e3;padding:.25em .7em}
+.sit th{background:#f4f7fa;color:#14304a}
+.sit .f{color:#b5381f;font-weight:700}
+.promesse{border:2px solid #1f5fbf;border-radius:14px;background:#f2f7ff;padding:.6em 1em;text-align:center;font-size:1.05em;margin:.5em 0}
+.xs { font-size: .7em; }
+</style>
+<style>
+.cle-cols{display:flex;gap:1.2em;align-items:center}
+.reveal .columns{align-items:center}
 </style>
 </section>
-
-<section>
-<section id="questions-de-réserve" class="title-slide slide level1 divider center" data-background-color="#14304a">
-<h1>Questions de réserve</h1>
-
+<section id="déroulé" class="slide level2">
+<h2>Déroulé</h2>
+<table class="deroule" style="font-size:.8em">
+<thead>
+<tr>
+<th>
+Temps
+</th>
+<th>
+Durée
+</th>
+<th>
+Contenu
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ph">
+Ouverture
+</td>
+<td class="du">
+4 min
+</td>
+<td>
+Principe de la séance, mur de questions
+</td>
+</tr>
+<tr>
+<td class="ph">
+QCM
+</td>
+<td class="du">
+9 min
+</td>
+<td>
+Sept questions sur Wooclap, seul·e, sans discuter
+</td>
+</tr>
+<tr>
+<td class="ph">
+Notions clés
+</td>
+<td class="du">
+15 min
+</td>
+<td>
+Angles associés, coordonnées à partir de la norme et de l’angle, angle à partir des coordonnées, sinus ou cosinus
+</td>
+</tr>
+<tr>
+<td class="ph">
+Corrections ciblées
+</td>
+<td class="du">
+8 min
+</td>
+<td>
+Seules les questions les moins réussies sont reprises
+</td>
+</tr>
+<tr>
+<td class="ph">
+Exercices
+</td>
+<td class="du">
+20 min
+</td>
+<td>
+Recherche sur papier, choisie d’après tes résultats au QCM
+</td>
+</tr>
+<tr>
+<td class="ph">
+Questions
+</td>
+<td class="du">
+4 min
+</td>
+<td>
+Questions du mur restantes
+</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="q1-P1" class="slide level2">
-<h2>Réserve 1 · Addition de fractions</h2>
-<div class="qstem">
-<p>Calcule la somme des fractions suivantes :</p>
-<p><span class="math display">\frac{1}{2}+\frac{1}{3}</span></p>
+<section id="le-mur-de-questions" class="slide level2">
+<h2>Le mur de questions</h2>
+<div class="wooclap">
+<div class="wc-play">
+<p>▶</p>
 </div>
-<div class="qrow ok">
-<div class="qans">
-<p><span class="math inline">\displaystyle \frac{5}{6}</span></p>
+<div class="wc-body">
+<p><strong>Pose tes questions, anonymement</strong></p>
+<div class="wc-lien">
+<p>Code : XELAEPI</p>
 </div>
-<div class="qwhy">
-<p><span class="math inline">\dfrac12+\dfrac13=\dfrac36+\dfrac26=\dfrac56</span>.</p>
 </div>
+<div class="wc-qr">
+<p><img role="img" data-src="data:image/png;base64,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"></p>
 </div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">\displaystyle \frac{2}{5}</span></p>
 </div>
-<div class="qwhy">
-<p>Les numérateurs et les dénominateurs ont été additionnés directement. Pour additionner deux fractions, il faut d’abord les exprimer avec un même dénominateur.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">\displaystyle \frac{5}{12}</span></p>
-</div>
-<div class="qwhy">
-<p>Les fractions ont bien été mises au même dénominateur, mais les dénominateurs ont ensuite été additionnés. Une fois le dénominateur commun obtenu, seuls les numérateurs doivent être additionnés.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">\displaystyle \frac{1}{6}</span></p>
-</div>
-<div class="qwhy">
-<p>Une erreur d’opération a été commise : il s’agit ici d’une addition de fractions, et non d’une multiplication. Les deux fractions doivent d’abord être exprimées avec un même dénominateur avant d’effectuer l’addition.</p>
-</div>
-</div>
-<div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t1-R3">R.3</a></span>
-</div>
-</section>
-<section id="q1-P4" class="slide level2">
-<h2>Réserve 2 · Estimer une longueur</h2>
-<div class="qstem">
-<p>Parmi les propositions suivantes, laquelle donne une estimation raisonnable du nombre de feuilles A4, placées bout à bout dans le sens de la longueur, nécessaires pour atteindre la hauteur d’une porte intérieure classique ?</p>
-</div>
-<div class="qrow ok">
-<div class="qans">
-<p><span class="math inline">7</span> feuilles</p>
-</div>
-<div class="qwhy">
-<p>Feuille A4 : environ <span class="math inline">30</span> cm. Porte : environ <span class="math inline">2</span> m <span class="math inline">=200</span> cm. <span class="math inline">200:30\approx 7</span>.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">2</span> feuilles</p>
-</div>
-<div class="qwhy">
-<p>Cette estimation est bien trop basse. Une feuille A4 mesure environ <span class="math inline">30</span> cm de long, tandis qu’une porte intérieure mesure environ <span class="math inline">2</span> m de haut. Deux feuilles ne représentent qu’environ <span class="math inline">60</span> cm.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">14</span> feuilles</p>
-</div>
-<div class="qwhy">
-<p>Cette estimation est trop élevée. Une feuille A4 mesure environ <span class="math inline">30</span> cm de long : <span class="math inline">14</span> feuilles représentent donc une longueur de plusieurs mètres, nettement supérieure à la hauteur d’une porte.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">50</span> feuilles</p>
-</div>
-<div class="qwhy">
-<p>Cette estimation est beaucoup trop élevée. Une feuille A4 mesure environ <span class="math inline">30</span> cm de long : <span class="math inline">50</span> feuilles représenteraient une longueur d’environs <span class="math inline">15</span> mètres, soit une longueur très largement supérieure à la hauteur d’une porte intérieure.</p>
-</div>
-</div>
-<div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t1-R7">R.7(b)</a></span>
-</div>
-</section>
-<section id="q1-P5" class="slide level2">
-<h2>Réserve 3 · Relations trigonométriques</h2>
-<div class="qflex">
-<div class="qstem">
-<p>Parmi les relations trigonométriques suivantes, laquelle est correcte pour les angles <span class="math inline">\alpha</span> et <span class="math inline">\pi-\alpha</span> représentés sur le cercle ci-dessous ?</p>
-</div>
-<p><img role="img" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjM2MCIgZm9udC1mYW1pbHk9IkludGVyLERlamFWdSBTYW5zLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiPgo8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2ZmZiIvPgo8bGluZSB4MT0iMTAiIHkxPSIxMDAiIHgyPSIxOTAiIHkyPSIxMDAiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIi8+PGxpbmUgeDE9IjEwMCIgeTE9IjE5MCIgeDI9IjEwMCIgeTI9IjEwIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMSIvPgo8dGV4dCB4PSIxODgiIHk9Ijk0Ij54PC90ZXh0Pjx0ZXh0IHg9IjEwNiIgeT0iMTYiPnk8L3RleHQ+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxLjYiLz4KPGxpbmUgeDE9IjEwMCIgeTE9IjEwMCIgeDI9IjE1Ny4zIiB5Mj0iNTkuOCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNiIvPjxsaW5lIHgxPSIxMDAiIHkxPSIxMDAiIHgyPSI0Mi43IiB5Mj0iNTkuOCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNiIvPgo8Y2lyY2xlIGN4PSIxNTcuMyIgY3k9IjU5LjgiIHI9IjMiIGZpbGw9IiMwMDAiLz48Y2lyY2xlIGN4PSI0Mi43IiBjeT0iNTkuOCIgcj0iMyIgZmlsbD0iIzAwMCIvPgo8cGF0aCBkPSJNIDEyNSAxMDAgQSAyNSAyNSAwIDAgMCAxMjAuNSA4NS43IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiLz4KPHRleHQgeD0iMTMwIiB5PSI5MiI+zrE8L3RleHQ+CjxwYXRoIGQ9Ik0gMTE1IDEwMCBBIDE1IDE1IDAgMCAwIDg3LjcgOTEuNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtZGFzaGFycmF5PSIzIDIiLz4KPHRleHQgeD0iNjIiIHk9Ijg0Ij7PgOKIks6xPC90ZXh0Pgo8L3N2Zz4="></p>
-</div>
-<div class="qrow ok">
-<div class="qans">
-<p><span class="math inline">\sin(\pi-\alpha)=\sin(\alpha)</span></p>
-</div>
-<div class="qwhy">
-<p>Les points d’angles <span class="math inline">\alpha</span> et <span class="math inline">\pi-\alpha</span> ont la même ordonnée : <span class="math inline">\sin(\pi-\alpha)=\sin\alpha</span>.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">\sin(\pi-\alpha)=-\sin(\alpha)</span></p>
-</div>
-<div class="qwhy">
-<p>Les deux points ont la même ordonnée, et non des ordonnées opposées.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">\sin(\pi-\alpha)=\cos(\alpha)</span></p>
-</div>
-<div class="qwhy">
-<p>Le sinus correspond à l’ordonnée d’un point du cercle trigonométrique, tandis que le cosinus correspond à son abscisse. Ces deux valeurs ne sont donc pas identiques ici.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">\cos(\pi-\alpha)=\cos(\alpha)</span></p>
-</div>
-<div class="qwhy">
-<p>Les deux angles correspondent à des points symétriques par rapport à l’axe des ordonnées. Leurs abscisses sont donc opposées, et non identiques.</p>
-</div>
-</div>
-<div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t1-R10">R.10(c)</a></span>
-</div>
-</section>
-<section id="q1-Q1" class="slide level2">
-<h2>Réserve 4 · Dépréciation successive</h2>
-<div class="qstem">
-<p>Une voiture coûte initialement <span class="math inline">30\,000</span> euros. Elle perd <span class="math inline">20\,\%</span> de sa valeur chaque année. Quelle est sa valeur après <span class="math inline">4</span> ans ?</p>
-</div>
-<div class="qrow ok">
-<div class="qans">
-<p><span class="math inline">12\,288</span> euros</p>
-</div>
-<div class="qwhy">
-<p><span class="math inline">30\,000\cdot 0{,}8^4=30\,000\cdot 0{,}4096=12\,288</span> €.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">6\,000</span> euros</p>
-</div>
-<div class="qwhy">
-<p>Cette réponse revient à retirer chaque année <span class="math inline">20\,\%</span> de la valeur initiale de la voiture. Or, après la première année, la diminution de <span class="math inline">20\,\%</span> s’applique à la nouvelle valeur de la voiture, et non plus à sa valeur initiale.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">24\,000</span> euros</p>
-</div>
-<div class="qwhy">
-<p>Cette réponse correspond à une seule diminution de <span class="math inline">20\,\%</span>. La voiture perd cependant <span class="math inline">20\,\%</span> de sa valeur chaque année : il faut donc tenir compte des quatre diminutions successives.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">15\,360</span> euros</p>
-</div>
-<div class="qwhy">
-<p>Cette réponse correspond à la valeur obtenue après seulement trois diminutions successives de <span class="math inline">20\,\%</span>.</p>
-</div>
-</div>
-<div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t1-R6">R.6(c)</a></span>
-</div>
-</section>
-<section id="q1-Q2" class="slide level2">
-<h2>Réserve 5 · Priorités des opérations</h2>
-<div class="qstem">
-<p>Calcule l’expression suivante :</p>
-<p><span class="math display">10:\left(\sqrt{(3-2)^2+6(3+1)}\right).</span></p>
-</div>
-<div class="qrow ok">
-<div class="qans">
-<p><span class="math inline">2</span></p>
-</div>
-<div class="qwhy">
-<p><span class="math inline">(3-2)^2+6(3+1)=1+24=25</span> ; <span class="math inline">\sqrt{25}=5</span> ; <span class="math inline">10:5=2</span>.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">50</span></p>
-</div>
-<div class="qwhy">
-<p>La valeur de la racine a bien été déterminée, mais la dernière opération n’a pas été effectuée correctement : <span class="math inline">10:5</span> signifie <span class="math inline">10</span> divisé par <span class="math inline">5</span>, et non <span class="math inline">10</span> multiplié par <span class="math inline">5</span>.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">\displaystyle \frac{2}{5}</span></p>
-</div>
-<div class="qwhy">
-<p>Dans ce raisonnement, la racine carrée n’a pas été prise en compte. Elle porte sur toute l’expression située entre parenthèses.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">\sqrt{5}</span></p>
-</div>
-<div class="qwhy">
-<p>Cette réponse peut être obtenue en interprétant <span class="math inline">6(3+1)</span> comme <span class="math inline">6\cdot3+1</span>. Or, le facteur <span class="math inline">6</span> multiplie toute la parenthèse <span class="math inline">(3+1)</span>.</p>
-</div>
-</div>
-<div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-t1">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t1-R1">R.1</a></span>
-</div>
-</section></section>
-<section>
-<section id="solutions-des-exercices-de-renforcement" class="title-slide slide level1 divider center" data-background-color="#14304a">
-<h1>Solutions des exercices de renforcement</h1>
-
-</section>
-<section id="st-t1-R1" class="slide level2">
-<h2>Énoncé R.1 <span class="obj">O1</span></h2>
-<p>Pour chaque égalité, dis si elle est <strong>vraie</strong> ou <strong>fausse</strong>, et nomme la propriété (ou son absence) en jeu.</p>
-<p>(a) <span class="math inline">(20 - 8) - 5 = 20 - (8 - 5)</span></p>
-<p>(b) <span class="math inline">10 - 4 = 4 - 10</span></p>
-<p>(c) <span class="math inline">3 \cdot (6 + 4) = 3 \cdot 6 + 3 \cdot 4</span></p>
-<p>(d) <span class="math inline">(30 + 12) : 6 = 30 : 6 + 12 : 6</span></p>
-<p>(e) <span class="math inline">48 : (8 : 2) = (48 : 8) : 2</span></p>
-<p>(f) <span class="math inline">60 : (4 + 6) = 60 : 4 + 60 : 6</span></p>
-</section>
-<section id="sol-t1-R1" class="slide level2">
-<h2>Solution R.1</h2>
-<div class="sol">
-<p>(a) Faux : à gauche <span class="math inline">(20 - 8) - 5 = 7</span>, à droite <span class="math inline">20 - (8 - 5) = 17</span>. Déplacer les parenthèses change le résultat : la soustraction n’est pas associative.</p>
-<p>(b) Faux : <span class="math inline">10 - 4 = 6</span> tandis que <span class="math inline">4 - 10 = -6</span>. L’ordre des termes compte : la soustraction n’est pas commutative.</p>
-<p>(c) Vrai : <span class="math inline">3 \cdot (6 + 4) = 3 \cdot 10 = 30</span> et <span class="math inline">3 \cdot 6 + 3 \cdot 4 = 18 + 12 = 30</span>. C’est la distributivité de la multiplication sur l’addition.</p>
-<p>(d) Vrai : <span class="math inline">(30 + 12) : 6 = 42 : 6 = 7</span> et <span class="math inline">30 : 6 + 12 : 6 = 5 + 2 = 7</span>. La division est distributive à droite, c’est-à-dire quand la somme est au numérateur.</p>
-<p>(e) Faux : <span class="math inline">48 : (8 : 2) = 48 : 4 = 12</span> mais <span class="math inline">(48 : 8) : 2 = 6 : 2 = 3</span>. La division n’est pas associative.</p>
-<p>(f) Faux : <span class="math inline">60 : (4 + 6) = 60 : 10 = 6</span> mais <span class="math inline">60 : 4 + 60 : 6 = 15 + 10 = 25</span>. La division n’est pas distributive à gauche (somme au dénominateur) : c’est le piège classique.</p>
-</div>
-</section>
-<section id="st-t1-R2" class="slide level2">
-<h2>Énoncé R.2 <span class="obj">O1</span></h2>
-<p>(a) Développer <span class="math inline">(2x - 3)^2</span>.</p>
-<p>(b) Développer <span class="math inline">(5 + 2b)(5 - 2b)</span>.</p>
-<p>(c) Factoriser <span class="math inline">7a^2 - 28</span>.</p>
-<p>(d) Factoriser <span class="math inline">6x^2 + 15x</span>.</p>
-</section>
-<section id="sol-t1-R2" class="slide level2">
-<h2>Solution R.2</h2>
-<div class="sol">
-<p>(a) <span class="math inline">4x^2 - 12x + 9</span>.</p>
-<p>(b) <span class="math inline">25 - 4b^2</span>.</p>
-<p>(c) <span class="math inline">7(a^2 - 4) = 7(a - 2)(a + 2)</span>.</p>
-<p>(d) <span class="math inline">3x(2x + 5)</span>.</p>
-</div>
-</section>
-<section id="st-t1-R3" class="slide level2">
-<h2>Énoncé R.3 <span class="obj">O1</span></h2>
-<p>Réduis au même dénominateur, puis simplifie si possible.</p>
-<p>(a) <span class="math inline">\dfrac{3}{x + 2} - \dfrac{6}{x - 2}</span></p>
-<p>(b) <span class="math inline">\dfrac{3}{x + 2} : \dfrac{6}{x - 2}</span></p>
-</section>
-<section id="sol-t1-R3" class="slide level2">
-<h2>Solution R.3</h2>
-<div class="sol">
-<p>(a) <span class="math inline">\dfrac{3(x - 2) - 6(x + 2)}{(x + 2)(x - 2)} = \dfrac{-3x - 18}{x^2 - 4}</span>.</p>
-<p>(b) <span class="math inline">\dfrac{3}{x + 2} \cdot \dfrac{x - 2}{6} = \dfrac{x - 2}{2(x + 2)}</span>.</p>
-</div>
-</section>
-<section id="st-t1-R5" class="slide level2">
-<h2>Énoncé R.5 <span class="obj">O3</span> ★★★</h2>
-<p>(a) Montre qu’on <strong>ne peut pas</strong> avoir <span class="math inline">\sqrt{x^2} = x</span> pour tout <span class="math inline">x</span>, en testant <span class="math inline">x = -3</span>.</p>
-<p>(b) Énonce la règle correcte, puis calcule <span class="math inline">\sqrt{(5 - 9)^2}</span>.</p>
-</section>
-<section id="sol-t1-R5" class="slide level2">
-<h2>Solution R.5</h2>
-<div class="sol">
-<p>(a) Pour <span class="math inline">x = -3</span> : d’un côté <span class="math inline">\sqrt{(-3)^2} = \sqrt{9} = 3</span> ; de l’autre, l’hypothèse donnerait <span class="math inline">-3</span>. On aurait <span class="math inline">3 = -3</span>, ce qui est absurde. L’égalité <span class="math inline">\sqrt{x^2} = x</span> est donc fausse dès que <span class="math inline">x &lt; 0</span>.</p>
-<p>(b) La règle correcte est <span class="math inline">\sqrt{x^2} = |x|</span>. Donc <span class="math inline">\sqrt{(5 - 9)^2} = |5 - 9| = |-4| = 4</span>.</p>
-</div>
-</section>
-<section id="st-t1-R6" class="slide level2">
-<h2>Énoncé R.6 <span class="obj">O2</span></h2>
-<p>(a) Écris <span class="math inline">\dfrac{5}{8}</span> en décimal et en pourcentage ; écris <span class="math inline">0{,}45</span> en fraction irréductible et en pourcentage.</p>
-<p>(b) Prendre <span class="math inline">\dfrac{2}{5}</span> de <span class="math inline">35</span> mL : combien de mL ?</p>
-<p>(c) Après une hausse de <span class="math inline">25\,\%</span>, une population de bactéries atteint <span class="math inline">500</span>. Quel était l’effectif <strong>initial</strong> ?</p>
-</section>
-<section id="sol-t1-R6" class="slide level2">
-<h2>Solution R.6</h2>
-<div class="sol">
-<p>(a) <span class="math inline">\dfrac{5}{8} = 0{,}625 = 62{,}5\,\%</span> ; <span class="math inline">0{,}45 = \dfrac{9}{20} = 45\,\%</span>.</p>
-<p>(b) <span class="math inline">\dfrac{2}{5} \cdot 35 = 14</span> mL.</p>
-<p>(c) <span class="math inline">1{,}25 \cdot x = 500</span>, d’où <span class="math inline">x = 500 : 1{,}25 = 400</span>.</p>
-</div>
-</section>
-<section id="st-t1-R7" class="slide level2">
-<h2>Énoncé R.7 <span class="obj">O3</span></h2>
-<p>(a) Calcule, en notation scientifique : <span class="math inline">(4 \times 10^{7}) \cdot (2{,}5 \times 10^{-3})</span>.</p>
-<p>(b) <strong>Estime</strong> (sans calculatrice) <span class="math inline">\dfrac{5{,}1 \times 10^{6}}{2{,}05 \times 10^{2}}</span>.</p>
-<p>(c) Une longueur est mesurée au dixième de millimètre près. Est-il justifié d’annoncer le résultat final d’un calcul au <strong>nanomètre</strong> près ? Explique.</p>
-</section>
-<section id="sol-t1-R7" class="slide level2">
-<h2>Solution R.7</h2>
-<div class="sol">
-<p>(a) <span class="math inline">4 \cdot 2{,}5 \times 10^{7 - 3} = 10 \times 10^{4} = 1 \times 10^{5}</span>.</p>
-<p>(b) <span class="math inline">\approx \dfrac{5 \times 10^{6}}{2 \times 10^{2}} = 2{,}5 \times 10^{4}</span>.</p>
-<p>(c) Non : un résultat calculé ne peut pas être plus précis que les données qui l’alimentent (règle des chiffres significatifs). Le dixième de millimètre (<span class="math inline">10^{-4}</span> m) est un million de fois plus grossier que le nanomètre (<span class="math inline">10^{-9}</span> m) ; annoncer le résultat « au nanomètre près » afficherait des décimales que la mesure ne garantit pas — c’est une fausse précision.</p>
-</div>
-</section>
-<section id="st-t1-R8" class="slide level2">
-<h2>Énoncé R.8 <span class="obj">O4</span></h2>
-<p>(a) Ramène-toi à un angle du premier quandrant : <span class="math inline">\cos(420°)</span> et <span class="math inline">\sin\!\left(\dfrac{7\pi}{3}\right)</span>.</p>
-<p>(b) On sait que <span class="math inline">\cos\theta = \dfrac{3}{5}</span> et que <span class="math inline">\theta \in \left[0,\ \tfrac{\pi}{2}\right]</span>. Calcule <span class="math inline">\sin\theta</span>, puis <span class="math inline">\tan\theta</span>.</p>
-</section>
-<section id="sol-t1-R8" class="slide level2">
-<h2>Solution R.8</h2>
-<div class="sol">
-<p>(a) <span class="math inline">\cos(420°) = \cos(420° - 360°) = \cos(60°) = \dfrac{1}{2}</span> ; <span class="math inline">\sin\!\left(\dfrac{7\pi}{3}\right) = \sin\!\left(\dfrac{7\pi}{3} - 2\pi\right) = \sin\dfrac{\pi}{3} = \dfrac{\sqrt3}{2}</span>.</p>
-<p>(b) <span class="math inline">\sin\theta = \sqrt{1 - \tfrac{9}{25}} = \sqrt{\tfrac{16}{25}} = \dfrac{4}{5}</span> (positif au quadrant I) ; <span class="math inline">\tan\theta = \dfrac{\sin\theta}{\cos\theta} = \dfrac{4/5}{3/5} = \dfrac{4}{3}</span>.</p>
-</div>
-</section>
-<section id="st-t1-R10" class="slide level2">
-<h2>Énoncé R.10 <span class="obj">O4</span> ★★★</h2>
-<p>On sait que <span class="math inline">\cos\theta = -\dfrac{1}{2}</span> et que <span class="math inline">\theta \in \left[\dfrac{\pi}{2},\ \pi\right]</span>.</p>
-<p>(a) Calcule <span class="math inline">\sin\theta</span>.</p>
-<p>(b) Donne la valeur exacte de <span class="math inline">\theta</span>.</p>
-<p>(c) Déduis-en <span class="math inline">\cos(-\theta)</span> et <span class="math inline">\sin(\pi - \theta)</span>.</p>
-</section>
-<section id="sol-t1-R10" class="slide level2">
-<h2>Solution R.10</h2>
-<div class="sol">
-<p>(a) <span class="math inline">\sin^2\theta = 1 - \dfrac{1}{4} = \dfrac{3}{4}</span>, donc <span class="math inline">\sin\theta = \pm\dfrac{\sqrt3}{2}</span>. Au quadrant II, <span class="math inline">\sin\theta &gt; 0</span> : <span class="math inline">\sin\theta = \dfrac{\sqrt3}{2}</span>.</p>
-<p>(b) L’angle du quadrant II dont le cosinus vaut <span class="math inline">-\dfrac{1}{2}</span> est <span class="math inline">\theta = \dfrac{2\pi}{3}</span> (<span class="math inline">= 120°</span>).</p>
-<p>(c) <span class="math inline">\cos(-\theta) = \cos\theta = -\dfrac{1}{2}</span> (angles opposés) ; <span class="math inline">\sin(\pi - \theta) = \sin\theta = \dfrac{\sqrt3}{2}</span> (angles supplémentaires).</p>
-</div>
-</section></section>
-<section id="thème-2-équations-proportions-et-géométrie-analytique" class="title-slide slide level1 divider center" data-background-color="#14304a">
-<h1>Thème 2 — Équations, proportions et géométrie analytique</h1>
-
-</section>
-
-<section>
-<section id="questions-de-réserve-1" class="title-slide slide level1 divider center" data-background-color="#14304a">
-<h1>Questions de réserve</h1>
-
-</section>
-<section id="q2-P2" class="slide level2">
-<h2>Réserve 1 · Résolution d’une inéquation</h2>
-<div class="qstem">
-<p>Résoudre dans <span class="math inline">\mathbb{R}</span> l’inéquation suivante :</p>
-<p><span class="math display">2x+3&lt;0.</span></p>
-</div>
-<div class="qrow ok">
-<div class="qans">
-<p><span class="math inline">x&lt;-\dfrac{3}{2}</span></p>
-</div>
-<div class="qwhy">
-<p><span class="math inline">2x+3&lt;0\iff 2x&lt;-3\iff x&lt;-\dfrac32</span> (division par <span class="math inline">2&gt;0</span> : le sens est conservé). <span class="math inline">\mathrm{Sol}=\left]-\infty,\,-\dfrac32\right[</span>.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">x&gt;-\dfrac{3}{2}</span></p>
-</div>
-<div class="qwhy">
-<p>L’erreur vient probablement du fait que le signe « inférieur à » a été inversé. Comme on divise par un nombre positif, le sens de l’inégalité ne change pas.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">x&lt;-3</span></p>
-</div>
-<div class="qwhy">
-<p>Le nombre <span class="math inline">-3</span> doit encore être divisé par 2 après avoir isolé le terme <span class="math inline">2x</span>. La solution n’est donc pas <span class="math inline">x&lt;-3</span>.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">x&lt;\dfrac{3}{2}</span></p>
-</div>
-<div class="qwhy">
-<p>Le nombre 3 est déplacé de l’autre côté en soustrayant 3, puis il faut diviser par 2. La valeur <span class="math inline">3/2</span> n’est donc pas la bonne : le signe négatif a été oublié.</p>
-</div>
-</div>
-<div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t2-R2">R.2</a></span>
-</div>
-</section>
-<section id="q2-P3" class="slide level2">
-<h2>Réserve 2 · Résolution d’un système linéaire</h2>
-<div class="qstem">
-<p>Résoudre dans <span class="math inline">\mathbb{R}^2</span> le système suivant :</p>
-<p><span class="math display">\left\{ \begin{aligned} 2x+y&amp;=0,\\ -3x+2y&amp;=0. \end{aligned} \right.</span></p>
-</div>
-<div class="qrow ok">
-<div class="qans">
-<p><span class="math inline">(x,y)=(0,0)</span></p>
-</div>
-<div class="qwhy">
-<p>La première équation donne <span class="math inline">y=-2x</span>. Dans la seconde : <span class="math inline">-3x+2(-2x)=-7x=0</span>, donc <span class="math inline">x=0</span> et <span class="math inline">y=0</span>. <span class="math inline">\mathrm{Sol}=\{(0,0)\}</span>.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">(x,y)=(1,0)</span></p>
-</div>
-<div class="qwhy">
-<p>Le point <span class="math inline">(1,0)</span> ne vérifie pas la première équation, puisque <span class="math inline">2\cdot1+0=2\neq0</span>. Il ne peut donc pas être solution du système.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">(x,y)=(0,1)</span></p>
-</div>
-<div class="qwhy">
-<p>Le point <span class="math inline">(0,1)</span> ne vérifie pas la première équation, puisque <span class="math inline">2\cdot0+1=1\neq0</span>. Il ne peut donc pas être solution du système.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">(x,y)=(1,-2)</span></p>
-</div>
-<div class="qwhy">
-<p>Le point <span class="math inline">(1,-2)</span> ne vérifie pas la deuxième équation, puisque <span class="math inline">-3\cdot1+2\cdot (-2)=-3-4=-7\neq0</span>. Il ne peut donc pas être solution du système.</p>
-</div>
-</div>
-<div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t2-R8">R.8</a> · <a href="01-remediation.html#/t2-R9">R.9(c)</a></span>
-</div>
-</section>
-<section id="q2-P5" class="slide level2 smaller">
-<h2>Réserve 3 · Équation du second degré avec un paramètre</h2>
-<div class="qstem">
-<p>Considérons l’équation</p>
-<p><span class="math display">x^2+mx-1=0,</span></p>
-<p>où <span class="math inline">x</span> est l’inconnue et <span class="math inline">m</span> un paramètre réel. Parmi les affirmations suivantes, laquelle est correcte ?</p>
-</div>
-<div class="qrow ok">
-<div class="qans">
-<p>L’équation n’a jamais aucune solution.</p>
-</div>
-<div class="qwhy">
-<p><span class="math inline">\Delta=m^2-4\cdot 1\cdot(-1)=m^2+4</span>. Comme <span class="math inline">m^2\ge 0</span>, <span class="math inline">\Delta&gt;0</span> pour tout <span class="math inline">m</span> : l’équation a toujours deux solutions distinctes, donc jamais aucune.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p>L’équation a toujours au plus une solution.</p>
-</div>
-<div class="qwhy">
-<p>Cette affirmation est fausse. Le discriminant vaut <span class="math inline">\Delta=m^2+4</span>, qui est strictement positif pour tout réel <span class="math inline">m</span>. L’équation possède donc toujours deux solutions réelles distinctes, et jamais une seule solution.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p>Pour certaines valeurs de <span class="math inline">m</span>, l’équation a exactement une solution. Pour d’autres valeurs de <span class="math inline">m</span>, elle a deux solutions distinctes.</p>
-</div>
-<div class="qwhy">
-<p>Cette affirmation est fausse. Comme <span class="math inline">\Delta=m^2+4&gt;0</span> pour tout réel <span class="math inline">m</span>, l’équation possède toujours deux solutions réelles distinctes. Elle ne possède jamais exactement une seule solution.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p>L’équation n’a jamais deux solutions distinctes.</p>
-</div>
-<div class="qwhy">
-<p>Cette affirmation est fausse. Le discriminant est <span class="math inline">\Delta=m^2+4</span>, et il est strictement positif quel que soit le réel <span class="math inline">m</span>. L’équation admet donc toujours deux solutions réelles distinctes.</p>
-</div>
-</div>
-<div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t2-R10">R.10</a></span>
-</div>
-</section>
-<section id="q2-Q1" class="slide level2">
-<h2>Réserve 4 · Production de légumes</h2>
-<div class="qstem">
-<p>Une exploitation agricole suit sa production de légumes. Au début du suivi, <span class="math inline">10</span> tonnes ont déjà été produites. La production cumulée augmente ensuite de <span class="math inline">5</span> tonnes chaque semaine. La quantité totale <span class="math inline">q</span> de légumes produite, en tonnes, est donc modélisée par la relation</p>
-<p><span class="math display">q=5t+10,</span></p>
-<p>où <span class="math inline">t</span> représente le nombre de semaines écoulées. Parmi les couples suivants, lequel serait une solution possible de cette équation dans le contexte de l’énoncé ?</p>
-</div>
-<div class="qrow ok">
-<div class="qans">
-<p><span class="math inline">(t,q)=(2,20)</span></p>
-</div>
-<div class="qwhy">
-<p><span class="math inline">t=2</span> : <span class="math inline">q=5\cdot 2+10=20</span>, le couple vérifie la relation. Contexte : <span class="math inline">t\ge 0</span> (nombre de semaines). <span class="math inline">(2,20)</span> convient ; <span class="math inline">(-1,5)</span> vérifie la relation mais <span class="math inline">t&lt;0</span>.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">(t,q)=(-1,5)</span></p>
-</div>
-<div class="qwhy">
-<p>En remplaçant <span class="math inline">t</span> par <span class="math inline">-1</span>, on obtient <span class="math inline">q=5(-1)+10=5</span>. Le couple vérifie donc bien l’équation. Cependant, <span class="math inline">t=-1</span> ne peut pas représenter un nombre de semaines écoulées.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">(t,q)=(3,20)</span></p>
-</div>
-<div class="qwhy">
-<p>En remplaçant <span class="math inline">t</span> par <span class="math inline">3</span>, on obtient <span class="math inline">q=5\cdot3+10=25</span>. Le couple <span class="math inline">(3,20)</span> ne vérifie donc pas l’équation.</p>
-</div>
-</div>
-<div class="qrow">
-<div class="qans">
-<p><span class="math inline">(t,q)=(-5,-3)</span></p>
-</div>
-<div class="qwhy">
-<p>En remplaçant <span class="math inline">t</span> par <span class="math inline">-5</span>, on obtient <span class="math inline">q=5(-5)+10=-15</span>. Le couple <span class="math inline">(-5,-3)</span> ne vérifie donc pas l’équation. De plus, un nombre de semaines écoulées et une quantité produite ne peuvent pas être négatifs dans ce contexte.</p>
-</div>
-</div>
-<div class="qfoot">
-<a class="back-btn" href="01-remediation.html#/nav-t2">← Où aller selon les résultats</a><span class="muted">Exercices : <a href="01-remediation.html#/t2-R12">R.12(b)</a> · <a href="01-remediation.html#/t2-R13">R.13</a></span>
-</div>
-</section></section>
-<section>
-<section id="solutions-des-exercices-de-renforcement-1" class="title-slide slide level1 divider center" data-background-color="#14304a">
-<h1>Solutions des exercices de renforcement</h1>
-
-</section>
-<section id="st-t2-R2" class="slide level2">
-<h2>Énoncé R.2 <span class="obj">O2</span></h2>
-<p>Résous chaque inéquation, et donne l’ensemble solution en intervalle.</p>
-<p>(a) <span class="math inline">5 - 2x &lt; 1</span></p>
-<p>(b) <span class="math inline">-3x + 2 \ge -7</span></p>
-</section>
-<section id="sol-t2-R2" class="slide level2">
-<h2>Solution R.2</h2>
-<div class="sol">
-<p>(a) <span class="math inline">5 - 2x &lt; 1 \;\Leftrightarrow\; -2x &lt; -4 \;\Leftrightarrow\; x &gt; 2</span> (division par <span class="math inline">-2</span>, négatif : le sens s’inverse). <span class="math inline">\mathrm{Sol} = \,]2,\, +\infty[</span>.</p>
-<p>(b) <span class="math inline">-3x + 2 \ge -7 \;\Leftrightarrow\; -3x \ge -9 \;\Leftrightarrow\; x \le 3</span> (division par <span class="math inline">-3</span>, négatif : le sens s’inverse). <span class="math inline">\mathrm{Sol} = \,]{-}\infty,\, 3]</span>.</p>
-</div>
-</section>
-<section id="st-t2-R3" class="slide level2">
-<h2>Énoncé R.3 <span class="obj">O1</span></h2>
-<p>Un rectangle a un périmètre de <span class="math inline">26</span> cm ; sa longueur dépasse sa largeur de <span class="math inline">3</span> cm. Trouve ses dimensions (mise en équation, résolution, réponse).</p>
-</section>
-<section id="sol-t2-R3" class="slide level2">
-<h2>Solution R.3</h2>
-<div class="sol">
 <ul>
-<li><p>Inconnue : soit <span class="math inline">x</span> la largeur (en cm) ; la longueur vaut alors <span class="math inline">x + 3</span> (en cm).</p></li>
-<li><p>Équation : le périmètre vaut <span class="math inline">2 \cdot (\text{longueur} + \text{largeur})</span>, donc <span class="math inline">2\big(x + (x + 3)\big) = 26</span>.</p></li>
-<li><p>Résolution : <span class="math inline">2(2x + 3) = 26 \;\Leftrightarrow\; 4x + 6 = 26 \;\Leftrightarrow\; 4x = 20 \;\Leftrightarrow\; x = 5</span>. <span class="math inline">\mathrm{Sol} = \{5\}</span>.</p></li>
-<li><p>Vérification : <span class="math inline">x = 5 &gt; 0</span> est admissible, et <span class="math inline">2(5 + 8) = 26</span> .</p></li>
-<li><p>Réponse : le rectangle mesure <span class="math inline">5</span> cm de large et <span class="math inline">8</span> cm de long.</p></li>
+<li><strong>2 à 3 questions au maximum</strong> par personne.</li>
+<li><strong>Vote</strong> pour les questions des autres : celles qui reçoivent le plus de votes passent en premier.</li>
+<li>Je ne répondrai pas à toutes les questions.</li>
+<li>Les réponses se donnent en séance : il n’y aura pas de réponse écrite ensuite.</li>
 </ul>
+</section></section>
+<section>
+<section id="qcm" class="title-slide slide level1 divider center" data-background-color="#14304a">
+<h1>QCM</h1>
+
+</section>
+<section id="qcm-t" class="slide level2">
+<h2>QCM — Wooclap (9 min)</h2>
+<div class="wooclap">
+<div class="wc-play">
+<p>▶</p>
+</div>
+<div class="wc-body">
+<p><strong>Ouvre le Wooclap, réponds seul·e</strong></p>
+<div class="wc-lien">
+<p>Code : NSURPTC</p>
+</div>
+</div>
+<div class="wc-qr">
+<p><img role="img" data-src="data:image/png;base64,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"></p>
+</div>
+</div>
+<p>7 questions, une seule réponse correcte par question.</p>
+<div class="et-timer">
+<div class="et-box" data-default="540">
+<div class="et-row">
+<button class="et-btn et-minus" type="button">
+−1 min
+</button>
+<div class="et-display">
+09:00
+</div>
+<button class="et-btn et-plus" type="button">
++1 min
+</button>
+</div>
+<div class="et-row">
+<button class="et-btn et-primary et-toggle" type="button">
+Démarrer
+</button>
+<button class="et-btn et-reset" type="button">
+↺ Réinitialiser
+</button>
+</div>
+</div>
+</div>
+<script>
+(function () {
+  var audioCtx = null;
+  function beep() {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      var t0 = audioCtx.currentTime;
+      [0, 0.35].forEach(function (o) {
+        var osc = audioCtx.createOscillator(), g = audioCtx.createGain();
+        osc.type = 'sine'; osc.frequency.value = 880;
+        g.gain.setValueAtTime(0.0001, t0 + o);
+        g.gain.exponentialRampToValueAtTime(0.3, t0 + o + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + o + 0.28);
+        osc.connect(g); g.connect(audioCtx.destination);
+        osc.start(t0 + o); osc.stop(t0 + o + 0.3);
+      });
+    } catch (e) {}
+  }
+  function fmt(s) { s = Math.max(0, s); var m = Math.floor(s / 60), r = s % 60; return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r; }
+  function init() {
+  Array.prototype.forEach.call(document.querySelectorAll('.et-box'), function (box) {
+    var DEFAULT = parseInt(box.getAttribute('data-default'), 10) || 600;
+    var display = box.querySelector('.et-display'), btn = box.querySelector('.et-toggle');
+    var remaining = DEFAULT, running = false, id = null;
+    function render() {
+      display.textContent = fmt(remaining);
+      display.classList.toggle('et-warn', running && remaining <= 60 && remaining > 0);
+      display.classList.toggle('et-done', remaining === 0);
+    }
+    function stop() { running = false; btn.textContent = remaining > 0 ? 'Reprendre' : 'Démarrer'; if (id) { clearInterval(id); id = null; } }
+    function tick() { remaining -= 1; if (remaining <= 0) { remaining = 0; stop(); beep(); } render(); }
+    function start() {
+      if (running) return;
+      try { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); if (audioCtx.state === 'suspended') audioCtx.resume(); } catch (e) {}
+      if (remaining <= 0) remaining = DEFAULT;
+      render(); running = true; btn.textContent = 'Pause'; id = setInterval(tick, 1000);
+    }
+    btn.addEventListener('click', function () { running ? stop() : start(); });
+    box.querySelector('.et-minus').addEventListener('click', function () { remaining = Math.max(0, remaining - 60); render(); if (remaining === 0) stop(); });
+    box.querySelector('.et-plus').addEventListener('click', function () { remaining += 60; render(); });
+    box.querySelector('.et-reset').addEventListener('click', function () { stop(); remaining = DEFAULT; btn.textContent = 'Démarrer'; render(); });
+    render();
+  });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+</section></section>
+<section>
+<section id="notions-clés" class="title-slide slide level1 divider center" data-background-color="#14304a">
+<h1>Notions clés</h1>
+
+</section>
+<section id="cle-t1" class="slide level2 smaller">
+<h2>Les angles associés</h2>
+<div class="columns">
+<div class="column" style="width:34%;">
+<svg viewbox="0 0 360 360" width="300" height="300" role="img" aria-label="Cercle trigonométrique avec les points d&#39;angles 30, 150, 210 et 330 degrés">
+<circle cx="180" cy="180" r="140" fill="none" stroke="#14304a" stroke-width="2"></circle><line x1="10" y1="180" x2="350" y2="180" stroke="#14304a"></line><line x1="180" y1="10" x2="180" y2="350" stroke="#14304a"></line><text x="346" y="200" font-size="16" text-anchor="end" fill="#14304a">x</text><text x="192" y="22" font-size="16" fill="#14304a">y</text><line x1="301.2" y1="110.0" x2="301.2" y2="180" stroke="#b5381f" stroke-dasharray="4 4"></line><circle cx="301.2" cy="110.0" r="6" fill="#b5381f"></circle><text x="323.8" y="102.0" text-anchor="middle" font-size="18" fill="#14304a">30°</text><line x1="58.8" y1="110.0" x2="58.8" y2="180" stroke="#b5381f" stroke-dasharray="4 4"></line><circle cx="58.8" cy="110.0" r="6" fill="#b5381f"></circle><text x="36.2" y="102.0" text-anchor="middle" font-size="18" fill="#14304a">150°</text><line x1="58.8" y1="250.0" x2="58.8" y2="180" stroke="#b5381f" stroke-dasharray="4 4"></line><circle cx="58.8" cy="250.0" r="6" fill="#b5381f"></circle><text x="36.2" y="268.0" text-anchor="middle" font-size="18" fill="#14304a">210°</text><line x1="301.2" y1="250.0" x2="301.2" y2="180" stroke="#b5381f" stroke-dasharray="4 4"></line><circle cx="301.2" cy="250.0" r="6" fill="#b5381f"></circle><text x="323.8" y="268.0" text-anchor="middle" font-size="18" fill="#14304a">330°</text>
+</svg>
+</div><div class="column" style="width:66%;">
+<p>Le point d’angle <span class="math inline">\theta</span> du cercle trigonométrique a pour coordonnées <span class="math inline">(\cos\theta,\ \sin\theta)</span>. <strong>Que remarques-tu sur ces quatre points ?</strong></p>
+<div class="fragment">
+<div class="tv">
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\theta</span></th>
+<th style="text-align: center;">Quadrant</th>
+<th style="text-align: center;">Angle aigu avec l’axe des <span class="math inline">x</span></th>
+<th style="text-align: center;"><span class="math inline">\cos\theta</span></th>
+<th style="text-align: center;"><span class="math inline">\sin\theta</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">30°</span></td>
+<td style="text-align: center;">I</td>
+<td style="text-align: center;"><span class="math inline">30°</span></td>
+<td style="text-align: center;"><span class="math inline">+\frac{\sqrt3}{2}</span></td>
+<td style="text-align: center;"><span class="math inline">+\frac12</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">150°</span></td>
+<td style="text-align: center;">II</td>
+<td style="text-align: center;"><span class="math inline">180° - 150° = 30°</span></td>
+<td style="text-align: center;"><span class="math inline">-\frac{\sqrt3}{2}</span></td>
+<td style="text-align: center;"><span class="math inline">+\frac12</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">210°</span></td>
+<td style="text-align: center;">III</td>
+<td style="text-align: center;"><span class="math inline">210° - 180° = 30°</span></td>
+<td style="text-align: center;"><span class="math inline">-\frac{\sqrt3}{2}</span></td>
+<td style="text-align: center;"><span class="math inline">-\frac12</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">330°</span></td>
+<td style="text-align: center;">IV</td>
+<td style="text-align: center;"><span class="math inline">360° - 330° = 30°</span></td>
+<td style="text-align: center;"><span class="math inline">+\frac{\sqrt3}{2}</span></td>
+<td style="text-align: center;"><span class="math inline">-\frac12</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div>
+<div class="fragment">
+<div class="aretenir smaller">
+<p>L’angle aigu avec l’axe des <span class="math inline">x</span> (l’angle de référence) fixe les valeurs de <span class="math inline">\cos</span> et de <span class="math inline">\sin</span> au signe près. Le quadrant fixe les signes.</p>
+</div>
 </div>
 </section>
-<section id="st-t2-R4" class="slide level2">
-<h2>Énoncé R.4 <span class="obj">O4</span></h2>
-<p>Calcule la pente de la droite passant par chaque paire de points.</p>
-<p>(a) <span class="math inline">(0,\, 1)</span> et <span class="math inline">(2,\, 5)</span></p>
-<p>(b) <span class="math inline">(-1,\, 4)</span> et <span class="math inline">(1,\, 0)</span></p>
-<p>(c) <span class="math inline">(2,\, 3)</span> et <span class="math inline">(5,\, 3)</span></p>
-</section>
-<section id="sol-t2-R4" class="slide level2">
-<h2>Solution R.4</h2>
-<div class="sol">
-<p>(a) <span class="math inline">m = \dfrac{5 - 1}{2 - 0} = \dfrac{4}{2} = 2</span>.</p>
-<p>(b) <span class="math inline">m = \dfrac{0 - 4}{1 - (-1)} = \dfrac{-4}{2} = -2</span>.</p>
-<p>(c) <span class="math inline">m = \dfrac{3 - 3}{5 - 2} = 0</span> : la droite est horizontale (<span class="math inline">y = 3</span>).</p>
+<section id="cle-t2" class="slide level2 smaller">
+<h2>De la norme et de l’angle aux coordonnées</h2>
+<p><strong>Une force de norme <span class="math inline">10</span> N fait un angle de <span class="math inline">240°</span> avec l’axe des <span class="math inline">x</span>. Quelles sont ses coordonnées ?</strong></p>
+<div class="fragment">
+<ol type="1">
+<li><strong>Quadrant</strong> : <span class="math inline">240° = 180° + 60°</span>, troisième quadrant : les deux coordonnées sont négatives.</li>
+<li><strong>Angle aigu avec l’axe des <span class="math inline">x</span></strong> : <span class="math inline">60°</span>, donc <span class="math inline">\cos 240° = -\cos 60° = -\dfrac12</span> et <span class="math inline">\sin 240° = -\sin 60° = -\dfrac{\sqrt3}{2}</span>.</li>
+</ol>
+</div>
+<div class="fragment">
+<p><span class="math display">10\,(\cos 240°,\ \sin 240°) = \left(-5,\ -5\sqrt3\right)</span></p>
+</div>
+<div class="fragment">
+<p><strong>Contrôle</strong> : <span class="math inline">\sqrt{(-5)^2 + (-5\sqrt3)^2} = \sqrt{25 + 75} = 10</span>.</p>
+<div class="aretenir smaller">
+<p>Pour un vecteur de norme <span class="math inline">r</span> et d’angle <span class="math inline">\theta</span> : <span class="math inline">(r\cos\theta,\ r\sin\theta)</span>. L’angle aigu donne les valeurs, le quadrant donne les signes.</p>
+</div>
 </div>
 </section>
-<section id="st-t2-R5" class="slide level2">
-<h2>Énoncé R.5 <span class="obj">O4</span></h2>
-<p>Détermine l’équation de la droite passant par les points <span class="math inline">(1,\, 3)</span> et <span class="math inline">(3,\, 7)</span>.</p>
-</section>
-<section id="sol-t2-R5" class="slide level2">
-<h2>Solution R.5</h2>
-<div class="sol">
-<p><span class="math inline">m = \dfrac{7 - 3}{3 - 1} = \dfrac{4}{2} = 2</span> ; <span class="math inline">p = 3 - 2 \cdot 1 = 1</span>. Donc <span class="math inline">y = 2x + 1</span>. Vérification avec <span class="math inline">(3,7)</span> : <span class="math inline">2 \cdot 3 + 1 = 7</span>.</p>
+<section id="cle-t3" class="slide level2 smaller">
+<h2>De l’angle aux coordonnées, et retour</h2>
+<p><strong>Retrouver l’angle <span class="math inline">\theta \in [0°,\ 360°[</span> du vecteur <span class="math inline">\vec w = (-1,\ \sqrt3)</span>.</strong></p>
+<div class="fragment">
+<ol type="1">
+<li><strong>Quadrant</strong> : <span class="math inline">w_x &lt; 0</span> et <span class="math inline">w_y &gt; 0</span>, donc le deuxième quadrant.</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li><strong>Angle aigu avec l’axe des <span class="math inline">x</span></strong> : <span class="math inline">\tan = \dfrac{w_y}{w_x} = -\sqrt3</span>. La valeur absolue <span class="math inline">\sqrt3</span> correspond à <span class="math inline">60°</span>.</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li><strong>Angle</strong> : dans le deuxième quadrant, <span class="math inline">\theta = 180° - 60° = 120°</span>.</li>
+</ol>
+</div>
+<div class="fragment">
+<p><strong>Contrôle</strong> : <span class="math inline">\left\Vert \vec w \right\Vert = \sqrt{1 + 3} = 2</span> et <span class="math inline">2\,(\cos 120°,\ \sin 120°) = 2\left(-\dfrac12,\ \dfrac{\sqrt3}{2}\right) = (-1,\ \sqrt3)</span>.</p>
+<div class="aretenir smaller">
+<p>La tangente seule ne suffit pas : <span class="math inline">(-1, \sqrt3)</span> et <span class="math inline">(1, -\sqrt3)</span> ont la même tangente, <span class="math inline">-\sqrt3</span>. C’est le quadrant qui tranche.</p>
+</div>
 </div>
 </section>
-<section id="st-t2-R6" class="slide level2">
-<h2>Énoncé R.6 <span class="obj">O4</span></h2>
-<p>Un spectrophotomètre relie l’absorbance <span class="math inline">A</span> à la concentration <span class="math inline">C</span> (en mmol/L) par une <strong>droite</strong>. Deux étalons donnent <span class="math inline">(C,\, A) = (1\, ;\, 0{,}20)</span> et <span class="math inline">(5\, ;\, 0{,}60)</span>.</p>
-<p>(a) Détermine la droite d’étalonnage <span class="math inline">A(C) = m\, C + p</span>.</p>
-<p>(b) Un échantillon inconnu donne <span class="math inline">A = 0{,}50</span>. Quelle est sa concentration ?</p>
-<p>(c) Que représente concrètement l’ordonnée à l’origine <span class="math inline">p</span> ?</p>
+<section id="cle-t4" class="slide level2 smaller">
+<h2>Sinus ou cosinus ?</h2>
+<p>Une force de <span class="math inline">10</span> N fait un angle de <span class="math inline">30°</span> avec un axe. Quelles sont ses coordonnées ?</p>
+<div style="display:flex;gap:1em;justify-content:center;align-items:flex-start">
+<div>
+<svg viewbox="0 0 260 200" width="170" height="129" role="img" aria-label="Force de 10 newtons, 30° depuis l&#39;horizontale">
+<line x1="30" y1="170" x2="250" y2="170" stroke="#14304a"></line><line x1="30" y1="170" x2="30" y2="20" stroke="#14304a"></line><line x1="159.9" y1="95.0" x2="159.9" y2="170" stroke="#b5381f" stroke-dasharray="4 4"></line><line x1="30" y1="95.0" x2="159.9" y2="95.0" stroke="#b5381f" stroke-dasharray="4 4"></line><line x1="30" y1="170" x2="159.9" y2="95.0" stroke="#1f5fbf" stroke-width="4"></line><circle cx="159.9" cy="95.0" r="5" fill="#1f5fbf"></circle><text x="92" y="162" font-size="16" fill="#14304a">30°</text><text x="169.9" y="89.0" font-size="16" fill="#1f5fbf">10 N</text>
+</svg>
+<div style="font-size:.6em;text-align:center">
+30° depuis l’horizontale
+</div>
+</div>
+<div>
+<svg viewbox="0 0 260 200" width="170" height="129" role="img" aria-label="Force de 10 newtons, 30° depuis la verticale">
+<line x1="30" y1="170" x2="250" y2="170" stroke="#14304a"></line><line x1="30" y1="170" x2="30" y2="20" stroke="#14304a"></line><line x1="105.0" y1="40.1" x2="105.0" y2="170" stroke="#b5381f" stroke-dasharray="4 4"></line><line x1="30" y1="40.1" x2="105.0" y2="40.1" stroke="#b5381f" stroke-dasharray="4 4"></line><line x1="30" y1="170" x2="105.0" y2="40.1" stroke="#1f5fbf" stroke-width="4"></line><circle cx="105.0" cy="40.1" r="5" fill="#1f5fbf"></circle><text x="38" y="90" font-size="16" fill="#14304a">30°</text><text x="115.0" y="34.1" font-size="16" fill="#1f5fbf">10 N</text>
+</svg>
+<div style="font-size:.6em;text-align:center">
+30° depuis la verticale
+</div>
+</div>
+</div>
+<p><strong>Fais tendre l’angle vers <span class="math inline">0°</span> : quelle coordonnée devient toute la force ?</strong></p>
+<div class="fragment">
+<div class="tv">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Angle mesuré depuis</th>
+<th style="text-align: center;">Coordonnée horizontale</th>
+<th style="text-align: center;">Coordonnée verticale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">l’horizontale</td>
+<td style="text-align: center;"><span class="math inline">10\cos 30° = 5\sqrt3</span></td>
+<td style="text-align: center;"><span class="math inline">10\sin 30° = 5</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">la verticale</td>
+<td style="text-align: center;"><span class="math inline">10\sin 30° = 5</span></td>
+<td style="text-align: center;"><span class="math inline">10\cos 30° = 5\sqrt3</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="fragment">
+<div class="aretenir smaller">
+<p>La coordonnée le long de l’axe depuis lequel l’angle est mesuré porte le cosinus (<span class="math inline">\cos 0° = 1</span>) ; l’autre porte le sinus (<span class="math inline">\sin 0° = 0</span>). Le quadrant donne ensuite les signes.</p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="corrections-ciblées" class="title-slide slide level1 divider center" data-background-color="#14304a">
+<h1>Corrections ciblées</h1>
+
 </section>
-<section id="sol-t2-R6" class="slide level2">
-<h2>Solution R.6</h2>
-<div class="sol">
-<p>(a) <span class="math inline">m = \dfrac{0{,}60 - 0{,}20}{5 - 1} = \dfrac{0{,}40}{4} = 0{,}10</span> ; <span class="math inline">p = 0{,}20 - 0{,}10 \cdot 1 = 0{,}10</span>. Donc <span class="math inline">A(C) = 0{,}10\, C + 0{,}10</span>. Vérification avec <span class="math inline">(5\, ;\, 0{,}60)</span> : <span class="math inline">0{,}10 \cdot 5 + 0{,}10 = 0{,}60</span>.</p>
-<p>(b) On résout <span class="math inline">0{,}50 = 0{,}10\, C + 0{,}10 \;\Leftrightarrow\; 0{,}10\, C = 0{,}40 \;\Leftrightarrow\; C = 4</span>. L’échantillon a une concentration de <span class="math inline">4</span> mmol/L.</p>
-<p>(c) <span class="math inline">p = 0{,}10</span> est l’absorbance mesurée pour une concentration nulle : c’est le biais instrumental (le signal résiduel de l’appareil).</p>
+<section id="nav-t" class="slide level2">
+<h2>Où aller selon les résultats</h2>
+<table class="deroule" style="font-size:.66em">
+<thead>
+<tr>
+<th>
+QCM
+</th>
+<th>
+Correction
+</th>
+<th>
+Exercices
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ph">
+T1
+</td>
+<td>
+<a href="#/q-T1">Angles associés : cosinus et sinus</a>
+</td>
+<td>
+<a href="#/ex-v-R7">R.7</a> · <a href="#/ex-v-R6">R.6(b)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+T2
+</td>
+<td>
+<a href="#/q-T2">Angle aigu avec l’axe des x</a>
+</td>
+<td>
+<a href="#/ex-v-R7">R.7</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+T3
+</td>
+<td>
+<a href="#/q-T3">De la norme et de l’angle aux coordonnées</a>
+</td>
+<td>
+<a href="#/ex-v-R6">R.6(a)(b)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+T4
+</td>
+<td>
+<a href="#/q-T4">Angle d’un vecteur : quadrant et tangente</a>
+</td>
+<td>
+<a href="#/ex-v-R7">R.7</a> · <a href="#/ex-v-R6">R.6(c)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+T5
+</td>
+<td>
+<a href="#/q-T5">Coordonnée d’une vitesse : sinus ou cosinus ?</a>
+</td>
+<td>
+<a href="#/ex-v-R5">R.5(d)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+T6
+</td>
+<td>
+<a href="#/q-T6">Norme et angle d’un vecteur</a>
+</td>
+<td>
+<a href="#/ex-v-R6">R.6(c)</a> · <a href="#/ex-v-R7">R.7</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+T7
+</td>
+<td>
+<a href="#/q-T7">Valeur du sinus dans le quatrième quadrant</a>
+</td>
+<td>
+<a href="#/ex-v-R6">R.6(b)</a> · <a href="#/ex-v-R7">R.7</a>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="q-T1" class="slide level2">
+<h2>Q1 · Angles associés : cosinus et sinus</h2>
+<div class="qstem">
+<p>Quelles sont les valeurs de <span class="math inline">\cos 150°</span> et de <span class="math inline">\sin 150°</span> ?</p>
+</div>
+<div class="qrow ok">
+<div class="qans">
+<p><span class="math inline">\cos 150° = -\dfrac{\sqrt3}{2}</span> et <span class="math inline">\sin 150° = \dfrac12</span></p>
+</div>
+<div class="qwhy">
+<p>L’angle aigu avec l’axe des <span class="math inline">x</span> est <span class="math inline">30°</span>. Dans le deuxième quadrant, le cosinus est négatif et le sinus positif.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">\cos 150° = \dfrac{\sqrt3}{2}</span> et <span class="math inline">\sin 150° = \dfrac12</span></p>
+</div>
+<div class="qwhy">
+<p>Ce sont les valeurs de <span class="math inline">30°</span> : le signe négatif du cosinus dans le deuxième quadrant a été oublié.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">\cos 150° = -\dfrac12</span> et <span class="math inline">\sin 150° = \dfrac{\sqrt3}{2}</span></p>
+</div>
+<div class="qwhy">
+<p>Les valeurs du cosinus et du sinus ont été échangées : l’angle aigu est <span class="math inline">30°</span>, pas <span class="math inline">60°</span>.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">\cos 150° = -\dfrac{\sqrt3}{2}</span> et <span class="math inline">\sin 150° = -\dfrac12</span></p>
+</div>
+<div class="qwhy">
+<p>Le sinus d’un angle du deuxième quadrant est positif. Les signes <span class="math inline">(-, -)</span> sont ceux du troisième quadrant.</p>
+</div>
+</div>
+<div class="qfoot">
+<a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R7">R.7</a> · <a href="#/ex-v-R6">R.6(b)</a></span>
 </div>
 </section>
-<section id="st-t2-R7" class="slide level2">
-<h2>Énoncé R.7 <span class="obj">O4</span></h2>
-<p>On considère la droite <span class="math inline">d : y = 2x + 1</span>.</p>
-<p>(a) Écris l’équation de la droite <strong>parallèle</strong> à <span class="math inline">d</span> passant par <span class="math inline">(0,\, 4)</span>.</p>
-<p>(b) Quelle est la pente d’une droite <strong>orthogonale</strong> à <span class="math inline">d</span> ?</p>
-</section>
-<section id="sol-t2-R7" class="slide level2">
-<h2>Solution R.7</h2>
-<div class="sol">
-<p>(a) La pente de <span class="math inline">d</span> vaut <span class="math inline">2</span>. Une droite parallèle à <span class="math inline">d</span> a la même pente, donc elle s’écrit <span class="math inline">y = 2x + p</span>. Elle passe par <span class="math inline">(0,\, 4)</span> : <span class="math inline">4 = 2 \cdot 0 + p</span>, donc <span class="math inline">p = 4</span>. La droite cherchée est <span class="math inline">y = 2x + 4</span>.</p>
-<p>(b) Deux droites de pentes <span class="math inline">m_1</span> et <span class="math inline">m_2</span> sont orthogonales si <span class="math inline">m_1 \cdot m_2 = -1</span>. Ici <span class="math inline">2 \cdot m = -1</span>, donc une droite orthogonale à <span class="math inline">d</span> a pour pente <span class="math inline">m = -\dfrac{1}{2}</span>.</p>
+<section id="q-T2" class="slide level2">
+<h2>Q2 · Angle aigu avec l’axe des x</h2>
+<div class="qstem">
+<p>Un vecteur fait un angle <span class="math inline">\theta = 210°</span> avec l’axe des <span class="math inline">x</span>. Quel angle aigu fait-il avec l’axe des <span class="math inline">x</span> ?</p>
+</div>
+<div class="qrow ok">
+<div class="qans">
+<p><span class="math inline">30°</span></p>
+</div>
+<div class="qwhy">
+<p><span class="math inline">210° - 180° = 30°</span> : on retire le demi-tour pour retrouver l’angle aigu avec l’axe des <span class="math inline">x</span>.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">60°</span></p>
+</div>
+<div class="qwhy">
+<p>C’est l’angle aigu avec l’axe des <span class="math inline">y</span> (<span class="math inline">90° - 30°</span>) : on cherche l’angle avec l’axe des <span class="math inline">x</span>.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">150°</span></p>
+</div>
+<div class="qwhy">
+<p>C’est <span class="math inline">360° - 210°</span> : ce n’est pas un angle aigu.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">210°</span></p>
+</div>
+<div class="qwhy">
+<p>C’est l’angle donné, mesuré depuis l’axe des <span class="math inline">x</span> positif en tournant dans le sens trigonométrique : il n’est pas aigu.</p>
+</div>
+</div>
+<div class="qfoot">
+<a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R7">R.7</a></span>
 </div>
 </section>
-<section id="st-t2-R8" class="slide level2">
-<h2>Énoncé R.8 <span class="obj">O2</span></h2>
-<p>Résous chaque système ; indique clairement la méthode utilisée.</p>
-<p>(a) <span class="math inline">\begin{cases} 2x + y = 8, \\ x - y = 1. \end{cases}</span></p>
-<p>(b) <span class="math inline">\begin{cases} x + 2y = 5, \\ 3x - 2y = 7. \end{cases}</span></p>
-</section>
-<section id="sol-t2-R8" class="slide level2">
-<h2>Solution R.8</h2>
-<div class="sol">
-<p>(a) Par élimination : les coefficients de <span class="math inline">y</span> sont opposés. En additionnant les deux équations terme à terme, <span class="math inline">(2x + y) + (x - y) = 8 + 1</span>, soit <span class="math inline">3x = 9</span>, donc <span class="math inline">x = 3</span>. On reporte dans <span class="math inline">x - y = 1</span> : <span class="math inline">3 - y = 1</span>, donc <span class="math inline">y = 2</span>. Vérification : <span class="math inline">2 \cdot 3 + 2 = 8</span> et <span class="math inline">3 - 2 = 1</span> . <span class="math inline">\mathrm{Sol} = \{(3,\, 2)\}</span>.</p>
-<p>(b) Par élimination : les coefficients de <span class="math inline">y</span> sont opposés. En additionnant les deux équations terme à terme, <span class="math inline">(x + 2y) + (3x - 2y) = 5 + 7</span>, soit <span class="math inline">4x = 12</span>, donc <span class="math inline">x = 3</span>. On reporte dans <span class="math inline">x + 2y = 5</span> : <span class="math inline">3 + 2y = 5</span>, donc <span class="math inline">y = 1</span>. Vérification : <span class="math inline">3 + 2 \cdot 1 = 5</span> et <span class="math inline">3 \cdot 3 - 2 \cdot 1 = 7</span> . <span class="math inline">\mathrm{Sol} = \{(3,\, 1)\}</span>.</p>
+<section id="q-T3" class="slide level2">
+<h2>Q3 · De la norme et de l’angle aux coordonnées</h2>
+<div class="qstem">
+<p>Un vecteur de norme <span class="math inline">8</span> fait un angle de <span class="math inline">135°</span> avec l’axe des <span class="math inline">x</span>. Quelles sont ses coordonnées ?</p>
+</div>
+<div class="qrow ok">
+<div class="qans">
+<p><span class="math inline">(-4\sqrt2,\ 4\sqrt2)</span></p>
+</div>
+<div class="qwhy">
+<p><span class="math inline">135° = 180° - 45°</span> : deuxième quadrant, donc abscisse négative et ordonnée positive ; <span class="math inline">8 \cdot \dfrac{\sqrt2}{2} = 4\sqrt2</span>.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">(4\sqrt2,\ 4\sqrt2)</span></p>
+</div>
+<div class="qwhy">
+<p>Ce sont les coordonnées pour <span class="math inline">45°</span> : le signe de l’abscisse dans le deuxième quadrant a été oublié.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">(-4\sqrt2,\ -4\sqrt2)</span></p>
+</div>
+<div class="qwhy">
+<p>Les deux coordonnées sont négatives dans le troisième quadrant. À <span class="math inline">135°</span>, l’ordonnée est positive.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">(-4,\ 4)</span></p>
+</div>
+<div class="qwhy">
+<p>Les valeurs <span class="math inline">\pm\dfrac12</span> ont été utilisées au lieu de <span class="math inline">\pm\dfrac{\sqrt2}{2}</span> : l’angle aigu est <span class="math inline">45°</span>, pas <span class="math inline">30°</span>.</p>
+</div>
+</div>
+<div class="qfoot">
+<a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R6">R.6(a)(b)</a></span>
 </div>
 </section>
-<section id="st-t2-R9" class="slide level2">
-<h2>Énoncé R.9 <span class="obj">O4</span> ★★★</h2>
-<p>Pour chaque système, dis s’il admet une <strong>solution unique</strong>, <strong>aucune</strong> solution, ou une <strong>infinité</strong> de solutions — et justifie.</p>
-<p>(a) <span class="math inline">\begin{cases} x + y = 4, \\ x + y = 6. \end{cases}</span></p>
-<p>(b) <span class="math inline">\begin{cases} x + y = 4, \\ 2x + 2y = 8. \end{cases}</span></p>
-<p>(c) <span class="math inline">\begin{cases} x + y = 4, \\ x - y = 0. \end{cases}</span></p>
-</section>
-<section id="sol-t2-R9" class="slide level2">
-<h2>Solution R.9</h2>
-<div class="sol">
-<p>(a) En soustrayant la première équation de la seconde, on obtient <span class="math inline">0 = 2</span> : cette égalité est toujours fausse. Le système n’a aucune solution : les deux droites sont parallèles et distinctes (<span class="math inline">x + y</span> ne peut valoir à la fois <span class="math inline">4</span> et <span class="math inline">6</span>). <span class="math inline">\mathrm{Sol} = \varnothing</span>.</p>
-<p>(b) La seconde équation est le double de la première : en retranchant deux fois la première, on obtient <span class="math inline">0 = 0</span>, toujours vrai. Le système a une infinité de solutions : les deux droites sont confondues. <span class="math inline">\mathrm{Sol} = \{(x, y) \mid x + y = 4\}</span>.</p>
-<p>(c) En additionnant les deux équations terme à terme, <span class="math inline">2x = 4</span>, donc <span class="math inline">x = 2</span> ; on reporte dans <span class="math inline">x - y = 0</span> : <span class="math inline">y = 2</span>. Le système a une solution unique : les deux droites sont sécantes. <span class="math inline">\mathrm{Sol} = \{(2,\, 2)\}</span>.</p>
+<section id="q-T4" class="slide level2">
+<h2>Q4 · Angle d’un vecteur : quadrant et tangente</h2>
+<div class="qstem">
+<p>Quel angle <span class="math inline">\theta \in [0°,\ 360°[</span> le vecteur <span class="math inline">\vec w = (-3,\ 3\sqrt3)</span> fait-il avec l’axe des <span class="math inline">x</span> ?</p>
+</div>
+<div class="qrow ok">
+<div class="qans">
+<p><span class="math inline">120°</span></p>
+</div>
+<div class="qwhy">
+<p>Deuxième quadrant (abscisse négative, ordonnée positive), <span class="math inline">\tan\theta = -\sqrt3</span> : angle aigu de <span class="math inline">60°</span>, donc <span class="math inline">\theta = 180° - 60°</span>.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">60°</span></p>
+</div>
+<div class="qwhy">
+<p>La valeur absolue de la tangente a été utilisée sans tenir compte du quadrant : <span class="math inline">\vec w</span> n’est pas dans le premier quadrant.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">240°</span></p>
+</div>
+<div class="qwhy">
+<p>C’est <span class="math inline">180° + 60°</span>, l’angle du troisième quadrant. Ici l’ordonnée est positive.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">300°</span></p>
+</div>
+<div class="qwhy">
+<p>C’est <span class="math inline">360° - 60°</span>, l’angle du quatrième quadrant. Ici l’abscisse est négative.</p>
+</div>
+</div>
+<div class="qfoot">
+<a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R7">R.7</a> · <a href="#/ex-v-R6">R.6(c)</a></span>
 </div>
 </section>
-<section id="st-t2-R10" class="slide level2">
-<h2>Énoncé R.10 <span class="obj">O5</span></h2>
-<p>Résous chaque équation du second degré (calcule d’abord le discriminant).</p>
-<p>(a) <span class="math inline">x^2 - 4x + 3 = 0</span></p>
-<p>(b) <span class="math inline">x^2 - 6x + 9 = 0</span></p>
-<p>(c) <span class="math inline">x^2 + x + 1 = 0</span></p>
-</section>
-<section id="sol-t2-R10" class="slide level2">
-<h2>Solution R.10</h2>
-<div class="sol">
-<p>(a) <span class="math inline">a = 1</span>, <span class="math inline">b = -4</span>, <span class="math inline">c = 3</span> : <span class="math inline">\Delta = (-4)^2 - 4 \cdot 1 \cdot 3 = 16 - 12 = 4 &gt; 0</span>, deux solutions. <span class="math inline">x_{1,2} = \dfrac{4 \pm 2}{2}</span>, donc <span class="math inline">x_1 = 1</span> et <span class="math inline">x_2 = 3</span>. <span class="math inline">\mathrm{Sol} = \{1,\, 3\}</span>.</p>
-<p>(b) <span class="math inline">a = 1</span>, <span class="math inline">b = -6</span>, <span class="math inline">c = 9</span> : <span class="math inline">\Delta = (-6)^2 - 4 \cdot 1 \cdot 9 = 36 - 36 = 0</span>, une seule solution, <span class="math inline">x = \dfrac{6}{2} = 3</span>. <span class="math inline">\mathrm{Sol} = \{3\}</span>.</p>
-<p>(c) <span class="math inline">a = 1</span>, <span class="math inline">b = 1</span>, <span class="math inline">c = 1</span> : <span class="math inline">\Delta = 1^2 - 4 \cdot 1 \cdot 1 = 1 - 4 = -3 &lt; 0</span>, aucune solution réelle. <span class="math inline">\mathrm{Sol} = \varnothing</span>.</p>
+<section id="q-T5" class="slide level2">
+<h2>Q5 · Coordonnée d’une vitesse : sinus ou cosinus ?</h2>
+<div class="qstem">
+<p>Un jet d’eau sort à la vitesse de <span class="math inline">12</span> m/s en faisant un angle de <span class="math inline">20°</span> avec la <strong>verticale</strong>. Quelle est la coordonnée <strong>verticale</strong> de sa vitesse ?</p>
+</div>
+<div class="qrow ok">
+<div class="qans">
+<p><span class="math inline">12 \cos 20°</span> m/s</p>
+</div>
+<div class="qwhy">
+<p>L’angle est mesuré depuis la verticale : la coordonnée le long de la verticale porte le cosinus.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">12 \sin 20°</span> m/s</p>
+</div>
+<div class="qwhy">
+<p>C’est la coordonnée <strong>horizontale</strong>. Le sinus donne la coordonnée perpendiculaire à l’axe depuis lequel l’angle est mesuré.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">12 \tan 20°</span> m/s</p>
+</div>
+<div class="qwhy">
+<p>La tangente ne donne pas une coordonnée : une coordonnée ne peut pas dépasser la norme du vecteur.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">\dfrac{12}{\cos 20°}</span> m/s</p>
+</div>
+<div class="qwhy">
+<p>Une coordonnée est plus petite que la norme, or <span class="math inline">\dfrac{12}{\cos 20°} &gt; 12</span> : on multiplie par le cosinus, on ne divise pas.</p>
+</div>
+</div>
+<div class="qfoot">
+<a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R5">R.5(d)</a></span>
 </div>
 </section>
-<section id="st-t2-R12" class="slide level2">
-<h2>Énoncé R.12 <span class="obj">O1</span></h2>
-<p>Le carré d’un nombre vaut <span class="math inline">25</span>.</p>
-<p>(a) Quelles sont les valeurs possibles si ce nombre peut être quelconque ?</p>
-<p>(b) Et si ce nombre représente la longueur d’un segment ?</p>
-</section>
-<section id="sol-t2-R12" class="slide level2">
-<h2>Solution R.12</h2>
-<div class="sol">
-<p>Soit <span class="math inline">x</span> le nombre cherché. Mise en équation : <span class="math inline">x^2 = 25 \;\Leftrightarrow\; x = -5</span> ou <span class="math inline">x = 5</span>, donc <span class="math inline">\mathrm{Sol} = \{-5,\, 5\}</span>.</p>
-<p>(a) Le nombre peut être quelconque : les deux valeurs conviennent, <span class="math inline">x = -5</span> ou <span class="math inline">x = 5</span>.</p>
-<p>(b) Une longueur est positive : <span class="math inline">-5</span> n’est pas admissible, seule <span class="math inline">x = 5</span> convient.</p>
+<section id="q-T6" class="slide level2">
+<h2>Q6 · Norme et angle d’un vecteur</h2>
+<div class="qstem">
+<p>Soit <span class="math inline">\vec w = (-\sqrt3,\ -1)</span>. Quelle est sa norme et quel angle <span class="math inline">\theta \in [0°,\ 360°[</span> fait-il avec l’axe des <span class="math inline">x</span> ?</p>
+</div>
+<div class="qrow ok">
+<div class="qans">
+<p>Norme <span class="math inline">2</span> et <span class="math inline">\theta = 210°</span></p>
+</div>
+<div class="qwhy">
+<p><span class="math inline">\left\Vert \vec w \right\Vert = \sqrt{3 + 1} = 2</span>. Troisième quadrant, angle aigu de <span class="math inline">30°</span> : <span class="math inline">\theta = 180° + 30°</span>.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p>Norme <span class="math inline">2</span> et <span class="math inline">\theta = 30°</span></p>
+</div>
+<div class="qwhy">
+<p>La norme est correcte, mais la tangente seule a été utilisée : <span class="math inline">\vec w</span> n’est pas dans le premier quadrant.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p>Norme <span class="math inline">2</span> et <span class="math inline">\theta = 150°</span></p>
+</div>
+<div class="qwhy">
+<p>C’est <span class="math inline">180° - 30°</span>, l’angle du deuxième quadrant. Ici les deux coordonnées sont négatives.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p>Norme <span class="math inline">4</span> et <span class="math inline">\theta = 210°</span></p>
+</div>
+<div class="qwhy">
+<p>L’angle est correct, mais <span class="math inline">3 + 1 = 4</span> est le carré de la norme : il reste à prendre la racine carrée.</p>
+</div>
+</div>
+<div class="qfoot">
+<a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R6">R.6(c)</a> · <a href="#/ex-v-R7">R.7</a></span>
 </div>
 </section>
-<section id="st-t2-R13" class="slide level2">
-<h2>Énoncé R.13 <span class="obj">O1</span></h2>
-<p>L’aire d’un carré vaut <span class="math inline">36</span> m². Quelle est la longueur (en mètres) de son côté ?</p>
+<section id="q-T7" class="slide level2">
+<h2>Q7 · Valeur du sinus dans le quatrième quadrant</h2>
+<div class="qstem">
+<p>Quelle est la valeur de <span class="math inline">\sin 300°</span> ?</p>
+</div>
+<div class="qrow ok">
+<div class="qans">
+<p><span class="math inline">-\dfrac{\sqrt3}{2}</span></p>
+</div>
+<div class="qwhy">
+<p>L’angle aigu avec l’axe des <span class="math inline">x</span> est <span class="math inline">60°</span> ; dans le quatrième quadrant, le sinus est négatif.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">\dfrac{\sqrt3}{2}</span></p>
+</div>
+<div class="qwhy">
+<p>C’est <span class="math inline">\sin 60°</span> : le signe négatif du sinus dans le quatrième quadrant a été oublié.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">-\dfrac12</span></p>
+</div>
+<div class="qwhy">
+<p>L’angle aigu a été pris égal à <span class="math inline">30°</span> (<span class="math inline">300° - 270°</span>) : l’angle aigu avec l’axe des <span class="math inline">x</span> est <span class="math inline">60°</span>.</p>
+</div>
+</div>
+<div class="qrow">
+<div class="qans">
+<p><span class="math inline">\dfrac12</span></p>
+</div>
+<div class="qwhy">
+<p>C’est <span class="math inline">\cos 300°</span> : le cosinus et le sinus ont été confondus.</p>
+</div>
+</div>
+<div class="qfoot">
+<a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R6">R.6(b)</a> · <a href="#/ex-v-R7">R.7</a></span>
+</div>
+</section></section>
+<section>
+<section id="exercices-de-renforcement" class="title-slide slide level1 divider center" data-background-color="#14304a">
+<h1>Exercices de renforcement</h1>
+
 </section>
-<section id="sol-t2-R13" class="slide level2">
-<h2>Solution R.13</h2>
-<div class="sol">
-<p>Soit <span class="math inline">c</span> le côté (en m). Mise en équation : <span class="math inline">c^2 = 36</span>, donc <span class="math inline">\mathrm{Sol} = \{-6,\, 6\}</span>. Une longueur est positive : la seule solution admissible dans le contexte est <span class="math inline">c = 6</span> m.</p>
+<section id="ex-t" class="slide level2">
+<h2>Exercices à réaliser pour consolider</h2>
+<table class="deroule" style="font-size:.62em">
+<thead>
+<tr>
+<th>
+QCM
+</th>
+<th>
+Sujet
+</th>
+<th>
+Exercices
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ph">
+T1
+</td>
+<td>
+Angles associés : cosinus et sinus
+</td>
+<td>
+<a href="#/ex-v-R7">R.7</a> · <a href="#/ex-v-R6">R.6(b)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+T2
+</td>
+<td>
+Angle aigu avec l’axe des x
+</td>
+<td>
+<a href="#/ex-v-R7">R.7</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+T3
+</td>
+<td>
+De la norme et de l’angle aux coordonnées
+</td>
+<td>
+<a href="#/ex-v-R6">R.6(a)(b)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+T4
+</td>
+<td>
+Angle d’un vecteur : quadrant et tangente
+</td>
+<td>
+<a href="#/ex-v-R7">R.7</a> · <a href="#/ex-v-R6">R.6(c)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+T5
+</td>
+<td>
+Coordonnée d’une vitesse : sinus ou cosinus ?
+</td>
+<td>
+<a href="#/ex-v-R5">R.5(d)</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+T6
+</td>
+<td>
+Norme et angle d’un vecteur
+</td>
+<td>
+<a href="#/ex-v-R6">R.6(c)</a> · <a href="#/ex-v-R7">R.7</a>
+</td>
+</tr>
+<tr>
+<td class="ph">
+T7
+</td>
+<td>
+Valeur du sinus dans le quatrième quadrant
+</td>
+<td>
+<a href="#/ex-v-R6">R.6(b)</a> · <a href="#/ex-v-R7">R.7</a>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="et-timer">
+<div class="et-box" data-default="1200">
+<div class="et-row">
+<button class="et-btn et-minus" type="button">
+−1 min
+</button>
+<div class="et-display">
+20:00
+</div>
+<button class="et-btn et-plus" type="button">
++1 min
+</button>
+</div>
+<div class="et-row">
+<button class="et-btn et-primary et-toggle" type="button">
+Démarrer
+</button>
+<button class="et-btn et-reset" type="button">
+↺ Réinitialiser
+</button>
+</div>
+</div>
 </div>
 </section>
-<section id="st-t2-R14" class="slide level2">
-<h2>Énoncé R.14 <span class="obj">O5</span> ★★★</h2>
-<p>Un projectile suit la trajectoire <span class="math inline">y = -x^2 + 6x</span>, où <span class="math inline">y</span> est la hauteur et <span class="math inline">x</span> la distance horizontale (toutes deux en mètres).</p>
-<p>(a) À quelle(s) distance(s) le projectile est-il à la hauteur <span class="math inline">y = 5</span> m ?</p>
-<p>(b) À quelle distance retombe-t-il au sol (<span class="math inline">y = 0</span>) ?</p>
-</section>
-<section id="sol-t2-R14" class="slide level2">
-<h2>Solution R.14</h2>
-<div class="sol">
-<p>(a) <span class="math inline">-x^2 + 6x = 5 \;\Leftrightarrow\; x^2 - 6x + 5 = 0</span>. On a <span class="math inline">\Delta = (-6)^2 - 4 \cdot 1 \cdot 5 = 36 - 20 = 16 &gt; 0</span> : deux solutions, <span class="math display">x_1 = \dfrac{6 - 4}{2} = 1, \qquad x_2 = \dfrac{6 + 4}{2} = 5.</span> <span class="math inline">\mathrm{Sol} = \{1,\, 5\}</span>. Le projectile est à <span class="math inline">5</span> m de haut à <span class="math inline">x = 1</span> m (en montant) et à <span class="math inline">x = 5</span> m (en descendant).</p>
-<p>(b) <span class="math inline">-x^2 + 6x = 0 \;\Leftrightarrow\; x(6 - x) = 0 \;\Leftrightarrow\; x = 0</span> ou <span class="math inline">x = 6</span>, donc <span class="math inline">\mathrm{Sol} = \{0,\, 6\}</span>. <span class="math inline">x = 0</span> est le point de départ : le projectile retombe au sol à <span class="math inline">x = 6</span> m.</p>
+<section id="ex-v-R5" class="slide level2 smaller">
+<h2>Exercice R.5(d) (séance 4) <span class="obj">O2</span></h2>
+<p>Un courant de <span class="math inline">0{,}3</span> m/s, parallèle aux rives, entraîne un poisson. On prend l’axe des <span class="math inline">x</span> dans le sens du courant et l’axe des <span class="math inline">y</span> vers l’autre rive.</p>
+<p>Un poisson nage à <span class="math inline">0{,}6</span> m/s par rapport à l’eau et veut arriver <strong>juste en face</strong> de son point de départ. Dans quelle direction doit-il nager ? On donnera l’angle avec la perpendiculaire aux rives.</p>
+<div class="qfoot">
+<a class="back-btn" href="#/ex-t">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-v-R5">annexe — R.5(d) (séance 4)</a></span>
 </div>
+</section>
+<section id="ex-v-R6" class="slide level2 smaller">
+<h2>Exercice R.6 (séance 4) <span class="obj">O3</span></h2>
+<p>(a) Une vitesse de norme <span class="math inline">10</span> m/s fait un angle de <span class="math inline">45°</span> avec l’axe des <span class="math inline">x</span>. Donner ses coordonnées.</p>
+<p>(b) Une force de norme <span class="math inline">6</span> N fait un angle de <span class="math inline">240°</span> avec l’axe des <span class="math inline">x</span>. Donner ses coordonnées.</p>
+<p>(c) Donner la norme de <span class="math inline">\vec w = (\sqrt3,\ -1)</span> et l’angle qu’il fait avec l’axe des <span class="math inline">x</span>.</p>
+<div class="qfoot">
+<a class="back-btn" href="#/ex-t">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-v-R6">annexe — R.6 (séance 4)</a></span>
+</div>
+</section>
+<section id="ex-v-R7" class="slide level2 smaller">
+<h2>Exercice R.7 (séance 4) <span class="obj">O3</span></h2>
+<p>Sans calculatrice, donner le quadrant, <span class="math inline">\tan\theta</span> et l’angle <span class="math inline">\theta \in [0°,\ 360°[</span> que fait chaque vecteur avec l’axe des <span class="math inline">x</span>.</p>
+<p>(a) <span class="math inline">(3,\ 3)</span></p>
+<p>(b) <span class="math inline">(-\sqrt3,\ 1)</span></p>
+<p>(c) <span class="math inline">(-2,\ -2)</span></p>
+<p>(d) <span class="math inline">(1,\ -\sqrt3)</span></p>
+<div class="qfoot">
+<a class="back-btn" href="#/ex-t">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-v-R7">annexe — R.7 (séance 4)</a></span>
+</div>
+</section>
+<section id="questions-restantes" class="slide level2">
+<h2>Questions restantes</h2>
+<p>À remplir pendant la recherche d’exercices (tri du mur).</p>
+</section></section>
+<section>
+<section id="clôture" class="title-slide slide level1 divider center" data-background-color="#14304a">
+<h1>Clôture</h1>
+
+</section>
+<section id="pour-la-suite" class="slide level2">
+<h2>Pour la suite</h2>
+<ul>
+<li>Les <strong>solutions rédigées</strong> des exercices et les corrections des questions de réserve sont dans le deck « Annexe » (page des slides, rubrique Remédiations).</li>
+<li>Les questions du mur qui n’ont pas été traitées en séance n’auront pas de réponse écrite.</li>
+</ul>
 
 </section></section>
     </div>
