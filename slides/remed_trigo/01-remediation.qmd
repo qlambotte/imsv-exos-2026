@@ -1,0 +1,672 @@
+---
+title: "Remédiation IMSV biomed — La trigonométrie"
+subtitle: "Angles associés, coordonnées d'un vecteur, sinus ou cosinus (exercices de la séance 4)"
+description: "QCM, notions clés, corrections ciblées et exercices de renforcement de trigonométrie"
+author: "Quentin Lambotte · FMPB · UMONS"
+lang: fr
+format:
+  revealjs:
+    theme: [default, ../seance01/theme.scss]
+    slide-number: c/t
+    show-slide-number: all
+    width: 1280
+    height: 800
+    margin: 0.06
+    center: false
+    transition: fade
+    transition-speed: fast
+    hash: true
+    history: false
+    html-math-method: katex
+    embed-resources: true
+    fig-align: center
+    menu:
+      side: right
+    include-after-body: ../seance01/annotate.html
+---
+
+# Ouverture {.divider background-color="#14304a"}
+
+<style>
+.qrow{display:flex;gap:.8em;border-bottom:1px solid #e5e9ef;padding:.28em .2em;font-size:.6em;line-height:1.35;align-items:flex-start}
+.qrow .qans{flex:0 0 36%;font-weight:600}
+.qrow .qwhy{flex:1 1 auto}
+.qrow .qans p,.qrow .qwhy p{margin:0}
+.qrow.ok{background:#f2f7ff}
+.qrow.ok .qans::before{content:"✓ ";color:#276a2e;font-weight:700}
+.qstem{font-size:.78em}
+.qflex{display:flex;gap:1em;align-items:center}
+.qflex img{max-width:330px;max-height:230px;width:auto;height:auto}
+.reveal table.deroule a{font-weight:600}
+.et-box{display:flex;flex-direction:column;align-items:center;gap:.5em;padding:.6em 1.4em;background:#f2f7ff;border:1px solid #dbe7fb;border-radius:.6em}
+.et-timer{margin-top:.8em;display:flex;justify-content:center}
+@keyframes et-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.back{margin-top:.5em}
+.qfoot{display:flex;gap:1.2em;align-items:center;margin-top:.45em;font-size:.55em}
+.qfoot .back-btn{font-size:1em}
+.qfoot .muted{color:#5a6b7b}
+.back-btn{display:inline-block;font-size:.5em;font-weight:600;padding:.3em .8em;border:1.5px solid #1f5fbf;border-radius:.5em;color:#1f5fbf;background:#fff}
+.back-btn:hover{background:#1f5fbf;color:#fff;text-decoration:none!important}
+.exo-foot{margin-top:.8em;font-size:.55em}
+.sol{font-size:.8em}
+.sol.long{font-size:.68em}
+.sol.xlong{font-size:.6em}
+.tv table{margin:.3em auto;border-collapse:collapse;font-size:.8em}
+.tv th,.tv td{border:1px solid #cfd8e3;padding:.22em .9em;text-align:center}
+.tv th{background:#f4f7fa;color:#14304a}
+.tv .f{color:#b5381f;font-weight:700}
+.sit table{font-size:.72em;margin:.3em auto;border-collapse:collapse}
+.sit th,.sit td{border:1px solid #cfd8e3;padding:.25em .7em}
+.sit th{background:#f4f7fa;color:#14304a}
+.sit .f{color:#b5381f;font-weight:700}
+.promesse{border:2px solid #1f5fbf;border-radius:14px;background:#f2f7ff;padding:.6em 1em;text-align:center;font-size:1.05em;margin:.5em 0}
+.xs { font-size: .7em; }
+</style>
+<style>
+.cle-cols{display:flex;gap:1.2em;align-items:center}
+.reveal .columns{align-items:center}
+</style>
+
+## Déroulé
+
+<table class="deroule" style="font-size:.8em">
+<thead><tr><th>Temps</th><th>Durée</th><th>Contenu</th></tr></thead>
+<tbody>
+<tr><td class="ph">Ouverture</td><td class="du">4 min</td><td>Principe de la séance, mur de questions</td></tr>
+<tr><td class="ph">QCM</td><td class="du">9 min</td><td>Sept questions sur Wooclap, seul·e, sans discuter</td></tr>
+<tr><td class="ph">Notions clés</td><td class="du">15 min</td><td>Angles associés, coordonnées à partir de la norme et de l'angle, angle à partir des coordonnées, sinus ou cosinus</td></tr>
+<tr><td class="ph">Corrections ciblées</td><td class="du">8 min</td><td>Seules les questions les moins réussies sont reprises</td></tr>
+<tr><td class="ph">Exercices</td><td class="du">20 min</td><td>Recherche sur papier, choisie d'après tes résultats au QCM</td></tr>
+<tr><td class="ph">Questions</td><td class="du">4 min</td><td>Questions du mur restantes</td></tr>
+</tbody>
+</table>
+## Le mur de questions
+
+::: wooclap
+::: wc-play
+▶
+:::
+
+:::: wc-body
+**Pose tes questions, anonymement**
+
+::: wc-lien
+Code : XELAEPI
+:::
+::::
+
+::: {.wc-qr}
+![](img/qr-mur.png)
+:::
+:::
+
+- **2 à 3 questions au maximum** par personne.
+- **Vote** pour les questions des autres : celles qui reçoivent le plus de votes passent en premier.
+- Je ne répondrai pas à toutes les questions.
+- Les réponses se donnent en séance : il n'y aura pas de réponse écrite ensuite.
+
+# QCM {.divider background-color="#14304a"}
+
+## QCM — Wooclap (9 min) {#qcm-t}
+
+::: wooclap
+::: wc-play
+▶
+:::
+
+:::: wc-body
+**Ouvre le Wooclap, réponds seul·e**
+
+::: wc-lien
+Code : NSURPTC
+:::
+::::
+
+::: {.wc-qr}
+![](img/qr-trigo.png)
+:::
+:::
+
+7 questions, une seule réponse correcte par question.
+
+<div class="et-timer"><div class="et-box" data-default="540">
+<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">09:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
+<div class="et-row"><button class="et-btn et-primary et-toggle" type="button">Démarrer</button><button class="et-btn et-reset" type="button">↺ Réinitialiser</button></div>
+</div></div>
+
+```{=html}
+<script>
+(function () {
+  var audioCtx = null;
+  function beep() {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      var t0 = audioCtx.currentTime;
+      [0, 0.35].forEach(function (o) {
+        var osc = audioCtx.createOscillator(), g = audioCtx.createGain();
+        osc.type = 'sine'; osc.frequency.value = 880;
+        g.gain.setValueAtTime(0.0001, t0 + o);
+        g.gain.exponentialRampToValueAtTime(0.3, t0 + o + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + o + 0.28);
+        osc.connect(g); g.connect(audioCtx.destination);
+        osc.start(t0 + o); osc.stop(t0 + o + 0.3);
+      });
+    } catch (e) {}
+  }
+  function fmt(s) { s = Math.max(0, s); var m = Math.floor(s / 60), r = s % 60; return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r; }
+  function init() {
+  Array.prototype.forEach.call(document.querySelectorAll('.et-box'), function (box) {
+    var DEFAULT = parseInt(box.getAttribute('data-default'), 10) || 600;
+    var display = box.querySelector('.et-display'), btn = box.querySelector('.et-toggle');
+    var remaining = DEFAULT, running = false, id = null;
+    function render() {
+      display.textContent = fmt(remaining);
+      display.classList.toggle('et-warn', running && remaining <= 60 && remaining > 0);
+      display.classList.toggle('et-done', remaining === 0);
+    }
+    function stop() { running = false; btn.textContent = remaining > 0 ? 'Reprendre' : 'Démarrer'; if (id) { clearInterval(id); id = null; } }
+    function tick() { remaining -= 1; if (remaining <= 0) { remaining = 0; stop(); beep(); } render(); }
+    function start() {
+      if (running) return;
+      try { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); if (audioCtx.state === 'suspended') audioCtx.resume(); } catch (e) {}
+      if (remaining <= 0) remaining = DEFAULT;
+      render(); running = true; btn.textContent = 'Pause'; id = setInterval(tick, 1000);
+    }
+    btn.addEventListener('click', function () { running ? stop() : start(); });
+    box.querySelector('.et-minus').addEventListener('click', function () { remaining = Math.max(0, remaining - 60); render(); if (remaining === 0) stop(); });
+    box.querySelector('.et-plus').addEventListener('click', function () { remaining += 60; render(); });
+    box.querySelector('.et-reset').addEventListener('click', function () { stop(); remaining = DEFAULT; btn.textContent = 'Démarrer'; render(); });
+    render();
+  });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+```
+
+# Notions clés {.divider background-color="#14304a"}
+
+## Les angles associés {#cle-t1 .smaller}
+
+:::: {.columns}
+::: {.column width="34%"}
+<svg viewBox="0 0 360 360" width="300" height="300" role="img" aria-label="Cercle trigonométrique avec les points d'angles 30, 150, 210 et 330 degrés"><circle cx="180" cy="180" r="140" fill="none" stroke="#14304a" stroke-width="2"/><line x1="10" y1="180" x2="350" y2="180" stroke="#14304a"/><line x1="180" y1="10" x2="180" y2="350" stroke="#14304a"/><text x="346" y="200" font-size="16" text-anchor="end" fill="#14304a">x</text><text x="192" y="22" font-size="16" fill="#14304a">y</text><line x1="301.2" y1="110.0" x2="301.2" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="301.2" cy="110.0" r="6" fill="#b5381f"/><text x="323.8" y="102.0" text-anchor="middle" font-size="18" fill="#14304a">30°</text><line x1="58.8" y1="110.0" x2="58.8" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="58.8" cy="110.0" r="6" fill="#b5381f"/><text x="36.2" y="102.0" text-anchor="middle" font-size="18" fill="#14304a">150°</text><line x1="58.8" y1="250.0" x2="58.8" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="58.8" cy="250.0" r="6" fill="#b5381f"/><text x="36.2" y="268.0" text-anchor="middle" font-size="18" fill="#14304a">210°</text><line x1="301.2" y1="250.0" x2="301.2" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="301.2" cy="250.0" r="6" fill="#b5381f"/><text x="323.8" y="268.0" text-anchor="middle" font-size="18" fill="#14304a">330°</text></svg>
+:::
+::: {.column width="66%"}
+Le point d'angle $\theta$ du cercle trigonométrique a pour coordonnées $(\cos\theta,\ \sin\theta)$. **Que remarques-tu sur ces quatre points ?**
+
+::: {.fragment}
+::: {.tv}
+| $\theta$ | Quadrant | Angle aigu avec l'axe des $x$ | $\cos\theta$ | $\sin\theta$ |
+|:--:|:--:|:--:|:--:|:--:|
+| $30°$ | I | $30°$ | $+\frac{\sqrt3}{2}$ | $+\frac12$ |
+| $150°$ | II | $180° - 150° = 30°$ | $-\frac{\sqrt3}{2}$ | $+\frac12$ |
+| $210°$ | III | $210° - 180° = 30°$ | $-\frac{\sqrt3}{2}$ | $-\frac12$ |
+| $330°$ | IV | $360° - 330° = 30°$ | $+\frac{\sqrt3}{2}$ | $-\frac12$ |
+:::
+:::
+:::
+::::
+
+::: {.fragment}
+::: {.aretenir .smaller}
+L'angle aigu avec l'axe des $x$ (l'angle de référence) fixe les valeurs de $\cos$ et de $\sin$ au signe près. Le quadrant fixe les signes.
+:::
+:::
+
+
+## De la norme et de l'angle aux coordonnées {#cle-t2 .smaller}
+
+**Une force de norme $10$ N fait un angle de $240°$ avec l'axe des $x$. Quelles sont ses coordonnées ?**
+
+. . .
+
+1. **Quadrant** : $240° = 180° + 60°$, troisième quadrant : les deux coordonnées sont négatives.
+2. **Angle aigu avec l'axe des $x$** : $60°$, donc $\cos 240° = -\cos 60° = -\dfrac12$ et $\sin 240° = -\sin 60° = -\dfrac{\sqrt3}{2}$.
+
+. . .
+
+$$10\,(\cos 240°,\ \sin 240°) = \left(-5,\ -5\sqrt3\right)$$
+
+. . .
+
+**Contrôle** : $\sqrt{(-5)^2 + (-5\sqrt3)^2} = \sqrt{25 + 75} = 10$.
+
+::: {.aretenir .smaller}
+Pour un vecteur de norme $r$ et d'angle $\theta$ : $(r\cos\theta,\ r\sin\theta)$. L'angle aigu donne les valeurs, le quadrant donne les signes.
+:::
+
+## De l'angle aux coordonnées, et retour {#cle-t3 .smaller}
+
+**Retrouver l'angle $\theta \in [0°,\ 360°[$ du vecteur $\vec w = (-1,\ \sqrt3)$.**
+
+. . .
+
+1. **Quadrant** : $w_x < 0$ et $w_y > 0$, donc le deuxième quadrant.
+
+. . .
+
+2. **Angle aigu avec l'axe des $x$** : $\tan = \dfrac{w_y}{w_x} = -\sqrt3$. La valeur absolue $\sqrt3$ correspond à $60°$.
+
+. . .
+
+3. **Angle** : dans le deuxième quadrant, $\theta = 180° - 60° = 120°$.
+
+. . .
+
+**Contrôle** : $\left\Vert \vec w \right\Vert = \sqrt{1 + 3} = 2$ et $2\,(\cos 120°,\ \sin 120°) = 2\left(-\dfrac12,\ \dfrac{\sqrt3}{2}\right) = (-1,\ \sqrt3)$.
+
+::: {.aretenir .smaller}
+La tangente seule ne suffit pas : $(-1, \sqrt3)$ et $(1, -\sqrt3)$ ont la même tangente, $-\sqrt3$. C'est le quadrant qui tranche.
+:::
+
+
+## Sinus ou cosinus ? {#cle-t4 .smaller}
+
+Une force de $10$ N fait un angle de $30°$ avec un axe. Quelles sont ses coordonnées ?
+
+<div style="display:flex;gap:1em;justify-content:center;align-items:flex-start">
+<div><svg viewBox="0 0 260 200" width="170" height="129" role="img" aria-label="Force de 10 newtons, 30° depuis l'horizontale"><line x1="30" y1="170" x2="250" y2="170" stroke="#14304a"/><line x1="30" y1="170" x2="30" y2="20" stroke="#14304a"/><line x1="159.9" y1="95.0" x2="159.9" y2="170" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="95.0" x2="159.9" y2="95.0" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="170" x2="159.9" y2="95.0" stroke="#1f5fbf" stroke-width="4"/><circle cx="159.9" cy="95.0" r="5" fill="#1f5fbf"/><text x="92" y="162" font-size="16" fill="#14304a">30°</text><text x="169.9" y="89.0" font-size="16" fill="#1f5fbf">10 N</text></svg><div style="font-size:.6em;text-align:center">30° depuis l'horizontale</div></div>
+<div><svg viewBox="0 0 260 200" width="170" height="129" role="img" aria-label="Force de 10 newtons, 30° depuis la verticale"><line x1="30" y1="170" x2="250" y2="170" stroke="#14304a"/><line x1="30" y1="170" x2="30" y2="20" stroke="#14304a"/><line x1="105.0" y1="40.1" x2="105.0" y2="170" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="40.1" x2="105.0" y2="40.1" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="170" x2="105.0" y2="40.1" stroke="#1f5fbf" stroke-width="4"/><circle cx="105.0" cy="40.1" r="5" fill="#1f5fbf"/><text x="38" y="90" font-size="16" fill="#14304a">30°</text><text x="115.0" y="34.1" font-size="16" fill="#1f5fbf">10 N</text></svg><div style="font-size:.6em;text-align:center">30° depuis la verticale</div></div>
+</div>
+
+**Fais tendre l'angle vers $0°$ : quelle coordonnée devient toute la force ?**
+
+. . .
+
+::: {.tv}
+| Angle mesuré depuis | Coordonnée horizontale | Coordonnée verticale |
+|:--:|:--:|:--:|
+| l'horizontale | $10\cos 30° = 5\sqrt3$ | $10\sin 30° = 5$ |
+| la verticale | $10\sin 30° = 5$ | $10\cos 30° = 5\sqrt3$ |
+:::
+
+. . .
+
+::: {.aretenir .smaller}
+La coordonnée le long de l'axe depuis lequel l'angle est mesuré porte le cosinus ($\cos 0° = 1$) ; l'autre porte le sinus ($\sin 0° = 0$). Le quadrant donne ensuite les signes.
+:::
+
+# Corrections ciblées {.divider background-color="#14304a"}
+
+## Où aller selon les résultats {#nav-t}
+
+<table class="deroule" style="font-size:.66em"><thead><tr><th>QCM</th><th>Correction</th><th>Exercices</th></tr></thead><tbody>
+<tr><td class="ph">T1</td><td><a href="#/q-T1">Angles associés : cosinus et sinus</a></td><td><a href="#/ex-v-R7">R.7</a> · <a href="#/ex-v-R6">R.6(b)</a></td></tr>
+<tr><td class="ph">T2</td><td><a href="#/q-T2">Angle aigu avec l'axe des x</a></td><td><a href="#/ex-v-R7">R.7</a></td></tr>
+<tr><td class="ph">T3</td><td><a href="#/q-T3">De la norme et de l'angle aux coordonnées</a></td><td><a href="#/ex-v-R6">R.6(a)(b)</a></td></tr>
+<tr><td class="ph">T4</td><td><a href="#/q-T4">Angle d'un vecteur : quadrant et tangente</a></td><td><a href="#/ex-v-R7">R.7</a> · <a href="#/ex-v-R6">R.6(c)</a></td></tr>
+<tr><td class="ph">T5</td><td><a href="#/q-T5">Coordonnée d'une vitesse : sinus ou cosinus ?</a></td><td><a href="#/ex-v-R5">R.5(d)</a></td></tr>
+<tr><td class="ph">T6</td><td><a href="#/q-T6">Norme et angle d'un vecteur</a></td><td><a href="#/ex-v-R6">R.6(c)</a> · <a href="#/ex-v-R7">R.7</a></td></tr>
+<tr><td class="ph">T7</td><td><a href="#/q-T7">Valeur du sinus dans le quatrième quadrant</a></td><td><a href="#/ex-v-R6">R.6(b)</a> · <a href="#/ex-v-R7">R.7</a></td></tr>
+</tbody></table>
+
+## Q1 · Angles associés : cosinus et sinus {#q-T1}
+
+::: {.qstem}
+Quelles sont les valeurs de $\cos 150°$ et de $\sin 150°$ ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$\cos 150° = -\dfrac{\sqrt3}{2}$ et $\sin 150° = \dfrac12$
+:::
+::: qwhy
+L'angle aigu avec l'axe des $x$ est $30°$. Dans le deuxième quadrant, le cosinus est négatif et le sinus positif.
+:::
+:::::
+
+::::: qrow
+::: qans
+$\cos 150° = \dfrac{\sqrt3}{2}$ et $\sin 150° = \dfrac12$
+:::
+::: qwhy
+Ce sont les valeurs de $30°$ : le signe négatif du cosinus dans le deuxième quadrant a été oublié.
+:::
+:::::
+
+::::: qrow
+::: qans
+$\cos 150° = -\dfrac12$ et $\sin 150° = \dfrac{\sqrt3}{2}$
+:::
+::: qwhy
+Les valeurs du cosinus et du sinus ont été échangées : l'angle aigu est $30°$, pas $60°$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$\cos 150° = -\dfrac{\sqrt3}{2}$ et $\sin 150° = -\dfrac12$
+:::
+::: qwhy
+Le sinus d'un angle du deuxième quadrant est positif. Les signes $(-, -)$ sont ceux du troisième quadrant.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R7">R.7</a> · <a href="#/ex-v-R6">R.6(b)</a></span></div>
+
+## Q2 · Angle aigu avec l'axe des x {#q-T2}
+
+::: {.qstem}
+Un vecteur fait un angle $\theta = 210°$ avec l'axe des $x$. Quel angle aigu fait-il avec l'axe des $x$ ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$30°$
+:::
+::: qwhy
+$210° - 180° = 30°$ : on retire le demi-tour pour retrouver l'angle aigu avec l'axe des $x$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$60°$
+:::
+::: qwhy
+C'est l'angle aigu avec l'axe des $y$ ($90° - 30°$) : on cherche l'angle avec l'axe des $x$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$150°$
+:::
+::: qwhy
+C'est $360° - 210°$ : ce n'est pas un angle aigu.
+:::
+:::::
+
+::::: qrow
+::: qans
+$210°$
+:::
+::: qwhy
+C'est l'angle donné, mesuré depuis l'axe des $x$ positif en tournant dans le sens trigonométrique : il n'est pas aigu.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R7">R.7</a></span></div>
+
+## Q3 · De la norme et de l'angle aux coordonnées {#q-T3}
+
+::: {.qstem}
+Un vecteur de norme $8$ fait un angle de $135°$ avec l'axe des $x$. Quelles sont ses coordonnées ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$(-4\sqrt2,\ 4\sqrt2)$
+:::
+::: qwhy
+$135° = 180° - 45°$ : deuxième quadrant, donc abscisse négative et ordonnée positive ; $8 \cdot \dfrac{\sqrt2}{2} = 4\sqrt2$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$(4\sqrt2,\ 4\sqrt2)$
+:::
+::: qwhy
+Ce sont les coordonnées pour $45°$ : le signe de l'abscisse dans le deuxième quadrant a été oublié.
+:::
+:::::
+
+::::: qrow
+::: qans
+$(-4\sqrt2,\ -4\sqrt2)$
+:::
+::: qwhy
+Les deux coordonnées sont négatives dans le troisième quadrant. À $135°$, l'ordonnée est positive.
+:::
+:::::
+
+::::: qrow
+::: qans
+$(-4,\ 4)$
+:::
+::: qwhy
+Les valeurs $\pm\dfrac12$ ont été utilisées au lieu de $\pm\dfrac{\sqrt2}{2}$ : l'angle aigu est $45°$, pas $30°$.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R6">R.6(a)(b)</a></span></div>
+
+## Q4 · Angle d'un vecteur : quadrant et tangente {#q-T4}
+
+::: {.qstem}
+Quel angle $\theta \in [0°,\ 360°[$ le vecteur $\vec w = (-3,\ 3\sqrt3)$ fait-il avec l'axe des $x$ ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$120°$
+:::
+::: qwhy
+Deuxième quadrant (abscisse négative, ordonnée positive), $\tan\theta = -\sqrt3$ : angle aigu de $60°$, donc $\theta = 180° - 60°$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$60°$
+:::
+::: qwhy
+La valeur absolue de la tangente a été utilisée sans tenir compte du quadrant : $\vec w$ n'est pas dans le premier quadrant.
+:::
+:::::
+
+::::: qrow
+::: qans
+$240°$
+:::
+::: qwhy
+C'est $180° + 60°$, l'angle du troisième quadrant. Ici l'ordonnée est positive.
+:::
+:::::
+
+::::: qrow
+::: qans
+$300°$
+:::
+::: qwhy
+C'est $360° - 60°$, l'angle du quatrième quadrant. Ici l'abscisse est négative.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R7">R.7</a> · <a href="#/ex-v-R6">R.6(c)</a></span></div>
+
+## Q5 · Coordonnée d'une vitesse : sinus ou cosinus ? {#q-T5}
+
+::: {.qstem}
+Un jet d'eau sort à la vitesse de $12$ m/s en faisant un angle de $20°$ avec la **verticale**. Quelle est la coordonnée **verticale** de sa vitesse ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$12 \cos 20°$ m/s
+:::
+::: qwhy
+L'angle est mesuré depuis la verticale : la coordonnée le long de la verticale porte le cosinus.
+:::
+:::::
+
+::::: qrow
+::: qans
+$12 \sin 20°$ m/s
+:::
+::: qwhy
+C'est la coordonnée **horizontale**. Le sinus donne la coordonnée perpendiculaire à l'axe depuis lequel l'angle est mesuré.
+:::
+:::::
+
+::::: qrow
+::: qans
+$12 \tan 20°$ m/s
+:::
+::: qwhy
+La tangente ne donne pas une coordonnée : une coordonnée ne peut pas dépasser la norme du vecteur.
+:::
+:::::
+
+::::: qrow
+::: qans
+$\dfrac{12}{\cos 20°}$ m/s
+:::
+::: qwhy
+Une coordonnée est plus petite que la norme, or $\dfrac{12}{\cos 20°} > 12$ : on multiplie par le cosinus, on ne divise pas.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R5">R.5(d)</a></span></div>
+
+## Q6 · Norme et angle d'un vecteur {#q-T6}
+
+::: {.qstem}
+Soit $\vec w = (-\sqrt3,\ -1)$. Quelle est sa norme et quel angle $\theta \in [0°,\ 360°[$ fait-il avec l'axe des $x$ ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+Norme $2$ et $\theta = 210°$
+:::
+::: qwhy
+$\left\Vert \vec w \right\Vert = \sqrt{3 + 1} = 2$. Troisième quadrant, angle aigu de $30°$ : $\theta = 180° + 30°$.
+:::
+:::::
+
+::::: qrow
+::: qans
+Norme $2$ et $\theta = 30°$
+:::
+::: qwhy
+La norme est correcte, mais la tangente seule a été utilisée : $\vec w$ n'est pas dans le premier quadrant.
+:::
+:::::
+
+::::: qrow
+::: qans
+Norme $2$ et $\theta = 150°$
+:::
+::: qwhy
+C'est $180° - 30°$, l'angle du deuxième quadrant. Ici les deux coordonnées sont négatives.
+:::
+:::::
+
+::::: qrow
+::: qans
+Norme $4$ et $\theta = 210°$
+:::
+::: qwhy
+L'angle est correct, mais $3 + 1 = 4$ est le carré de la norme : il reste à prendre la racine carrée.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R6">R.6(c)</a> · <a href="#/ex-v-R7">R.7</a></span></div>
+
+## Q7 · Valeur du sinus dans le quatrième quadrant {#q-T7}
+
+::: {.qstem}
+Quelle est la valeur de $\sin 300°$ ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$-\dfrac{\sqrt3}{2}$
+:::
+::: qwhy
+L'angle aigu avec l'axe des $x$ est $60°$ ; dans le quatrième quadrant, le sinus est négatif.
+:::
+:::::
+
+::::: qrow
+::: qans
+$\dfrac{\sqrt3}{2}$
+:::
+::: qwhy
+C'est $\sin 60°$ : le signe négatif du sinus dans le quatrième quadrant a été oublié.
+:::
+:::::
+
+::::: qrow
+::: qans
+$-\dfrac12$
+:::
+::: qwhy
+L'angle aigu a été pris égal à $30°$ ($300° - 270°$) : l'angle aigu avec l'axe des $x$ est $60°$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$\dfrac12$
+:::
+::: qwhy
+C'est $\cos 300°$ : le cosinus et le sinus ont été confondus.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-t">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R6">R.6(b)</a> · <a href="#/ex-v-R7">R.7</a></span></div>
+
+# Exercices de renforcement {.divider background-color="#14304a"}
+
+## Exercices à réaliser pour consolider {#ex-t}
+
+<table class="deroule" style="font-size:.62em"><thead><tr><th>QCM</th><th>Sujet</th><th>Exercices</th></tr></thead><tbody>
+<tr><td class="ph">T1</td><td>Angles associés : cosinus et sinus</td><td><a href="#/ex-v-R7">R.7</a> · <a href="#/ex-v-R6">R.6(b)</a></td></tr>
+<tr><td class="ph">T2</td><td>Angle aigu avec l'axe des x</td><td><a href="#/ex-v-R7">R.7</a></td></tr>
+<tr><td class="ph">T3</td><td>De la norme et de l'angle aux coordonnées</td><td><a href="#/ex-v-R6">R.6(a)(b)</a></td></tr>
+<tr><td class="ph">T4</td><td>Angle d'un vecteur : quadrant et tangente</td><td><a href="#/ex-v-R7">R.7</a> · <a href="#/ex-v-R6">R.6(c)</a></td></tr>
+<tr><td class="ph">T5</td><td>Coordonnée d'une vitesse : sinus ou cosinus ?</td><td><a href="#/ex-v-R5">R.5(d)</a></td></tr>
+<tr><td class="ph">T6</td><td>Norme et angle d'un vecteur</td><td><a href="#/ex-v-R6">R.6(c)</a> · <a href="#/ex-v-R7">R.7</a></td></tr>
+<tr><td class="ph">T7</td><td>Valeur du sinus dans le quatrième quadrant</td><td><a href="#/ex-v-R6">R.6(b)</a> · <a href="#/ex-v-R7">R.7</a></td></tr>
+</tbody></table>
+
+<div class="et-timer"><div class="et-box" data-default="1200">
+<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">20:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
+<div class="et-row"><button class="et-btn et-primary et-toggle" type="button">Démarrer</button><button class="et-btn et-reset" type="button">↺ Réinitialiser</button></div>
+</div></div>
+
+## Exercice R.5(d) (séance 4) <span class="obj">O2</span> {#ex-v-R5 .smaller}
+
+Un courant de $0{,}3$ m/s, parallèle aux rives, entraîne un poisson. On prend l'axe des $x$ dans le sens du courant et l'axe des $y$ vers l'autre rive.
+
+Un poisson nage à $0{,}6$ m/s par rapport à l'eau et veut arriver **juste en face** de son point de départ. Dans quelle direction doit-il nager ? On donnera l'angle avec la perpendiculaire aux rives.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-t">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-v-R5">annexe — R.5(d) (séance 4)</a></span></div>
+
+## Exercice R.6 (séance 4) <span class="obj">O3</span> {#ex-v-R6 .smaller}
+
+\(a) Une vitesse de norme $10$ m/s fait un angle de $45°$ avec l'axe des $x$. Donner ses coordonnées.
+
+\(b) Une force de norme $6$ N fait un angle de $240°$ avec l'axe des $x$. Donner ses coordonnées.
+
+\(c) Donner la norme de $\vec w = (\sqrt3,\ -1)$ et l'angle qu'il fait avec l'axe des $x$.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-t">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-v-R6">annexe — R.6 (séance 4)</a></span></div>
+
+## Exercice R.7 (séance 4) <span class="obj">O3</span> {#ex-v-R7 .smaller}
+
+Sans calculatrice, donner le quadrant, $\tan\theta$ et l'angle $\theta \in [0°,\ 360°[$ que fait chaque vecteur avec l'axe des $x$.
+
+\(a) $(3,\ 3)$
+
+\(b) $(-\sqrt3,\ 1)$
+
+\(c) $(-2,\ -2)$
+
+\(d) $(1,\ -\sqrt3)$
+
+<div class="qfoot"><a class="back-btn" href="#/ex-t">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-v-R7">annexe — R.7 (séance 4)</a></span></div>
+
+## Questions restantes
+
+À remplir pendant la recherche d'exercices (tri du mur).
+
+# Clôture {.divider background-color="#14304a"}
+
+## Pour la suite
+
+- Les **solutions rédigées** des exercices et les corrections des questions de réserve sont dans le deck « Annexe » (page des slides, rubrique Remédiations).
+- Les questions du mur qui n'ont pas été traitées en séance n'auront pas de réponse écrite.
