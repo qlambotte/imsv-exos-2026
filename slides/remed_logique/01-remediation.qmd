@@ -27,402 +27,37 @@ format:
 
 
 
-# Ouverture {.divider background-color="#14304a"}
+## Par où commencer ? {#start .smaller}
 
+Tu as fait le QCM. Va directement à ce dont tu as besoin.
 
-<style>
-.qrow{display:flex;gap:.8em;border-bottom:1px solid #e5e9ef;padding:.28em .2em;font-size:.6em;line-height:1.35;align-items:flex-start}
-.qrow .qans{flex:0 0 36%;font-weight:600}
-.qrow .qwhy{flex:1 1 auto}
-.qrow .qans p,.qrow .qwhy p{margin:0}
-.qrow.ok{background:#f2f7ff}
-.qrow.ok .qans::before{content:"✓ ";color:#276a2e;font-weight:700}
-.qstem{font-size:.78em}
-.qflex{display:flex;gap:1em;align-items:center}
-.qflex img{max-width:330px;max-height:230px;width:auto;height:auto}
-.reveal table.deroule a{font-weight:600}
-.et-box{display:flex;flex-direction:column;align-items:center;gap:.5em;padding:.6em 1.4em;background:#f2f7ff;border:1px solid #dbe7fb;border-radius:.6em}
-.et-timer{margin-top:.8em;display:flex;justify-content:center}
-@keyframes et-pulse{0%,100%{opacity:1}50%{opacity:.35}}
-.back{margin-top:.5em}
-.qfoot{display:flex;gap:1.2em;align-items:center;margin-top:.45em;font-size:.55em}
-.qfoot .back-btn{font-size:1em}
-.qfoot .muted{color:#5a6b7b}
-.back-btn{display:inline-block;font-size:.5em;font-weight:600;padding:.3em .8em;border:1.5px solid #1f5fbf;border-radius:.5em;color:#1f5fbf;background:#fff}
-.back-btn:hover{background:#1f5fbf;color:#fff;text-decoration:none!important}
-.exo-foot{margin-top:.8em;font-size:.55em}
-.sol{font-size:.8em}
-.sol.long{font-size:.68em}
-.sol.xlong{font-size:.6em}
-.tv table{margin:.3em auto;border-collapse:collapse;font-size:.8em}
-.tv th,.tv td{border:1px solid #cfd8e3;padding:.22em .9em;text-align:center}
-.tv th{background:#f4f7fa;color:#14304a}
-.tv .f{color:#b5381f;font-weight:700}
-.sit table{font-size:.72em;margin:.3em auto;border-collapse:collapse}
-.sit th,.sit td{border:1px solid #cfd8e3;padding:.25em .7em}
-.sit th{background:#f4f7fa;color:#14304a}
-.sit .f{color:#b5381f;font-weight:700}
-.promesse{border:2px solid #1f5fbf;border-radius:14px;background:#f2f7ff;padding:.6em 1em;text-align:center;font-size:1.05em;margin:.5em 0}
-</style>
+:::: {.columns}
+::: {.column width="52%"}
+**Va là pour le correctif du QCM :**
 
-
-## Déroulé
-
-<table class="deroule" style="font-size:.7em">
-<thead><tr><th>Temps</th><th>Durée</th><th>Contenu</th></tr></thead>
-<tbody>
-<tr><td class="ph">Ouverture</td><td class="du">3 min</td><td>Principe de la séance, mur de questions</td></tr>
-<tr><td class="ph">QCM</td><td class="du">9 min</td><td>Sept questions sur Wooclap, seul·e, sans discuter</td></tr>
-<tr><td class="ph">Le contrat</td><td class="du">17 min</td><td>L'implication lue comme un engagement entre deux parties</td></tr>
-<tr><td class="ph">Corrections ciblées</td><td class="du">7 min</td><td>Seules les questions les moins réussies sont reprises</td></tr>
-<tr><td class="ph">Exercices de logique</td><td class="du">20 min</td><td>Recherche sur papier, choisie d'après tes résultats au QCM</td></tr>
-<tr><td class="ph">Questions</td><td class="du">4 min</td><td>Questions du mur restantes</td></tr>
-</tbody>
-</table>
-
-## Le mur de questions
-
-::: wooclap
-::: wc-play
-▶
+- [Q1 · Rupture d'un engagement](#/q-Q1)
+- [Q2 · Colonne de l'implication](#/q-Q2)
+- [Q3 · Condition non remplie](#/q-Q3)
+- [Q4 · Réciproque](#/q-Q4)
+- [Q5 · Contraposée](#/q-Q5)
+- [Q6 · Négation d'une implication](#/q-Q6)
+- [Q7 · Suffisant, nécessaire](#/q-Q7)
+- [Tout le correctif, avec les exercices de renforcement](#/nav-logique)
 :::
+::: {.column width="48%"}
+**Va là pour un rappel théorique sur :**
 
-:::: wc-body
-**Pose tes questions, anonymement**
-
-::: wc-lien
-Code : XELAEPI
+- [La promesse : tenue ou rompue](#/contrat-1)
+- [La table de vérité](#/contrat-4)
+- [La réciproque](#/contrat-5)
+- [La contraposée](#/contrat-7)
+- [Suffisant et nécessaire](#/contrat-sn1)
+- [La négation d'une implication](#/contrat-9)
+- [Synthèse](#/contrat-10)
 :::
 ::::
 
-::: {.wc-qr}
-![](img/qr-mur.png)
-:::
-:::
-
-- **2 à 3 questions au maximum** par personne.
-- **Vote** pour les questions des autres : celles qui reçoivent le plus de votes passent en premier.
-- Je ne répondrai pas à toutes les questions.
-- Les réponses se donnent en séance : il n'y aura pas de réponse écrite ensuite.
-
-
-# QCM {.divider background-color="#14304a"}
-
-## QCM — Wooclap (9 min) {#qcm}
-
-::: wooclap
-::: wc-play
-▶
-:::
-
-:::: wc-body
-**Ouvre le Wooclap, réponds seul·e**
-
-::: wc-lien
-Code : SDBMMIA
-:::
-::::
-
-::: {.wc-qr}
-![](img/qr-logique.png)
-:::
-:::
-
-7 questions, une seule réponse correcte par question.
-
-<div class="et-timer"><div class="et-box" data-default="540">
-<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">09:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
-<div class="et-row"><button class="et-btn et-primary et-toggle" type="button">Démarrer</button><button class="et-btn et-reset" type="button">↺ Réinitialiser</button></div>
-</div></div>
-
-```{=html}
-<script>
-(function () {
-  var audioCtx = null;
-  function beep() {
-    try {
-      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      var t0 = audioCtx.currentTime;
-      [0, 0.35].forEach(function (o) {
-        var osc = audioCtx.createOscillator(), g = audioCtx.createGain();
-        osc.type = 'sine'; osc.frequency.value = 880;
-        g.gain.setValueAtTime(0.0001, t0 + o);
-        g.gain.exponentialRampToValueAtTime(0.3, t0 + o + 0.02);
-        g.gain.exponentialRampToValueAtTime(0.0001, t0 + o + 0.28);
-        osc.connect(g); g.connect(audioCtx.destination);
-        osc.start(t0 + o); osc.stop(t0 + o + 0.3);
-      });
-    } catch (e) {}
-  }
-  function fmt(s) { s = Math.max(0, s); var m = Math.floor(s / 60), r = s % 60; return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r; }
-  function init() {
-  Array.prototype.forEach.call(document.querySelectorAll('.et-box'), function (box) {
-    var DEFAULT = parseInt(box.getAttribute('data-default'), 10) || 600;
-    var display = box.querySelector('.et-display'), btn = box.querySelector('.et-toggle');
-    var remaining = DEFAULT, running = false, id = null;
-    function render() {
-      display.textContent = fmt(remaining);
-      display.classList.toggle('et-warn', running && remaining <= 60 && remaining > 0);
-      display.classList.toggle('et-done', remaining === 0);
-    }
-    function stop() { running = false; btn.textContent = remaining > 0 ? 'Reprendre' : 'Démarrer'; if (id) { clearInterval(id); id = null; } }
-    function tick() { remaining -= 1; if (remaining <= 0) { remaining = 0; stop(); beep(); } render(); }
-    function start() {
-      if (running) return;
-      try { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); if (audioCtx.state === 'suspended') audioCtx.resume(); } catch (e) {}
-      if (remaining <= 0) remaining = DEFAULT;
-      render(); running = true; btn.textContent = 'Pause'; id = setInterval(tick, 1000);
-    }
-    btn.addEventListener('click', function () { running ? stop() : start(); });
-    box.querySelector('.et-minus').addEventListener('click', function () { remaining = Math.max(0, remaining - 60); render(); if (remaining === 0) stop(); });
-    box.querySelector('.et-plus').addEventListener('click', function () { remaining += 60; render(); });
-    box.querySelector('.et-reset').addEventListener('click', function () { stop(); remaining = DEFAULT; btn.textContent = 'Démarrer'; render(); });
-    render();
-  });
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
-})();
-</script>
-```
-
-
-# Le contrat {.divider background-color="#14304a"}
-
-## Une promesse {#contrat-1}
-
-La SNCB s'engage :
-
-::: {.promesse}
-« Si un train arrive avec **60 minutes de retard ou plus**, alors le voyageur reçoit **100 % du prix de son trajet**. »
-:::
-
-On note $\alpha$ : « le train arrive avec 60 minutes de retard ou plus » et $\beta$ : « le voyageur reçoit 100 % du prix de son trajet ».
-
-L'engagement s'écrit $\alpha \Rightarrow \beta$.
-
-::: {.footer-note}
-Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié : les exceptions et le délai de demande ne sont pas pris en compte.
-:::
-
-## Promesse tenue ou rompue ? {#contrat-2}
-
-Quatre situations imaginées. Pour chacune, note sur papier : la SNCB tient-elle sa promesse ?
-
-::: {.sit}
-| | Situation | $\alpha$ | $\beta$ |
-|:--:|:--|:--:|:--:|
-| 1 | Retard de 75 minutes, 100 % du trajet reçu | V | V |
-| 2 | Retard de 75 minutes, aucune compensation | V | F |
-| 3 | Retard de 45 minutes, 100 % du trajet reçu | F | V |
-| 4 | Retard de 45 minutes, aucune compensation | F | F |
-:::
-
-## Une seule rupture possible {#contrat-3}
-
-::: {.sit}
-| | Situation | $\alpha$ | $\beta$ | Promesse |
-|:--:|:--|:--:|:--:|:--:|
-| 1 | Retard de 75 minutes, 100 % du trajet reçu | V | V | tenue |
-| 2 | Retard de 75 minutes, aucune compensation | V | F | [rompue]{.f} |
-| 3 | Retard de 45 minutes, 100 % du trajet reçu | F | V | tenue |
-| 4 | Retard de 45 minutes, aucune compensation | F | F | tenue |
-:::
-
-. . .
-
-::: {.aretenir .smaller}
-La promesse n'est rompue que dans **un seul** cas : la condition est remplie ($\alpha$ vrai) et la promesse n'est pas exécutée ($\beta$ faux).
-
-Aux lignes 3 et 4, la condition n'est pas remplie : la promesse ne dit rien, elle est automatiquement vérifiée.
-:::
-
-## La table de vérité {#contrat-4}
-
-Écrivons V pour « promesse tenue » et F pour « promesse rompue » :
-
-::: {.tv}
-| $\alpha$ | $\beta$ | $\alpha \Rightarrow \beta$ |
-|:--:|:--:|:--:|
-| V | V | V |
-| V | F | [F]{.f} |
-| F | V | V |
-| F | F | V |
-:::
-
-::: {.aretenir .smaller}
-La table de vérité de $\alpha \Rightarrow \beta$ n'est pas à apprendre : elle se relit comme un contrat. Elle vaut F sur la seule ligne où $\alpha$ est vrai et $\beta$ est faux.
-:::
-
-## La réciproque : un autre contrat {#contrat-5}
-
-On échange les rôles de $\alpha$ et $\beta$ :
-
-::: {.promesse}
-« Si le voyageur reçoit 100 % du prix de son trajet, alors le train a eu 60 minutes de retard ou plus. » $\quad \beta \Rightarrow \alpha$
-:::
-
-**Quand ce contrat est-il rompu ?**
-
-. . .
-
-Quand sa condition est remplie ($\beta$ vrai) et que sa conclusion ne l'est pas ($\alpha$ faux) : 100 % du trajet reçu sans 60 minutes de retard. C'est la ligne 3, celle où $\alpha \Rightarrow \beta$ était tenue.
-
-## La réciproque : une autre colonne {#contrat-6}
-
-::: {.tv}
-| $\alpha$ | $\beta$ | $\alpha \Rightarrow \beta$ | $\beta \Rightarrow \alpha$ |
-|:--:|:--:|:--:|:--:|
-| V | V | V | V |
-| V | F | [F]{.f} | V |
-| F | V | V | [F]{.f} |
-| F | F | V | V |
-:::
-
-::: {.aretenir .smaller}
-La réciproque est rompue sur une autre ligne : ce n'est pas le même contrat. Une implication et sa réciproque ne sont pas équivalentes.
-:::
-
-## La contraposée : le même contrat {#contrat-7}
-
-::: {.promesse}
-« Si le voyageur ne reçoit pas 100 % du prix de son trajet, alors le train a eu moins de 60 minutes de retard. » $\quad \lnot\beta \Rightarrow \lnot\alpha$
-:::
-
-**Quand ce contrat est-il rompu ?**
-
-. . .
-
-Quand $\lnot\beta$ est vrai et $\lnot\alpha$ est faux, c'est-à-dire quand $\beta$ est faux et $\alpha$ est vrai : retard de 60 minutes ou plus, sans compensation. C'est exactement la rupture de $\alpha \Rightarrow \beta$.
-
-## La contraposée : la même colonne {#contrat-8}
-
-::: {.tv}
-| $\alpha$ | $\beta$ | $\lnot\alpha$ | $\lnot\beta$ | $\alpha \Rightarrow \beta$ | $\lnot\beta \Rightarrow \lnot\alpha$ |
-|:--:|:--:|:--:|:--:|:--:|:--:|
-| V | V | F | F | V | V |
-| V | F | F | V | [F]{.f} | [F]{.f} |
-| F | V | V | F | V | V |
-| F | F | V | V | V | V |
-:::
-
-::: {.aretenir .smaller}
-Même rupture, donc même contrat : la contraposée est équivalente à l'implication.
-:::
-
-## Suffisant et nécessaire {#contrat-sn1 .smaller}
-
-::: {.promesse}
-« Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » $\quad \alpha \Rightarrow \beta$
-:::
-
-**Un train a 60 minutes de retard ou plus. Le voyageur est-il sûr d'être compensé ?**
-
-. . .
-
-Oui : il suffit que $\alpha$ soit vrai pour obtenir $\beta$. On dit que $\alpha$ est une **condition suffisante** pour $\beta$.
-
-. . .
-
-**Un voyageur n'est pas compensé et l'engagement est tenu. Que sait-on du retard ?**
-
-. . .
-
-Il est inférieur à 60 minutes (contraposée) : sans $\beta$, pas de $\alpha$. On dit que $\beta$ est une **condition nécessaire** pour $\alpha$.
-
-::: {.footer-note}
-Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.
-:::
-
-## Suffisant, nécessaire : le test {#contrat-sn2}
-
-<table class="deroule" style="font-size:.66em">
-<thead><tr><th>Phrase</th><th>Implication</th><th>Engagement de la SNCB</th></tr></thead>
-<tbody>
-<tr><td>« Un retard d'au moins 60 min est suffisant pour être compensé. »</td><td>$\alpha \Rightarrow \beta$</td><td>Promis</td></tr>
-<tr><td>« Être compensé est nécessaire pour avoir un retard d'au moins 60 min. »</td><td>$\alpha \Rightarrow \beta$</td><td>Promis (même implication)</td></tr>
-<tr><td>« Un retard d'au moins 60 min est nécessaire pour être compensé. »</td><td>$\beta \Rightarrow \alpha$</td><td>Non promis (réciproque)</td></tr>
-<tr><td>« Être compensé est suffisant pour avoir un retard d'au moins 60 min. »</td><td>$\beta \Rightarrow \alpha$</td><td>Non promis (réciproque)</td></tr>
-</tbody>
-</table>
-
-. . .
-
-::: {.aretenir .smaller}
-Dans $\alpha \Rightarrow \beta$, la proposition de départ ($\alpha$) est **suffisante** et celle d'arrivée ($\beta$) est **nécessaire**. Pour traduire une phrase, on écrit d'abord l'implication : la flèche part toujours de la proposition suffisante.
-:::
-
-::: {.footer-note}
-Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncés simplifiés.
-:::
-
-## Suffisant n'est pas nécessaire {#contrat-sn3 .smaller}
-
-**Critère diagnostique :** « Si la glycémie à jeun d'une personne est d'au moins 7,0 mmol/L, alors cette personne a un diabète. »
-
-. . .
-
-Une glycémie à jeun d'au moins 7,0 mmol/L est une condition **suffisante** pour retenir un diabète : $\alpha \Rightarrow \beta$.
-
-. . .
-
-Elle n'est pas **nécessaire** : une HbA1c d'au moins 6,5 % suffit aussi à retenir un diabète. Une condition nécessaire demanderait $\beta \Rightarrow \alpha$, la réciproque, que le critère n'affirme pas.
-
-::: {.piege}
-::: {.pg-titre}
-Pièges
-:::
-Dire « nécessaire » pour la proposition de départ : cela renverse la flèche et donne la réciproque.
-:::
-
-::: {.footer-note}
-Source : Manuel MSD, version professionnelle, « Revue générale du diabète sucré », msdmanuals.com (consulté le 13 octobre 2026). Critère simplifié.
-:::
-
-## La négation : la rupture {#contrat-9 .smaller}
-
-Nier la promesse, c'est dire qu'elle est rompue.
-
-. . .
-
-La rupture est le cas « $\alpha$ vrai et $\beta$ faux » :
-
-$$\lnot(\alpha \Rightarrow \beta) \iff \alpha \land \lnot\beta$$
-
-::: {.tv}
-| $\alpha$ | $\beta$ | $\alpha \Rightarrow \beta$ | $\lnot(\alpha \Rightarrow \beta)$ | $\alpha \land \lnot\beta$ |
-|:--:|:--:|:--:|:--:|:--:|
-| V | V | V | F | F |
-| V | F | [F]{.f} | [V]{.f} | [V]{.f} |
-| F | V | V | F | F |
-| F | F | V | F | F |
-:::
-
-. . .
-
-::: {.aretenir .smaller}
-La promesse est tenue quand elle n'est pas rompue : $\alpha \Rightarrow \beta \iff \lnot(\alpha \land \lnot\beta) \iff \lnot\alpha \lor \beta$. Autrement dit, la condition n'est pas remplie, ou la promesse est exécutée.
-:::
-
-## Synthèse {#contrat-10}
-
-<table class="deroule" style="font-size:.7em">
-<thead><tr><th>Énoncé</th><th>Rompu quand</th><th>Colonne de $\alpha \Rightarrow \beta$</th></tr></thead>
-<tbody>
-<tr><td class="ph">Implication $\alpha \Rightarrow \beta$</td><td>$\alpha$ vrai et $\beta$ faux</td><td>—</td></tr>
-<tr><td class="ph">Réciproque $\beta \Rightarrow \alpha$</td><td>$\beta$ vrai et $\alpha$ faux</td><td>différente</td></tr>
-<tr><td class="ph">Contraposée $\lnot\beta \Rightarrow \lnot\alpha$</td><td>$\beta$ faux et $\alpha$ vrai</td><td>identique</td></tr>
-<tr><td class="ph">Négation $\lnot(\alpha \Rightarrow \beta)$</td><td>elle décrit la rupture : $\alpha \land \lnot\beta$</td><td>opposée</td></tr>
-<tr><td class="ph">Vocabulaire</td><td>$\alpha$ suffisante pour $\beta$ ; $\beta$ nécessaire pour $\alpha$</td><td>—</td></tr>
-</tbody>
-</table>
-
-::: {.piege}
-::: {.pg-titre}
-Pièges
-:::
-Croire que $\beta$ faux suffit à rompre la promesse : il faut aussi que $\alpha$ soit vrai. Confondre réciproque (on échange) et contraposée (on échange **et** on nie). Nier une implication par une autre implication.
-:::
-
+**Va là pour t'entraîner :** [exercices de renforcement](#/ex-logique) · **Pas encore fait le QCM ?** [par ici](#/qcm)
 
 # Corrections ciblées {.divider background-color="#14304a"}
 
@@ -771,6 +406,242 @@ Ce serait $\alpha \Rightarrow \lnot\beta$ : exactement la rupture de l'engagemen
 Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.
 :::
 
+# Le contrat {.divider background-color="#14304a"}
+
+## Une promesse {#contrat-1}
+
+La SNCB s'engage :
+
+::: {.promesse}
+« Si un train arrive avec **60 minutes de retard ou plus**, alors le voyageur reçoit **100 % du prix de son trajet**. »
+:::
+
+On note $\alpha$ : « le train arrive avec 60 minutes de retard ou plus » et $\beta$ : « le voyageur reçoit 100 % du prix de son trajet ».
+
+L'engagement s'écrit $\alpha \Rightarrow \beta$.
+
+::: {.footer-note}
+Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié : les exceptions et le délai de demande ne sont pas pris en compte.
+:::
+
+## Promesse tenue ou rompue ? {#contrat-2}
+
+Quatre situations imaginées. Pour chacune, note sur papier : la SNCB tient-elle sa promesse ?
+
+::: {.sit}
+| | Situation | $\alpha$ | $\beta$ |
+|:--:|:--|:--:|:--:|
+| 1 | Retard de 75 minutes, 100 % du trajet reçu | V | V |
+| 2 | Retard de 75 minutes, aucune compensation | V | F |
+| 3 | Retard de 45 minutes, 100 % du trajet reçu | F | V |
+| 4 | Retard de 45 minutes, aucune compensation | F | F |
+:::
+
+## Une seule rupture possible {#contrat-3}
+
+::: {.sit}
+| | Situation | $\alpha$ | $\beta$ | Promesse |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | Retard de 75 minutes, 100 % du trajet reçu | V | V | tenue |
+| 2 | Retard de 75 minutes, aucune compensation | V | F | [rompue]{.f} |
+| 3 | Retard de 45 minutes, 100 % du trajet reçu | F | V | tenue |
+| 4 | Retard de 45 minutes, aucune compensation | F | F | tenue |
+:::
+
+. . .
+
+::: {.aretenir .smaller}
+La promesse n'est rompue que dans **un seul** cas : la condition est remplie ($\alpha$ vrai) et la promesse n'est pas exécutée ($\beta$ faux).
+
+Aux lignes 3 et 4, la condition n'est pas remplie : la promesse ne dit rien, elle est automatiquement vérifiée.
+:::
+
+## La table de vérité {#contrat-4}
+
+Écrivons V pour « promesse tenue » et F pour « promesse rompue » :
+
+::: {.tv}
+| $\alpha$ | $\beta$ | $\alpha \Rightarrow \beta$ |
+|:--:|:--:|:--:|
+| V | V | V |
+| V | F | [F]{.f} |
+| F | V | V |
+| F | F | V |
+:::
+
+::: {.aretenir .smaller}
+La table de vérité de $\alpha \Rightarrow \beta$ n'est pas à apprendre : elle se relit comme un contrat. Elle vaut F sur la seule ligne où $\alpha$ est vrai et $\beta$ est faux.
+:::
+
+## La réciproque : un autre contrat {#contrat-5}
+
+On échange les rôles de $\alpha$ et $\beta$ :
+
+::: {.promesse}
+« Si le voyageur reçoit 100 % du prix de son trajet, alors le train a eu 60 minutes de retard ou plus. » $\quad \beta \Rightarrow \alpha$
+:::
+
+**Quand ce contrat est-il rompu ?**
+
+. . .
+
+Quand sa condition est remplie ($\beta$ vrai) et que sa conclusion ne l'est pas ($\alpha$ faux) : 100 % du trajet reçu sans 60 minutes de retard. C'est la ligne 3, celle où $\alpha \Rightarrow \beta$ était tenue.
+
+## La réciproque : une autre colonne {#contrat-6}
+
+::: {.tv}
+| $\alpha$ | $\beta$ | $\alpha \Rightarrow \beta$ | $\beta \Rightarrow \alpha$ |
+|:--:|:--:|:--:|:--:|
+| V | V | V | V |
+| V | F | [F]{.f} | V |
+| F | V | V | [F]{.f} |
+| F | F | V | V |
+:::
+
+::: {.aretenir .smaller}
+La réciproque est rompue sur une autre ligne : ce n'est pas le même contrat. Une implication et sa réciproque ne sont pas équivalentes.
+:::
+
+## La contraposée : le même contrat {#contrat-7}
+
+::: {.promesse}
+« Si le voyageur ne reçoit pas 100 % du prix de son trajet, alors le train a eu moins de 60 minutes de retard. » $\quad \lnot\beta \Rightarrow \lnot\alpha$
+:::
+
+**Quand ce contrat est-il rompu ?**
+
+. . .
+
+Quand $\lnot\beta$ est vrai et $\lnot\alpha$ est faux, c'est-à-dire quand $\beta$ est faux et $\alpha$ est vrai : retard de 60 minutes ou plus, sans compensation. C'est exactement la rupture de $\alpha \Rightarrow \beta$.
+
+## La contraposée : la même colonne {#contrat-8}
+
+::: {.tv}
+| $\alpha$ | $\beta$ | $\lnot\alpha$ | $\lnot\beta$ | $\alpha \Rightarrow \beta$ | $\lnot\beta \Rightarrow \lnot\alpha$ |
+|:--:|:--:|:--:|:--:|:--:|:--:|
+| V | V | F | F | V | V |
+| V | F | F | V | [F]{.f} | [F]{.f} |
+| F | V | V | F | V | V |
+| F | F | V | V | V | V |
+:::
+
+::: {.aretenir .smaller}
+Même rupture, donc même contrat : la contraposée est équivalente à l'implication.
+:::
+
+## Suffisant et nécessaire {#contrat-sn1 .smaller}
+
+::: {.promesse}
+« Si un train arrive avec 60 minutes de retard ou plus, alors le voyageur reçoit 100 % du prix de son trajet. » $\quad \alpha \Rightarrow \beta$
+:::
+
+**Un train a 60 minutes de retard ou plus. Le voyageur est-il sûr d'être compensé ?**
+
+. . .
+
+Oui : il suffit que $\alpha$ soit vrai pour obtenir $\beta$. On dit que $\alpha$ est une **condition suffisante** pour $\beta$.
+
+. . .
+
+**Un voyageur n'est pas compensé et l'engagement est tenu. Que sait-on du retard ?**
+
+. . .
+
+Il est inférieur à 60 minutes (contraposée) : sans $\beta$, pas de $\alpha$. On dit que $\beta$ est une **condition nécessaire** pour $\alpha$.
+
+::: {.footer-note}
+Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncé simplifié.
+:::
+
+## Suffisant, nécessaire : le test {#contrat-sn2}
+
+<table class="deroule" style="font-size:.66em">
+<thead><tr><th>Phrase</th><th>Implication</th><th>Engagement de la SNCB</th></tr></thead>
+<tbody>
+<tr><td>« Un retard d'au moins 60 min est suffisant pour être compensé. »</td><td>$\alpha \Rightarrow \beta$</td><td>Promis</td></tr>
+<tr><td>« Être compensé est nécessaire pour avoir un retard d'au moins 60 min. »</td><td>$\alpha \Rightarrow \beta$</td><td>Promis (même implication)</td></tr>
+<tr><td>« Un retard d'au moins 60 min est nécessaire pour être compensé. »</td><td>$\beta \Rightarrow \alpha$</td><td>Non promis (réciproque)</td></tr>
+<tr><td>« Être compensé est suffisant pour avoir un retard d'au moins 60 min. »</td><td>$\beta \Rightarrow \alpha$</td><td>Non promis (réciproque)</td></tr>
+</tbody>
+</table>
+
+. . .
+
+::: {.aretenir .smaller}
+Dans $\alpha \Rightarrow \beta$, la proposition de départ ($\alpha$) est **suffisante** et celle d'arrivée ($\beta$) est **nécessaire**. Pour traduire une phrase, on écrit d'abord l'implication : la flèche part toujours de la proposition suffisante.
+:::
+
+::: {.footer-note}
+Source : SNCB, « Réclamation pour retard en train : compensation », belgiantrain.be (consulté le 13 octobre 2026). Énoncés simplifiés.
+:::
+
+## Suffisant n'est pas nécessaire {#contrat-sn3 .smaller}
+
+**Critère diagnostique :** « Si la glycémie à jeun d'une personne est d'au moins 7,0 mmol/L, alors cette personne a un diabète. »
+
+. . .
+
+Une glycémie à jeun d'au moins 7,0 mmol/L est une condition **suffisante** pour retenir un diabète : $\alpha \Rightarrow \beta$.
+
+. . .
+
+Elle n'est pas **nécessaire** : une HbA1c d'au moins 6,5 % suffit aussi à retenir un diabète. Une condition nécessaire demanderait $\beta \Rightarrow \alpha$, la réciproque, que le critère n'affirme pas.
+
+::: {.piege}
+::: {.pg-titre}
+Pièges
+:::
+Dire « nécessaire » pour la proposition de départ : cela renverse la flèche et donne la réciproque.
+:::
+
+::: {.footer-note}
+Source : Manuel MSD, version professionnelle, « Revue générale du diabète sucré », msdmanuals.com (consulté le 13 octobre 2026). Critère simplifié.
+:::
+
+## La négation : la rupture {#contrat-9 .smaller}
+
+Nier la promesse, c'est dire qu'elle est rompue.
+
+. . .
+
+La rupture est le cas « $\alpha$ vrai et $\beta$ faux » :
+
+$$\lnot(\alpha \Rightarrow \beta) \iff \alpha \land \lnot\beta$$
+
+::: {.tv}
+| $\alpha$ | $\beta$ | $\alpha \Rightarrow \beta$ | $\lnot(\alpha \Rightarrow \beta)$ | $\alpha \land \lnot\beta$ |
+|:--:|:--:|:--:|:--:|:--:|
+| V | V | V | F | F |
+| V | F | [F]{.f} | [V]{.f} | [V]{.f} |
+| F | V | V | F | F |
+| F | F | V | F | F |
+:::
+
+. . .
+
+::: {.aretenir .smaller}
+La promesse est tenue quand elle n'est pas rompue : $\alpha \Rightarrow \beta \iff \lnot(\alpha \land \lnot\beta) \iff \lnot\alpha \lor \beta$. Autrement dit, la condition n'est pas remplie, ou la promesse est exécutée.
+:::
+
+## Synthèse {#contrat-10}
+
+<table class="deroule" style="font-size:.7em">
+<thead><tr><th>Énoncé</th><th>Rompu quand</th><th>Colonne de $\alpha \Rightarrow \beta$</th></tr></thead>
+<tbody>
+<tr><td class="ph">Implication $\alpha \Rightarrow \beta$</td><td>$\alpha$ vrai et $\beta$ faux</td><td>—</td></tr>
+<tr><td class="ph">Réciproque $\beta \Rightarrow \alpha$</td><td>$\beta$ vrai et $\alpha$ faux</td><td>différente</td></tr>
+<tr><td class="ph">Contraposée $\lnot\beta \Rightarrow \lnot\alpha$</td><td>$\beta$ faux et $\alpha$ vrai</td><td>identique</td></tr>
+<tr><td class="ph">Négation $\lnot(\alpha \Rightarrow \beta)$</td><td>elle décrit la rupture : $\alpha \land \lnot\beta$</td><td>opposée</td></tr>
+<tr><td class="ph">Vocabulaire</td><td>$\alpha$ suffisante pour $\beta$ ; $\beta$ nécessaire pour $\alpha$</td><td>—</td></tr>
+</tbody>
+</table>
+
+::: {.piege}
+::: {.pg-titre}
+Pièges
+:::
+Croire que $\beta$ faux suffit à rompre la promesse : il faut aussi que $\alpha$ soit vrai. Confondre réciproque (on échange) et contraposée (on échange **et** on nie). Nier une implication par une autre implication.
+:::
 
 # Exercices de renforcement {.divider background-color="#14304a"}
 
@@ -786,8 +657,8 @@ Source : SNCB, « Réclamation pour retard en train : compensation », belgiantr
 <tr><td class="ph">Q7</td><td>Suffisant, nécessaire</td><td><a href="#/ex-R6">R.6</a> (réciproque)</td></tr>
 </tbody></table>
 
-<div class="et-timer"><div class="et-box" data-default="1200">
-<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">20:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
+<div class="et-timer"><div class="et-box" data-default="1320">
+<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">22:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
 <div class="et-row"><button class="et-btn et-primary et-toggle" type="button">Démarrer</button><button class="et-btn et-reset" type="button">↺ Réinitialiser</button></div>
 </div></div>
 
@@ -871,14 +742,83 @@ On veut relier l'implication aux connecteurs $\lnot$, $\lor$, $\land$.
 
 <div class="qfoot"><a class="back-btn" href="#/ex-logique">← Exercices à réaliser pour consolider</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-R14">annexe — R.14</a></span></div>
 
-## Questions restantes
-
-À remplir pendant la recherche d'exercices (tri du mur).
-
-
-# Clôture {.divider background-color="#14304a"}
-
 ## Pour la suite
 
-- Les **solutions rédigées** des exercices et les corrections des questions de réserve sont dans le deck « Annexe » (page des slides, rubrique Remédiations).
-- Les questions du mur qui n'ont pas été traitées en séance n'auront pas de réponse écrite.
+- Les **solutions rédigées** des exercices et les corrections des questions de réserve sont dans le deck « Annexe » ([ouvrir l'annexe](02-annexe.html)).
+
+## Pas encore fait le QCM ? {#qcm}
+
+::: wooclap
+::: wc-play
+▶
+:::
+
+:::: wc-body
+**Ouvre le Wooclap, réponds seul·e**
+
+::: wc-lien
+Code : OBMKFUU
+:::
+::::
+
+::: {.wc-qr}
+![](img/qr-logique.png)
+:::
+:::
+
+7 questions, une seule réponse correcte par question. Le Wooclap contient les quatre thèmes : ouvre celui-ci, « La logique ».
+
+<div class="et-timer"><div class="et-box" data-default="540">
+<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">09:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
+<div class="et-row"><button class="et-btn et-primary et-toggle" type="button">Démarrer</button><button class="et-btn et-reset" type="button">↺ Réinitialiser</button></div>
+</div></div>
+
+```{=html}
+<script>
+(function () {
+  var audioCtx = null;
+  function beep() {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      var t0 = audioCtx.currentTime;
+      [0, 0.35].forEach(function (o) {
+        var osc = audioCtx.createOscillator(), g = audioCtx.createGain();
+        osc.type = 'sine'; osc.frequency.value = 880;
+        g.gain.setValueAtTime(0.0001, t0 + o);
+        g.gain.exponentialRampToValueAtTime(0.3, t0 + o + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + o + 0.28);
+        osc.connect(g); g.connect(audioCtx.destination);
+        osc.start(t0 + o); osc.stop(t0 + o + 0.3);
+      });
+    } catch (e) {}
+  }
+  function fmt(s) { s = Math.max(0, s); var m = Math.floor(s / 60), r = s % 60; return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r; }
+  function init() {
+  Array.prototype.forEach.call(document.querySelectorAll('.et-box'), function (box) {
+    var DEFAULT = parseInt(box.getAttribute('data-default'), 10) || 600;
+    var display = box.querySelector('.et-display'), btn = box.querySelector('.et-toggle');
+    var remaining = DEFAULT, running = false, id = null;
+    function render() {
+      display.textContent = fmt(remaining);
+      display.classList.toggle('et-warn', running && remaining <= 60 && remaining > 0);
+      display.classList.toggle('et-done', remaining === 0);
+    }
+    function stop() { running = false; btn.textContent = remaining > 0 ? 'Reprendre' : 'Démarrer'; if (id) { clearInterval(id); id = null; } }
+    function tick() { remaining -= 1; if (remaining <= 0) { remaining = 0; stop(); beep(); } render(); }
+    function start() {
+      if (running) return;
+      try { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); if (audioCtx.state === 'suspended') audioCtx.resume(); } catch (e) {}
+      if (remaining <= 0) remaining = DEFAULT;
+      render(); running = true; btn.textContent = 'Pause'; id = setInterval(tick, 1000);
+    }
+    btn.addEventListener('click', function () { running ? stop() : start(); });
+    box.querySelector('.et-minus').addEventListener('click', function () { remaining = Math.max(0, remaining - 60); render(); if (remaining === 0) stop(); });
+    box.querySelector('.et-plus').addEventListener('click', function () { remaining += 60; render(); });
+    box.querySelector('.et-reset').addEventListener('click', function () { stop(); remaining = DEFAULT; btn.textContent = 'Démarrer'; render(); });
+    render();
+  });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+```

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Génère les QR codes de la remédiation (mur de questions, Wooclap logique).
+"""Génère les QR codes de la remédiation (Wooclap en autonomie, code commun aux quatre thèmes).
 
     python3 make-qr.py        # depuis ce dossier ; dépendance : pip install "qrcode[pil]"
 
@@ -13,8 +13,7 @@ from pathlib import Path
 A_COMPLETER = "À COMPLÉTER"
 
 CODES = {
-    "qr-mur":     "XELAEPI",   # mur de questions
-    "qr-logique": "SDBMMIA",   # QCM Wooclap « logique »
+    "qr-logique": "OBMKFUU",   # QCM Wooclap « logique »
 }
 OUT = Path(__file__).parent / "img"
 OUT.mkdir(exist_ok=True)

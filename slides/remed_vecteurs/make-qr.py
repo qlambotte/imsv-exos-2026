@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
-"""Génère les QR codes de la remédiation (mur de questions, Wooclap vecteurs).
+"""Génère les QR codes de la remédiation (Wooclap en autonomie, code commun aux quatre thèmes).
 
     python3 make-qr.py        # depuis ce dossier ; dépendance : pip install "qrcode[pil]"
 
 Tant qu'un code vaut « À COMPLÉTER », le script écrit une image de remplacement
 (carré « QR À COMPLÉTER ») pour que le deck se rende sans image manquante.
 Renseigne les codes Wooclap ci-dessous, relance le script, puis mets à jour les textes
-« Code : À COMPLÉTER » dans 01-remediation.qmd (1 occurrence).
+« Code : À COMPLÉTER » dans 01-remediation.qmd.
 """
 from pathlib import Path
 
 A_COMPLETER = "À COMPLÉTER"
 
 CODES = {
-    "qr-mur":       "XELAEPI",   # mur de questions
-    "qr-vecteurs": "NXGUEPI",   # QCM Wooclap « vecteurs »
+    "qr-vecteurs": "OBMKFUU",   # QCM Wooclap « vecteurs »
 }
 OUT = Path(__file__).parent / "img"
 OUT.mkdir(exist_ok=True)

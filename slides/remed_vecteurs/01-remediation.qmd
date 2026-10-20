@@ -25,323 +25,37 @@ format:
     include-after-body: ../seance01/annotate.html
 ---
 
-# Ouverture {.divider background-color="#14304a"}
+## Par où commencer ? {#start .smaller}
 
-<style>
-.qrow{display:flex;gap:.8em;border-bottom:1px solid #e5e9ef;padding:.28em .2em;font-size:.6em;line-height:1.35;align-items:flex-start}
-.qrow .qans{flex:0 0 36%;font-weight:600}
-.qrow .qwhy{flex:1 1 auto}
-.qrow .qans p,.qrow .qwhy p{margin:0}
-.qrow.ok{background:#f2f7ff}
-.qrow.ok .qans::before{content:"✓ ";color:#276a2e;font-weight:700}
-.qstem{font-size:.78em}
-.qflex{display:flex;gap:1em;align-items:center}
-.qflex img{max-width:330px;max-height:230px;width:auto;height:auto}
-.reveal table.deroule a{font-weight:600}
-.et-box{display:flex;flex-direction:column;align-items:center;gap:.5em;padding:.6em 1.4em;background:#f2f7ff;border:1px solid #dbe7fb;border-radius:.6em}
-.et-timer{margin-top:.8em;display:flex;justify-content:center}
-@keyframes et-pulse{0%,100%{opacity:1}50%{opacity:.35}}
-.back{margin-top:.5em}
-.qfoot{display:flex;gap:1.2em;align-items:center;margin-top:.45em;font-size:.55em}
-.qfoot .back-btn{font-size:1em}
-.qfoot .muted{color:#5a6b7b}
-.back-btn{display:inline-block;font-size:.5em;font-weight:600;padding:.3em .8em;border:1.5px solid #1f5fbf;border-radius:.5em;color:#1f5fbf;background:#fff}
-.back-btn:hover{background:#1f5fbf;color:#fff;text-decoration:none!important}
-.exo-foot{margin-top:.8em;font-size:.55em}
-.sol{font-size:.8em}
-.sol.long{font-size:.68em}
-.sol.xlong{font-size:.6em}
-.tv table{margin:.3em auto;border-collapse:collapse;font-size:.8em}
-.tv th,.tv td{border:1px solid #cfd8e3;padding:.22em .9em;text-align:center}
-.tv th{background:#f4f7fa;color:#14304a}
-.tv .f{color:#b5381f;font-weight:700}
-.sit table{font-size:.72em;margin:.3em auto;border-collapse:collapse}
-.sit th,.sit td{border:1px solid #cfd8e3;padding:.25em .7em}
-.sit th{background:#f4f7fa;color:#14304a}
-.sit .f{color:#b5381f;font-weight:700}
-.promesse{border:2px solid #1f5fbf;border-radius:14px;background:#f2f7ff;padding:.6em 1em;text-align:center;font-size:1.05em;margin:.5em 0}
-.xs { font-size: .7em; }
-</style>
-<style>
-.cle-cols{display:flex;gap:1.2em;align-items:center}
-.reveal .columns{align-items:center}
-</style>
-
-## Déroulé
-
-<table class="deroule" style="font-size:.8em">
-<thead><tr><th>Temps</th><th>Durée</th><th>Contenu</th></tr></thead>
-<tbody>
-<tr><td class="ph">Ouverture</td><td class="du">4 min</td><td>Principe de la séance, mur de questions</td></tr>
-<tr><td class="ph">QCM</td><td class="du">9 min</td><td>Sept questions sur Wooclap, seul·e, sans discuter</td></tr>
-<tr><td class="ph">Notions clés</td><td class="du">17 min</td><td>Déplacement, coordonnées, angles, sinus ou cosinus, produit scalaire</td></tr>
-<tr><td class="ph">Corrections ciblées</td><td class="du">8 min</td><td>Seules les questions les moins réussies sont reprises</td></tr>
-<tr><td class="ph">Exercices</td><td class="du">18 min</td><td>Recherche sur papier, choisie d'après tes résultats au QCM</td></tr>
-<tr><td class="ph">Questions</td><td class="du">4 min</td><td>Questions du mur restantes</td></tr>
-</tbody>
-</table>
-## Le mur de questions
-
-::: wooclap
-::: wc-play
-▶
-:::
-
-:::: wc-body
-**Pose tes questions, anonymement**
-
-::: wc-lien
-Code : XELAEPI
-:::
-::::
-
-::: {.wc-qr}
-![](img/qr-mur.png)
-:::
-:::
-
-- **2 à 3 questions au maximum** par personne.
-- **Vote** pour les questions des autres : celles qui reçoivent le plus de votes passent en premier.
-- Je ne répondrai pas à toutes les questions.
-- Les réponses se donnent en séance : il n'y aura pas de réponse écrite ensuite.
-
-# QCM {.divider background-color="#14304a"}
-
-## QCM — Wooclap (9 min) {#qcm-v}
-
-::: wooclap
-::: wc-play
-▶
-:::
-
-:::: wc-body
-**Ouvre le Wooclap, réponds seul·e**
-
-::: wc-lien
-Code : NXGUEPI
-:::
-::::
-
-::: {.wc-qr}
-![](img/qr-vecteurs.png)
-:::
-:::
-
-7 questions, une seule réponse correcte par question.
-
-<div class="et-timer"><div class="et-box" data-default="540">
-<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">09:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
-<div class="et-row"><button class="et-btn et-primary et-toggle" type="button">Démarrer</button><button class="et-btn et-reset" type="button">↺ Réinitialiser</button></div>
-</div></div>
-
-```{=html}
-<script>
-(function () {
-  var audioCtx = null;
-  function beep() {
-    try {
-      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      var t0 = audioCtx.currentTime;
-      [0, 0.35].forEach(function (o) {
-        var osc = audioCtx.createOscillator(), g = audioCtx.createGain();
-        osc.type = 'sine'; osc.frequency.value = 880;
-        g.gain.setValueAtTime(0.0001, t0 + o);
-        g.gain.exponentialRampToValueAtTime(0.3, t0 + o + 0.02);
-        g.gain.exponentialRampToValueAtTime(0.0001, t0 + o + 0.28);
-        osc.connect(g); g.connect(audioCtx.destination);
-        osc.start(t0 + o); osc.stop(t0 + o + 0.3);
-      });
-    } catch (e) {}
-  }
-  function fmt(s) { s = Math.max(0, s); var m = Math.floor(s / 60), r = s % 60; return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r; }
-  function init() {
-  Array.prototype.forEach.call(document.querySelectorAll('.et-box'), function (box) {
-    var DEFAULT = parseInt(box.getAttribute('data-default'), 10) || 600;
-    var display = box.querySelector('.et-display'), btn = box.querySelector('.et-toggle');
-    var remaining = DEFAULT, running = false, id = null;
-    function render() {
-      display.textContent = fmt(remaining);
-      display.classList.toggle('et-warn', running && remaining <= 60 && remaining > 0);
-      display.classList.toggle('et-done', remaining === 0);
-    }
-    function stop() { running = false; btn.textContent = remaining > 0 ? 'Reprendre' : 'Démarrer'; if (id) { clearInterval(id); id = null; } }
-    function tick() { remaining -= 1; if (remaining <= 0) { remaining = 0; stop(); beep(); } render(); }
-    function start() {
-      if (running) return;
-      try { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); if (audioCtx.state === 'suspended') audioCtx.resume(); } catch (e) {}
-      if (remaining <= 0) remaining = DEFAULT;
-      render(); running = true; btn.textContent = 'Pause'; id = setInterval(tick, 1000);
-    }
-    btn.addEventListener('click', function () { running ? stop() : start(); });
-    box.querySelector('.et-minus').addEventListener('click', function () { remaining = Math.max(0, remaining - 60); render(); if (remaining === 0) stop(); });
-    box.querySelector('.et-plus').addEventListener('click', function () { remaining += 60; render(); });
-    box.querySelector('.et-reset').addEventListener('click', function () { stop(); remaining = DEFAULT; btn.textContent = 'Démarrer'; render(); });
-    render();
-  });
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
-})();
-</script>
-```
-
-# Notions clés {.divider background-color="#14304a"}
-
-## Un vecteur est un déplacement {#cle-v1}
+Tu as fait le QCM. Va directement à ce dont tu as besoin.
 
 :::: {.columns}
-::: {.column width="42%"}
-<svg viewBox="0 0 328 284" width="330" height="283" role="img" aria-label="Déplacement du point A(3 ; 1) au point B(−1 ; 4)"><line x1="10" y1="274" x2="10" y2="10" stroke="#e5e9ef"/><line x1="54" y1="274" x2="54" y2="10" stroke="#e5e9ef"/><line x1="98" y1="274" x2="98" y2="10" stroke="#e5e9ef"/><line x1="142" y1="274" x2="142" y2="10" stroke="#e5e9ef"/><line x1="186" y1="274" x2="186" y2="10" stroke="#e5e9ef"/><line x1="230" y1="274" x2="230" y2="10" stroke="#e5e9ef"/><line x1="274" y1="274" x2="274" y2="10" stroke="#e5e9ef"/><line x1="318" y1="274" x2="318" y2="10" stroke="#e5e9ef"/><line x1="10" y1="274" x2="318" y2="274" stroke="#e5e9ef"/><line x1="10" y1="230" x2="318" y2="230" stroke="#e5e9ef"/><line x1="10" y1="186" x2="318" y2="186" stroke="#e5e9ef"/><line x1="10" y1="142" x2="318" y2="142" stroke="#e5e9ef"/><line x1="10" y1="98" x2="318" y2="98" stroke="#e5e9ef"/><line x1="10" y1="54" x2="318" y2="54" stroke="#e5e9ef"/><line x1="10" y1="10" x2="318" y2="10" stroke="#e5e9ef"/><line x1="10" y1="230" x2="318" y2="230" stroke="#14304a"/><line x1="98" y1="274" x2="98" y2="10" stroke="#14304a"/><line x1="230" y1="186" x2="54" y2="186" stroke="#b5381f" stroke-dasharray="5 4"/><line x1="54" y1="186" x2="54" y2="54" stroke="#b5381f" stroke-dasharray="5 4"/><defs><marker id="ah-disp" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#1f5fbf"/></marker></defs><line x1="230" y1="186" x2="61" y2="49" stroke="#1f5fbf" stroke-width="4" marker-end="url(#ah-disp)"/><circle cx="230" cy="186" r="6" fill="#14304a"/><circle cx="54" cy="54" r="6" fill="#14304a"/><text x="238" y="208" font-size="18" fill="#14304a">A</text><text x="32" y="46" font-size="18" fill="#14304a">B</text></svg>
+::: {.column width="52%"}
+**Va là pour le correctif du QCM :**
+
+- [Q1 · Coordonnées d'un déplacement](#/q-V1)
+- [Q2 · Somme et multiple de vecteurs](#/q-V2)
+- [Q3 · Somme de déplacements enchaînés](#/q-V3)
+- [Q4 · Coordonnée d'une force : sinus ou cosinus ?](#/q-V4)
+- [Q5 · Angle d'un vecteur : quadrant et tangente](#/q-V5)
+- [Q6 · Produit scalaire : valeur et signe](#/q-V6)
+- [Q7 · Colinéarité](#/q-V7)
+- [Tout le correctif, avec les exercices de renforcement](#/nav-v)
 :::
-::: {.column width="58%"}
-Un randonneur va du point $A = (3,\ 1)$ au point $B = (-1,\ 4)$, en kilomètres. **De combien se déplace-t-il selon $x$ ? selon $y$ ?**
+::: {.column width="48%"}
+**Va là pour un rappel théorique sur :**
 
-::: {.fragment}
-Selon $x$ : $-1 - 3 = -4$. Selon $y$ : $4 - 1 = 3$.
-
-$$\overrightarrow{AB} = (x_B - x_A,\ y_B - y_A) = (-4,\ 3)$$
-:::
-
-::: {.fragment}
-Arrivée moins départ. Dans l'autre sens, $\overrightarrow{BA} = (4,\ -3) = -\overrightarrow{AB}$.
-:::
-:::
-::::
-
-## Enchaîner des déplacements {#cle-v2}
-
-**Après le déplacement $(2,\ 1)$, le randonneur fait encore $(1,\ 3)$. Quel est son déplacement total ?**
-
-. . .
-
-On additionne coordonnée par coordonnée : $(2 + 1,\ 1 + 3) = (3,\ 4)$. En lettres, $\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}$.
-
-. . .
-
-**Il répète trois fois le déplacement $(2,\ 1)$ : que vaut le total ?** $3\,(2,\ 1) = (6,\ 3)$ : on multiplie chaque coordonnée.
-
-. . .
-
-**Quand deux vecteurs sont-ils colinéaires ?** Quand l'un est un multiple de l'autre : $(3,\ -6) = -3\,(-1,\ 2)$ est colinéaire à $(-1,\ 2)$, mais $(3,\ 6)$ ne l'est pas, car il faudrait $\lambda = -3$ pour la première coordonnée et $\lambda = 3$ pour la seconde.
-
-## Les angles associés {#cle-v3 .smaller}
-
-:::: {.columns}
-::: {.column width="34%"}
-<svg viewBox="0 0 360 360" width="300" height="300" role="img" aria-label="Cercle trigonométrique avec les points d'angles 30, 150, 210 et 330 degrés"><circle cx="180" cy="180" r="140" fill="none" stroke="#14304a" stroke-width="2"/><line x1="10" y1="180" x2="350" y2="180" stroke="#14304a"/><line x1="180" y1="10" x2="180" y2="350" stroke="#14304a"/><text x="346" y="200" font-size="16" text-anchor="end" fill="#14304a">x</text><text x="192" y="22" font-size="16" fill="#14304a">y</text><line x1="301.2" y1="110.0" x2="301.2" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="301.2" cy="110.0" r="6" fill="#b5381f"/><text x="323.8" y="102.0" text-anchor="middle" font-size="18" fill="#14304a">30°</text><line x1="58.8" y1="110.0" x2="58.8" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="58.8" cy="110.0" r="6" fill="#b5381f"/><text x="36.2" y="102.0" text-anchor="middle" font-size="18" fill="#14304a">150°</text><line x1="58.8" y1="250.0" x2="58.8" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="58.8" cy="250.0" r="6" fill="#b5381f"/><text x="36.2" y="268.0" text-anchor="middle" font-size="18" fill="#14304a">210°</text><line x1="301.2" y1="250.0" x2="301.2" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="301.2" cy="250.0" r="6" fill="#b5381f"/><text x="323.8" y="268.0" text-anchor="middle" font-size="18" fill="#14304a">330°</text></svg>
-:::
-::: {.column width="66%"}
-Le point d'angle $\theta$ du cercle trigonométrique a pour coordonnées $(\cos\theta,\ \sin\theta)$. **Que remarques-tu sur ces quatre points ?**
-
-::: {.fragment}
-::: {.tv}
-| $\theta$ | Quadrant | Angle aigu avec l'axe des $x$ | $\cos\theta$ | $\sin\theta$ |
-|:--:|:--:|:--:|:--:|:--:|
-| $30°$ | I | $30°$ | $+\frac{\sqrt3}{2}$ | $+\frac12$ |
-| $150°$ | II | $180° - 150° = 30°$ | $-\frac{\sqrt3}{2}$ | $+\frac12$ |
-| $210°$ | III | $210° - 180° = 30°$ | $-\frac{\sqrt3}{2}$ | $-\frac12$ |
-| $330°$ | IV | $360° - 330° = 30°$ | $+\frac{\sqrt3}{2}$ | $-\frac12$ |
-:::
-:::
+- [Un vecteur est un déplacement](#/cle-v1)
+- [Enchaîner des déplacements](#/cle-v2)
+- [Les angles associés](#/cle-v3)
+- [De l'angle aux coordonnées, et retour](#/cle-v4)
+- [Sinus ou cosinus ?](#/cle-v5)
+- [Le produit scalaire : un nombre](#/cle-v6)
+- [Quatre opérations, deux types de résultats](#/cle-v7)
 :::
 ::::
 
-::: {.fragment}
-::: {.aretenir .smaller}
-L'angle aigu avec l'axe des $x$ (l'angle de référence) fixe les valeurs de $\cos$ et de $\sin$ au signe près. Le quadrant fixe les signes.
-:::
-:::
-
-## De l'angle aux coordonnées, et retour {#cle-v4 .smaller}
-
-**Retrouver l'angle $\theta \in [0°,\ 360°[$ du vecteur $\vec w = (-1,\ \sqrt3)$.**
-
-. . .
-
-1. **Quadrant** : $w_x < 0$ et $w_y > 0$, donc le deuxième quadrant.
-
-. . .
-
-2. **Angle aigu avec l'axe des $x$** : $\tan = \dfrac{w_y}{w_x} = -\sqrt3$. La valeur absolue $\sqrt3$ correspond à $60°$.
-
-. . .
-
-3. **Angle** : dans le deuxième quadrant, $\theta = 180° - 60° = 120°$.
-
-. . .
-
-**Contrôle** : $\left\Vert \vec w \right\Vert = \sqrt{1 + 3} = 2$ et $2\,(\cos 120°,\ \sin 120°) = 2\left(-\dfrac12,\ \dfrac{\sqrt3}{2}\right) = (-1,\ \sqrt3)$.
-
-::: {.aretenir .smaller}
-La tangente seule ne suffit pas : $(-1, \sqrt3)$ et $(1, -\sqrt3)$ ont la même tangente, $-\sqrt3$. C'est le quadrant qui tranche.
-:::
-
-## Sinus ou cosinus ? {#cle-v5 .smaller}
-
-Une force de $10$ N fait un angle de $30°$ avec un axe. Quelles sont ses coordonnées ?
-
-<div style="display:flex;gap:1em;justify-content:center;align-items:flex-start">
-<div><svg viewBox="0 0 260 200" width="170" height="129" role="img" aria-label="Force de 10 newtons, 30° depuis l'horizontale"><line x1="30" y1="170" x2="250" y2="170" stroke="#14304a"/><line x1="30" y1="170" x2="30" y2="20" stroke="#14304a"/><line x1="159.9" y1="95.0" x2="159.9" y2="170" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="95.0" x2="159.9" y2="95.0" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="170" x2="159.9" y2="95.0" stroke="#1f5fbf" stroke-width="4"/><circle cx="159.9" cy="95.0" r="5" fill="#1f5fbf"/><text x="92" y="162" font-size="16" fill="#14304a">30°</text><text x="169.9" y="89.0" font-size="16" fill="#1f5fbf">10 N</text></svg><div style="font-size:.6em;text-align:center">30° depuis l'horizontale</div></div>
-<div><svg viewBox="0 0 260 200" width="170" height="129" role="img" aria-label="Force de 10 newtons, 30° depuis la verticale"><line x1="30" y1="170" x2="250" y2="170" stroke="#14304a"/><line x1="30" y1="170" x2="30" y2="20" stroke="#14304a"/><line x1="105.0" y1="40.1" x2="105.0" y2="170" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="40.1" x2="105.0" y2="40.1" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="170" x2="105.0" y2="40.1" stroke="#1f5fbf" stroke-width="4"/><circle cx="105.0" cy="40.1" r="5" fill="#1f5fbf"/><text x="38" y="90" font-size="16" fill="#14304a">30°</text><text x="115.0" y="34.1" font-size="16" fill="#1f5fbf">10 N</text></svg><div style="font-size:.6em;text-align:center">30° depuis la verticale</div></div>
-</div>
-
-**Fais tendre l'angle vers $0°$ : quelle coordonnée devient toute la force ?**
-
-. . .
-
-::: {.tv}
-| Angle mesuré depuis | Coordonnée horizontale | Coordonnée verticale |
-|:--:|:--:|:--:|
-| l'horizontale | $10\cos 30° = 5\sqrt3$ | $10\sin 30° = 5$ |
-| la verticale | $10\sin 30° = 5$ | $10\cos 30° = 5\sqrt3$ |
-:::
-
-. . .
-
-::: {.aretenir .smaller}
-La coordonnée le long de l'axe depuis lequel l'angle est mesuré porte le cosinus ($\cos 0° = 1$) ; l'autre porte le sinus ($\sin 0° = 0$). Le quadrant donne ensuite les signes.
-:::
-
-## Le produit scalaire : un nombre {#cle-v6 .smaller}
-
-**Calcule $\vec u \cdot \vec v = u_x v_x + u_y v_y$ pour ces trois paires, puis compare avec l'angle entre les vecteurs.**
-
-::: {.tv}
-| $\vec u$ | $\vec v$ | Angle entre $\vec u$ et $\vec v$ | $\vec u \cdot \vec v$ |
-|:--:|:--:|:--:|:--:|
-| $(2,\ 0)$ | $(3,\ 0)$ | $0°$ | $6$ |
-| $(2,\ 0)$ | $(0,\ 3)$ | $90°$ | $0$ |
-| $(2,\ 0)$ | $(-3,\ 0)$ | $180°$ | $-6$ |
-:::
-
-. . .
-
-Dans les trois cas, $\left\Vert \vec u \right\Vert \left\Vert \vec v \right\Vert \cos\theta = 2 \cdot 3 \cdot \cos\theta$ donne le même résultat :
-$$\vec u \cdot \vec v = u_x v_x + u_y v_y = \left\Vert \vec u \right\Vert \left\Vert \vec v \right\Vert \cos\theta$$
-
-. . .
-
-::: {.aretenir .smaller}
-Le produit scalaire est un **nombre**. Son signe est celui de $\cos\theta$ : positif pour un angle aigu, nul pour un angle droit (vecteurs orthogonaux), négatif pour un angle obtus.
-:::
-
-## Quatre opérations, deux types de résultats {#cle-v7 .smaller}
-
-<table class="deroule" style="font-size:.7em">
-<thead><tr><th>Opération</th><th>Résultat</th><th>À retenir</th></tr></thead>
-<tbody>
-<tr><td class="ph">Somme $\vec u + \vec v$</td><td>un vecteur</td><td>coordonnée par coordonnée ; enchaînement des déplacements</td></tr>
-<tr><td class="ph">Multiple $\lambda\vec u$</td><td>un vecteur</td><td>colinéaire à $\vec u$ ; même sens si $\lambda > 0$</td></tr>
-<tr><td class="ph">Produit scalaire $\vec u \cdot \vec v$</td><td>un <b>nombre</b></td><td>nul : vecteurs orthogonaux</td></tr>
-<tr><td class="ph">Produit vectoriel $\vec u \times \vec v$ (dans $\mathbb{R}^3$)</td><td>un vecteur</td><td>perpendiculaire aux deux ; sens par la règle de la main droite ; norme $\left\Vert \vec u \right\Vert \left\Vert \vec v \right\Vert \sin\theta$</td></tr>
-</tbody>
-</table>
-
-::: {.piege}
-::: {.pg-titre}
-Pièges
-:::
-Écrire le produit scalaire comme un vecteur. Confondre produit scalaire nul (orthogonaux) et colinéarité. Inverser l'ordre dans $\vec u \times \vec v$ : le sens change.
-:::
+**Va là pour t'entraîner :** [exercices de renforcement](#/ex-v) · **Pas encore fait le QCM ?** [par ici](#/qcm-v)
 
 # Corrections ciblées {.divider background-color="#14304a"}
 
@@ -665,6 +379,165 @@ Le produit en croix a été mal posé ($2k = 6 \cdot (-3)$). Il faut écrire $(k
 
 <div class="qfoot"><a class="back-btn" href="#/nav-v">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-v-R3">R.3(a)(b)</a></span></div>
 
+# Notions clés {.divider background-color="#14304a"}
+
+## Un vecteur est un déplacement {#cle-v1}
+
+:::: {.columns}
+::: {.column width="42%"}
+<svg viewBox="0 0 328 284" width="330" height="283" role="img" aria-label="Déplacement du point A(3 ; 1) au point B(−1 ; 4)"><line x1="10" y1="274" x2="10" y2="10" stroke="#e5e9ef"/><line x1="54" y1="274" x2="54" y2="10" stroke="#e5e9ef"/><line x1="98" y1="274" x2="98" y2="10" stroke="#e5e9ef"/><line x1="142" y1="274" x2="142" y2="10" stroke="#e5e9ef"/><line x1="186" y1="274" x2="186" y2="10" stroke="#e5e9ef"/><line x1="230" y1="274" x2="230" y2="10" stroke="#e5e9ef"/><line x1="274" y1="274" x2="274" y2="10" stroke="#e5e9ef"/><line x1="318" y1="274" x2="318" y2="10" stroke="#e5e9ef"/><line x1="10" y1="274" x2="318" y2="274" stroke="#e5e9ef"/><line x1="10" y1="230" x2="318" y2="230" stroke="#e5e9ef"/><line x1="10" y1="186" x2="318" y2="186" stroke="#e5e9ef"/><line x1="10" y1="142" x2="318" y2="142" stroke="#e5e9ef"/><line x1="10" y1="98" x2="318" y2="98" stroke="#e5e9ef"/><line x1="10" y1="54" x2="318" y2="54" stroke="#e5e9ef"/><line x1="10" y1="10" x2="318" y2="10" stroke="#e5e9ef"/><line x1="10" y1="230" x2="318" y2="230" stroke="#14304a"/><line x1="98" y1="274" x2="98" y2="10" stroke="#14304a"/><line x1="230" y1="186" x2="54" y2="186" stroke="#b5381f" stroke-dasharray="5 4"/><line x1="54" y1="186" x2="54" y2="54" stroke="#b5381f" stroke-dasharray="5 4"/><defs><marker id="ah-disp" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#1f5fbf"/></marker></defs><line x1="230" y1="186" x2="61" y2="49" stroke="#1f5fbf" stroke-width="4" marker-end="url(#ah-disp)"/><circle cx="230" cy="186" r="6" fill="#14304a"/><circle cx="54" cy="54" r="6" fill="#14304a"/><text x="238" y="208" font-size="18" fill="#14304a">A</text><text x="32" y="46" font-size="18" fill="#14304a">B</text></svg>
+:::
+::: {.column width="58%"}
+Un randonneur va du point $A = (3,\ 1)$ au point $B = (-1,\ 4)$, en kilomètres. **De combien se déplace-t-il selon $x$ ? selon $y$ ?**
+
+::: {.fragment}
+Selon $x$ : $-1 - 3 = -4$. Selon $y$ : $4 - 1 = 3$.
+
+$$\overrightarrow{AB} = (x_B - x_A,\ y_B - y_A) = (-4,\ 3)$$
+:::
+
+::: {.fragment}
+Arrivée moins départ. Dans l'autre sens, $\overrightarrow{BA} = (4,\ -3) = -\overrightarrow{AB}$.
+:::
+:::
+::::
+
+## Enchaîner des déplacements {#cle-v2}
+
+**Après le déplacement $(2,\ 1)$, le randonneur fait encore $(1,\ 3)$. Quel est son déplacement total ?**
+
+. . .
+
+On additionne coordonnée par coordonnée : $(2 + 1,\ 1 + 3) = (3,\ 4)$. En lettres, $\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}$.
+
+. . .
+
+**Il répète trois fois le déplacement $(2,\ 1)$ : que vaut le total ?** $3\,(2,\ 1) = (6,\ 3)$ : on multiplie chaque coordonnée.
+
+. . .
+
+**Quand deux vecteurs sont-ils colinéaires ?** Quand l'un est un multiple de l'autre : $(3,\ -6) = -3\,(-1,\ 2)$ est colinéaire à $(-1,\ 2)$, mais $(3,\ 6)$ ne l'est pas, car il faudrait $\lambda = -3$ pour la première coordonnée et $\lambda = 3$ pour la seconde.
+
+## Les angles associés {#cle-v3 .smaller}
+
+:::: {.columns}
+::: {.column width="34%"}
+<svg viewBox="0 0 360 360" width="300" height="300" role="img" aria-label="Cercle trigonométrique avec les points d'angles 30, 150, 210 et 330 degrés"><circle cx="180" cy="180" r="140" fill="none" stroke="#14304a" stroke-width="2"/><line x1="10" y1="180" x2="350" y2="180" stroke="#14304a"/><line x1="180" y1="10" x2="180" y2="350" stroke="#14304a"/><text x="346" y="200" font-size="16" text-anchor="end" fill="#14304a">x</text><text x="192" y="22" font-size="16" fill="#14304a">y</text><line x1="301.2" y1="110.0" x2="301.2" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="301.2" cy="110.0" r="6" fill="#b5381f"/><text x="323.8" y="102.0" text-anchor="middle" font-size="18" fill="#14304a">30°</text><line x1="58.8" y1="110.0" x2="58.8" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="58.8" cy="110.0" r="6" fill="#b5381f"/><text x="36.2" y="102.0" text-anchor="middle" font-size="18" fill="#14304a">150°</text><line x1="58.8" y1="250.0" x2="58.8" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="58.8" cy="250.0" r="6" fill="#b5381f"/><text x="36.2" y="268.0" text-anchor="middle" font-size="18" fill="#14304a">210°</text><line x1="301.2" y1="250.0" x2="301.2" y2="180" stroke="#b5381f" stroke-dasharray="4 4"/><circle cx="301.2" cy="250.0" r="6" fill="#b5381f"/><text x="323.8" y="268.0" text-anchor="middle" font-size="18" fill="#14304a">330°</text></svg>
+:::
+::: {.column width="66%"}
+Le point d'angle $\theta$ du cercle trigonométrique a pour coordonnées $(\cos\theta,\ \sin\theta)$. **Que remarques-tu sur ces quatre points ?**
+
+::: {.fragment}
+::: {.tv}
+| $\theta$ | Quadrant | Angle aigu avec l'axe des $x$ | $\cos\theta$ | $\sin\theta$ |
+|:--:|:--:|:--:|:--:|:--:|
+| $30°$ | I | $30°$ | $+\frac{\sqrt3}{2}$ | $+\frac12$ |
+| $150°$ | II | $180° - 150° = 30°$ | $-\frac{\sqrt3}{2}$ | $+\frac12$ |
+| $210°$ | III | $210° - 180° = 30°$ | $-\frac{\sqrt3}{2}$ | $-\frac12$ |
+| $330°$ | IV | $360° - 330° = 30°$ | $+\frac{\sqrt3}{2}$ | $-\frac12$ |
+:::
+:::
+:::
+::::
+
+::: {.fragment}
+::: {.aretenir .smaller}
+L'angle aigu avec l'axe des $x$ (l'angle de référence) fixe les valeurs de $\cos$ et de $\sin$ au signe près. Le quadrant fixe les signes.
+:::
+:::
+
+## De l'angle aux coordonnées, et retour {#cle-v4 .smaller}
+
+**Retrouver l'angle $\theta \in [0°,\ 360°[$ du vecteur $\vec w = (-1,\ \sqrt3)$.**
+
+. . .
+
+1. **Quadrant** : $w_x < 0$ et $w_y > 0$, donc le deuxième quadrant.
+
+. . .
+
+2. **Angle aigu avec l'axe des $x$** : $\tan = \dfrac{w_y}{w_x} = -\sqrt3$. La valeur absolue $\sqrt3$ correspond à $60°$.
+
+. . .
+
+3. **Angle** : dans le deuxième quadrant, $\theta = 180° - 60° = 120°$.
+
+. . .
+
+**Contrôle** : $\left\Vert \vec w \right\Vert = \sqrt{1 + 3} = 2$ et $2\,(\cos 120°,\ \sin 120°) = 2\left(-\dfrac12,\ \dfrac{\sqrt3}{2}\right) = (-1,\ \sqrt3)$.
+
+::: {.aretenir .smaller}
+La tangente seule ne suffit pas : $(-1, \sqrt3)$ et $(1, -\sqrt3)$ ont la même tangente, $-\sqrt3$. C'est le quadrant qui tranche.
+:::
+
+## Sinus ou cosinus ? {#cle-v5 .smaller}
+
+Une force de $10$ N fait un angle de $30°$ avec un axe. Quelles sont ses coordonnées ?
+
+<div style="display:flex;gap:1em;justify-content:center;align-items:flex-start">
+<div><svg viewBox="0 0 260 200" width="170" height="129" role="img" aria-label="Force de 10 newtons, 30° depuis l'horizontale"><line x1="30" y1="170" x2="250" y2="170" stroke="#14304a"/><line x1="30" y1="170" x2="30" y2="20" stroke="#14304a"/><line x1="159.9" y1="95.0" x2="159.9" y2="170" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="95.0" x2="159.9" y2="95.0" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="170" x2="159.9" y2="95.0" stroke="#1f5fbf" stroke-width="4"/><circle cx="159.9" cy="95.0" r="5" fill="#1f5fbf"/><text x="92" y="162" font-size="16" fill="#14304a">30°</text><text x="169.9" y="89.0" font-size="16" fill="#1f5fbf">10 N</text></svg><div style="font-size:.6em;text-align:center">30° depuis l'horizontale</div></div>
+<div><svg viewBox="0 0 260 200" width="170" height="129" role="img" aria-label="Force de 10 newtons, 30° depuis la verticale"><line x1="30" y1="170" x2="250" y2="170" stroke="#14304a"/><line x1="30" y1="170" x2="30" y2="20" stroke="#14304a"/><line x1="105.0" y1="40.1" x2="105.0" y2="170" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="40.1" x2="105.0" y2="40.1" stroke="#b5381f" stroke-dasharray="4 4"/><line x1="30" y1="170" x2="105.0" y2="40.1" stroke="#1f5fbf" stroke-width="4"/><circle cx="105.0" cy="40.1" r="5" fill="#1f5fbf"/><text x="38" y="90" font-size="16" fill="#14304a">30°</text><text x="115.0" y="34.1" font-size="16" fill="#1f5fbf">10 N</text></svg><div style="font-size:.6em;text-align:center">30° depuis la verticale</div></div>
+</div>
+
+**Fais tendre l'angle vers $0°$ : quelle coordonnée devient toute la force ?**
+
+. . .
+
+::: {.tv}
+| Angle mesuré depuis | Coordonnée horizontale | Coordonnée verticale |
+|:--:|:--:|:--:|
+| l'horizontale | $10\cos 30° = 5\sqrt3$ | $10\sin 30° = 5$ |
+| la verticale | $10\sin 30° = 5$ | $10\cos 30° = 5\sqrt3$ |
+:::
+
+. . .
+
+::: {.aretenir .smaller}
+La coordonnée le long de l'axe depuis lequel l'angle est mesuré porte le cosinus ($\cos 0° = 1$) ; l'autre porte le sinus ($\sin 0° = 0$). Le quadrant donne ensuite les signes.
+:::
+
+## Le produit scalaire : un nombre {#cle-v6 .smaller}
+
+**Calcule $\vec u \cdot \vec v = u_x v_x + u_y v_y$ pour ces trois paires, puis compare avec l'angle entre les vecteurs.**
+
+::: {.tv}
+| $\vec u$ | $\vec v$ | Angle entre $\vec u$ et $\vec v$ | $\vec u \cdot \vec v$ |
+|:--:|:--:|:--:|:--:|
+| $(2,\ 0)$ | $(3,\ 0)$ | $0°$ | $6$ |
+| $(2,\ 0)$ | $(0,\ 3)$ | $90°$ | $0$ |
+| $(2,\ 0)$ | $(-3,\ 0)$ | $180°$ | $-6$ |
+:::
+
+. . .
+
+Dans les trois cas, $\left\Vert \vec u \right\Vert \left\Vert \vec v \right\Vert \cos\theta = 2 \cdot 3 \cdot \cos\theta$ donne le même résultat :
+$$\vec u \cdot \vec v = u_x v_x + u_y v_y = \left\Vert \vec u \right\Vert \left\Vert \vec v \right\Vert \cos\theta$$
+
+. . .
+
+::: {.aretenir .smaller}
+Le produit scalaire est un **nombre**. Son signe est celui de $\cos\theta$ : positif pour un angle aigu, nul pour un angle droit (vecteurs orthogonaux), négatif pour un angle obtus.
+:::
+
+## Quatre opérations, deux types de résultats {#cle-v7 .smaller}
+
+<table class="deroule" style="font-size:.7em">
+<thead><tr><th>Opération</th><th>Résultat</th><th>À retenir</th></tr></thead>
+<tbody>
+<tr><td class="ph">Somme $\vec u + \vec v$</td><td>un vecteur</td><td>coordonnée par coordonnée ; enchaînement des déplacements</td></tr>
+<tr><td class="ph">Multiple $\lambda\vec u$</td><td>un vecteur</td><td>colinéaire à $\vec u$ ; même sens si $\lambda > 0$</td></tr>
+<tr><td class="ph">Produit scalaire $\vec u \cdot \vec v$</td><td>un <b>nombre</b></td><td>nul : vecteurs orthogonaux</td></tr>
+<tr><td class="ph">Produit vectoriel $\vec u \times \vec v$ (dans $\mathbb{R}^3$)</td><td>un vecteur</td><td>perpendiculaire aux deux ; sens par la règle de la main droite ; norme $\left\Vert \vec u \right\Vert \left\Vert \vec v \right\Vert \sin\theta$</td></tr>
+</tbody>
+</table>
+
+::: {.piege}
+::: {.pg-titre}
+Pièges
+:::
+Écrire le produit scalaire comme un vecteur. Confondre produit scalaire nul (orthogonaux) et colinéarité. Inverser l'ordre dans $\vec u \times \vec v$ : le sens change.
+:::
+
 # Exercices de renforcement {.divider background-color="#14304a"}
 
 ## Exercices à réaliser pour consolider {#ex-v}
@@ -679,8 +552,8 @@ Le produit en croix a été mal posé ($2k = 6 \cdot (-3)$). Il faut écrire $(k
 <tr><td class="ph">V7</td><td>Colinéarité</td><td><a href="#/ex-v-R3">R.3(a)(b)</a></td></tr>
 </tbody></table>
 
-<div class="et-timer"><div class="et-box" data-default="1080">
-<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">18:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
+<div class="et-timer"><div class="et-box" data-default="1260">
+<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">21:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
 <div class="et-row"><button class="et-btn et-primary et-toggle" type="button">Démarrer</button><button class="et-btn et-reset" type="button">↺ Réinitialiser</button></div>
 </div></div>
 
@@ -770,13 +643,83 @@ Sans calculatrice, donner le quadrant, $\tan\theta$ et l'angle $\theta \in [0°,
 
 <div class="qfoot"><a class="back-btn" href="#/ex-v">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-v-R9">annexe — R.9 (séance 4)</a></span></div>
 
-## Questions restantes
-
-À remplir pendant la recherche d'exercices (tri du mur).
-
-# Clôture {.divider background-color="#14304a"}
-
 ## Pour la suite
 
-- Les **solutions rédigées** des exercices et les corrections des questions de réserve sont dans le deck « Annexe » (page des slides, rubrique Remédiations).
-- Les questions du mur qui n'ont pas été traitées en séance n'auront pas de réponse écrite.
+- Les **solutions rédigées** des exercices et les corrections des questions de réserve sont dans le deck « Annexe » ([ouvrir l'annexe](02-annexe.html)).
+
+## Pas encore fait le QCM ? {#qcm-v}
+
+::: wooclap
+::: wc-play
+▶
+:::
+
+:::: wc-body
+**Ouvre le Wooclap, réponds seul·e**
+
+::: wc-lien
+Code : OBMKFUU
+:::
+::::
+
+::: {.wc-qr}
+![](img/qr-vecteurs.png)
+:::
+:::
+
+7 questions, une seule réponse correcte par question. Le Wooclap contient les quatre thèmes : ouvre celui-ci, « Les vecteurs ».
+
+<div class="et-timer"><div class="et-box" data-default="540">
+<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">09:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
+<div class="et-row"><button class="et-btn et-primary et-toggle" type="button">Démarrer</button><button class="et-btn et-reset" type="button">↺ Réinitialiser</button></div>
+</div></div>
+
+```{=html}
+<script>
+(function () {
+  var audioCtx = null;
+  function beep() {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      var t0 = audioCtx.currentTime;
+      [0, 0.35].forEach(function (o) {
+        var osc = audioCtx.createOscillator(), g = audioCtx.createGain();
+        osc.type = 'sine'; osc.frequency.value = 880;
+        g.gain.setValueAtTime(0.0001, t0 + o);
+        g.gain.exponentialRampToValueAtTime(0.3, t0 + o + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + o + 0.28);
+        osc.connect(g); g.connect(audioCtx.destination);
+        osc.start(t0 + o); osc.stop(t0 + o + 0.3);
+      });
+    } catch (e) {}
+  }
+  function fmt(s) { s = Math.max(0, s); var m = Math.floor(s / 60), r = s % 60; return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r; }
+  function init() {
+  Array.prototype.forEach.call(document.querySelectorAll('.et-box'), function (box) {
+    var DEFAULT = parseInt(box.getAttribute('data-default'), 10) || 600;
+    var display = box.querySelector('.et-display'), btn = box.querySelector('.et-toggle');
+    var remaining = DEFAULT, running = false, id = null;
+    function render() {
+      display.textContent = fmt(remaining);
+      display.classList.toggle('et-warn', running && remaining <= 60 && remaining > 0);
+      display.classList.toggle('et-done', remaining === 0);
+    }
+    function stop() { running = false; btn.textContent = remaining > 0 ? 'Reprendre' : 'Démarrer'; if (id) { clearInterval(id); id = null; } }
+    function tick() { remaining -= 1; if (remaining <= 0) { remaining = 0; stop(); beep(); } render(); }
+    function start() {
+      if (running) return;
+      try { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); if (audioCtx.state === 'suspended') audioCtx.resume(); } catch (e) {}
+      if (remaining <= 0) remaining = DEFAULT;
+      render(); running = true; btn.textContent = 'Pause'; id = setInterval(tick, 1000);
+    }
+    btn.addEventListener('click', function () { running ? stop() : start(); });
+    box.querySelector('.et-minus').addEventListener('click', function () { remaining = Math.max(0, remaining - 60); render(); if (remaining === 0) stop(); });
+    box.querySelector('.et-plus').addEventListener('click', function () { remaining += 60; render(); });
+    box.querySelector('.et-reset').addEventListener('click', function () { stop(); remaining = DEFAULT; btn.textContent = 'Démarrer'; render(); });
+    render();
+  });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+```

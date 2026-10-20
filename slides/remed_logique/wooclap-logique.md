@@ -2,7 +2,7 @@
 
 Un événement Wooclap, 7 questions **QCM à réponse unique**, dans l'ordre ci-dessous (noyau). Questions nouvelles, rédigées pour cette remédiation (elles ne viennent pas des quiz Moodle). Exemples sourcés : SNCB (Q1, Q5, Q6, Q7) et Manuel MSD (Q3, Q4). En fin de fichier : 5 questions de réserve, corrigées dans le deck « Annexe ».
 
-Code Wooclap : **SDBMMIA**.
+Code Wooclap : **OBMKFUU** (version en autonomie : un seul événement pour les quatre thèmes).
 
 ---
 
