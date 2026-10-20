@@ -1,6 +1,6 @@
 ---
-title: "Remédiation IMSV biomed — Les vecteurs"
-subtitle: "Séance 4 : coordonnées, somme, angles, produit scalaire"
+title: "Remédiation IMSV"
+subtitle: "Thème : Les vecteurs"
 description: "QCM, notions clés, corrections ciblées et exercices de renforcement sur les vecteurs (séance 4)"
 author: "Quentin Lambotte · FMPB · UMONS"
 lang: fr
@@ -73,29 +73,33 @@ Tu as fait le QCM. Va directement à ce dont tu as besoin.
 ::: {.column width="52%"}
 **Va là pour le correctif du QCM :**
 
-- [Q1 · Coordonnées d'un déplacement](#/q-V1)
-- [Q2 · Somme et multiple de vecteurs](#/q-V2)
-- [Q3 · Somme de déplacements enchaînés](#/q-V3)
-- [Q4 · Coordonnée d'une force : sinus ou cosinus ?](#/q-V4)
-- [Q5 · Angle d'un vecteur : quadrant et tangente](#/q-V5)
-- [Q6 · Produit scalaire : valeur et signe](#/q-V6)
-- [Q7 · Colinéarité](#/q-V7)
-- [Tout le correctif, avec les exercices de renforcement](#/nav-v)
+<ul>
+<li><a href="#/q-V1">Q1 · Coordonnées d'un déplacement</a></li>
+<li><a href="#/q-V2">Q2 · Somme et multiple de vecteurs</a></li>
+<li><a href="#/q-V3">Q3 · Somme de déplacements enchaînés</a></li>
+<li><a href="#/q-V4">Q4 · Coordonnée d'une force : sinus ou cosinus ?</a></li>
+<li><a href="#/q-V5">Q5 · Angle d'un vecteur : quadrant et tangente</a></li>
+<li><a href="#/q-V6">Q6 · Produit scalaire : valeur et signe</a></li>
+<li><a href="#/q-V7">Q7 · Colinéarité</a></li>
+<li><a href="#/nav-v">Tout le correctif, avec les exercices de renforcement</a></li>
+</ul>
 :::
 ::: {.column width="48%"}
 **Va là pour un rappel théorique sur :**
 
-- [Un vecteur est un déplacement](#/cle-v1)
-- [Enchaîner des déplacements](#/cle-v2)
-- [Les angles associés](#/cle-v3)
-- [De l'angle aux coordonnées, et retour](#/cle-v4)
-- [Sinus ou cosinus ?](#/cle-v5)
-- [Le produit scalaire : un nombre](#/cle-v6)
-- [Quatre opérations, deux types de résultats](#/cle-v7)
+<ul>
+<li><a href="#/cle-v1">Un vecteur est un déplacement</a></li>
+<li><a href="#/cle-v2">Enchaîner des déplacements</a></li>
+<li><a href="#/cle-v3">Les angles associés</a></li>
+<li><a href="#/cle-v4">De l'angle aux coordonnées, et retour</a></li>
+<li><a href="#/cle-v5">Sinus ou cosinus ?</a></li>
+<li><a href="#/cle-v6">Le produit scalaire : un nombre</a></li>
+<li><a href="#/cle-v7">Quatre opérations, deux types de résultats</a></li>
+</ul>
 :::
 ::::
 
-**Va là pour t'entraîner :** [exercices de renforcement](#/ex-v) · **Pas encore fait le QCM ?** [par ici](#/qcm-v)
+**Va là pour t'entraîner :** <a href="#/ex-v">exercices de renforcement</a> · **Pas encore fait le QCM ?** <a href="#/qcm-v">par ici</a>
 
 # Corrections ciblées {.divider background-color="#14304a"}
 

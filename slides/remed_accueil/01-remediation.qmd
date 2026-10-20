@@ -1,6 +1,5 @@
 ---
-title: "Remédiation IMSV biomed — Accueil"
-subtitle: "Mur de questions, QCM en autonomie, déroulement"
+title: "Remédiation IMSV"
 description: "Présentation du dispositif de remédiation : mur de questions, QCM en autonomie, slides thématiques"
 author: "Quentin Lambotte · FMPB · UMONS"
 lang: fr
@@ -61,29 +60,6 @@ format:
 .xs { font-size: .7em; }
 </style>
 
-## Comment ça se passe {#mecanisme}
-
-1. **Les QCM.** Tes réponses sont analysées dans les slides du thème correspondant.
-2. **Les exercices.** Chaque QCM est associé à un lot d'exercices, choisis d'après les difficultés repérées.
-3. **Les rappels.** Les explications et les rappels sont dans d'autres slides, du même thème.
-
-::: {.fragment}
-**En séance.** Je commence par le thème demandé par un·e étudiant·e. Quand il est terminé, on passe à un autre, selon ce qui est sur le mur de questions.
-
-- Soit tu m'écoutes sur le thème en cours.
-- Soit tu travailles en autonomie, avec les slides et les exercices.
-:::
-
-## Les slides {#slides}
-
-:::: {.columns}
-::: {.column width="62%"}
-Toutes les slides sont sur la page des slides, rubrique Remédiations. Chaque thème a ses notions clés, ses corrections et ses exercices, avec les solutions rédigées dans l'annexe. Scanne le QR pour retrouver la page.
-:::
-::: {.column width="38%"}
-![](img/qr-slides.png){fig-align="center" width="320"}
-:::
-::::
 ## Le mur de questions
 
 ::: wooclap
@@ -152,3 +128,26 @@ Chaque QCM comporte sept questions, avec une seule réponse correcte.
 | Les fonctions | domaine, composition, croissance, réciproque, signe | [Ouvrir le deck](../remed_fonctions/01-remediation.html) |
 | La trigonométrie | angles associés, sinus, cosinus, tangente | [Ouvrir le deck](../remed_trigo/01-remediation.html) |
 
+## Comment ça se passe {#mecanisme}
+
+1. **Les QCM.** Tes réponses sont analysées dans les slides du thème correspondant.
+2. **Les exercices.** Chaque QCM est associé à un lot d'exercices, choisis d'après les difficultés repérées.
+3. **Les rappels.** Les explications et les rappels sont dans d'autres slides, du même thème.
+
+::: {.fragment}
+**En séance.** Je commence par le thème demandé par un·e étudiant·e. Quand il est terminé, on passe à un autre, selon ce qui est sur le mur de questions.
+
+- Soit tu m'écoutes sur le thème en cours.
+- Soit tu travailles en autonomie, avec les slides et les exercices.
+:::
+
+## Les slides {#slides}
+
+:::: {.columns}
+::: {.column width="62%"}
+Toutes les slides sont sur la page des slides, rubrique Remédiations. Chaque thème a ses notions clés, ses corrections et ses exercices, avec les solutions rédigées dans l'annexe. Scanne le QR pour retrouver la page.
+:::
+::: {.column width="38%"}
+![](img/qr-slides.png){fig-align="center" width="320"}
+:::
+::::

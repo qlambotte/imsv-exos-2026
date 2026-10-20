@@ -1,6 +1,6 @@
 ---
-title: "Remédiation IMSV biomed — La logique : annexe"
-subtitle: "Corrections de réserve et solutions rédigées"
+title: "Remédiation IMSV"
+subtitle: "Thème : La logique · annexe (solutions rédigées)"
 description: "Questions de réserve du QCM, énoncés et solutions des exercices de renforcement"
 author: "Quentin Lambotte · FMPB · UMONS"
 lang: fr

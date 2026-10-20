@@ -1,6 +1,6 @@
 ---
-title: "Remédiation IMSV biomed — Les fonctions"
-subtitle: "Séance 5 : entrée et sortie, domaine, composition, extrema, réciproque, signe"
+title: "Remédiation IMSV"
+subtitle: "Thème : Les fonctions"
 description: "QCM, notions clés, corrections ciblées et exercices de renforcement sur les fonctions (séance 5)"
 author: "Quentin Lambotte · FMPB · UMONS"
 lang: fr
@@ -73,28 +73,32 @@ Tu as fait le QCM. Va directement à ce dont tu as besoin.
 ::: {.column width="52%"}
 **Va là pour le correctif du QCM :**
 
-- [Q1 · Domaine d'une fonction](#/q-F1)
-- [Q2 · Entrée connue ou sortie connue ?](#/q-F2)
-- [Q3 · Composition : valeur](#/q-F3)
-- [Q4 · Domaine d'une composée](#/q-F4)
-- [Q5 · Extrema sur un intervalle ouvert](#/q-F5)
-- [Q6 · Fonction réciproque](#/q-F6)
-- [Q7 · Étude de signe d'un quotient](#/q-F7)
-- [Tout le correctif, avec les exercices de renforcement](#/nav-f)
+<ul>
+<li><a href="#/q-F1">Q1 · Domaine d'une fonction</a></li>
+<li><a href="#/q-F2">Q2 · Entrée connue ou sortie connue ?</a></li>
+<li><a href="#/q-F3">Q3 · Composition : valeur</a></li>
+<li><a href="#/q-F4">Q4 · Domaine d'une composée</a></li>
+<li><a href="#/q-F5">Q5 · Extrema sur un intervalle ouvert</a></li>
+<li><a href="#/q-F6">Q6 · Fonction réciproque</a></li>
+<li><a href="#/q-F7">Q7 · Étude de signe d'un quotient</a></li>
+<li><a href="#/nav-f">Tout le correctif, avec les exercices de renforcement</a></li>
+</ul>
 :::
 ::: {.column width="48%"}
 **Va là pour un rappel théorique sur :**
 
-- [Entrée, sortie : deux questions](#/cle-f1)
-- [Le domaine : où la règle a un sens](#/cle-f2)
-- [Composer : la sortie devient l'entrée](#/cle-f3)
-- [Croissance et extrema](#/cle-f4)
-- [Réciproque : défaire la fonction](#/cle-f5)
-- [Étude de signe d'un quotient](#/cle-f6)
+<ul>
+<li><a href="#/cle-f1">Entrée, sortie : deux questions</a></li>
+<li><a href="#/cle-f2">Le domaine : où la règle a un sens</a></li>
+<li><a href="#/cle-f3">Composer : la sortie devient l'entrée</a></li>
+<li><a href="#/cle-f4">Croissance et extrema</a></li>
+<li><a href="#/cle-f5">Réciproque : défaire la fonction</a></li>
+<li><a href="#/cle-f6">Étude de signe d'un quotient</a></li>
+</ul>
 :::
 ::::
 
-**Va là pour t'entraîner :** [exercices de renforcement](#/ex-f) · **Pas encore fait le QCM ?** [par ici](#/qcm-f)
+**Va là pour t'entraîner :** <a href="#/ex-f">exercices de renforcement</a> · **Pas encore fait le QCM ?** <a href="#/qcm-f">par ici</a>
 
 # Corrections ciblées {.divider background-color="#14304a"}
 

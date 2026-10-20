@@ -1,6 +1,6 @@
 ---
-title: "Remédiation IMSV biomed — La logique"
-subtitle: "La logique : l'implication comme contrat"
+title: "Remédiation IMSV"
+subtitle: "Thème : La logique"
 description: "QCM, section sur l'implication, corrections ciblées et exercices de renforcement"
 author: "Quentin Lambotte · FMPB · UMONS"
 lang: fr
@@ -70,29 +70,33 @@ Tu as fait le QCM. Va directement à ce dont tu as besoin.
 ::: {.column width="52%"}
 **Va là pour le correctif du QCM :**
 
-- [Q1 · Rupture d'un engagement](#/q-Q1)
-- [Q2 · Colonne de l'implication](#/q-Q2)
-- [Q3 · Condition non remplie](#/q-Q3)
-- [Q4 · Réciproque](#/q-Q4)
-- [Q5 · Contraposée](#/q-Q5)
-- [Q6 · Négation d'une implication](#/q-Q6)
-- [Q7 · Suffisant, nécessaire](#/q-Q7)
-- [Tout le correctif, avec les exercices de renforcement](#/nav-logique)
+<ul>
+<li><a href="#/q-Q1">Q1 · Rupture d'un engagement</a></li>
+<li><a href="#/q-Q2">Q2 · Colonne de l'implication</a></li>
+<li><a href="#/q-Q3">Q3 · Condition non remplie</a></li>
+<li><a href="#/q-Q4">Q4 · Réciproque</a></li>
+<li><a href="#/q-Q5">Q5 · Contraposée</a></li>
+<li><a href="#/q-Q6">Q6 · Négation d'une implication</a></li>
+<li><a href="#/q-Q7">Q7 · Suffisant, nécessaire</a></li>
+<li><a href="#/nav-logique">Tout le correctif, avec les exercices de renforcement</a></li>
+</ul>
 :::
 ::: {.column width="48%"}
 **Va là pour un rappel théorique sur :**
 
-- [La promesse : tenue ou rompue](#/contrat-1)
-- [La table de vérité](#/contrat-4)
-- [La réciproque](#/contrat-5)
-- [La contraposée](#/contrat-7)
-- [Suffisant et nécessaire](#/contrat-sn1)
-- [La négation d'une implication](#/contrat-9)
-- [Synthèse](#/contrat-10)
+<ul>
+<li><a href="#/contrat-1">La promesse : tenue ou rompue</a></li>
+<li><a href="#/contrat-4">La table de vérité</a></li>
+<li><a href="#/contrat-5">La réciproque</a></li>
+<li><a href="#/contrat-7">La contraposée</a></li>
+<li><a href="#/contrat-sn1">Suffisant et nécessaire</a></li>
+<li><a href="#/contrat-9">La négation d'une implication</a></li>
+<li><a href="#/contrat-10">Synthèse</a></li>
+</ul>
 :::
 ::::
 
-**Va là pour t'entraîner :** [exercices de renforcement](#/ex-logique) · **Pas encore fait le QCM ?** [par ici](#/qcm)
+**Va là pour t'entraîner :** <a href="#/ex-logique">exercices de renforcement</a> · **Pas encore fait le QCM ?** <a href="#/qcm">par ici</a>
 
 # Corrections ciblées {.divider background-color="#14304a"}
 

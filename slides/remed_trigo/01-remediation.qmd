@@ -1,6 +1,6 @@
 ---
-title: "Remédiation IMSV biomed — La trigonométrie"
-subtitle: "Angles associés, coordonnées d'un vecteur, sinus ou cosinus (exercices de la séance 4)"
+title: "Remédiation IMSV"
+subtitle: "Thème : La trigonométrie"
 description: "QCM, notions clés, corrections ciblées et exercices de renforcement de trigonométrie"
 author: "Quentin Lambotte · FMPB · UMONS"
 lang: fr
@@ -73,26 +73,30 @@ Tu as fait le QCM. Va directement à ce dont tu as besoin.
 ::: {.column width="52%"}
 **Va là pour le correctif du QCM :**
 
-- [Q1 · Angles associés : cosinus et sinus](#/q-T1)
-- [Q2 · Angle aigu avec l'axe des x](#/q-T2)
-- [Q3 · De la norme et de l'angle aux coordonnées](#/q-T3)
-- [Q4 · Angle d'un vecteur : quadrant et tangente](#/q-T4)
-- [Q5 · Coordonnée d'une vitesse : sinus ou cosinus ?](#/q-T5)
-- [Q6 · Norme et angle d'un vecteur](#/q-T6)
-- [Q7 · Valeur du sinus dans le quatrième quadrant](#/q-T7)
-- [Tout le correctif, avec les exercices de renforcement](#/nav-t)
+<ul>
+<li><a href="#/q-T1">Q1 · Angles associés : cosinus et sinus</a></li>
+<li><a href="#/q-T2">Q2 · Angle aigu avec l'axe des x</a></li>
+<li><a href="#/q-T3">Q3 · De la norme et de l'angle aux coordonnées</a></li>
+<li><a href="#/q-T4">Q4 · Angle d'un vecteur : quadrant et tangente</a></li>
+<li><a href="#/q-T5">Q5 · Coordonnée d'une vitesse : sinus ou cosinus ?</a></li>
+<li><a href="#/q-T6">Q6 · Norme et angle d'un vecteur</a></li>
+<li><a href="#/q-T7">Q7 · Valeur du sinus dans le quatrième quadrant</a></li>
+<li><a href="#/nav-t">Tout le correctif, avec les exercices de renforcement</a></li>
+</ul>
 :::
 ::: {.column width="48%"}
 **Va là pour un rappel théorique sur :**
 
-- [Les angles associés](#/cle-t1)
-- [De la norme et de l'angle aux coordonnées](#/cle-t2)
-- [De l'angle aux coordonnées, et retour](#/cle-t3)
-- [Sinus ou cosinus ?](#/cle-t4)
+<ul>
+<li><a href="#/cle-t1">Les angles associés</a></li>
+<li><a href="#/cle-t2">De la norme et de l'angle aux coordonnées</a></li>
+<li><a href="#/cle-t3">De l'angle aux coordonnées, et retour</a></li>
+<li><a href="#/cle-t4">Sinus ou cosinus ?</a></li>
+</ul>
 :::
 ::::
 
-**Va là pour t'entraîner :** [exercices de renforcement](#/ex-t) · **Pas encore fait le QCM ?** [par ici](#/qcm-t)
+**Va là pour t'entraîner :** <a href="#/ex-t">exercices de renforcement</a> · **Pas encore fait le QCM ?** <a href="#/qcm-t">par ici</a>
 
 # Corrections ciblées {.divider background-color="#14304a"}
 

@@ -1,6 +1,6 @@
 ---
-title: "Remédiation IMSV biomed — Les fonctions : annexe"
-subtitle: "Corrections de réserve et solutions rédigées"
+title: "Remédiation IMSV"
+subtitle: "Thème : Les fonctions · annexe (solutions rédigées)"
 description: "Questions de réserve, énoncés et solutions des exercices de renforcement"
 author: "Quentin Lambotte · FMPB · UMONS"
 lang: fr
