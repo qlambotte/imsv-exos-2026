@@ -1447,6 +1447,8 @@ display:block!important;
 
      (chemin relatif au deck : ../seance01/_travail.md depuis slides/_seanceNN/)
      - data-minutes : durée du minuteur (30 si absent) ; le titre est masqué à l'écran.
+     - classe .sans-jauge (## Au travail {.travail .sans-jauge data-minutes="35"}) : ni jauge de bruit
+       ni sonnerie à la fin du minuteur (décision après le sondage d'octobre 2026, à partir de la séance 6).
      - Jauge : bouton micro = on/off ; « Calibrer » = mesure 3 s le bruit ambiant (pièce calme) et recale l'échelle ;
        curseur « Bruit maximal » = seuil ; cloche = alerte sonore on/off (off par défaut) ; badge = nombre de dépassements.
        Le micro est coupé quand on quitte la slide. Réglages (seuil, calibrage) gardés dans le navigateur.
@@ -1454,6 +1456,7 @@ display:block!important;
      Ce fichier est un bloc HTML brut : ne pas y mettre de ligne markdown. -->
 <style>
 .reveal section.travail > h2 { display: none; }
+.reveal section.travail.sans-jauge .tv-gauge { display: none; }
 .reveal .tv-wrap { display: flex; align-items: center; justify-content: space-between; gap: 36px; height: 640px; padding: 0 10px; box-sizing: border-box; font-family: inherit; color: #14304a; }
 .reveal .tv-qr { flex: 0 0 260px; text-align: center; }
 .reveal .tv-qr-svg { width: 240px; height: 240px; display: block; margin: 0 auto 14px; border: 3px solid #14304a; border-radius: 10px; box-sizing: content-box; }
@@ -1633,7 +1636,7 @@ display:block!important;
       btnPlay.innerHTML = running ? PAUSE : PLAY;
     }
     function stopT() { running = false; clearInterval(iv); iv = null; render(); }
-    function tick() { remaining -= 1; if (remaining <= 0) { remaining = 0; stopT(); beep(880, 2); } render(); }
+    function tick() { remaining -= 1; if (remaining <= 0) { remaining = 0; stopT(); if (!(section && section.classList.contains('sans-jauge'))) beep(880, 2); } render(); }
     btnPlay.addEventListener('click', function () {
       if (running) { stopT(); return; }
       if (remaining <= 0) remaining = DUR;
@@ -1751,7 +1754,8 @@ display:block!important;
          {{< include ../seance01/_minuteur.md >}}
          :::
 
-     - data-minutes : durée (2 si absent). Un bip retentit à la fin ; le chiffre devient orange sous 30 s, rouge à zéro.
+     - data-minutes : durée (2 si absent). Le chiffre devient orange sous 30 s, rouge à zéro.
+     - data-son="oui" : bip à la fin (silencieux par défaut depuis le sondage d'octobre 2026).
      - Remis à zéro quand on quitte la slide. Styles : classes .et-* de seance01/theme.scss (.et-box).
      Ce fichier est un bloc HTML brut : ne pas y mettre de ligne markdown. -->
 <style>
@@ -1803,7 +1807,7 @@ display:block!important;
       try { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); if (audioCtx.state === 'suspended') audioCtx.resume(); } catch (e) {}
       if (remaining <= 0) remaining = DEFAULT;
       render(); running = true; toggle.textContent = 'Pause';
-      iv = setInterval(function () { remaining -= 1; if (remaining <= 0) { remaining = 0; stop(); beep(); } render(); }, 1000);
+      iv = setInterval(function () { remaining -= 1; if (remaining <= 0) { remaining = 0; stop(); if (host.getAttribute('data-son') === 'oui') beep(); } render(); }, 1000);
     }
     function reset() { stop(); remaining = DEFAULT; toggle.textContent = 'Démarrer'; render(); }
     toggle.addEventListener('click', function () { running ? stop() : start(); });
@@ -2183,6 +2187,8 @@ display:block!important;
 
      (chemin relatif au deck : ../seance01/_travail.md depuis slides/_seanceNN/)
      - data-minutes : durée du minuteur (30 si absent) ; le titre est masqué à l'écran.
+     - classe .sans-jauge (## Au travail {.travail .sans-jauge data-minutes="35"}) : ni jauge de bruit
+       ni sonnerie à la fin du minuteur (décision après le sondage d'octobre 2026, à partir de la séance 6).
      - Jauge : bouton micro = on/off ; « Calibrer » = mesure 3 s le bruit ambiant (pièce calme) et recale l'échelle ;
        curseur « Bruit maximal » = seuil ; cloche = alerte sonore on/off (off par défaut) ; badge = nombre de dépassements.
        Le micro est coupé quand on quitte la slide. Réglages (seuil, calibrage) gardés dans le navigateur.
@@ -2190,6 +2196,7 @@ display:block!important;
      Ce fichier est un bloc HTML brut : ne pas y mettre de ligne markdown. -->
 <style>
 .reveal section.travail > h2 { display: none; }
+.reveal section.travail.sans-jauge .tv-gauge { display: none; }
 .reveal .tv-wrap { display: flex; align-items: center; justify-content: space-between; gap: 36px; height: 640px; padding: 0 10px; box-sizing: border-box; font-family: inherit; color: #14304a; }
 .reveal .tv-qr { flex: 0 0 260px; text-align: center; }
 .reveal .tv-qr-svg { width: 240px; height: 240px; display: block; margin: 0 auto 14px; border: 3px solid #14304a; border-radius: 10px; box-sizing: content-box; }
@@ -2369,7 +2376,7 @@ display:block!important;
       btnPlay.innerHTML = running ? PAUSE : PLAY;
     }
     function stopT() { running = false; clearInterval(iv); iv = null; render(); }
-    function tick() { remaining -= 1; if (remaining <= 0) { remaining = 0; stopT(); beep(880, 2); } render(); }
+    function tick() { remaining -= 1; if (remaining <= 0) { remaining = 0; stopT(); if (!(section && section.classList.contains('sans-jauge'))) beep(880, 2); } render(); }
     btnPlay.addEventListener('click', function () {
       if (running) { stopT(); return; }
       if (remaining <= 0) remaining = DUR;
