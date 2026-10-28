@@ -181,6 +181,22 @@ div.callout.exo .callout-title { font-family: $font-family-sans-serif; }
 .aides .nav-tabs .nav-link.active { color: var(--accent); background: none; border-bottom: 2px solid var(--accent); }
 .aides .tab-content { padding: .9rem .1rem .1rem; font-size: .98rem; }
 .aides .tab-content em:first-child { color: var(--muted); font-style: italic; }
+.aides .tab-content .reponse em:first-child, .aides .tab-content .imsv-expl em:first-child { color: inherit; }
+// Solution : réponse finale toujours visible (filet bleu), explication repliée (« Je veux plus de détails »)
+.reponse { border-left: 3px solid var(--accent); padding: .15rem 0 .15rem .8rem; margin: .3rem 0 .35rem; }
+.reponse > p { margin: 0; }
+.reponse > p:first-child > strong:first-child { color: var(--accent); }
+details.imsv-details { margin: 0 0 1.1rem; }
+details.imsv-details > summary {
+  cursor: pointer; list-style: none; display: inline-block;
+  color: var(--accent); font-weight: 600; font-size: .92rem; padding: .1rem 0;
+}
+details.imsv-details > summary::-webkit-details-marker { display: none; }
+details.imsv-details > summary::before { content: "▶"; display: inline-block; width: 1.2em; font-size: .78em; }
+details.imsv-details[open] > summary::before { content: "▼"; }
+details.imsv-details > summary:hover { text-decoration: underline; }
+.imsv-expl { margin: .35rem 0 0 .1rem; padding-left: 1rem; border-left: 2px solid var(--rule); }
+.imsv-expl > :last-child { margin-bottom: 0; }
 
 // --- Tables ---
 table { font-variant-numeric: tabular-nums; }

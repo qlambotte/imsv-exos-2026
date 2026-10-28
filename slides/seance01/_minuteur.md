@@ -5,7 +5,8 @@
          {{{< include ../seance01/_minuteur.md >}}}
          :::
 
-     - data-minutes : durée (2 si absent). Un bip retentit à la fin ; le chiffre devient orange sous 30 s, rouge à zéro.
+     - data-minutes : durée (2 si absent). Le chiffre devient orange sous 30 s, rouge à zéro.
+     - data-son="oui" : bip à la fin (silencieux par défaut depuis le sondage d'octobre 2026).
      - Remis à zéro quand on quitte la slide. Styles : classes .et-* de seance01/theme.scss (.et-box).
      Ce fichier est un bloc HTML brut : ne pas y mettre de ligne markdown. -->
 ```{=html}
@@ -58,7 +59,7 @@
       try { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); if (audioCtx.state === 'suspended') audioCtx.resume(); } catch (e) {}
       if (remaining <= 0) remaining = DEFAULT;
       render(); running = true; toggle.textContent = 'Pause';
-      iv = setInterval(function () { remaining -= 1; if (remaining <= 0) { remaining = 0; stop(); beep(); } render(); }, 1000);
+      iv = setInterval(function () { remaining -= 1; if (remaining <= 0) { remaining = 0; stop(); if (host.getAttribute('data-son') === 'oui') beep(); } render(); }, 1000);
     }
     function reset() { stop(); remaining = DEFAULT; toggle.textContent = 'Démarrer'; render(); }
     toggle.addEventListener('click', function () { running ? stop() : start(); });

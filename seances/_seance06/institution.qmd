@@ -5,29 +5,34 @@ subtitle: "Séance 6 · ce qu'on retient"
 
 ## Les méthodes qu'on dégage ensemble
 
-À la fin du socle, la confrontation puis la correction de l'exercice S.13 dégagent la méthode pour **résoudre une équation exponentielle** :
+À la fin du socle, la confrontation puis la correction de l'exercice S.4 dégagent la méthode pour **résoudre une équation exponentielle** :
 
 - **isoler** la puissance dans un membre de l'équation, en divisant par le facteur qui la multiplie ;
-- **écrire** la puissance avec la base $e$ si sa base est différente, grâce à $a^{u} = e^{u \ln a}$ ;
+- **garder** la base de la puissance, par exemple $2$, sans la remplacer par $e$ ;
 - **appliquer** le logarithme népérien aux deux membres, qui sont strictement positifs, puis **isoler** l'inconnue ;
 - **vérifier** le résultat en le remettant dans l'équation et en l'encadrant par des puissances entières, puis **conclure** par une phrase avec l'unité.
 
-En fin de séance, on formalise la méthode pour **déterminer les paramètres d'un modèle périodique**, utilisée dans l'exercice de transfert T.2 :
+En fin de séance, la confrontation puis la correction de l'exercice de transfert T.1 dégagent la méthode pour **exploiter une grandeur logarithmique** :
 
-- **lire** l'amplitude, la valeur centrale et la période dans les données ;
-- **calculer** $\omega$ à partir de la période, puis $\varphi$ à partir de l'instant d'un maximum ou d'un minimum ;
-- **vérifier** le modèle en calculant ses valeurs en quelques instants remarquables.
+- **repérer** la grandeur, son unité et la relation qui donne son logarithme ;
+- **passer** de la grandeur à son logarithme en l'écrivant comme le produit d'un nombre et d'une puissance de $10$, et du logarithme à la grandeur en écrivant une puissance de $10$ ;
+- **comparer** deux valeurs par la différence de leurs logarithmes : une différence de $d$ correspond à un facteur $10^{d}$ sur la grandeur ;
+- **conclure** par une phrase qui donne la grandeur avec son unité ou qui interprète l'écart.
 
 Ces méthodes rejoignent ta **[boîte à outils](../methode.qmd)** : elles resserviront à chaque séance. Tu y
-trouveras aussi trois autres méthodes de la séance 6 : reconnaître le type de croissance, lire les paramètres d'un modèle exponentiel, et lire une échelle logarithmique.
+trouveras aussi trois autres méthodes de la séance 6 : reconnaître le type de croissance, lire les paramètres d'un modèle exponentiel, et déterminer les paramètres d'un modèle périodique.
 
 ## Auto-évaluation — coche ce que tu sais faire
 
 Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **objectifs** de la séance.
 
-- [ ] **O1** — choisir et exploiter un modèle affine, polynomial, exponentiel, logarithmique ou périodique dans une situation élémentaire de sciences de la vie ;
+- [ ] **O1** — choisir et exploiter un modèle affine, polynomial, racine, exponentiel, logarithmique ou périodique dans une situation élémentaire de sciences de la vie ;
 - [ ] **O2** — interpréter les paramètres des fonctions usuelles ;
-- [ ] **O3** — utiliser le logarithme pour résoudre une équation exponentielle et lire une échelle logarithmique.
+- [ ] **O3** — comprendre les relations entre bases dans les modèles exponentiels et logarithmiques ;
+- [ ] **O4** — utiliser le logarithme pour résoudre une équation exponentielle et exploiter des grandeurs logarithmiques ;
+- [ ] **O5** — exploiter temps de doublement et demi-vie ;
+- [ ] **O6** — comparer qualitativement les croissances asymptotiques des différents modèles ;
+- [ ] **O7** — adapter une fonction trigonométrique pour modéliser un phénomène périodique.
 
 ::: {.callout-important appearance="simple"}
 Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la

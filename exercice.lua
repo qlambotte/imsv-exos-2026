@@ -10,6 +10,9 @@
 --      reste toléré : le numéro écrit est ignoré.)
 --  (2) « énoncés seuls » (IMSV_ENONCES=1) : retire les aides et les callouts
 --      non-exercice (sauf les consignes « tip »).
+--  (4) SOLUTIONS : un bloc « .reponse » (réponse finale, toujours visible, filet à gauche) suivi
+--      d'un bloc « .details » (explication complète). Sur le site, l'explication est repliée
+--      sous « Je veux plus de détails » (<details>) ; en PDF, elle est imprimée en entier.
 --  (3) AIDES en PDF « complet » (typst) : convertit les onglets (indice /
 --      solution / piège) en boîtes légères à filet de couleur, fond blanc, titre
 --      en gras coloré (« Indice 1 », pas « INDICE 1 »). En HTML, les onglets
@@ -90,6 +93,31 @@ function Div(el)
     return el
   end
 
+  -- Solution : « .reponse » = réponse finale, toujours visible ; « .details » = explication
+  -- complète, repliée sur le site sous « Je veux plus de détails », imprimée en entier en PDF.
+  local is_rep, is_det = false, false
+  for _, c in ipairs(el.classes) do
+    if c == "reponse" then is_rep = true end
+    if c == "details" then is_det = true end
+  end
+  if is_det then
+    if quarto.doc.is_format("html") then
+      local out = { pandoc.RawBlock("html",
+        '<details class="imsv-details"><summary>Je veux plus de détails</summary><div class="imsv-expl">') }
+      for _, b in ipairs(el.content) do out[#out + 1] = b end
+      out[#out + 1] = pandoc.RawBlock("html", "</div></details>")
+      return out
+    end
+    return el.content
+  end
+  if is_rep and quarto.doc.is_format("typst") then
+    local out = { pandoc.RawBlock("typst",
+      "#block(width:100%, above:6pt, below:5pt, stroke:(left: 1pt + black), inset:(left:7pt, y:2pt))[") }
+    for _, b in ipairs(el.content) do out[#out + 1] = b end
+    out[#out + 1] = pandoc.RawBlock("typst", "]")
+    return out
+  end
+
   -- PDF « complet » : transformer les onglets d'aide en boîtes à filet coloré.
   if is_aide and quarto.doc.is_format("typst") then
     local tab = el.content[1]
@@ -121,7 +149,7 @@ function Pandoc(doc)
   if quarto.doc.is_format("typst") then
     table.insert(doc.blocks, 1, pandoc.RawBlock("typst", "#let fa-fire = () => none"))
     table.insert(doc.blocks, 1, pandoc.RawBlock("typst",
-      '#let aidebox(label, col, body) = block(width:100%, above:7pt, below:0pt, breakable:false, ' ..
+      '#let aidebox(label, col, body) = block(width:100%, above:7pt, below:0pt, breakable:true, ' ..
       'stroke: 0.6pt + col, radius: 3pt, inset: (x:9pt, y:7pt), fill: white)[' ..
       '#text(size:0.9em, weight:700, fill:col)[#label] #v(2pt) #body]'))
   end

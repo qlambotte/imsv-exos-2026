@@ -1,0 +1,500 @@
+---
+title: "Séance 6 — Modèles exponentiels, logarithmiques, polynomiaux et périodiques"
+subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie — séance d'exercices"
+description: "Déroulé complet de la séance — échauffement, corrections de S.4 et de T.1, deux méthodes"
+author: "Quentin Lambotte - FMPB"
+date-format: "D MMMM YYYY"
+lang: fr
+format:
+  revealjs:
+    theme: [default, ../seance01/theme.scss]
+    slide-number: c/t
+    show-slide-number: all
+    width: 1280
+    height: 800
+    margin: 0.06
+    center: false
+    transition: fade
+    transition-speed: fast
+    hash: true
+    history: false
+    html-math-method: katex
+    embed-resources: true
+    fig-align: center
+    menu:
+      side: right
+    include-after-body: ../seance01/annotate.html
+---
+
+<!-- Deck de la séance 6. Déroulé (120 min) : échauffement 10 · socle 35 · correction de S.4 + méthode 1 15 ·
+     pause 10 · transfert 35 · correction de T.1 + méthode 2 15. Après le sondage d'octobre 2026 : pas de jauge
+     de bruit ni de sonnerie (classe .sans-jauge des slides « Au travail », minuteurs silencieux).
+     Codes et QR Wooclap : à compléter (make-qr.py). Ajouter la date de la séance dans l'en-tête (date: AAAA-MM-JJ). -->
+
+# Rappel {.divider background-color="#14304a"}
+
+## Où trouver l'aide pendant la séance
+
+[1]{.step} **Cherche d'abord seul·e** : bloquer fait partie de l'apprentissage.
+
+[2]{.step} **Bloqué·e ?** Ouvre les **coups de pouce** du site, un à un et dans l'ordre : la référence théorique, la question à te poser, une étape, puis la solution.
+
+[3]{.step} **Dans la solution**, la réponse est donnée d'abord ; clique sur **Je veux plus de détails** pour voir le raisonnement complet.
+
+[4]{.step} **Besoin d'une méthode type ?** La **boîte à outils** et les **fiches méthode** sont sur le site.
+
+[5]{.step} **Toujours bloqué·e après les coups de pouce ?** Lève la main : quelqu'un passe t'aider.
+
+::: notes
+Insister sur la nouveauté demandée au sondage : la réponse finale est visible tout de suite, et l'explication complète se déplie à la demande.
+:::
+
+## Le déroulé de la séance
+
+| Moment | Durée |
+|:---|:---:|
+| Échauffement | 10 min |
+| Socle, en autonomie | 35 min |
+| Correction de l'exercice S.4, puis méthode 1 | 15 min |
+| Pause | 10 min |
+| Transfert, en autonomie | 35 min |
+| Correction de l'exercice T.1, puis méthode 2 | 15 min |
+
+::: notes
+Total : 120 minutes. Temps actif : 35 + 35 minutes de travail en autonomie, plus les 10 minutes d'échauffement, soit 80 minutes sur 110 hors pause (environ 73 %). Les exercices S.4 et T.1 n'ont pas de coups de pouce : ils sont corrigés ensemble, et leur solution complète est publiée après la séance.
+:::
+
+## Et si tu avances vite ?
+
+[1]{.step} **Le socle est maîtrisé ?** Passe au **transfert**, ou aux **défis**.
+
+[2]{.step} Les **exercices supplémentaires** se font **à la maison**.
+
+# Échauffement {.divider background-color="#14304a"}
+
+## Les questions
+
+::::::::::::::: columns
+::::: {.column width="62%"}
+:::: {style="font-size:.9em"}
+**Q1** [[Rappel]{.obj}]{style="float:right"} — que vaut $2^{-3} \cdot 2^{5}$ ?
+
+**Q2** [[Rappel]{.obj}]{style="float:right"} — que vaut $\sqrt{49} - \sqrt{9}$ ?
+
+**Q3** [[Séance 5]{.obj}]{style="float:right"} — quelle est l'expression de la fonction réciproque de $f(x) = 2x + 1$ ?
+
+**Q4** [[Rappel]{.obj}]{style="float:right"} — pour quels angles $x$ de $]-\pi,\,\pi]$ a-t-on $\cos(x) = \dfrac{1}{2}$ ?
+::::
+:::::
+
+::::::::::: {.column width="38%"}
+::::: wooclap
+:::: wc-body
+**Vote sur Wooclap**
+
+::: wc-lien
+Code : À COMPLÉTER
+:::
+::::
+
+<!--
+::: {.wc-qr}
+![](img/qr-echauffement.png)
+:::
+-->
+
+:::::
+
+::: {.minuteur data-minutes="5"}
+{{< include ../seance01/_minuteur.md >}}
+:::
+:::::::::::
+:::::::::::::::
+
+::: notes
+Cinq minutes sur papier, puis le vote (les choix sont dans wooclap-echauffement.md). Les questions 1, 2 et 4 portent sur des prérequis, la question 3 sur la séance 5.
+:::
+
+## Q1 [[Rappel]{.obj}]{style="float:right"}
+
+Que vaut $2^{-3} \cdot 2^{5}$ ?
+
+. . .
+
+::: aretenir
+Pour multiplier deux puissances de même base, on additionne les exposants : $2^{-3} \cdot 2^{5} = 2^{-3 + 5} = 2^{2} = 4$.
+
+L'exponentielle transforme la somme des exposants en produit des puissances : c'est ce qu'on utilisera dans les modèles $N_0 \cdot a^{t}$.
+:::
+
+::: notes
+Erreurs classiques : multiplier les exposants ($2^{-15}$), lire $-3$ comme $3$ ($256$), se tromper de signe ($\tfrac14$).
+:::
+
+## Q2 [[Rappel]{.obj}]{style="float:right"}
+
+Que vaut $\sqrt{49} - \sqrt{9}$ ?
+
+. . .
+
+::: aretenir
+On calcule chaque racine : $\sqrt{49} = 7$ et $\sqrt{9} = 3$, donc $\sqrt{49} - \sqrt{9} = 4$.
+
+En général, $\sqrt{a} - \sqrt{b}$ n'est pas égal à $\sqrt{a - b}$ : ici, $\sqrt{40}$ n'est pas égal à $4$.
+:::
+
+## Q3 [[Séance 5]{.obj}]{style="float:right"}
+
+Quelle est l'expression de la fonction réciproque de $f(x) = 2x + 1$ ?
+
+. . .
+
+::: aretenir
+On pose $y = 2x + 1$ et on isole $x$ : $x = \dfrac{y - 1}{2}$. On échange ensuite les noms des variables : $f^{-1}(x) = \dfrac{x - 1}{2}$.
+
+Le logarithme sera, de la même façon, la fonction réciproque de l'exponentielle.
+:::
+
+::: notes
+Erreur classique : confondre la fonction réciproque et l'inverse $\tfrac{1}{2x + 1}$.
+:::
+
+## Q4 [[Rappel]{.obj}]{style="float:right"}
+
+Pour quels angles $x$ de $]-\pi,\,\pi]$ a-t-on $\cos(x) = \dfrac{1}{2}$ ?
+
+. . .
+
+::: aretenir
+Sur le cercle trigonométrique, l'abscisse vaut $\tfrac{1}{2}$ en deux points symétriques par rapport à l'axe horizontal : $x = \dfrac{\pi}{3}$ et $x = -\dfrac{\pi}{3}$.
+
+Oublier le deuxième angle est l'erreur classique : elle fera perdre la moitié des solutions de l'exercice S.6.
+:::
+
+# Socle — 35 minutes {.divider background-color="#14304a"}
+
+::: notes
+Lancer le socle. Annoncer que l'exercice S.4 sera corrigé ensemble juste après le socle : chacun doit l'avoir cherché seul et repérer l'endroit exact où il bloque.
+:::
+
+## Au travail {.travail .sans-jauge data-minutes="35"}
+
+{{< include ../seance01/_travail.md >}}
+
+# Exercice S.4 : correction, puis méthode 1 {.divider background-color="#1f5fbf"}
+
+::: notes
+Quinze minutes : environ 8 minutes de correction, puis 7 minutes pour la carte « Résoudre une équation exponentielle ».
+:::
+
+## Où as-tu bloqué ? [[O4]{.obj}]{style="float:right"}
+
+Résous chacune des équations suivantes et écris chaque solution sous forme exacte.
+
+| | Équation | Ton blocage |
+|:---:|:---:|:---:|
+| (a) | $3 \cdot 2^{x} = 48$ | |
+| (b) | $5 \cdot 2^{x} = 35$ | |
+| (c) | $100 \cdot \left(\tfrac{1}{2}\right)^{t} = 20$ | |
+| (d) | $4\,e^{0{,}5\,x} = 12$ | |
+
+**À main levée** : dans quelle équation as-tu bloqué pour la première fois ?
+
+::: notes
+Le vote à main levée dit par où commencer la correction. Blocage attendu : (b), le passage au logarithme quand le second membre n'est pas une puissance de 2.
+:::
+
+## (a) et (b) : isoler, puis comparer ou appliquer le logarithme {.smaller}
+
+:::::: columns
+::::: {.column width="50%"}
+**(a)** $\;3 \cdot 2^{x} = 48$
+
+. . .
+
+[1]{.step} On isole la puissance : $2^{x} = 16$.
+
+. . .
+
+[2]{.step} $16 = 2^{4}$, donc $2^{x} = 2^{4}$ et $x = 4$.
+:::::
+::::: {.column width="50%"}
+**(b)** $\;5 \cdot 2^{x} = 35$
+
+. . .
+
+[1]{.step} On isole la puissance : $2^{x} = 7$.
+
+. . .
+
+[2]{.step} $7$ n'est pas une puissance entière de $2$ : on garde la base et on applique $\ln$ aux deux membres : $x\ln(2) = \ln(7)$.
+
+. . .
+
+[3]{.step} On divise par $\ln(2)$ : $x = \dfrac{\ln(7)}{\ln(2)}$.
+
+. . .
+
+[4]{.step} $2^{2} = 4 < 7 < 8 = 2^{3}$, donc $2 < x < 3$.
+:::::
+::::::
+
+## (c) et (d) : la même méthode {.smaller}
+
+:::::: columns
+::::: {.column width="50%"}
+**(c)** $\;100 \cdot \left(\tfrac{1}{2}\right)^{t} = 20$
+
+. . .
+
+[1]{.step} On isole la puissance : $\left(\tfrac{1}{2}\right)^{t} = \tfrac{1}{5}$, donc $2^{t} = 5$.
+
+. . .
+
+[2]{.step} On applique $\ln$ : $t\ln(2) = \ln(5)$, donc $t = \dfrac{\ln(5)}{\ln(2)}$.
+
+. . .
+
+[3]{.step} $4 < 5 < 8$, donc $2 < t < 3$.
+:::::
+::::: {.column width="50%"}
+**(d)** $\;4\,e^{0{,}5\,x} = 12$
+
+. . .
+
+[1]{.step} On isole l'exponentielle : $e^{0{,}5\,x} = 3$.
+
+. . .
+
+[2]{.step} On applique $\ln$, qui défait l'exponentielle : $0{,}5\,x = \ln(3)$.
+
+. . .
+
+[3]{.step} On divise par $0{,}5$, c'est-à-dire qu'on multiplie par $2$ : $x = 2\ln(3) \approx 2{,}2$.
+:::::
+::::::
+
+## Les pièges à connaître
+
+::: aretenir
+**Coller le facteur à la base** : $3 \cdot 2^{x}$ n'est pas $6^{x}$. L'exposant ne porte que sur la base $2$ : on divise d'abord par $3$.
+
+**Oublier de diviser par $\ln(2)$** : après $x\ln(2) = \ln(7)$, l'inconnue est encore multipliée par $\ln(2)$.
+
+**Diviser au lieu de multiplier** : en (d), diviser par $0{,}5$ revient à multiplier par $2$.
+:::
+
+## La carte « Résoudre une équation exponentielle » {.smaller}
+
+:::::::::::::: fiche
+::: fiche-head
+Résoudre une équation exponentielle [[O4]{.obj}]{style="float:right"}
+:::
+
+:::::::::::: fiche-body
+:::::: fiche-col
+::: {.fiche-field .empty}
+Exercices associés (numéros)
+
+*à noter toi-même*
+:::
+
+::: {.fiche-field .empty}
+Théorie associée (chapitre / slide)
+
+*à noter toi-même*
+:::
+
+::: {.fiche-field .fragment}
+Quand l'utiliser ?
+
+L'inconnue figure dans un exposant et il faut la calculer, par exemple pour trouver le temps nécessaire pour atteindre une valeur donnée.
+:::
+::::::
+
+::::::: fiche-col
+:::: fiche-field
+Étapes
+
+::: incremental
+1.  **Isole** la puissance : soustrais les termes ajoutés, puis divise par le facteur qui la multiplie.
+2.  **Si** l'autre membre est une puissance de la même base, **égale** les exposants.
+3.  **Sinon**, **garde** la base et **applique** $\ln$ aux deux membres ; $\ln\left(a^{u}\right) = u\ln(a)$ fait descendre l'exposant ; **isole** l'inconnue.
+4.  **Vérifie**, ou **encadre** entre deux puissances entières consécutives de la base.
+5.  **Conclus** par une phrase, avec l'unité.
+:::
+::::
+
+::: {.fiche-field .fragment}
+Exemple
+
+$6 \cdot 3^{x} = 60$ donne $3^{x} = 10$, puis $x\ln(3) = \ln(10)$, donc $x = \dfrac{\ln(10)}{\ln(3)}$, entre $2$ et $3$.
+:::
+
+::: {.fiche-field .fragment}
+Le piège
+
+Écrire $6 \cdot 3^{x} = 18^{x}$ ; oublier de diviser par $\ln(3)$.
+:::
+:::::::
+::::::::::::
+::::::::::::::
+
+::: footer-note
+Cette fiche rejoint ta **boîte à outils** sur le site.
+:::
+
+# Pause — 10 minutes {.divider background-color="#14304a"}
+
+# Transfert — 35 minutes {.divider background-color="#14304a"}
+
+::: notes
+Commencer par T.1, qui sera corrigé ensemble à la fin du transfert : chacun doit l'avoir cherché seul. Les autres exercices (T.2 à T.4) se font avec les coups de pouce du site.
+:::
+
+## Au travail {.travail .sans-jauge data-minutes="35"}
+
+{{< include ../seance01/_travail.md >}}
+
+# Exercice T.1 : correction, puis méthode 2 {.divider background-color="#1f5fbf"}
+
+::: notes
+Quinze minutes : environ 8 minutes de correction, puis 7 minutes pour la carte « Exploiter une grandeur logarithmique ».
+:::
+
+## La charge virale en log [[O4]{.obj}]{style="float:right"}
+
+La charge virale $C$ du VIH s'exprime en copies/mL, et souvent par son logarithme décimal $L = \log_{10}(C)$. Une baisse de « $1$ log » signifie que $L$ diminue de $1$.
+
+- Charge élevée avant traitement : plus de $100\,000$ copies/mL.
+- Charge indétectable : moins de $20$ copies/mL.
+- Variation significative : au moins $0{,}5$ log.
+- On donne $\log_{10}(2) \approx 0{,}30$.
+
+**À main levée** : à quelle question as-tu bloqué pour la première fois, (a), (b), (c) ou (d) ?
+
+::: notes
+Sources dans l'énoncé de T.1 (Mills et al., 2021 ; recommandations DHHS). Blocage attendu : le logarithme de 20, qui n'est pas une puissance de 10, et la différence des logarithmes en (d).
+:::
+
+## (a) et (b) : de la grandeur à son logarithme {.smaller}
+
+**(a)** $L$ pour $100\,000$ et pour $20$ copies/mL
+
+. . .
+
+[1]{.step} $100\,000 = 10^{5}$, donc $L = 5$.
+
+. . .
+
+[2]{.step} $20 = 2 \cdot 10$, donc $L = \log_{10}(2) + \log_{10}(10) \approx 0{,}30 + 1 = 1{,}3$.
+
+. . .
+
+**(b)** Baisse nécessaire pour devenir indétectable
+
+. . .
+
+[3]{.step} $5 - 1{,}3 = 3{,}7$ log : la charge virale doit être divisée par $\tfrac{100\,000}{20} = 5000$.
+
+## (c) et (d) : une différence de log est un facteur {.smaller}
+
+**(c)** Baisse de $2$ log à partir de $100\,000$ copies/mL
+
+. . .
+
+[1]{.step} $L$ passe de $5$ à $3$, donc $C = 10^{3} = 1000$ copies/mL : la charge est divisée par $10^{2} = 100$.
+
+. . .
+
+**(d)** Patients A et B
+
+. . .
+
+[2]{.step} A : $\log_{10}(40\,000) - \log_{10}(10\,000) = \log_{10}(4) = 2\log_{10}(2) \approx 0{,}6 \geq 0{,}5$ : baisse significative.
+
+. . .
+
+[3]{.step} B : $\log_{10}(20\,000) - \log_{10}(10\,000) = \log_{10}(2) \approx 0{,}3 < 0{,}5$ : baisse non significative.
+
+## Les pièges à connaître
+
+::: aretenir
+**Compter les chiffres** : $\log_{10}(20)$ ne vaut pas $2$, car $20 = 2 \cdot 10$, donc $\log_{10}(20) \approx 1{,}3$.
+
+**Lire l'écart comme un facteur** : une baisse de $2$ log divise la charge par $10^{2} = 100$, et non par $2$.
+
+**Prendre le log de la différence** : la baisse en log est la différence des logarithmes, c'est-à-dire le logarithme du quotient.
+:::
+
+## La carte « Exploiter une grandeur logarithmique » {.smaller}
+
+:::::::::::::: fiche
+::: fiche-head
+Exploiter une grandeur logarithmique [[O4]{.obj}]{style="float:right"}
+:::
+
+:::::::::::: fiche-body
+:::::: fiche-col
+::: {.fiche-field .empty}
+Exercices associés (numéros)
+
+*à noter toi-même*
+:::
+
+::: {.fiche-field .empty}
+Théorie associée (chapitre / slide)
+
+*à noter toi-même*
+:::
+
+::: {.fiche-field .fragment}
+Quand l'utiliser ?
+
+Une grandeur est exprimée par son logarithme décimal, comme un pH ou une charge virale en log, et il faut passer de l'une à l'autre ou comparer deux valeurs.
+:::
+::::::
+
+::::::: fiche-col
+:::: fiche-field
+Étapes
+
+::: incremental
+1.  **Repère** la grandeur, son unité et la relation qui donne son logarithme.
+2.  **Grandeur → logarithme** : écris-la comme un nombre fois une puissance de $10$, puis $\log_{10}\left(a \cdot 10^{k}\right) = \log_{10}(a) + k$.
+3.  **Logarithme → grandeur** : écris une puissance de $10$, par exemple $C = 10^{L}$.
+4.  **Compare** deux valeurs par la différence des logarithmes : un écart $d$ correspond à un facteur $10^{d}$.
+5.  **Conclus** par une phrase, avec l'unité.
+:::
+::::
+
+::: {.fiche-field .fragment}
+Exemple
+
+$[\mathrm{H}^+] = 2 \cdot 10^{-5}$ mol/L donne un pH de $5 - 0{,}30 = 4{,}7$ ; un liquide de pH $6{,}7$ contient $10^{2} = 100$ fois moins d'ions hydrogène.
+:::
+
+::: {.fiche-field .fragment}
+Le piège
+
+Croire qu'un écart de $2$ sur le logarithme correspond à un facteur $2$.
+:::
+:::::::
+::::::::::::
+::::::::::::::
+
+::: footer-note
+Cette fiche rejoint ta **boîte à outils** sur le site.
+:::
+
+## Avant de partir
+
+[1]{.step} Les **solutions complètes** de S.4 et de T.1 seront publiées sur le site après la séance.
+
+[2]{.step} Les **exercices supplémentaires** sont à faire à la maison ; les **défis** restent optionnels.
+
+[3]{.step} Sur la page **Institutionnalisation**, coche les objectifs que tu sais atteindre.
+
+::: notes
+Si le temps manque, cette diapositive se résume en une phrase pendant que les étudiant·es rangent.
+:::

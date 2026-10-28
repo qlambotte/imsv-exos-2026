@@ -1,0 +1,66 @@
+<!-- DÉFIS : page optionnelle, pour celles et ceux qui trouvent les exercices trop faciles.
+     Chaque défi est plus corsé que le transfert, reste dans les notions et la notation du cours, et demande
+     plusieurs étapes ou un choix de méthode que l'énoncé n'indique pas.
+     Titre : « Exercice|Défi|niveau|Ox » (numéro D.1, D.2… automatique ; le préfixe D est la première lettre de « Défi »).
+     Pas de solution rédigée : un seul onglet « Indice » (une phrase complète), puis « Réponse » (une phrase complète).
+     Faisable SANS calculatrice. Réponses vérifiées par script (hors dépôt). -->
+
+::: {.callout-note appearance="simple"}
+Les défis sont **optionnels**. Ils s'adressent à celles et ceux qui maîtrisent déjà le socle : tu peux les faire en séance, à la place des exercices du socle que tu sais déjà résoudre, ou à la maison. Ils restent dans les notions et les notations de la séance, mais ils demandent plusieurs étapes et un choix de méthode que l'énoncé n'indique pas. Chaque défi propose un seul indice et la réponse finale, sans solution rédigée : c'est à toi de construire le raisonnement et de contrôler ta réponse.
+:::
+
+::: {.callout-caution .exo title="Exercice|Défi|3|O1"}
+Pour chaque entier $n \geq 1$, on compare les nombres $2^{n}$ et $n^{3}$. Détermine tous les entiers $n \geq 1$ pour lesquels $2^{n} > n^{3}$. Justifie ensuite que, à partir d'un certain entier, l'inégalité reste vraie pour tous les entiers suivants.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Calcule les deux membres pour les premiers entiers, puis compare, quand on passe de $n$ à $n + 1$, le nombre par lequel $2^{n}$ est multiplié et le nombre par lequel $n^{3}$ est multiplié.
+
+## Réponse
+
+L'inégalité $2^{n} > n^{3}$ est vraie pour $n = 1$, fausse pour tous les entiers de $2$ à $9$, et vraie pour tous les entiers $n \geq 10$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Défi|3|O3"}
+Le niveau sonore $L$, en dB, d'un son d'intensité $I$ est donné par $L = 10\log_{10}\dfrac{I}{I_0}$, où $I_0$ est une intensité de référence fixée. Dans un atelier, chaque machine, mise en marche seule, produit en un point donné un niveau sonore de $85$ dB. Les intensités sonores de machines identiques fonctionnant en même temps s'additionnent. Pour un niveau sonore $L$ supérieur ou égal à $85$ dB, la durée d'exposition admissible, en heures, est modélisée par $D(L) = 8 \cdot 2^{-(L - 85)/3}$.[^niosh-d2] Dix machines identiques fonctionnent en même temps. Calcule le niveau sonore en ce point, puis la durée d'exposition admissible : écris-la en heures sous forme exacte, puis donne une valeur approchée en minutes.
+
+[^niosh-d2]: NIOSH, « Understanding Noise Exposure Limits: Occupational vs. General Environmental Noise », CDC, 2016, https://www.cdc.gov/niosh/bulletin/2016/noise.html : $85$ dB(A) sur $8$ heures, avec une réduction de moitié de la durée pour chaque augmentation de $3$ dB.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Écris l'intensité totale en fonction de l'intensité $I_1$ d'une seule machine avant de revenir au niveau sonore, car ce sont les intensités qui s'additionnent et non les niveaux en dB.
+
+## Réponse
+
+Les dix machines produisent ensemble un niveau sonore de $95$ dB, et la durée d'exposition admissible est de $2^{-1/3}$ heure, soit environ $0{,}79$ heure, c'est-à-dire un peu moins de $48$ minutes.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Défi|3|O2"}
+Soit la fonction $f$ définie par $f(x) = A\sin(\omega x + \varphi) + D$, où $A > 0$, $\omega > 0$, $D$ est un nombre réel et $-\pi < \varphi \leq \pi$. Le maximum de $f$ vaut $5$ et il est atteint en $x = \dfrac{\pi}{4}$. Le minimum suivant vaut $1$ et il est atteint en $x = \dfrac{7\pi}{12}$. Détermine $A$, $D$, $\omega$ et $\varphi$, puis détermine le nombre de solutions de l'équation $f(x) = 3$ dans l'intervalle $[0,\,2\pi[$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+La distance entre un maximum et le minimum suivant est la moitié de la période, et le sinus vaut $0$ lorsque son argument est un multiple de $\pi$.
+
+## Réponse
+
+On a $f(x) = 2\sin\!\left(3x - \dfrac{\pi}{4}\right) + 3$, et l'équation $f(x) = 3$ possède $6$ solutions dans l'intervalle $[0,\,2\pi[$, à savoir les nombres $\dfrac{\pi}{12} + \dfrac{k\pi}{3}$ pour $k$ entier de $0$ à $5$.
+
+:::
+:::

@@ -1,7 +1,8 @@
 <!-- RENFORCEMENT : variations du socle (même compétence, entraînement en plus).
      Faisable SANS calculatrice ; valeurs différentes du socle.
      Numéro AUTOMATIQUE (catégorie Renforcement -> R.1, R.2…). Mêmes aides que le socle : Indice 1 (théorie), Indice 2 (question),
-     Indice 3 (étape), chacun avec une ligne par sous-question, puis Solution et Piège. -->
+     Indice 3 (étape), chacun avec une ligne par sous-question, puis Solution (Réponse + détails) et Piège.
+     Résultats vérifiés par script (hors dépôt). -->
 
 ::: {.callout-note appearance="simple"}
 Ces exercices restent **dans les objectifs** de la séance : à faire une fois le socle et le transfert
@@ -28,63 +29,84 @@ Le tableau suivant donne les valeurs de quatre fonctions $A$, $B$, $C$ et $D$ po
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Comparaison qualitative des croissances* pour (a) et (b), *Exponentielle : facteur multiplicatif constant* pour (b) et (c), et *Polynômes* pour la formule de $D$ en (c). La méthode est la fiche **Reconnaître le type de croissance**.
+Retourne à la théorie du cours : *Culture de bactéries* (modèles affine et exponentiel) pour (a) et (b), *Construction de l'exponentielle* et *Polynômes* pour (c).
 
 ## Indice 2
 
 *Question à te poser.*
 
-(a) Pour quelle fonction les différences successives sont-elles toutes égales, et pour quelle fonction les quotients successifs le sont-ils ?
-(b) Quelle propriété de ces différences ou de ces quotients caractérise un modèle affine, et laquelle caractérise un modèle exponentiel ?
-(c) Quelles sont la valeur initiale et la valeur constante de la différence ou du quotient pour chaque fonction ?
+(a) Que faut-il calculer pour savoir si une grandeur augmente de la même quantité, ou est multipliée par le même nombre, à chaque pas ?
+(b) Quelle propriété des différences caractérise un modèle affine, et quelle propriété des quotients caractérise un modèle exponentiel ?
+(c) Quelle est la valeur en $t = 0$ de chaque fonction, et quelle est sa différence ou son quotient constant ?
 
 ## Indice 3
 
 *Étape.*
 
 (a) Soustrais deux valeurs consécutives de chaque ligne, puis divise deux valeurs consécutives des lignes $A$, $B$ et $C$.
-(b) Classe chaque fonction selon que ses différences sont constantes, ou que ses quotients sont constants, ou qu'aucune des deux propriétés n'est vérifiée.
-(c) Écris les formules $b + m\,t$ et $b \cdot a^{t}$ avec les nombres lus en (a), puis cherche pour $D$ une formule qui relie chaque valeur de $t$ à la valeur de $D(t)$ du tableau.
+(b) Classe chaque fonction selon que ses différences sont constantes, que ses quotients sont constants, ou qu'aucune des deux propriétés n'est vérifiée.
+(c) Écris $A(t)$ sous la forme $A(0) + m\,t$ et $B(t)$, $C(t)$ sous la forme $N_{0} \cdot a^{t}$ ; pour $D$, compare chaque valeur de $D(t)$ à la valeur de $t$ de la même colonne.
 
 ## Solution
 
-On reconnaît un modèle à partir des différences successives, constantes pour un modèle affine, et des quotients successifs, constants pour un modèle exponentiel.
+::: {.reponse}
+**Réponse (a).** Les différences valent $3$, $3$, $3$ pour $A$ ; $5$, $10$, $20$ pour $B$ ; $-54$, $-18$, $-6$ pour $C$ ; $1$, $3$, $5$ pour $D$. Les quotients valent $\tfrac{8}{5}$, $\tfrac{11}{8}$, $\tfrac{14}{11}$ pour $A$ ; $2$, $2$, $2$ pour $B$ ; $\tfrac{1}{3}$, $\tfrac{1}{3}$, $\tfrac{1}{3}$ pour $C$.
+:::
 
-(a) On calcule les différences et les quotients de deux colonnes consécutives.
+::: {.details}
+On calcule, pour chaque fonction, la différence $f(t + 1) - f(t)$ entre deux colonnes consécutives, puis, pour $A$, $B$ et $C$, le quotient $\tfrac{f(t + 1)}{f(t)}$.
 
-    | | différences | quotients |
-    |:---:|:---:|:---:|
-    | $A$ | $3$, $3$, $3$ | $\tfrac{8}{5}$, $\tfrac{11}{8}$, $\tfrac{14}{11}$ |
-    | $B$ | $5$, $10$, $20$ | $2$, $2$, $2$ |
-    | $C$ | $-54$, $-18$, $-6$ | $\tfrac{1}{3}$, $\tfrac{1}{3}$, $\tfrac{1}{3}$ |
-    | $D$ | $1$, $3$, $5$ | |
+1. Pour $A$, on calcule $8 - 5 = 3$, $11 - 8 = 3$ et $14 - 11 = 3$, puis $\tfrac{8}{5}$, $\tfrac{11}{8}$ et $\tfrac{14}{11}$.
+2. Pour $B$, on calcule $10 - 5 = 5$, $20 - 10 = 10$ et $40 - 20 = 20$, puis $\tfrac{10}{5} = \tfrac{20}{10} = \tfrac{40}{20} = 2$.
+3. Pour $C$, on calcule $27 - 81 = -54$, $9 - 27 = -18$ et $3 - 9 = -6$, puis $\tfrac{27}{81} = \tfrac{9}{27} = \tfrac{3}{9} = \tfrac{1}{3}$.
+4. Pour $D$, on calcule $1 - 0 = 1$, $4 - 1 = 3$ et $9 - 4 = 5$.
+:::
 
-(b) Un modèle affine ajoute le même nombre à chaque pas, donc ses différences sont constantes. Un modèle exponentiel multiplie par le même nombre à chaque pas, donc ses quotients sont constants. La fonction $A$ a des différences constantes, donc un modèle affine convient. Les fonctions $B$ et $C$ ont des quotients constants, donc un modèle exponentiel convient. La fonction $D$ a des différences $1$, $3$ et $5$ qui ne sont pas constantes, et son premier quotient n'est pas défini, car $D(0) = 0$ : aucun des deux modèles ne convient.
+::: {.reponse}
+**Réponse (b).** Un modèle affine convient pour $A$, un modèle exponentiel convient pour $B$ et pour $C$, et aucun des deux ne convient pour $D$.
+:::
 
-(c) On écrit chaque formule avec la valeur initiale et la différence ou le quotient constant.
+::: {.details}
+Un modèle affine ajoute le même nombre à chaque pas, donc ses différences sont constantes ; un modèle exponentiel multiplie par le même nombre à chaque pas, donc ses quotients sont constants, comme dans la mise en situation du cours.
 
-    1. La fonction $A$ a pour valeur initiale $5$ et pour différence constante $3$, donc $A(t) = 5 + 3t$.
-    2. La fonction $B$ a pour valeur initiale $5$ et pour quotient constant $2$, donc $B(t) = 5 \cdot 2^{t}$.
-    3. La fonction $C$ a pour valeur initiale $81$ et pour quotient constant $\tfrac{1}{3}$, donc $C(t) = 81 \cdot \left(\tfrac{1}{3}\right)^{t}$.
-    4. Les valeurs de $D$ sont les carrés $0$, $1$, $4$ et $9$ des nombres $0$, $1$, $2$ et $3$, donc $D(t) = t^{2}$.
+1. Les différences de $A$ sont toutes égales à $3$, donc un modèle affine convient.
+2. Les quotients de $B$ sont tous égaux à $2$, et ceux de $C$ à $\tfrac{1}{3}$, donc un modèle exponentiel convient pour ces deux fonctions.
+3. Les différences de $D$ valent $1$, $3$ et $5$ : elles ne sont pas constantes ; son premier quotient n'est pas défini, car $D(0) = 0$. Aucun des deux modèles ne convient.
+:::
 
-    Contrôle : $C(2) = 81 \cdot \tfrac{1}{9} = 9$ et $D(3) = 9$, ce qui correspond au tableau.
+::: {.reponse}
+**Réponse (c).** On a $A(t) = 5 + 3t$, $B(t) = 5 \cdot 2^{t}$, $C(t) = 81 \cdot \left(\tfrac{1}{3}\right)^{t}$ et $D(t) = t^{2}$.
+:::
+
+::: {.details}
+On écrit chaque formule avec la valeur en $t = 0$ et la différence ou le quotient constant trouvé en (a).
+
+1. La fonction $A$ vaut $5$ en $t = 0$ et augmente de $3$ à chaque pas, donc $A(t) = 5 + 3t$.
+2. La fonction $B$ vaut $5$ en $t = 0$ et est multipliée par $2$ à chaque pas, donc $B(t) = 5 \cdot 2^{t}$, de la forme $N_{0} \cdot a^{t}$ du cours.
+3. La fonction $C$ vaut $81$ en $t = 0$ et est multipliée par $\tfrac{1}{3}$ à chaque pas, donc $C(t) = 81 \cdot \left(\tfrac{1}{3}\right)^{t}$.
+4. Les valeurs $0$, $1$, $4$ et $9$ de $D$ sont les carrés des valeurs $0$, $1$, $2$ et $3$ de $t$, donc $D(t) = t^{2}$, un polynôme de degré $2$.
+
+Vérification : $C(2) = 81 \cdot \tfrac{1}{9} = 9$ et $D(3) = 9$, ce qui correspond au tableau.
+:::
 
 ## Piège
 
-Une erreur fréquente consiste à conclure qu'une fonction est exponentielle parce que ses valeurs augmentent de plus en plus vite. Elle est tentante parce que c'est ce que fait une exponentielle, mais elle est fausse : la fonction $D$ augmente de plus en plus vite, avec des différences $1$, $3$ et $5$, sans avoir de quotients constants. Il faut vérifier que les quotients sont égaux.
+Une erreur fréquente consiste à conclure que $D$ est exponentielle parce que ses valeurs augmentent de plus en plus vite. Elle est tentante parce que l'exponentielle est le modèle « qui monte de plus en plus vite », mais elle est fausse : il faut que les quotients soient constants, ce qui n'est pas le cas pour $D$.
 
-Une autre erreur consiste à écrire $A(t) = 5 \cdot 3^{t}$ à cause de la différence $3$. Elle est tentante parce que le nombre $3$ apparaît dans les calculs, mais elle est fausse : une différence constante donne un terme ajouté à chaque pas, donc $A(t) = 5 + 3t$, alors que $5 \cdot 3^{t}$ vaut $15$ pour $t = 1$.
+Une autre erreur consiste à écrire $A(t) = 5 \cdot 3^{t}$ à cause de la différence $3$. Elle est tentante parce que le nombre $3$ apparaît dans les calculs, mais elle est fausse : une différence constante correspond à un nombre ajouté à chaque pas, donc $A(t) = 5 + 3t$.
 
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Renforcement|2|O1"}
-Soit le polynôme $q$ défini par $q(x) = (x + 3)(x - 1)(x - 2)$.
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O5"}
+La bactérie *Escherichia coli* se multiplie en se divisant en deux cellules identiques. Dans un bouillon de culture riche à $37$ °C, le temps de doublement mesuré pendant la croissance régulière est de $20$ minutes.[^ecoli-r6] Une culture contient $1000$ bactéries à l'instant $t = 0$. On note $N(t)$ le nombre de bactéries à l'instant $t$, où $t$ est exprimé en heures, et on suppose que la croissance reste régulière.
 
-(a) Écris $q(x)$ sous forme développée, puis écris le degré de $q$ et le coefficient du terme de plus haut degré.
-(b) Écris les racines de $q$.
-(c) Étudie le signe de $q$ dans un tableau de signes qui contient une ligne pour chacun des trois facteurs et une ligne pour $q(x)$. Écris ensuite les intervalles sur lesquels $q(x) \geq 0$.
+[^ecoli-r6]: G. Sezonov, D. Joseleau-Petit et R. D'Ari, « *Escherichia coli* Physiology in Luria-Bertani Broth », *Journal of Bacteriology*, 189(23), 2007, p. 8746-8749 : « The doubling time during steady-state growth in Luria-Bertani broth was 20 min. »
+
+(a) Écris $N(t)$ sous la forme $N(t) = 1000 \cdot 2^{ct}$, en donnant la valeur du nombre $c$ avec son unité.
+(b) Calcule le nombre de bactéries après $2$ heures. Écris le résultat sous la forme d'un nombre entier.
+(c) Écris l'équation qui exprime que la culture contient $100\,000$ bactéries, puis résous-la. Écris la solution $t$ sous forme exacte, en heures.
+(d) Encadre la valeur de $t$ trouvée en (c) entre deux multiples consécutifs du temps de doublement, en comparant un nombre bien choisi à des puissances de $2$. Écris l'encadrement en minutes.
 :::
 
 ::: {.aides}
@@ -92,60 +114,88 @@ Soit le polynôme $q$ défini par $q(x) = (x + 3)(x - 1)(x - 2)$.
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Polynômes* pour (a) et (b), et *Racines et étude de signe* de la séance 5 pour (b) et (c).
+Retourne à la théorie du cours : *Construction de l'exponentielle* pour (a) et (b), *Retour aux bactéries* pour (c), et *Temps de doublement* pour (d).
 
 ## Indice 2
 
 *Question à te poser.*
 
-(a) Quelle est la puissance de $x$ la plus élevée qui apparaît quand on développe le produit ?
-(b) Quelle condition doit vérifier un des trois facteurs pour que le produit soit nul ?
-(c) Quel est le signe de chaque facteur dans chaque intervalle délimité par les racines ?
+(a) Combien de doublements y a-t-il en une heure, si un doublement dure $20$ minutes ?
+(b) Combien de doublements y a-t-il en $2$ heures ?
+(c) Comment isoler la puissance de $2$ avant d'appliquer le logarithme ?
+(d) Entre quelles puissances consécutives de $2$ se trouve le nombre $100$ ?
 
 ## Indice 3
 
 *Étape.*
 
-(a) Développe d'abord $(x + 3)(x - 1)$, puis multiplie le résultat par $x - 2$.
-(b) Annule chacun des trois facteurs et résous les trois équations obtenues.
-(c) Range les racines dans l'ordre croissant, remplis une ligne par facteur, puis applique la règle des signes d'un produit à chaque colonne.
+(a) Écris $20$ minutes en heures, puis compte le nombre de doublements par heure.
+(b) Remplace $t$ par $2$ dans l'expression de (a).
+(c) Écris $1000 \cdot 2^{3t} = 100\,000$, puis divise les deux membres par $1000$.
+(d) Utilise $2^{6} = 64$ et $2^{7} = 128$ pour encadrer $3t$, puis $t$.
 
 ## Solution
 
-On développe pour lire le degré, on annule chaque facteur pour trouver les racines, puis on étudie le signe des facteurs pour en déduire celui du produit.
+::: {.reponse}
+**Réponse (a).** On a $N(t) = 1000 \cdot 2^{3t}$, donc $c = 3$ h⁻¹.
+:::
 
-(a) On développe en deux temps.
+::: {.details}
+On connaît le temps de doublement, $20$ minutes, et l'effectif initial, $1000$ bactéries. On cherche le nombre de doublements par heure, qui est le nombre $c$.
 
-    1. On développe les deux premiers facteurs : $(x + 3)(x - 1) = x^2 - x + 3x - 3 = x^2 + 2x - 3$.
-    2. On multiplie le résultat par $x - 2$ : $q(x) = (x^2 + 2x - 3)(x - 2) = x^3 - 2x^2 + 2x^2 - 4x - 3x + 6 = x^3 - 7x + 6$.
+1. On convertit le temps de doublement en heures : $20$ minutes valent $\tfrac{1}{3}$ h.
+2. En une heure, il y a donc $3$ doublements : la population est multipliée par $2^{3}$ chaque heure, et par $2^{3t}$ en $t$ heures.
+3. On en déduit $N(t) = 1000 \cdot 2^{3t}$, avec $c = 3$ h⁻¹, car $t$ est en heures.
+:::
 
-    Le degré de $q$ est $3$ et le coefficient du terme de plus haut degré est $1$.
+::: {.reponse}
+**Réponse (b).** Après $2$ heures, la culture contient $64\,000$ bactéries.
+:::
 
-(b) Un produit est nul si et seulement si l'un de ses facteurs est nul : $x + 3 = 0$, ou $x - 1 = 0$, ou $x - 2 = 0$. Les racines de $q$ sont donc $-3$, $1$ et $2$.
+::: {.details}
+On calcule $N(2)$ avec le modèle de (a).
 
-(c) On étudie le signe de chaque facteur de part et d'autre de sa racine, puis on applique la règle des signes d'un produit : le produit est positif quand le nombre de facteurs négatifs est pair.
+1. On remplace $t$ par $2$ : $N(2) = 1000 \cdot 2^{6}$.
+2. On calcule $2^{6} = 64$, donc $N(2) = 64\,000$.
 
-    | $x$ | $-\infty$ |  | $-3$ |  | $1$ |  | $2$ |  | $+\infty$ |
-    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-    | signe de $x + 3$ | $-$ | $-$ | $0$ | $+$ | $+$ | $+$ | $+$ | $+$ | $+$ |
-    | signe de $x - 1$ | $-$ | $-$ | $-$ | $-$ | $0$ | $+$ | $+$ | $+$ | $+$ |
-    | signe de $x - 2$ | $-$ | $-$ | $-$ | $-$ | $-$ | $-$ | $0$ | $+$ | $+$ |
-    | signe de $q(x)$ | $-$ | $-$ | $0$ | $+$ | $0$ | $-$ | $0$ | $+$ | $+$ |
+Ce résultat correspond à $6$ doublements de $20$ minutes en $2$ heures.
+:::
 
-    Contrôle : $q(0) = 3 \cdot (-1) \cdot (-2) = 6 > 0$, ce qui correspond au signe $+$ entre $-3$ et $1$.
+::: {.reponse}
+**Réponse (c).** La culture contient $100\,000$ bactéries à l'instant $t = \dfrac{\ln(100)}{3\ln(2)}$ h, soit environ $2{,}2$ h.
+:::
 
-    Dans la ligne de $q(x)$, les signes $+$ ou $0$ se trouvent entre $-3$ et $1$, aux valeurs $-3$, $1$ et $2$, et à droite de $2$ : on a donc $q(x) \geq 0$ sur $[-3,\,1]$ et sur $[2,\,+\infty[$.
+::: {.details}
+On cherche l'instant $t$, en heures, auquel $N(t) = 100\,000$ : on résout une équation exponentielle en gardant la base $2$, comme dans *Retour aux bactéries*.
+
+1. On écrit l'équation : $1000 \cdot 2^{3t} = 100\,000$.
+2. On isole la puissance en divisant les deux membres par $1000$ : $2^{3t} = 100$.
+3. Les deux membres sont strictement positifs, donc on applique le logarithme népérien : $3t\ln(2) = \ln(100)$.
+4. On isole $t$ : $t = \dfrac{\ln(100)}{3\ln(2)}$.
+:::
+
+::: {.reponse}
+**Réponse (d).** La culture atteint $100\,000$ bactéries entre $120$ et $140$ minutes après l'instant $t = 0$, c'est-à-dire entre le sixième et le septième doublement.
+:::
+
+::: {.details}
+On encadre $3t$, le nombre de doublements, en comparant $100$ à deux puissances consécutives de $2$.
+
+1. On a $2^{6} = 64 < 100 < 128 = 2^{7}$, donc $2^{6} < 2^{3t} < 2^{7}$.
+2. La fonction $2^{x}$ est strictement croissante, donc $6 < 3t < 7$ : il faut entre $6$ et $7$ doublements.
+3. Un doublement dure $20$ minutes, donc $t$ est compris entre $6 \cdot 20 = 120$ et $7 \cdot 20 = 140$ minutes.
+:::
 
 ## Piège
 
-Une erreur fréquente consiste à développer $(x + 3)(x - 1)(x - 2)$ en oubliant un terme croisé, par exemple en écrivant $x^3 + 6$. Elle est tentante parce que l'on multiplie seulement les termes de même rang, mais elle est fausse : chaque terme d'un facteur doit être multiplié par chaque terme des autres facteurs, ce qui fait apparaître les termes en $x^2$ et en $x$.
+En (a), une erreur fréquente consiste à écrire $c = 20$ ou $c = \tfrac{1}{20}$. Elle est tentante parce que le nombre $20$ figure dans l'énoncé, mais elle est fausse : $t$ est en heures, et $c$ est le nombre de doublements par heure, soit $3$.
 
-Une autre erreur consiste à oublier les racines dans la réponse de (c) et à écrire $]-3,\,1[$ et $]2,\,+\infty[$. Elle est tentante parce que ce sont les intervalles où $q$ est strictement positive, mais elle est fausse : l'inégalité est large, donc les racines $-3$, $1$ et $2$ appartiennent à l'ensemble des solutions.
+En (c), une autre erreur consiste à oublier de diviser par $1000$ avant d'appliquer le logarithme. Elle est tentante parce que l'on veut faire descendre l'exposant tout de suite, mais elle est fausse : le logarithme du produit $1000 \cdot 2^{3t}$ n'est pas $3t\ln(2)$, il faut d'abord isoler la puissance.
 
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O5"}
 Le technétium-99m est un radioélément utilisé en imagerie médicale. Sa demi-vie est de six heures.[^tc-r3] On note $N_0$ le nombre d'atomes de technétium-99m d'un échantillon à l'instant $t = 0$. Le nombre d'atomes restants à l'instant $t$ suit le modèle $N(t) = N_0 \cdot 2^{-t/6}$, où $t$ est le temps en heures.
 
 [^tc-r3]: Washington State Department of Health, Office of Radiation Protection, « Technetium-99m (99mTc) », Fact Sheet 320-083, juillet 2002 : « It has a half-life of six hours ».
@@ -160,59 +210,80 @@ Le technétium-99m est un radioélément utilisé en imagerie médicale. Sa demi
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Temps de doublement et demi-vie* pour (a) et (c), et *Lien entre les formes $a^t$ et $e^{kt}$* pour (b).
+Retourne à la théorie du cours : *Demi-vie* pour (a) et (c), et *La base naturelle : une autre écriture du même mécanisme* pour (b).
 
 ## Indice 2
 
 *Question à te poser.*
 
-(a) Combien de demi-vies de six heures contiennent $18$ heures ?
-(b) Comment écrit-on la puissance $2^{u}$ à l'aide de la base $e$ ?
-(c) Quelle puissance de $2$ est égale à $\tfrac{1}{32}$ ?
+(a) Combien de demi-vies de $6$ heures y a-t-il en $18$ heures ?
+(b) Quel nombre faut-il mettre en exposant de $e$ pour obtenir $2$ ?
+(c) Comment écrire $\tfrac{1}{32}$ comme une puissance de $2$ ?
 
 ## Indice 3
 
 *Étape.*
 
-(a) Remplace $t$ par $18$ dans l'exposant $-\tfrac{t}{6}$ et calcule la puissance de $2$.
-(b) Écris $2^{-t/6}$ avec la base $e$, puis identifie le coefficient de $t$ dans l'exposant.
-(c) Écris l'équation $2^{-t/6} = \tfrac{1}{32}$, écris $\tfrac{1}{32}$ comme une puissance de $2$, puis compare les exposants.
+(a) Remplace $t$ par $18$ dans $2^{-t/6}$.
+(b) Écris $2 = e^{\ln(2)}$, puis remplace $2$ par cette expression dans $N(t)$.
+(c) Écris l'équation $N_{0} \cdot 2^{-t/6} = \tfrac{N_{0}}{32}$, divise par $N_{0}$, puis écris $\tfrac{1}{32} = 2^{-5}$.
 
 ## Solution
 
-On utilise la forme $N_0 \cdot 2^{-t/6}$ d'une décroissance exponentielle de demi-vie six heures, puis le lien avec la forme $e^{-kt}$.
+::: {.reponse}
+**Réponse (a).** Après $18$ heures, il reste $\tfrac{1}{8}$ des atomes de départ, soit $\tfrac{N_{0}}{8}$.
+:::
 
-(a) Pour $t = 18$, l'exposant vaut $-\tfrac{18}{6} = -3$, donc $\dfrac{N(18)}{N_0} = 2^{-3} = \dfrac{1}{8}$. Après $18$ heures, il reste donc un huitième de $N_0$, ce qui correspond à trois demi-vies successives.
+::: {.details}
+On calcule la fraction $\tfrac{N(18)}{N_{0}}$ à l'aide du modèle.
 
-(b) On écrit la puissance de $2$ avec la base $e$.
+1. On remplace $t$ par $18$ : $N(18) = N_{0} \cdot 2^{-18/6} = N_{0} \cdot 2^{-3}$.
+2. On calcule $2^{-3} = \tfrac{1}{8}$, donc $N(18) = \tfrac{N_{0}}{8}$.
 
-    1. Le lien entre les deux formes est $2^{u} = e^{u \ln 2}$ pour tout nombre $u$.
-    2. Avec $u = -\tfrac{t}{6}$, on obtient $2^{-t/6} = e^{-(t/6)\ln 2} = e^{-(\ln 2/6)\,t}$.
+Ce résultat correspond à $3$ demi-vies de $6$ heures : le nombre d'atomes est divisé trois fois par $2$.
+:::
 
-    On a donc $N(t) = N_0\,e^{-kt}$ avec $k = \dfrac{\ln 2}{6}$ par heure.
+::: {.reponse}
+**Réponse (b).** On a $N(t) = N_{0}\,e^{-kt}$ avec $k = \tfrac{\ln(2)}{6}$ h⁻¹, soit environ $0{,}12$ h⁻¹.
+:::
 
-(c) On cherche l'instant $t$ tel que $N(t) = \dfrac{N_0}{32}$.
+::: {.details}
+On réécrit le modèle avec la base $e$, comme dans *La base naturelle : une autre écriture du même mécanisme*.
 
-    1. On écrit l'équation $N_0 \cdot 2^{-t/6} = \dfrac{N_0}{32}$ et on divise les deux membres par $N_0$, qui est strictement positif : $2^{-t/6} = \dfrac{1}{32}$.
-    2. On écrit $\tfrac{1}{32} = 2^{-5}$, car $2^5 = 32$, donc $2^{-t/6} = 2^{-5}$.
-    3. La fonction $2^x$ est strictement croissante, donc deux puissances de $2$ égales ont le même exposant : $-\tfrac{t}{6} = -5$, donc $t = 30$.
+1. Comme $e^{\ln(2)} = 2$, on a $2^{-t/6} = e^{-\ln(2)\,t/6}$.
+2. On lit le nombre qui multiplie $-t$ dans l'exposant : $k = \tfrac{\ln(2)}{6}$. Comme $t$ est en heures, $k$ est en h⁻¹.
 
-    Il reste donc un trente-deuxième de $N_0$ au bout de $30$ heures, soit cinq demi-vies de six heures.
+Vérification : la formule du cours $T_{1/2} = \tfrac{\ln(2)}{k}$ redonne une demi-vie de $6$ heures.
+:::
+
+::: {.reponse}
+**Réponse (c).** Il reste $\tfrac{N_{0}}{32}$ atomes à l'instant $t = 30$ h.
+:::
+
+::: {.details}
+On cherche l'instant $t$, en heures, auquel $N(t) = \tfrac{N_{0}}{32}$. Le second membre est une puissance de $2$, donc on compare directement les exposants, comme dans la méthode *Résoudre une équation exponentielle*.
+
+1. On écrit l'équation $N_{0} \cdot 2^{-t/6} = \tfrac{N_{0}}{32}$, puis on divise les deux membres par $N_{0}$, qui est strictement positif : $2^{-t/6} = \tfrac{1}{32}$.
+2. On écrit $\tfrac{1}{32} = 2^{-5}$, car $2^{5} = 32$, donc $2^{-t/6} = 2^{-5}$.
+3. La fonction $2^{x}$ est strictement croissante, donc deux puissances de $2$ égales ont le même exposant : $-\tfrac{t}{6} = -5$, donc $t = 30$ h.
+
+Interprétation : $30$ heures correspondent à $5$ demi-vies, et $2^{5} = 32$.
+:::
 
 ## Piège
 
-En (c), une erreur fréquente consiste à écrire $t = \dfrac{6}{32}$ ou $t = 6 \cdot 32 = 192$ heures. Elle est tentante parce que les nombres $6$ et $32$ figurent dans le problème et que l'on cherche à les combiner par une opération simple, mais elle est fausse : le nombre $32$ est une puissance de $2$, qui compte des demi-vies, et non une durée à multiplier par $6$. Il faut compter le nombre de demi-vies, qui est $5$, puis multiplier par six heures.
+En (a), une erreur fréquente consiste à répondre $\tfrac{1}{3}$, parce que $18$ heures font $3$ demi-vies. Elle est tentante parce que l'on divise par le nombre de demi-vies, mais elle est fausse : chaque demi-vie divise par $2$, donc trois demi-vies divisent par $2^{3} = 8$.
 
-En (b), une autre erreur consiste à écrire $k = \ln 2$ en oubliant le facteur $\tfrac{1}{6}$. Elle est tentante parce que $\ln 2$ apparaît quand on change de base, mais elle est fausse : l'exposant de $2^{-t/6}$ est $-\tfrac{t}{6}$, donc le coefficient de $t$ est $\tfrac{\ln 2}{6}$ et non $\ln 2$.
+En (b), une autre erreur consiste à écrire $k = \ln(2)$ en oubliant le facteur $\tfrac{1}{6}$. Elle est tentante parce que $\ln(2)$ est le nombre qui apparaît quand on change de base, mais elle est fausse : l'exposant est $-\tfrac{t}{6}$, donc le nombre qui multiplie $-t$ est $\tfrac{\ln(2)}{6}$.
 
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Renforcement|2|O3"}
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O4"}
 (a) Résous l'équation $3\,e^{2x} = 12$. Écris la solution sous forme exacte.
 (b) Résous l'équation $2 \cdot 5^{t} = 50$. Écris la solution sous la forme d'un nombre entier.
 (c) Résous l'équation $\ln(x + 1) = 2$. Écris la solution sous forme exacte, puis vérifie qu'elle appartient au domaine de l'équation.
-(d) Le niveau sonore $L$ d'un son d'intensité $I$ est donné par $L = 10\log_{10}\dfrac{I}{I_0}$, où $I_0$ est l'intensité de référence. Écris le quotient $\dfrac{I}{I_0}$ sous la forme d'une puissance de $10$ pour un son de niveau $60$ dB.
+(d) Le niveau sonore $L$ d'un son d'intensité $I$ est donné par $L = 10\log_{10}\left(\dfrac{I}{I_0}\right)$, où $I_0$ est l'intensité de référence. Écris le quotient $\dfrac{I}{I_0}$ sous la forme d'une puissance de $10$ pour un son de niveau $60$ dB.
 :::
 
 ::: {.aides}
@@ -220,59 +291,102 @@ En (b), une autre erreur consiste à écrire $k = \ln 2$ en oubliant le facteur 
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Logarithme comme fonction réciproque* pour (a), (b) et (c), et *Échelles logarithmiques : décibels* pour (d). La méthode de (a) et (b) est la fiche **Résoudre une équation exponentielle**.
+Retourne à la théorie du cours : *Comprendre le logarithme* et la méthode **Résoudre une équation exponentielle** pour (a) et (b), *Comprendre le logarithme* pour (c), et *Échelles logarithmiques* pour (d).
 
 ## Indice 2
 
 *Question à te poser.*
 
-(a) Quelle expression faut-il isoler dans un membre avant d'appliquer le logarithme népérien ?
-(b) Quelle puissance de $5$ est égale au nombre obtenu après avoir isolé $5^{t}$ ?
-(c) Quelle fonction défait le logarithme népérien, et pour quels nombres $x$ l'expression $\ln(x + 1)$ existe-t-elle ?
-(d) Quelle est la valeur du logarithme décimal de $\tfrac{I}{I_0}$ quand $L = 60$ ?
+(a) Comment isoler l'exponentielle avant d'appliquer le logarithme ?
+(b) Le nombre $25$ est-il une puissance de $5$ ?
+(c) Quelle fonction défait le logarithme népérien ?
+(d) Comment défaire le logarithme décimal de l'égalité $60 = 10\log_{10}\left(\tfrac{I}{I_0}\right)$ ?
 
 ## Indice 3
 
 *Étape.*
 
-(a) Divise les deux membres par $3$, puis applique le logarithme népérien aux deux membres et divise par $2$.
-(b) Divise les deux membres par $2$, puis écris le résultat comme une puissance de $5$ et compare les exposants.
-(c) Applique l'exponentielle de base $e$ aux deux membres, isole $x$, puis compare la valeur obtenue avec la condition $x + 1 > 0$.
-(d) Divise la formule par $10$, puis applique la puissance de $10$ aux deux membres.
+(a) Divise les deux membres par $3$, puis applique le logarithme népérien.
+(b) Divise les deux membres par $2$, puis écris $25$ comme une puissance de $5$.
+(c) Applique l'exponentielle aux deux membres, en utilisant $e^{\ln(y)} = y$.
+(d) Divise les deux membres par $10$, puis écris $\tfrac{I}{I_0}$ comme une puissance de $10$.
 
 ## Solution
 
-Dans chaque équation, on isole d'abord l'expression qui contient l'inconnue, puis on applique la fonction réciproque.
+::: {.reponse}
+**Réponse (a).** La solution de $3\,e^{2x} = 12$ est $x = \tfrac{\ln(4)}{2} = \ln(2)$.
+:::
 
-(a) On résout l'équation en quatre étapes.
+::: {.details}
+On isole l'exponentielle, puis on applique le logarithme népérien, qui défait l'exponentielle.
 
-    1. On divise les deux membres par $3$ pour isoler l'exponentielle : $e^{2x} = 4$.
-    2. Les deux membres sont strictement positifs, donc on applique le logarithme népérien aux deux membres : $2x = \ln 4$.
-    3. On divise par $2$ : $x = \dfrac{\ln 4}{2}$.
+1. On divise les deux membres par $3$ : $e^{2x} = 4$.
+2. Les deux membres sont strictement positifs, donc on applique le logarithme népérien : $2x = \ln(4)$.
+3. On divise par $2$ : $x = \tfrac{\ln(4)}{2}$. Comme $\ln(4) = \ln\left(2^{2}\right) = 2\ln(2)$, on obtient $x = \ln(2)$.
 
-    Contrôle : $3\,e^{2x} = 3\,e^{\ln 4} = 3 \cdot 4 = 12$.
+Vérification : $3\,e^{2\ln(2)} = 3\,e^{\ln(4)} = 3 \cdot 4 = 12$.
+:::
 
-(b) On isole la puissance en divisant les deux membres par $2$ : $5^{t} = 25$. Comme $25 = 5^2$, on a $5^{t} = 5^2$, et la fonction $5^x$ est strictement croissante, donc deux puissances de $5$ égales ont le même exposant : $t = 2$. Contrôle : $2 \cdot 5^2 = 50$.
+::: {.reponse}
+**Réponse (b).** La solution de $2 \cdot 5^{t} = 50$ est $t = 2$.
+:::
 
-(c) L'expression $\ln(x + 1)$ n'existe que si $x + 1 > 0$, c'est-à-dire si $x > -1$. On applique l'exponentielle de base $e$ aux deux membres : $x + 1 = e^{2}$, donc $x = e^{2} - 1$. Comme $e^{2} > 0$, on a $x = e^{2} - 1 > -1$, donc la solution appartient au domaine.
+::: {.details}
+On isole la puissance, puis on compare des puissances de même base.
 
-(d) On divise la formule par $10$ : $\log_{10}\dfrac{I}{I_0} = \dfrac{L}{10}$. Pour $L = 60$, on obtient $\log_{10}\dfrac{I}{I_0} = 6$. Le logarithme décimal est l'exposant de $10$, donc $\dfrac{I}{I_0} = 10^{6}$. Un son de $60$ dB a donc une intensité égale à un million de fois l'intensité de référence.
+1. On divise les deux membres par $2$ : $5^{t} = 25$.
+2. On écrit $25 = 5^{2}$, donc $5^{t} = 5^{2}$.
+3. La fonction $5^{x}$ est strictement croissante, donc les exposants sont égaux : $t = 2$.
+:::
+
+::: {.reponse}
+**Réponse (c).** La solution de $\ln(x + 1) = 2$ est $x = e^{2} - 1$, et elle appartient au domaine de l'équation.
+:::
+
+::: {.details}
+On défait le logarithme népérien par l'exponentielle, puis on vérifie que la solution appartient au domaine, puisque le logarithme n'est défini que pour des nombres strictement positifs.
+
+1. L'équation n'a de sens que si $x + 1 > 0$, c'est-à-dire si $x > -1$.
+2. On applique l'exponentielle aux deux membres : $e^{\ln(x + 1)} = e^{2}$, donc $x + 1 = e^{2}$.
+3. On isole $x$ : $x = e^{2} - 1$.
+4. Comme $e^{2} > 0$, on a $x + 1 = e^{2} > 0$ : la solution appartient au domaine.
+:::
+
+::: {.reponse}
+**Réponse (d).** Pour un son de niveau $60$ dB, le quotient vaut $\dfrac{I}{I_0} = 10^{6}$.
+:::
+
+::: {.details}
+On défait le logarithme décimal, comme dans la méthode *Exploiter une grandeur logarithmique*.
+
+1. On écrit l'égalité donnée par la formule : $60 = 10\log_{10}\left(\tfrac{I}{I_0}\right)$.
+2. On divise les deux membres par $10$ : $\log_{10}\left(\tfrac{I}{I_0}\right) = 6$.
+3. Par définition du logarithme décimal, on obtient $\tfrac{I}{I_0} = 10^{6}$.
+
+Interprétation : un son de $60$ dB a une intensité un million de fois plus grande que l'intensité de référence.
+:::
 
 ## Piège
 
-En (a), une erreur fréquente consiste à soustraire $3$ au lieu de diviser par $3$ et à écrire $e^{2x} = 12 - 3 = 9$. Elle est tentante parce que l'on veut « enlever » le nombre qui accompagne l'exponentielle, mais elle est fausse : le nombre $3$ multiplie l'exponentielle, donc on le supprime en divisant les deux membres par $3$, ce qui donne $e^{2x} = 4$.
+En (a), une erreur fréquente consiste à appliquer le logarithme avant de diviser par $3$ et à écrire $2x = \ln(12)$. Elle est tentante parce que l'on veut faire descendre l'exposant tout de suite, mais elle est fausse : $\ln\left(3\,e^{2x}\right) = \ln(3) + 2x$, donc il faut d'abord isoler l'exponentielle.
 
-En (c), une autre erreur consiste à oublier de vérifier le domaine de l'équation. Elle est tentante parce que le calcul donne directement une valeur, mais elle est fausse : une solution n'est acceptable que si elle vérifie $x + 1 > 0$, car sinon $\ln(x + 1)$ n'existe pas.
+En (d), une autre erreur consiste à écrire $\tfrac{I}{I_0} = 10^{60}$. Elle est tentante parce que l'on oublie le facteur $10$ de la formule, mais elle est fausse : il faut d'abord diviser par $10$, et l'exposant vaut $6$.
 
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
-Soit la fonction $f$ définie par $f(x) = 3\sin\!\left(2x - \dfrac{\pi}{2}\right) + 1$.
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O4"}
+Le pH d'une solution se calcule à partir de la concentration $[\mathrm{H}^+]$ en ions hydrogène, exprimée en mol/L, par la formule $\mathrm{pH} = -\log_{10}\left([\mathrm{H}^+]\right)$. Le suc gastrique est un milieu acide dont le pH varie entre $1{,}5$ et $3{,}5$.[^ph-gastrique-r] Le sang a un pH moyen de $7{,}4$ et reste entre $7{,}35$ et $7{,}45$ chez une personne en bonne santé.[^ph-sang-r] On considère un échantillon de suc gastrique de pH $2{,}4$.
 
-(a) Écris l'amplitude, la période et l'image de $f$.
-(b) Calcule $f(0)$, $f\!\left(\dfrac{\pi}{4}\right)$ et $f\!\left(\dfrac{\pi}{2}\right)$.
-(c) Écris les transformations qui permettent de passer du graphe de la fonction $\sin$ à celui de $f$. Écris-les dans l'ordre, en indiquant pour chacune le nombre qui la caractérise.
+(a) Écris la concentration $[\mathrm{H}^+]$ du suc gastrique de pH $2{,}4$, puis celle du sang de pH $7{,}4$. Écris chacune sous la forme d'une puissance de $10$, en mol/L.
+(b) Calcule le quotient de la concentration du suc gastrique par celle du sang. Écris le résultat sous la forme d'une puissance de $10$.
+(c) On dilue l'échantillon de suc gastrique de manière que sa concentration $[\mathrm{H}^+]$ soit divisée par $100$. Calcule son nouveau pH.
+(d) Le pH du sang reste entre $7{,}35$ et $7{,}45$. On donne $10^{0{,}1} \approx 1{,}26$. Calcule le quotient de la concentration $[\mathrm{H}^+]$ à pH $7{,}35$ par celle à pH $7{,}45$, puis écris en une phrase ce que ce résultat montre sur un écart de pH de $0{,}1$.
+
+[^ph-gastrique-r]: D. Baker, « Gastric Acid Production – Regulation – PPI », *TeachMePhysiology* : « It is an acidic environment with a pH that can vary between 1.5-3.5. » https://teachmephysiology.com/gastrointestinal-system/stomach/acid-production/ (consulté le 15 octobre 2026).
+
+[^ph-sang-r]: E. Hopkins, T. Sanvictores et S. Sharma, « Physiology, Acid Base Balance », *StatPearls*, StatPearls Publishing, 2022 : « the pH of the human body ranges between 7.35 and 7.45, with the average at 7.40 ». https://www.ncbi.nlm.nih.gov/books/NBK507807/ (consulté le 26 octobre 2026).
+
 :::
 
 ::: {.aides}
@@ -280,50 +394,212 @@ Soit la fonction $f$ définie par $f(x) = 3\sin\!\left(2x - \dfrac{\pi}{2}\right
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Fonctions trigonométriques comme modèles périodiques*, et plus précisément *Amplitude*, *Périodicité* et *Graphes, domaine et image* pour (a) et (b), et *Translation et changement d'échelle* pour (c).
+Retourne à la théorie du cours : *Échelles logarithmiques* et la méthode **Exploiter une grandeur logarithmique** pour (a), (b), (c) et (d).
 
 ## Indice 2
 
 *Question à te poser.*
 
-(a) Quelle est la distance entre la valeur centrale $1$ et le maximum, et par quel nombre faut-il diviser $2\pi$ pour obtenir la période ?
-(b) Quelle est la valeur de l'argument $2x - \tfrac{\pi}{2}$ pour chacune des trois valeurs de $x$ ?
-(c) Comment écrit-on $2x - \tfrac{\pi}{2}$ sous la forme $2(x - \dots)$ ?
+(a) Comment passer du pH à la concentration $[\mathrm{H}^+]$ ?
+(b) Que devient le quotient de deux puissances de $10$ ?
+(c) Comment le pH change-t-il quand la concentration est divisée par $10$, puis par $100$ ?
+(d) Quelle est la différence entre les deux pH, et par quel facteur correspond-elle sur la concentration ?
 
 ## Indice 3
 
 *Étape.*
 
-(a) Repère les nombres $3$, $2$ et $1$ dans la formule de $f$, puis calcule le minimum et le maximum de $f$.
-(b) Remplace $x$ par chaque valeur, calcule l'argument du sinus, puis utilise les valeurs du sinus pour les angles remarquables.
-(c) Écris $f(x) = 3\sin\!\left(2\left(x - \dots\right)\right) + 1$, puis lis dans cette écriture, dans l'ordre, la transformation de l'axe horizontal, puis celle de l'axe vertical.
+(a) Écris $[\mathrm{H}^+] = 10^{-\mathrm{pH}}$ pour chaque pH.
+(b) Divise $10^{-2{,}4}$ par $10^{-7{,}4}$ en soustrayant les exposants.
+(c) Écris la nouvelle concentration $\tfrac{10^{-2{,}4}}{100}$ comme une puissance de $10$, puis calcule son pH.
+(d) Divise $10^{-7{,}35}$ par $10^{-7{,}45}$ en soustrayant les exposants, puis utilise la valeur donnée de $10^{0{,}1}$.
 
 ## Solution
 
-On lit les paramètres de $f(x) = A\sin(\omega x + \varphi) + D$ pour décrire le graphe, puis on évalue la fonction en quelques valeurs.
+::: {.reponse}
+**Réponse (a).** La concentration en ions hydrogène vaut $10^{-2{,}4}$ mol/L dans le suc gastrique et $10^{-7{,}4}$ mol/L dans le sang.
+:::
 
-(a) Dans la formule, on lit $A = 3$, $\omega = 2$, $\varphi = -\tfrac{\pi}{2}$ et $D = 1$. L'amplitude est $A = 3$. La période vaut $\dfrac{2\pi}{\omega} = \dfrac{2\pi}{2} = \pi$. Le sinus varie entre $-1$ et $1$, donc $f$ varie entre $3 \cdot (-1) + 1 = -2$ et $3 \cdot 1 + 1 = 4$, et l'image de $f$ est $[-2,\,4]$.
+::: {.details}
+On connaît les pH et la relation $\mathrm{pH} = -\log_{10}\left([\mathrm{H}^+]\right)$. On cherche les concentrations : on passe du logarithme à la grandeur en écrivant une puissance de $10$, comme dans la méthode *Exploiter une grandeur logarithmique*.
 
-(b) On remplace $x$ par chaque valeur.
+1. La relation donne $\log_{10}\left([\mathrm{H}^+]\right) = -\mathrm{pH}$, donc $[\mathrm{H}^+] = 10^{-\mathrm{pH}}$.
+2. Pour le suc gastrique, de pH $2{,}4$, on obtient $[\mathrm{H}^+] = 10^{-2{,}4}$ mol/L.
+3. Pour le sang, de pH $7{,}4$, on obtient $[\mathrm{H}^+] = 10^{-7{,}4}$ mol/L.
+:::
 
-    1. Pour $x = 0$, l'argument vaut $-\tfrac{\pi}{2}$ et $\sin\left(-\tfrac{\pi}{2}\right) = -1$, donc $f(0) = 3 \cdot (-1) + 1 = -2$.
-    2. Pour $x = \tfrac{\pi}{4}$, l'argument vaut $\tfrac{\pi}{2} - \tfrac{\pi}{2} = 0$ et $\sin 0 = 0$, donc $f\left(\tfrac{\pi}{4}\right) = 1$.
-    3. Pour $x = \tfrac{\pi}{2}$, l'argument vaut $\pi - \tfrac{\pi}{2} = \tfrac{\pi}{2}$ et $\sin\tfrac{\pi}{2} = 1$, donc $f\left(\tfrac{\pi}{2}\right) = 3 \cdot 1 + 1 = 4$.
+::: {.reponse}
+**Réponse (b).** Le quotient vaut $10^{5}$ : le suc gastrique contient $100\,000$ fois plus d'ions hydrogène par litre que le sang.
+:::
 
-    Ces valeurs sont cohérentes avec l'image : $-2$ est le minimum et $4$ est le maximum.
+::: {.details}
+On calcule le quotient des deux concentrations trouvées en (a).
 
-(c) On met $2$ en facteur dans l'argument : $2x - \tfrac{\pi}{2} = 2\left(x - \tfrac{\pi}{4}\right)$, donc $f(x) = 3\sin\!\left(2\left(x - \tfrac{\pi}{4}\right)\right) + 1$. On passe du graphe de $\sin x$ à celui de $f$ par les quatre transformations suivantes, dans cet ordre.
+1. On écrit $\dfrac{10^{-2{,}4}}{10^{-7{,}4}} = 10^{-2{,}4 - (-7{,}4)} = 10^{5}$, car le quotient de deux puissances de $10$ s'obtient en soustrayant les exposants.
+2. Ce quotient est égal à $10$ élevé à la différence des pH, $7{,}4 - 2{,}4 = 5$.
+:::
 
-    1. Le changement d'échelle horizontal de facteur $\tfrac{1}{2}$ : le graphe est comprimé horizontalement, ce qui donne $\sin(2x)$ et divise la période par $2$.
-    2. La translation de $\tfrac{\pi}{4}$ vers la droite : cela donne $\sin\left(2\left(x - \tfrac{\pi}{4}\right)\right)$.
-    3. Le changement d'échelle vertical de facteur $3$ : le graphe est étiré verticalement, ce qui multiplie l'amplitude par $3$.
-    4. La translation de $1$ vers le haut.
+::: {.reponse}
+**Réponse (c).** Après la dilution, le pH de l'échantillon vaut $4{,}4$.
+:::
+
+::: {.details}
+On calcule la nouvelle concentration, puis son pH.
+
+1. La concentration est divisée par $100 = 10^{2}$ : elle vaut $\dfrac{10^{-2{,}4}}{10^{2}} = 10^{-4{,}4}$ mol/L.
+2. On calcule le pH : $\mathrm{pH} = -\log_{10}\left(10^{-4{,}4}\right) = 4{,}4$.
+
+Interprétation : diviser la concentration par $100$ augmente le pH de $2$, et la solution diluée est moins acide.
+:::
+
+::: {.reponse}
+**Réponse (d).** Le quotient vaut $10^{0{,}1} \approx 1{,}26$ : un écart de pH de $0{,}1$ correspond à une concentration $[\mathrm{H}^+]$ environ $26\,\%$ plus grande.
+:::
+
+::: {.details}
+On calcule le quotient des concentrations aux deux bornes du pH sanguin, à partir de la relation $[\mathrm{H}^+] = 10^{-\mathrm{pH}}$.
+
+1. On écrit $\dfrac{10^{-7{,}35}}{10^{-7{,}45}} = 10^{-7{,}35 + 7{,}45} = 10^{0{,}1}$.
+2. On utilise la valeur donnée : $10^{0{,}1} \approx 1{,}26$.
+
+Interprétation : même un faible écart de pH correspond à une variation importante de la concentration en ions hydrogène.
+:::
 
 ## Piège
 
-En (c), une erreur fréquente consiste à dire que le graphe est translaté de $\tfrac{\pi}{2}$ vers la droite, parce que le nombre $\tfrac{\pi}{2}$ figure dans la formule. Elle est tentante parce que l'on lit le nombre soustrait sans tenir compte du facteur $2$ de $x$, mais elle est fausse : $2x - \tfrac{\pi}{2} = 2\left(x - \tfrac{\pi}{4}\right)$, donc la translation est de $\tfrac{\pi}{4}$ et non de $\tfrac{\pi}{2}$. Un contrôle le montre, car le sinus vaut $0$ en $x = \tfrac{\pi}{4}$.
+En (a), une erreur fréquente consiste à écrire $[\mathrm{H}^+] = 10^{2{,}4}$ en oubliant le signe moins. Elle est tentante parce que le pH est un nombre positif, mais elle est fausse : $\mathrm{pH} = -\log_{10}\left([\mathrm{H}^+]\right)$, donc $[\mathrm{H}^+] = 10^{-\mathrm{pH}}$, une concentration inférieure à $1$ mol/L.
 
-En (a), une autre erreur consiste à écrire que la période est $2\pi \cdot 2 = 4\pi$. Elle est tentante parce que le facteur $2$ semble étirer le graphe, mais elle est fausse : multiplier $x$ par $2$ comprime le graphe horizontalement, donc la période est divisée par $2$ et vaut $\pi$.
+En (c), une autre erreur consiste à diviser le pH par $100$. Elle est tentante parce que l'énoncé parle d'une division par $100$, mais elle est fausse : la division porte sur la concentration, et elle ajoute $2$ au pH, car le logarithme transforme un quotient en différence.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O7"}
+Soit la fonction $f$ définie par
+$$f(x) = 1 + 3\cos\left(2\left(x - \dfrac{\pi}{4}\right)\right).$$
+
+(a) Écris la valeur moyenne $M$, l'amplitude $A$, la période $T$ et un instant $h$ où $f$ atteint son maximum. Écris ensuite le maximum, le minimum et l'image de $f$.
+(b) Calcule $f(0)$, $f\left(\dfrac{\pi}{4}\right)$ et $f\left(\dfrac{3\pi}{4}\right)$.
+(c) Écris, dans l'ordre suivi au cours, les quatre modifications qui permettent de passer de $\cos(x)$ à $f(x)$, en donnant pour chacune le nombre qui la caractérise.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Adapter une fonction périodique*, et plus précisément le résumé de la méthode pour (a) et les étapes de construction pour (c), et *Sinus et cosinus* pour (b).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Quel nombre multiplie la parenthèse $\left(x - \tfrac{\pi}{4}\right)$, et à quelle période correspond-il ?
+(b) Que vaut l'angle $2\left(x - \tfrac{\pi}{4}\right)$ pour chacune des trois valeurs de $x$ ?
+(c) Dans quel ordre le cours modifie-t-il $\cos(x)$ pour obtenir le modèle de la température corporelle ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Égale le nombre $2$ à $\tfrac{2\pi}{T}$ pour trouver $T$, puis calcule $M + A$ et $M - A$.
+(b) Calcule l'angle pour chaque valeur de $x$, puis utilise les valeurs $\cos(0)$, $\cos\left(\tfrac{\pi}{2}\right)$ et $\cos(\pi)$.
+(c) Reprends les quatre étapes du cours : niveau moyen, période, déphasage, amplitude, en écrivant à chaque étape l'expression obtenue.
+
+## Solution
+
+::: {.reponse}
+**Réponse (a).** On a $M = 1$, $A = 3$, $T = \pi$ et $h = \tfrac{\pi}{4}$. Le maximum vaut $4$, le minimum vaut $-2$, et l'image de $f$ est $[-2,\,4]$.
+:::
+
+::: {.details}
+On compare l'expression de $f$ à l'écriture $M + A\cos\left(\tfrac{2\pi}{T}(x - h)\right)$ du résumé de la méthode du cours.
+
+1. On lit la valeur moyenne $M = 1$, l'amplitude $A = 3$ et l'instant d'un maximum $h = \tfrac{\pi}{4}$.
+2. Le nombre qui multiplie la parenthèse vaut $\tfrac{2\pi}{T} = 2$, donc $T = \pi$.
+3. Le cosinus varie entre $-1$ et $1$, donc $f$ varie entre $1 - 3 = -2$ et $1 + 3 = 4$ : le maximum vaut $4$, le minimum vaut $-2$, et l'image est $[-2,\,4]$.
+:::
+
+::: {.reponse}
+**Réponse (b).** On a $f(0) = 1$, $f\left(\tfrac{\pi}{4}\right) = 4$ et $f\left(\tfrac{3\pi}{4}\right) = -2$.
+:::
+
+::: {.details}
+On calcule l'angle $2\left(x - \tfrac{\pi}{4}\right)$ pour chaque valeur de $x$, puis on utilise les valeurs particulières du cosinus.
+
+1. Pour $x = 0$, l'angle vaut $-\tfrac{\pi}{2}$ et $\cos\left(-\tfrac{\pi}{2}\right) = 0$, donc $f(0) = 1$.
+2. Pour $x = \tfrac{\pi}{4}$, l'angle vaut $0$ et $\cos(0) = 1$, donc $f\left(\tfrac{\pi}{4}\right) = 1 + 3 = 4$, le maximum.
+3. Pour $x = \tfrac{3\pi}{4}$, l'angle vaut $\pi$ et $\cos(\pi) = -1$, donc $f\left(\tfrac{3\pi}{4}\right) = 1 - 3 = -2$, le minimum.
+
+Le minimum est atteint une demi-période après le maximum : $\tfrac{3\pi}{4} - \tfrac{\pi}{4} = \tfrac{\pi}{2} = \tfrac{T}{2}$.
+:::
+
+::: {.reponse}
+**Réponse (c).** On translate $\cos(x)$ verticalement de $1$, on adapte la période à $\pi$, on translate horizontalement de $\tfrac{\pi}{4}$, puis on modifie l'amplitude à $3$.
+:::
+
+::: {.details}
+On suit les étapes de *Adapter une fonction périodique*, en écrivant l'expression obtenue après chaque étape.
+
+1. On translate verticalement pour fixer le niveau moyen $M = 1$ : $\cos(x) + 1$.
+2. On adapte la période à $T = \pi$, en multipliant $x$ par $\tfrac{2\pi}{T} = 2$ : $\cos(2x) + 1$.
+3. On translate horizontalement pour placer un maximum en $\tfrac{\pi}{4}$ : $\cos\left(2\left(x - \tfrac{\pi}{4}\right)\right) + 1$.
+4. On modifie l'amplitude à $A = 3$ : $1 + 3\cos\left(2\left(x - \tfrac{\pi}{4}\right)\right)$, qui est bien $f(x)$.
+:::
+
+## Piège
+
+En (a), une erreur fréquente consiste à lire la période $2$, parce que le nombre $2$ multiplie la parenthèse. Elle est tentante parce que ce nombre est lié à la période, mais elle est fausse : il vaut $\tfrac{2\pi}{T}$, donc $T = \pi$.
+
+En (c), une autre erreur consiste à écrire $\cos\left(2x - \tfrac{\pi}{4}\right)$ à l'étape de la translation horizontale. Elle est tentante parce que l'on soustrait $\tfrac{\pi}{4}$ à l'angle, mais elle est fausse : on remplace $x$ par $x - \tfrac{\pi}{4}$, donc l'angle devient $2\left(x - \tfrac{\pi}{4}\right) = 2x - \tfrac{\pi}{2}$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O7"}
+Soit la fonction $f$ définie par $f(x) = M + A\cos\left(\dfrac{2\pi}{T}(x - h)\right)$, où $A > 0$, $T > 0$ et $M$ et $h$ sont des nombres réels. Le maximum de $f$ vaut $5$ et il est atteint en $x = \dfrac{\pi}{4}$. Le minimum suivant vaut $1$ et il est atteint en $x = \dfrac{7\pi}{12}$. Détermine $M$, $A$, $T$ et $h$, puis détermine le nombre de solutions de l'équation $f(x) = 3$ dans l'intervalle $[0,\,2\pi[$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : la méthode **Déterminer les paramètres d'un modèle périodique** et *Adapter une fonction périodique*, puis *Sinus et cosinus* pour l'équation.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quelle fraction de la période sépare un maximum du minimum suivant ?
+
+## Indice 3
+
+*Étape.*
+
+Calcule $M$ et $A$ à partir du maximum et du minimum, puis la demi-période $\tfrac{7\pi}{12} - \tfrac{\pi}{4}$ ; pour l'équation, isole le cosinus et écris que l'angle vaut $\tfrac{\pi}{2}$ augmenté d'un multiple de $\pi$.
+
+## Solution
+
+::: {.reponse}
+**Réponse.** On a $M = 3$, $A = 2$, $T = \tfrac{2\pi}{3}$ et $h = \tfrac{\pi}{4}$, donc $f(x) = 3 + 2\cos\left(3\left(x - \tfrac{\pi}{4}\right)\right)$. L'équation $f(x) = 3$ a $6$ solutions dans $[0,\,2\pi[$.
+:::
+
+::: {.details}
+On applique la méthode *Déterminer les paramètres d'un modèle périodique*, puis on résout l'équation avec les valeurs particulières du cosinus.
+
+1. La valeur moyenne vaut $M = \tfrac{5 + 1}{2} = 3$ et l'amplitude vaut $A = \tfrac{5 - 1}{2} = 2$.
+2. Un maximum et le minimum suivant sont séparés par une demi-période : $\tfrac{T}{2} = \tfrac{7\pi}{12} - \tfrac{3\pi}{12} = \tfrac{\pi}{3}$, donc $T = \tfrac{2\pi}{3}$ et $\tfrac{2\pi}{T} = 3$.
+3. Le maximum est atteint en $x = \tfrac{\pi}{4}$, donc $h = \tfrac{\pi}{4}$ et $f(x) = 3 + 2\cos\left(3\left(x - \tfrac{\pi}{4}\right)\right)$.
+4. L'équation $f(x) = 3$ donne $\cos\left(3\left(x - \tfrac{\pi}{4}\right)\right) = 0$, donc $3\left(x - \tfrac{\pi}{4}\right) = \tfrac{\pi}{2} + k\pi$ et $x = \tfrac{5\pi}{12} + \tfrac{k\pi}{3}$, avec $k$ entier.
+5. Dans $[0,\,2\pi[$, les valeurs $k = -1$, $0$, $1$, $2$, $3$ et $4$ conviennent : $x = \tfrac{\pi}{12}$, $\tfrac{5\pi}{12}$, $\tfrac{3\pi}{4}$, $\tfrac{13\pi}{12}$, $\tfrac{17\pi}{12}$ et $\tfrac{7\pi}{4}$, soit $6$ solutions.
+
+Vérification : la valeur moyenne $3$ est atteinte deux fois par période, et l'intervalle $[0,\,2\pi[$ contient trois périodes de longueur $\tfrac{2\pi}{3}$, d'où $6$ solutions.
+:::
+
+## Piège
+
+Une erreur fréquente consiste à prendre pour période l'écart $\tfrac{\pi}{3}$ entre le maximum et le minimum. Elle est tentante parce que ce sont les deux instants donnés, mais elle est fausse : entre un maximum et le minimum suivant, il ne s'écoule qu'une demi-période, donc $T = \tfrac{2\pi}{3}$.
 
 :::
 :::

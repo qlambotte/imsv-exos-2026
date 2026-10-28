@@ -3,7 +3,7 @@
 Un seul événement Wooclap, quatre questions **QCM à réponse unique**, dans l'ordre ci-dessous.
 Les distracteurs correspondent aux erreurs classiques. Durée visée : 4 à 5 minutes sur papier
 pour les quatre questions, puis le vote. Les questions figurent uniquement dans les slides.
-Les questions 1 et 2 portent sur les prérequis de la séance 6 ; les questions 3 et 4 reprennent la séance 5.
+Les questions 1, 2 et 4 portent sur des prérequis de la séance 6 ; la question 3 reprend la séance 5.
 
 ---
 
@@ -23,7 +23,7 @@ Les questions 1 et 2 portent sur les prérequis de la séance 6 ; les questions 
 **Justification (à dire après le vote) :** pour multiplier deux puissances de même base, on additionne les
 exposants : $2^{-3} \cdot 2^{5} = 2^{-3+5} = 2^2 = 4$. Le distracteur $\frac14$ vient d'une erreur de signe sur
 l'exposant ($2^{-2}$) ; $2^{-15}$ vient d'une multiplication des exposants ; $256$ vient d'un exposant $-3$ lu comme $3$,
-ce qui donne $2^{3+5}$. Cette question prépare la forme $b \cdot a^{t}$ et la résolution des équations exponentielles.
+ce qui donne $2^{3+5}$. Cette question prépare la forme $N_0 \cdot a^{t}$ et la résolution des équations exponentielles.
 
 ---
 
@@ -66,22 +66,24 @@ $\frac{1}{2x + 1}$ confond fonction réciproque et inverse. Cette question prép
 
 ---
 
-## Q4 — Étude de signe
+## Q4 — Valeurs particulières du cosinus
 
 **Type Wooclap :** QCM · réponse unique
 
 **Énoncé à coller :**
-> Quel est l'ensemble des nombres $x$ tels que $(x - 2)(x + 1) \geq 0$ ?
+> Pour quels angles $x$ de l'intervalle $]-\pi,\,\pi]$ a-t-on $\cos(x) = \dfrac{1}{2}$ ?
 
 **Choix :**
-- (X) $]-\infty,\,-1] \cup [2,\,+\infty[$
-- ( ) $[-1,\,2]$
-- ( ) $]-\infty,\,-1[ \cup ]2,\,+\infty[$
-- ( ) $]-1,\,2[$
+- (X) $\dfrac{\pi}{3}$ et $-\dfrac{\pi}{3}$
+- ( ) $\dfrac{\pi}{3}$ seulement
+- ( ) $\dfrac{\pi}{6}$ et $-\dfrac{\pi}{6}$
+- ( ) $\dfrac{\pi}{3}$ et $\dfrac{2\pi}{3}$
 
-**Justification :** les racines $-1$ et $2$ découpent la droite en trois intervalles ; le produit est positif en dehors des
-racines et nul en $-1$ et en $2$. Le distracteur $[-1,\,2]$ inverse le signe ; $]-\infty,\,-1[ \cup ]2,\,+\infty[$ oublie que
-l'inégalité est large ; $]-1,\,2[$ cumule les deux erreurs. Cette question prépare l'étude de signe du polynôme de l'exercice S.8.
+**Justification :** sur le cercle trigonométrique, l'abscisse vaut $\frac12$ en deux points symétriques par rapport à
+l'axe horizontal, d'angles $\frac{\pi}{3}$ et $-\frac{\pi}{3}$. Le distracteur « $\frac{\pi}{3}$ seulement » oublie le
+deuxième angle ; $\pm\frac{\pi}{6}$ confond avec $\cos\left(\frac{\pi}{6}\right) = \frac{\sqrt3}{2}$ ; $\frac{2\pi}{3}$
+confond avec le sinus, car $\sin\left(\frac{2\pi}{3}\right) = \sin\left(\frac{\pi}{3}\right)$, alors que
+$\cos\left(\frac{2\pi}{3}\right) = -\frac12$. Cette question prépare l'exercice S.6 (préimages d'un modèle périodique).
 
 ---
 
@@ -89,4 +91,4 @@ l'inégalité est large ; $]-1,\,2[$ cumule les deux erreurs. Cette question pr�
 
 - Affichage des résultats : après clôture du vote, pas en direct.
 - Chronomètre : 30 à 45 secondes par question.
-- Ordre : Q1, Q2, Q3, Q4. Q1 prépare les puissances de $2$ de l'exercice S.13 ; Q4 prépare le tableau de signes de l'exercice S.8.
+- Ordre : Q1, Q2, Q3, Q4. Q1 prépare les équations exponentielles de l'exercice S.4 ; Q2 les racines de S.5 ; Q3 le logarithme comme fonction réciproque (S.2) ; Q4 les préimages de S.6.

@@ -14,13 +14,17 @@ correction: "✅ en ligne"
 ## Objectifs de la séance
 
 Ces objectifs sont repris du cours théorique (IMSV-6, ses AAVs). **Chaque exercice indique
-l'objectif qu'il travaille** — la pastille **O1** à **O3** dans son en-tête.
+l'objectif qu'il travaille** — la pastille **O1** à **O7** dans son en-tête.
 
 Je dois pouvoir :
 
-- **O1** — choisir et exploiter un modèle affine, polynomial, exponentiel, logarithmique ou périodique dans une situation élémentaire de sciences de la vie ;
+- **O1** — choisir et exploiter un modèle affine, polynomial, racine, exponentiel, logarithmique ou périodique dans une situation élémentaire de sciences de la vie ;
 - **O2** — interpréter les paramètres des fonctions usuelles ;
-- **O3** — utiliser le logarithme pour résoudre une équation exponentielle et lire une échelle logarithmique.
+- **O3** — comprendre les relations entre bases dans les modèles exponentiels et logarithmiques ;
+- **O4** — utiliser le logarithme pour résoudre une équation exponentielle et exploiter des grandeurs logarithmiques ;
+- **O5** — exploiter temps de doublement et demi-vie ;
+- **O6** — comparer qualitativement les croissances asymptotiques des différents modèles ;
+- **O7** — adapter une fonction trigonométrique pour modéliser un phénomène périodique.
 
 Une grille d'**auto-évaluation** sur ces objectifs t'attend à la page
 [Institutionnalisation](institution.qmd).

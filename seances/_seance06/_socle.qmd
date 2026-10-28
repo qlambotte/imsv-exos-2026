@@ -1,25 +1,72 @@
-<!-- SOCLE = LE NOYAU, à faire par tous en séance : environ 30 minutes.
-     Modèles polynomiaux, exponentiels, logarithmiques et périodiques.
-     HIÉRARCHIE DES INDICES (à respecter partout) :
-       Indice 1 = renvoi à la théorie du cours (nom de la notion ou de la méthode) ;
-       Indice 2 = une QUESTION à se poser, en une phrase complète (jamais sa réponse) ;
-       Indice 3 = une ÉTAPE, en une phrase complète (un pas concret, sans donner la réponse).
-     Chaque sous-question a ses propres indices. Numéro AUTOMATIQUE (pas écrit). Faisable SANS calculatrice.
-     Solutions : une phrase d'ouverture (ce qu'on cherche, méthode du cours), des étapes numérotées, une conclusion avec l'unité.
-     S.1 à S.6 = exercices systématiques sur chaque objet (polynômes, racine, exponentielle, logarithme, sin/cos, paramètres du sinus) ; S.7 à S.13 = exercices de transfert du socle (à trier).
-     S.13 = l'exercice corrigé ensemble à la fin du socle : il illustre la fiche « Résoudre une équation exponentielle ».
-     Notations : f(t), \log_{10}, \ln, \log_2, e^{kt}, b\,a^{t}, \sin(\omega t+\varphi).
-     TITRES DES SECTIONS DE THÉORIE cités dans les indices 1 : repris du plan de la séance 6 (à aligner sur les slides IMSV-6 quand elles existeront).
-     Objectifs : voir index.qmd (O1 à O3). -->
-
-<!-- ========== EXERCICES SYSTÉMATIQUES SUR LES OBJETS (ajoutés en tête du socle ; à trier avec les exercices qui suivent) ========== -->
+<!-- SOCLE = LE NOYAU, à faire par tous en séance : 35 minutes, puis 15 minutes de correction de S.4 et de méthode 1. VERSION 3 (énoncés seulement ; indices et solutions à écrire).
+     Durées visées : S.1 6 min · S.2 4 min · S.3 3 min · S.4 7 min (corrigé en commun) · S.5 4 min · S.6 5 min · S.7 4 min.
+     S.4 = l'exercice corrigé ensemble juste après le socle (méthode 1 « Résoudre une équation exponentielle ») : énoncé seul,
+     SANS aides en séance ; sa solution complète est dans un fragment séparé, publié après la séance.
+     Pour les autres : Indice 1 = théorie, Indice 2 = question, Indice 3 = étape, puis Solution (Réponse + Explication) et Piège.
+     Versions précédentes : _archive-v1-socle.qmd. Faisable SANS calculatrice. Numéro AUTOMATIQUE.
+     Notations du cours IMSV-6 : N_0 a^x, e^{kx}, \ln, \log_a, T_2, T_{1/2}, M + A\cos(2\pi/T (t - h)).
+     Objectifs : voir index.qmd (O1 à O7). -->
 
 ::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
-Soient les polynômes $p(x) = 2x^3 - x^2 + 4$, $q(x) = -x^4 + 3x$ et $r(x) = x^2 - 6x + 5$.
+Six grandeurs sont données par les tableaux de valeurs A à F ci-dessous.
 
-(a) Pour chaque polynôme, écris son degré et le coefficient de son terme de plus haut degré.
-(b) Calcule $p(0)$, $q(0)$ et $r(0)$, puis $p(1)$, $q(1)$ et $r(1)$.
-(c) Pour chaque polynôme, écris le signe de ses valeurs quand $x$ est un très grand nombre positif, puis quand $x$ est un très grand nombre négatif. Justifie chaque réponse par une phrase qui utilise le terme de plus haut degré.
+:::: {layout-ncol="2"}
+::: {.tableau}
+**Tableau A**
+
+| $x$ | $0$ | $1$ | $2$ | $3$ | $4$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| $y$ | $7$ | $5$ | $3$ | $1$ | $-1$ |
+:::
+
+::: {.tableau}
+**Tableau B**
+
+| $x$ | $0$ | $1$ | $2$ | $3$ | $4$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| $y$ | $1$ | $2$ | $5$ | $10$ | $17$ |
+:::
+
+::: {.tableau}
+**Tableau C**
+
+| $x$ | $0$ | $1$ | $4$ | $9$ | $16$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| $y$ | $0$ | $1$ | $2$ | $3$ | $4$ |
+:::
+
+::: {.tableau}
+**Tableau D**
+
+| $x$ | $1$ | $2$ | $4$ | $8$ | $16$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| $y$ | $0$ | $1$ | $2$ | $3$ | $4$ |
+:::
+
+::: {.tableau}
+**Tableau E**
+
+| $x$ | $0$ | $1$ | $2$ | $3$ | $4$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| $y$ | $1$ | $2$ | $4$ | $8$ | $16$ |
+:::
+
+::: {.tableau}
+**Tableau F**
+
+| $x$ | $0$ | $1$ | $2$ | $3$ | $4$ | $5$ | $6$ | $7$ | $8$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| $y$ | $5$ | $3$ | $1$ | $3$ | $5$ | $3$ | $1$ | $3$ | $5$ |
+:::
+::::
+
+Les graphiques numérotés de 1 à 6 représentent ces six grandeurs, dans un ordre différent de celui des tableaux.
+
+![](img/s-types.svg){fig-alt="Six graphiques numérotés de 1 à 6 : une courbe logarithmique, une droite décroissante, une courbe périodique, une courbe racine, une courbe exponentielle et une parabole." width="100%"}
+
+(a) Associe chaque tableau au graphique qui le représente, en repérant sur le graphique un point qui figure dans le tableau.
+(b) Pour chaque tableau, écris le type de modèle : affine, polynomial, racine, exponentiel, logarithmique ou périodique.
+(c) Les tableaux C et D contiennent les mêmes valeurs de $y$. Écris ce qui, dans les valeurs de $x$, permet de distinguer le modèle racine du modèle logarithmique.
 :::
 
 ::: {.aides}
@@ -27,193 +74,80 @@ Soient les polynômes $p(x) = 2x^3 - x^2 + 4$, $q(x) = -x^4 + 3x$ et $r(x) = x^2
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Polynômes* pour (a) et (b), et *Comparaison qualitative des croissances* pour (c).
+Retourne à la théorie du cours : *Culture de bactéries* (modèles affine et exponentiel), *Polynômes*, *Puissances et racines*, *Comprendre le logarithme* et *Sinus et cosinus* pour (a) et (b), et *Changement de base* ainsi que *Puissances et racines* pour (c).
 
 ## Indice 2
 
 *Question à te poser.*
 
-(a) Quel est le plus grand exposant de $x$ dans chaque polynôme, et quel nombre multiplie la puissance correspondante ?
-(b) Que deviennent les puissances de $x$ quand on remplace $x$ par $0$, puis par $1$ ?
-(c) Quand $x$ est très grand en valeur absolue, quel terme du polynôme l'emporte sur tous les autres ?
+(a) Quel point de chaque tableau peux-tu repérer facilement sur un graphique, par exemple celui de la première colonne ?
+(b) Quand $x$ augmente, comment évoluent les valeurs de $y$ : de la même quantité à chaque pas, du même facteur à chaque pas, de plus en plus lentement, ou en revenant aux mêmes valeurs ?
+(c) Par quelle opération passe-t-on d'une valeur de $x$ à la suivante dans le tableau C, puis dans le tableau D ?
 
 ## Indice 3
 
 *Étape.*
 
-(a) Repère dans chaque formule le terme dont l'exposant est le plus grand, puis lis son exposant et son coefficient.
-(b) Remplace $x$ par $0$ dans chaque formule et calcule, puis remplace $x$ par $1$ et calcule.
-(c) Écris le terme de plus haut degré de chaque polynôme, puis détermine son signe pour $x$ positif et pour $x$ négatif.
+(a) Pour chaque tableau, cherche le graphique qui passe par le point de la première colonne, puis vérifie ton choix avec un deuxième point du tableau.
+(b) Pour les tableaux A, B et E, calcule les différences entre deux valeurs consécutives de $y$, puis les quotients ; pour les tableaux C, D et F, observe comment $y$ évolue quand $x$ grandit.
+(c) Écris chaque valeur de $x$ du tableau C en fonction de la valeur de $y$ de la même colonne, puis fais de même pour le tableau D.
 
 ## Solution
 
-Un polynôme est une somme de termes de la forme (nombre) $\cdot\, x^{n}$ : son degré est le plus grand exposant, et le coefficient du terme de plus haut degré est le nombre qui multiplie cette puissance.
+::: {.reponse}
+**Réponse (a).** Le tableau A correspond au graphique 2, B au graphique 6, C au graphique 4, D au graphique 1, E au graphique 5 et F au graphique 3.
+:::
 
-(a) On repère le terme de plus haut degré de chaque polynôme.
+::: {.details}
+On cherche, pour chaque tableau, le graphique qui passe par ses points : on repère un ou deux points de chaque tableau sur les graphiques.
 
-    1. Dans $p(x) = 2x^3 - x^2 + 4$, le plus grand exposant est $3$ et le coefficient correspondant est $2$ : $p$ est de degré $3$.
-    2. Dans $q(x) = -x^4 + 3x$, le plus grand exposant est $4$ et le coefficient correspondant est $-1$ : $q$ est de degré $4$.
-    3. Dans $r(x) = x^2 - 6x + 5$, le plus grand exposant est $2$ et le coefficient correspondant est $1$ : $r$ est de degré $2$.
+1. Le tableau A contient le point $(0\,;\,7)$ et ses valeurs diminuent. Seul le graphique 2 passe par $(0\,;\,7)$ ; c'est une droite qui passe aussi par $(2\,;\,3)$, donc A correspond au graphique 2.
+2. Le tableau F prend les valeurs $5$, $3$, $1$, $3$, $5$, qui reviennent ensuite. Seul le graphique 3 revient périodiquement aux mêmes valeurs, avec un maximum $5$ en $x = 0$, $4$ et $8$, donc F correspond au graphique 3.
+3. Les tableaux C et D vont jusqu'à $x = 16$, comme les graphiques 1 et 4. Le tableau C contient le point $(0\,;\,0)$, et le graphique 4 part de l'origine. Le tableau D commence en $(1\,;\,0)$ et n'a pas de valeur en $x = 0$ ; le graphique 1 coupe l'axe horizontal en $x = 1$ et descend très bas près de $x = 0$. Donc C correspond au graphique 4 et D au graphique 1.
+4. Les tableaux B et E contiennent tous deux les points $(0\,;\,1)$ et $(1\,;\,2)$, comme les graphiques 5 et 6. On les distingue en $x = 3$ : E donne $8$ et B donne $10$. Le graphique 5 passe exactement par la ligne $8$ en $x = 3$, alors que le graphique 6 passe au-dessus. Donc E correspond au graphique 5 et B au graphique 6.
+:::
 
-(b) On remplace $x$ par $0$, puis par $1$.
+::: {.reponse}
+**Réponse (b).** Le tableau A est affine, B est polynomial, C est racine, D est logarithmique, E est exponentiel et F est périodique.
+:::
 
-    1. Pour $x = 0$, toutes les puissances de $x$ valent $0$, donc il ne reste que le terme constant : $p(0) = 4$, $q(0) = 0$ et $r(0) = 5$.
-    2. Pour $x = 1$, toutes les puissances de $x$ valent $1$, donc on additionne les coefficients : $p(1) = 2 - 1 + 4 = 5$, $q(1) = -1 + 3 = 2$ et $r(1) = 1 - 6 + 5 = 0$.
+::: {.details}
+On reconnaît le type de modèle à la façon dont $y$ évolue quand $x$ augmente, comme dans la mise en situation du cours, qui compare un modèle affine et un modèle exponentiel.
 
-(c) Quand $|x|$ est très grand, le terme de plus haut degré croît beaucoup plus vite que les autres, d'après la comparaison des croissances du cours : le polynôme a le signe de ce terme.
+1. Dans le tableau A, quand $x$ augmente de $1$, $y$ diminue toujours de $2$ : les différences sont constantes, donc le modèle est affine, avec $y = 7 - 2x$.
+2. Dans le tableau E, quand $x$ augmente de $1$, $y$ est toujours multiplié par $2$ : les quotients sont constants, donc le modèle est exponentiel, avec $y = 2^{x}$.
+3. Dans le tableau B, les différences valent $1$, $3$, $5$ et $7$, et les quotients valent $2$, $2{,}5$, $2$ et $1{,}7$ : ni les unes ni les autres ne sont constantes. Les valeurs de $y$ sont égales à $x^{2} + 1$, donc le modèle est polynomial, de degré $2$.
+4. Dans le tableau C, chaque valeur de $y$ est le nombre positif dont le carré vaut $x$ : $y = \sqrt{x}$, donc le modèle est racine.
+5. Dans le tableau D, $y$ augmente de $1$ chaque fois que $x$ est multiplié par $2$ : $y$ est l'exposant $p$ tel que $x = 2^{p}$, donc $y = \log_{2}(x)$ et le modèle est logarithmique.
+6. Dans le tableau F, les valeurs $5$, $3$, $1$, $3$ se répètent toutes les $4$ unités : le modèle est périodique.
+:::
 
-    1. Pour $p$, le terme dominant est $2x^3$. Il est positif pour $x$ très grand positif et négatif pour $x$ très grand négatif, car un nombre négatif élevé au cube est négatif. Les valeurs de $p$ sont donc positives, puis négatives.
-    2. Pour $q$, le terme dominant est $-x^4$. Une puissance quatrième est positive pour tout nombre non nul, donc $-x^4$ est négatif dans les deux cas. Les valeurs de $q$ sont négatives, puis négatives.
-    3. Pour $r$, le terme dominant est $x^2$. Un carré est positif pour tout nombre non nul, donc les valeurs de $r$ sont positives, puis positives.
+::: {.reponse}
+**Réponse (c).** Dans le tableau C, chaque valeur de $x$ est le carré de la valeur de $y$ ; dans le tableau D, chaque valeur de $x$ est la puissance de $2$ d'exposant $y$, et $x$ double d'une colonne à la suivante.
+:::
+
+::: {.details}
+Les deux tableaux ont les mêmes valeurs de $y$ : on compare donc la manière dont les valeurs de $x$ sont choisies.
+
+1. Dans le tableau C, les valeurs $0$, $1$, $4$, $9$ et $16$ de $x$ sont les carrés des valeurs $0$, $1$, $2$, $3$ et $4$ de $y$. On a donc $x = y^{2}$, et la racine défait cette puissance : $y = \sqrt{x}$.
+2. Dans le tableau D, les valeurs $1$, $2$, $4$, $8$ et $16$ de $x$ sont les puissances $2^{0}$, $2^{1}$, $2^{2}$, $2^{3}$ et $2^{4}$. On a donc $x = 2^{y}$, ce qui s'écrit $y = \log_{2}(x)$ par définition du logarithme en base $2$.
+3. Pour faire augmenter $y$ de $1$, il faut ajouter à $x$ les nombres $1$, $3$, $5$, $7$ dans le tableau C, mais multiplier $x$ par $2$ dans le tableau D. Quand $x$ devient très grand, il faut donc des valeurs de $x$ beaucoup plus grandes pour faire augmenter le logarithme que pour faire augmenter la racine : le logarithme croît plus lentement, comme l'indique le classement du cours.
+:::
 
 ## Piège
 
-En (a), une erreur fréquente consiste à lire le degré dans l'ordre d'écriture et à prendre le coefficient du premier terme écrit. Elle est tentante parce que le terme de plus haut degré est souvent écrit en premier, mais elle est fausse pour un polynôme écrit dans un autre ordre, comme $4 + 3x - x^4$ : le degré est toujours le plus grand exposant, et ici le coefficient est $-1$.
+En (a), une erreur fréquente consiste à associer les tableaux B et E au hasard entre les graphiques 5 et 6, parce que leurs deux premières colonnes sont identiques. Elle est tentante parce que les deux courbes partent du même point et se ressemblent, mais elle est fausse : il faut comparer un point où les tableaux diffèrent, par exemple $x = 3$, où les valeurs sont $8$ et $10$.
 
-En (c), une autre erreur consiste à écrire que $q(x)$ est positif pour $x$ très grand négatif parce que $x^4$ est positif. Elle est tentante parce qu'une puissance paire est positive, mais elle est fausse : le coefficient du terme dominant est $-1$, donc $-x^4$ est négatif.
-
-:::
-:::
-
-::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
-Soient les fonctions $f(x) = \sqrt{x}$ et $g(x) = \sqrt{x - 2} + 1$.
-
-(a) Écris le domaine de $f$ et l'image de $f$, chacun sous la forme d'un intervalle.
-(b) Calcule $f(0)$, $f(4)$ et $f(9)$, puis écris en une phrase si la fonction $f$ est croissante ou décroissante sur son domaine.
-(c) Écris le domaine de $g$ et l'image de $g$, chacun sous la forme d'un intervalle.
-(d) Résous l'équation $\sqrt{x + 1} = 3$, puis l'équation $\sqrt{x} = -2$. Si une équation n'a pas de solution, écris-le et explique pourquoi en une phrase.
-:::
-
-::: {.aides}
-::: {.panel-tabset}
-
-## Indice 1
-
-Retourne à la théorie du cours : *Fonctions « racines »* pour (a), (b) et (c), et *Défaire une opération : fonction réciproque* de la séance 5 pour (d).
-
-## Indice 2
-
-*Question à te poser.*
-
-(a) Pour quels nombres $x$ la racine carrée existe-t-elle, et quelles valeurs peut-elle prendre ?
-(b) Quand $x$ augmente, la valeur de $\sqrt{x}$ augmente-t-elle ou diminue-t-elle ?
-(c) Quelle condition sur $x$ impose la racine carrée de $g$, et par quelle opération passe-t-on de $\sqrt{x - 2}$ à $g(x)$ ?
-(d) Une racine carrée peut-elle être égale à un nombre négatif ?
-
-## Indice 3
-
-*Étape.*
-
-(a) Écris la condition d'existence de la racine carrée, puis l'ensemble des valeurs qu'elle prend.
-(b) Remplace $x$ par chacune des trois valeurs, puis compare les résultats dans l'ordre des valeurs de $x$.
-(c) Écris la condition $x - 2 \geq 0$, puis ajoute $1$ aux valeurs de $\sqrt{x - 2}$.
-(d) Pour la première équation, élève les deux membres au carré, puis vérifie la solution ; pour la seconde, compare le signe des deux membres.
-
-## Solution
-
-La racine carrée $\sqrt{x}$ existe pour les nombres positifs ou nuls et ne prend que des valeurs positives ou nulles ; c'est la fonction réciproque de la fonction $x \mapsto x^2$ restreinte à $[0,\,+\infty[$.
-
-(a) La racine carrée existe si et seulement si $x \geq 0$, donc $\mathit{Dom}(f) = [0,\,+\infty[$. Elle prend toutes les valeurs positives ou nulles, car tout nombre $y \geq 0$ est la racine carrée de $y^2 \geq 0$, donc $\mathit{Im}(f) = [0,\,+\infty[$.
-
-(b) On calcule $f(0) = 0$, $f(4) = 2$ et $f(9) = 3$. Ces valeurs augmentent quand $x$ augmente : la fonction $f$ est croissante sur son domaine.
-
-(c) On passe de $f$ à $g$ en deux transformations.
-
-    1. La racine carrée de $x - 2$ existe si et seulement si $x - 2 \geq 0$, soit $x \geq 2$, donc $\mathit{Dom}(g) = [2,\,+\infty[$.
-    2. Sur ce domaine, $\sqrt{x - 2}$ prend toutes les valeurs positives ou nulles, et on ajoute $1$ : $g(x) \geq 1$ et toutes les valeurs supérieures ou égales à $1$ sont atteintes. On a donc $\mathit{Im}(g) = [1,\,+\infty[$.
-
-(d) On résout les deux équations séparément.
-
-    1. Pour $\sqrt{x + 1} = 3$, les deux membres sont positifs, donc on élève au carré : $x + 1 = 9$, soit $x = 8$. Vérification : $\sqrt{8 + 1} = \sqrt{9} = 3$. La solution est donc $x = 8$.
-    2. Pour $\sqrt{x} = -2$, le membre de gauche est positif ou nul et le membre de droite est négatif, donc ils ne peuvent pas être égaux. L'équation n'a aucune solution.
-
-## Piège
-
-En (d), une erreur fréquente consiste à élever $\sqrt{x} = -2$ au carré et à écrire $x = 4$. Elle est tentante parce que l'opération donne un résultat, mais elle est fausse : élever au carré peut introduire une solution qui ne vérifie pas l'équation de départ. Ici, $\sqrt{4} = 2$ et non $-2$, donc la vérification montre que $4$ n'est pas solution.
-
-En (c), une autre erreur consiste à écrire $\mathit{Dom}(g) = [1,\,+\infty[$ ou $[3,\,+\infty[$ en mélangeant les nombres $2$ et $1$. Elle est tentante parce que les deux nombres figurent dans la formule, mais elle est fausse : le nombre $2$, soustrait à l'intérieur de la racine, décale le domaine, tandis que le nombre $1$, ajouté à l'extérieur, décale l'image.
-
-:::
-:::
-
-::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
-Soient les fonctions $f(x) = 2^{x}$ et $g(x) = \left(\tfrac{1}{2}\right)^{x}$.
-
-(a) Complète le tableau ci-dessous. Écris chaque valeur sous la forme d'un nombre entier ou d'une fraction.
-
-| $x$ | $-2$ | $-1$ | $0$ | $1$ | $2$ | $3$ |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| $f(x)$ | | | | | | |
-| $g(x)$ | | | | | | |
-
-(b) Écris le domaine et l'image de $f$, chacun sous la forme d'un intervalle, puis écris en une phrase si $f$ est croissante ou décroissante et si $g$ est croissante ou décroissante.
-(c) Vérifie l'égalité $f(x + y) = f(x) \cdot f(y)$ pour $x = 3$ et $y = -1$, en calculant séparément chacun des deux membres.
-(d) Compare dans le tableau les valeurs de $g(x)$ et de $f(-x)$, puis écris en une phrase ce que tu observes.
-:::
-
-::: {.aides}
-::: {.panel-tabset}
-
-## Indice 1
-
-Retourne à la théorie du cours : *Exponentielle : facteur multiplicatif constant* pour (a) et (b), *Motivation via $f(x + y) = f(x) \cdot f(y)$* pour (c), et *Croissance et décroissance* pour (b) et (d).
-
-## Indice 2
-
-*Question à te poser.*
-
-(a) Par quel nombre la valeur est-elle multipliée quand $x$ augmente de $1$, pour $f$ et pour $g$ ?
-(b) Une puissance de $2$ peut-elle être nulle ou négative, et comment varient les valeurs du tableau quand $x$ augmente ?
-(c) Que valent $f(3 + (-1))$ d'une part, et $f(3) \cdot f(-1)$ d'autre part ?
-(d) À quelle colonne du tableau correspond la valeur de $f(-x)$ pour chaque valeur de $x$ ?
-
-## Indice 3
-
-*Étape.*
-
-(a) Calcule d'abord la colonne $x = 0$, puis multiplie ou divise par la base pour passer d'une colonne à la suivante.
-(b) Observe le signe des valeurs du tableau et le sens dans lequel elles évoluent de gauche à droite.
-(c) Calcule $f(2)$ pour le membre de gauche, puis $f(3)$ et $f(-1)$ pour le membre de droite.
-(d) Pour $x = 2$, lis $g(2)$ puis $f(-2)$ dans le tableau, et compare ; fais de même pour une autre colonne.
-
-## Solution
-
-Une fonction exponentielle $a^{x}$ a pour valeur $1$ en $x = 0$ et multiplie sa valeur par $a$ chaque fois que $x$ augmente de $1$.
-
-(a) Pour $f$, la valeur en $x = 0$ est $1$, et chaque pas de $+1$ multiplie par $2$ ; chaque pas de $-1$ divise par $2$. Pour $g$, chaque pas de $+1$ multiplie par $\tfrac{1}{2}$ ; chaque pas de $-1$ multiplie par $2$.
-
-    | $x$ | $-2$ | $-1$ | $0$ | $1$ | $2$ | $3$ |
-    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-    | $f(x)$ | $\tfrac{1}{4}$ | $\tfrac{1}{2}$ | $1$ | $2$ | $4$ | $8$ |
-    | $g(x)$ | $4$ | $2$ | $1$ | $\tfrac{1}{2}$ | $\tfrac{1}{4}$ | $\tfrac{1}{8}$ |
-
-(b) Une puissance de $2$ est toujours strictement positive, et elle prend toutes les valeurs strictement positives. Le domaine de $f$ est donc $\mathbb{R}$ et son image est $]0,\,+\infty[$. Les valeurs de $f$ augmentent de gauche à droite : $f$ est croissante, car sa base $2$ est supérieure à $1$. Les valeurs de $g$ diminuent de gauche à droite : $g$ est décroissante, car sa base $\tfrac{1}{2}$ est comprise entre $0$ et $1$.
-
-(c) On calcule séparément chaque membre.
-
-    1. Le membre de gauche vaut $f(3 + (-1)) = f(2) = 2^2 = 4$.
-    2. Le membre de droite vaut $f(3) \cdot f(-1) = 8 \cdot \tfrac{1}{2} = 4$.
-
-    Les deux membres sont égaux, donc l'égalité est vérifiée pour ces valeurs.
-
-(d) Dans le tableau, $f(-2) = \tfrac{1}{4}$ est égal à $g(2) = \tfrac{1}{4}$, et $f(-1) = \tfrac{1}{2}$ est égal à $g(1) = \tfrac{1}{2}$. On observe que $g(x) = f(-x)$ dans toutes les colonnes : multiplier par $\tfrac{1}{2}$ revient à diviser par $2$, donc parcourir les valeurs de $f$ de droite à gauche donne celles de $g$.
-
-## Piège
-
-En (b), une erreur fréquente consiste à écrire que l'image de $f$ est $\mathbb{R}$, ou qu'elle contient $0$, parce que le domaine est $\mathbb{R}$. Elle est tentante parce que l'on confond l'ensemble des entrées avec celui des sorties, mais elle est fausse : une puissance de $2$ est toujours strictement positive, donc l'image est $]0,\,+\infty[$.
-
-En (c), une autre erreur consiste à écrire $f(x + y) = f(x) + f(y)$. Elle est tentante parce que l'on additionne $x$ et $y$ dans l'argument, mais elle est fausse : le calcul donne $f(2) = 4$ alors que $f(3) + f(-1) = 8 + \tfrac{1}{2} = 8{,}5$. Pour une exponentielle, l'addition des arguments correspond à la multiplication des valeurs.
+En (b), une autre erreur consiste à dire que le tableau B est exponentiel parce que ses valeurs augmentent de plus en plus vite. Elle est tentante parce que l'exponentielle est le modèle « qui monte de plus en plus vite » du cours, mais elle est fausse : un modèle exponentiel multiplie $y$ par le même facteur à chaque pas, et les quotients de B ne sont pas constants.
 
 :::
 :::
 
 ::: {.callout-caution .exo title="Exercice|Socle|1|O3"}
-Soit la fonction $\ln$, c'est-à-dire le logarithme népérien.
-
-(a) Écris le domaine de $\ln$ et son image, chacun sous la forme d'un intervalle.
-(b) Écris les valeurs exactes de $\ln 1$, de $\ln e$, de $\ln\left(e^{2}\right)$ et de $\ln\left(\tfrac{1}{e}\right)$.
-(c) Écris pour quelles valeurs de $x$ les expressions $\ln(x - 3)$ et $\log_{10}(5 - x)$ existent. Écris chaque réponse sous la forme d'un intervalle.
-(d) Écris sans calculatrice le signe de $\ln\left(\tfrac{1}{2}\right)$ et celui de $\ln 3$, puis écris en une phrase lequel des deux nombres $\ln 2$ et $\ln 3$ est le plus grand.
+(a) Calcule $\ln(1)$, $\ln(e)$, $\ln\left(e^{3}\right)$ et $e^{\ln(5)}$.
+(b) Calcule $\log_{10}(10\,000)$, $\log_{10}(0{,}001)$ et $\log_{2}(8)$.
+(c) On donne $\ln(2) \approx 0{,}69$ et $\ln(3) \approx 1{,}10$. À l'aide des propriétés du logarithme, calcule des valeurs approchées de $\ln(6)$, de $\ln\left(\tfrac{3}{2}\right)$ et de $\ln(8)$.
+(d) Écris $2^{x}$ sous la forme $e^{kx}$, en donnant la valeur exacte du nombre $k$.
 :::
 
 ::: {.aides}
@@ -221,350 +155,95 @@ Soit la fonction $\ln$, c'est-à-dire le logarithme népérien.
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Logarithme comme fonction réciproque* pour les quatre questions, et *Exponentielle : croissance et décroissance* pour (d).
+Retourne à la théorie du cours : *Comprendre le logarithme* pour (a), *Changement de base* pour (b) et (c), *Le logarithme transforme le produit en somme* pour (c), et *La base naturelle : une autre écriture du même mécanisme* pour (d).
 
 ## Indice 2
 
 *Question à te poser.*
 
-(a) De quelle fonction le logarithme népérien est-il la fonction réciproque, et que valent le domaine et l'image de cette fonction ?
-(b) À quelle puissance de $e$ chacun des quatre nombres est-il égal ?
-(c) Quelle condition doit vérifier l'argument d'un logarithme ?
-(d) Un nombre plus petit que $1$ est-il une puissance de $e$ à exposant positif ou négatif ?
+(a) Quelle est la fonction réciproque de $e^{x}$, et que donne l'application successive d'une fonction et de sa réciproque ?
+(b) À quelle puissance faut-il élever la base pour obtenir le nombre dont on cherche le logarithme ?
+(c) Comment écrire $6$, $\tfrac{3}{2}$ et $8$ comme un produit, un quotient ou une puissance des nombres $2$ et $3$ ?
+(d) Quel nombre $k$ vérifie $e^{k} = 2$ ?
 
 ## Indice 3
 
 *Étape.*
 
-(a) Échange le domaine et l'image de la fonction exponentielle de base $e$.
-(b) Écris chaque nombre sous la forme $e^{u}$, puis lis l'exposant $u$.
-(c) Écris l'inégalité qui exprime que l'argument est strictement positif, puis résous-la.
-(d) Compare chaque nombre à $1$, puis utilise le fait que la fonction $\ln$ est croissante.
+(a) Utilise les relations $\ln\left(e^{x}\right) = x$ et $e^{\ln(y)} = y$, ainsi que les valeurs $\ln(1) = 0$ et $\ln(e) = 1$.
+(b) Écris $10\,000$ et $0{,}001$ comme des puissances de $10$, et $8$ comme une puissance de $2$.
+(c) Écris $6 = 2 \cdot 3$ et $8 = 2^{3}$, puis applique la propriété du logarithme qui correspond à chaque écriture.
+(d) Écris $2 = e^{\ln(2)}$, puis remplace $2$ par cette expression dans $2^{x}$.
 
 ## Solution
 
-Le logarithme népérien est la fonction réciproque de la fonction exponentielle de base $e$ : le domaine de l'une est l'image de l'autre, et inversement.
+::: {.reponse}
+**Réponse (a).** On a $\ln(1) = 0$, $\ln(e) = 1$, $\ln\left(e^{3}\right) = 3$ et $e^{\ln(5)} = 5$.
+:::
 
-(a) La fonction $x \mapsto e^{x}$ a pour domaine $\mathbb{R}$ et pour image $]0,\,+\infty[$. Pour la fonction réciproque, on échange ces deux ensembles : $\mathit{Dom}(\ln) = ]0,\,+\infty[$ et $\mathit{Im}(\ln) = \mathbb{R}$.
+::: {.details}
+On utilise le fait que le logarithme naturel est la fonction réciproque de l'exponentielle, comme dans *Comprendre le logarithme*.
 
-(b) Le logarithme népérien d'un nombre est l'exposant à donner à $e$ pour obtenir ce nombre.
+1. Comme $e^{0} = 1$, le logarithme de $1$ vaut $0$ : $\ln(1) = 0$.
+2. Comme $e^{1} = e$, le logarithme de $e$ vaut $1$ : $\ln(e) = 1$.
+3. Le logarithme défait l'exponentielle, car $\ln\left(e^{x}\right) = x$ pour tout réel $x$, donc $\ln\left(e^{3}\right) = 3$.
+4. L'exponentielle défait le logarithme, car $e^{\ln(y)} = y$ pour tout réel $y$ strictement positif, donc $e^{\ln(5)} = 5$.
+:::
 
-    1. On a $1 = e^{0}$, donc $\ln 1 = 0$.
-    2. On a $e = e^{1}$, donc $\ln e = 1$.
-    3. On a $e^{2} = e^{2}$, donc $\ln\left(e^{2}\right) = 2$.
-    4. On a $\tfrac{1}{e} = e^{-1}$, donc $\ln\left(\tfrac{1}{e}\right) = -1$.
+::: {.reponse}
+**Réponse (b).** On a $\log_{10}(10\,000) = 4$, $\log_{10}(0{,}001) = -3$ et $\log_{2}(8) = 3$.
+:::
 
-(c) L'argument d'un logarithme doit être strictement positif.
+::: {.details}
+On utilise l'intuition du changement de base : $\log_{a}(x) = p$ si et seulement si $x = a^{p}$. Il suffit donc d'écrire chaque nombre comme une puissance de la base.
 
-    1. Pour $\ln(x - 3)$, la condition est $x - 3 > 0$, soit $x > 3$ : l'expression existe sur $]3,\,+\infty[$.
-    2. Pour $\log_{10}(5 - x)$, la condition est $5 - x > 0$, soit $x < 5$ : l'expression existe sur $]-\infty,\,5[$.
+1. On écrit $10\,000 = 10^{4}$, donc $\log_{10}(10\,000) = 4$.
+2. On écrit $0{,}001 = \tfrac{1}{1000} = 10^{-3}$, donc $\log_{10}(0{,}001) = -3$.
+3. On écrit $8 = 2^{3}$, donc $\log_{2}(8) = 3$.
 
-(d) La fonction $\ln$ est croissante, car sa fonction réciproque, l'exponentielle de base $e$, est croissante. Comme $\ln 1 = 0$ et que $\tfrac{1}{2} < 1$, on a $\ln\left(\tfrac{1}{2}\right) < \ln 1 = 0$ : ce logarithme est négatif. Comme $3 > 1$, on a $\ln 3 > \ln 1 = 0$ : ce logarithme est positif. Enfin $2 < 3$ entraîne $\ln 2 < \ln 3$ : le plus grand des deux nombres est $\ln 3$.
+Le logarithme de $0{,}001$ est négatif, ce qui est cohérent avec $0{,}001 < 1$.
+:::
+
+::: {.reponse}
+**Réponse (c).** On a $\ln(6) \approx 1{,}79$, $\ln\left(\tfrac{3}{2}\right) \approx 0{,}41$ et $\ln(8) \approx 2{,}07$.
+:::
+
+::: {.details}
+On ramène chaque nombre à $2$ et à $3$, puis on applique les propriétés du logarithme d'un produit, d'un quotient et d'une puissance.
+
+1. Comme $6 = 2 \cdot 3$, le logarithme du produit est la somme des logarithmes : $\ln(6) = \ln(2) + \ln(3) \approx 0{,}69 + 1{,}10 = 1{,}79$.
+2. Le logarithme d'un quotient est la différence des logarithmes : $\ln\left(\tfrac{3}{2}\right) = \ln(3) - \ln(2) \approx 1{,}10 - 0{,}69 = 0{,}41$.
+3. Comme $8 = 2^{3}$, le logarithme d'une puissance est l'exposant multiplié par le logarithme : $\ln(8) = 3\ln(2) \approx 3 \cdot 0{,}69 = 2{,}07$.
+
+Ces valeurs sont plausibles : $6$ est compris entre $e \approx 2{,}7$ et $e^{2} \approx 7{,}4$, donc $\ln(6)$ est compris entre $1$ et $2$.
+:::
+
+::: {.reponse}
+**Réponse (d).** On a $2^{x} = e^{\ln(2)\,x}$, donc $k = \ln(2)$, soit environ $0{,}69$.
+:::
+
+::: {.details}
+On écrit la base $2$ comme une puissance de $e$, comme dans *La base naturelle : une autre écriture du même mécanisme*.
+
+1. Comme $e^{\ln(y)} = y$ pour tout $y > 0$, on a $2 = e^{\ln(2)}$.
+2. On remplace $2$ par cette expression : $2^{x} = \left(e^{\ln(2)}\right)^{x} = e^{\ln(2)\,x}$, car élever une puissance à la puissance $x$ multiplie les exposants.
+3. On lit le coefficient de $x$ dans l'exposant : $k = \ln(2)$.
+
+Le nombre $k$ est positif, ce qui est cohérent avec la croissance de $2^{x}$ : la base naturelle donne une croissance lorsque $k > 0$.
+:::
 
 ## Piège
 
-En (c), une erreur fréquente consiste à écrire $x < 3$ ou $x \geq 3$ pour $\ln(x - 3)$. Elle est tentante parce que l'on lit « moins $3$ » et que l'on inverse l'inégalité, ou parce que l'on autorise le cas d'égalité, mais elle est fausse : il faut $x - 3 > 0$ strictement, donc $x > 3$, et le logarithme de $0$ n'existe pas.
+En (c), une erreur fréquente consiste à écrire $\ln(6) = \ln(2) \cdot \ln(3)$. Elle est tentante parce que $6$ est le produit de $2$ et de $3$, mais elle est fausse : le logarithme transforme un produit en somme, et non en produit, donc $\ln(6) = \ln(2) + \ln(3)$.
 
-En (b), une autre erreur consiste à écrire $\ln\left(\tfrac{1}{e}\right) = \tfrac{1}{1} = 1$ ou $\tfrac{1}{\ln e} = 1$. Elle est tentante parce que l'on traite l'inverse comme un quotient de logarithmes, mais elle est fausse : $\tfrac{1}{e} = e^{-1}$, donc le logarithme est $-1$.
-
-:::
-:::
-
-::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
-Soient les fonctions $\sin$ et $\cos$.
-
-(a) Complète le tableau ci-dessous avec les valeurs exactes.
-
-| $x$ | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{2}$ | $\pi$ | $\dfrac{3\pi}{2}$ |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| $\sin x$ | | | | | |
-| $\cos x$ | | | | | |
-
-(b) Écris le domaine de $\sin$, son image et sa période.
-(c) Calcule $\sin\left(\dfrac{13\pi}{6}\right)$ en justifiant par une phrase qui utilise la période.
-(d) D'après le graphe de $\sin$, écris le signe de $\sin x$ sur l'intervalle $]0,\,\pi[$, puis sur l'intervalle $]\pi,\,2\pi[$.
-:::
-
-::: {.aides}
-::: {.panel-tabset}
-
-## Indice 1
-
-Retourne à la théorie du cours : *Fonctions trigonométriques comme modèles périodiques*, et plus précisément *Graphes, domaine et image* pour (a), (b) et (d), et *Périodicité* pour (b) et (c).
-
-## Indice 2
-
-*Question à te poser.*
-
-(a) Quelles sont les coordonnées du point du cercle trigonométrique associé à chaque angle ?
-(b) Entre quelles valeurs le sinus varie-t-il, et au bout de combien le graphe se répète-t-il ?
-(c) Combien de périodes entières faut-il retrancher à $\tfrac{13\pi}{6}$ pour obtenir un angle du tableau ?
-(d) Le graphe de $\sin$ est-il au-dessus ou au-dessous de l'axe des abscisses entre $0$ et $\pi$, puis entre $\pi$ et $2\pi$ ?
-
-## Indice 3
-
-*Étape.*
-
-(a) Pour chaque angle, lis l'ordonnée du point du cercle trigonométrique pour le sinus et son abscisse pour le cosinus.
-(b) Repère sur le graphe la plus petite et la plus grande valeur du sinus, puis la longueur d'un motif complet.
-(c) Écris $\tfrac{13\pi}{6}$ comme la somme d'un angle du tableau et d'un multiple de la période.
-(d) Repère sur le graphe la position de l'arche entre $0$ et $\pi$, puis celle de l'arche entre $\pi$ et $2\pi$.
-
-## Solution
-
-Le sinus et le cosinus d'un angle $x$ sont l'ordonnée et l'abscisse du point du cercle trigonométrique associé à l'angle $x$.
-
-(a) On lit les coordonnées du point associé à chaque angle.
-
-    | $x$ | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{2}$ | $\pi$ | $\dfrac{3\pi}{2}$ |
-    |:---:|:---:|:---:|:---:|:---:|:---:|
-    | $\sin x$ | $0$ | $\dfrac{1}{2}$ | $1$ | $0$ | $-1$ |
-    | $\cos x$ | $1$ | $\dfrac{\sqrt{3}}{2}$ | $0$ | $-1$ | $0$ |
-
-(b) Le sinus est défini pour tout angle, donc $\mathit{Dom}(\sin) = \mathbb{R}$. Ses valeurs sont des ordonnées de points du cercle de rayon $1$, et toutes les valeurs de $-1$ à $1$ sont atteintes, donc $\mathit{Im}(\sin) = [-1,\,1]$. Le graphe se répète tous les tours complets, donc la période est $2\pi$.
-
-(c) On ramène l'angle dans le tableau.
-
-    1. On écrit $\dfrac{13\pi}{6} = \dfrac{\pi}{6} + \dfrac{12\pi}{6} = \dfrac{\pi}{6} + 2\pi$.
-    2. Le sinus est de période $2\pi$, donc $\sin\left(\dfrac{\pi}{6} + 2\pi\right) = \sin\dfrac{\pi}{6}$.
-
-    On a donc $\sin\left(\dfrac{13\pi}{6}\right) = \dfrac{1}{2}$.
-
-(d) Le graphe de $\sin$ est au-dessus de l'axe des abscisses entre $0$ et $\pi$, avec un maximum $1$ en $\tfrac{\pi}{2}$, donc $\sin x > 0$ sur $]0,\,\pi[$. Il est au-dessous de l'axe entre $\pi$ et $2\pi$, avec un minimum $-1$ en $\tfrac{3\pi}{2}$, donc $\sin x < 0$ sur $]\pi,\,2\pi[$.
-
-## Piège
-
-En (c), une erreur fréquente consiste à écrire $\sin\left(\dfrac{13\pi}{6}\right) = \sin\left(\dfrac{13}{6}\right) \cdot \pi$ ou à diviser l'angle par la période. Elle est tentante parce qu'on cherche à simplifier le nombre $13$, mais elle est fausse : il faut retrancher la période $2\pi$ autant de fois que nécessaire, et non diviser l'angle par la période.
-
-En (a), une autre erreur consiste à échanger les valeurs du sinus et du cosinus en $\tfrac{\pi}{2}$ et en $\pi$. Elle est tentante parce que les deux fonctions prennent les mêmes valeurs $0$, $1$ et $-1$, mais elle est fausse : le sinus est l'ordonnée du point, donc $\sin\tfrac{\pi}{2} = 1$ et $\sin \pi = 0$, tandis que le cosinus est son abscisse, donc $\cos\tfrac{\pi}{2} = 0$ et $\cos \pi = -1$.
-
-:::
-:::
-
-::: {.callout-caution .exo title="Exercice|Socle|2|O2"}
-Soient les trois fonctions $f_1(x) = 2\sin x$, $f_2(x) = \sin(3x) + 1$ et $f_3(x) = \sin\left(x - \dfrac{\pi}{2}\right)$.
-
-(a) Complète le tableau suivant. Pour la dernière colonne, écris le décalage horizontal du graphe de $\sin$ nécessaire pour obtenir le graphe de la fonction, avec son sens, ou écris « aucun ».
-
-| fonction | amplitude | période | valeur centrale | image | décalage horizontal |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| $f_1$ | | | | | |
-| $f_2$ | | | | | |
-| $f_3$ | | | | | |
-
-(b) Calcule $f_3(0)$, $f_3\left(\dfrac{\pi}{2}\right)$ et $f_3(\pi)$.
-:::
-
-::: {.aides}
-::: {.panel-tabset}
-
-## Indice 1
-
-Retourne à la théorie du cours : *Fonctions trigonométriques comme modèles périodiques*, et plus précisément *Amplitude*, *Périodicité* et *Déphasage* pour (a), et *Graphes, domaine et image* pour (b).
-
-## Indice 2
-
-*Question à te poser.*
-
-(a) Dans chaque formule, quel nombre multiplie le sinus, quel nombre multiplie $x$ dans l'argument, quel nombre est ajouté ou soustrait dans l'argument, et quel nombre est ajouté à l'extérieur ?
-(b) Quelle est la valeur de l'argument de $f_3$ pour chacune des trois valeurs de $x$ ?
-
-## Indice 3
-
-*Étape.*
-
-(a) Compare chaque formule à la forme $A\sin(\omega x + \varphi) + D$ et lis $A$, $\omega$, $\varphi$ et $D$, puis calcule la période $\tfrac{2\pi}{\omega}$ et l'image $[D - A,\,D + A]$.
-(b) Remplace $x$ par chaque valeur dans l'argument $x - \tfrac{\pi}{2}$, puis lis la valeur du sinus dans le tableau de l'exercice précédent.
-
-## Solution
-
-On compare chaque fonction à la forme $A\sin(\omega x + \varphi) + D$ : $A$ est l'amplitude, $\tfrac{2\pi}{\omega}$ est la période, $D$ est la valeur centrale, l'image est $[D - A,\,D + A]$, et le graphe de $\sin$ est décalé de $-\tfrac{\varphi}{\omega}$ horizontalement.
-
-(a) On lit les paramètres de chaque fonction.
-
-    1. Pour $f_1(x) = 2\sin x$ : $A = 2$, $\omega = 1$, $\varphi = 0$ et $D = 0$. L'amplitude est $2$, la période est $2\pi$, la valeur centrale est $0$, l'image est $[-2,\,2]$ et il n'y a aucun décalage horizontal.
-    2. Pour $f_2(x) = \sin(3x) + 1$ : $A = 1$, $\omega = 3$, $\varphi = 0$ et $D = 1$. L'amplitude est $1$, la période est $\tfrac{2\pi}{3}$, la valeur centrale est $1$, l'image est $[0,\,2]$ et il n'y a aucun décalage horizontal.
-    3. Pour $f_3(x) = \sin\left(x - \tfrac{\pi}{2}\right)$ : $A = 1$, $\omega = 1$, $\varphi = -\tfrac{\pi}{2}$ et $D = 0$. L'amplitude est $1$, la période est $2\pi$, la valeur centrale est $0$, l'image est $[-1,\,1]$ et le décalage est $-\tfrac{\varphi}{\omega} = \tfrac{\pi}{2}$ vers la droite.
-
-    | fonction | amplitude | période | valeur centrale | image | décalage horizontal |
-    |:---:|:---:|:---:|:---:|:---:|:---:|
-    | $f_1$ | $2$ | $2\pi$ | $0$ | $[-2,\,2]$ | aucun |
-    | $f_2$ | $1$ | $\dfrac{2\pi}{3}$ | $1$ | $[0,\,2]$ | aucun |
-    | $f_3$ | $1$ | $2\pi$ | $0$ | $[-1,\,1]$ | $\dfrac{\pi}{2}$ vers la droite |
-
-(b) On remplace $x$ par chaque valeur dans $f_3(x) = \sin\left(x - \tfrac{\pi}{2}\right)$.
-
-    1. Pour $x = 0$, l'argument vaut $-\tfrac{\pi}{2}$, donc $f_3(0) = \sin\left(-\tfrac{\pi}{2}\right) = -1$.
-    2. Pour $x = \tfrac{\pi}{2}$, l'argument vaut $0$, donc $f_3\left(\tfrac{\pi}{2}\right) = \sin 0 = 0$.
-    3. Pour $x = \pi$, l'argument vaut $\tfrac{\pi}{2}$, donc $f_3(\pi) = \sin\tfrac{\pi}{2} = 1$.
-
-    Ces valeurs sont cohérentes avec le décalage : le graphe de $\sin$ vaut $0$ en $0$ et $1$ en $\tfrac{\pi}{2}$, et celui de $f_3$ vaut $0$ en $\tfrac{\pi}{2}$ et $1$ en $\pi$, soit $\tfrac{\pi}{2}$ plus à droite.
-
-## Piège
-
-En (a), une erreur fréquente consiste à écrire que la période de $f_2$ est $2\pi \cdot 3 = 6\pi$. Elle est tentante parce que le facteur $3$ semble étirer le graphe, mais elle est fausse : multiplier $x$ par $3$ comprime le graphe horizontalement, donc la période est divisée par $3$ et vaut $\tfrac{2\pi}{3}$.
-
-En (a), une autre erreur consiste à écrire que le graphe de $f_3$ est décalé de $\tfrac{\pi}{2}$ vers la gauche. Elle est tentante parce que le signe moins de l'argument fait penser à un décalage vers les valeurs négatives, mais elle est fausse : la valeur de $\sin$ en $0$ se retrouve pour $f_3$ en $x = \tfrac{\pi}{2}$, donc le graphe est décalé vers la droite.
-
-:::
-:::
-
-<!-- ========== FIN DES EXERCICES SYSTÉMATIQUES ========== -->
-
-
-::: {.callout-caution .exo title="Exercice|Socle|1|O1"}
-On compare quatre fonctions définies pour $x > 0$ : $\sqrt{x}$, $\log_2 x$, $x^2$ et $2^x$.
-
-(a) Complète le tableau ci-dessous. Écris chaque valeur sous la forme d'un nombre entier, sauf $2^{64}$, que tu laisses sous la forme d'une puissance.
-
-| $x$ | $1$ | $4$ | $64$ |
-|:---:|:---:|:---:|:---:|
-| $\sqrt{x}$ | | | |
-| $\log_2 x$ | | | |
-| $x^2$ | | | |
-| $2^x$ | | | |
-
-(b) Écris les quatre valeurs obtenues pour $x = 64$ dans l'ordre croissant, séparées par le symbole $<$.
-(c) Écris en une phrase quelle fonction finit par dépasser toutes les autres lorsque $x$ devient très grand.
-:::
-
-::: {.aides}
-::: {.panel-tabset}
-
-## Indice 1
-
-Retourne à la théorie du cours : *Comparaison qualitative des croissances* pour (a), (b) et (c), et *Logarithme comme fonction réciproque* pour la ligne de $\log_2 x$ en (a).
-
-## Indice 2
-
-*Question à te poser.*
-
-(a) À quelle puissance faut-il élever $2$ pour obtenir $64$ ?
-(b) Comment comparer le nombre entier $4096$ avec la puissance $2^{64}$ sans calculer $2^{64}$ ?
-(c) Dans l'ordre des croissances du cours, quelle famille de fonctions l'emporte sur toutes les autres ?
-
-## Indice 3
-
-*Étape.*
-
-(a) Remplace $x$ par chacune des trois valeurs dans les quatre formules, en cherchant pour $\log_2 x$ l'exposant de $2$ qui donne $x$.
-(b) Écris $4096$ comme une puissance de $2$, puis compare les exposants.
-(c) Relis l'ordre des croissances du cours (logarithme, racine, polynôme, exponentielle) et repère la famille de chacune des quatre fonctions.
-
-## Solution
-
-On calcule les valeurs, puis on les compare en utilisant la comparaison qualitative des croissances du cours.
-
-(a) On remplace $x$ par chaque valeur du tableau.
-
-    1. La fonction $\sqrt{x}$ vaut $\sqrt{1} = 1$, $\sqrt{4} = 2$ et $\sqrt{64} = 8$.
-    2. La fonction $\log_2 x$ est l'exposant à donner à $2$ pour obtenir $x$. Elle vaut $0$ en $x = 1$, car $2^0 = 1$, elle vaut $2$ en $x = 4$, car $2^2 = 4$, et elle vaut $6$ en $x = 64$, car $2^6 = 64$.
-    3. La fonction $x^2$ vaut $1^2 = 1$, $4^2 = 16$ et $64^2 = 4096$.
-    4. La fonction $2^x$ vaut $2^1 = 2$, $2^4 = 16$ et $2^{64}$.
-
-    | $x$ | $1$ | $4$ | $64$ |
-    |:---:|:---:|:---:|:---:|
-    | $\sqrt{x}$ | $1$ | $2$ | $8$ |
-    | $\log_2 x$ | $0$ | $2$ | $6$ |
-    | $x^2$ | $1$ | $16$ | $4096$ |
-    | $2^x$ | $2$ | $16$ | $2^{64}$ |
-
-(b) On doit comparer $4096$ et $2^{64}$ sans calculer $2^{64}$.
-
-    1. On écrit $4096$ comme une puissance de $2$ : $4096 = 2^{12}$, car $2^{10} = 1024$ et $1024 \cdot 4 = 4096$.
-    2. Comme $12 < 64$, on a $2^{12} < 2^{64}$, donc $4096 < 2^{64}$.
-    3. Les trois autres nombres sont rangés par la lecture du tableau : $6 < 8 < 4096$.
-
-    L'ordre croissant des valeurs en $x = 64$ est donc $6 < 8 < 4096 < 2^{64}$.
-
-(c) La fonction $2^x$ est une exponentielle de base supérieure à $1$. D'après la comparaison des croissances du cours, une telle exponentielle finit par dépasser toute fonction polynomiale, toute racine et tout logarithme, donc la fonction $2^x$ finit par dépasser les trois autres. Le tableau le confirme en $x = 64$, où elle est la plus grande.
-
-## Piège
-
-Une erreur fréquente consiste à croire que $x^2$ dépasse $2^x$. Elle est tentante parce que, pour de petites valeurs de $x$, c'est vrai : $3^2 = 9$ est plus grand que $2^3 = 8$. Elle est fausse à long terme, car dès $x = 5$ on a $2^5 = 32 > 25 = 5^2$, et l'écart continue de grandir quand $x$ augmente.
-
-Une autre erreur consiste à conclure d'un seul tableau de valeurs que l'ordre observé reste le même pour toutes les valeurs de $x$. Elle est tentante parce que le tableau donne des nombres précis, mais elle est fausse : en $x = 1$ la fonction $\log_2 x$ vaut $0$, alors qu'en $x = 4$ elle vaut $2$, comme $\sqrt{x}$, donc l'ordre des fonctions change d'une colonne à l'autre.
-
-:::
-:::
-
-::: {.callout-caution .exo title="Exercice|Socle|2|O1"}
-Soit le polynôme $p$ défini par $p(x) = x\,(x - 1)\,(x - 3)$.
-
-(a) Écris $p(x)$ sous forme développée, puis écris le degré de $p$ et le coefficient du terme de plus haut degré.
-(b) Écris les racines de $p$.
-(c) Étudie le signe de $p$ dans un tableau de signes qui contient une ligne pour chacun des trois facteurs $x$, $x - 1$ et $x - 3$ et une ligne pour $p(x)$. Écris ensuite les intervalles sur lesquels $p(x) \geq 0$.
-:::
-
-::: {.aides}
-::: {.panel-tabset}
-
-## Indice 1
-
-Retourne à la théorie du cours : *Polynômes* pour (a) et (b), et *Racines et étude de signe* de la séance 5 pour (b) et (c).
-
-## Indice 2
-
-*Question à te poser.*
-
-(a) Quel est l'exposant le plus élevé de $x$ dans le produit développé ?
-(b) Quand un produit de trois facteurs est-il égal à $0$ ?
-(c) Dans chaque intervalle délimité par les racines, quel est le signe de chacun des trois facteurs ?
-
-## Indice 3
-
-*Étape.*
-
-(a) Développe d'abord le produit $(x - 1)(x - 3)$, puis multiplie le résultat par $x$.
-(b) Écris que chacun des trois facteurs est égal à $0$ et résous chacune des trois équations.
-(c) Place les racines sur une droite, remplis une ligne par facteur, puis applique la règle des signes d'un produit dans chaque colonne.
-
-## Solution
-
-On développe le produit pour lire le degré, on trouve les racines en annulant chaque facteur, puis on étudie le signe de chaque facteur pour en déduire celui du produit.
-
-(a) On développe en deux temps.
-
-    1. On développe le produit des deux derniers facteurs : $(x - 1)(x - 3) = x^2 - 3x - x + 3 = x^2 - 4x + 3$.
-    2. On multiplie le résultat par $x$ : $p(x) = x\,(x^2 - 4x + 3) = x^3 - 4x^2 + 3x$.
-
-    Le terme de plus haut degré est $x^3$, donc le degré de $p$ est $3$, et son coefficient est $1$.
-
-(b) Un produit de facteurs est nul si et seulement si l'un des facteurs est nul : $x = 0$, ou $x - 1 = 0$, ou $x - 3 = 0$. Les racines de $p$ sont donc $0$, $1$ et $3$.
-
-(c) On étudie le signe de chaque facteur de part et d'autre de sa racine.
-
-    1. Les racines $0$, $1$ et $3$ découpent la droite en quatre intervalles.
-    2. Le facteur $x$ est négatif pour $x < 0$ et positif pour $x > 0$. Le facteur $x - 1$ est négatif pour $x < 1$ et positif pour $x > 1$. Le facteur $x - 3$ est négatif pour $x < 3$ et positif pour $x > 3$.
-    3. Un produit est positif quand le nombre de facteurs négatifs est pair, et négatif quand il est impair.
-
-    | $x$ | $-\infty$ |  | $0$ |  | $1$ |  | $3$ |  | $+\infty$ |
-    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-    | signe de $x$ | $-$ | $-$ | $0$ | $+$ | $+$ | $+$ | $+$ | $+$ | $+$ |
-    | signe de $x - 1$ | $-$ | $-$ | $-$ | $-$ | $0$ | $+$ | $+$ | $+$ | $+$ |
-    | signe de $x - 3$ | $-$ | $-$ | $-$ | $-$ | $-$ | $-$ | $0$ | $+$ | $+$ |
-    | signe de $p(x)$ | $-$ | $-$ | $0$ | $+$ | $0$ | $-$ | $0$ | $+$ | $+$ |
-
-    Contrôle : $p(2) = 2 \cdot 1 \cdot (-1) = -2 < 0$, ce qui correspond au signe $-$ entre $1$ et $3$.
-
-    Dans la ligne de $p(x)$, les signes $+$ ou $0$ se trouvent entre $0$ et $1$, aux valeurs $0$, $1$ et $3$, et à droite de $3$ : on a donc $p(x) \geq 0$ sur $[0,\,1]$ et sur $[3,\,+\infty[$.
-
-## Piège
-
-Une erreur fréquente consiste à écrire que le signe de $p$ alterne en passant de gauche à droite sans remplir le tableau. Elle est tentante parce que les trois racines sont simples, mais elle est fausse dès qu'une racine est double : par exemple pour $x\,(x - 1)^2$, le signe ne change pas en $x = 1$. Il faut remplir le tableau pour ne pas supposer l'alternance.
-
-Une autre erreur consiste à écrire $]0,\,1[$ et $]3,\,+\infty[$ pour $p(x) \geq 0$. Elle est tentante parce que ce sont les intervalles où $p$ est strictement positive, mais elle est fausse : l'inégalité est large, donc les racines $0$, $1$ et $3$, où $p$ s'annule, appartiennent à l'ensemble des solutions.
+En (b), une autre erreur consiste à écrire $\log_{10}(0{,}001) = 3$ en comptant les zéros. Elle est tentante parce que l'on compte trois chiffres après la virgule, mais elle est fausse : $0{,}001 = 10^{-3}$, donc son logarithme est $-3$ ; un nombre compris entre $0$ et $1$ a un logarithme négatif.
 
 :::
 :::
 
 ::: {.callout-caution .exo title="Exercice|Socle|1|O2"}
-Trois grandeurs évoluent au cours du temps $t$, exprimé en heures, selon les fonctions suivantes :
-$$f(t) = 200 \cdot 1{,}5^{\,t}, \qquad g(t) = 64 \cdot \left(\tfrac{1}{2}\right)^{t}, \qquad h(t) = 90 \cdot \left(\tfrac{2}{3}\right)^{t}.$$
-
-(a) Pour chaque fonction, écris la valeur initiale et le nombre par lequel la grandeur est multipliée chaque heure.
-(b) Pour chaque fonction, écris si la grandeur augmente ou diminue au cours du temps.
-(c) Calcule la valeur de chaque fonction pour $t = 2$ heures.
+(a) Soient les fonctions $f(t) = 200 \cdot 1{,}5^{t}$ et $g(t) = 64 \cdot \left(\tfrac{1}{2}\right)^{t}$, où $t$ est le temps en heures. Pour chacune, écris la valeur à l'instant $t = 0$ et le nombre par lequel la grandeur est multipliée chaque heure, puis écris si la grandeur augmente ou diminue au cours du temps.
+(b) Une grandeur vaut $500$ à l'instant $t = 0$ et perd $20\,\%$ de sa valeur chaque heure. Écris l'expression de cette grandeur sous la forme $N(t) = N_0 \cdot a^{t}$, en donnant les valeurs de $N_0$ et de $a$.
 :::
 
 ::: {.aides}
@@ -572,56 +251,158 @@ $$f(t) = 200 \cdot 1{,}5^{\,t}, \qquad g(t) = 64 \cdot \left(\tfrac{1}{2}\right)
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Exponentielle : facteur multiplicatif constant* pour (a) et (c), et *Croissance et décroissance* pour (b).
+Retourne à la théorie du cours : *Construction de l'exponentielle* et *Croissance et décroissance exponentielles* pour (a), et *Questions d'évaluation illustratives* pour (b).
 
 ## Indice 2
 
 *Question à te poser.*
 
-(a) Quelle est la valeur de la fonction pour $t = 0$, et par quel nombre multiplie-t-on la valeur quand $t$ augmente de $1$ ?
-(b) Le nombre qui multiplie la valeur chaque heure est-il supérieur ou inférieur à $1$ ?
-(c) Quel exposant obtient-on en remplaçant $t$ par $2$ dans chaque formule ?
+(a) Que vaut $a^{0}$, et par quel nombre la valeur est-elle multipliée quand $t$ augmente de $1$ ?
+(b) Si une grandeur perd $20\,\%$ de sa valeur, quelle part de sa valeur lui reste-t-il ?
 
 ## Indice 3
 
 *Étape.*
 
-(a) Compare chaque formule à la forme $b \cdot a^{t}$ et lis les deux nombres $b$ et $a$.
-(b) Compare le nombre $a$ de chaque fonction au nombre $1$.
-(c) Remplace $t$ par $2$, calcule d'abord la puissance, puis multiplie le résultat par la valeur initiale.
+(a) Calcule $f(0)$ et $g(0)$, puis compare la base de chaque puissance au nombre $1$.
+(b) Écris la valeur après une heure sous la forme $500 - 0{,}20 \cdot 500$, puis mets $500$ en facteur.
 
 ## Solution
 
-Chaque fonction a la forme $b \cdot a^{t}$ d'une exponentielle : on lit $b$ et $a$, on compare $a$ à $1$, puis on évalue la fonction.
+::: {.reponse}
+**Réponse (a).** La grandeur $f$ vaut $200$ à l'instant $t = 0$ et est multipliée par $1{,}5$ chaque heure : elle augmente. La grandeur $g$ vaut $64$ à l'instant $t = 0$ et est multipliée par $\tfrac{1}{2}$ chaque heure : elle diminue.
+:::
 
-(a) Dans la forme $b \cdot a^{t}$, le nombre $b$ est la valeur pour $t = 0$, car $a^0 = 1$, et le nombre $a$ est le facteur par lequel la valeur est multipliée quand $t$ augmente de $1$. Pour $f$, la valeur initiale est $200$ et le facteur est $1{,}5$. Pour $g$, la valeur initiale est $64$ et le facteur est $\tfrac{1}{2}$. Pour $h$, la valeur initiale est $90$ et le facteur est $\tfrac{2}{3}$.
+::: {.details}
+On lit les deux paramètres du modèle exponentiel $N(t) = N_{0} \cdot a^{t}$, comme dans *Construction de l'exponentielle*.
 
-(b) Si le facteur est supérieur à $1$, chaque heure multiplie la valeur par un nombre plus grand que $1$, donc la grandeur augmente. S'il est compris entre $0$ et $1$, la grandeur diminue. Le facteur $1{,}5$ est supérieur à $1$, donc $f$ augmente. Les facteurs $\tfrac{1}{2}$ et $\tfrac{2}{3}$ sont compris entre $0$ et $1$, donc $g$ et $h$ diminuent.
+1. En $t = 0$, on a $a^{0} = 1$, donc $N(0) = N_{0}$ : le nombre qui multiplie la puissance est la valeur à l'instant $t = 0$. On lit $f(0) = 200$ et $g(0) = 64$.
+2. Quand $t$ augmente de $1$, on a $N(t + 1) = N_{0} \cdot a^{t+1} = N(t) \cdot a$ : la base $a$ est le nombre par lequel la grandeur est multipliée chaque heure. On lit $a = 1{,}5$ pour $f$ et $a = \tfrac{1}{2}$ pour $g$.
+3. D'après *Croissance et décroissance exponentielles*, le modèle est strictement croissant si $a > 1$ et strictement décroissant si $0 < a < 1$. Comme $1{,}5 > 1$, la grandeur $f$ augmente ; comme $0 < \tfrac{1}{2} < 1$, la grandeur $g$ diminue.
+:::
 
-(c) On remplace $t$ par $2$, on calcule la puissance, puis on multiplie par la valeur initiale.
+::: {.reponse}
+**Réponse (b).** La grandeur s'écrit $N(t) = 500 \cdot 0{,}8^{t}$, avec $N_{0} = 500$ et $a = 0{,}8$.
+:::
 
-    1. $f(2) = 200 \cdot 1{,}5^2 = 200 \cdot 2{,}25 = 450$.
-    2. $g(2) = 64 \cdot \left(\tfrac{1}{2}\right)^2 = 64 \cdot \tfrac{1}{4} = 16$.
-    3. $h(2) = 90 \cdot \left(\tfrac{2}{3}\right)^2 = 90 \cdot \tfrac{4}{9} = 40$.
+::: {.details}
+On traduit la perte de $20\,\%$ par heure en un facteur multiplicatif, puis on écrit le modèle exponentiel.
 
-    Contrôle : $f$ augmente et $450 > 200$, tandis que $g$ et $h$ diminuent et $16 < 64$ et $40 < 90$.
+1. La valeur à l'instant $t = 0$ est donnée : $N_{0} = 500$.
+2. Perdre $20\,\%$ de sa valeur revient à en garder $80\,\%$. Après une heure, la grandeur vaut donc $500 - 0{,}20 \cdot 500 = 500 \cdot (1 - 0{,}20) = 500 \cdot 0{,}8$.
+3. La même perte se répète chaque heure, donc la grandeur est multipliée par $0{,}8$ chaque heure : $a = 0{,}8$ et $N(t) = 500 \cdot 0{,}8^{t}$.
+
+Le facteur $0{,}8$ est compris entre $0$ et $1$, ce qui est cohérent avec une grandeur qui diminue. Contrôle : $N(1) = 400$, soit $500$ diminué de $20\,\%$.
+:::
 
 ## Piège
 
-Une erreur fréquente consiste à calculer $f(2)$ comme $200 \cdot 1{,}5 \cdot 2$. Elle est tentante parce que l'on retrouve les nombres de la formule dans le produit, mais elle est fausse : l'exposant $2$ signifie que l'on multiplie deux fois par $1{,}5$, donc $f(2) = 200 \cdot 1{,}5^2 = 450$ et non $600$.
+En (b), une erreur fréquente consiste à prendre $a = 0{,}2$. Elle est tentante parce que le nombre $20\,\%$ figure dans l'énoncé, mais elle est fausse : $0{,}2$ est la part perdue, alors que $a$ est la part qui reste ; avec $a = 0{,}2$, on aurait $N(1) = 100$, soit une perte de $80\,\%$.
 
-Une autre erreur consiste à croire que la fonction $h$ perd les deux tiers de sa valeur chaque heure à cause du facteur $\tfrac{2}{3}$. Elle est tentante parce que le nombre $\tfrac{2}{3}$ est écrit dans la formule, mais elle est fausse : la valeur est multipliée par $\tfrac{2}{3}$, donc elle conserve les deux tiers de sa valeur et en perd un tiers.
+Une autre erreur consiste à écrire $N(t) = 500 \cdot (1 - 0{,}2\,t)$. Elle est tentante parce que l'on retire $20\,\%$ « chaque heure », mais elle est fausse : on retire $20\,\%$ de la valeur du moment, et non de la valeur de départ, donc la grandeur est multipliée par $0{,}8$ chaque heure et le modèle est exponentiel, pas affine.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|2|O4"}
+Résous chacune des équations suivantes et écris chaque solution sous forme exacte. En (b) et en (c), encadre ensuite la solution entre deux nombres entiers consécutifs.
+
+(a) $3 \cdot 2^{x} = 48$
+(b) $5 \cdot 2^{x} = 35$
+(c) $100 \cdot \left(\tfrac{1}{2}\right)^{t} = 20$
+(d) $4\,e^{0{,}5\,x} = 12$. On donne $\ln(3) \approx 1{,}10$ : écris aussi une valeur approchée de la solution.
+:::
+
+::: {.callout-note appearance="simple"}
+L'exercice **S.4** est corrigé ensemble en séance, juste après le temps consacré au socle : il n'a donc pas de coups de pouce. Cherche-le seul·e et repère l'endroit exact où tu bloques. Sa solution complète sera publiée après la séance.
+:::
+
+::: {.callout-caution .exo title="Exercice|Socle|1|O6"}
+(a) L'aire de la surface d'une boule de rayon $r$ vaut $S(r) = 4\pi r^{2}$, et son volume vaut $V(r) = \tfrac{4}{3}\pi r^{3}$. Par quels nombres l'aire $S$ et le volume $V$ sont-ils multipliés quand on triple le rayon ?
+(b) Une boule a un volume de $36\pi$ cm³. Calcule son rayon.
+(c) Sans faire de calcul, range les quatre fonctions $\ln(x)$, $\sqrt{x}$, $x^{3}$ et $1{,}1^{x}$ selon leur croissance quand $x$ devient très grand, de la plus lente à la plus rapide.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Puissances et racines* pour (a) et (b), et *Comparer des croissances* pour (c).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Que deviennent $r^{2}$ et $r^{3}$ quand on remplace $r$ par $3r$ ?
+(b) Quelle opération défait la puissance $3$ ?
+(c) Dans quel ordre le cours classe-t-il les logarithmes, les racines, les polynômes et les exponentielles quand $x$ devient très grand ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Calcule $S(3r)$ en remplaçant $r$ par $3r$, puis compare le résultat à $S(r)$ ; fais de même pour $V$.
+(b) Écris l'équation $\tfrac{4}{3}\pi r^{3} = 36\pi$, puis isole $r^{3}$.
+(c) Écris à quelle famille appartient chacune des quatre fonctions.
+
+## Solution
+
+::: {.reponse}
+**Réponse (a).** Quand on triple le rayon, l'aire de la surface est multipliée par $9$ et le volume est multiplié par $27$.
+:::
+
+::: {.details}
+On remplace $r$ par $3r$ dans les deux formules et on compare au résultat de départ, comme dans *Puissances et racines*.
+
+1. Pour l'aire, on calcule $S(3r) = 4\pi\,(3r)^{2} = 4\pi \cdot 9\,r^{2} = 9 \cdot 4\pi r^{2}$, donc $S(3r) = 9\,S(r)$.
+2. Pour le volume, on calcule $V(3r) = \tfrac{4}{3}\pi\,(3r)^{3} = \tfrac{4}{3}\pi \cdot 27\,r^{3}$, donc $V(3r) = 27\,V(r)$.
+
+Le facteur est $3^{2}$ pour l'aire et $3^{3}$ pour le volume : l'exposant de $r$ fixe le facteur, et le volume grandit plus vite que l'aire.
+:::
+
+::: {.reponse}
+**Réponse (b).** Le rayon de la boule vaut $3$ cm.
+:::
+
+::: {.details}
+On cherche le rayon $r$, en cm, d'une boule de volume $36\pi$ cm³ : on isole $r^{3}$, puis on défait la puissance $3$ par la racine cubique, comme dans *Puissances et racines*.
+
+1. On écrit l'équation donnée par la formule du volume : $\tfrac{4}{3}\pi r^{3} = 36\pi$.
+2. On divise les deux membres par $\pi$, puis on les multiplie par $\tfrac{3}{4}$ : $r^{3} = 36 \cdot \tfrac{3}{4} = 27$.
+3. Sur $\mathbb{R}^{+}$, la racine cubique est la réciproque de la puissance $3$, donc $r = \sqrt[3]{27} = 3$, car $3^{3} = 27$.
+
+Vérification : $V(3) = \tfrac{4}{3}\pi \cdot 27 = 36\pi$ cm³.
+:::
+
+::: {.reponse}
+**Réponse (c).** Quand $x$ devient très grand, du plus lent au plus rapide, on a $\ln(x)$, puis $\sqrt{x}$, puis $x^{3}$, puis $1{,}1^{x}$.
+:::
+
+::: {.details}
+On utilise le classement des croissances à long terme vu dans *Comparer des croissances* : logarithmes, puis racines, puis polynômes, puis exponentielles.
+
+1. On classe chaque fonction dans sa famille : $\ln(x)$ est un logarithme, $\sqrt{x}$ une racine, $x^{3}$ un polynôme et $1{,}1^{x}$ une exponentielle de base strictement supérieure à $1$.
+2. On applique le classement du cours, qui donne $\ln(x)$, $\sqrt{x}$, $x^{3}$ puis $1{,}1^{x}$.
+
+Ce classement porte sur les très grandes valeurs de $x$. Pour $x = 10$, par exemple, $x^{3} = 1000$ dépasse largement $1{,}1^{10}$, qui vaut environ $2{,}6$ ; mais à long terme, l'exponentielle finit par dépasser le polynôme.
+:::
+
+## Piège
+
+En (a), une erreur fréquente consiste à dire que l'aire et le volume sont multipliés par $3$, comme le rayon. Elle est tentante parce que l'on pense à une situation de proportionnalité, mais elle est fausse : $S$ dépend de $r^{2}$ et $V$ de $r^{3}$, donc les facteurs sont $3^{2} = 9$ et $3^{3} = 27$.
+
+En (c), une autre erreur consiste à placer $1{,}1^{x}$ avant $x^{3}$, parce que $1{,}1$ est proche de $1$ et que $1{,}1^{x}$ est plus petit que $x^{3}$ pour les petites valeurs de $x$. Elle est tentante parce que l'on compare des valeurs proches de $0$, mais elle est fausse : le classement du cours porte sur les très grandes valeurs de $x$, et une exponentielle de base strictement supérieure à $1$ finit toujours par dépasser un polynôme.
 
 :::
 :::
 
 ::: {.callout-caution .exo title="Exercice|Socle|2|O2"}
-Une grandeur $N$ est donnée par la fonction $N(t) = 100 \cdot 2^{t/5}$, où $t$ est le temps en heures. Une autre grandeur $M$ est donnée par la fonction $M(t) = 80 \cdot \left(\tfrac{1}{2}\right)^{t/4}$, où $t$ est aussi le temps en heures.
+Soit la fonction $f$ définie par
+$$f(x) = 3 + 2\cos\left(\dfrac{\pi}{3}(x - 1)\right).$$
 
-(a) Écris le temps de doublement de $N$, en heures.
-(b) Calcule $N(15)$.
-(c) Écris $N(t)$ sous la forme $100\,e^{kt}$, en donnant la valeur exacte du nombre $k$ avec son unité.
-(d) Écris la demi-vie de $M$, en heures, puis calcule $M(12)$.
+(a) Résous l'équation $f(x) = 4$ dans l'intervalle $[0,\,6[$.
+(b) Résous l'équation $f(x) = 3$ dans l'intervalle $[0,\,12]$.
 :::
 
 ::: {.aides}
@@ -629,56 +410,73 @@ Une grandeur $N$ est donnée par la fonction $N(t) = 100 \cdot 2^{t/5}$, où $t$
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Temps de doublement et demi-vie* pour (a) et (d), *Exponentielle : facteur multiplicatif constant* pour (b), et *Lien entre les formes $a^t$ et $e^{kt}$* pour (c).
+Retourne à la théorie du cours : *Sinus et cosinus* (valeurs du cosinus sur le cercle trigonométrique et période $2\pi$) pour (a) et (b).
 
 ## Indice 2
 
 *Question à te poser.*
 
-(a) Pour quelle valeur de $t$ l'exposant $\tfrac{t}{5}$ est-il égal à $1$ ?
-(b) Quelle est la valeur de l'exposant quand $t = 15$ ?
-(c) Comment écrit-on la puissance $2^{u}$ à l'aide de la base $e$ ?
-(d) Pour quelle valeur de $t$ l'exposant $\tfrac{t}{4}$ est-il égal à $1$, et par quel nombre multiplie-t-on alors la valeur initiale ?
+(a) Sur un tour du cercle trigonométrique, pour quels angles le cosinus vaut-il $\tfrac{1}{2}$ ?
+(b) Sur un tour du cercle trigonométrique, pour quels angles le cosinus vaut-il $0$ ?
 
 ## Indice 3
 
 *Étape.*
 
-(a) Cherche la durée $T$ pour laquelle $N(T) = 2\,N(0)$.
-(b) Remplace $t$ par $15$, calcule l'exposant, puis calcule la puissance de $2$.
-(c) Écris $2^{t/5}$ avec la base $e$, puis identifie le coefficient de $t$ dans l'exposant.
-(d) Cherche la durée $T$ pour laquelle $M(T) = \tfrac{1}{2}M(0)$, puis remplace $t$ par $12$.
+(a) Isole le cosinus : soustrais $3$ aux deux membres, puis divise-les par $2$.
+(b) Isole le cosinus, puis écris que l'angle $\tfrac{\pi}{3}(x - 1)$ est égal à $\tfrac{\pi}{2}$ augmenté d'un multiple de $\pi$.
 
 ## Solution
 
-On lit le temps de doublement et la demi-vie sur l'exposant, puis on utilise le lien entre la forme $a^{t}$ et la forme $e^{kt}$.
+::: {.reponse}
+**Réponse (a).** Dans l'intervalle $[0,\,6[$, l'équation $f(x) = 4$ a deux solutions : $x = 0$ et $x = 2$.
+:::
 
-(a) Au temps $t = 0$, la grandeur vaut $N(0) = 100 \cdot 2^0 = 100$. Elle double lorsque la puissance de $2$ vaut $2$, c'est-à-dire lorsque l'exposant $\tfrac{t}{5}$ vaut $1$, donc pour $t = 5$. Le temps de doublement de $N$ est de $5$ heures.
+::: {.details}
+On cherche les nombres $x$ de $[0,\,6[$ dont l'image par $f$ vaut $4$. On isole le cosinus, puis on utilise les valeurs particulières du cosinus sur le cercle trigonométrique, comme dans *Sinus et cosinus*.
 
-(b) Pour $t = 15$, l'exposant vaut $\tfrac{15}{5} = 3$, donc $N(15) = 100 \cdot 2^3 = 800$. La grandeur est multipliée par $8$ en $15$ heures, ce qui correspond à trois doublements successifs.
+1. On isole le cosinus : on soustrait $3$ aux deux membres de $3 + 2\cos\left(\tfrac{\pi}{3}(x - 1)\right) = 4$, puis on les divise par $2$, donc $\cos\left(\tfrac{\pi}{3}(x - 1)\right) = \tfrac{1}{2}$.
+2. Sur un tour du cercle trigonométrique, les angles dont le cosinus vaut $\tfrac{1}{2}$ sont $\tfrac{\pi}{3}$ et $-\tfrac{\pi}{3}$ ; les autres s'obtiennent en ajoutant un multiple de $2\pi$, car le cosinus a pour période $2\pi$. On écrit donc $\tfrac{\pi}{3}(x - 1) = \tfrac{\pi}{3} + 2k\pi$ ou $\tfrac{\pi}{3}(x - 1) = -\tfrac{\pi}{3} + 2k\pi$, avec $k$ entier.
+3. On isole $x$ en multipliant les deux membres par $\tfrac{3}{\pi}$, puis en ajoutant $1$ : $x = 2 + 6k$ ou $x = 6k$.
+4. On garde les valeurs de $[0,\,6[$ : pour $k = 0$, on obtient $2$ et $0$ ; pour $k = 1$, on obtient $8$ et $6$, qui ne sont pas dans l'intervalle, car il exclut $6$.
 
-(c) On écrit la puissance de $2$ avec la base $e$.
+Vérification : $f(0) = 3 + 2\cos\left(-\tfrac{\pi}{3}\right) = 3 + 1 = 4$ et $f(2) = 3 + 2\cos\left(\tfrac{\pi}{3}\right) = 4$.
+:::
 
-    1. Le lien entre les deux formes est $2^{u} = e^{u \ln 2}$ pour tout nombre $u$.
-    2. Avec $u = \tfrac{t}{5}$, on obtient $2^{t/5} = e^{(t/5)\ln 2} = e^{(\ln 2 / 5)\,t}$.
+::: {.reponse}
+**Réponse (b).** Dans l'intervalle $[0,\,12]$, l'équation $f(x) = 3$ a quatre solutions : $x = \tfrac{5}{2}$, $x = \tfrac{11}{2}$, $x = \tfrac{17}{2}$ et $x = \tfrac{23}{2}$.
+:::
 
-    On a donc $N(t) = 100\,e^{kt}$ avec $k = \dfrac{\ln 2}{5}$ par heure.
+::: {.details}
+On cherche les nombres $x$ de $[0,\,12]$ dont l'image par $f$ vaut $3$, avec la même méthode qu'en (a).
 
-(d) La valeur initiale est $M(0) = 80$. La fonction $M$ est divisée par deux lorsque l'exposant $\tfrac{t}{4}$ vaut $1$, donc pour $t = 4$, et la demi-vie de $M$ est de $4$ heures. Pour $t = 12$, l'exposant vaut $\tfrac{12}{4} = 3$, donc $M(12) = 80 \cdot \left(\tfrac{1}{2}\right)^3 = \tfrac{80}{8} = 10$. La grandeur a été divisée par deux trois fois en $12$ heures.
+1. On isole le cosinus : on soustrait $3$ aux deux membres, puis on les divise par $2$, donc $\cos\left(\tfrac{\pi}{3}(x - 1)\right) = 0$.
+2. Sur un tour du cercle trigonométrique, les angles dont le cosinus vaut $0$ sont $\tfrac{\pi}{2}$ et $-\tfrac{\pi}{2}$ ; tous les angles dont le cosinus vaut $0$ s'écrivent donc $\tfrac{\pi}{2} + k\pi$, avec $k$ entier. On écrit $\tfrac{\pi}{3}(x - 1) = \tfrac{\pi}{2} + k\pi$.
+3. On isole $x$ en multipliant les deux membres par $\tfrac{3}{\pi}$, puis en ajoutant $1$ : $x = \tfrac{5}{2} + 3k$.
+4. On garde les valeurs de $[0,\,12]$ : $k = 0$, $1$, $2$ et $3$ donnent $\tfrac{5}{2}$, $\tfrac{11}{2}$, $\tfrac{17}{2}$ et $\tfrac{23}{2}$ ; $k = -1$ donne $-\tfrac{1}{2}$ et $k = 4$ donne $\tfrac{29}{2}$, qui sont hors de l'intervalle.
+
+Ces solutions sont plausibles : la valeur $3$ est la valeur moyenne de $f$, que la fonction atteint deux fois par période de $6$, soit quatre fois sur un intervalle de longueur $12$.
+:::
 
 ## Piège
 
-En (a), une erreur fréquente consiste à répondre $\tfrac{1}{5}$ heure ou $2 \cdot 5 = 10$ heures. Elle est tentante parce que le nombre $5$ figure dans l'exposant, mais elle est fausse : le temps de doublement est la valeur de $t$ qui rend l'exposant $\tfrac{t}{5}$ égal à $1$, c'est-à-dire $5$ heures.
+Une erreur fréquente consiste à ne garder qu'un seul angle par tour, par exemple seulement $\tfrac{\pi}{3}$ en (a). Elle est tentante parce que l'on pense à la première valeur connue du cosinus, mais elle est fausse : sur un tour du cercle trigonométrique, le cosinus prend la valeur $\tfrac{1}{2}$ en deux angles, $\tfrac{\pi}{3}$ et $-\tfrac{\pi}{3}$, donc on obtient deux familles de solutions.
 
-En (c), une autre erreur consiste à écrire $k = \ln 2$ en oubliant le facteur $\tfrac{1}{5}$ de l'exposant. Elle est tentante parce que $\ln 2$ est le nombre qui apparaît quand on change de base, mais elle est fausse : l'exposant de $2^{t/5}$ est $\tfrac{t}{5}$, donc le coefficient de $t$ dans l'exposant est $\tfrac{\ln 2}{5}$.
+Une autre erreur consiste à oublier les solutions des tours suivants, ou à ne pas tenir compte du bord de l'intervalle. Elle est tentante parce que les premières solutions trouvées semblent suffire, mais elle est fausse : il faut ajouter les multiples de la période et garder exactement les valeurs de l'intervalle demandé, ce qui exclut $x = 6$ en (a).
 
 :::
 :::
 
-::: {.callout-caution .exo title="Exercice|Socle|1|O3"}
-(a) Calcule $\log_{10}(10\,000)$ et $\log_{10}(0{,}001)$.
-(b) Calcule $\ln\left(e^{3}\right)$ et $e^{\ln 5}$.
-(c) Résous chacune des trois équations suivantes. Écris chaque solution sous forme exacte : $e^{x} = 7$, puis $\ln x = 2$, puis $10^{x} = 0{,}01$.
+::: {.callout-caution .exo title="Exercice|Socle|2|O7"}
+Une grandeur $g$ oscille entre $-1$ et $5$. Sa période vaut $8$, et son maximum est atteint à l'instant $t = 2$. On propose quatre modèles :
+
+1. $g(t) = 2 + 3\cos\left(\dfrac{\pi}{4}(t - 2)\right)$
+2. $g(t) = 2 + 3\cos\left(\dfrac{\pi}{8}(t - 2)\right)$
+3. $g(t) = 2 + 6\cos\left(\dfrac{\pi}{4}(t - 2)\right)$
+4. $g(t) = 2 + 3\cos\left(\dfrac{\pi}{4}(t + 2)\right)$
+
+(a) Pour chaque modèle, écris la valeur moyenne $M$, l'amplitude $A$, la période $T$ et un instant $h$ où le maximum est atteint.
+(b) Écris quel modèle respecte les trois caractéristiques de la grandeur. Pour chacun des trois autres, écris une caractéristique qu'il ne respecte pas.
 :::
 
 ::: {.aides}
@@ -686,181 +484,55 @@ En (c), une autre erreur consiste à écrire $k = \ln 2$ en oubliant le facteur 
 
 ## Indice 1
 
-Retourne à la théorie du cours : *Logarithme comme fonction réciproque*, pour les trois questions.
+Retourne à la théorie du cours : *Adapter une fonction périodique*, et plus précisément le résumé de la méthode, pour (a) et (b), et *Questions d'évaluation illustratives* pour (b).
 
 ## Indice 2
 
 *Question à te poser.*
 
-(a) À quelle puissance faut-il élever $10$ pour obtenir $10\,000$, puis pour obtenir $0{,}001$ ?
-(b) Quelle fonction défait la fonction $x \mapsto e^{x}$, et quelle fonction défait la fonction $x \mapsto \ln x$ ?
-(c) Dans chaque équation, l'inconnue $x$ figure-t-elle dans un exposant ou dans l'argument d'un logarithme ?
+(a) Dans l'écriture $M + A\cos\left(\tfrac{2\pi}{T}(t - h)\right)$, quel nombre multiplie $t - h$, et comment en déduire la période $T$ ?
+(b) Quelles valeurs de $M$, de $A$, de $T$ et de $h$ correspondent à une grandeur qui oscille entre $-1$ et $5$, avec une période de $8$ et un maximum en $t = 2$ ?
 
 ## Indice 3
 
 *Étape.*
 
-(a) Écris $10\,000$ et $0{,}001$ comme des puissances de $10$, puis lis l'exposant.
-(b) Applique la définition de la fonction réciproque : $\ln\left(e^{u}\right)$ et $e^{\ln v}$ ne dépendent que du nombre $u$ ou $v$.
-(c) Applique à chaque équation la fonction qui défait l'opération dans laquelle figure l'inconnue.
+(a) Pour chaque modèle, égale le nombre qui multiplie la parenthèse à $\tfrac{2\pi}{T}$ et calcule $T$ ; pour le modèle 4, écris $t + 2$ sous la forme $t - (-2)$.
+(b) Calcule la valeur moyenne $\tfrac{-1 + 5}{2}$ et l'amplitude $\tfrac{5 - (-1)}{2}$, puis compare les quatre paramètres attendus à ceux de chaque modèle.
 
 ## Solution
 
-On utilise le fait que le logarithme est la fonction réciproque de l'exponentielle de même base.
+::: {.reponse}
+**Réponse (a).** Les quatre modèles ont une valeur moyenne $M = 2$. Le modèle 1 a $A = 3$, $T = 8$ et $h = 2$ ; le modèle 2 a $A = 3$, $T = 16$ et $h = 2$ ; le modèle 3 a $A = 6$, $T = 8$ et $h = 2$ ; le modèle 4 a $A = 3$, $T = 8$ et $h = -2$.
+:::
 
-(a) Le logarithme décimal d'un nombre est l'exposant à donner à $10$ pour obtenir ce nombre. On a $10\,000 = 10^{4}$, donc $\log_{10}(10\,000) = 4$. On a $0{,}001 = 10^{-3}$, donc $\log_{10}(0{,}001) = -3$.
+::: {.details}
+On compare chaque modèle à l'écriture $M + A\cos\left(\tfrac{2\pi}{T}(t - h)\right)$ du résumé de la méthode du cours.
 
-(b) Le logarithme népérien défait l'exponentielle de base $e$ : $\ln\left(e^{3}\right) = 3$. De même, l'exponentielle défait le logarithme népérien, qui est défini pour les nombres strictement positifs, et $5 > 0$ : $e^{\ln 5} = 5$.
+1. Le nombre ajouté au cosinus est la valeur moyenne $M$ : il vaut $2$ dans les quatre modèles.
+2. Le nombre qui multiplie le cosinus est l'amplitude $A$ : il vaut $3$ dans les modèles 1, 2 et 4, et $6$ dans le modèle 3.
+3. Le nombre qui multiplie la parenthèse vaut $\tfrac{2\pi}{T}$. Pour $\tfrac{\pi}{4}$, on obtient $T = 8$, car $\tfrac{2\pi}{8} = \tfrac{\pi}{4}$ ; pour $\tfrac{\pi}{8}$, on obtient $T = 16$.
+4. Le nombre $h$ est celui que l'on soustrait à $t$ : $h = 2$ dans les modèles 1, 2 et 3. Dans le modèle 4, on écrit $t + 2 = t - (-2)$, donc $h = -2$ : le maximum est atteint en $t = -2$, puis en $t = 6$ une période plus tard.
+:::
 
-(c) Dans chaque équation, on applique la fonction qui défait l'opération qui contient l'inconnue.
+::: {.reponse}
+**Réponse (b).** Seul le modèle 1 respecte les trois caractéristiques. Le modèle 2 a une période de $16$ au lieu de $8$, le modèle 3 oscille entre $-4$ et $8$ au lieu de $-1$ et $5$, et le modèle 4 atteint son maximum en $t = -2$ et $t = 6$, mais pas en $t = 2$.
+:::
 
-    1. Pour $e^{x} = 7$, on applique le logarithme népérien aux deux membres, qui sont strictement positifs : $x = \ln 7$.
-    2. Pour $\ln x = 2$, on applique l'exponentielle de base $e$ aux deux membres : $x = e^{2}$. Ce nombre est strictement positif, donc il appartient au domaine du logarithme.
-    3. Pour $10^{x} = 0{,}01$, on écrit $0{,}01 = 10^{-2}$, donc $x = -2$, ce que l'on vérifie avec $\log_{10}(0{,}01) = -2$.
+::: {.details}
+On calcule les paramètres attendus, puis on les compare à ceux trouvés en (a).
+
+1. La valeur moyenne attendue est $M = \tfrac{-1 + 5}{2} = 2$, et l'amplitude attendue est $A = \tfrac{5 - (-1)}{2} = 3$.
+2. La période attendue est $T = 8$, donc le nombre qui multiplie la parenthèse doit valoir $\tfrac{2\pi}{8} = \tfrac{\pi}{4}$, et le maximum en $t = 2$ impose $h = 2$.
+3. Seul le modèle 1 a $M = 2$, $A = 3$, $T = 8$ et $h = 2$.
+4. Le modèle 2 a la période $16$. Le modèle 3 a l'amplitude $6$, donc il oscille entre $2 - 6 = -4$ et $2 + 6 = 8$. Le modèle 4 vaut $g(2) = 2 + 3\cos(\pi) = -1$ en $t = 2$ : il y atteint son minimum, et non son maximum.
+:::
 
 ## Piège
 
-Une erreur fréquente consiste à écrire $x = \dfrac{7}{e}$ pour résoudre $e^{x} = 7$. Elle est tentante parce que l'on traite l'exponentielle comme un facteur que l'on divise, mais elle est fausse : l'inconnue $x$ est dans l'exposant, donc il faut appliquer le logarithme népérien, ce qui donne $x = \ln 7$.
+Une erreur fréquente consiste à lire $h = 2$ dans le modèle 4, parce que le nombre $2$ apparaît dans la parenthèse. Elle est tentante parce que l'on repère le nombre sans regarder le signe, mais elle est fausse : $t + 2 = t - (-2)$, donc $h = -2$, et le maximum n'est pas atteint en $t = 2$.
 
-Une autre erreur consiste à écrire que $\log_{10}(0{,}001)$ vaut $3$. Elle est tentante parce que le nombre $0{,}001$ contient trois chiffres après la virgule, mais elle est fausse : $0{,}001 = 10^{-3}$, donc le logarithme est négatif et vaut $-3$.
-
-:::
-:::
-
-::: {.callout-caution .exo title="Exercice|Socle|2|O3"}
-Le pH d'une solution se calcule à partir de la concentration $[\mathrm{H}^+]$ en ions hydrogène, exprimée en mol/L, par la formule $\mathrm{pH} = -\log_{10}[\mathrm{H}^+]$. Le suc gastrique est un milieu acide dont le pH varie entre $1{,}5$ et $3{,}5$.[^ph-s6]
-
-(a) Écris la concentration $[\mathrm{H}^+]$ correspondant à un pH de $1{,}5$, puis celle correspondant à un pH de $3{,}5$. Écris chacune sous la forme d'une puissance de $10$, en mol/L.
-(b) Calcule le quotient de la plus grande de ces deux concentrations par la plus petite. Écris le résultat sous la forme d'un nombre entier.
-(c) Écris en une phrase par quel nombre la concentration $[\mathrm{H}^+]$ est multipliée quand le pH diminue de $1$.
-
-[^ph-s6]: D. Baker, « Gastric Acid Production – Regulation – PPI », *TeachMePhysiology* : « It is an acidic environment with a pH that can vary between 1.5-3.5. » https://teachmephysiology.com/gastrointestinal-system/stomach/acid-production/ (consulté le 15 octobre 2026).
-:::
-
-::: {.aides}
-::: {.panel-tabset}
-
-## Indice 1
-
-Retourne à la théorie du cours : *Échelles logarithmiques : pH* pour (a), (b) et (c), et *Logarithme comme fonction réciproque* pour (a).
-
-## Indice 2
-
-*Question à te poser.*
-
-(a) Quelle fonction défait le logarithme décimal ?
-(b) Comment calcule-t-on le quotient de deux puissances de $10$ ?
-(c) De combien change l'exposant de $10$ quand le pH diminue de $1$ ?
-
-## Indice 3
-
-*Étape.*
-
-(a) Multiplie par $-1$ les deux membres de la formule du pH, puis applique l'exponentielle de base $10$ aux deux membres pour isoler $[\mathrm{H}^+]$.
-(b) Identifie la plus grande des deux concentrations, puis soustrais les exposants.
-(c) Compare $10^{-\mathrm{pH}}$ pour un pH quelconque et pour ce pH diminué de $1$.
-
-## Solution
-
-On exprime la concentration en fonction du pH avec le logarithme décimal, qui est la fonction réciproque de la puissance de $10$, puis on compare les concentrations obtenues.
-
-(a) On isole $[\mathrm{H}^+]$ dans la formule du pH.
-
-    1. On multiplie les deux membres de $\mathrm{pH} = -\log_{10}[\mathrm{H}^+]$ par $-1$ : $-\mathrm{pH} = \log_{10}[\mathrm{H}^+]$.
-    2. Le logarithme décimal est l'exposant de $10$, donc on a $[\mathrm{H}^+] = 10^{-\mathrm{pH}}$.
-
-    Pour un pH de $1{,}5$, on obtient $[\mathrm{H}^+] = 10^{-1{,}5}$ mol/L. Pour un pH de $3{,}5$, on obtient $[\mathrm{H}^+] = 10^{-3{,}5}$ mol/L.
-
-(b) La plus grande concentration est celle qui correspond au pH le plus petit, c'est-à-dire $10^{-1{,}5}$ mol/L, car $-1{,}5 > -3{,}5$. Le quotient de deux puissances de $10$ est la puissance de $10$ dont l'exposant est la différence des exposants : $\dfrac{10^{-1{,}5}}{10^{-3{,}5}} = 10^{-1{,}5 - (-3{,}5)} = 10^{2} = 100$. Le quotient de deux concentrations exprimées en mol/L est un nombre sans unité.
-
-(c) Si le pH vaut $\mathrm{pH}_0$, la concentration vaut $10^{-\mathrm{pH}_0}$. Si le pH diminue de $1$, il vaut $\mathrm{pH}_0 - 1$ et la concentration vaut $10^{-\mathrm{pH}_0 + 1} = 10 \cdot 10^{-\mathrm{pH}_0}$. La concentration est donc multipliée par $10$ quand le pH diminue de $1$. Le résultat de (b) est cohérent : une différence de $2$ unités de pH donne un facteur $10 \cdot 10 = 100$.
-
-## Piège
-
-Une erreur fréquente consiste à répondre que la concentration est multipliée par $2$ quand le pH change de $2$ unités. Elle est tentante parce que l'on traite l'échelle du pH comme une échelle linéaire, mais elle est fausse : le pH est un logarithme, donc chaque unité de pH correspond à un facteur $10$ sur la concentration, et deux unités correspondent à un facteur $100$.
-
-Une autre erreur consiste à croire que le pH le plus grand correspond à la concentration la plus grande. Elle est tentante parce que l'on associe un nombre plus grand à une quantité plus grande, mais elle est fausse : le signe moins de la formule inverse l'ordre, et le pH le plus petit correspond à la concentration $[\mathrm{H}^+]$ la plus grande.
+Une autre erreur consiste à lire la période $8$ dans le modèle 2, parce que le nombre $8$ apparaît dans $\tfrac{\pi}{8}$. Elle est tentante parce que la période et ce nombre se ressemblent, mais elle est fausse : le nombre qui multiplie la parenthèse vaut $\tfrac{2\pi}{T}$, donc $\tfrac{\pi}{8}$ correspond à $T = 16$.
 
 :::
-:::
-
-::: {.callout-caution .exo title="Exercice|Socle|2|O3"}
-Après la prise d'une dose de paracétamol, sa concentration dans le sang diminue de façon exponentielle. Sa demi-vie, c'est-à-dire la durée au bout de laquelle la concentration est divisée par deux, est de l'ordre de $2$ heures.[^para-s7] On note $C_0$ la concentration à l'instant $t = 0$, et on suppose qu'à partir de cet instant la concentration en mg/L suit le modèle
-$$C(t) = C_0 \cdot 2^{-t/2},$$
-où $t$ est le temps écoulé en heures.
-
-(a) Écris la fraction de $C_0$ qui reste dans le sang après $2$ heures, après $4$ heures et après $6$ heures.
-(b) Écris l'équation qui exprime que la concentration est égale à un dixième de $C_0$, puis résous-la. Écris la solution $t$ sous forme exacte, en heures.
-(c) Encadre la valeur de $t$ trouvée en (b) entre deux multiples consécutifs de $2$ heures, en utilisant les résultats de (a). Écris ensuite en une phrase ce que cet encadrement signifie pour la concentration.
-
-[^para-s7]: Biomnis, « Paracétamol », in *Précis de biopathologie : analyses médicales spécialisées*, 2013 : « La demi-vie est de l'ordre de 2 heures. » https://www.eurofins-biomnis.com/referentiel/liendoc/precis/PARACETAMOL.pdf (consulté le 15 octobre 2026).
-:::
-
-::: {.aides}
-::: {.panel-tabset}
-
-## Indice 1
-
-Retourne à la théorie du cours : *Temps de doublement et demi-vie* pour (a), *Lien entre les formes $a^t$ et $e^{kt}$* ainsi que *Logarithme comme fonction réciproque* pour (b), et *Comparaison qualitative des croissances* pour (c). La méthode de (b) est la fiche **Résoudre une équation exponentielle**, dans la boîte à outils.
-
-## Indice 2
-
-*Question à te poser.*
-
-(a) Quel exposant obtient-on en remplaçant $t$ par $2$, puis par $4$, puis par $6$ ?
-(b) Quelle expression faut-il isoler dans un membre de l'équation avant d'appliquer le logarithme népérien ?
-(c) Entre quelles deux puissances entières de $2$ se trouve le nombre $10$ ?
-
-## Indice 3
-
-*Étape.*
-
-(a) Remplace $t$ par chacune des trois valeurs dans l'exposant $-\tfrac{t}{2}$, puis écris chaque puissance de $2$ obtenue sous forme de fraction.
-(b) Écris l'équation $C_0 \cdot 2^{-t/2} = \tfrac{C_0}{10}$, puis divise les deux membres par $C_0$.
-(c) Écris les puissances $2^3$ et $2^4$, place le nombre $10$ entre elles, puis traduis cet encadrement sur l'exposant $\tfrac{t}{2}$, puis sur $t$.
-
-## Solution
-
-**Données et relation.** On donne le modèle $C(t) = C_0 \cdot 2^{-t/2}$, où $C_0$ est la concentration à l'instant $t = 0$ et $t$ est le temps en heures. On cherche la fraction de $C_0$ restante après $2$, $4$ et $6$ heures, puis l'instant $t$ pour lequel $C(t) = \tfrac{C_0}{10}$. On utilise la décroissance exponentielle du cours : la concentration est divisée par deux chaque fois que $t$ augmente de $2$ heures, et on résout l'équation en appliquant le logarithme népérien, qui est la fonction réciproque de l'exponentielle de base $e$.
-
-**Origine des données.** Toutes les valeurs figurent dans l'énoncé. La demi-vie de $2$ heures provient de la référence citée. La valeur de $C_0$ n'est pas donnée, mais elle n'est pas nécessaire, car elle disparaît des calculs.
-
-(a) On cherche la fraction $\dfrac{C(t)}{C_0} = 2^{-t/2}$ pour trois valeurs de $t$.
-
-    1. Pour $t = 2$, l'exposant vaut $-1$, donc la fraction vaut $2^{-1} = \tfrac{1}{2}$.
-    2. Pour $t = 4$, l'exposant vaut $-2$, donc la fraction vaut $2^{-2} = \tfrac{1}{4}$.
-    3. Pour $t = 6$, l'exposant vaut $-3$, donc la fraction vaut $2^{-3} = \tfrac{1}{8}$.
-
-    Il reste donc la moitié de $C_0$ après $2$ heures, un quart après $4$ heures et un huitième après $6$ heures.
-
-(b) On cherche l'instant $t$ pour lequel la concentration est égale à un dixième de $C_0$.
-
-    1. On remplace $C(t)$ par son expression dans l'égalité $C(t) = \tfrac{C_0}{10}$ : $C_0 \cdot 2^{-t/2} = \dfrac{C_0}{10}$.
-    2. On isole la puissance de $2$ en divisant les deux membres par $C_0$, qui est strictement positif : $2^{-t/2} = \dfrac{1}{10}$.
-    3. On prend l'inverse des deux membres, ce qui change le signe de l'exposant : $2^{t/2} = 10$.
-    4. On écrit la puissance avec la base $e$ grâce à $2^{u} = e^{u \ln 2}$, avec $u = \tfrac{t}{2}$ : $e^{(t/2)\ln 2} = 10$.
-    5. Les deux membres sont strictement positifs, donc on applique le logarithme népérien aux deux membres, qui défait l'exponentielle : $\dfrac{t}{2}\ln 2 = \ln 10$.
-    6. On divise par $\ln 2$, qui est strictement positif, puis on multiplie par $2$ : $t = \dfrac{2\ln 10}{\ln 2}$.
-
-    La concentration est égale à un dixième de $C_0$ au bout de $t = \dfrac{2\ln 10}{\ln 2}$ heures.
-
-(c) On encadre $t$ à l'aide des puissances de $2$ calculées en (a).
-
-    1. On a $2^3 = 8$ et $2^4 = 16$, donc $2^3 < 10 < 2^4$.
-    2. L'égalité de l'étape 3 de (b) donne $2^{t/2} = 10$, donc $2^3 < 2^{t/2} < 2^4$, puis $3 < \tfrac{t}{2} < 4$ puisque la puissance de $2$ est croissante.
-    3. On multiplie par $2$ : $6 < t < 8$.
-
-    La concentration est donc égale à un dixième de $C_0$ entre $6$ heures et $8$ heures après l'instant $t = 0$. Cela est plausible : après $6$ heures il reste un huitième de $C_0$, ce qui est plus d'un dixième, et après $8$ heures il reste un seizième de $C_0$, ce qui est moins d'un dixième. Pour un paracétamol de demi-vie $2$ heures, la concentration passe donc sous un dixième de sa valeur initiale entre $6$ et $8$ heures.
-
-## Piège
-
-En (b), une erreur fréquente consiste à résoudre l'équation $2^{t/2} = 10$ comme si l'inconnue n'était pas dans un exposant, par exemple en écrivant $\tfrac{t}{2} = 10$ et $t = 20$. Elle est tentante parce que l'on égale simplement les nombres qui figurent des deux côtés, mais elle est fausse : $2^{t/2}$ vaut $10$, et non $t/2$. Le résultat $t = 20$ est d'ailleurs incohérent, car après $20$ heures il ne reste qu'un millième environ de $C_0$.
-
-En (b), une autre erreur consiste à oublier le facteur $2$ de l'exposant et à écrire $t = \dfrac{\ln 10}{\ln 2}$. Elle est tentante parce que l'on s'arrête à l'étape $\tfrac{t}{2}\ln 2 = \ln 10$ en oubliant que l'inconnue est $t$ et non $\tfrac{t}{2}$, mais elle est fausse : cette valeur est comprise entre $3$ et $4$, alors que l'encadrement de (c) donne $6 < t < 8$.
-
-:::
-:::
-
-::: {.callout-note appearance="simple"}
-**Annonce.** L'exercice [S.13] sera corrigé ensemble à la fin du temps consacré au socle, après la confrontation de vos réponses. Cherche-le seul·e pendant le socle, puis passe au [transfert](transfert.qmd).
 :::

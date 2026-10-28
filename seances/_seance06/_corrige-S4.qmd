@@ -1,0 +1,77 @@
+<!-- SOLUTION DE S.4, exercice corrigé ensemble en séance (méthode 1 « Résoudre une équation exponentielle »).
+     À publier APRÈS la séance : dans _socle.qmd, remplacer la note qui suit S.4 par
+         {{< include _corrige-S4.qmd >}}
+     Pas d'indices : l'exercice a été corrigé en séance. Résultats vérifiés par script (hors dépôt). -->
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Solution
+
+::: {.reponse}
+**Réponse (a).** La solution de $3 \cdot 2^{x} = 48$ est $x = 4$.
+:::
+
+::: {.details}
+On cherche le nombre $x$ qui vérifie l'équation. On isole la puissance, puis on compare des puissances de même base, comme dans la méthode *Résoudre une équation exponentielle*.
+
+1. On isole la puissance en divisant les deux membres par $3$ : $2^{x} = 16$.
+2. Le nombre $16$ s'écrit comme une puissance de $2$ : $16 = 2^{4}$, donc $2^{x} = 2^{4}$.
+3. La fonction $2^{x}$ est strictement croissante, donc deux puissances de $2$ égales ont le même exposant : $x = 4$.
+
+Vérification : $3 \cdot 2^{4} = 3 \cdot 16 = 48$.
+:::
+
+::: {.reponse}
+**Réponse (b).** La solution de $5 \cdot 2^{x} = 35$ est $x = \dfrac{\ln(7)}{\ln(2)}$, et elle est comprise entre $2$ et $3$.
+:::
+
+::: {.details}
+On cherche le nombre $x$ qui vérifie l'équation. Le second membre n'est pas une puissance entière de $2$ : on garde la base $2$ et on applique le logarithme népérien, comme dans la méthode *Résoudre une équation exponentielle*.
+
+1. On isole la puissance en divisant les deux membres par $5$ : $2^{x} = 7$.
+2. Les deux membres sont strictement positifs, donc on applique le logarithme népérien : $\ln\left(2^{x}\right) = \ln(7)$. Le logarithme d'une puissance est l'exposant multiplié par le logarithme, donc $x\ln(2) = \ln(7)$.
+3. On divise les deux membres par $\ln(2)$, qui est strictement positif : $x = \dfrac{\ln(7)}{\ln(2)}$.
+4. On encadre la solution en comparant $7$ à deux puissances consécutives de $2$ : $2^{2} = 4 < 7 < 8 = 2^{3}$. Comme $2^{x}$ est strictement croissante, on en déduit $2 < x < 3$.
+:::
+
+::: {.reponse}
+**Réponse (c).** La solution de $100 \cdot \left(\tfrac{1}{2}\right)^{t} = 20$ est $t = \dfrac{\ln(5)}{\ln(2)}$, et elle est comprise entre $2$ et $3$.
+:::
+
+::: {.details}
+On cherche le nombre $t$ qui vérifie l'équation. On isole la puissance, puis on applique le logarithme népérien en gardant la base.
+
+1. On isole la puissance en divisant les deux membres par $100$ : $\left(\tfrac{1}{2}\right)^{t} = \tfrac{20}{100} = \tfrac{1}{5}$.
+2. En prenant l'inverse des deux membres, on obtient une puissance de base $2$ : $2^{t} = 5$.
+3. Les deux membres sont strictement positifs, donc on applique le logarithme népérien : $t\ln(2) = \ln(5)$, puis on divise par $\ln(2)$ : $t = \dfrac{\ln(5)}{\ln(2)}$.
+4. On encadre la solution : $2^{2} = 4 < 5 < 8 = 2^{3}$, donc $2 < t < 3$, car $2^{t}$ est strictement croissante.
+
+On peut aussi appliquer directement le logarithme à $\left(\tfrac{1}{2}\right)^{t} = \tfrac{1}{5}$ : on obtient $t = \dfrac{\ln\left(\frac{1}{5}\right)}{\ln\left(\frac{1}{2}\right)} = \dfrac{-\ln(5)}{-\ln(2)}$, c'est-à-dire la même valeur.
+:::
+
+::: {.reponse}
+**Réponse (d).** La solution de $4\,e^{0{,}5\,x} = 12$ est $x = 2\ln(3)$, soit environ $2{,}2$.
+:::
+
+::: {.details}
+On cherche le nombre $x$ qui vérifie l'équation. La base est déjà $e$ : on isole l'exponentielle, puis on applique le logarithme népérien, qui défait l'exponentielle.
+
+1. On isole l'exponentielle en divisant les deux membres par $4$ : $e^{0{,}5\,x} = 3$.
+2. Les deux membres sont strictement positifs, donc on applique le logarithme népérien : $0{,}5\,x = \ln(3)$, car $\ln\left(e^{u}\right) = u$.
+3. On divise les deux membres par $0{,}5$, c'est-à-dire qu'on les multiplie par $2$ : $x = 2\ln(3)$.
+4. Avec $\ln(3) \approx 1{,}10$, on obtient $x \approx 2{,}2$.
+
+Vérification : $e^{0{,}5 \cdot 2\ln(3)} = e^{\ln(3)} = 3$, et $4 \cdot 3 = 12$.
+:::
+
+## Piège
+
+Une erreur fréquente consiste à écrire $3 \cdot 2^{x} = 6^{x}$, ou $5 \cdot 2^{x} = 10^{x}$. Elle est tentante parce que les deux nombres sont écrits côte à côte, mais elle est fausse : l'exposant ne porte que sur la base $2$, donc il faut d'abord diviser par le facteur pour isoler la puissance.
+
+Une autre erreur consiste à écrire $x = \tfrac{7}{2}$ en (b), en « divisant par la base ». Elle est tentante parce que l'on cherche à faire disparaître le $2$, mais elle est fausse : la base n'est pas un facteur, et seul le logarithme permet de faire descendre l'exposant.
+
+En (d), une autre erreur consiste à écrire $x = \tfrac{\ln(3)}{2}$. Elle est tentante parce que l'on « divise » à cause du nombre $0{,}5$, mais elle est fausse : diviser par $0{,}5$ revient à multiplier par $2$, donc $x = 2\ln(3)$.
+
+:::
+:::

@@ -46,96 +46,96 @@ Dès qu'une grandeur est donnée par une formule de la forme $b \cdot a^{t/T}$ o
 1. Identifie la valeur initiale $b$ : c'est la valeur de la grandeur pour $t = 0$.
 2. Compare la base $a$ au nombre $1$ : si $a > 1$, la grandeur croît, et si $0 < a < 1$, elle décroît.
 3. Cherche la durée $T$ qui rend l'exposant égal à $1$ : c'est la durée par laquelle la grandeur est multipliée par $a$, donc le temps de doublement si $a = 2$ et la demi-vie si $a = \tfrac{1}{2}$.
-4. Pour passer à la forme $e^{kt}$, écris $a^{u} = e^{u \ln a}$ avec l'exposant de la formule, puis identifie le coefficient de $t$ : c'est $k$.
+4. Pour passer à la forme $e^{kt}$, écris $a^{u} = e^{u \ln(a)}$ avec l'exposant de la formule, puis identifie le coefficient de $t$ : c'est $k$.
 5. Contrôle le signe de $k$ : il est positif pour une croissance et négatif pour une décroissance.
 :::
 
 ::: {.exemple}
 Soit une grandeur $A(t) = 90 \cdot 3^{t/2}$, où $t$ est exprimé en jours.
 
-La valeur initiale est $b = 90$. La base $3$ est supérieure à $1$, donc la grandeur croît. L'exposant $\tfrac{t}{2}$ vaut $1$ pour $t = 2$, donc la grandeur est multipliée par $3$ tous les $2$ jours. Pour changer de forme, on écrit $3^{t/2} = e^{(t/2)\ln 3} = e^{(\ln 3/2)\,t}$, donc $A(t) = 90\,e^{kt}$ avec $k = \dfrac{\ln 3}{2}$ par jour. Ce nombre est positif, ce qui correspond à une croissance.
+La valeur initiale est $b = 90$. La base $3$ est supérieure à $1$, donc la grandeur croît. L'exposant $\tfrac{t}{2}$ vaut $1$ pour $t = 2$, donc la grandeur est multipliée par $3$ tous les $2$ jours. Pour changer de forme, on écrit $3^{t/2} = e^{(t/2)\ln(3)} = e^{(\ln(3)/2)\,t}$, donc $A(t) = 90\,e^{kt}$ avec $k = \dfrac{\ln(3)}{2}$ par jour. Ce nombre est positif, ce qui correspond à une croissance.
 :::
 
 ::: {.piege}
-Une erreur fréquente consiste à écrire $k = \ln 3$ en oubliant le facteur de l'exposant. Elle est tentante parce que $\ln 3$ est le nombre qui apparaît quand on change de base, mais elle est fausse : l'exposant est $\tfrac{t}{2}$ et non $t$, donc le coefficient de $t$ est $\tfrac{\ln 3}{2}$.
+Une erreur fréquente consiste à écrire $k = \ln(3)$ en oubliant le facteur de l'exposant. Elle est tentante parce que $\ln(3)$ est le nombre qui apparaît quand on change de base, mais elle est fausse : l'exposant est $\tfrac{t}{2}$ et non $t$, donc le coefficient de $t$ est $\tfrac{\ln(3)}{2}$.
 :::
 
 :::
 
-::: {.methode obj="O3" titre="Résoudre une équation exponentielle"}
+::: {.methode obj="O4" titre="Résoudre une équation exponentielle"}
 
 ::: {.quand}
 Dès que l'inconnue figure dans un exposant et qu'il faut la calculer, par exemple pour trouver le temps nécessaire pour atteindre une valeur donnée.
 :::
 
 ::: {.etapes}
-1. Isole la puissance dans un membre de l'équation : soustrais les termes ajoutés, puis divise par le facteur qui la multiplie.
-2. Si les deux membres s'écrivent comme des puissances de la même base, compare directement les exposants et passe à l'étape 5.
-3. Sinon, écris la puissance avec la base $e$ grâce à $a^{u} = e^{u \ln a}$, puis vérifie que les deux membres sont strictement positifs.
-4. Applique le logarithme népérien aux deux membres, puis isole l'inconnue en divisant par le coefficient qui la multiplie.
-5. Vérifie le résultat en le remettant dans l'équation, ou en l'encadrant entre deux puissances entières.
-6. Conclus par une phrase qui donne l'inconnue avec son unité.
+1. Isole la puissance dans un membre de l'équation : soustrais les termes ajoutés, puis divise les deux membres par le facteur qui multiplie la puissance.
+2. Si l'autre membre s'écrit comme une puissance de la même base, écris-le sous cette forme, égale les deux exposants, puis passe à l'étape 4.
+3. Sinon, garde la base de la puissance et applique le logarithme népérien aux deux membres, qui sont strictement positifs. Utilise $\ln\left(a^{u}\right) = u\ln(a)$ pour faire descendre l'exposant, puis isole l'inconnue en divisant par le nombre qui la multiplie.
+4. Vérifie le résultat : remplace-le dans l'équation, ou encadre-le en comparant le second membre à deux puissances entières consécutives de la base.
+5. Conclus par une phrase qui donne l'inconnue, avec son unité si l'énoncé en a une.
 :::
 
 ::: {.exemple}
-Soit l'équation $7\,e^{-0{,}5\,x} = 3$. On va calculer $x$.
+Soit l'équation $6 \cdot 3^{x} = 60$. On va calculer $x$.
 
-On isole l'exponentielle en divisant les deux membres par $7$ : $e^{-0{,}5\,x} = \tfrac{3}{7}$. Les deux membres sont strictement positifs, donc on applique le logarithme népérien aux deux membres : $-0{,}5\,x = \ln\tfrac{3}{7}$. On divise par $-0{,}5$ : $x = \dfrac{\ln(3/7)}{-0{,}5} = -2\ln\tfrac{3}{7}$. Contrôle : $\tfrac{3}{7} < 1$, donc $\ln\tfrac{3}{7}$ est négatif et $x$ est positif, ce qui est cohérent avec $e^{-0{,}5\,x} < 1$.
+On isole la puissance en divisant les deux membres par $6$ : $3^{x} = 10$. Le nombre $10$ n'est pas une puissance entière de $3$, donc on garde la base $3$ et on applique le logarithme népérien aux deux membres, qui sont strictement positifs : $\ln\left(3^{x}\right) = \ln(10)$, c'est-à-dire $x\ln(3) = \ln(10)$. On divise par $\ln(3)$, qui est strictement positif : $x = \dfrac{\ln(10)}{\ln(3)}$. Contrôle : $3^{2} = 9 < 10 < 27 = 3^{3}$, donc $x$ est compris entre $2$ et $3$.
 :::
 
 ::: {.piege}
-Une erreur fréquente consiste à oublier de diviser par le coefficient de l'inconnue après avoir appliqué le logarithme, et à écrire $x = \ln\tfrac{3}{7}$. Elle est tentante parce que le logarithme semble avoir terminé le travail, mais elle est fausse : l'inconnue est multipliée par $-0{,}5$ dans l'exposant, donc il faut encore diviser par $-0{,}5$. Une autre erreur consiste à appliquer le logarithme avant d'avoir isolé la puissance, ce qui rend le calcul inextricable.
+Une erreur fréquente consiste à écrire $6 \cdot 3^{x} = 18^{x}$ avant de résoudre. Elle est tentante parce que les deux nombres $6$ et $3$ sont côte à côte, mais elle est fausse : l'exposant ne porte que sur la base $3$, donc il faut d'abord diviser par $6$ pour isoler la puissance. Une autre erreur consiste à écrire $x = \ln(10)$ en oubliant de diviser par $\ln(3)$ : le logarithme fait descendre l'exposant devant $\ln(3)$, et l'inconnue reste multipliée par ce nombre.
 :::
 
 :::
 
-::: {.methode obj="O3" titre="Lire une échelle logarithmique"}
+::: {.methode obj="O4" titre="Exploiter une grandeur logarithmique"}
 
 ::: {.quand}
-Dès qu'une grandeur est donnée par un pH, un niveau sonore en décibels ou un autre logarithme, et qu'il faut comparer deux quantités.
+Dès qu'une grandeur $C$ est exprimée par son logarithme décimal, comme un pH ou une charge virale en log, et qu'il faut passer de la grandeur à son logarithme, ou comparer deux valeurs de la grandeur.
 :::
 
 ::: {.etapes}
-1. Écris la formule de l'échelle, par exemple $\mathrm{pH} = -\log_{10}[\mathrm{H}^+]$ ou $L = 10\log_{10}\dfrac{I}{I_0}$.
-2. Isole la quantité en appliquant la puissance de $10$ aux deux membres : tu obtiens $[\mathrm{H}^+] = 10^{-\mathrm{pH}}$ ou $I = I_0 \cdot 10^{L/10}$.
-3. Écris le quotient des deux quantités à comparer : les constantes comme $I_0$ disparaissent, et le quotient est une puissance de $10$ dont l'exposant dépend de la différence des niveaux.
-4. Conclus par une phrase : une même différence de niveau donne le même facteur, quel que soit le niveau de départ.
+1. Repère la grandeur $C$, avec son unité, et la relation qui donne son logarithme, par exemple $L = \log_{10}(C)$ ou $\mathrm{pH} = -\log_{10}\left([\mathrm{H}^+]\right)$.
+2. Pour passer de $C$ à son logarithme, écris $C$ comme le produit d'un nombre et d'une puissance de $10$, puis utilise $\log_{10}\left(a \cdot 10^{k}\right) = \log_{10}(a) + k$.
+3. Pour passer du logarithme à $C$, écris $C$ comme une puissance de $10$ : $C = 10^{L}$, ou $[\mathrm{H}^+] = 10^{-\mathrm{pH}}$.
+4. Pour comparer deux valeurs, calcule la différence de leurs logarithmes : elle est égale au logarithme du quotient des deux grandeurs, donc une différence de $d$ correspond à une multiplication ou à une division par $10^{d}$.
+5. Conclus par une phrase qui donne la grandeur avec son unité, ou qui interprète l'écart dans le contexte.
 :::
 
 ::: {.exemple}
-On compare un son de niveau $50$ dB et un son de niveau $80$ dB, de formule $L = 10\log_{10}\dfrac{I}{I_0}$.
+Un liquide a une concentration en ions hydrogène $[\mathrm{H}^+] = 2 \cdot 10^{-5}$ mol/L. On donne $\log_{10}(2) \approx 0{,}30$. On calcule son pH, puis on le compare à un liquide de pH $6{,}7$.
 
-On isole l'intensité : $I = I_0 \cdot 10^{L/10}$. Le quotient des intensités est $\dfrac{I_{80}}{I_{50}} = \dfrac{I_0 \cdot 10^{8}}{I_0 \cdot 10^{5}} = 10^{3}$, et $I_0$ disparaît. Le son de $80$ dB a donc une intensité $1000$ fois plus grande que celle du son de $50$ dB.
+On écrit la concentration comme le produit d'un nombre et d'une puissance de $10$, donc $\log_{10}\left(2 \cdot 10^{-5}\right) = \log_{10}(2) - 5 \approx -4{,}7$, et le pH vaut $4{,}7$. L'écart de pH entre les deux liquides vaut $6{,}7 - 4{,}7 = 2$, donc le second liquide a une concentration en ions hydrogène $10^{2} = 100$ fois plus petite, soit $[\mathrm{H}^+] = 10^{-6{,}7} \approx 2 \cdot 10^{-7}$ mol/L.
 :::
 
 ::: {.piege}
-Une erreur fréquente consiste à comparer directement les niveaux et à dire que $80$ dB est $\tfrac{80}{50} = 1{,}6$ fois plus fort que $50$ dB. Elle est tentante parce qu'on traite l'échelle comme une échelle linéaire, mais elle est fausse : le niveau est un logarithme de l'intensité, donc c'est la différence des niveaux qui fixe le facteur sur les intensités.
+Une erreur fréquente consiste à croire qu'un écart de $2$ sur le logarithme correspond à une multiplication ou à une division par $2$. Elle est tentante parce qu'on lit l'écart comme sur une échelle ordinaire, mais elle est fausse : le logarithme transforme un quotient en différence, donc un écart de $2$ correspond à un facteur $10^{2} = 100$ sur la grandeur.
 :::
 
 :::
 
-::: {.methode obj="O2" titre="Déterminer les paramètres d'un modèle périodique"}
+::: {.methode obj="O7" titre="Déterminer les paramètres d'un modèle périodique"}
 
 ::: {.quand}
-Dès qu'une grandeur périodique est modélisée par $D + A\sin(\omega t + \varphi)$ et que l'on connaît son maximum, son minimum, sa période et l'instant d'un extremum.
+Dès qu'une grandeur périodique doit être modélisée par $f(t) = M + A\cos\left(\dfrac{2\pi}{T}(t - h)\right)$ et que l'on connaît sa valeur maximale, sa valeur minimale, sa période et l'instant d'un maximum ou d'un minimum.
 :::
 
 ::: {.etapes}
-1. Calcule la valeur centrale $D$ : c'est la moyenne du maximum et du minimum.
-2. Calcule l'amplitude $A$ : c'est la moitié de la différence entre le maximum et le minimum.
-3. Calcule $\omega = \dfrac{2\pi}{\text{période}}$.
-4. Écris que l'argument $\omega t_{\max} + \varphi$ vaut $\tfrac{\pi}{2}$ augmenté d'un multiple de $2\pi$ à l'instant $t_{\max}$ du maximum, puis isole $\varphi$ et garde la valeur qui appartient à l'intervalle demandé.
-5. Vérifie le modèle en calculant sa valeur à l'instant du minimum et à un instant intermédiaire.
+1. Calcule la valeur moyenne $M$ : c'est la moyenne de la valeur maximale et de la valeur minimale.
+2. Calcule l'amplitude $A$ : c'est la moitié de la différence entre la valeur maximale et la valeur minimale.
+3. Lis la période $T$, puis calcule le nombre $\dfrac{2\pi}{T}$ qui multiplie $t - h$.
+4. Prends pour $h$ l'instant d'un maximum. Si tu ne connais que l'instant d'un minimum, ajoute-lui une demi-période $\dfrac{T}{2}$ pour obtenir l'instant d'un maximum.
+5. Écris $f(t)$, puis vérifie le modèle : $f(h)$ doit valoir la valeur maximale et $f\left(h + \dfrac{T}{2}\right)$ la valeur minimale.
 :::
 
 ::: {.exemple}
-Une grandeur périodique a pour maximum $6$, atteint en $x = 3$, pour minimum $-2$, et pour période $6$. On cherche $f(x) = D + A\sin(\omega x + \varphi)$ avec $-\pi < \varphi \leq \pi$.
+Une grandeur périodique varie entre $-2$ et $6$, avec une période de $6$ unités de temps, et sa valeur minimale est atteinte à l'instant $t = 0$. On cherche un modèle de la forme $f(t) = M + A\cos\left(\dfrac{2\pi}{T}(t - h)\right)$.
 
-La valeur centrale est $D = \tfrac{6 + (-2)}{2} = 2$ et l'amplitude est $A = \tfrac{6 - (-2)}{2} = 4$. Le nombre $\omega$ vaut $\tfrac{2\pi}{6} = \tfrac{\pi}{3}$. Au maximum, l'argument vaut $\tfrac{\pi}{3}\cdot 3 + \varphi = \pi + \varphi$, et il doit valoir $\tfrac{\pi}{2} + 2k\pi$, donc $\varphi = -\tfrac{\pi}{2} + 2k\pi$ ; la seule valeur de l'intervalle est $\varphi = -\tfrac{\pi}{2}$. On a donc $f(x) = 2 + 4\sin\!\left(\tfrac{\pi}{3}x - \tfrac{\pi}{2}\right)$. Vérification : $f(0) = 2 + 4\sin\left(-\tfrac{\pi}{2}\right) = -2$, qui est le minimum.
+La valeur moyenne vaut $M = \dfrac{6 + (-2)}{2} = 2$ et l'amplitude vaut $A = \dfrac{6 - (-2)}{2} = 4$. La période vaut $T = 6$, donc $\dfrac{2\pi}{T} = \dfrac{\pi}{3}$. On ne connaît que l'instant d'un minimum, donc on lui ajoute une demi-période : $h = 0 + 3 = 3$. On obtient $f(t) = 2 + 4\cos\left(\dfrac{\pi}{3}(t - 3)\right)$. Vérification : $f(3) = 2 + 4\cos(0) = 6$, qui est la valeur maximale, et $f(0) = 2 + 4\cos(-\pi) = -2$, qui est la valeur minimale.
 :::
 
 ::: {.piege}
-Une erreur fréquente consiste à écrire $\varphi = -3$ pour décaler le maximum en $x = 3$. Elle est tentante parce que le décalage se lit comme une abscisse, mais elle est fausse : $\varphi$ est un angle qui s'ajoute à l'argument $\omega x$, donc il faut écrire que l'argument vaut $\tfrac{\pi}{2}$ à l'instant du maximum.
+Une erreur fréquente consiste à prendre pour $h$ l'instant du minimum, ici $h = 0$. Elle est tentante parce que c'est le seul instant donné par l'énoncé, mais elle est fausse : $\cos(0) = 1$, donc le modèle atteint sa valeur maximale en $t = h$, et il placerait un maximum là où la grandeur est minimale. Une autre erreur consiste à écrire $\dfrac{T}{2\pi}$ ou $2\pi T$ au lieu de $\dfrac{2\pi}{T}$ : le modèle n'aurait alors plus la bonne période.
 :::
 
 :::
