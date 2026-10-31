@@ -14,7 +14,9 @@ from pathlib import Path
 
 # >>> À COMPLÉTER : le lien Wooclap de l'échauffement <<<
 LIENS = {
-    "qr-echauffement": "A_COMPLETER",
+    "qr-echauffement": "KQQDGMK",
+    "qr-socle": "FGXCGSS",
+    "qr-transf": "SOCTGHB"
 }
 
 OUT = Path(__file__).parent / "img"
