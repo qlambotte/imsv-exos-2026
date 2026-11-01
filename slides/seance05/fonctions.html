@@ -1756,6 +1756,7 @@ display:block!important;
 
      - data-minutes : durée (2 si absent). Le chiffre devient orange sous 30 s, rouge à zéro.
      - data-son="oui" : bip à la fin (silencieux par défaut depuis le sondage d'octobre 2026).
+     - data-auto="oui" : démarre tout seul dès qu'on arrive sur la slide (par exemple pour la pause).
      - Remis à zéro quand on quitte la slide. Styles : classes .et-* de seance01/theme.scss (.et-box).
      Ce fichier est un bloc HTML brut : ne pas y mettre de ligne markdown. -->
 <style>
@@ -1817,7 +1818,13 @@ display:block!important;
     render();
     (function watch() {
       if (!window.Reveal || !Reveal.on) { setTimeout(watch, 300); return; }
-      Reveal.on('slidechanged', function () { if (section && !section.classList.contains('present')) reset(); });
+      var auto = host.getAttribute('data-auto') === 'oui';
+      function here() { return section && section.classList.contains('present'); }
+      Reveal.on('slidechanged', function () { if (!here()) reset(); else if (auto) { reset(); start(); } });
+      if (auto) {
+        if (Reveal.isReady && Reveal.isReady()) { if (here()) start(); }
+        else Reveal.on('ready', function () { if (here()) start(); });
+      }
     })();
   }
   function all() { Array.prototype.forEach.call(document.querySelectorAll('.minuteur'), init); }
