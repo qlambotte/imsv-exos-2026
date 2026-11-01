@@ -65,25 +65,25 @@ Une erreur fréquente consiste à écrire $k = \ln(3)$ en oubliant le facteur de
 ::: {.methode obj="O4" titre="Résoudre une équation exponentielle"}
 
 ::: {.quand}
-Dès que l'inconnue figure dans un exposant et qu'il faut la calculer, par exemple pour trouver le temps nécessaire pour atteindre une valeur donnée.
+Dès que l'inconnue figure dans un exposant et qu'il faut la calculer, par exemple pour trouver le temps nécessaire pour atteindre une valeur donnée d'un modèle exponentiel.
 :::
 
 ::: {.etapes}
 1. Isole la puissance dans un membre de l'équation : soustrais les termes ajoutés, puis divise les deux membres par le facteur qui multiplie la puissance.
 2. Si l'autre membre s'écrit comme une puissance de la même base, écris-le sous cette forme, égale les deux exposants, puis passe à l'étape 4.
-3. Sinon, garde la base de la puissance et applique le logarithme népérien aux deux membres, qui sont strictement positifs. Utilise $\ln\left(a^{u}\right) = u\ln(a)$ pour faire descendre l'exposant, puis isole l'inconnue en divisant par le nombre qui la multiplie.
-4. Vérifie le résultat : remplace-le dans l'équation, ou encadre-le en comparant le second membre à deux puissances entières consécutives de la base.
-5. Conclus par une phrase qui donne l'inconnue, avec son unité si l'énoncé en a une.
+3. Sinon, garde la base de la puissance et applique le logarithme népérien aux deux membres, s'ils sont strictement positifs (si un membre est négatif et l'autre positif, l'équation n'a pas de solution). Utilise $\ln\left(a^{u}\right) = u\ln(a)$ pour faire descendre l'exposant, puis isole l'inconnue en divisant par le nombre qui la multiplie. 
+4. Vérifie le résultat en remplaçant $x$ dans l'équation de départ par la valeur trouvée.
+5. Conclus en écrivant l'ensemble des solutions, ou, dans un problème, par une phrase qui donne l'inconnue, avec son unité si l'énoncé en a une.
 :::
 
 ::: {.exemple}
 Soit l'équation $6 \cdot 3^{x} = 60$. On va calculer $x$.
 
-On isole la puissance en divisant les deux membres par $6$ : $3^{x} = 10$. Le nombre $10$ n'est pas une puissance entière de $3$, donc on garde la base $3$ et on applique le logarithme népérien aux deux membres, qui sont strictement positifs : $\ln\left(3^{x}\right) = \ln(10)$, c'est-à-dire $x\ln(3) = \ln(10)$. On divise par $\ln(3)$, qui est strictement positif : $x = \dfrac{\ln(10)}{\ln(3)}$. Contrôle : $3^{2} = 9 < 10 < 27 = 3^{3}$, donc $x$ est compris entre $2$ et $3$.
+On isole la puissance en divisant les deux membres par $6$ : $3^{x} = 10$. Le nombre $10$ n'est pas une puissance entière de $3$, donc on garde la base $3$ et on applique le logarithme népérien aux deux membres, qui sont strictement positifs : $\ln\left(3^{x}\right) = \ln(10)$, c'est-à-dire $x\ln(3) = \ln(10)$. On divise par $\ln(3)$, qui est strictement positif : $x = \dfrac{\ln(10)}{\ln(3)}$. L'ensemble des solutions est $S = \left\{\dfrac{\ln(10)}{\ln(3)}\right\}$.
 :::
 
 ::: {.piege}
-Une erreur fréquente consiste à écrire $6 \cdot 3^{x} = 18^{x}$ avant de résoudre. Elle est tentante parce que les deux nombres $6$ et $3$ sont côte à côte, mais elle est fausse : l'exposant ne porte que sur la base $3$, donc il faut d'abord diviser par $6$ pour isoler la puissance. Une autre erreur consiste à écrire $x = \ln(10)$ en oubliant de diviser par $\ln(3)$ : le logarithme fait descendre l'exposant devant $\ln(3)$, et l'inconnue reste multipliée par ce nombre.
+Une erreur fréquente consiste à écrire $6 \cdot 3^{x} = 18^{x}$ avant de résoudre. Elle est tentante parce que les deux nombres $6$ et $3$ sont côte à côte, mais elle est fausse : l'exposant ne porte que sur la base $3$, donc il faut d'abord diviser par $6$ pour isoler la puissance. Une autre erreur consiste à écrire $x = \ln(10)$ en oubliant de diviser par $\ln(3)$ : le logarithme fait descendre l'exposant devant $\ln(3)$, et l'inconnue reste multipliée par ce nombre. Enfin, une dernière erreur consiste à appliquer le logarithme à un nombre négatif, par exemple à passer de $e^{x} = -3$ à $x = \ln(-3)$ : le logarithme n'est défini que pour des nombres strictement positifs, et $e^{x}$ est toujours strictement positif, donc l'équation n'a pas de solution.
 :::
 
 :::

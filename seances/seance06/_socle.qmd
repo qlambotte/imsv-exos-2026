@@ -1,7 +1,7 @@
 <!-- SOCLE = LE NOYAU, à faire par tous en séance : 35 minutes, puis 15 minutes de correction de S.4 et de méthode 1. VERSION 3 (énoncés seulement ; indices et solutions à écrire).
      Durées visées : S.1 6 min · S.2 4 min · S.3 3 min · S.4 7 min (corrigé en commun) · S.5 4 min · S.6 5 min · S.7 4 min.
-     S.4 = l'exercice corrigé ensemble juste après le socle (méthode 1 « Résoudre une équation exponentielle ») : énoncé seul,
-     SANS aides en séance ; sa solution complète est dans un fragment séparé, publié après la séance.
+     S.4 = l'exercice corrigé ensemble juste après le socle (méthode 1 « Résoudre une équation exponentielle ») : indices et réponses finales
+     (sans « Je veux plus de détails ») ; les détails sont donnés lors de la correction.
      Pour les autres : Indice 1 = théorie, Indice 2 = question, Indice 3 = étape, puis Solution (Réponse + Explication) et Piège.
      Versions précédentes : _archive-v1-socle.qmd. Faisable SANS calculatrice. Numéro AUTOMATIQUE.
      Notations du cours IMSV-6 : N_0 a^x, e^{kx}, \ln, \log_a, T_2, T_{1/2}, M + A\cos(2\pi/T (t - h)).
@@ -201,7 +201,7 @@ On utilise l'intuition du changement de base : $\log_{a}(x) = p$ si et seulement
 2. On écrit $0{,}001 = \tfrac{1}{1000} = 10^{-3}$, donc $\log_{10}(0{,}001) = -3$.
 3. On écrit $8 = 2^{3}$, donc $\log_{2}(8) = 3$.
 
-Le logarithme de $0{,}001$ est négatif, ce qui est cohérent avec $0{,}001 < 1$.
+Note: le logarithme de $0{,}001$ est négatif, ce qui est cohérent avec $0{,}001 < 1$.
 :::
 
 ::: {.reponse}
@@ -215,7 +215,7 @@ On ramène chaque nombre à $2$ et à $3$, puis on applique les propriétés du 
 2. Le logarithme d'un quotient est la différence des logarithmes : $\ln\left(\tfrac{3}{2}\right) = \ln(3) - \ln(2) \approx 1{,}10 - 0{,}69 = 0{,}41$.
 3. Comme $8 = 2^{3}$, le logarithme d'une puissance est l'exposant multiplié par le logarithme : $\ln(8) = 3\ln(2) \approx 3 \cdot 0{,}69 = 2{,}07$.
 
-Ces valeurs sont plausibles : $6$ est compris entre $e \approx 2{,}7$ et $e^{2} \approx 7{,}4$, donc $\ln(6)$ est compris entre $1$ et $2$.
+Ces valeurs sont plausibles : par exemple $6$ est compris entre $e \approx 2{,}7$ et $e^{2} \approx 7{,}4$, donc $\ln(6)$ est compris entre $1$ et $2$.
 :::
 
 ::: {.reponse}
@@ -227,9 +227,8 @@ On écrit la base $2$ comme une puissance de $e$, comme dans *La base naturelle 
 
 1. Comme $e^{\ln(y)} = y$ pour tout $y > 0$, on a $2 = e^{\ln(2)}$.
 2. On remplace $2$ par cette expression : $2^{x} = \left(e^{\ln(2)}\right)^{x} = e^{\ln(2)\,x}$, car élever une puissance à la puissance $x$ multiplie les exposants.
-3. On lit le coefficient de $x$ dans l'exposant : $k = \ln(2)$.
+3. Finalement : $k = \ln(2)$.
 
-Le nombre $k$ est positif, ce qui est cohérent avec la croissance de $2^{x}$ : la base naturelle donne une croissance lorsque $k > 0$.
 :::
 
 ## Piège
@@ -305,7 +304,7 @@ Une autre erreur consiste à écrire $N(t) = 500 \cdot (1 - 0{,}2\,t)$. Elle est
 :::
 
 ::: {.callout-caution .exo title="Exercice|Socle|2|O4"}
-Résous chacune des équations suivantes et écris chaque solution sous forme exacte. En (b) et en (c), encadre ensuite la solution entre deux nombres entiers consécutifs.
+Résous chacune des équations suivantes et écris chaque solution sous forme exacte. En (b) et en (c), tu peux ensuite encadrer la solution entre deux nombres entiers consécutifs : cet encadrement donne une idée de sa valeur.
 
 (a) $3 \cdot 2^{x} = 48$
 (b) $5 \cdot 2^{x} = 35$
@@ -314,7 +313,61 @@ Résous chacune des équations suivantes et écris chaque solution sous forme ex
 :::
 
 ::: {.callout-note appearance="simple"}
-L'exercice **S.4** est corrigé ensemble en séance, juste après le temps consacré au socle : il n'a donc pas de coups de pouce. Cherche-le seul·e et repère l'endroit exact où tu bloques. Sa solution complète sera publiée après la séance.
+L'exercice **S.4** est corrigé ensemble en séance, juste après le temps consacré au socle. Cherche-le seul·e et repère l'endroit exact où tu bloques. Les coups de pouce ci-dessous donnent les indices et les réponses finales ; les détails seront donnés lors de la correction.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Retour aux bactéries* et *Retour au médicament*, ainsi que la méthode **Résoudre une équation exponentielle**, pour (a), (b), (c) et (d) ; *Comprendre le logarithme* pour (d).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Le nombre $16$ s'écrit-il comme une puissance de $2$ ?
+(b) Le nombre $7$ s'écrit-il comme une puissance entière de $2$, et sinon, quel outil permet de faire descendre l'exposant ?
+(c) Comment écrire $\left(\tfrac{1}{2}\right)^{t} = \tfrac{1}{5}$ avec une puissance de base $2$ ?
+(d) Quelle fonction défait l'exponentielle $e^{0{,}5\,x}$ ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Divise les deux membres par $3$, puis écris $16$ comme une puissance de $2$.
+(b) Divise les deux membres par $5$, puis applique le logarithme népérien aux deux membres, qui sont strictement positifs.
+(c) Divise les deux membres par $100$, puis prends l'inverse des deux membres.
+(d) Divise les deux membres par $4$, puis applique le logarithme népérien aux deux membres, qui sont strictement positifs.
+
+## Solution
+
+::: {.reponse}
+**Réponse (a).** La solution de $3 \cdot 2^{x} = 48$ est $x = 4$.
+:::
+
+::: {.reponse}
+**Réponse (b).** La solution de $5 \cdot 2^{x} = 35$ est $x = \dfrac{\ln(7)}{\ln(2)}$, et elle est comprise entre $2$ et $3$.
+:::
+
+::: {.reponse}
+**Réponse (c).** La solution de $100 \cdot \left(\tfrac{1}{2}\right)^{t} = 20$ est $t = \dfrac{\ln(5)}{\ln(2)}$, et elle est comprise entre $2$ et $3$.
+:::
+
+::: {.reponse}
+**Réponse (d).** La solution de $4\,e^{0{,}5\,x} = 12$ est $x = 2\ln(3)$, soit environ $2{,}2$.
+:::
+
+## Piège
+
+Une erreur fréquente consiste à écrire $3 \cdot 2^{x} = 6^{x}$, ou $5 \cdot 2^{x} = 10^{x}$. Elle est tentante parce que les deux nombres sont écrits côte à côte, mais elle est fausse : l'exposant ne porte que sur la base $2$, donc il faut d'abord diviser par le facteur pour isoler la puissance.
+
+Une autre erreur consiste à écrire $x = \tfrac{7}{2}$ en (b), en « divisant par la base ». Elle est tentante parce que l'on cherche à faire disparaître le $2$, mais elle est fausse : la base n'est pas un facteur, et seul le logarithme permet de faire descendre l'exposant.
+
+En (d), une autre erreur consiste à écrire $x = \tfrac{\ln(3)}{2}$. Elle est tentante parce que l'on « divise » à cause du nombre $0{,}5$, mais elle est fausse : diviser par $0{,}5$ revient à multiplier par $2$, donc $x = 2\ln(3)$.
+
+:::
 :::
 
 ::: {.callout-caution .exo title="Exercice|Socle|1|O6"}
@@ -455,7 +508,7 @@ On cherche les nombres $x$ de $[0,\,12]$ dont l'image par $f$ vaut $3$, avec la 
 3. On isole $x$ en multipliant les deux membres par $\tfrac{3}{\pi}$, puis en ajoutant $1$ : $x = \tfrac{5}{2} + 3k$.
 4. On garde les valeurs de $[0,\,12]$ : $k = 0$, $1$, $2$ et $3$ donnent $\tfrac{5}{2}$, $\tfrac{11}{2}$, $\tfrac{17}{2}$ et $\tfrac{23}{2}$ ; $k = -1$ donne $-\tfrac{1}{2}$ et $k = 4$ donne $\tfrac{29}{2}$, qui sont hors de l'intervalle.
 
-Ces solutions sont plausibles : la valeur $3$ est la valeur moyenne de $f$, que la fonction atteint deux fois par période de $6$, soit quatre fois sur un intervalle de longueur $12$.
+Remarque: ces solutions sont plausibles : la valeur $3$ est la valeur moyenne de $f$, que la fonction atteint deux fois par période de $6$, soit quatre fois sur un intervalle de longueur $12$.
 :::
 
 ## Piège
@@ -470,10 +523,23 @@ Une autre erreur consiste à oublier les solutions des tours suivants, ou à ne 
 ::: {.callout-caution .exo title="Exercice|Socle|2|O7"}
 Une grandeur $g$ oscille entre $-1$ et $5$. Sa période vaut $8$, et son maximum est atteint à l'instant $t = 2$. On propose quatre modèles :
 
+:::: {layout-ncol="2"}
+::: {.modele}
 1. $g(t) = 2 + 3\cos\left(\dfrac{\pi}{4}(t - 2)\right)$
+:::
+
+::: {.modele}
 2. $g(t) = 2 + 3\cos\left(\dfrac{\pi}{8}(t - 2)\right)$
+:::
+
+::: {.modele}
 3. $g(t) = 2 + 6\cos\left(\dfrac{\pi}{4}(t - 2)\right)$
+:::
+
+::: {.modele}
 4. $g(t) = 2 + 3\cos\left(\dfrac{\pi}{4}(t + 2)\right)$
+:::
+::::
 
 (a) Pour chaque modèle, écris la valeur moyenne $M$, l'amplitude $A$, la période $T$ et un instant $h$ où le maximum est atteint.
 (b) Écris quel modèle respecte les trois caractéristiques de la grandeur. Pour chacun des trois autres, écris une caractéristique qu'il ne respecte pas.

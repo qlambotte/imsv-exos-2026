@@ -1,0 +1,485 @@
+---
+title: "Remédiation IMSV"
+subtitle: "Thème : Les modèles (séance 6) · annexe (solutions rédigées)"
+description: "Questions de réserve, énoncés et solutions des exercices de renforcement"
+author: "Quentin Lambotte · FMPB · UMONS"
+lang: fr
+format:
+  revealjs:
+    theme: [default, ../seance01/theme.scss]
+    slide-number: c/t
+    show-slide-number: all
+    width: 1280
+    height: 800
+    margin: 0.06
+    center: false
+    transition: fade
+    transition-speed: fast
+    hash: true
+    history: false
+    html-math-method: katex
+    embed-resources: true
+    fig-align: center
+    menu:
+      side: right
+    include-after-body: ../seance01/annotate.html
+---
+
+# Questions de réserve {.divider background-color="#14304a"}
+
+<style>
+.qrow{display:flex;gap:.8em;border-bottom:1px solid #e5e9ef;padding:.28em .2em;font-size:.6em;line-height:1.35;align-items:flex-start}
+.qrow .qans{flex:0 0 36%;font-weight:600}
+.qrow .qwhy{flex:1 1 auto}
+.qrow .qans p,.qrow .qwhy p{margin:0}
+.qrow.ok{background:#f2f7ff}
+.qrow.ok .qans::before{content:"✓ ";color:#276a2e;font-weight:700}
+.qstem{font-size:.78em}
+.qflex{display:flex;gap:1em;align-items:center}
+.qflex img{max-width:330px;max-height:230px;width:auto;height:auto}
+.reveal table.deroule a{font-weight:600}
+.et-box{display:flex;flex-direction:column;align-items:center;gap:.5em;padding:.6em 1.4em;background:#f2f7ff;border:1px solid #dbe7fb;border-radius:.6em}
+.et-timer{margin-top:.8em;display:flex;justify-content:center}
+@keyframes et-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.back{margin-top:.5em}
+.qfoot{display:flex;gap:1.2em;align-items:center;margin-top:.45em;font-size:.55em}
+.qfoot .back-btn{font-size:1em}
+.qfoot .muted{color:#5a6b7b}
+.back-btn{display:inline-block;font-size:.5em;font-weight:600;padding:.3em .8em;border:1.5px solid #1f5fbf;border-radius:.5em;color:#1f5fbf;background:#fff}
+.back-btn:hover{background:#1f5fbf;color:#fff;text-decoration:none!important}
+.exo-foot{margin-top:.8em;font-size:.55em}
+.sol{font-size:.8em}
+.sol.long{font-size:.68em}
+.sol.xlong{font-size:.6em}
+.tv table{margin:.3em auto;border-collapse:collapse;font-size:.8em}
+.tv th,.tv td{border:1px solid #cfd8e3;padding:.22em .9em;text-align:center}
+.tv th{background:#f4f7fa;color:#14304a}
+.tv .f{color:#b5381f;font-weight:700}
+.sit table{font-size:.72em;margin:.3em auto;border-collapse:collapse}
+.sit th,.sit td{border:1px solid #cfd8e3;padding:.25em .7em}
+.sit th{background:#f4f7fa;color:#14304a}
+.sit .f{color:#b5381f;font-weight:700}
+.promesse{border:2px solid #1f5fbf;border-radius:14px;background:#f2f7ff;padding:.6em 1em;text-align:center;font-size:1.05em;margin:.5em 0}
+.xs { font-size: .7em; }
+</style>
+## Réserve 1 · Comparer deux pH {#q-MR1}
+
+::: {.qstem}
+Une solution a un pH de $3$, une autre un pH de $5$. On rappelle que $\mathrm{pH} = -\log_{10}\left([\mathrm{H}^+]\right)$. Que peut-on dire de leurs concentrations en ions hydrogène ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+La première contient $100$ fois plus d'ions hydrogène par litre.
+:::
+::: qwhy
+$[\mathrm{H}^+] = 10^{-3}$ et $10^{-5}$ mol/L : le quotient vaut $10^{2} = 100$.
+:::
+:::::
+
+::::: qrow
+::: qans
+La première contient $2$ fois plus d'ions hydrogène par litre.
+:::
+::: qwhy
+L'écart de pH vaut $2$ ; il correspond à un facteur $10^{2}$, et non $2$.
+:::
+:::::
+
+::::: qrow
+::: qans
+La première contient $100$ fois moins d'ions hydrogène par litre.
+:::
+::: qwhy
+Le signe moins de la formule inverse le sens : un pH plus petit correspond à une concentration plus grande.
+:::
+:::::
+
+::::: qrow
+::: qans
+La première contient $\frac{5}{3}$ fois plus d'ions hydrogène par litre.
+:::
+::: qwhy
+Le quotient des pH n'a pas de sens : seule la différence des pH donne le facteur.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-m">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="01-remediation.html#/ex-m-R5">R.5(a)(b)</a></span></div>
+
+## Réserve 2 · Un logarithme en base 2 {#q-MR2}
+
+::: {.qstem}
+Que vaut $\log_{2}(32)$ ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$5$
+:::
+::: qwhy
+$32 = 2^{5}$, donc $\log_{2}(32) = 5$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$16$
+:::
+::: qwhy
+C'est $\frac{32}{2}$ : le logarithme ne divise pas par la base.
+:::
+:::::
+
+::::: qrow
+::: qans
+$64$
+:::
+::: qwhy
+C'est $32 \cdot 2$ : le logarithme ne multiplie pas par la base.
+:::
+:::::
+
+::::: qrow
+::: qans
+$\frac{1}{5}$
+:::
+::: qwhy
+C'est l'inverse du bon résultat : $2^{1/5}$ vaut environ $1{,}15$, et non $32$.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-m">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="01-remediation.html#/ex-m-S2">S.2(b)</a></span></div>
+
+## Réserve 3 · Temps de doublement {#q-MR3}
+
+::: {.qstem}
+Dans un bouillon de culture riche, la bactérie *Escherichia coli* a un temps de doublement de $20$ minutes. Combien de temps faut-il pour que le nombre de bactéries soit multiplié par $8$ ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$60$ minutes
+:::
+::: qwhy
+$8 = 2^{3}$ : il faut $3$ doublements, soit $3 \cdot 20 = 60$ minutes.
+:::
+:::::
+
+::::: qrow
+::: qans
+$160$ minutes
+:::
+::: qwhy
+On a multiplié le facteur $8$ par le temps de doublement : $8$ est le facteur, pas le nombre de doublements.
+:::
+:::::
+
+::::: qrow
+::: qans
+$40$ minutes
+:::
+::: qwhy
+Deux doublements multiplient seulement par $2^{2} = 4$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$80$ minutes
+:::
+::: qwhy
+Quatre doublements multiplient par $2^{4} = 16$.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-m">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="01-remediation.html#/ex-m-R2">R.2(d)</a></span></div>
+
+::: {.footer-note}
+Source : G. Sezonov, D. Joseleau-Petit et R. D'Ari, « Escherichia coli Physiology in Luria-Bertani Broth », Journal of Bacteriology, 189(23), 2007, p. 8746-8749 : « The doubling time during steady-state growth in Luria-Bertani broth was 20 min. »
+:::
+
+## Réserve 4 · Lire une période {#q-MR4}
+
+::: {.qstem}
+Quelle est la période de la fonction $f(t) = 4 + 2\cos(3t)$ ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$\dfrac{2\pi}{3}$
+:::
+::: qwhy
+Dans $\cos\left(\frac{2\pi}{T}\,t\right)$, on a $\frac{2\pi}{T} = 3$, donc $T = \frac{2\pi}{3}$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$3$
+:::
+::: qwhy
+$3$ est le nombre qui multiplie $t$, et non la période.
+:::
+:::::
+
+::::: qrow
+::: qans
+$6\pi$
+:::
+::: qwhy
+On a multiplié $2\pi$ par $3$ au lieu de diviser.
+:::
+:::::
+
+::::: qrow
+::: qans
+$2$
+:::
+::: qwhy
+$2$ est l'amplitude.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/nav-m">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="01-remediation.html#/ex-m-R6">R.6(a)</a></span></div>
+
+# Solutions des exercices {.divider background-color="#14304a"}
+
+## Énoncé R.1 (séance 6) <span class="obj">O1</span> {#st-m-R1 .smaller}
+
+Le tableau suivant donne les valeurs de quatre fonctions $A$, $B$, $C$ et $D$ pour quatre valeurs du temps $t$.
+
+::: {.tv}
+| $t$ | $0$ | $1$ | $2$ | $3$ |
+|:---:|:---:|:---:|:---:|:---:|
+| $A(t)$ | $5$ | $8$ | $11$ | $14$ |
+| $B(t)$ | $5$ | $10$ | $20$ | $40$ |
+| $C(t)$ | $81$ | $27$ | $9$ | $3$ |
+| $D(t)$ | $0$ | $1$ | $4$ | $9$ |
+:::
+
+\(a) Pour chaque fonction, calcule les trois différences successives $f(t+1) - f(t)$. Pour $A$, $B$ et $C$, calcule aussi les trois quotients successifs $\dfrac{f(t+1)}{f(t)}$.
+
+\(b) Écris pour chaque fonction si un modèle affine, un modèle exponentiel ou aucun des deux convient, en justifiant à l'aide de (a).
+
+\(c) Écris une formule pour $A(t)$, $B(t)$ et $C(t)$, puis une formule simple pour $D(t)$.
+
+## Solution R.1 (séance 6) {#sol-m-R1}
+
+::: {.sol .xlong}
+\(a) Différences : $3$, $3$, $3$ pour $A$ ; $5$, $10$, $20$ pour $B$ ; $-54$, $-18$, $-6$ pour $C$ ; $1$, $3$, $5$ pour $D$. Quotients : $\frac{8}{5}$, $\frac{11}{8}$, $\frac{14}{11}$ pour $A$ ; $2$, $2$, $2$ pour $B$ ; $\frac{1}{3}$, $\frac{1}{3}$, $\frac{1}{3}$ pour $C$.
+
+\(b) Les différences de $A$ sont constantes : un modèle affine convient. Les quotients de $B$ et de $C$ sont constants : un modèle exponentiel convient. Pour $D$, ni les différences ni les quotients ne sont constants : aucun des deux modèles ne convient.
+
+\(c) $A(t) = 5 + 3t$, $B(t) = 5 \cdot 2^{t}$, $C(t) = 81 \cdot \left(\frac{1}{3}\right)^{t}$ et $D(t) = t^{2}$, qui vérifie $0$, $1$, $4$, $9$.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-m">← Exercices à réaliser</a></div>
+
+## Énoncé R.2 (séance 6) <span class="obj">O5</span> {#st-m-R2 .smaller}
+
+La bactérie *Escherichia coli* a, dans un bouillon de culture riche à $37$ °C, un temps de doublement de $20$ minutes. Une culture contient $1000$ bactéries à l'instant $t = 0$. On note $N(t)$ le nombre de bactéries à l'instant $t$, en heures.
+
+\(a) Écris $N(t)$ sous la forme $N(t) = 1000 \cdot 2^{ct}$, en donnant la valeur du nombre $c$ avec son unité.
+
+\(b) Calcule le nombre de bactéries après $2$ heures.
+
+\(c) Écris l'équation qui exprime que la culture contient $100\,000$ bactéries, puis résous-la. Écris la solution sous forme exacte, en heures.
+
+\(d) Encadre la valeur de $t$ trouvée en (c) entre deux multiples consécutifs du temps de doublement, en comparant un nombre bien choisi à des puissances de $2$. Écris l'encadrement en minutes.
+
+::: {.footer-note}
+Source : G. Sezonov, D. Joseleau-Petit et R. D'Ari, « Escherichia coli Physiology in Luria-Bertani Broth », Journal of Bacteriology, 189(23), 2007, p. 8746-8749 : « The doubling time during steady-state growth in Luria-Bertani broth was 20 min. »
+:::
+
+## Solution R.2 (séance 6) {#sol-m-R2}
+
+::: {.sol .xlong}
+\(a) Un doublement dure $20$ min, soit $\frac{1}{3}$ h : en $t$ heures, il y a $3t$ doublements. Donc $N(t) = 1000 \cdot 2^{3t}$ et $c = 3$ h⁻¹.
+
+\(b) $N(2) = 1000 \cdot 2^{6} = 64\,000$ bactéries.
+
+\(c) $1000 \cdot 2^{3t} = 100\,000$, donc $2^{3t} = 100$. Les deux membres sont strictement positifs : $3t\ln(2) = \ln(100)$, donc $t = \dfrac{\ln(100)}{3\ln(2)}$ h, soit environ $2{,}2$ h.
+
+\(d) $2^{6} = 64 < 100 < 128 = 2^{7}$, donc $6 < 3t < 7$ : il faut entre $6$ et $7$ doublements, c'est-à-dire entre $120$ et $140$ minutes.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-m">← Exercices à réaliser</a></div>
+
+## Énoncé R.3 (séance 6) <span class="obj">O5</span> {#st-m-R3 .smaller}
+
+Le technétium-99m, utilisé en imagerie médicale, a une demi-vie de six heures. On note $N_0$ le nombre d'atomes d'un échantillon à l'instant $t = 0$. Le nombre d'atomes restants à l'instant $t$, en heures, est $N(t) = N_0 \cdot 2^{-t/6}$.
+
+\(a) Écris la fraction de $N_0$ qui reste après $18$ heures.
+
+\(b) Écris $N(t)$ sous la forme $N_0\,e^{-kt}$, en donnant la valeur exacte de $k$ avec son unité.
+
+\(c) Calcule l'instant $t$ pour lequel il reste $\frac{N_0}{32}$ atomes, en heures.
+
+::: {.footer-note}
+Source : Washington State Department of Health, Office of Radiation Protection, « Technetium-99m (99mTc) », Fact Sheet 320-083, juillet 2002 : « It has a half-life of six hours ».
+:::
+
+## Solution R.3 (séance 6) {#sol-m-R3}
+
+::: {.sol .xlong}
+\(a) $18$ h, c'est $3$ demi-vies : $N(18) = N_0 \cdot 2^{-3} = \frac{N_0}{8}$. Il reste $\frac{1}{8}$ des atomes.
+
+\(b) $2 = e^{\ln(2)}$, donc $2^{-t/6} = e^{-\frac{\ln(2)}{6}\,t}$ : $k = \dfrac{\ln(2)}{6}$ h⁻¹, soit environ $0{,}12$ h⁻¹.
+
+\(c) $N_0 \cdot 2^{-t/6} = \frac{N_0}{32}$, donc $2^{-t/6} = 2^{-5}$ : on égale les exposants, $\frac{t}{6} = 5$, donc $t = 30$ h.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-m">← Exercices à réaliser</a></div>
+
+## Énoncé R.4 (séance 6) <span class="obj">O4</span> {#st-m-R4 .smaller}
+
+\(a) Résous l'équation $3\,e^{2x} = 12$. Écris la solution sous forme exacte.
+
+\(b) Résous l'équation $2 \cdot 5^{t} = 50$. Écris la solution sous la forme d'un nombre entier.
+
+\(c) Résous l'équation $\ln(x + 1) = 2$. Écris la solution sous forme exacte, puis vérifie qu'elle appartient au domaine de l'équation.
+
+\(d) Le niveau sonore $L$ d'un son d'intensité $I$ est $L = 10\log_{10}\left(\dfrac{I}{I_0}\right)$, où $I_0$ est l'intensité de référence. Écris $\dfrac{I}{I_0}$ comme une puissance de $10$ pour un son de $60$ dB.
+
+## Solution R.4 (séance 6) {#sol-m-R4}
+
+::: {.sol .xlong}
+\(a) On divise par $3$ : $e^{2x} = 4$. Les deux membres sont strictement positifs : $2x = \ln(4)$, donc $x = \frac{\ln(4)}{2} = \ln(2)$. $S = \{\ln(2)\}$.
+
+\(b) On divise par $2$ : $5^{t} = 25 = 5^{2}$, donc $t = 2$. $S = \{2\}$.
+
+\(c) Le domaine impose $x + 1 > 0$, soit $x > -1$. On défait $\ln$ par l'exponentielle : $x + 1 = e^{2}$, donc $x = e^{2} - 1 \approx 6{,}39$, qui est supérieur à $-1$. $S = \{e^{2} - 1\}$.
+
+\(d) $10\log_{10}\left(\frac{I}{I_0}\right) = 60$, donc $\log_{10}\left(\frac{I}{I_0}\right) = 6$ et $\frac{I}{I_0} = 10^{6}$.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-m">← Exercices à réaliser</a></div>
+
+## Énoncé R.5 (séance 6) <span class="obj">O4</span> {#st-m-R5 .smaller}
+
+Le pH d'une solution est $\mathrm{pH} = -\log_{10}\left([\mathrm{H}^+]\right)$, où $[\mathrm{H}^+]$ est la concentration en ions hydrogène, en mol/L. On considère un suc gastrique de pH $2{,}4$ et du sang de pH $7{,}4$.
+
+\(a) Écris la concentration $[\mathrm{H}^+]$ du suc gastrique, puis celle du sang, sous la forme d'une puissance de $10$.
+
+\(b) Calcule le quotient de la concentration du suc gastrique par celle du sang.
+
+\(c) On dilue le suc gastrique de manière que sa concentration soit divisée par $100$. Calcule son nouveau pH.
+
+\(d) On donne $10^{0{,}1} \approx 1{,}26$. Calcule le quotient de la concentration à pH $7{,}35$ par celle à pH $7{,}45$, puis écris ce que ce résultat montre sur un écart de pH de $0{,}1$.
+
+::: {.footer-note}
+Source : D. Baker, « Gastric Acid Production – Regulation – PPI », TeachMePhysiology (consulté le 15 octobre 2026). E. Hopkins, T. Sanvictores et S. Sharma, « Physiology, Acid Base Balance », StatPearls, StatPearls Publishing, 2022 (consulté le 26 octobre 2026).
+:::
+
+## Solution R.5 (séance 6) {#sol-m-R5}
+
+::: {.sol .xlong}
+\(a) $[\mathrm{H}^+] = 10^{-\mathrm{pH}}$ : $10^{-2{,}4}$ mol/L pour le suc gastrique et $10^{-7{,}4}$ mol/L pour le sang.
+
+\(b) $\dfrac{10^{-2{,}4}}{10^{-7{,}4}} = 10^{5}$ : le suc gastrique contient $100\,000$ fois plus d'ions hydrogène par litre.
+
+\(c) Diviser la concentration par $100 = 10^{2}$ augmente le pH de $2$ : le nouveau pH vaut $4{,}4$.
+
+\(d) $\dfrac{10^{-7{,}35}}{10^{-7{,}45}} = 10^{0{,}1} \approx 1{,}26$ : un écart de pH de $0{,}1$ correspond à une concentration environ $26\,\%$ plus grande.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-m">← Exercices à réaliser</a></div>
+
+## Énoncé R.6 (séance 6) <span class="obj">O7</span> {#st-m-R6 .smaller}
+
+Soit la fonction $f(x) = 1 + 3\cos\left(2\left(x - \dfrac{\pi}{4}\right)\right)$.
+
+\(a) Écris la valeur moyenne $M$, l'amplitude $A$, la période $T$ et un instant $h$ où $f$ atteint son maximum. Écris ensuite le maximum, le minimum et l'image de $f$.
+
+\(b) Calcule $f(0)$, $f\left(\dfrac{\pi}{4}\right)$ et $f\left(\dfrac{3\pi}{4}\right)$.
+
+\(c) Écris, dans l'ordre suivi au cours, les quatre modifications qui permettent de passer de $\cos(x)$ à $f(x)$, en donnant pour chacune le nombre qui la caractérise.
+
+## Solution R.6 (séance 6) {#sol-m-R6}
+
+::: {.sol .xlong}
+\(a) $M = 1$, $A = 3$, $\frac{2\pi}{T} = 2$ donc $T = \pi$, et $h = \frac{\pi}{4}$. Le maximum vaut $1 + 3 = 4$, le minimum vaut $1 - 3 = -2$, et l'image est $[-2,\,4]$.
+
+\(b) $f(0) = 1 + 3\cos\left(-\frac{\pi}{2}\right) = 1$, $f\left(\frac{\pi}{4}\right) = 1 + 3\cos(0) = 4$ et $f\left(\frac{3\pi}{4}\right) = 1 + 3\cos(\pi) = -2$.
+
+\(c) On translate $\cos(x)$ verticalement de $1$, on adapte la période à $\pi$, on translate horizontalement de $\frac{\pi}{4}$, puis on modifie l'amplitude à $3$.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-m">← Exercices à réaliser</a></div>
+
+## Énoncé R.7 (séance 6) <span class="obj">O7</span> {#st-m-R7 .smaller}
+
+Soit $f(x) = M + A\cos\left(\dfrac{2\pi}{T}(x - h)\right)$, où $A > 0$, $T > 0$, et $M$, $h$ sont des réels. Le maximum de $f$ vaut $5$ et il est atteint en $x = \dfrac{\pi}{4}$. Le minimum suivant vaut $1$ et il est atteint en $x = \dfrac{7\pi}{12}$.
+
+Détermine $M$, $A$, $T$ et $h$, puis le nombre de solutions de l'équation $f(x) = 3$ dans l'intervalle $[0,\,2\pi[$.
+
+## Solution R.7 (séance 6) {#sol-m-R7}
+
+::: {.sol .xlong}
+$M = \frac{5 + 1}{2} = 3$ et $A = \frac{5 - 1}{2} = 2$. Entre un maximum et le minimum suivant, il s'écoule une demi-période : $\frac{7\pi}{12} - \frac{\pi}{4} = \frac{\pi}{3}$, donc $T = \frac{2\pi}{3}$. Le maximum est atteint en $\frac{\pi}{4}$ : $h = \frac{\pi}{4}$. Donc $f(x) = 3 + 2\cos\left(3\left(x - \frac{\pi}{4}\right)\right)$.
+
+La valeur $3$ est la valeur moyenne : $f$ la prend deux fois par période. L'intervalle $[0,\,2\pi[$ contient exactement $\frac{2\pi}{2\pi/3} = 3$ périodes, et $f(0) \neq 3$ : l'équation a $6$ solutions.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-m">← Exercices à réaliser</a></div>
+
+## Énoncé S.2 (séance 6, socle) <span class="obj">O3</span> {#st-m-S2 .smaller}
+
+\(a) Calcule $\ln(1)$, $\ln(e)$, $\ln\left(e^{3}\right)$ et $e^{\ln(5)}$.
+
+\(b) Calcule $\log_{10}(10\,000)$, $\log_{10}(0{,}001)$ et $\log_{2}(8)$.
+
+\(c) On donne $\ln(2) \approx 0{,}69$ et $\ln(3) \approx 1{,}10$. À l'aide des propriétés du logarithme, calcule des valeurs approchées de $\ln(6)$, de $\ln\left(\tfrac{3}{2}\right)$ et de $\ln(8)$.
+
+\(d) Écris $2^{x}$ sous la forme $e^{kx}$, en donnant la valeur exacte de $k$.
+
+## Solution S.2 (séance 6, socle) {#sol-m-S2}
+
+::: {.sol .xlong}
+\(a) $\ln(1) = 0$, $\ln(e) = 1$, $\ln\left(e^{3}\right) = 3$ et $e^{\ln(5)} = 5$ : $\ln$ et l'exponentielle se défont.
+
+\(b) $10\,000 = 10^{4}$, $0{,}001 = 10^{-3}$ et $8 = 2^{3}$ : $\log_{10}(10\,000) = 4$, $\log_{10}(0{,}001) = -3$ et $\log_{2}(8) = 3$.
+
+\(c) $\ln(6) = \ln(2) + \ln(3) \approx 1{,}79$ ; $\ln\left(\frac{3}{2}\right) = \ln(3) - \ln(2) \approx 0{,}41$ ; $\ln(8) = 3\ln(2) \approx 2{,}07$.
+
+\(d) $2 = e^{\ln(2)}$, donc $2^{x} = e^{\ln(2)\,x}$ : $k = \ln(2)$.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-m">← Exercices à réaliser</a></div>
+
+## Énoncé S.3 (séance 6, socle) <span class="obj">O2</span> {#st-m-S3 .smaller}
+
+\(a) Soient $f(t) = 200 \cdot 1{,}5^{t}$ et $g(t) = 64 \cdot \left(\tfrac{1}{2}\right)^{t}$, où $t$ est le temps en heures. Pour chacune, écris la valeur en $t = 0$ et le nombre par lequel la grandeur est multipliée chaque heure, puis écris si elle augmente ou diminue.
+
+\(b) Une grandeur vaut $500$ en $t = 0$ et perd $20\,\%$ de sa valeur chaque heure. Écris-la sous la forme $N(t) = N_0 \cdot a^{t}$.
+
+## Solution S.3 (séance 6, socle) {#sol-m-S3}
+
+::: {.sol .xlong}
+\(a) $f(0) = 200$ et $f$ est multipliée par $1{,}5 > 1$ chaque heure : elle augmente. $g(0) = 64$ et $g$ est multipliée par $\frac{1}{2} < 1$ chaque heure : elle diminue.
+
+\(b) Perdre $20\,\%$, c'est garder $80\,\%$, donc multiplier par $0{,}8$ : $N(t) = 500 \cdot 0{,}8^{t}$, avec $N_0 = 500$ et $a = 0{,}8$.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-m">← Exercices à réaliser</a></div>
+
+## Énoncé S.5 (séance 6, socle) <span class="obj">O6</span> {#st-m-S5 .smaller}
+
+\(a) L'aire de la surface d'une boule de rayon $r$ vaut $S(r) = 4\pi r^{2}$, et son volume $V(r) = \tfrac{4}{3}\pi r^{3}$. Par quels nombres $S$ et $V$ sont-ils multipliés quand on triple le rayon ?
+
+\(b) Une boule a un volume de $36\pi$ cm³. Calcule son rayon.
+
+\(c) Sans calcul, range $\ln(x)$, $\sqrt{x}$, $x^{3}$ et $1{,}1^{x}$ selon leur croissance quand $x$ devient très grand, de la plus lente à la plus rapide.
+
+## Solution S.5 (séance 6, socle) {#sol-m-S5}
+
+::: {.sol .xlong}
+\(a) $S(3r) = 4\pi \cdot 9r^{2} = 9\,S(r)$ et $V(3r) = \frac{4}{3}\pi \cdot 27r^{3} = 27\,V(r)$ : l'aire est multipliée par $9$, le volume par $27$.
+
+\(b) $\frac{4}{3}\pi r^{3} = 36\pi$, donc $r^{3} = 27$ et $r = 3$ cm.
+
+\(c) $\ln(x)$, puis $\sqrt{x}$, puis $x^{3}$, puis $1{,}1^{x}$ : le logarithme croît le plus lentement, et une exponentielle de base supérieure à $1$ finit par dépasser toute puissance.
+:::
+
+<div class="qfoot"><a class="back-btn" href="01-remediation.html#/ex-m">← Exercices à réaliser</a></div>
+

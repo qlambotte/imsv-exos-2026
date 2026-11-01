@@ -1,0 +1,990 @@
+---
+title: "Remédiation IMSV"
+subtitle: "Thème : Les modèles (séance 6)"
+description: "QCM, notions clés, appli des paramètres, corrections ciblées et exercices de renforcement sur les modèles exponentiels, logarithmiques et périodiques (séance 6)"
+author: "Quentin Lambotte · FMPB · UMONS"
+lang: fr
+format:
+  revealjs:
+    theme: [default, ../seance01/theme.scss]
+    slide-number: c/t
+    show-slide-number: all
+    width: 1280
+    height: 800
+    margin: 0.06
+    center: false
+    transition: fade
+    transition-speed: fast
+    hash: true
+    history: false
+    html-math-method: katex
+    embed-resources: true
+    fig-align: center
+    menu:
+      side: right
+    include-after-body: ../seance01/annotate.html
+---
+
+## Par où commencer ? {#start .smaller}
+
+<style>
+.qrow{display:flex;gap:.8em;border-bottom:1px solid #e5e9ef;padding:.28em .2em;font-size:.6em;line-height:1.35;align-items:flex-start}
+.qrow .qans{flex:0 0 36%;font-weight:600}
+.qrow .qwhy{flex:1 1 auto}
+.qrow .qans p,.qrow .qwhy p{margin:0}
+.qrow.ok{background:#f2f7ff}
+.qrow.ok .qans::before{content:"✓ ";color:#276a2e;font-weight:700}
+.qstem{font-size:.78em}
+.qflex{display:flex;gap:1em;align-items:center}
+.qflex img{max-width:330px;max-height:230px;width:auto;height:auto}
+.reveal table.deroule a{font-weight:600}
+.et-box{display:flex;flex-direction:column;align-items:center;gap:.5em;padding:.6em 1.4em;background:#f2f7ff;border:1px solid #dbe7fb;border-radius:.6em}
+.et-timer{margin-top:.8em;display:flex;justify-content:center}
+@keyframes et-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.back{margin-top:.5em}
+.qfoot{display:flex;gap:1.2em;align-items:center;margin-top:.45em;font-size:.55em}
+.qfoot .back-btn{font-size:1em}
+.qfoot .muted{color:#5a6b7b}
+.back-btn{display:inline-block;font-size:.5em;font-weight:600;padding:.3em .8em;border:1.5px solid #1f5fbf;border-radius:.5em;color:#1f5fbf;background:#fff}
+.back-btn:hover{background:#1f5fbf;color:#fff;text-decoration:none!important}
+.exo-foot{margin-top:.8em;font-size:.55em}
+.sol{font-size:.8em}
+.sol.long{font-size:.68em}
+.sol.xlong{font-size:.6em}
+.tv table{margin:.3em auto;border-collapse:collapse;font-size:.8em}
+.tv th,.tv td{border:1px solid #cfd8e3;padding:.22em .9em;text-align:center}
+.tv th{background:#f4f7fa;color:#14304a}
+.tv .f{color:#b5381f;font-weight:700}
+.sit table{font-size:.72em;margin:.3em auto;border-collapse:collapse}
+.sit th,.sit td{border:1px solid #cfd8e3;padding:.25em .7em}
+.sit th{background:#f4f7fa;color:#14304a}
+.sit .f{color:#b5381f;font-weight:700}
+.promesse{border:2px solid #1f5fbf;border-radius:14px;background:#f2f7ff;padding:.6em 1em;text-align:center;font-size:1.05em;margin:.5em 0}
+.xs { font-size: .7em; }
+</style>
+<style>
+.cle-cols{display:flex;gap:1.2em;align-items:center}
+.reveal .columns{align-items:center}
+</style>
+
+Tu as fait le QCM. Va directement à ce dont tu as besoin.
+
+:::: {.columns}
+::: {.column width="52%"}
+**Va là pour le correctif du QCM :**
+
+<ul>
+<li><a href="#/q-M1">Q1 · Reconnaître le type de croissance</a></li>
+<li><a href="#/q-M2">Q2 · Lire les paramètres d'un modèle exponentiel</a></li>
+<li><a href="#/q-M3">Q3 · Changer de base</a></li>
+<li><a href="#/q-M4">Q4 · Résoudre une équation exponentielle</a></li>
+<li><a href="#/q-M5">Q5 · Demi-vie</a></li>
+<li><a href="#/q-M6">Q6 · Croissances comparées</a></li>
+<li><a href="#/q-M7">Q7 · Modèle périodique</a></li>
+<li><a href="#/nav-m">Tout le correctif, avec les exercices de renforcement</a></li>
+</ul>
+:::
+::: {.column width="48%"}
+**Va là pour un rappel théorique sur :**
+
+<ul>
+<li><a href="#/cle-m1">Reconnaître le type de croissance</a></li>
+<li><a href="#/cle-m2">Lire les paramètres de $a \cdot b^{t}$</a></li>
+<li><a href="#/cle-m3">Changer de base</a></li>
+<li><a href="#/cle-m4">Résoudre une équation exponentielle</a></li>
+<li><a href="#/cle-m5">Temps de doublement et demi-vie</a></li>
+<li><a href="#/cle-m6">Croissances comparées</a></li>
+<li><a href="#/cle-m7">Adapter un modèle périodique</a></li>
+<li><a href="#/cle-app">Joue avec les paramètres (appli)</a></li>
+</ul>
+:::
+::::
+
+**Va là pour t'entraîner :** <a href="#/ex-m">exercices de renforcement</a> · **Pas encore fait le QCM ?** <a href="#/qcm-m">par ici</a>
+
+# Corrections ciblées {.divider background-color="#14304a"}
+
+## Où aller selon les résultats {#nav-m}
+
+<table class="deroule" style="font-size:.66em"><thead><tr><th>QCM</th><th>Correction</th><th>Exercices</th></tr></thead><tbody>
+<tr><td class="ph">M1</td><td><a href="#/q-M1">Reconnaître le type de croissance</a></td><td><a href="#/ex-m-R1">R.1</a></td></tr>
+<tr><td class="ph">M2</td><td><a href="#/q-M2">Lire les paramètres d'un modèle exponentiel</a></td><td><a href="#/ex-m-S3">S.3</a> · <a href="#/ex-m-R2">R.2(a)</a></td></tr>
+<tr><td class="ph">M3</td><td><a href="#/q-M3">Changer de base</a></td><td><a href="#/ex-m-S2">S.2(d)</a> · <a href="#/ex-m-R3">R.3(b)</a></td></tr>
+<tr><td class="ph">M4</td><td><a href="#/q-M4">Résoudre une équation exponentielle</a></td><td><a href="#/ex-m-R4">R.4(a)(b)(c)</a></td></tr>
+<tr><td class="ph">M5</td><td><a href="#/q-M5">Demi-vie</a></td><td><a href="#/ex-m-R2">R.2(b)(c)</a> · <a href="#/ex-m-R3">R.3(a)(c)</a></td></tr>
+<tr><td class="ph">M6</td><td><a href="#/q-M6">Croissances comparées</a></td><td><a href="#/ex-m-S5">S.5(a)(c)</a></td></tr>
+<tr><td class="ph">M7</td><td><a href="#/q-M7">Modèle périodique</a></td><td><a href="#/ex-m-R6">R.6</a> · <a href="#/ex-m-R7">R.7</a></td></tr>
+</tbody></table>
+
+## Q1 · Reconnaître le type de croissance {#q-M1}
+
+::: {.qstem}
+Une grandeur prend les valeurs $3$, $6$, $12$ et $24$ aux instants $t = 0$, $1$, $2$ et $3$. Quel modèle convient ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+Exponentiel : $N(t) = 3 \cdot 2^{t}$
+:::
+::: qwhy
+Les quotients successifs valent tous $2$ : la grandeur est multipliée par $2$ à chaque unité de temps.
+:::
+:::::
+
+::::: qrow
+::: qans
+Affine : $N(t) = 3 + 3t$
+:::
+::: qwhy
+Les différences successives valent $3$, $6$ et $12$ : elles ne sont pas constantes. Ce modèle donne $N(2) = 9$ au lieu de $12$.
+:::
+:::::
+
+::::: qrow
+::: qans
+Polynomial : $N(t) = 3 + 3t^{2}$
+:::
+::: qwhy
+Ce modèle convient pour $t = 0$ et $t = 1$, mais il donne $N(2) = 15$ au lieu de $12$.
+:::
+:::::
+
+::::: qrow
+::: qans
+Logarithmique
+:::
+::: qwhy
+Un modèle logarithmique croît de plus en plus lentement, alors que les différences $3$, $6$, $12$ augmentent.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-m">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-m-R1">R.1</a></span></div>
+
+## Q2 · Lire les paramètres d'un modèle exponentiel {#q-M2}
+
+::: {.qstem}
+Une grandeur vaut $N(t) = 200 \cdot 0{,}8^{t}$, où $t$ est le temps en heures. Que signifient les nombres $200$ et $0{,}8$ ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+La grandeur vaut $200$ en $t = 0$ et perd $20\,\%$ de sa valeur chaque heure.
+:::
+::: qwhy
+$N(0) = 200 \cdot 0{,}8^{0} = 200$. Multiplier par $0{,}8$, c'est garder $80\,\%$, donc perdre $20\,\%$.
+:::
+:::::
+
+::::: qrow
+::: qans
+La grandeur vaut $200$ en $t = 0$ et perd $80\,\%$ de sa valeur chaque heure.
+:::
+::: qwhy
+Perdre $80\,\%$ reviendrait à multiplier par $0{,}2$ : ici, on garde $80\,\%$.
+:::
+:::::
+
+::::: qrow
+::: qans
+La grandeur vaut $200$ en $t = 0$ et augmente de $80\,\%$ chaque heure.
+:::
+::: qwhy
+Le facteur $0{,}8$ est inférieur à $1$ : la grandeur diminue. Augmenter de $80\,\%$, c'est multiplier par $1{,}8$.
+:::
+:::::
+
+::::: qrow
+::: qans
+La grandeur vaut $0{,}8$ en $t = 0$ et est multipliée par $200$ chaque heure.
+:::
+::: qwhy
+Les rôles sont inversés : c'est $0{,}8$ qui porte l'exposant $t$, donc c'est le facteur ; $N(0) = 200$.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-m">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-m-S3">S.3</a> · <a href="#/ex-m-R2">R.2(a)</a></span></div>
+
+## Q3 · Changer de base {#q-M3}
+
+::: {.qstem}
+On écrit $2^{t} = e^{kt}$ pour tout réel $t$. Que vaut $k$ ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$k = \ln(2)$
+:::
+::: qwhy
+$2 = e^{\ln(2)}$, donc $2^{t} = \left(e^{\ln(2)}\right)^{t} = e^{\ln(2)\,t}$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$k = 2$
+:::
+::: qwhy
+$e^{2t} = \left(e^{2}\right)^{t} \approx 7{,}39^{t}$ : la base n'est plus $2$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$k = \dfrac{1}{\ln(2)}$
+:::
+::: qwhy
+C'est l'inverse du bon nombre : $e^{t/\ln(2)} \approx 4{,}23^{t}$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$k = \log_{10}(2)$
+:::
+::: qwhy
+Le logarithme décimal écrit $2$ comme une puissance de $10$, et non de $e$ : $2 = 10^{\log_{10}(2)}$.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-m">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-m-S2">S.2(d)</a> · <a href="#/ex-m-R3">R.3(b)</a></span></div>
+
+## Q4 · Résoudre une équation exponentielle {#q-M4}
+
+::: {.qstem}
+Quelle est la solution exacte de l'équation $3 \cdot 5^{x} = 12$ ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$x = \dfrac{\ln(4)}{\ln(5)}$
+:::
+::: qwhy
+On divise par $3$ : $5^{x} = 4$. Les deux membres sont strictement positifs : $x\ln(5) = \ln(4)$, puis on divise par $\ln(5)$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$x \approx 0{,}86$
+:::
+::: qwhy
+C'est une valeur approchée correcte, mais pas la forme exacte demandée.
+:::
+:::::
+
+::::: qrow
+::: qans
+$x = \dfrac{\ln(12)}{\ln(15)}$
+:::
+::: qwhy
+Le facteur a été collé à la base : $3 \cdot 5^{x}$ n'est pas $15^{x}$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$x = \dfrac{4}{5}$
+:::
+::: qwhy
+On a divisé par la base : $5^{x}$ n'est pas $5x$, seul le logarithme fait descendre l'exposant.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-m">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-m-R4">R.4(a)(b)(c)</a></span></div>
+
+## Q5 · Demi-vie {#q-M5}
+
+::: {.qstem}
+Le technétium-99m, utilisé en imagerie médicale, a une demi-vie de $6$ heures. Un échantillon a une activité de $800$ MBq. Quelle est son activité $18$ heures plus tard ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$100$ MBq
+:::
+::: qwhy
+$18$ h, c'est $3$ demi-vies : $800 \to 400 \to 200 \to 100$, soit $\frac{800}{2^{3}}$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$200$ MBq
+:::
+::: qwhy
+Deux demi-vies seulement : $18$ h contient trois fois $6$ h.
+:::
+:::::
+
+::::: qrow
+::: qans
+Environ $267$ MBq
+:::
+::: qwhy
+On a divisé par le nombre de demi-vies ($\frac{800}{3}$) : chaque demi-vie divise par $2$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$50$ MBq
+:::
+::: qwhy
+Quatre divisions par $2$ : on a compté les instants $0$, $6$, $12$ et $18$ h au lieu des intervalles.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-m">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-m-R2">R.2(b)(c)</a> · <a href="#/ex-m-R3">R.3(a)(c)</a></span></div>
+
+::: {.footer-note}
+Source : Washington State Department of Health, Office of Radiation Protection, « Technetium-99m (99mTc) », Fact Sheet 320-083, juillet 2002 : « It has a half-life of six hours ».
+:::
+
+## Q6 · Croissances comparées {#q-M6}
+
+::: {.qstem}
+Quand $x$ devient très grand, laquelle de ces fonctions finit par dépasser toutes les autres ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$1{,}1^{x}$
+:::
+::: qwhy
+Une exponentielle de base supérieure à $1$ finit par dépasser toute puissance de $x$ : $1{,}1^{x}$ dépasse $x^{5}$ à partir d'environ $x = 300$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$x^{5}$
+:::
+::: qwhy
+$x^{5}$ est plus grand pour des valeurs modérées ($10^{10}$ contre environ $13\,800$ en $x = 100$), mais l'exponentielle le dépasse ensuite.
+:::
+:::::
+
+::::: qrow
+::: qans
+$1000\ln(x)$
+:::
+::: qwhy
+Le logarithme est la croissance la plus lente : le facteur $1000$ ne change pas ce comportement.
+:::
+:::::
+
+::::: qrow
+::: qans
+$100\sqrt{x}$
+:::
+::: qwhy
+La racine croît moins vite que $x^{5}$ et que $1{,}1^{x}$ : le facteur $100$ ne change pas ce comportement.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-m">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-m-S5">S.5(a)(c)</a></span></div>
+
+## Q7 · Modèle périodique {#q-M7}
+
+::: {.qstem}
+Une grandeur oscille entre $2$ et $8$, avec une période de $12$, et atteint son maximum en $t = 3$. Quel modèle convient ?
+:::
+
+::::: {.qrow .ok}
+::: qans
+$5 + 3\cos\left(\dfrac{\pi}{6}(t - 3)\right)$
+:::
+::: qwhy
+$M = \frac{8 + 2}{2} = 5$, $A = \frac{8 - 2}{2} = 3$, $\frac{2\pi}{12} = \frac{\pi}{6}$ et $h = 3$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$5 + 6\cos\left(\dfrac{\pi}{6}(t - 3)\right)$
+:::
+::: qwhy
+$6$ est l'écart entre le maximum et le minimum ; l'amplitude en est la moitié. Ce modèle oscille entre $-1$ et $11$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$5 + 3\cos\left(\dfrac{\pi}{12}(t - 3)\right)$
+:::
+::: qwhy
+Sa période vaut $\frac{2\pi}{\pi/12} = 24$, et non $12$.
+:::
+:::::
+
+::::: qrow
+::: qans
+$5 + 3\cos\left(\dfrac{\pi}{6}(t + 3)\right)$
+:::
+::: qwhy
+Son maximum est atteint en $t = -3$ et en $t = 9$ ; en $t = 3$, il atteint son minimum $2$.
+:::
+:::::
+
+<div class="qfoot"><a class="back-btn" href="#/nav-m">← Où aller selon les résultats</a> <span class="muted">Exercices : <a href="#/ex-m-R6">R.6</a> · <a href="#/ex-m-R7">R.7</a></span></div>
+
+# Notions clés {.divider background-color="#14304a"}
+
+## Reconnaître le type de croissance {#cle-m1 .smaller}
+
+On compare les valeurs successives d'une grandeur, à pas de temps constant.
+
+::: {.tv}
+| $t$ | $0$ | $1$ | $2$ | $3$ | Différences | Quotients |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| $f(t)$ | $2$ | $5$ | $8$ | $11$ | $3$, $3$, $3$ | |
+| $g(t)$ | $2$ | $6$ | $18$ | $54$ | | $3$, $3$, $3$ |
+:::
+
+. . .
+
+**Différences constantes** : on ajoute toujours le même nombre, le modèle est **affine** : $f(t) = 2 + 3t$.
+
+. . .
+
+**Quotients constants** : on multiplie toujours par le même nombre, le modèle est **exponentiel** : $g(t) = 2 \cdot 3^{t}$.
+
+. . .
+
+::: {.aretenir .smaller}
+Ni l'un ni l'autre : on cherche un autre modèle. Un modèle polynomial comme $t^{2}$ a des différences qui augmentent régulièrement ; un modèle logarithmique croît de plus en plus lentement.
+:::
+
+## Lire les paramètres de $a \cdot b^{t}$ {#cle-m2 .smaller}
+
+Dans $N(t) = a \cdot b^{t}$, avec $a > 0$ et $b > 0$ :
+
+. . .
+
+- $a = N(0)$ : c'est la **valeur au départ**, car $b^{0} = 1$.
+- $b$ est le **facteur** par lequel la grandeur est multipliée à chaque unité de temps.
+
+. . .
+
+::: {.tv}
+| Modèle | Facteur $b$ | Ce qui se passe à chaque unité de temps |
+|:---:|:---:|:---:|
+| $100 \cdot 1{,}05^{t}$ | $1{,}05 > 1$ | la grandeur augmente de $5\,\%$ |
+| $100 \cdot 0{,}9^{t}$ | $0{,}9 < 1$ | la grandeur diminue de $10\,\%$ |
+:::
+
+. . .
+
+::: {.piege}
+::: {.pg-titre}
+Piège
+:::
+$0{,}9^{t}$ ne fait pas perdre $90\,\%$ : multiplier par $0{,}9$, c'est garder $90\,\%$ et perdre $10\,\%$.
+:::
+
+## Changer de base {#cle-m3 .smaller}
+
+**Puissance → exponentielle.** Comme $b = e^{\ln(b)}$, on a $b^{t} = e^{\ln(b)\,t}$.
+
+$2^{t} = e^{\ln(2)\,t} \approx e^{0{,}69\,t}$ et $10^{t} = e^{\ln(10)\,t} \approx e^{2{,}30\,t}$.
+
+. . .
+
+**Logarithme dans une autre base.** $\log_{b}(x)$ est l'exposant qu'il faut donner à $b$ pour obtenir $x$ : $\log_{b}(x) = \dfrac{\ln(x)}{\ln(b)}$.
+
+$\log_{2}(8) = 3$, car $2^{3} = 8$ ; et $\dfrac{\ln(8)}{\ln(2)} = \dfrac{3\ln(2)}{\ln(2)} = 3$.
+
+. . .
+
+::: {.aretenir .smaller}
+Un modèle $N_0 \cdot b^{t}$ peut toujours s'écrire $N_0\,e^{kt}$ avec $k = \ln(b)$. Si $b > 1$, $k > 0$ (croissance) ; si $b < 1$, $k < 0$ (décroissance).
+:::
+
+## Résoudre une équation exponentielle {#cle-m4 .smaller}
+
+**$4 \cdot 3^{x} = 20$**
+
+. . .
+
+[1]{.step} On isole la puissance en divisant par $4$ : $3^{x} = 5$.
+
+. . .
+
+[2]{.step} $5$ n'est pas une puissance entière de $3$ : on garde la base et on applique $\ln$ aux deux membres, qui sont strictement positifs : $x\ln(3) = \ln(5)$.
+
+. . .
+
+[3]{.step} On divise par $\ln(3)$ : $x = \dfrac{\ln(5)}{\ln(3)}$, et l'ensemble des solutions est $S = \left\{\dfrac{\ln(5)}{\ln(3)}\right\}$.
+
+. . .
+
+::: {.piege}
+::: {.pg-titre}
+Pièges
+:::
+$4 \cdot 3^{x}$ n'est pas $12^{x}$ ; $3^{x}$ n'est pas $3x$. Si, après avoir isolé la puissance, un membre est négatif, par exemple $3^{x} = -5$, l'équation n'a pas de solution : $S = \emptyset$.
+:::
+
+## Temps de doublement et demi-vie {#cle-m5 .smaller}
+
+**Temps de doublement $T_2$.** $N(t) = N_0 \cdot 2^{t/T_2}$ : à chaque durée $T_2$, la grandeur est multipliée par $2$.
+
+**Demi-vie $T_{1/2}$.** $N(t) = N_0 \cdot \left(\tfrac{1}{2}\right)^{t/T_{1/2}}$ : à chaque durée $T_{1/2}$, la grandeur est divisée par $2$.
+
+. . .
+
+Avec une demi-vie de $6$ h et $N_0 = 100$ :
+
+::: {.tv}
+| $t$ (h) | $0$ | $6$ | $12$ | $18$ | $24$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| $N(t)$ | $100$ | $50$ | $25$ | $12{,}5$ | $6{,}25$ |
+:::
+
+. . .
+
+::: {.aretenir .smaller}
+Après $n$ demi-vies, il reste $\dfrac{N_0}{2^{n}}$ : on compte les **intervalles** de durée $T_{1/2}$, pas les instants. Le coefficient de l'exponentielle est $k = \dfrac{\ln(2)}{T_{1/2}}$.
+:::
+
+## Croissances comparées {#cle-m6 .smaller}
+
+Quand $x$ devient très grand :
+
+::: {.tv}
+| $x$ | $\ln(x)$ | $\sqrt{x}$ | $x^{3}$ | $1{,}1^{x}$ |
+|:---:|:---:|:---:|:---:|:---:|
+| $10$ | $2{,}3$ | $3{,}2$ | $1000$ | $2{,}6$ |
+| $100$ | $4{,}6$ | $10$ | $10^{6}$ | $\approx 13\,800$ |
+| $1000$ | $6{,}9$ | $31{,}6$ | $10^{9}$ | $\approx 2{,}5 \cdot 10^{41}$ |
+:::
+
+. . .
+
+::: {.aretenir .smaller}
+Du plus lent au plus rapide : **logarithme**, **racine**, **puissance**, **exponentielle** de base supérieure à $1$. Multiplier une fonction par une constante ne change pas ce classement : $1000\ln(x)$ finit par être dépassé par $\sqrt{x}$.
+:::
+
+. . .
+
+::: {.piege}
+::: {.pg-titre}
+Piège
+:::
+Juger sur de petites valeurs : en $x = 10$, $1{,}1^{x}$ est plus petit que $x^{3}$ ; il ne le dépasse que plus loin.
+:::
+
+## Adapter un modèle périodique {#cle-m7 .smaller}
+
+Une grandeur oscille entre $10$ et $20$, avec une période de $24$ h, et atteint son maximum en $t = 15$ h.
+
+. . .
+
+[1]{.step} Valeur moyenne : $M = \dfrac{20 + 10}{2} = 15$. Amplitude : $A = \dfrac{20 - 10}{2} = 5$.
+
+. . .
+
+[2]{.step} Période : $T = 24$, donc $\dfrac{2\pi}{T} = \dfrac{\pi}{12}$. Décalage : $h = 15$, l'instant d'un maximum.
+
+. . .
+
+[3]{.step} $f(t) = 15 + 5\cos\left(\dfrac{\pi}{12}(t - 15)\right)$. Contrôle : $f(15) = 20$ et $f(3) = 15 - 5 = 10$.
+
+. . .
+
+::: {.piege}
+::: {.pg-titre}
+Pièges
+:::
+L'amplitude est la moitié de l'écart entre le maximum et le minimum. Dans $\cos\left(\frac{2\pi}{T}(t - h)\right)$, le signe moins décale le graphe **vers la droite** de $h$.
+:::
+
+## Joue avec les paramètres {#cle-app}
+
+<div class="app6" id="app6">
+<div class="app-tabs"><button type="button" data-m="exp" class="on">Exponentiel</button><button type="button" data-m="log">Logarithmique</button><button type="button" data-m="per">Périodique</button></div>
+<div class="app-body">
+<svg class="app-svg" viewBox="0 0 640 420" role="img" aria-label="Graphe du modèle"></svg>
+<div class="app-ctrl">
+<div class="app-formula"></div>
+<div class="app-sliders"></div>
+<div class="app-note"></div>
+</div>
+</div>
+</div>
+
+```{=html}
+<style>
+.app6{font-size:.5em;line-height:1.35}
+.app6 .app-tabs{display:flex;gap:.5em;margin-bottom:.5em}
+.app6 .app-tabs button{font:inherit;font-weight:600;padding:.3em .9em;border:1.5px solid #1f5fbf;border-radius:.5em;background:#fff;color:#1f5fbf;cursor:pointer}
+.app6 .app-tabs button.on{background:#1f5fbf;color:#fff}
+.app6 .app-body{display:flex;gap:1em;align-items:flex-start}
+.app6 .app-svg{flex:0 0 62%;width:62%;height:auto;border:1px solid #dbe7fb;border-radius:.4em;background:#fff}
+.app6 .app-ctrl{flex:1 1 auto}
+.app6 .app-formula{font-size:1.35em;font-weight:600;color:#14304a;margin-bottom:.6em}
+.app6 .app-sl{margin:.45em 0}
+.app6 .app-sl label{display:flex;justify-content:space-between;font-weight:600}
+.app6 .app-sl input{width:100%}
+.app6 .app-note{margin-top:.7em;padding:.5em .7em;background:#f2f7ff;border:1px solid #dbe7fb;border-radius:.5em}
+.app6 .app-note p{margin:.2em 0}
+</style>
+<script>
+(function () {
+  function fr(x, d) { if (d === undefined) d = 2; var s = (Math.round(x * Math.pow(10, d)) / Math.pow(10, d)).toString(); return s.replace('-', '−').replace('.', ','); }
+  var MODELS = {
+    exp: { t: [0, 8], y: [0, 20], yt: 5, tt: 1,
+      p: [['a', 0.5, 5, 0.1, 2], ['b', 0.3, 2.5, 0.05, 1.5]],
+      f: function (v, t) { return v.a * Math.pow(v.b, t); },
+      formula: function (v) { return 'f(t) = ' + fr(v.a) + ' · ' + fr(v.b) + '<sup>t</sup>'; },
+      marks: function (v) { return [[0, v.a, 'f(0) = a']]; },
+      lines: function () { return []; },
+      note: function (v) {
+        var s = '<p><b>a</b> = ' + fr(v.a) + ' : valeur en t = 0 (point marqué).</p>';
+        if (Math.abs(v.b - 1) < 1e-9) s += '<p><b>b</b> = 1 : la grandeur est constante.</p>';
+        else if (v.b > 1) s += '<p><b>b</b> = ' + fr(v.b) + ' &gt; 1 : la grandeur augmente de ' + fr((v.b - 1) * 100, 0) + ' % par unité de temps.</p>';
+        else s += '<p><b>b</b> = ' + fr(v.b) + ' &lt; 1 : la grandeur diminue de ' + fr((1 - v.b) * 100, 0) + ' % par unité de temps.</p>';
+        return s;
+      } },
+    log: { t: [0, 10], y: [-8, 8], yt: 2, tt: 1,
+      p: [['a', -3, 3, 0.1, 1], ['b', -3, 3, 0.1, 2]],
+      f: function (v, t) { return t > 0 ? v.a + v.b * Math.log(t) : NaN; },
+      formula: function (v) { return 'f(t) = ' + fr(v.a) + (v.b < 0 ? ' − ' + fr(-v.b) : ' + ' + fr(v.b)) + ' · ln(t)'; },
+      marks: function (v) { return [[1, v.a, 'f(1) = a']]; },
+      lines: function () { return []; },
+      note: function (v) {
+        var s = '<p><b>a</b> = ' + fr(v.a) + ' : valeur en t = 1, car ln(1) = 0 (point marqué).</p>';
+        if (Math.abs(v.b) < 1e-9) s += '<p><b>b</b> = 0 : la fonction est constante.</p>';
+        else s += '<p><b>b</b> = ' + fr(v.b) + (v.b > 0 ? ' &gt; 0 : la fonction est croissante,' : ' &lt; 0 : la fonction est décroissante,') + ' de plus en plus lentement.</p>';
+        return s;
+      } },
+    per: { t: [0, 12], y: [-8, 8], yt: 2, tt: 1,
+      p: [['M', -3, 3, 0.5, 1], ['A', 0, 4, 0.5, 2], ['T', 1, 12, 0.5, 6], ['h', 0, 10, 0.5, 2]],
+      f: function (v, t) { return v.M + v.A * Math.cos(2 * Math.PI / v.T * (t - v.h)); },
+      formula: function (v) { return 'f(t) = ' + fr(v.M) + ' + ' + fr(v.A) + ' cos(<sup>2π</sup>⁄<sub>' + fr(v.T) + '</sub> (t − ' + fr(v.h) + '))'; },
+      marks: function (v) {
+        var m = [], k;
+        for (k = -3; k <= 12; k++) { var t = v.h + k * v.T; if (t >= 0 && t <= 12) m.push([t, v.M + v.A, '']); }
+        return m;
+      },
+      lines: function (v) { return [[v.M, 'M'], [v.M + v.A, 'M + A'], [v.M - v.A, 'M − A']]; },
+      note: function (v) {
+        return '<p><b>M</b> = ' + fr(v.M) + ' : valeur moyenne. <b>A</b> = ' + fr(v.A) + ' : amplitude ; la grandeur oscille entre ' + fr(v.M - v.A) + ' et ' + fr(v.M + v.A) + '.</p>' +
+          '<p><b>T</b> = ' + fr(v.T) + ' : période. <b>h</b> = ' + fr(v.h) + ' : un instant où le maximum est atteint (points marqués).</p>';
+      } }
+  };
+  function init() {
+    var root = document.getElementById('app6');
+    if (!root || root.__ok) return; root.__ok = true;
+    var svg = root.querySelector('.app-svg'), box = root.querySelector('.app-sliders');
+    var fbox = root.querySelector('.app-formula'), nbox = root.querySelector('.app-note');
+    var cur = 'exp', vals = {};
+    Object.keys(MODELS).forEach(function (k) { vals[k] = {}; MODELS[k].p.forEach(function (p) { vals[k][p[0]] = p[4]; }); });
+    var W = 640, H = 420, L = 50, R = 15, T = 15, B = 35;
+    function draw() {
+      var m = MODELS[cur], v = vals[cur];
+      var X = function (t) { return L + (t - m.t[0]) / (m.t[1] - m.t[0]) * (W - L - R); };
+      var Y = function (y) { return T + (m.y[1] - y) / (m.y[1] - m.y[0]) * (H - T - B); };
+      var s = '', t, y;
+      for (t = m.t[0]; t <= m.t[1] + 1e-9; t += m.tt) s += '<line x1="' + X(t) + '" y1="' + T + '" x2="' + X(t) + '" y2="' + (H - B) + '" stroke="#eef2f7"/>' +
+        '<text x="' + X(t) + '" y="' + (H - B + 18) + '" font-size="13" text-anchor="middle" fill="#5a6b7b">' + fr(t) + '</text>';
+      for (y = m.y[0]; y <= m.y[1] + 1e-9; y += m.yt) s += '<line x1="' + L + '" y1="' + Y(y) + '" x2="' + (W - R) + '" y2="' + Y(y) + '" stroke="#eef2f7"/>' +
+        '<text x="' + (L - 8) + '" y="' + (Y(y) + 4) + '" font-size="13" text-anchor="end" fill="#5a6b7b">' + fr(y) + '</text>';
+      var y0 = Math.min(Math.max(0, m.y[0]), m.y[1]);
+      s += '<line x1="' + L + '" y1="' + Y(y0) + '" x2="' + (W - R) + '" y2="' + Y(y0) + '" stroke="#24313d" stroke-width="1.5"/>';
+      s += '<line x1="' + X(m.t[0]) + '" y1="' + T + '" x2="' + X(m.t[0]) + '" y2="' + (H - B) + '" stroke="#24313d" stroke-width="1.5"/>';
+      s += '<text x="' + (W - R) + '" y="' + (Y(y0) - 6) + '" font-size="14" text-anchor="end" fill="#24313d">t</text>';
+      m.lines(v).forEach(function (l) {
+        if (l[0] < m.y[0] || l[0] > m.y[1]) return;
+        s += '<line x1="' + L + '" y1="' + Y(l[0]) + '" x2="' + (W - R) + '" y2="' + Y(l[0]) + '" stroke="#c76e00" stroke-width="1.5" stroke-dasharray="6 5"/>' +
+          '<text x="' + (W - R - 4) + '" y="' + (Y(l[0]) - 5) + '" font-size="13" text-anchor="end" fill="#c76e00">' + l[1] + '</text>';
+      });
+      var d = '', pen = false, N = 600, i;
+      for (i = 0; i <= N; i++) {
+        t = m.t[0] + (m.t[1] - m.t[0]) * i / N; y = m.f(v, t);
+        if (!isFinite(y) || y < m.y[0] - 50 || y > m.y[1] + 50) { pen = false; continue; }
+        y = Math.max(m.y[0] - 1, Math.min(m.y[1] + 1, y));
+        d += (pen ? 'L' : 'M') + X(t).toFixed(1) + ' ' + Y(y).toFixed(1); pen = true;
+      }
+      s += '<clipPath id="app6clip"><rect x="' + L + '" y="' + T + '" width="' + (W - L - R) + '" height="' + (H - T - B) + '"/></clipPath>';
+      s += '<path d="' + d + '" fill="none" stroke="#1f5fbf" stroke-width="3" clip-path="url(#app6clip)"/>';
+      m.marks(v).forEach(function (p) {
+        if (p[1] < m.y[0] || p[1] > m.y[1]) return;
+        s += '<circle cx="' + X(p[0]) + '" cy="' + Y(p[1]) + '" r="6" fill="#c76e00"/>';
+        if (p[2]) s += '<text x="' + (X(p[0]) + 10) + '" y="' + (Y(p[1]) - 10) + '" font-size="14" fill="#c76e00" font-weight="bold">' + p[2] + '</text>';
+      });
+      svg.innerHTML = s;
+      fbox.innerHTML = m.formula(v);
+      nbox.innerHTML = m.note(v);
+    }
+    function build() {
+      var m = MODELS[cur];
+      box.innerHTML = '';
+      m.p.forEach(function (p) {
+        var div = document.createElement('div'); div.className = 'app-sl';
+        div.innerHTML = '<label><span>' + p[0] + '</span><span class="v"></span></label><input type="range" min="' + p[1] + '" max="' + p[2] + '" step="' + p[3] + '" value="' + vals[cur][p[0]] + '">';
+        var inp = div.querySelector('input'), out = div.querySelector('.v');
+        out.textContent = fr(vals[cur][p[0]]);
+        inp.addEventListener('input', function () { vals[cur][p[0]] = parseFloat(inp.value); out.textContent = fr(vals[cur][p[0]]); draw(); });
+        inp.addEventListener('keydown', function (e) { e.stopPropagation(); });
+        box.appendChild(div);
+      });
+      draw();
+    }
+    Array.prototype.forEach.call(root.querySelectorAll('.app-tabs button'), function (b) {
+      b.addEventListener('click', function () {
+        cur = b.getAttribute('data-m');
+        Array.prototype.forEach.call(root.querySelectorAll('.app-tabs button'), function (c) { c.classList.toggle('on', c === b); });
+        build();
+      });
+    });
+    build();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+  setTimeout(init, 500);
+})();
+</script>
+```
+
+
+::: notes
+Choisir un modèle, puis faire varier un seul paramètre à la fois et demander ce qui change sur le graphe avant de bouger le curseur. Exponentiel : a est la valeur en 0, b le facteur par unité de temps. Logarithmique : a est la valeur en 1. Périodique : M, A, T et h.
+:::
+
+# Exercices de renforcement {.divider background-color="#14304a"}
+
+## Exercices à réaliser pour consolider {#ex-m}
+
+<table class="deroule" style="font-size:.62em"><thead><tr><th>QCM</th><th>Sujet</th><th>Exercices</th></tr></thead><tbody>
+<tr><td class="ph">M1</td><td>Reconnaître le type de croissance</td><td><a href="#/ex-m-R1">R.1</a></td></tr>
+<tr><td class="ph">M2</td><td>Lire les paramètres d'un modèle exponentiel</td><td><a href="#/ex-m-S3">S.3</a> · <a href="#/ex-m-R2">R.2(a)</a></td></tr>
+<tr><td class="ph">M3</td><td>Changer de base</td><td><a href="#/ex-m-S2">S.2(d)</a> · <a href="#/ex-m-R3">R.3(b)</a></td></tr>
+<tr><td class="ph">M4</td><td>Résoudre une équation exponentielle</td><td><a href="#/ex-m-R4">R.4(a)(b)(c)</a></td></tr>
+<tr><td class="ph">M5</td><td>Demi-vie</td><td><a href="#/ex-m-R2">R.2(b)(c)</a> · <a href="#/ex-m-R3">R.3(a)(c)</a></td></tr>
+<tr><td class="ph">M6</td><td>Croissances comparées</td><td><a href="#/ex-m-S5">S.5(a)(c)</a></td></tr>
+<tr><td class="ph">M7</td><td>Modèle périodique</td><td><a href="#/ex-m-R6">R.6</a> · <a href="#/ex-m-R7">R.7</a></td></tr>
+</tbody></table>
+
+<p style="font-size:.5em">Les exercices R.n sont les exercices de renforcement de la séance 6 ; S.2, S.3 et S.5 sont ceux du socle de la séance 6.</p>
+
+<div class="et-timer"><div class="et-box" data-default="1200">
+<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">20:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
+<div class="et-row"><button class="et-btn et-primary et-toggle" type="button">Démarrer</button><button class="et-btn et-reset" type="button">↺ Réinitialiser</button></div>
+</div></div>
+
+## Exercice R.1 (séance 6) <span class="obj">O1</span> {#ex-m-R1 .smaller}
+
+Le tableau suivant donne les valeurs de quatre fonctions $A$, $B$, $C$ et $D$ pour quatre valeurs du temps $t$.
+
+::: {.tv}
+| $t$ | $0$ | $1$ | $2$ | $3$ |
+|:---:|:---:|:---:|:---:|:---:|
+| $A(t)$ | $5$ | $8$ | $11$ | $14$ |
+| $B(t)$ | $5$ | $10$ | $20$ | $40$ |
+| $C(t)$ | $81$ | $27$ | $9$ | $3$ |
+| $D(t)$ | $0$ | $1$ | $4$ | $9$ |
+:::
+
+\(a) Pour chaque fonction, calcule les trois différences successives $f(t+1) - f(t)$. Pour $A$, $B$ et $C$, calcule aussi les trois quotients successifs $\dfrac{f(t+1)}{f(t)}$.
+
+\(b) Écris pour chaque fonction si un modèle affine, un modèle exponentiel ou aucun des deux convient, en justifiant à l'aide de (a).
+
+\(c) Écris une formule pour $A(t)$, $B(t)$ et $C(t)$, puis une formule simple pour $D(t)$.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-m">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-m-R1">annexe — R.1 (séance 6)</a></span></div>
+
+## Exercice R.2 (séance 6) <span class="obj">O5</span> {#ex-m-R2 .smaller}
+
+La bactérie *Escherichia coli* a, dans un bouillon de culture riche à $37$ °C, un temps de doublement de $20$ minutes. Une culture contient $1000$ bactéries à l'instant $t = 0$. On note $N(t)$ le nombre de bactéries à l'instant $t$, en heures.
+
+\(a) Écris $N(t)$ sous la forme $N(t) = 1000 \cdot 2^{ct}$, en donnant la valeur du nombre $c$ avec son unité.
+
+\(b) Calcule le nombre de bactéries après $2$ heures.
+
+\(c) Écris l'équation qui exprime que la culture contient $100\,000$ bactéries, puis résous-la. Écris la solution sous forme exacte, en heures.
+
+\(d) Encadre la valeur de $t$ trouvée en (c) entre deux multiples consécutifs du temps de doublement, en comparant un nombre bien choisi à des puissances de $2$. Écris l'encadrement en minutes.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-m">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-m-R2">annexe — R.2 (séance 6)</a></span></div>
+
+::: {.footer-note}
+Source : G. Sezonov, D. Joseleau-Petit et R. D'Ari, « Escherichia coli Physiology in Luria-Bertani Broth », Journal of Bacteriology, 189(23), 2007, p. 8746-8749 : « The doubling time during steady-state growth in Luria-Bertani broth was 20 min. »
+:::
+
+## Exercice R.3 (séance 6) <span class="obj">O5</span> {#ex-m-R3 .smaller}
+
+Le technétium-99m, utilisé en imagerie médicale, a une demi-vie de six heures. On note $N_0$ le nombre d'atomes d'un échantillon à l'instant $t = 0$. Le nombre d'atomes restants à l'instant $t$, en heures, est $N(t) = N_0 \cdot 2^{-t/6}$.
+
+\(a) Écris la fraction de $N_0$ qui reste après $18$ heures.
+
+\(b) Écris $N(t)$ sous la forme $N_0\,e^{-kt}$, en donnant la valeur exacte de $k$ avec son unité.
+
+\(c) Calcule l'instant $t$ pour lequel il reste $\frac{N_0}{32}$ atomes, en heures.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-m">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-m-R3">annexe — R.3 (séance 6)</a></span></div>
+
+::: {.footer-note}
+Source : Washington State Department of Health, Office of Radiation Protection, « Technetium-99m (99mTc) », Fact Sheet 320-083, juillet 2002 : « It has a half-life of six hours ».
+:::
+
+## Exercice R.4 (séance 6) <span class="obj">O4</span> {#ex-m-R4 .smaller}
+
+\(a) Résous l'équation $3\,e^{2x} = 12$. Écris la solution sous forme exacte.
+
+\(b) Résous l'équation $2 \cdot 5^{t} = 50$. Écris la solution sous la forme d'un nombre entier.
+
+\(c) Résous l'équation $\ln(x + 1) = 2$. Écris la solution sous forme exacte, puis vérifie qu'elle appartient au domaine de l'équation.
+
+\(d) Le niveau sonore $L$ d'un son d'intensité $I$ est $L = 10\log_{10}\left(\dfrac{I}{I_0}\right)$, où $I_0$ est l'intensité de référence. Écris $\dfrac{I}{I_0}$ comme une puissance de $10$ pour un son de $60$ dB.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-m">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-m-R4">annexe — R.4 (séance 6)</a></span></div>
+
+## Exercice R.5 (séance 6) <span class="obj">O4</span> {#ex-m-R5 .smaller}
+
+Le pH d'une solution est $\mathrm{pH} = -\log_{10}\left([\mathrm{H}^+]\right)$, où $[\mathrm{H}^+]$ est la concentration en ions hydrogène, en mol/L. On considère un suc gastrique de pH $2{,}4$ et du sang de pH $7{,}4$.
+
+\(a) Écris la concentration $[\mathrm{H}^+]$ du suc gastrique, puis celle du sang, sous la forme d'une puissance de $10$.
+
+\(b) Calcule le quotient de la concentration du suc gastrique par celle du sang.
+
+\(c) On dilue le suc gastrique de manière que sa concentration soit divisée par $100$. Calcule son nouveau pH.
+
+\(d) On donne $10^{0{,}1} \approx 1{,}26$. Calcule le quotient de la concentration à pH $7{,}35$ par celle à pH $7{,}45$, puis écris ce que ce résultat montre sur un écart de pH de $0{,}1$.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-m">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-m-R5">annexe — R.5 (séance 6)</a></span></div>
+
+::: {.footer-note}
+Source : D. Baker, « Gastric Acid Production – Regulation – PPI », TeachMePhysiology (consulté le 15 octobre 2026). E. Hopkins, T. Sanvictores et S. Sharma, « Physiology, Acid Base Balance », StatPearls, StatPearls Publishing, 2022 (consulté le 26 octobre 2026).
+:::
+
+## Exercice R.6 (séance 6) <span class="obj">O7</span> {#ex-m-R6 .smaller}
+
+Soit la fonction $f(x) = 1 + 3\cos\left(2\left(x - \dfrac{\pi}{4}\right)\right)$.
+
+\(a) Écris la valeur moyenne $M$, l'amplitude $A$, la période $T$ et un instant $h$ où $f$ atteint son maximum. Écris ensuite le maximum, le minimum et l'image de $f$.
+
+\(b) Calcule $f(0)$, $f\left(\dfrac{\pi}{4}\right)$ et $f\left(\dfrac{3\pi}{4}\right)$.
+
+\(c) Écris, dans l'ordre suivi au cours, les quatre modifications qui permettent de passer de $\cos(x)$ à $f(x)$, en donnant pour chacune le nombre qui la caractérise.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-m">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-m-R6">annexe — R.6 (séance 6)</a></span></div>
+
+## Exercice R.7 (séance 6) <span class="obj">O7</span> {#ex-m-R7 .smaller}
+
+Soit $f(x) = M + A\cos\left(\dfrac{2\pi}{T}(x - h)\right)$, où $A > 0$, $T > 0$, et $M$, $h$ sont des réels. Le maximum de $f$ vaut $5$ et il est atteint en $x = \dfrac{\pi}{4}$. Le minimum suivant vaut $1$ et il est atteint en $x = \dfrac{7\pi}{12}$.
+
+Détermine $M$, $A$, $T$ et $h$, puis le nombre de solutions de l'équation $f(x) = 3$ dans l'intervalle $[0,\,2\pi[$.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-m">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-m-R7">annexe — R.7 (séance 6)</a></span></div>
+
+## Exercice S.2 (séance 6, socle) <span class="obj">O3</span> {#ex-m-S2 .smaller}
+
+\(a) Calcule $\ln(1)$, $\ln(e)$, $\ln\left(e^{3}\right)$ et $e^{\ln(5)}$.
+
+\(b) Calcule $\log_{10}(10\,000)$, $\log_{10}(0{,}001)$ et $\log_{2}(8)$.
+
+\(c) On donne $\ln(2) \approx 0{,}69$ et $\ln(3) \approx 1{,}10$. À l'aide des propriétés du logarithme, calcule des valeurs approchées de $\ln(6)$, de $\ln\left(\tfrac{3}{2}\right)$ et de $\ln(8)$.
+
+\(d) Écris $2^{x}$ sous la forme $e^{kx}$, en donnant la valeur exacte de $k$.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-m">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-m-S2">annexe — S.2 (séance 6, socle)</a></span></div>
+
+## Exercice S.3 (séance 6, socle) <span class="obj">O2</span> {#ex-m-S3 .smaller}
+
+\(a) Soient $f(t) = 200 \cdot 1{,}5^{t}$ et $g(t) = 64 \cdot \left(\tfrac{1}{2}\right)^{t}$, où $t$ est le temps en heures. Pour chacune, écris la valeur en $t = 0$ et le nombre par lequel la grandeur est multipliée chaque heure, puis écris si elle augmente ou diminue.
+
+\(b) Une grandeur vaut $500$ en $t = 0$ et perd $20\,\%$ de sa valeur chaque heure. Écris-la sous la forme $N(t) = N_0 \cdot a^{t}$.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-m">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-m-S3">annexe — S.3 (séance 6, socle)</a></span></div>
+
+## Exercice S.5 (séance 6, socle) <span class="obj">O6</span> {#ex-m-S5 .smaller}
+
+\(a) L'aire de la surface d'une boule de rayon $r$ vaut $S(r) = 4\pi r^{2}$, et son volume $V(r) = \tfrac{4}{3}\pi r^{3}$. Par quels nombres $S$ et $V$ sont-ils multipliés quand on triple le rayon ?
+
+\(b) Une boule a un volume de $36\pi$ cm³. Calcule son rayon.
+
+\(c) Sans calcul, range $\ln(x)$, $\sqrt{x}$, $x^{3}$ et $1{,}1^{x}$ selon leur croissance quand $x$ devient très grand, de la plus lente à la plus rapide.
+
+<div class="qfoot"><a class="back-btn" href="#/ex-m">← Exercices à réaliser</a><span class="muted">Solution rédigée : <a href="02-annexe.html#/sol-m-S5">annexe — S.5 (séance 6, socle)</a></span></div>
+
+## Pour la suite
+
+- Les **solutions rédigées** des exercices et les corrections des questions de réserve sont dans le deck « Annexe » ([ouvrir l'annexe](02-annexe.html)).
+- L'**appli des paramètres** reste disponible : <a href="#/cle-app">Joue avec les paramètres</a>.
+
+## Pas encore fait le QCM ? {#qcm-m}
+
+::: wooclap
+::: wc-play
+▶
+:::
+
+:::: wc-body
+**Ouvre le Wooclap, réponds seul·e**
+
+::: wc-lien
+Code : OBMKFUU
+:::
+::::
+
+::: {.wc-qr}
+![](img/qr-modeles.png)
+:::
+:::
+
+7 questions, une seule réponse correcte par question. Le Wooclap contient tous les thèmes : ouvre celui-ci, « Les modèles ».
+
+<div class="et-timer"><div class="et-box" data-default="540">
+<div class="et-row"><button class="et-btn et-minus" type="button">−1 min</button><div class="et-display">09:00</div><button class="et-btn et-plus" type="button">+1 min</button></div>
+<div class="et-row"><button class="et-btn et-primary et-toggle" type="button">Démarrer</button><button class="et-btn et-reset" type="button">↺ Réinitialiser</button></div>
+</div></div>
+
+```{=html}
+<script>
+(function () {
+  var audioCtx = null;
+  function beep() {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      var t0 = audioCtx.currentTime;
+      [0, 0.35].forEach(function (o) {
+        var osc = audioCtx.createOscillator(), g = audioCtx.createGain();
+        osc.type = 'sine'; osc.frequency.value = 880;
+        g.gain.setValueAtTime(0.0001, t0 + o);
+        g.gain.exponentialRampToValueAtTime(0.3, t0 + o + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + o + 0.28);
+        osc.connect(g); g.connect(audioCtx.destination);
+        osc.start(t0 + o); osc.stop(t0 + o + 0.3);
+      });
+    } catch (e) {}
+  }
+  function fmt(s) { s = Math.max(0, s); var m = Math.floor(s / 60), r = s % 60; return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r; }
+  function init() {
+  Array.prototype.forEach.call(document.querySelectorAll('.et-box'), function (box) {
+    var DEFAULT = parseInt(box.getAttribute('data-default'), 10) || 600;
+    var display = box.querySelector('.et-display'), btn = box.querySelector('.et-toggle');
+    var remaining = DEFAULT, running = false, id = null;
+    function render() {
+      display.textContent = fmt(remaining);
+      display.classList.toggle('et-warn', running && remaining <= 60 && remaining > 0);
+      display.classList.toggle('et-done', remaining === 0);
+    }
+    function stop() { running = false; btn.textContent = remaining > 0 ? 'Reprendre' : 'Démarrer'; if (id) { clearInterval(id); id = null; } }
+    function tick() { remaining -= 1; if (remaining <= 0) { remaining = 0; stop(); beep(); } render(); }
+    function start() {
+      if (running) return;
+      try { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); if (audioCtx.state === 'suspended') audioCtx.resume(); } catch (e) {}
+      if (remaining <= 0) remaining = DEFAULT;
+      render(); running = true; btn.textContent = 'Pause'; id = setInterval(tick, 1000);
+    }
+    btn.addEventListener('click', function () { running ? stop() : start(); });
+    box.querySelector('.et-minus').addEventListener('click', function () { remaining = Math.max(0, remaining - 60); render(); if (remaining === 0) stop(); });
+    box.querySelector('.et-plus').addEventListener('click', function () { remaining += 60; render(); });
+    box.querySelector('.et-reset').addEventListener('click', function () { stop(); remaining = DEFAULT; btn.textContent = 'Démarrer'; render(); });
+    render();
+  });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+```

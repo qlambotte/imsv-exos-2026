@@ -4,6 +4,7 @@
 #   bash preview-seance.sh 6            # toute la séance 6 (page d'accueil, liens entre pages)
 #   bash preview-seance.sh 6 socle      # ouvre directement socle.qmd
 #   bash preview-seance.sh 5 transfert --no-browser
+#   bash preview-seance.sh 6 methodes   # les cartes méthode de la séance (seances/_methodes-seanceNN.qmd)
 #
 # Le dossier de la séance (seances/seanceNN ou seances/_seanceNN) est recopié dans un dossier
 # temporaire, avec les filtres, le thème et les includes, et un _quarto.yml minimal y est créé.
@@ -82,6 +83,11 @@ sync_once() {
     fi
   done < <(cd "$s" && find . -type f \
       ! -name '_quarto.yml' ! -name '*.html' ! -path './.quarto/*' ! -path '*_files/*' -print0)
+  # Cartes méthode de la séance : rendues par la page methodes.qmd créée plus bas.
+  f="_methodes-seance$NN.qmd"
+  if [ -f "$ROOT/seances/$f" ] && { [ ! -e "$DIR/$f" ] || [ "$ROOT/seances/$f" -nt "$DIR/$f" ]; }; then
+    cp -p "$ROOT/seances/$f" "$DIR/$f"; changed+=("$f")
+  fi
   for f in exercice.lua methode.lua theme.scss; do
     if [ ! -e "$TMP/$f" ] || [ "$ROOT/$f" -nt "$TMP/$f" ]; then cp -p "$ROOT/$f" "$TMP/$f"; changed+=("$f"); fi
   done
@@ -92,7 +98,7 @@ sync_once() {
   done
   if [ -d "$ROOT/fonts" ]; then mkdir -p "$TMP/fonts"; cp -rup "$ROOT/fonts/." "$TMP/fonts/"; fi
   for f in ${changed[@]+"${changed[@]}"}; do
-    case "$f" in _*.qmd|img/*|exercice.lua) touch "$TMP/pdf.todo" ;; esac
+    case "$f" in _methodes-*) ;; _*.qmd|img/*|exercice.lua) touch "$TMP/pdf.todo" ;; esac
   done
   [ "${FIRST:-0}" = 1 ] && return 0
   for f in ${changed[@]+"${changed[@]}"}; do
@@ -132,6 +138,19 @@ format:
     html-math-method: mathml
     fig-cap-location: bottom
 YML
+
+# Page d'aperçu des cartes méthode (absente du dépôt : elle n'existe que dans le dossier temporaire).
+if [ -f "$DIR/_methodes-seance$NN.qmd" ]; then
+  cat > "$DIR/methodes.qmd" <<QMD
+---
+title: "Méthodes de la séance $NN — aperçu"
+filters:
+  - ../../methode.lua
+---
+
+{{< include _methodes-seance$NN.qmd >}}
+QMD
+fi
 
 # Boucle de synchronisation en arrière-plan, arrêtée avec le preview.
 # Elle refait aussi le PDF des énoncés quand un fragment, une figure ou le filtre a changé.
