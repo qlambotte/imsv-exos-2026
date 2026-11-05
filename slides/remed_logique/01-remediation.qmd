@@ -1,6 +1,7 @@
 ---
 title: "Remédiation IMSV"
 subtitle: "Thème : La logique"
+seance: 1
 description: "QCM, section sur l'implication, corrections ciblées et exercices de renforcement"
 author: "Quentin Lambotte · FMPB · UMONS"
 lang: fr

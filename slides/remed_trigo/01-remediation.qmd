@@ -1,6 +1,7 @@
 ---
 title: "Remédiation IMSV"
 subtitle: "Thème : La trigonométrie"
+seance: 2
 description: "QCM, notions clés, corrections ciblées et exercices de renforcement de trigonométrie"
 author: "Quentin Lambotte · FMPB · UMONS"
 lang: fr

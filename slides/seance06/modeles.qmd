@@ -2,6 +2,7 @@
 title: "Séance 6 — Modèles exponentiels, logarithmiques, polynomiaux et périodiques"
 subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie — séance d'exercices"
 description: "Déroulé complet de la séance — échauffement, corrections de S.4 et de T.1, deux méthodes"
+date: 11/02/2026
 author: "Quentin Lambotte - FMPB"
 date-format: "D MMMM YYYY"
 lang: fr
