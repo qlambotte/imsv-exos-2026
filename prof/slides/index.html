@@ -5,377 +5,107 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Slides — IMSV</title>
+<script>document.documentElement.classList.add("js");</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Roboto+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --accent:#1f5fbf;
-    --h:#14304a;
-    --muted:#5a6b7b;
-    --rule:#e5e9ef;
-    --page-bg:#ffffff;
-    --text:#24313d;
-    --card-bg:#f6f8fb;
-    --card-brd:#e5e9ef;
-    --hover-bg:#eef3fb;
+    --h:#14304a; --muted:#5a6b7b; --rule:#e5e9ef; --strong:#14304a;
+    --page-bg:#ffffff; --text:#24313d; --hover:#f3f7fe; --tint:14%;
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --accent:#6ea8ff;
-      --h:#e8eef6;
-      --muted:#9db0c1;
-      --rule:#26323d;
-      --page-bg:#11171d;
-      --text:#c7d2dc;
-      --card-bg:#171f27;
-      --card-brd:#2a3540;
-      --hover-bg:#202b35;
+      --h:#e8eef6; --muted:#9db0c1; --rule:#26323d; --strong:#9db0c1;
+      --page-bg:#11171d; --text:#c7d2dc; --hover:#18222c; --tint:26%;
     }
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--page-bg);
-    color:var(--text);
-    font-family:"Roboto", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height:1.62;
-    -webkit-font-smoothing:antialiased;
+  body{margin:0;background:var(--page-bg);color:var(--text);
+    font-family:"Roboto",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+    line-height:1.5;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1320px;margin:0 auto;padding:3rem 1.5rem 4rem;}
+  h1{font-family:"Roboto Slab",Georgia,serif;font-weight:700;color:var(--h);margin:0 0 .25rem;font-size:2rem;}
+  .subtitle{color:var(--muted);margin:0 0 2rem;}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;align-items:start;}
+  section{margin-bottom:1.6rem;}
+  h2{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--muted);
+    margin:0;padding-bottom:.4rem;border-bottom:1.5px solid var(--strong);}
+  ul{list-style:none;margin:0;padding:0;}
+  .row{display:grid;grid-template-columns:2.6rem minmax(0,1fr) 4.8rem 11.5rem;align-items:center;gap:.6rem;
+    min-height:3.1rem;padding:.3rem .4rem;margin:0 -.4rem;border-bottom:1px solid var(--rule);border-radius:.4rem;}
+  .row:hover{background:var(--hover);}
+  .p{width:2.4rem;height:2.4rem;border-radius:.55rem;background:var(--c);color:#fff;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;line-height:1.05;}
+  .p .sy{font-family:"Roboto Slab",Georgia,serif;font-style:italic;font-weight:700;font-size:.8rem;}
+  .p .n{font-size:.62rem;font-weight:700;letter-spacing:.05em;opacity:.92;}
+  .vec{position:relative;display:inline-block;}
+  .vec span{position:absolute;left:.05em;top:-.62em;font-size:.62em;font-style:normal;}
+  .t{font-weight:500;color:var(--h);line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+  .t:hover{text-decoration:underline;}
+  .go{font-weight:700;color:var(--c);white-space:nowrap;font-size:.95rem;}
+  .go:hover{text-decoration:underline;}
+  .rms{display:flex;flex-direction:column;align-items:flex-end;gap:.25rem;}
+  .rm{display:flex;align-items:baseline;gap:.45rem;}
+  .ch{font-size:.85rem;font-weight:500;padding:.12rem .55rem;border-radius:.4rem;white-space:nowrap;
+    color:var(--c);background:color-mix(in srgb,var(--c) var(--tint),transparent);}
+  .ch:hover{background:color-mix(in srgb,var(--c) calc(var(--tint) + 10%),transparent);}
+  .ax{font-size:.78rem;color:var(--muted);}
+  .avenir .p{opacity:.35;}
+  .avenir .t{color:var(--muted);opacity:.75;}
+  .av{font-size:.85rem;font-style:italic;color:var(--muted);opacity:.75;white-space:nowrap;}
+  .ax:hover{color:var(--c);text-decoration:underline;}
+  .tabs{display:flex;gap:2rem;border-bottom:1px solid var(--rule);margin:0 0 1.8rem;}
+  .tabs a{padding:.7rem .1rem;font-weight:700;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1px;}
+  .tabs a:hover{color:var(--h);}
+  .tabs a.on{color:var(--h);border-bottom-color:var(--strong);}
+  .tabs .ct{font-weight:500;font-size:.75rem;background:var(--rule);color:var(--muted);border-radius:1rem;padding:.05rem .5rem;margin-left:.35rem;}
+  .js .panel{display:none;}
+  .js .panel.on{display:block;}
+  .rrow{grid-template-columns:2.6rem minmax(0,1fr) 4.8rem 3.6rem;}
+  .tt{display:flex;flex-direction:column;min-width:0;}
+  .tt .t{-webkit-line-clamp:1;}
+  .ref{font-size:.8rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .rrow .ax{justify-self:end;}
+  .accueil{display:flex;align-items:center;gap:.9rem;padding:.6rem 1rem .6rem .6rem;margin-bottom:1.6rem;
+    border:1.5px dashed #d9b48a;border-radius:.6rem;color:var(--text);}
+  .accueil:hover{background:var(--hover);}
+  .accueil .i{width:2.4rem;height:2.4rem;border-radius:.55rem;background:#b5651d;color:#fff;display:flex;align-items:center;justify-content:center;flex:none;}
+  .accueil b{color:var(--h);font-weight:700;}
+  .accueil span span{color:var(--muted);font-size:.92rem;}
+  .accueil .go2{margin-left:auto;font-weight:700;color:#b5651d;white-space:nowrap;}
+  footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.85rem;}
+  @media (max-width: 960px){ .cols{grid-template-columns:1fr;gap:0;} }
+  @media (max-width: 560px){
+    .wrap{padding:2rem 1rem 3rem;}
+    .row{grid-template-columns:2.6rem minmax(0,1fr) auto;}
+    .t{-webkit-line-clamp:3;}
+    .rms{grid-column:2 / -1;align-items:flex-start;padding-bottom:.2rem;}
+    .rrow{grid-template-columns:2.6rem minmax(0,1fr) auto auto;}
   }
-  .wrap{
-    max-width:760px;
-    margin:0 auto;
-    padding:3.5rem 1.5rem 5rem;
-  }
-  h1{
-    font-family:"Roboto Slab", Georgia, serif;
-    font-weight:700;
-    color:var(--h);
-    letter-spacing:-0.005em;
-    margin:0 0 .3rem;
-    font-size:2rem;
-  }
-  .subtitle{
-    color:var(--muted);
-    margin:0 0 2.5rem;
-    font-size:1.05rem;
-  }
-  h2.part{
-    font-family:"Roboto Slab", Georgia, serif;
-    font-weight:700;
-    color:var(--h);
-    font-size:1.45rem;
-    margin:2.6rem 0 1.2rem;
-    padding-bottom:.4rem;
-    border-bottom:2px solid var(--accent);
-  }
-  .seance-group{
-    margin-bottom:2.2rem;
-  }
-  .seance-group h2{
-    font-family:"Roboto Slab", Georgia, serif;
-    font-weight:600;
-    color:var(--h);
-    font-size:1.15rem;
-    margin:0 0 .8rem;
-    padding-top:0;
-    border-top:none;
-  }
-  ul.decks{
-    list-style:none;
-    margin:0;
-    padding:0;
-    display:flex;
-    flex-direction:column;
-    gap:.7rem;
-  }
-  ul.decks li a{
-    display:flex;
-    align-items:center;
-    gap:.9rem;
-    padding:1rem 1.2rem;
-    background:var(--card-bg);
-    border:1px solid var(--card-brd);
-    border-radius:.6rem;
-    color:var(--text);
-    text-decoration:none;
-    transition:background .12s ease, border-color .12s ease;
-  }
-  ul.decks li a:hover{
-    background:var(--hover-bg);
-    border-color:var(--accent);
-  }
-  .deck-icon{
-    flex:0 0 auto;
-    width:2.1rem;
-    height:2.1rem;
-    border-radius:.4rem;
-    background:var(--accent);
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-family:"Roboto Slab", Georgia, serif;
-    font-weight:700;
-    font-size:.95rem;
-  }
-  .deck-info{flex:1 1 auto; min-width:0;}
-  .deck-title{
-    font-weight:500;
-    color:var(--h);
-  }
-  .deck-sub{
-    color:var(--muted);
-    font-size:.9rem;
-    margin-top:.1rem;
-  }
-  footer{
-    margin-top:3rem;
-    padding-top:1.2rem;
-    border-top:1px solid var(--rule);
-    color:var(--muted);
-    font-size:.85rem;
-  }
-  footer a{color:var(--accent);}
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>Slides</h1>
   <p class="subtitle">IMSV — supports de projection : séances d'exercices et remédiations.</p>
-
-  <h2 class="part">Séances d'exercices</h2>
-
-  <div class="seance-group">
-    <h2>Séance 1 — Langage et raisonnement</h2>
-    <ul class="decks">
-      <li>
-        <a href="seance01/langage-et-raisonnement.html">
-          <span class="deck-icon">S1</span>
-          <span class="deck-info">
-            <div class="deck-title">Langage et raisonnement</div>
-            <div class="deck-sub">Déroulé complet de la séance — échauffement, méthodes, synthèse</div>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="seance-group">
-    <h2>Séance 2 — Calcul fiable et trigonométrie</h2>
-    <ul class="decks">
-      <li>
-        <a href="seance02/calcul-fiable.html">
-          <span class="deck-icon">S2</span>
-          <span class="deck-info">
-            <div class="deck-title">Calcul fiable et trigonométrie</div>
-            <div class="deck-sub">Déroulé complet de la séance — échauffement, méthodes, synthèse</div>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="seance-group">
-    <h2>Séance 3 — Équations, proportions et géométrie analytique</h2>
-    <ul class="decks">
-      <li>
-        <a href="seance03/equations-et-droites.html">
-          <span class="deck-icon">S3</span>
-          <span class="deck-info">
-            <div class="deck-title">Équations, proportions et géométrie analytique</div>
-            <div class="deck-sub">Déroulé complet de la séance — échauffement, méthodes, synthèse</div>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="seance-group">
-    <h2>Séance 4 — Vecteurs et systèmes de coordonnées</h2>
-    <ul class="decks">
-      <li>
-        <a href="seance04/vecteurs.html">
-          <span class="deck-icon">S4</span>
-          <span class="deck-info">
-            <div class="deck-title">Vecteurs et systèmes de coordonnées</div>
-            <div class="deck-sub">Déroulé complet de la séance — échauffement, méthodes, synthèse</div>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="seance-group">
-    <h2>Séance 5 — Fonctions et représentations</h2>
-    <ul class="decks">
-      <li>
-        <a href="seance05/fonctions.html">
-          <span class="deck-icon">S5</span>
-          <span class="deck-info">
-            <div class="deck-title">Fonctions et représentations</div>
-            <div class="deck-sub">Déroulé complet de la séance — échauffement, corrigé de S.4, méthodes</div>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="seance-group">
-    <h2>Séance 6 — Modèles exponentiels, logarithmiques, polynomiaux et périodiques</h2>
-    <ul class="decks">
-      <li>
-        <a href="seance06/modeles.html">
-          <span class="deck-icon">S6</span>
-          <span class="deck-info">
-            <div class="deck-title">Modèles exponentiels, logarithmiques, polynomiaux et périodiques</div>
-            <div class="deck-sub">Déroulé complet de la séance — échauffement, corrections de S.4 et de T.1, deux méthodes</div>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <h2 class="part">Remédiations</h2>
-
-  <div class="seance-group">
-    <h2>remed_accueil</h2>
-    <ul class="decks">
-      <li>
-        <a href="remed_accueil/01-remediation.html">
-          <span class="deck-icon">R</span>
-          <span class="deck-info">
-            <div class="deck-title">Remédiation IMSV</div>
-            <div class="deck-sub">Présentation du dispositif de remédiation : mur de questions, QCM en autonomie, slides thématiques</div>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="seance-group">
-    <h2>remed_fonctions</h2>
-    <ul class="decks">
-      <li>
-        <a href="remed_fonctions/01-remediation.html">
-          <span class="deck-icon">R</span>
-          <span class="deck-info">
-            <div class="deck-title">Remédiation IMSV</div>
-            <div class="deck-sub">QCM, notions clés, corrections ciblées et exercices de renforcement sur les fonctions (séance 5)</div>
-          </span>
-        </a>
-      </li>
-      <li>
-        <a href="remed_fonctions/02-annexe.html">
-          <span class="deck-icon">R</span>
-          <span class="deck-info">
-            <div class="deck-title">Remédiation IMSV</div>
-            <div class="deck-sub">Questions de réserve, énoncés et solutions des exercices de renforcement</div>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="seance-group">
-    <h2>remed_logique</h2>
-    <ul class="decks">
-      <li>
-        <a href="remed_logique/01-remediation.html">
-          <span class="deck-icon">R</span>
-          <span class="deck-info">
-            <div class="deck-title">Remédiation IMSV</div>
-            <div class="deck-sub">QCM, section sur l'implication, corrections ciblées et exercices de renforcement</div>
-          </span>
-        </a>
-      </li>
-      <li>
-        <a href="remed_logique/02-annexe.html">
-          <span class="deck-icon">R</span>
-          <span class="deck-info">
-            <div class="deck-title">Remédiation IMSV</div>
-            <div class="deck-sub">Questions de réserve du QCM, énoncés et solutions des exercices de renforcement</div>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="seance-group">
-    <h2>remed_modeles</h2>
-    <ul class="decks">
-      <li>
-        <a href="remed_modeles/01-remediation.html">
-          <span class="deck-icon">R</span>
-          <span class="deck-info">
-            <div class="deck-title">Remédiation IMSV</div>
-            <div class="deck-sub">QCM, notions clés, appli des paramètres, corrections ciblées et exercices de renforcement sur les modèles exponentiels, logarithmiques et périodiques (séance 6)</div>
-          </span>
-        </a>
-      </li>
-      <li>
-        <a href="remed_modeles/02-annexe.html">
-          <span class="deck-icon">R</span>
-          <span class="deck-info">
-            <div class="deck-title">Remédiation IMSV</div>
-            <div class="deck-sub">Questions de réserve, énoncés et solutions des exercices de renforcement</div>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="seance-group">
-    <h2>remed_trigo</h2>
-    <ul class="decks">
-      <li>
-        <a href="remed_trigo/01-remediation.html">
-          <span class="deck-icon">R</span>
-          <span class="deck-info">
-            <div class="deck-title">Remédiation IMSV</div>
-            <div class="deck-sub">QCM, notions clés, corrections ciblées et exercices de renforcement de trigonométrie</div>
-          </span>
-        </a>
-      </li>
-      <li>
-        <a href="remed_trigo/02-annexe.html">
-          <span class="deck-icon">R</span>
-          <span class="deck-info">
-            <div class="deck-title">Remédiation IMSV</div>
-            <div class="deck-sub">Questions de réserve, énoncés et solutions des exercices de renforcement</div>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="seance-group">
-    <h2>remed_vecteurs</h2>
-    <ul class="decks">
-      <li>
-        <a href="remed_vecteurs/01-remediation.html">
-          <span class="deck-icon">R</span>
-          <span class="deck-info">
-            <div class="deck-title">Remédiation IMSV</div>
-            <div class="deck-sub">QCM, notions clés, corrections ciblées et exercices de renforcement sur les vecteurs (séance 4)</div>
-          </span>
-        </a>
-      </li>
-      <li>
-        <a href="remed_vecteurs/02-annexe.html">
-          <span class="deck-icon">R</span>
-          <span class="deck-info">
-            <div class="deck-title">Remédiation IMSV</div>
-            <div class="deck-sub">Questions de réserve, énoncés et solutions des exercices de renforcement</div>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <footer>
-    IMSV — Faculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS.
-  </footer>
+<nav class="tabs" role="tablist"><a href="#seances" data-tab="seances" role="tab">Séances <span class="ct">7/11</span></a><a href="#remediations" data-tab="remediations" role="tab">Remédiations <span class="ct">5</span></a></nav><div class="panel" id="seances" role="tabpanel"><div class="cols"><div class="col"><section><h2>Septembre</h2><ul><li class="row" style="--c:#1f5fbf"><span class="p" style="--c:#1f5fbf"><span class="sy">⟹</span><span class="n">S1</span></span><a class="t" href="seance01/langage-et-raisonnement.html" title="Langage et raisonnement">Langage et raisonnement</a><a class="go" href="seance01/langage-et-raisonnement.html">▶ Slides</a><span class="rms"><span class="rm"><a class="ch" href="remed_logique/01-remediation.html">La logique</a><a class="ax" href="remed_logique/02-annexe.html" title="Annexe : La logique">annexe</a></span></span></li><li class="row" style="--c:#b8325a"><span class="p" style="--c:#b8325a"><span class="sy">sin</span><span class="n">S2</span></span><a class="t" href="seance02/calcul-fiable.html" title="Calcul fiable et trigonométrie">Calcul fiable et trigonométrie</a><a class="go" href="seance02/calcul-fiable.html">▶ Slides</a><span class="rms"><span class="rm"><a class="ch" href="remed_trigo/01-remediation.html">La trigonométrie</a><a class="ax" href="remed_trigo/02-annexe.html" title="Annexe : La trigonométrie">annexe</a></span></span></li></ul></section><section><h2>Octobre</h2><ul><li class="row" style="--c:#8a6d00"><span class="p" style="--c:#8a6d00"><span class="sy">y=</span><span class="n">S3</span></span><a class="t" href="seance03/equations-et-droites.html" title="Équations, proportions et géométrie analytique">Équations, proportions et géométrie analytique</a><a class="go" href="seance03/equations-et-droites.html">▶ Slides</a><span class="rms"></span></li><li class="row" style="--c:#0e8a6b"><span class="p" style="--c:#0e8a6b"><span class="sy"><span class="vec">u<span>→</span></span></span><span class="n">S4</span></span><a class="t" href="seance04/vecteurs.html" title="Vecteurs et systèmes de coordonnées">Vecteurs et systèmes de coordonnées</a><a class="go" href="seance04/vecteurs.html">▶ Slides</a><span class="rms"><span class="rm"><a class="ch" href="remed_vecteurs/01-remediation.html">Les vecteurs</a><a class="ax" href="remed_vecteurs/02-annexe.html" title="Annexe : Les vecteurs">annexe</a></span></span></li><li class="row" style="--c:#6b4fbb"><span class="p" style="--c:#6b4fbb"><span class="sy">f(x)</span><span class="n">S5</span></span><a class="t" href="seance05/fonctions.html" title="Fonctions et représentations">Fonctions et représentations</a><a class="go" href="seance05/fonctions.html">▶ Slides</a><span class="rms"><span class="rm"><a class="ch" href="remed_fonctions/01-remediation.html">Les fonctions</a><a class="ax" href="remed_fonctions/02-annexe.html" title="Annexe : Les fonctions">annexe</a></span></span></li></ul></section></div><div class="col"><section><h2>Novembre</h2><ul><li class="row" style="--c:#c25e12"><span class="p" style="--c:#c25e12"><span class="sy">eˣ</span><span class="n">S6</span></span><a class="t" href="seance06/modeles.html" title="Modèles exponentiels, logarithmiques, polynomiaux et périodiques">Modèles exponentiels, logarithmiques, polynomiaux et périodiques</a><a class="go" href="seance06/modeles.html">▶ Slides</a><span class="rms"><span class="rm"><a class="ch" href="remed_modeles/01-remediation.html">Les modèles</a><a class="ax" href="remed_modeles/02-annexe.html" title="Annexe : Les modèles">annexe</a></span></span></li><li class="row" style="--c:#2a7f9e"><span class="p" style="--c:#2a7f9e"><span class="sy">lim</span><span class="n">S7</span></span><a class="t" href="seance07/limites-derivees.html" title="Variations, limites et dérivées">Variations, limites et dérivées</a><a class="go" href="seance07/limites-derivees.html">▶ Slides</a><span class="rms"></span></li><li class="row avenir" style="--c:#a3367e"><span class="p" style="--c:#a3367e"><span class="sy">f'</span><span class="n">S8</span></span><span class="t" title="Calcul différentiel">Calcul différentiel</span><span class="av">à venir</span><span class="rms"></span></li><li class="row avenir" style="--c:#4d7c0f"><span class="p" style="--c:#4d7c0f"><span class="sy">max</span><span class="n">S9</span></span><span class="t" title="Exploiter la dérivée : variations, optimisation et approximation">Exploiter la dérivée : variations, optimisation et approximation</span><span class="av">à venir</span><span class="rms"></span></li></ul></section><section><h2>Décembre</h2><ul><li class="row avenir" style="--c:#3f51b5"><span class="p" style="--c:#3f51b5"><span class="sy">∫</span><span class="n">S10</span></span><span class="t" title="Intégrale : mesurer une accumulation">Intégrale : mesurer une accumulation</span><span class="av">à venir</span><span class="rms"></span></li><li class="row avenir" style="--c:#b0412e"><span class="p" style="--c:#b0412e"><span class="sy">∫ᵇₐ</span><span class="n">S11</span></span><span class="t" title="Calcul intégral et applications">Calcul intégral et applications</span><span class="av">à venir</span><span class="rms"></span></li></ul></section></div></div></div><div class="panel" id="remediations" role="tabpanel"><a class="accueil" href="remed_accueil/01-remediation.html"><span class="i">★</span><span><b>Accueil du dispositif</b><span> · mur de questions, QCM en autonomie, choix du thème</span></span><span class="go2">▶ Slides</span></a><div class="cols"><div class="col"><section><h2>Septembre</h2><ul><li class="row rrow" style="--c:#1f5fbf"><span class="p" style="--c:#1f5fbf"><span class="sy">⟹</span><span class="n">S1</span></span><span class="tt"><a class="t" href="remed_logique/01-remediation.html">La logique</a><span class="ref">Séance 1 — Langage et raisonnement</span></span><a class="go" href="remed_logique/01-remediation.html">▶ Slides</a><a class="ax" href="remed_logique/02-annexe.html">annexe</a></li><li class="row rrow" style="--c:#b8325a"><span class="p" style="--c:#b8325a"><span class="sy">sin</span><span class="n">S2</span></span><span class="tt"><a class="t" href="remed_trigo/01-remediation.html">La trigonométrie</a><span class="ref">Séance 2 — Calcul fiable et trigonométrie</span></span><a class="go" href="remed_trigo/01-remediation.html">▶ Slides</a><a class="ax" href="remed_trigo/02-annexe.html">annexe</a></li></ul></section></div><div class="col"><section><h2>Octobre</h2><ul><li class="row rrow" style="--c:#0e8a6b"><span class="p" style="--c:#0e8a6b"><span class="sy"><span class="vec">u<span>→</span></span></span><span class="n">S4</span></span><span class="tt"><a class="t" href="remed_vecteurs/01-remediation.html">Les vecteurs</a><span class="ref">Séance 4 — Vecteurs et systèmes de coordonnées</span></span><a class="go" href="remed_vecteurs/01-remediation.html">▶ Slides</a><a class="ax" href="remed_vecteurs/02-annexe.html">annexe</a></li><li class="row rrow" style="--c:#6b4fbb"><span class="p" style="--c:#6b4fbb"><span class="sy">f(x)</span><span class="n">S5</span></span><span class="tt"><a class="t" href="remed_fonctions/01-remediation.html">Les fonctions</a><span class="ref">Séance 5 — Fonctions et représentations</span></span><a class="go" href="remed_fonctions/01-remediation.html">▶ Slides</a><a class="ax" href="remed_fonctions/02-annexe.html">annexe</a></li></ul></section><section><h2>Novembre</h2><ul><li class="row rrow" style="--c:#c25e12"><span class="p" style="--c:#c25e12"><span class="sy">eˣ</span><span class="n">S6</span></span><span class="tt"><a class="t" href="remed_modeles/01-remediation.html">Les modèles</a><span class="ref">Séance 6 — Modèles exponentiels, logarithmiques, polynomiaux et périodiques</span></span><a class="go" href="remed_modeles/01-remediation.html">▶ Slides</a><a class="ax" href="remed_modeles/02-annexe.html">annexe</a></li></ul></section></div></div></div>
+  <script>
+    (function(){
+      var tabs=document.querySelectorAll(".tabs a"), panels=document.querySelectorAll(".panel");
+      function show(id){
+        if(!document.getElementById(id)) id="seances";
+        tabs.forEach(function(a){var on=a.dataset.tab===id;a.classList.toggle("on",on);a.setAttribute("aria-selected",on);});
+        panels.forEach(function(p){p.classList.toggle("on",p.id===id);});
+      }
+      tabs.forEach(function(a){a.addEventListener("click",function(e){
+        e.preventDefault();show(a.dataset.tab);
+        try{history.replaceState(null,"","#"+a.dataset.tab);}catch(err){}});});
+      show(location.hash.slice(1));
+    })();
+  </script>
+  <footer>IMSV — Faculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS.</footer>
 </div>
 </body>
 </html>
