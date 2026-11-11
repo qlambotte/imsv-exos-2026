@@ -1,0 +1,68 @@
+<!-- DÉFIS : page optionnelle, pour celles et ceux qui trouvent les exercices trop faciles.
+     Chaque défi est plus corsé que le transfert, reste dans les notions et la notation du cours, et demande
+     plusieurs étapes ou un choix de méthode que l'énoncé n'indique pas.
+     Titre : « Exercice|Défi|niveau|Ox » (numéro D.1, D.2… automatique).
+     Pas de solution rédigée : un seul onglet « Indice » (une phrase complète), puis « Réponse » (une phrase complète).
+     Faisable SANS calculatrice. Réponses vérifiées par script (hors dépôt).
+     D.1 = une limite en un point exclu du domaine (un « trou ») ; D.2 = dérivée de 1/x par le quotient différentiel ;
+     D.3 = raccorder deux morceaux pour obtenir une fonction continue et dérivable. -->
+
+::: {.callout-note appearance="simple"}
+Les défis sont **optionnels**. Ils s'adressent à celles et ceux qui maîtrisent déjà le socle : tu peux les faire en séance, à la place des exercices du socle que tu sais déjà résoudre, ou à la maison. Ils restent dans les notions et les notations de la séance, mais ils demandent plusieurs étapes et un choix de méthode que l'énoncé n'indique pas. Chaque défi propose un seul indice et la réponse finale, sans solution rédigée : c'est à toi de construire le raisonnement et de contrôler ta réponse.
+:::
+
+::: {.callout-caution .exo title="Exercice|Défi|3|O3"}
+Soit la fonction $f(x) = \dfrac{x^{2} - 4}{x - 2}$, définie sur $\mathbb{R} \setminus \{2\}$. La règle du quotient ne permet pas de calculer $\lim\limits_{x \to 2} f(x)$. Calcule cette limite, puis décris le graphe de $f$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Factorise le numérateur à l'aide d'une identité remarquable, puis simplifie la fraction pour $x \neq 2$ : la définition de la limite ne teste jamais $x = 2$.
+
+## Réponse
+
+Pour $x \neq 2$, on a $f(x) = x + 2$, donc $\lim\limits_{x \to 2} f(x) = 4$ ; le graphe de $f$ est la droite d'équation $y = x + 2$ privée du point $(2\,;\,4)$, c'est-à-dire avec un « trou » en ce point.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Défi|3|O7"}
+Soit la fonction $f(x) = \dfrac{1}{x}$, définie sur $\mathbb{R} \setminus \{0\}$. À l'aide du quotient différentiel, calcule $f'(a)$ pour tout réel $a \neq 0$. Écris ensuite l'équation de la tangente au graphe de $f$ au point d'abscisse $1$, et vérifie que le signe de $f'(a)$ est plausible.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Réduis $\dfrac{1}{a + h} - \dfrac{1}{a}$ au même dénominateur avant de diviser par $h$, puis fais tendre $h$ vers $0$.
+
+## Réponse
+
+On a $f'(a) = -\dfrac{1}{a^{2}}$ ; la tangente au point $(1\,;\,1)$ a pour équation $y = 2 - x$ ; la dérivée est négative pour tout $a \neq 0$, ce qui est plausible puisque $f$ est décroissante sur $]-\infty,\,0[$ et sur $]0,\,+\infty[$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Défi|3|O6"}
+Soient deux réels $m$ et $p$, et la fonction $f$ définie par
+$$f(x) = \begin{cases} x^{2} & \text{si } x \leq 1, \\ m\,x + p & \text{si } x > 1. \end{cases}$$
+Détermine $m$ et $p$ pour que $f$ soit continue et dérivable en $1$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+La continuité en $1$ donne une première équation ; pour que le graphe n'ait pas de point anguleux, la droite $y = m\,x + p$ doit être la tangente à la parabole $y = x^{2}$ au point d'abscisse $1$.
+
+## Réponse
+
+Il faut $m = 2$ et $p = -1$ : la droite $y = 2x - 1$ est la tangente à la parabole $y = x^{2}$ au point $(1\,;\,1)$.
+
+:::
+:::

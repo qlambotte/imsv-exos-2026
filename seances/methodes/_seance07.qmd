@@ -1,0 +1,20 @@
+---
+title: "Séance 7 — Variations, limites et dérivées"
+description: "Variations, limites et dérivées"
+order: 7
+nom: "[Variations, limites et dérivées](methodes/seance07.html)"
+correction: "✅ en ligne"
+filters:
+  - ../../methode.lua
+---
+
+::: {.content-visible when-format="html"}
+::: {.dl}
+<details class="dl-menu">
+<summary>Télécharger (PDF)</summary>
+<a href="../../pdf/feuille-seance07.pdf" download>Feuille à compléter — séance 7 (PDF)</a>
+</details>
+:::
+:::
+
+{{< include _corrige-seance07.qmd >}}

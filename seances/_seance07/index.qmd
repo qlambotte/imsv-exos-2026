@@ -1,0 +1,51 @@
+---
+title: "Séance 7 — Variations, limites et dérivées"
+subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie"
+description: "Variations, limites et dérivées"
+order: 7
+nom: "[Variations, limites et dérivées](seances/seance07/index.html)"
+correction: "✅ en ligne"
+---
+
+{{< include _meta.qmd >}}
+
+{{< include _download.qmd >}}
+
+## Objectifs de la séance
+
+Ces objectifs sont repris du cours théorique (IMSV-7, ses AAVs). **Chaque exercice indique
+l'objectif qu'il travaille** — la pastille **O1** à **O9** dans son en-tête.
+
+Je dois pouvoir :
+
+- **O1** — calculer et interpréter une variation absolue, une variation relative et un taux de variation moyen ;
+- **O2** — relier taux moyen et pente de sécante ;
+- **O3** — comprendre limite, continuité et dérivée, savoir les interpréter et les exploiter ;
+- **O4** — utiliser les propriétés algébriques des limites ;
+- **O5** — mobiliser la notion d'asymptote ;
+- **O6** — reconnaître une fonction continue et/ou dérivable ;
+- **O7** — relier dérivée, pente de la tangente et taux instantané ;
+- **O8** — vérifier la plausibilité d'une dérivée ;
+- **O9** — utiliser des dérivées itérées.
+
+Une grille d'**auto-évaluation** sur ces objectifs t'attend à la page
+[Institutionnalisation](institution.qmd).
+
+## Où trouver de l'aide
+
+Sous chaque énoncé, le menu **Coups de pouce** contient les trois indices, la solution et les pièges. Les fiches de méthode sont dans ta **[boîte à outils](../methode.qmd)**. En séance, appelle un·e assistant·e si tu es encore bloqué·e après l'indice 3.
+
+## Le parcours de la séance
+
+1. **[Socle](socle.qmd)** — les exercices routiniers, en séance (environ 35 minutes).
+2. **[Transfert](transfert.qmd)** — des problèmes en contexte nouveau, en séance (environ 35 minutes).
+3. **[Exercices supplémentaires](supplementaires.qmd)** — des variations pour consolider, à la maison.
+4. **[Institutionnalisation](institution.qmd)** — la méthode qu'on dégage ensemble, et l'auto-évaluation.
+
+Une page de **[défis](defis.qmd)** est aussi proposée. Ils sont **optionnels** : si tu maîtrises déjà le socle, tu peux
+les faire en séance ; sinon, tu peux les ignorer sans rien manquer de la séance.
+
+## Les slides du cours
+
+Les slides de théorie associée sont sur
+**[Moodle](https://moodle.umons.ac.be/course/view.php?id=2657)** (chapitre IMSV-7).

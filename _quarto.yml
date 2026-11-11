@@ -58,6 +58,13 @@ book:
         - seances/seance06/supplementaires.qmd
         - seances/seance06/defis.qmd
         - seances/seance06/institution.qmd
+    #OFF07# - part: seances/seance07/index.qmd
+      #OFF07# chapters:
+        #OFF07# - seances/seance07/socle.qmd
+        #OFF07# - seances/seance07/transfert.qmd
+        #OFF07# - seances/seance07/supplementaires.qmd
+        #OFF07# - seances/seance07/defis.qmd
+        #OFF07# - seances/seance07/institution.qmd
     - part: seances/methode.qmd
       chapters:
         - seances/methodes/seance01.qmd
@@ -66,6 +73,7 @@ book:
         - seances/methodes/seance04.qmd
         - seances/methodes/seance05.qmd
         - seances/methodes/seance06.qmd
+        #OFF07# - seances/methodes/seance07.qmd
   page-footer:
     left: "IMSV — Faculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS"
     center: "Énoncés et correctif des exercices"

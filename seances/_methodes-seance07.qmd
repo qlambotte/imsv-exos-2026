@@ -1,0 +1,138 @@
+<!-- Cartes de méthode — SÉANCE 7 (Variations, limites et dérivées).
+     Fragment sans en-tête : inclus par la page methodes/seance07.qmd (site, correctif)
+     et par build-boite.sh pour le PDF « méthodes » (une méthode par page).
+     Mise en forme par le filtre methode.lua. Calc-free, notation du cours.
+     Les titres et objectifs (titre="…", obj="…") alimentent AUSSI la feuille à compléter
+     (feuille-auto.py) : ne les écris qu'ici. Pas de figure : build-boite.sh ne copie que ce fragment.
+     Les exemples sont différents des exercices de la séance.
+     Méthodes corrigées en séance : « Lire une limite sur un graphique » (S.3) et « Interpréter une dérivée dans un contexte » (T.1). -->
+
+::: {.methode obj="O1" titre="Calculer et interpréter un taux de variation"}
+
+::: {.quand}
+Dès qu'une grandeur est connue en deux instants, ou pour deux valeurs de la variable, et qu'il faut décrire comment elle a varié entre les deux.
+:::
+
+::: {.etapes}
+1. Repère l'intervalle $[a,\,b]$, avec $a < b$, les valeurs $f(a)$ et $f(b)$, et les unités de la grandeur et de la variable.
+2. Calcule la variation absolue $\Delta_{[a,b]}(f) = f(b) - f(a)$ : elle a l'unité de la grandeur, et son signe indique une augmentation ou une diminution.
+3. Calcule la variation relative $\Delta^{rel}_{[a,b]}(f) = \dfrac{f(b) - f(a)}{f(a)}$, sans unité, puis multiplie-la par $100$ pour obtenir un pourcentage.
+4. Calcule le taux de variation moyen $T_{[a,b]}(f) = \dfrac{f(b) - f(a)}{b - a}$ : il s'exprime en unité de la grandeur par unité de la variable, et c'est la pente de la sécante.
+5. Conclus par une phrase qui dit « en moyenne » : le taux ne donne aucune information sur ce qui se passe entre $a$ et $b$.
+:::
+
+::: {.exemple}
+Le poids d'un nourrisson passe de $4$ kg à $1$ mois à $6$ kg à $3$ mois.
+
+La variation absolue vaut $6 - 4 = 2$ kg, la variation relative vaut $\tfrac{2}{4} = 0{,}5$, soit $+50\,\%$, et le taux de variation moyen vaut $\tfrac{2}{3 - 1} = 1$ kg par mois. Entre $1$ et $3$ mois, le nourrisson a pris $50\,\%$ de son poids, soit en moyenne $1$ kg par mois.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à diviser la variation absolue par la valeur d'arrivée $f(b)$ pour obtenir la variation relative. Elle est tentante parce que les deux valeurs figurent dans le calcul, mais elle est fausse : la variation relative compare la variation à la valeur de départ $f(a)$. Une autre erreur consiste à oublier l'unité du taux, ou à le confondre avec la variation absolue : le taux divise encore par la durée $b - a$.
+:::
+
+:::
+
+::: {.methode obj="O3" titre="Lire une limite sur un graphique"}
+
+::: {.quand}
+Dès qu'une fonction est donnée par son graphique et qu'il faut déterminer sa limite en un point $a$, à gauche ou à droite de $a$, ou à l'horizon $-\infty$ ou $+\infty$.
+:::
+
+::: {.etapes}
+1. Repère sur l'axe horizontal le point $a$ vers lequel tend $x$, ou l'horizon $-\infty$ ou $+\infty$, et vérifie qu'on peut approcher $a$ en restant dans le domaine.
+2. Suis la courbe en approchant $a$ par la gauche, sans regarder le point d'abscisse $a$ lui-même : lis la valeur dont $f(x)$ se rapproche, ou note $+\infty$ ou $-\infty$ si la courbe monte ou descend sans limite.
+3. Fais de même par la droite.
+4. Conclus : si les deux limites orientées sont égales, la limite existe et vaut cette valeur ; si elles sont différentes, il n'y a pas de limite ; si une seule approche est possible, on se contente de la limite orientée disponible.
+5. Si la limite est infinie en un point fini, ou finie à un horizon infini, écris l'équation de l'asymptote. Compare enfin la limite à $f(a)$ pour parler de continuité.
+:::
+
+::: {.exemple}
+Le graphe d'une fonction $g$ se rapproche, des deux côtés de $x = 0$, d'un point vide $(0\,;\,-1)$ ; il présente aussi un point plein isolé en $(0\,;\,2)$.
+
+Par la gauche comme par la droite, $g(x)$ se rapproche de $-1$ : $\lim\limits_{x \to 0^-} g(x) = \lim\limits_{x \to 0^+} g(x) = -1$, donc $\lim\limits_{x \to 0} g(x) = -1$. On a $g(0) = 2 \neq -1$ : la limite existe, mais $g$ n'est pas continue en $0$.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à lire la limite sur le point plein, c'est-à-dire à répondre $f(a)$. Elle est tentante parce que ce point est dessiné en $x = a$, mais elle est fausse : la définition de la limite ne teste pas $x = a$ ; seules comptent les valeurs de $f(x)$ pour $x$ proche de $a$. Une autre erreur consiste à faire la moyenne des deux limites orientées quand elles diffèrent : dans ce cas, la limite n'existe pas.
+:::
+
+:::
+
+::: {.methode obj="O4" titre="Calculer une limite avec les propriétés algébriques"}
+
+::: {.quand}
+Dès qu'une fonction est une somme, un produit, un quotient ou une composée de fonctions dont on connaît les limites en $a$.
+:::
+
+::: {.etapes}
+1. Décompose l'expression en fonctions plus simples, par exemple $f(x) + 3 \cdot h(x)$ ou $\tfrac{g(x)}{f(x)}$.
+2. Détermine la limite de chaque morceau en $a$ : lue sur un graphique, donnée par l'énoncé, ou égale à la valeur en $a$ pour une fonction continue en $a$.
+3. Vérifie que ces limites existent et sont finies, et, pour un quotient, que la limite du dénominateur est différente de $0$.
+4. Applique la règle qui correspond à l'opération ; pour une composée $g\big(f(x)\big)$, calcule d'abord $b = \lim\limits_{x \to a} f(x)$, puis vérifie que $g$ est continue en $b$ et calcule $g(b)$.
+5. Si une condition n'est pas remplie, écris que la règle ne s'applique pas, sans inventer de résultat.
+:::
+
+::: {.exemple}
+On sait que $\lim\limits_{x \to 1} f(x) = 4$ et $\lim\limits_{x \to 1} g(x) = 2$. On calcule $\lim\limits_{x \to 1} \dfrac{f(x) + g(x)}{g(x)}$ et $\lim\limits_{x \to 1} \sqrt{f(x)}$.
+
+Le numérateur tend vers $4 + 2 = 6$ et le dénominateur vers $2 \neq 0$, donc la limite du quotient vaut $\tfrac{6}{2} = 3$. La racine est continue en $4$, donc $\lim\limits_{x \to 1} \sqrt{f(x)} = \sqrt{4} = 2$.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à appliquer la règle du quotient quand la limite du dénominateur est nulle. Elle est tentante parce que les autres règles s'appliquent sans condition, mais elle est fausse : on ne divise jamais par une limite nulle. Une autre erreur, pour une composée, consiste à calculer $g(a)$ au lieu de $g(b)$ : la fonction $g$ reçoit $f(x)$, qui tend vers $b$.
+:::
+
+:::
+
+::: {.methode obj="O7" titre="Interpréter une dérivée dans un contexte"}
+
+::: {.quand}
+Dès qu'une grandeur dépend d'une variable, souvent le temps, et qu'il faut donner ou utiliser sa vitesse de variation à un instant précis.
+:::
+
+::: {.etapes}
+1. Repère la grandeur $f$, la variable et leurs unités.
+2. Distingue le taux de variation moyen $T_{[a,b]}(f)$, calculé entre deux instants, du taux instantané $f'(a)$, qui est la pente de la tangente au point $(a\,;\,f(a))$.
+3. Obtiens $f'(a)$ : par la pente de la tangente tracée, par le quotient différentiel, ou par une estimation avec un taux moyen sur un petit intervalle autour de $a$.
+4. Écris l'unité de $f'(a)$ : unité de la grandeur divisée par unité de la variable ; interprète le signe (augmentation ou diminution) et la valeur.
+5. Pour estimer une valeur proche, utilise l'approximation linéaire $f(a + h) \approx f(a) + f'(a) \cdot h$, avec $h$ dans l'unité de la variable.
+:::
+
+::: {.exemple}
+La masse d'une culture vaut $M(5) = 40$ g à l'instant $t = 5$ h, et la tangente à la courbe en ce point a une pente de $6$.
+
+On a $M'(5) = 6$ g/h : à l'instant $t = 5$ h, la masse augmente à la vitesse de $6$ g par heure. Une demi-heure plus tard, $M(5{,}5) \approx 40 + 6 \cdot 0{,}5 = 43$ g.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à confondre $f(a)$ et $f'(a)$, par exemple à dire que la masse vaut $6$ g. Elle est tentante parce que les deux nombres concernent le même instant, mais elle est fausse : $f(a)$ est une valeur de la grandeur, alors que $f'(a)$ est une vitesse de variation, avec une autre unité. Une autre erreur consiste à exprimer $h$ dans une autre unité que la variable, par exemple $h = 30$ pour une demi-heure quand $t$ est en heures.
+:::
+
+:::
+
+::: {.methode obj="O8" titre="Vérifier la plausibilité d'une dérivée"}
+
+::: {.quand}
+Dès qu'une expression de $f'$ est proposée, trouvée par un calcul ou donnée, et qu'il faut contrôler qu'elle est compatible avec le graphique de $f$, là où elle est croissante et là où elle est décroissante.
+:::
+
+::: {.etapes}
+1. Contrôle le signe : là où $f$ est croissante, $f'$ doit être positive ; là où $f$ est décroissante, $f'$ doit être négative.
+2. Contrôle les zéros : là où la tangente est horizontale, par exemple en un maximum ou un minimum, $f'$ doit s'annuler.
+3. Contrôle une valeur : calcule $f'(a)$ en un point et compare-la à la pente de la tangente tracée, ou à des taux de variation moyens sur de petits intervalles de part et d'autre de $a$.
+4. Contrôle l'unité : celle de $f$ divisée par celle de la variable.
+5. Conclus : une proposition qui échoue à un seul contrôle est fausse ; une proposition qui les réussit tous est plausible.
+:::
+
+::: {.exemple}
+Pour $f(x) = 4 - x^{2}$, on propose $f'(x) = 2x$.
+
+La fonction $f$ est décroissante sur $[0,\,+\infty[$, donc $f'(1)$ doit être négative ; or la proposition donne $f'(1) = 2 > 0$. Elle n'est pas plausible : le signe est inversé.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à n'effectuer qu'un seul contrôle, par exemple la valeur en un point. Elle est tentante parce qu'un contrôle réussi rassure, mais elle est insuffisante : plusieurs expressions peuvent passer un contrôle ; une dérivée plausible doit les passer tous.
+:::
+
+:::

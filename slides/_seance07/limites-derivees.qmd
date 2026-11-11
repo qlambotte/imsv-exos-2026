@@ -177,7 +177,7 @@ Une question Wooclap par sous-question (les choix sont dans wooclap-S3.md). On c
 
 :::::: columns
 ::::: {.column width="55%"}
-Lis $\lim_{x \to -1} f(x)$, puis $f(-1)$.
+Lis $\lim\limits_{x \to -1} f(x)$, puis $f(-1)$.
 
 . . .
 
@@ -185,7 +185,7 @@ Lis $\lim_{x \to -1} f(x)$, puis $f(-1)$.
 
 . . .
 
-[2]{.step} Donc $\lim_{x \to -1} f(x) = 1$.
+[2]{.step} Donc $\lim\limits_{x \to -1} f(x) = 1$.
 
 . . .
 
@@ -194,7 +194,7 @@ Lis $\lim_{x \to -1} f(x)$, puis $f(-1)$.
 . . .
 
 ::: aretenir
-**Piège : lire la limite sur le point plein.** La limite ne teste pas $x = -1$ : $\lim_{x \to -1} f(x) = 1 \neq 3 = f(-1)$. Il peut y avoir un « trou ».
+**Piège : lire la limite sur le point plein.** La limite ne teste pas $x = -1$ : $\lim\limits_{x \to -1} f(x) = 1 \neq 3 = f(-1)$. Il peut y avoir un « trou ».
 :::
 :::::
 ::::: {.column width="45%"}
@@ -206,15 +206,15 @@ Lis $\lim_{x \to -1} f(x)$, puis $f(-1)$.
 
 :::::: columns
 ::::: {.column width="55%"}
-Lis $\lim_{x \to 1^-} f(x)$, $\lim_{x \to 1^+} f(x)$ et $f(1)$. La fonction $f$ admet-elle une limite en $1$ ?
+Lis $\lim\limits_{x \to 1^-} f(x)$, $\lim\limits_{x \to 1^+} f(x)$ et $f(1)$. La fonction $f$ admet-elle une limite en $1$ ?
 
 . . .
 
-[1]{.step} Par la gauche, la courbe arrive au point vide $(1\,;\,2)$ : $\lim_{x \to 1^-} f(x) = 2$.
+[1]{.step} Par la gauche, la courbe arrive au point vide $(1\,;\,2)$ : $\lim\limits_{x \to 1^-} f(x) = 2$.
 
 . . .
 
-[2]{.step} Par la droite, elle part du point plein $(1\,;\,4)$ : $\lim_{x \to 1^+} f(x) = 4$, et $f(1) = 4$.
+[2]{.step} Par la droite, elle part du point plein $(1\,;\,4)$ : $\lim\limits_{x \to 1^+} f(x) = 4$, et $f(1) = 4$.
 
 . . .
 
@@ -235,15 +235,15 @@ Lis $\lim_{x \to 1^-} f(x)$, $\lim_{x \to 1^+} f(x)$ et $f(1)$. La fonction $f$ 
 
 :::::: columns
 ::::: {.column width="55%"}
-Lis $\lim_{x \to -3^-} f(x)$ et $\lim_{x \to -3^+} f(x)$.
+Lis $\lim\limits_{x \to -3^-} f(x)$ et $\lim\limits_{x \to -3^+} f(x)$.
 
 . . .
 
-[1]{.step} À gauche de $-3$, la courbe monte le long de la droite verticale : $\lim_{x \to -3^-} f(x) = +\infty$.
+[1]{.step} À gauche de $-3$, la courbe monte le long de la droite verticale : $\lim\limits_{x \to -3^-} f(x) = +\infty$.
 
 . . .
 
-[2]{.step} À droite de $-3$, elle descend le long de cette droite : $\lim_{x \to -3^+} f(x) = -\infty$.
+[2]{.step} À droite de $-3$, elle descend le long de cette droite : $\lim\limits_{x \to -3^+} f(x) = -\infty$.
 
 . . .
 
@@ -260,11 +260,11 @@ Une **limite infinie en un point fini** donne une **asymptote verticale** : ici,
 
 :::::: columns
 ::::: {.column width="55%"}
-Lis $\lim_{x \to -\infty} f(x)$, puis $\lim_{x \to 5} f(x)$.
+Lis $\lim\limits_{x \to -\infty} f(x)$, puis $\lim\limits_{x \to 5} f(x)$.
 
 . . .
 
-[1]{.step} Vers la gauche, la courbe se rapproche de la droite horizontale $y = 1$ : $\lim_{x \to -\infty} f(x) = 1$, une **asymptote horizontale**.
+[1]{.step} Vers la gauche, la courbe se rapproche de la droite horizontale $y = 1$ : $\lim\limits_{x \to -\infty} f(x) = 1$, une **asymptote horizontale**.
 
 . . .
 
@@ -272,7 +272,7 @@ Lis $\lim_{x \to -\infty} f(x)$, puis $\lim_{x \to 5} f(x)$.
 
 . . .
 
-[3]{.step} On se contente de la limite orientée disponible : $\lim_{x \to 5} f(x) = 0$.
+[3]{.step} On se contente de la limite orientée disponible : $\lim\limits_{x \to 5} f(x) = 0$.
 
 . . .
 
@@ -329,7 +329,7 @@ Une fonction est donnée par son graphique et il faut sa limite en un point $a$,
 ::: {.fiche-field .fragment}
 Exemple
 
-Graphe proche de $(0\,;\,-1)$ des deux côtés, point plein en $(0\,;\,2)$ : $\lim_{x \to 0} g(x) = -1$, et $g$ n'est pas continue en $0$.
+Graphe proche de $(0\,;\,-1)$ des deux côtés, point plein en $(0\,;\,2)$ : $\lim\limits_{x \to 0} g(x) = -1$, et $g$ n'est pas continue en $0$.
 :::
 
 ::: {.fiche-field .fragment}

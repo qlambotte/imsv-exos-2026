@@ -1,0 +1,5 @@
+::: {.seance-meta}
+**Thème.** Variation absolue, variation relative et taux de variation moyen, sécante, limites (lecture graphique, limites à gauche et à droite, règles de calcul), asymptotes, continuité, dérivée comme pente de la tangente et taux instantané, approximation linéaire, dérivées itérées.
+
+**Théorie associée :** IMSV-7, *« Variations, limites et dérivées »*.
+:::

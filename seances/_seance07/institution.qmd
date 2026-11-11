@@ -1,0 +1,42 @@
+---
+title: "Institutionnalisation — méthode & auto-évaluation"
+subtitle: "Séance 7 · ce qu'on retient"
+---
+
+## Les méthodes qu'on dégage ensemble
+
+À la fin du socle, la confrontation puis la correction de l'exercice S.3 dégagent la méthode pour **lire une limite sur un graphique** :
+
+- **repérer** sur l'axe horizontal le point $a$ vers lequel tend $x$, ou l'horizon $-\infty$ ou $+\infty$ ;
+- **suivre** la courbe en approchant $a$ par la gauche, puis par la droite, **sans regarder** le point d'abscisse $a$ lui-même ;
+- **lire** la valeur dont $f(x)$ se rapproche, ou noter que $f(x)$ devient aussi grand ou aussi négatif qu'on veut ($+\infty$ ou $-\infty$) ;
+- **conclure** : la limite existe si les deux limites orientées sont égales, ou si une seule approche est possible ; la comparer ensuite à $f(a)$ pour parler de continuité.
+
+En fin de séance, la confrontation puis la correction de l'exercice de transfert T.1 dégagent la méthode pour **interpréter une dérivée dans un contexte** :
+
+- **repérer** la grandeur, la variable et leurs unités ;
+- **distinguer** le taux de variation moyen, calculé entre deux instants, du taux instantané $f'(a)$, qui est la pente de la tangente au point d'abscisse $a$ ;
+- **écrire** l'unité de la dérivée : unité de la grandeur divisée par unité de la variable ;
+- **interpréter** le signe et la valeur de $f'(a)$, puis **estimer** une valeur proche par l'approximation linéaire $f(a + h) \approx f(a) + f'(a) \cdot h$.
+
+Ces méthodes rejoignent ta **[boîte à outils](../methode.qmd)** : elles resserviront à chaque séance. Tu y
+trouveras aussi trois autres méthodes de la séance 7 : calculer et interpréter un taux de variation, calculer une limite avec les propriétés algébriques, et vérifier la plausibilité d'une dérivée.
+
+## Auto-évaluation — coche ce que tu sais faire
+
+Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **objectifs** de la séance.
+
+- [ ] **O1** — calculer et interpréter une variation absolue, une variation relative et un taux de variation moyen ;
+- [ ] **O2** — relier taux moyen et pente de sécante ;
+- [ ] **O3** — comprendre limite, continuité et dérivée, savoir les interpréter et les exploiter ;
+- [ ] **O4** — utiliser les propriétés algébriques des limites ;
+- [ ] **O5** — mobiliser la notion d'asymptote ;
+- [ ] **O6** — reconnaître une fonction continue et/ou dérivable ;
+- [ ] **O7** — relier dérivée, pente de la tangente et taux instantané ;
+- [ ] **O8** — vérifier la plausibilité d'une dérivée ;
+- [ ] **O9** — utiliser des dérivées itérées.
+
+::: {.callout-important appearance="simple"}
+Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la
+**remédiation** (une séance chaque semaine pour reprendre les bases).
+:::
