@@ -58,7 +58,7 @@ Retourne à la théorie du cours : *Taux de variation moyen* pour (a), *Dérivé
 :::
 
 ::: {.reponse}
-**Réponse (b).** $H'(13) \approx 7$ cm/an : à $13$ ans, la taille médiane augmente à la vitesse d'environ $7$ cm par an.
+**Réponse (b).** $H'(13) = 7$ cm/an : à $13$ ans, la taille médiane augmente à la vitesse de $7$ cm par an.
 :::
 
 ::: {.reponse}
@@ -154,9 +154,9 @@ La fonction $C$ est décroissante : la pente de chaque tangente est négative, d
 
 ## Piège
 
-En (c), une erreur fréquente consiste à garder la proposition 3 parce que sa valeur est négative. 
+En (c), une erreur fréquente consiste à garder la proposition 3 parce que sa valeur est négative. Elle est tentante parce que le signe est correct, mais elle est insuffisante : une dérivée plausible doit passer tous les contrôles, et la valeur $-6{,}9$ est incompatible avec l'encadrement trouvé en (b).
 
-En (b), une autre erreur consiste à croire que la dérivée devient positive parce que la diminution ralentit. 
+En (b), une autre erreur consiste à croire que la dérivée devient positive parce que la diminution ralentit. Elle est tentante parce que la pente « augmente », mais elle est fausse : la pente se rapproche de $0$ en restant négative, puisque la concentration diminue toujours.
 
 :::
 :::
@@ -164,7 +164,7 @@ En (b), une autre erreur consiste à croire que la dérivée devient positive pa
 ::: {.callout-caution .exo title="Exercice|Transfert|2|O5"}
 La vitesse $v$ d'une réaction catalysée par une enzyme dépend de la concentration $s$ du substrat. Selon le modèle de Michaelis et Menten,[^mm-t3]
 $$v(s) = \dfrac{V_{max}\, s}{K_M + s},$$
-où $V_{max}$ et $K_M$ sont des constantes strictement positives propres à l'enzyme. Pour l'enzyme étudiée, on prend $V_{max} = 10$ µmol/min et $K_M = 2$ mmol/L.
+où $V_{max}$ et $K_M$ sont des constantes strictement positives propres à l'enzyme. Pour l'enzyme étudiée, on prend $V_{max} = 10$ µmol/min et $K_M = 2$ mmol/L, valeurs choisies pour l'exercice : $v(s) = \dfrac{10\,s}{2 + s}$, pour $s \geq 0$.
 
 ![](img/t-michaelis.svg){fig-alt="Courbe croissante de la vitesse v en fonction de s, qui part de l'origine, passe par (2 ; 5), (6 ; 7,5) et (18 ; 9), et se rapproche de la droite pointillée horizontale v = 10 sans l'atteindre." width="11cm" fig-align="center"}
 
@@ -214,7 +214,7 @@ $v(2) = \dfrac{20}{4} = 5$, $v(6) = \dfrac{60}{8} = 7{,}5$ et $v(18) = \dfrac{18
 :::
 
 ::: {.details}
-Quand $s$ devient très grand, la courbe se rapproche de la droite pointillée $v = 10$ : c'est une limite finie à un horizon infini, donc une asymptote horizontale. Les valeurs de (a) le confirment : $5$, puis $7{,}5$, puis $9$. 
+Quand $s$ devient très grand, la courbe se rapproche de la droite pointillée $v = 10$ : c'est une limite finie à un horizon infini, donc une asymptote horizontale. Les valeurs de (a) le confirment : $5$, puis $7{,}5$, puis $9$. Pour la réaction, l'enzyme est saturée : ajouter du substrat ne permet plus d'augmenter beaucoup la vitesse, qui plafonne à $V_{max}$.
 :::
 
 ::: {.reponse}
@@ -233,6 +233,82 @@ Quand $s$ devient très grand, la courbe se rapproche de la droite pointillée $
 En (b), une erreur fréquente consiste à dire que la limite n'existe pas parce que la courbe n'atteint jamais $10$. Elle est tentante parce que la vitesse ne vaut jamais exactement $V_{max}$, mais elle est fausse : une limite n'a pas besoin d'être atteinte ; il suffit que $v(s)$ se rapproche autant qu'on veut de $10$.
 
 En (c), une autre erreur consiste à donner le même signe aux deux limites. Elle est tentante parce que le numérateur garde le même signe, mais elle est fausse : le dénominateur change de signe en $s = -2$, donc les deux limites orientées sont de signes opposés.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O9"}
+Pour mesurer la détente d'un sportif, on mesure le temps de vol $t_{v}$ d'un saut vertical, c'est-à-dire la durée entre le décollage et la réception, et on en déduit la hauteur du saut.[^bosco-t4] On suppose que, pendant le vol, la hauteur du centre de masse du sportif au-dessus de sa position au décollage vaut
+$$h(t) = 3t - 5t^{2},$$
+où $h$ est en mètres et $t$ est le temps écoulé depuis le décollage, en secondes. Ces valeurs sont choisies pour l'exercice ; le nombre $5$ correspond à $\tfrac{g}{2}$, avec $g \approx 10$ m/s². On admet que la vitesse verticale vaut $h'(t) = 3 - 10t$, en m/s : on l'obtient avec le quotient différentiel, comme dans l'exercice S.6.
+
+(a) Interprète $h'(0)$. En répétant l'opération sur $h'$, calcule ensuite l'accélération $h''(t)$, et interprète son signe et sa valeur.
+(b) À quel instant le sportif atteint-il le sommet de son saut ? Calcule la hauteur du saut.
+(c) Calcule le temps de vol $t_{v}$. Vérifie que la hauteur du saut est égale à $\dfrac{g\,t_{v}^{2}}{8}$, la formule qui permet de la déduire du temps de vol mesuré.
+
+[^bosco-t4]: C. Bosco, P. Luhtanen et P. V. Komi, « A simple method for measurement of mechanical power in jumping », *European Journal of Applied Physiology and Occupational Physiology*, 50(2), 1983, p. 273–282 : méthode qui mesure le temps de vol des sauts, au millième de seconde, pour évaluer la puissance des muscles extenseurs des jambes. https://doi.org/10.1007/BF00422166.
+
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Application : accélération d'un mobile* et *Dérivées itérées* pour (a), et *Dérivée : trois interprétations* pour (b).
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Quel est le signe de $h'(0)$, et quelle force agit sur le sportif pendant le vol ?
+(b) Que vaut la vitesse verticale au sommet du saut ?
+(c) À quels instants la hauteur $h(t)$ vaut-elle $0$ ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Note $u$ l'accroissement du temps, pour ne pas le confondre avec la hauteur $h$ ; écris le quotient différentiel $\dfrac{h'(t + u) - h'(t)}{u}$ et simplifie-le.
+(b) Résous l'équation $h'(t) = 0$, puis calcule $h$ en cet instant.
+(c) Mets $t$ en facteur dans $3t - 5t^{2} = 0$, puis calcule $\tfrac{10 \cdot t_{v}^{2}}{8}$.
+
+## Solution
+
+::: {.reponse}
+**Réponse (a).** $h'(0) = 3$ m/s : le sportif décolle avec une vitesse verticale de $3$ m/s, vers le haut. $h''(t) = -10$ m/s² : l'accélération est constante et négative ; c'est la pesanteur, qui diminue la vitesse verticale de $10$ m/s chaque seconde.
+:::
+
+::: {.details}
+1. $h'(0) = 3$ est positif : au décollage, la hauteur augmente à la vitesse de $3$ m/s.
+2. $\dfrac{h'(t + u) - h'(t)}{u} = \dfrac{3 - 10t - 10u - 3 + 10t}{u} = -10$ pour $u \neq 0$, donc $h''(t) = -10$.
+3. L'accélération est le taux de variation instantané de la vitesse : elle s'exprime en m/s². Elle est négative, donc la vitesse verticale diminue : le sportif ralentit en montant, puis accélère vers le bas en redescendant. Sa valeur est $-g$ : pendant le vol, seule la pesanteur agit.
+:::
+
+::: {.reponse}
+**Réponse (b).** Le sportif atteint le sommet à l'instant $t = 0{,}3$ s ; la hauteur du saut vaut $h(0{,}3) = 0{,}45$ m, soit $45$ cm.
+:::
+
+::: {.details}
+1. Au sommet, la hauteur cesse d'augmenter avant de diminuer : la tangente est horizontale, donc $h'(t) = 0$, c'est-à-dire $3 - 10t = 0$ et $t = 0{,}3$ s.
+2. $h(0{,}3) = 3 \cdot 0{,}3 - 5 \cdot 0{,}09 = 0{,}9 - 0{,}45 = 0{,}45$ m.
+:::
+
+::: {.reponse}
+**Réponse (c).** Le temps de vol vaut $t_{v} = 0{,}6$ s, et $\dfrac{g\,t_{v}^{2}}{8} = \dfrac{10 \cdot 0{,}36}{8} = 0{,}45$ m, la hauteur trouvée en (b).
+:::
+
+::: {.details}
+1. Le sportif retombe à sa hauteur de départ lorsque $h(t) = 0$, c'est-à-dire $t\,(3 - 5t) = 0$ : $t = 0$ (le décollage) ou $t = 0{,}6$ s (la réception). Donc $t_{v} = 0{,}6$ s.
+2. Le temps de vol est le double du temps de montée $0{,}3$ s : la montée et la descente durent autant.
+3. $\dfrac{g\,t_{v}^{2}}{8} = \dfrac{10 \cdot 0{,}36}{8} = \dfrac{3{,}6}{8} = 0{,}45$ m.
+:::
+
+## Piège
+
+En (a), une erreur fréquente consiste à noter $h$ à la fois la hauteur et l'accroissement du temps. Elle est tentante parce que le cours écrit $f(a + h)$, mais elle est fausse : $h$ désigne ici la fonction hauteur, donc on note l'accroissement autrement, par exemple $u$.
+
+En (a) et en (b), une autre erreur consiste à dire que l'accélération est nulle au sommet, parce que la vitesse y est nulle. Elle est tentante parce que le sportif « s'arrête » un instant, mais elle est fausse : la vitesse s'annule, mais elle continue de diminuer ; l'accélération vaut $-10$ m/s² à chaque instant du vol.
 
 :::
 :::

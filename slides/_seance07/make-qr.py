@@ -14,9 +14,9 @@ from pathlib import Path
 
 # >>> À COMPLÉTER : les codes ou liens des trois événements Wooclap <<<
 LIENS = {
-    "qr-echauffement": "A_COMPLETER",
-    "qr-socle": "A_COMPLETER",
-    "qr-transf": "A_COMPLETER"
+    "qr-echauffement": "https://app.wooclap.com/JOEZLXL?from=instruction-slide",
+    "qr-socle": "https://app.wooclap.com/MFXKRIE?from=instruction-slide",
+    "qr-transf": "https://app.wooclap.com/YXBABGJ?from=instruction-slide"
 }
 
 OUT = Path(__file__).parent / "img"

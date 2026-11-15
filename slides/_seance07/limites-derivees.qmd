@@ -27,6 +27,59 @@ format:
     include-after-body: ../seance01/annotate.html
 ---
 
+## Annonce {.annonce background-color="#ffffff"}
+
+::: {.ann-wrap}
+
+::: {.ann-haut}
+![](img/annonce-umons.png){.ann-logo}
+
+![](img/annonce-photo.jpg){.ann-photo}
+:::
+
+::: {.ann-corps}
+::: {.ann-texte}
+**Participation à une recherche :**
+
+**Choix d'orientation et motivation à s'engager dans des études scientifiques**
+
+Quand ? Jusqu'au 30/11/26
+
+Durée ? Environ 15 minutes
+
+Où ? QR code ou lien :
+
+[forms.cloud.microsoft/e/MDU6pXraXu](https://forms.cloud.microsoft/e/MDU6pXraXu?origin=lprLink){.ann-lien}
+:::
+
+![](img/annonce-qr.png){.ann-qr}
+:::
+
+![](img/annonce-fmpb.jpg){.ann-fmpb}
+
+:::
+
+::: notes
+Annonce avant de commencer : questionnaire de recherche de la faculté (orientation et motivation), environ 15 minutes, ouvert jusqu'au 30/11/26. Laisser le QR code affiché pendant l'arrivée des étudiants. Slide reprise de Questionnaire_orientation_et_motivation-FMBP-novembre2026.pptx.
+:::
+
+```{=html}
+<style>
+.reveal .annonce h2 { display: none; }
+.reveal .annonce .ann-wrap { position: relative; height: 740px; }
+.reveal .annonce .ann-haut { display: flex; align-items: center; gap: 40px; height: 230px; }
+.reveal .annonce .ann-logo { height: 105px; margin: 0; }
+.reveal .annonce .ann-photo { height: 230px; margin: 0; flex: 1; object-fit: cover; }
+.reveal .annonce .ann-corps { display: flex; align-items: center; gap: 40px; margin-top: 30px; }
+.reveal .annonce .ann-texte { flex: 1; font-size: .85em; line-height: 1.35; }
+.reveal .annonce .ann-texte p { margin: .35em 0; }
+.reveal .annonce .ann-texte p:nth-child(-n+2) { color: #c8102e; font-size: 1.15em; }
+.reveal .annonce .ann-qr { height: 380px; margin: 0; }
+.reveal .annonce .ann-lien { font-size: .8em; }
+.reveal .annonce .ann-fmpb { position: absolute; right: 0; bottom: 0; height: 80px; margin: 0; }
+</style>
+```
+
 # Échauffement {.divider background-color="#14304a"}
 
 ## Les questions
@@ -48,15 +101,13 @@ format:
 **Vote sur Wooclap**
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : JOEZLXL
 :::
 ::::
 
-<!-- Décommenter après python3 make-qr.py :
 ::: {.wc-qr}
 ![](img/qr-echauffement.png)
 :::
--->
 
 :::::
 
@@ -88,7 +139,7 @@ Quelle est la pente de la droite qui passe par $(1\,;\,5)$ et $(4\,;\,-1)$ ?
 ::: aretenir
 La pente est la variation de $y$ divisée par la variation de $x$ : $m = \dfrac{-1 - 5}{4 - 1} = \dfrac{-6}{3} = -2$.
 
-C'est exactement le calcul d'un **taux de variation moyen** : la pente de la sécante.
+C'est exactement le calcul d'un **taux de variation moyen** (entre les deux points).
 :::
 
 ::: notes
@@ -102,9 +153,8 @@ Quelle est l'équation de la droite de pente $3$ qui passe par $(1\,;\,2)$ ?
 . . .
 
 ::: aretenir
-On écrit $y = 2 + 3(x - 1)$, c'est-à-dire $y = 3x - 1$. Vérification : pour $x = 1$, on obtient $y = 2$.
+On sait qu'une équation est de la forme $y=3x+p$. Comme $(1\,;\,2)$ est un point de la droite, $2=3\cdot 1+p$ et donc $p=-1$. Finalement, une équation de la droite est $y=3x-1$.
 
-C'est la forme de la **tangente** : $y = f(a) + f'(a) \cdot (x - a)$.
 :::
 
 ::: notes
@@ -118,9 +168,15 @@ Pour $h \neq 0$, simplifie $\dfrac{(2 + h)^{2} - 4}{h}$.
 . . .
 
 ::: aretenir
-$(2 + h)^{2} - 4 = 4 + 4h + h^{2} - 4 = h\,(4 + h)$, donc, comme $h \neq 0$, $\dfrac{(2 + h)^{2} - 4}{h} = 4 + h$.
+$(2 + h)^{2} - 4 = 4 + 4h + h^{2} - 4 = h\,(4 + h)$.
 
-C'est le **quotient différentiel** de $x^{2}$ en $2$ : quand $h$ tend vers $0$, il tend vers $4$.
+. . .
+
+Donc, comme $h \neq 0$, $\dfrac{(2 + h)^{2} - 4}{h} = $\dfrac{h(4+h)}{h}=4 + h$.
+
+. . .
+
+Bonus: c'est le **quotient différentiel** de $x^{2}$ en $2$ : quand $h$ tend vers $0$, il tend vers $4$.
 :::
 
 ::: notes
@@ -156,15 +212,13 @@ Quinze minutes : environ 8 minutes de correction, puis 7 minutes pour la carte �
 **Vote sur Wooclap**.
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : MFXKRIE
 :::
 ::::
 
-<!-- Décommenter après python3 make-qr.py :
 ::: {.wc-qr}
 ![](img/qr-socle.png)
 :::
--->
 :::::
 :::::::::::
 :::::::::::::::
@@ -214,7 +268,7 @@ Lis $\lim\limits_{x \to 1^-} f(x)$, $\lim\limits_{x \to 1^+} f(x)$ et $f(1)$. La
 
 . . .
 
-[2]{.step} Par la droite, elle part du point plein $(1\,;\,4)$ : $\lim\limits_{x \to 1^+} f(x) = 4$, et $f(1) = 4$.
+[2]{.step} Par la droite, elle arrive du point plein $(1\,;\,4)$ : $\lim\limits_{x \to 1^+} f(x) = 4$, et $f(1) = 4$.
 
 . . .
 
@@ -264,7 +318,7 @@ Lis $\lim\limits_{x \to -\infty} f(x)$, puis $\lim\limits_{x \to 5} f(x)$.
 
 . . .
 
-[1]{.step} Vers la gauche, la courbe se rapproche de la droite horizontale $y = 1$ : $\lim\limits_{x \to -\infty} f(x) = 1$, une **asymptote horizontale**.
+[1]{.step} Vers la gauche, la courbe se rapproche de la droite horizontale $y = 1$ : $\lim\limits_{x \to -\infty} f(x) = 1$ et la droite $y=1$ est une **asymptote horizontale**.
 
 . . .
 
@@ -318,10 +372,10 @@ Une fonction est donnée par son graphique et il faut sa limite en un point $a$,
 Étapes
 
 ::: incremental
-1.  **Repère** $a$ (ou $\pm\infty$) et vérifie qu'on peut l'approcher dans le domaine.
-2.  **Suis** la courbe par la gauche, **sans regarder** le point d'abscisse $a$ : lis la valeur, ou $\pm\infty$.
+1.  **Repère** $a$ sur l'axe $x$ (ou $\pm\infty$) et vérifie qu'on peut l'approcher dans le domaine.
+2.  **Suis**, si c'est possible, la courbe par la gauche, **sans regarder** le point d'abscisse $a$ : lis la valeur, ou $\pm\infty$.
 3.  **Fais de même** par la droite.
-4.  **Conclus** : limites orientées égales, la limite existe ; différentes, pas de limite ; une seule approche possible, elle suffit.
+4.  **Conclus** : limites orientées égales, la limite existe ; différentes, pas de limite ; si une seule approche possible, elle suffit.
 5.  **Écris** l'asymptote si la limite est infinie en un point fini ou finie en $\pm\infty$ ; **compare** à $f(a)$ pour la continuité.
 :::
 ::::
@@ -329,7 +383,7 @@ Une fonction est donnée par son graphique et il faut sa limite en un point $a$,
 ::: {.fiche-field .fragment}
 Exemple
 
-Graphe proche de $(0\,;\,-1)$ des deux côtés, point plein en $(0\,;\,2)$ : $\lim\limits_{x \to 0} g(x) = -1$, et $g$ n'est pas continue en $0$.
+Reprendre quelques exemple de l'exercice.
 :::
 
 ::: {.fiche-field .fragment}
@@ -386,15 +440,13 @@ La tangente en $t = 13$ passe par $(13\,;\,156)$ et $(15\,;\,170)$.
 **Vote sur Wooclap**.
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : YXBABGJ
 :::
 ::::
 
-<!-- Décommenter après python3 make-qr.py :
 ::: {.wc-qr}
 ![](img/qr-transf.png)
 :::
--->
 :::::
 :::::::::::
 :::::::::::::::
@@ -437,7 +489,7 @@ Lis $H'(13)$ sur le graphique, avec son unité, et écris ce qu'il signifie.
 
 . . .
 
-[3]{.step} $H'(13) \approx 7$ cm/an : à $13$ ans, la taille augmente à la **vitesse** de $7$ cm par an.
+[3]{.step} $H'(13) = 7$ cm/an : à $13$ ans, la taille augmente à la **vitesse** de $7$ cm par an.
 
 . . .
 
@@ -456,6 +508,10 @@ Lis $H'(13)$ sur le graphique, avec son unité, et écris ce qu'il signifie.
 
 . . .
 
+Pour rappel: l'approximation linéaire au point d'abscisse $13$ dit que pour $t$ petit $H(13+t)\approx H(13)+H'(13)\cdot t$.
+
+. . .
+
 [1]{.step} $t$ est en années : $3$ mois $= \tfrac{3}{12} = 0{,}25$ an, donc $h = 0{,}25$.
 
 . . .
@@ -465,7 +521,7 @@ Lis $H'(13)$ sur le graphique, avec son unité, et écris ce qu'il signifie.
 . . .
 
 ::: aretenir
-Environ $157{,}8$ cm ; l'OMS donne $157{,}9$ cm. **Piège : $h = 3$** donnerait $177$ cm : $h$ s'exprime dans l'unité de la variable.
+L'approximation donne $157{,}8$ cm ; l'OMS donne $157{,}9$ cm.
 :::
 
 ## La carte « Interpréter une dérivée dans un contexte » {.smaller}
@@ -505,7 +561,7 @@ Une grandeur dépend d'une variable, souvent le temps, et il faut donner ou util
 2.  **Distingue** le taux moyen $T_{[a,b]}(f)$, entre deux instants, du taux instantané $f'(a)$, pente de la tangente.
 3.  **Obtiens** $f'(a)$ : pente de la tangente, quotient différentiel, ou taux moyen sur un petit intervalle autour de $a$.
 4.  **Écris** l'unité (grandeur par variable) ; **interprète** le signe et la valeur.
-5.  **Estime** une valeur proche : $f(a + h) \approx f(a) + f'(a) \cdot h$, avec $h$ dans l'unité de la variable.
+5.  **Estime** une valeur proche, si c'est demandé: $f(a + h) \approx f(a) + f'(a) \cdot h$, avec $h$ dans l'unité de la variable.
 :::
 ::::
 

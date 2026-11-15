@@ -33,7 +33,7 @@ oublie de diviser par la durée ; $14{,}1$ cm est la variation absolue ; $9{,}5\
 > La tangente à la courbe au point d'abscisse $13$ passe par $(13\,;\,156)$ et $(15\,;\,170)$. Que vaut $H'(13)$ ?
 
 **Choix :**
-- (X) environ $7$ cm/an
+- (X) $7$ cm/an
 - ( ) $156$ cm
 - ( ) $14$ cm/an
 - ( ) $156$ cm/an
@@ -48,7 +48,7 @@ confondent $H'(13)$ avec $H(13)$ ; $14$ cm/an oublie de diviser par $15 - 13 = 2
 **Type Wooclap :** QCM · réponse unique
 
 **Énoncé à coller :**
-> Avec $H(13) = 156$ cm et $H'(13) \approx 7$ cm/an, quelle est l'estimation de la taille médiane à $13$ ans et $3$ mois ?
+> Avec $H(13) = 156$ cm et $H'(13) = 7$ cm/an, quelle est l'estimation de la taille médiane à $13$ ans et $3$ mois ?
 
 **Choix :**
 - (X) environ $157{,}8$ cm
