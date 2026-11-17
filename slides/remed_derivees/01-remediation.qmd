@@ -1,6 +1,6 @@
 ---
 title: "Remédiation IMSV"
-subtitle: "Thème : Variations, limites et dérivées (séance 7)"
+subtitle: "Thème : Les dérivées (séance 7)"
 description: "QCM, notions clés, appli sécante et tangente, corrections ciblées et exercices de renforcement sur les variations, les limites et les dérivées (séance 7)"
 author: "Quentin Lambotte · FMPB · UMONS"
 lang: fr

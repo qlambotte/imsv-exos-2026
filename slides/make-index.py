@@ -347,8 +347,9 @@ TEMPLATE = """<!doctype html>
   .go{font-weight:700;color:var(--c);white-space:nowrap;font-size:.95rem;}
   .go:hover{text-decoration:underline;}
   .rms{display:flex;flex-direction:column;align-items:flex-end;gap:.25rem;}
-  .rm{display:flex;align-items:baseline;gap:.45rem;}
-  .ch{font-size:.85rem;font-weight:500;padding:.12rem .55rem;border-radius:.4rem;white-space:nowrap;
+  .rms{min-width:0;max-width:100%;}
+  .rm{display:flex;align-items:baseline;gap:.45rem;min-width:0;max-width:100%;}
+  .ch{font-size:.85rem;font-weight:500;padding:.12rem .55rem;border-radius:.4rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;
     color:var(--c);background:color-mix(in srgb,var(--c) var(--tint),transparent);}
   .ch:hover{background:color-mix(in srgb,var(--c) calc(var(--tint) + 10%),transparent);}
   .ax{font-size:.78rem;color:var(--muted);}

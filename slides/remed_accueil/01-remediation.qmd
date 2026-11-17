@@ -105,15 +105,22 @@ Code : OBMKFUU
 :::
 :::
 
-Un seul code, **cinq thèmes** :
+Un seul code, **six thèmes** :
 
-- **La logique** : implication, contraposée, négation.
-- **Les vecteurs** : coordonnées, somme, angles, produit scalaire.
-- **Les fonctions** : domaine, composition, croissance, réciproque, signe.
-- **La trigonométrie** : angles associés, sinus, cosinus, tangente.
-- **Les modèles** : exponentiel, logarithmique, périodique, demi-vie, croissances comparées.
+:::: {.columns}
+::: {.column width="50%"}
+- **La logique**
+- **Les vecteurs**
+- **Les fonctions**
+:::
+::: {.column width="50%"}
+- **La trigonométrie**
+- **Les modèles**
+- **Les dérivées**
+:::
+::::
 
-Chaque QCM comporte sept questions, avec une seule réponse correcte.
+Chaque QCM comporte de sept à neuf questions, avec une seule réponse correcte.
 
 ## Que faire quand le QCM est fini ? {.smaller}
 
@@ -129,6 +136,7 @@ Chaque QCM comporte sept questions, avec une seule réponse correcte.
 | Les fonctions | domaine, composition, croissance, réciproque, signe | [Ouvrir le deck](../remed_fonctions/01-remediation.html) |
 | La trigonométrie | angles associés, sinus, cosinus, tangente | [Ouvrir le deck](../remed_trigo/01-remediation.html) |
 | Les modèles | exponentiel, logarithmique, périodique, demi-vie | [Ouvrir le deck](../remed_modeles/01-remediation.html) |
+| Les dérivées | limites, continuité, taux de variation, dérivée | [Ouvrir le deck](../remed_derivees/01-remediation.html) |
 
 ## Comment ça se passe {#mecanisme}
 

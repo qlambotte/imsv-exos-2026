@@ -1,6 +1,6 @@
 ---
 title: "Remédiation IMSV"
-subtitle: "Thème : Variations, limites et dérivées (séance 7) · annexe (solutions rédigées)"
+subtitle: "Thème : Les dérivées (séance 7) · annexe (solutions rédigées)"
 description: "Questions de réserve, énoncés et solutions des exercices de renforcement et du socle (séance 7)"
 author: "Quentin Lambotte · FMPB · UMONS"
 lang: fr
