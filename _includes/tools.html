@@ -1,5 +1,5 @@
 <script>
-// Trois outils à côté du titre (comme « bookup ») : GitHub · Téléchargement · Thème clair/sombre.
+// Outils à côté du titre (comme « bookup ») : GitHub · Téléchargement · Thème clair/sombre · crayon d'écriture.
 (function () {
   // >>> À COMPLÉTER : URL du dépôt GitHub du projet <<<
   var GITHUB_URL = "https://github.com/qlambotte/imsv-exos-2026";
@@ -86,9 +86,28 @@
     host.appendChild(themeBtn);
   }
 
+  // Crayon d'écriture (js/annot.js) : sur grand écran, à côté du bouton de thème ;
+  // sur petit écran (menu latéral replié), en bas à gauche.
+  var grand = window.matchMedia('(min-width: 992px)');
+  function accrocher() {
+    var host = document.querySelector('.sidebar-tools-main');
+    var el = document.querySelector('.an-barre');
+    if (!el) return;
+    if (grand.matches && host) {
+      if (host.lastElementChild !== el) host.appendChild(el);
+      el.classList.add('dans-outils');
+    } else {
+      if (el.parentNode !== document.body) document.body.appendChild(el);
+      el.classList.remove('dans-outils');
+    }
+  }
+  window.imsvAccrocher = accrocher;             // appelé quand annot.js est chargé
+  if (grand.addEventListener) grand.addEventListener('change', accrocher);
+
   document.addEventListener('DOMContentLoaded', function () {
     build();
-    setTimeout(build, 100);
+    accrocher();
+    [100, 400, 1200].forEach(function (t) { setTimeout(function () { build(); accrocher(); }, t); });
   });
 })();
 </script>

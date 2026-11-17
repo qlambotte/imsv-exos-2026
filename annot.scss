@@ -1,0 +1,59 @@
+/*-- scss:rules --*/
+// =====================================================================
+//  Outil d'écriture (js/annot.js, repris des cours du secondaire / typweb)
+//  Le dock et le brouillon ont leurs styles dans annot.js ; ici : calque,
+//  notes, surlignage, crayon ✎ et sa place à côté du bouton de thème.
+// =====================================================================
+:root { --carte: var(--page-bg); --an-grille: #d9dfe6; }
+:root[data-theme="dark"] { --an-grille: #2a3540; }
+
+.an-calque { position: absolute; left: 0; top: 0; z-index: 1030; pointer-events: none; overflow: visible; }
+.an-trait { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.an-couche { position: absolute; left: 0; top: 0; width: 0; height: 0; z-index: 1035; }
+mark.an-hl { padding: 0 1px; color: inherit; border-radius: 2px; }
+:root[data-theme="dark"] mark.an-hl { color: #111; }
+html.an-cache mark.an-hl { background: none; padding: 0; }
+
+// notes et corrections (post-it)
+.an-note { position: absolute; transform: translate(-50%, -50%); }
+.an-pastille { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--h); background: #ffe45c; color: #111;
+  font-weight: 800; font-size: .85rem; line-height: 1; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,.25); }
+.an-correction .an-pastille { background: #c1002a; border-color: #c1002a; color: #fff; }
+.an-corps { display: none; position: absolute; left: 30px; top: -6px; width: 250px; max-width: 70vw; background: var(--page-bg);
+  border: 1.5px solid var(--h); border-radius: 8px; padding: .5rem; box-shadow: 0 4px 16px rgba(0,0,0,.18); }
+.an-correction .an-corps { border-color: #c1002a; }
+.an-note.ouverte .an-corps { display: block; }
+.an-tete { font-size: .75rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: .25rem; }
+.an-correction .an-tete { color: #c1002a; }
+.an-corps textarea { width: 100%; font-size: .9rem; border: 1px solid var(--card-brd); border-radius: 5px; background: var(--input-bg); color: var(--text); padding: .3rem; }
+.an-act { display: flex; justify-content: space-between; margin-top: .3rem; }
+.an-act button { font-size: .8rem; border: 1px solid var(--card-brd); background: var(--input-bg); color: var(--text); border-radius: 5px; padding: .15rem .6rem; cursor: pointer; }
+
+// crayon ✎ : en bas à gauche sur petit écran…
+.an-barre { position: fixed; left: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 1045;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 6px; max-width: 170px; }
+.an-ouvrir { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--h); background: var(--page-bg); color: var(--h);
+  font-size: 1.2rem; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.an-barre.ouverte .an-ouvrir { background: var(--h); color: var(--page-bg); }
+.an-msg { background: var(--h); color: var(--page-bg); font-size: .85rem; border-radius: 6px; padding: 4px 9px; max-width: 170px; }
+
+// … à côté du bouton de thème sur grand écran (tools.html)
+.sidebar-tools-main .dans-outils { position: relative !important; left: auto !important; bottom: auto !important;
+  z-index: 1050; display: inline-flex; align-items: center; max-width: none; margin: 0; padding: 0; font-size: 14px; }
+.dans-outils .an-ouvrir { width: 1.9rem; height: 1.9rem; padding: 0; border: 0; border-radius: 6px;
+  background: none; box-shadow: none; color: var(--muted); font-size: 1rem; line-height: 1; cursor: pointer; }
+.dans-outils .an-ouvrir:hover { color: var(--accent); background: var(--hover-bg); }
+.an-barre.ouverte.dans-outils .an-ouvrir { background: var(--h); color: var(--page-bg); }
+.dans-outils .an-msg { position: absolute; top: calc(2.2rem + 172px); right: 0; width: 170px; }
+
+// « Mes annotations » (liste, export)
+.an-liste { position: fixed; left: 16px; bottom: 80px; z-index: 1046; width: min(560px, calc(100vw - 32px)); max-height: 60vh; overflow: auto;
+  background: var(--page-bg); border: 1.5px solid var(--h); border-radius: 10px; padding: .7rem .9rem; box-shadow: 0 6px 24px rgba(0,0,0,.2); }
+.an-liste-t { display: flex; justify-content: space-between; align-items: center; gap: .5rem; margin-bottom: .4rem; }
+.an-liste-t span { display: flex; gap: .3rem; }
+.an-liste pre { white-space: pre-wrap; font-size: .82rem; background: var(--card-bg); padding: .5rem; border-radius: 6px; margin: 0; }
+
+// le brouillon reste dans le cadre de l'exercice
+div.callout.exo .an-brouillon-btn { margin-bottom: .2rem; }
+
+@media print { .an-barre, .an-liste { display: none !important; } }

@@ -1,0 +1,11 @@
+<script>
+// Outil d'écriture (crayon ✎ et « Brouillon » sous chaque exercice) : js/annot.js,
+// copie de l'outil des cours du secondaire. Chargé par rapport à la racine du site.
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var s = document.createElement('script');
+  s.src = (m ? m.getAttribute('content') : '') + 'js/annot.js';
+  s.onload = function () { if (window.imsvAccrocher) window.imsvAccrocher(); };
+  document.body.appendChild(s);
+})();
+</script>

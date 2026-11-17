@@ -4,6 +4,7 @@ project:
   output-dir: _book
   resources:
     - pdf/
+    - js/
 
 book:
   title: "IMSV — Exercices"
@@ -86,11 +87,13 @@ format:
     theme:
       - cosmo
       - theme.scss
+      - annot.scss
     include-in-header:
       - _includes/theme-init.html
     include-after-body:
       - _includes/aides.html
       - _includes/tools.html
+      - _includes/annot.html
     toc: true
     toc-title: "Sur cette page"
     toc-depth: 3
