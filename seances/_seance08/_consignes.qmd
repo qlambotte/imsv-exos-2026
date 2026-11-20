@@ -1,0 +1,5 @@
+::: {.callout-tip appearance="simple" title="À lire d'abord"}
+Cherche au brouillon **d'abord**. N'hésite pas à résoudre les exercices avec tes voisin.e.s.
+
+**Où trouver de l'aide.** Sous chaque énoncé, le menu **Coups de pouce** contient, dans l'ordre : l'indice 1 (la théorie à relire), l'indice 2 (une question à te poser), l'indice 3 (une étape à effectuer), la solution rédigée, puis les pièges. Chaque sous-question a ses propres indices. Ouvre-les **dans l'ordre** : la solution est le **dernier** recours. Les **fiches de méthode** se trouvent dans la **boîte à outils** du site et sur la feuille à compléter. Sur la feuille imprimée, le QR code mène aux coups de pouce. Si tu es encore bloqué·e après l'indice 3, **appelle un·e assistant·e**.
+:::

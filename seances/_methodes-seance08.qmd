@@ -1,0 +1,113 @@
+<!-- Cartes de méthode — SÉANCE 8 (Calcul différentiel).
+     Fragment sans en-tête : inclus par la page methodes/seance08.qmd (site, correctif)
+     et par build-boite.sh pour le PDF « méthodes » (une méthode par page).
+     Mise en forme par le filtre methode.lua. Calc-free, notation du cours IMSV-8.
+     Les titres et objectifs (titre="…", obj="…") alimentent AUSSI la feuille à compléter
+     (feuille-auto.py) : ne les écris qu'ici. Pas de figure : build-boite.sh ne copie que ce fragment.
+     Les exemples sont différents des exercices de la séance. Résultats vérifiés par script (hors dépôt).
+     Méthodes corrigées en séance : « Dériver une expression en suivant sa structure » (S.2)
+     et « Dériver un modèle et interpréter le taux » (T.1). -->
+
+::: {.methode obj="O2" titre="Dériver une expression en suivant sa structure"}
+
+::: {.quand}
+Dès qu'il faut dériver une expression qui combine plusieurs fonctions élémentaires par des sommes, des produits, des quotients ou des compositions.
+:::
+
+::: {.etapes}
+1. **Reconnaître** : repère l'opération effectuée en dernier quand on calcule $f(x)$ (somme, différence, produit, quotient ou composée). Elle donne la première règle à appliquer.
+2. **Décomposer** : nomme les morceaux, $u$ et $v$ pour un produit ou un quotient, la fonction intérieure et la fonction extérieure pour une composée. Si une simplification enlève une difficulté, fais-la en notant les valeurs exclues du domaine.
+3. **Dériver** : applique la règle de l'opération extérieure, $u' \cdot v + u \cdot v'$, $\dfrac{u' \cdot v - u \cdot v'}{v^{2}}$ ou $f'\big(g(x)\big) \cdot g'(x)$, puis dérive chaque morceau, en recommençant l'étape 1 si un morceau est lui-même composé.
+4. **Simplifier** : mets en évidence les facteurs communs, sans développer un dénominateur au carré.
+5. **Contrôler** : donne le domaine de la dérivée, qui n'est jamais plus grand que celui de la fonction, et vérifie une valeur simple ou le signe des pentes.
+:::
+
+::: {.exemple}
+On dérive $f(x) = (x - 1) \cdot e^{2x}$.
+
+La dernière opération est un produit : $u(x) = x - 1$ et $v(x) = e^{2x}$. On a $u'(x) = 1$ et, par la chain rule, $v'(x) = 2e^{2x}$. Donc $f'(x) = 1 \cdot e^{2x} + (x - 1) \cdot 2e^{2x} = (2x - 1) \cdot e^{2x}$, sur $\mathbb{R}$. Contrôle : en $x = 0$, $f'(0) = -1$, et la règle donne bien $1 \cdot 1 + (-1) \cdot 2 = -1$.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à dériver chaque facteur séparément et à multiplier les résultats, ici $1 \cdot 2e^{2x}$ : la dérivée d'un produit a deux contributions, et celle d'un quotient n'est pas le quotient des dérivées. Une autre erreur consiste à simplifier une fraction en oubliant que la valeur qui annulait le facteur simplifié reste exclue du domaine.
+:::
+
+:::
+
+::: {.methode obj="O3" titre="Dériver une composée avec la chain rule"}
+
+::: {.quand}
+Dès qu'une fonction est appliquée à une autre expression que la variable seule : une puissance, une racine, une exponentielle, un logarithme ou une fonction trigonométrique d'une expression en $x$.
+:::
+
+::: {.etapes}
+1. Écris la fonction intérieure $g(x)$, c'est-à-dire l'expression sur laquelle agit la dernière fonction appliquée.
+2. Écris la fonction extérieure $f$, en remplaçant $g(x)$ par une lettre $y$, puis sa dérivée $f'(y)$ à l'aide de la table.
+3. Remplace $y$ par $g(x)$ dans $f'(y)$ : tu obtiens $f'\big(g(x)\big)$.
+4. Multiplie par $g'(x)$. Si $g$ est elle-même une composée, recommence pour calculer $g'(x)$.
+5. Sur un graphique ou dans un tableau, lis $g(a)$ et $g'(a)$, puis la pente de $f$ au point d'abscisse $g(a)$, et non en $a$.
+:::
+
+::: {.exemple}
+On dérive $h(x) = \sqrt{1 + e^{2x}}$.
+
+La fonction intérieure est $g(x) = 1 + e^{2x}$, de dérivée $g'(x) = 2e^{2x}$ par la chain rule ; la fonction extérieure est $\sqrt{y}$, de dérivée $\dfrac{1}{2\sqrt{y}}$. Donc $h'(x) = \dfrac{1}{2\sqrt{1 + e^{2x}}} \cdot 2e^{2x} = \dfrac{e^{2x}}{\sqrt{1 + e^{2x}}}$.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à oublier la multiplication par $g'(x)$, par exemple à écrire $\big(e^{x^{2}}\big)' = e^{x^{2}}$ : la variation de la fonction intérieure se transmet à la fonction extérieure. Une autre erreur consiste à évaluer $f'$ en $a$ au lieu de $g(a)$.
+:::
+
+:::
+
+::: {.methode obj="O5" titre="Contrôler une dérivée"}
+
+::: {.quand}
+Dès qu'une dérivée est calculée ou proposée, et avant de l'utiliser.
+:::
+
+::: {.etapes}
+1. **Domaine** : la dérivée n'est pas définie là où la fonction ne l'est pas.
+2. **Unité** : la dérivée s'exprime dans l'unité de la grandeur divisée par l'unité de la variable.
+3. **Signe des pentes** : là où la fonction est croissante, la dérivée est positive ; là où elle est décroissante, la dérivée est négative.
+4. **Valeur simple** : calcule la dérivée en une valeur facile, par exemple $x = 0$ ou $x = 1$, et compare au résultat obtenu par la règle ou à la pente lue.
+5. **Graphe** : la dérivée s'annule là où la tangente est horizontale. Une proposition qui échoue à un seul contrôle est fausse.
+:::
+
+::: {.exemple}
+Pour $f(x) = \ln\left(x^{2} + 1\right)$, on propose $f'(x) = \dfrac{1}{x^{2} + 1}$.
+
+La fonction $f$ est décroissante sur $]-\infty,\,0]$, car $x^{2} + 1$ y diminue ; la dérivée doit donc être négative en $x = -1$. Or la proposition donne $f'(-1) = \dfrac{1}{2} > 0$ : elle est fausse. La chain rule donne $f'(x) = \dfrac{2x}{x^{2} + 1}$, négative pour $x < 0$.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à ne faire qu'un seul contrôle et à conclure que la dérivée est correcte : un contrôle peut seulement montrer qu'une dérivée est fausse. Une autre erreur consiste à lire la hauteur de la courbe au lieu de sa pente.
+:::
+
+:::
+
+::: {.methode obj="O6" titre="Dériver un modèle et interpréter le taux"}
+
+::: {.quand}
+Dès qu'une grandeur des sciences de la vie est décrite par une formule, ou par une loi à traduire en formule, et qu'il faut donner sa vitesse de variation.
+:::
+
+::: {.etapes}
+1. Repère la grandeur, la variable de dérivation et leurs unités ; les autres lettres sont des paramètres, que l'on dérive comme des constantes.
+2. Si le modèle n'est pas donné, écris-le à partir de la loi : par exemple, une grandeur qui double toutes les $T$ unités de temps vaut $N_0 \cdot 2^{t/T}$.
+3. Dérive en suivant la structure de l'expression, avec la chain rule pour une exponentielle ou une fonction trigonométrique de la variable.
+4. Écris l'unité de la dérivée : unité de la grandeur divisée par unité de la variable.
+5. Interprète le signe et la valeur dans une phrase : « à l'instant $t = \ldots$, la grandeur augmente (ou diminue) de $\ldots$ par $\ldots$ ». Pour un modèle exponentiel, le quotient $\dfrac{N'(t)}{N(t)}$ est constant : c'est le taux de croissance relatif.
+:::
+
+::: {.exemple}
+Un médicament a une demi-vie de $6$ heures, et la masse présente dans l'organisme vaut $200$ mg à $t = 0$.
+
+La masse est divisée par $2$ toutes les $6$ heures : $Q(t) = 200 \cdot \left(\tfrac{1}{2}\right)^{t/6}$, en mg, avec $t$ en heures. Par la chain rule, $Q'(t) = 200 \cdot \ln\left(\tfrac{1}{2}\right) \cdot \tfrac{1}{6} \cdot \left(\tfrac{1}{2}\right)^{t/6}$. À $t = 6$ h, $Q(6) = 100$ mg et $Q'(6) = -\dfrac{100\ln(2)}{6} \approx -11{,}5$ mg par heure : six heures après la prise, la masse diminue d'environ $11{,}5$ mg par heure.
+:::
+
+::: {.piege}
+Une erreur fréquente consiste à dériver un paramètre comme s'il dépendait de la variable, ou à appliquer la règle des puissances à une exponentielle, par exemple $\tfrac{t}{6} \cdot \left(\tfrac{1}{2}\right)^{t/6 - 1}$ : la variable est dans l'exposant, donc c'est la règle de l'exponentielle en base quelconque qui s'applique. Une autre erreur consiste à confondre la valeur $Q(6)$, en mg, et la vitesse $Q'(6)$, en mg par heure.
+:::
+
+:::

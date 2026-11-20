@@ -1,0 +1,471 @@
+---
+title: "Séance 8 — Calcul différentiel"
+subtitle: "IMSV · Introduction Mathématique aux Sciences de la Vie — séance d'exercices"
+description: "Déroulé complet de la séance — échauffement, corrections de S.2 et de T.1, deux méthodes"
+date: 11/23/2026
+author: "Quentin Lambotte - FMPB"
+date-format: "D MMMM YYYY"
+lang: fr
+format:
+  revealjs:
+    theme: [default, ../seance01/theme.scss]
+    slide-number: c/t
+    show-slide-number: all
+    width: 1280
+    height: 800
+    margin: 0.06
+    center: false
+    transition: fade
+    transition-speed: fast
+    hash: true
+    history: false
+    html-math-method: katex
+    embed-resources: true
+    fig-align: center
+    menu:
+      side: right
+    include-after-body: ../seance01/annotate.html
+---
+
+# Échauffement {.divider background-color="#14304a"}
+
+## Les questions
+
+::::::::::::::: columns
+::::: {.column width="62%"}
+:::: {style="font-size:.9em"}
+**Q1** [[Rappel]{.obj}]{style="float:right"} — pour $x > 0$, écris $\dfrac{1}{x\sqrt{x}}$ sous la forme d'une puissance de $x$.
+
+**Q2** [[Rappel]{.obj}]{style="float:right"} — soient $f(x) = x^{2}$ et $g(x) = 3x + 1$ ; que vaut $f\big(g(x)\big)$ ?
+
+**Q3** [[Rappel]{.obj}]{style="float:right"} — mets $x \cdot e^{x}$ en évidence dans $2x \cdot e^{x} + x^{2} \cdot e^{x}$.
+::::
+:::::
+
+::::::::::: {.column .outils-serres width="38%"}
+::::: wooclap
+:::: wc-body
+**Vote sur Wooclap**
+
+::: wc-lien
+Code : À COMPLÉTER
+:::
+::::
+
+::: {.wc-qr}
+![](img/qr-echauffement.png)
+:::
+
+:::::
+
+::: {.minuteur data-minutes="5"}
+{{< include ../seance01/_minuteur.md >}}
+:::
+:::::::::::
+:::::::::::::::
+
+```{=html}
+<style>
+.outils-serres { display: flex; flex-direction: column; gap: .35em; }
+.outils-serres .wooclap { margin: 0; }
+.outils-serres .et-timer { margin-top: 0; }
+.outils-serres .et-timer, .outils-serres .et-box { width: 100%; box-sizing: border-box; }
+</style>
+```
+
+::: notes
+Cinq minutes sur papier, puis le vote (les choix sont dans wooclap-echauffement.md). Les trois questions portent sur des prérequis de la séance : écrire une expression comme une puissance de $x$ (S.1, R.1), composer deux fonctions (chain rule, S.3 et S.5) et mettre un facteur en évidence (simplifier une dérivée de produit, S.2).
+:::
+
+## Q1 [[Rappel]{.obj}]{style="float:right"}
+
+Pour $x > 0$, écris $\dfrac{1}{x\sqrt{x}}$ sous la forme d'une puissance de $x$.
+
+. . .
+
+::: aretenir
+$x\sqrt{x} = x^{1} \cdot x^{1/2} = x^{3/2}$, donc $\dfrac{1}{x\sqrt{x}} = x^{-3/2}$.
+
+On peut alors dériver avec une seule règle : $\left(x^{-3/2}\right)' = -\dfrac{3}{2}\,x^{-5/2}$.
+:::
+
+::: notes
+Erreurs classiques : $x^{-1/2}$ (oubli du facteur $x$), $x^{3/2}$ (oubli du dénominateur), $x^{-2}$ ($\sqrt{x}$ traité comme $x$).
+:::
+
+## Q2 [[Rappel]{.obj}]{style="float:right"}
+
+Soient $f(x) = x^{2}$ et $g(x) = 3x + 1$. Que vaut $f\big(g(x)\big)$ ?
+
+. . .
+
+::: aretenir
+$f$ reçoit $g(x)$ et l'élève au carré : $f\big(g(x)\big) = (3x + 1)^{2}$.
+
+$g$ est la **fonction intérieure**, $f$ la **fonction extérieure** : c'est le vocabulaire de la chain rule.
+:::
+
+::: notes
+Erreurs classiques : $3x^{2} + 1$ (c'est $g(f(x))$), $(3x + 1) \cdot x^{2}$ (produit au lieu de composée), $9x^{2} + 1$ (carré sans double produit).
+:::
+
+## Q3 [[Rappel]{.obj}]{style="float:right"}
+
+Mets $x \cdot e^{x}$ en évidence dans $2x \cdot e^{x} + x^{2} \cdot e^{x}$.
+
+. . .
+
+::: aretenir
+$2x \cdot e^{x} + x^{2} \cdot e^{x} = x \cdot e^{x} \cdot (2 + x)$.
+
+C'est exactement la dérivée de $x^{2} \cdot e^{x}$ par la règle de Leibniz, une fois simplifiée.
+:::
+
+::: notes
+Erreurs classiques : $3x^{2}e^{x}$ (termes non semblables additionnés), $(2x + x^{2})e^{2x}$ (exponentielles additionnées), $2x^{3}e^{x}$ (produit au lieu de somme).
+:::
+
+# Socle — 35 minutes {.divider background-color="#14304a"}
+
+::: notes
+Lancer le socle. Annoncer que l'exercice S.2 sera corrigé ensemble juste après le socle : chacun doit l'avoir cherché seul et repérer l'endroit exact où il bloque.
+:::
+
+## Au travail {.travail .sans-jauge data-minutes="35"}
+
+{{< include ../seance01/_travail.md >}}
+
+# Exercice S.2 : correction, puis méthode 1 {.divider background-color="#1f5fbf"}
+
+::: notes
+Quinze minutes : environ 8 minutes de correction, puis 7 minutes pour la carte « Dériver une expression en suivant sa structure ».
+:::
+
+## Quelles dérivées as-tu trouvées ? [[O2]{.obj}]{style="float:right"}
+
+::::::::::::::: columns
+::::: {.column width="58%"}
+En identifiant la nature algébrique de chaque fonction, calcule sa dérivée.
+
+$$f(x) = \left(x^{2} + 1\right) \cdot e^{x} \qquad g(x) = \frac{2x + 1}{x - 3}$$
+
+$$h(x) = \frac{\sin(x)}{x} \qquad k(x) = \frac{x^{3} - 4x}{x - 2}$$
+
+Pour $k$, précise le domaine de $k$ et celui de $k'$.
+:::::
+
+::::::::::: {.column .outils-serres width="42%"}
+::::: wooclap
+:::: wc-body
+**Vote sur Wooclap**.
+
+::: wc-lien
+Code : À COMPLÉTER
+:::
+::::
+
+::: {.wc-qr}
+![](img/qr-socle.png)
+:::
+:::::
+:::::::::::
+:::::::::::::::
+
+::: notes
+Une question Wooclap par fonction (les choix sont dans wooclap-S2.md). On corrige d'abord la fonction où les votes sont les plus partagés, probablement $g$ (ordre du numérateur) ou $k$ (domaine après simplification).
+:::
+
+## S.2 — le produit $f$ [[O2]{.obj}]{style="float:right"}
+
+$f(x) = \left(x^{2} + 1\right) \cdot e^{x}$
+
+. . .
+
+[1]{.step} **Reconnaître** : la dernière opération est un **produit** → règle de Leibniz.
+
+. . .
+
+[2]{.step} **Décomposer** : $u(x) = x^{2} + 1$, $u'(x) = 2x$ ; $v(x) = e^{x}$, $v'(x) = e^{x}$.
+
+. . .
+
+[3]{.step} **Dériver** : $f'(x) = 2x \cdot e^{x} + \left(x^{2} + 1\right) \cdot e^{x}$.
+
+. . .
+
+[4]{.step} **Simplifier** : $f'(x) = \left(x^{2} + 2x + 1\right) \cdot e^{x} = (x + 1)^{2} \cdot e^{x}$, sur $\mathbb{R}$.
+
+. . .
+
+::: aretenir
+**Piège : $f'(x) = 2x \cdot e^{x}$.** La dérivée d'un produit a **deux contributions** : chaque facteur change, pondéré par la valeur de l'autre.
+
+**Contrôle** : $f'(x) \geq 0$ partout, et $f$ est bien croissante ; $f'(-1) = 0$ : tangente horizontale en $x = -1$.
+:::
+
+## S.2 — les quotients $g$ et $h$ [[O2]{.obj}]{style="float:right"} {.smaller}
+
+$\left(\dfrac{u}{v}\right)' = \dfrac{u' \cdot v - u \cdot v'}{v^{2}}$, là où $v \neq 0$.
+
+. . .
+
+[1]{.step} $g(x) = \dfrac{2x + 1}{x - 3}$ : $u' = 2$, $v' = 1$, donc $g'(x) = \dfrac{2(x - 3) - (2x + 1)}{(x - 3)^{2}} = \dfrac{-7}{(x - 3)^{2}}$, pour $x \neq 3$.
+
+. . .
+
+[2]{.step} $h(x) = \dfrac{\sin(x)}{x}$ : $u' = \cos(x)$, $v' = 1$, donc $h'(x) = \dfrac{x\cos(x) - \sin(x)}{x^{2}}$, pour $x \neq 0$.
+
+. . .
+
+::: aretenir
+**Piège 1 : le quotient des dérivées.** $g'(x) \neq \dfrac{2}{1}$ et $h'(x) \neq \cos(x)$.
+
+**Piège 2 : l'ordre du numérateur.** $u' \cdot v$ **moins** $u \cdot v'$ : l'inverser donne $+\dfrac{7}{(x - 3)^{2}}$.
+
+**Contrôle** : $g'(x) < 0$ sur chaque intervalle du domaine ; $g$ décroît de part et d'autre de l'asymptote $x = 3$.
+:::
+
+## S.2 — simplifier $k$ sans changer le domaine [[O4]{.obj}]{style="float:right"}
+
+$k(x) = \dfrac{x^{3} - 4x}{x - 2}$, définie sur $\mathbb{R} \setminus \{2\}$.
+
+. . .
+
+[1]{.step} On factorise : $x^{3} - 4x = x\left(x^{2} - 4\right) = x(x - 2)(x + 2)$.
+
+. . .
+
+[2]{.step} Pour $x \neq 2$, on simplifie par $x - 2$ : $k(x) = x(x + 2) = x^{2} + 2x$.
+
+. . .
+
+[3]{.step} Donc $k'(x) = 2x + 2$, sur $\mathbb{R} \setminus \{2\}$.
+
+. . .
+
+::: aretenir
+**Piège : $\mathrm{Dom}(k') = \mathbb{R}$.** On a divisé par $x - 2$ : la valeur $2$ reste exclue. Simplifier enlève une difficulté **sans changer le problème**, donc sans changer le domaine.
+:::
+
+## La carte « Dériver une expression en suivant sa structure » {.smaller}
+
+:::::::::::::: fiche
+::: fiche-head
+Dériver une expression en suivant sa structure [[O2]{.obj}]{style="float:right"}
+:::
+
+:::::::::::: fiche-body
+:::::: fiche-col
+::: {.fiche-field .empty}
+Exercices associés (numéros)
+
+*à noter toi-même*
+:::
+
+::: {.fiche-field .empty}
+Théorie associée (chapitre / slide)
+
+*à noter toi-même*
+:::
+
+::: {.fiche-field .fragment}
+Quand l'utiliser ?
+
+Une expression combine plusieurs fonctions élémentaires par des sommes, des produits, des quotients ou des compositions.
+:::
+::::::
+
+::::::: {.fiche-col style="font-size:.82em"}
+:::: fiche-field
+Étapes
+
+::: incremental
+1.  **Reconnais** l'opération effectuée en dernier : elle donne la première règle.
+2.  **Décompose** : $u$ et $v$, ou fonction intérieure et extérieure ; simplifie si utile, en gardant les valeurs exclues.
+3.  **Dérive** avec la règle de l'opération extérieure, puis chaque morceau.
+4.  **Simplifie** : mets en évidence, sans développer un dénominateur au carré.
+5.  **Contrôle** : domaine, valeur simple, signe des pentes.
+:::
+::::
+
+::: {.fiche-field .fragment}
+Exemple
+
+$\big((x - 1) \cdot e^{2x}\big)' = e^{2x} + (x - 1) \cdot 2e^{2x} = (2x - 1) \cdot e^{2x}$.
+:::
+
+::: {.fiche-field .fragment}
+Le piège
+
+Dériver chaque facteur et multiplier ; prendre le quotient des dérivées ; élargir le domaine en simplifiant.
+:::
+:::::::
+::::::::::::
+::::::::::::::
+
+::: footer-note
+Cette fiche rejoint ta **boîte à outils** sur le site.
+:::
+
+# Pause — 10 minutes {.divider background-color="#14304a"}
+
+::: {.minuteur data-minutes="10" data-auto="oui"}
+{{< include ../seance01/_minuteur.md >}}
+:::
+
+# Transfert — 35 minutes {.divider background-color="#14304a"}
+
+::: notes
+Commencer par T.1, qui sera corrigé ensemble à la fin du transfert : chacun doit l'avoir cherché seul. Les autres exercices (T.2 et T.3) se font avec les coups de pouce du site.
+:::
+
+## Au travail {.travail .sans-jauge data-minutes="35"}
+
+{{< include ../seance01/_travail.md >}}
+
+# Exercice T.1 : correction, puis méthode 2 {.divider background-color="#1f5fbf"}
+
+::: notes
+Quinze minutes : environ 8 minutes de correction, puis 7 minutes pour la carte « Dériver un modèle et interpréter le taux ».
+:::
+
+## Quelles réponses as-tu trouvées ? [[O6]{.obj}]{style="float:right"}
+
+::::::::::::::: columns
+::::: {.column width="58%"}
+Dans un bouillon de culture à $37$ °C, *Escherichia coli* double son effectif environ toutes les $20$ minutes. Une culture contient $1000$ bactéries au départ ; $t$ est en minutes. On donne $\ln(2) \approx 0{,}69$.
+
+\(a) Écris $N(t)$. \(b) Calcule $N'(t)$. \(c) Calcule $N(60)$ et $N'(60)$. \(d) Que vaut $\dfrac{N'(t)}{N(t)}$ ?
+:::::
+
+::::::::::: {.column .outils-serres width="42%"}
+::::: wooclap
+:::: wc-body
+**Vote sur Wooclap**.
+
+::: wc-lien
+Code : À COMPLÉTER
+:::
+::::
+
+::: {.wc-qr}
+![](img/qr-transf.png)
+:::
+:::::
+:::::::::::
+:::::::::::::::
+
+::: notes
+Source dans l'énoncé de T.1 (Sezonov et al. 2007, BioNumbers BNID 103514). Une question Wooclap par sous-question (les choix sont dans wooclap-T1.md). Erreurs attendues : $2^{20t}$ en (a), règle des puissances ou oubli du facteur $\tfrac{1}{20}$ en (b), confusion entre $N(60)$ et $N'(60)$ en (c).
+:::
+
+## T.1 (a) et (b) [[O6]{.obj}]{style="float:right"}
+
+[1]{.step} **Repérer** : grandeur $N$ en bactéries, variable $t$ en minutes ; $1000$ et $20$ sont des paramètres.
+
+. . .
+
+[2]{.step} **Écrire le modèle** : après $t$ minutes, l'effectif a doublé $\tfrac{t}{20}$ fois, donc $N(t) = 1000 \cdot 2^{t/20}$.
+
+. . .
+
+[3]{.step} **Dériver** : la variable est dans l'exposant → exponentielle en base $2$ et chain rule, de fonction intérieure $\tfrac{t}{20}$ :
+$$N'(t) = 1000 \cdot \ln(2) \cdot 2^{t/20} \cdot \frac{1}{20} = 50\ln(2) \cdot 2^{t/20}.$$
+
+. . .
+
+::: aretenir
+**Piège : la règle des puissances**, $\tfrac{t}{20} \cdot 1000 \cdot 2^{t/20 - 1}$. Elle vaut pour $x^{n}$, pas pour $a^{x}$. **Unité** de $N'$ : bactéries **par minute**.
+:::
+
+## T.1 (c) [[O6]{.obj}]{style="float:right"}
+
+[1]{.step} $N(60) = 1000 \cdot 2^{3} = 8000$ bactéries.
+
+. . .
+
+[2]{.step} $N'(60) = 50 \cdot 0{,}69 \cdot 8 = 276$ bactéries par minute.
+
+. . .
+
+[3]{.step} **Interpréter** : $60$ minutes après le début, la culture gagne environ $276$ bactéries **par minute**.
+
+. . .
+
+::: aretenir
+**Piège : confondre $N(60)$ et $N'(60)$.** $8000$ est un effectif ; $276$ est une vitesse. **Contrôle** : les taux moyens sur $[40,\,60]$ et sur $[60,\,80]$ valent $200$ et $400$ bactéries par minute, et $276$ est bien entre les deux.
+:::
+
+## T.1 (d) [[O6]{.obj}]{style="float:right"}
+
+[1]{.step} $\dfrac{N'(t)}{N(t)} = \dfrac{50\ln(2) \cdot 2^{t/20}}{1000 \cdot 2^{t/20}} = \dfrac{\ln(2)}{20} \approx 0{,}0345$ par minute.
+
+. . .
+
+[2]{.step} Ce quotient ne dépend pas de $t$ : à chaque instant, la culture augmente d'environ $3{,}45\,\%$ de son effectif par minute.
+
+. . .
+
+::: aretenir
+La **vitesse** $N'(t)$ augmente avec l'effectif, mais le **taux relatif** $\dfrac{N'(t)}{N(t)}$ est constant : c'est la signature d'une croissance exponentielle, comme $C'(t) = -k \cdot C(t)$ dans le cours.
+:::
+
+## La carte « Dériver un modèle et interpréter le taux » {.smaller}
+
+:::::::::::::: fiche
+::: fiche-head
+Dériver un modèle et interpréter le taux [[O6]{.obj}]{style="float:right"}
+:::
+
+:::::::::::: fiche-body
+:::::: fiche-col
+::: {.fiche-field .empty}
+Exercices associés (numéros)
+
+*à noter toi-même*
+:::
+
+::: {.fiche-field .empty}
+Théorie associée (chapitre / slide)
+
+*à noter toi-même*
+:::
+
+::: {.fiche-field .fragment}
+Quand l'utiliser ?
+
+Une grandeur des sciences de la vie est décrite par une formule, ou par une loi à traduire en formule, et il faut sa vitesse de variation.
+:::
+::::::
+
+::::::: {.fiche-col style="font-size:.82em"}
+:::: fiche-field
+Étapes
+
+::: incremental
+1.  **Repère** la grandeur, la variable de dérivation, les paramètres et leurs unités.
+2.  **Écris** le modèle à partir de la loi, s'il n'est pas donné.
+3.  **Dérive** en suivant la structure, avec la chain rule si la variable est dans un exposant ou une fonction trigonométrique.
+4.  **Écris** l'unité : unité de la grandeur par unité de la variable.
+5.  **Interprète** : instant, sens, valeur, unité ; pour un modèle exponentiel, $\tfrac{N'}{N}$ est constant.
+:::
+::::
+
+::: {.fiche-field .fragment}
+Exemple
+
+Demi-vie de $6$ h, $200$ mg au départ : $Q(t) = 200 \cdot \left(\tfrac{1}{2}\right)^{t/6}$, et $Q'(6) = -\tfrac{100\ln(2)}{6} \approx -11{,}5$ mg par heure.
+:::
+
+::: {.fiche-field .fragment}
+Le piège
+
+Appliquer la règle des puissances à une exponentielle ; confondre une valeur, en mg, et une vitesse, en mg par heure.
+:::
+:::::::
+::::::::::::
+::::::::::::::
+
+::: footer-note
+Cette fiche rejoint ta **boîte à outils** sur le site.
+:::

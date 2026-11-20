@@ -1,0 +1,521 @@
+<!-- RENFORCEMENT : variations du socle (même compétence, entraînement en plus).
+     VERSION 2 (énoncés validés le 19/11/2026 ; indices et solutions rédigés).
+     Faisable SANS calculatrice ; valeurs différentes du socle.
+     Numéro AUTOMATIQUE (catégorie Renforcement -> R.1, R.2…). Mêmes aides que le socle : Indice 1 (théorie), Indice 2 (question),
+     Indice 3 (étape), chacun avec une ligne par sous-question, puis Solution (Réponse + détails) et Piège.
+     Résultats vérifiés par script (hors dépôt). -->
+
+::: {.callout-note appearance="simple"}
+Ces exercices restent **dans les objectifs** de la séance : à faire une fois le socle et le transfert
+bouclés, à la maison : ils ne sont pas prévus pendant la séance.
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|1|O1"}
+Écris chacune des fonctions suivantes sous la forme d'une puissance de $x$, puis calcule sa dérivée.
+
+$$f_1(x) = x^{10} \qquad f_2(x) = \frac{1}{x} \qquad f_3(x) = \frac{1}{x^{5}}$$
+
+$$f_4(x) = x^{2}\sqrt{x} \qquad f_5(x) = \frac{\sqrt{x}}{x^{2}}$$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Dérivées élémentaires : table de référence* et *Puissances : une seule règle, des domaines distincts*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quel est l'exposant $\alpha$ de chaque fonction, une fois écrite sous la forme $x^{\alpha}$ ?
+
+## Indice 3
+
+*Étape.*
+
+Écris $f_2(x) = x^{-1}$, $f_3(x) = x^{-5}$, $f_4(x) = x^{2} \cdot x^{1/2} = x^{5/2}$ et $f_5(x) = x^{1/2} \cdot x^{-2} = x^{-3/2}$, puis applique $(x^{\alpha})' = \alpha \cdot x^{\alpha - 1}$.
+
+## Solution
+
+::: {.reponse}
+**Réponse.** $f_1'(x) = 10x^{9}$ ; $f_2'(x) = -\dfrac{1}{x^{2}}$ ; $f_3'(x) = -\dfrac{5}{x^{6}}$ ; $f_4'(x) = \dfrac{5}{2}x\sqrt{x}$ ; $f_5'(x) = -\dfrac{3}{2x^{2}\sqrt{x}}$.
+:::
+
+::: {.details}
+On écrit chaque fonction comme une puissance, puis on applique la règle des puissances.
+
+1. $f_1'(x) = 10x^{9}$.
+2. $f_2(x) = x^{-1}$, donc $f_2'(x) = -x^{-2} = -\dfrac{1}{x^{2}}$.
+3. $f_3(x) = x^{-5}$, donc $f_3'(x) = -5x^{-6} = -\dfrac{5}{x^{6}}$.
+4. $f_4(x) = x^{5/2}$, donc $f_4'(x) = \dfrac{5}{2}x^{3/2} = \dfrac{5}{2}x\sqrt{x}$.
+5. $f_5(x) = x^{-3/2}$, donc $f_5'(x) = -\dfrac{3}{2}x^{-5/2} = -\dfrac{3}{2x^{2}\sqrt{x}}$.
+:::
+
+## Piège
+
+Une erreur fréquente consiste à additionner les exposants au lieu de les soustraire dans une division : $\dfrac{\sqrt{x}}{x^{2}} = x^{1/2 - 2} = x^{-3/2}$.
+
+Une autre erreur consiste à écrire $(x^{-5})' = -5x^{-4}$ : on retire $1$ à l'exposant, ce qui donne $-6$.
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|1|O1"}
+(a) Calcule la dérivée de chacune des fonctions suivantes.
+
+$$f(x) = 2x^{5} - 3x^{3} + x - 7 \qquad g(x) = \frac{4}{x} - 6\sqrt{x} \qquad h(t) = 2\sin(t) - 5\cos(t) + e^{t}$$
+
+(b) Calcule $f'(-1)$ et $g'(1)$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Linéarité*, *Dérivées élémentaires : table de référence* et *Sinus et cosinus : les radians comptent*.
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Quelle est la dérivée de chaque terme, en gardant son coefficient ?
+(b) Quelles expressions de $f'$ et de $g'$ as-tu obtenues en (a) ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Écris $g(x) = 4x^{-1} - 6x^{1/2}$ avant de dériver.
+(b) Remplace $x$ par $-1$ dans $f'(x)$, puis par $1$ dans $g'(x)$, en faisant attention aux signes des puissances de $-1$.
+
+## Solution
+
+::: {.reponse}
+**Réponse (a).** $f'(x) = 10x^{4} - 9x^{2} + 1$ ; $g'(x) = -\dfrac{4}{x^{2}} - \dfrac{3}{\sqrt{x}}$ ; $h'(t) = 2\cos(t) + 5\sin(t) + e^{t}$.
+:::
+
+::: {.details}
+On dérive terme à terme.
+
+1. $f'(x) = 2 \cdot 5x^{4} - 3 \cdot 3x^{2} + 1 - 0 = 10x^{4} - 9x^{2} + 1$.
+2. $g(x) = 4x^{-1} - 6x^{1/2}$, donc $g'(x) = -4x^{-2} - 6 \cdot \dfrac{1}{2}x^{-1/2} = -\dfrac{4}{x^{2}} - \dfrac{3}{\sqrt{x}}$.
+3. $h'(t) = 2\cos(t) - 5 \cdot \big(-\sin(t)\big) + e^{t} = 2\cos(t) + 5\sin(t) + e^{t}$.
+:::
+
+::: {.reponse}
+**Réponse (b).** $f'(-1) = 2$ et $g'(1) = -7$.
+:::
+
+::: {.details}
+$f'(-1) = 10 \cdot 1 - 9 \cdot 1 + 1 = 2$, car $(-1)^{4} = (-1)^{2} = 1$. $g'(1) = -4 - 3 = -7$.
+:::
+
+## Piège
+
+Une erreur fréquente consiste à écrire $\big(-5\cos(t)\big)' = -5\sin(t)$ : comme $\big(\cos(t)\big)' = -\sin(t)$, les deux signes moins donnent $+5\sin(t)$.
+
+Une autre erreur consiste à garder la constante $-7$ dans $f'(x)$ : la dérivée d'une constante est nulle.
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
+Calcule la dérivée de chacune des fonctions suivantes, et simplifie le résultat.
+
+(a) $f(x) = x^{3} \cdot \ln(x)$, pour $x > 0$
+(b) $g(x) = e^{x} \cdot \sin(x)$
+(c) $h(x) = \dfrac{x^{2} - 1}{x^{2} + 1}$
+(d) $k(x) = \dfrac{e^{x}}{x + 1}$, pour $x \neq -1$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Règle du produit : deux contributions* et *Règle du quotient : application*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quelle est la nature algébrique de chaque expression ? Quels sont les deux facteurs, ou le numérateur et le dénominateur ?
+
+## Indice 3
+
+*Étape.*
+
+(a) et (b) Écris $u' \cdot v + u \cdot v'$, puis mets en évidence le facteur commun.
+(c) et (d) Écris $\dfrac{u' \cdot v - u \cdot v'}{v^{2}}$, puis développe et réduis le numérateur sans développer le dénominateur.
+
+## Solution
+
+::: {.reponse}
+**Réponse.** (a) $f'(x) = x^{2}\big(3\ln(x) + 1\big)$ ; (b) $g'(x) = e^{x}\big(\sin(x) + \cos(x)\big)$ ; (c) $h'(x) = \dfrac{4x}{(x^{2} + 1)^{2}}$ ; (d) $k'(x) = \dfrac{x \cdot e^{x}}{(x + 1)^{2}}$.
+:::
+
+::: {.details}
+(a) $f'(x) = 3x^{2} \cdot \ln(x) + x^{3} \cdot \dfrac{1}{x} = 3x^{2}\ln(x) + x^{2} = x^{2}\big(3\ln(x) + 1\big)$.
+
+(b) $g'(x) = e^{x} \cdot \sin(x) + e^{x} \cdot \cos(x) = e^{x}\big(\sin(x) + \cos(x)\big)$.
+
+(c) $h'(x) = \dfrac{2x(x^{2} + 1) - (x^{2} - 1) \cdot 2x}{(x^{2} + 1)^{2}} = \dfrac{2x^{3} + 2x - 2x^{3} + 2x}{(x^{2} + 1)^{2}} = \dfrac{4x}{(x^{2} + 1)^{2}}$.
+
+(d) $k'(x) = \dfrac{e^{x}(x + 1) - e^{x} \cdot 1}{(x + 1)^{2}} = \dfrac{x \cdot e^{x}}{(x + 1)^{2}}$, pour $x \neq -1$.
+:::
+
+## Piège
+
+Une erreur fréquente consiste à perdre un signe en développant le numérateur de (c) : $-(x^{2} - 1) \cdot 2x = -2x^{3} + 2x$.
+
+Une autre erreur consiste à développer le dénominateur $(x^{2} + 1)^{2}$ : le laisser sous forme de carré montre directement qu'il est positif.
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O3"}
+Calcule la dérivée de chacune des fonctions suivantes.
+
+(a) $f_1(x) = (1 - 2x)^{5}$
+(b) $f_2(x) = e^{3x + 1}$
+(c) $f_3(x) = \sqrt{4 - x}$, pour $x < 4$
+(d) $f_4(x) = \ln(2x + 5)$, pour $x > -\tfrac{5}{2}$
+(e) $f_5(t) = \cos\left(\dfrac{\pi t}{12}\right)$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Reconnaître des fonctions imbriquées*, *Chain rule : deux transmissions successives* et *Sinus et cosinus : les radians comptent*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Pour chaque fonction, quelle est la fonction intérieure, et quelle est sa dérivée ?
+
+## Indice 3
+
+*Étape.*
+
+Les fonctions intérieures sont $1 - 2x$, $3x + 1$, $4 - x$, $2x + 5$ et $\dfrac{\pi t}{12}$. Dérive la fonction extérieure en gardant la fonction intérieure, puis multiplie par la dérivée de la fonction intérieure.
+
+## Solution
+
+::: {.reponse}
+**Réponse.** (a) $f_1'(x) = -10(1 - 2x)^{4}$ ; (b) $f_2'(x) = 3e^{3x + 1}$ ; (c) $f_3'(x) = -\dfrac{1}{2\sqrt{4 - x}}$ ; (d) $f_4'(x) = \dfrac{2}{2x + 5}$ ; (e) $f_5'(t) = -\dfrac{\pi}{12}\sin\left(\dfrac{\pi t}{12}\right)$.
+:::
+
+::: {.details}
+(a) $f_1'(x) = 5(1 - 2x)^{4} \cdot (-2) = -10(1 - 2x)^{4}$.
+
+(b) $f_2'(x) = e^{3x + 1} \cdot 3$.
+
+(c) $f_3'(x) = \dfrac{1}{2\sqrt{4 - x}} \cdot (-1)$.
+
+(d) $f_4'(x) = \dfrac{1}{2x + 5} \cdot 2$.
+
+(e) $f_5'(t) = -\sin\left(\dfrac{\pi t}{12}\right) \cdot \dfrac{\pi}{12}$.
+:::
+
+## Piège
+
+Une erreur fréquente consiste à oublier une dérivée intérieure négative, en (a) et en (c) : elle change le signe du résultat.
+
+En (d), une autre erreur consiste à écrire $\dfrac{1}{2x + 5}$ : la dérivée de la fonction intérieure $2x + 5$ vaut $2$.
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|3|O3"}
+Calcule la dérivée de chacune des fonctions suivantes. Chacune demande d'enchaîner deux règles.
+
+(a) $f(x) = x \cdot e^{-x^{2}}$
+(b) $g(x) = \ln\left(\sqrt{x^{2} + 1}\right)$
+(c) $h(x) = \big(\sin(x)\big)^{2}$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Choisir la première règle*, *Règle du produit : deux contributions*, *Chain rule : deux transmissions successives* et *Logarithmes : retrouver les formules*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quelle est la première règle à appliquer, et quelle règle intervient ensuite, pour une étape intérieure ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Applique la règle de Leibniz à $x$ et $e^{-x^{2}}$, puis la chain rule pour dériver $e^{-x^{2}}$.
+(b) Écris $\ln\left(\sqrt{x^{2} + 1}\right) = \dfrac{1}{2}\ln\left(x^{2} + 1\right)$ avant de dériver.
+(c) La fonction extérieure est $y^{2}$ et la fonction intérieure est $\sin(x)$.
+
+## Solution
+
+::: {.reponse}
+**Réponse.** (a) $f'(x) = (1 - 2x^{2}) \cdot e^{-x^{2}}$ ; (b) $g'(x) = \dfrac{x}{x^{2} + 1}$ ; (c) $h'(x) = 2\sin(x)\cos(x)$.
+:::
+
+::: {.details}
+(a) $f'(x) = 1 \cdot e^{-x^{2}} + x \cdot e^{-x^{2}} \cdot (-2x) = (1 - 2x^{2}) \cdot e^{-x^{2}}$.
+
+(b) Comme $x^{2} + 1 > 0$, $g(x) = \dfrac{1}{2}\ln\left(x^{2} + 1\right)$ sur $\mathbb{R}$, donc $g'(x) = \dfrac{1}{2} \cdot \dfrac{2x}{x^{2} + 1} = \dfrac{x}{x^{2} + 1}$.
+
+(c) $h'(x) = 2\sin(x) \cdot \cos(x)$.
+:::
+
+## Piège
+
+En (a), une erreur fréquente consiste à traiter $f$ comme une composée et à écrire $f'(x) = -2x \cdot e^{-x^{2}}$, en oubliant le terme $1 \cdot e^{-x^{2}}$ du produit.
+
+En (c), une autre erreur consiste à écrire $h'(x) = 2\cos(x)$ ou $h'(x) = \cos^{2}(x)$ : on dérive d'abord le carré, puis le sinus.
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O4"}
+Pour chacune des fonctions suivantes, écris la règle de dérivation que l'expression semble imposer. Simplifie ensuite l'expression, puis calcule la dérivée sans cette règle.
+
+(a) $f_1(x) = \dfrac{x^{3} - x}{x}$, pour $x \neq 0$
+(b) $f_2(x) = e^{2\ln(x)}$, pour $x > 0$
+(c) $f_3(x) = \ln\left(e^{3x}\right)$
+(d) $f_4(x) = \sqrt{x} \cdot \sqrt{x^{3}}$, pour $x \geq 0$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Choisir la première règle* et *Simplifier pour enlever une difficulté, sans changer le problème*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quelle propriété algébrique permet de simplifier chaque expression, et pour quelles valeurs de $x$ la simplification est-elle permise ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Divise chaque terme du numérateur par $x$, pour $x \neq 0$.
+(b) Utilise $e^{2\ln(x)} = \left(e^{\ln(x)}\right)^{2} = x^{2}$, pour $x > 0$.
+(c) Utilise $\ln(e^{y}) = y$.
+(d) Utilise $\sqrt{x} \cdot \sqrt{x^{3}} = \sqrt{x^{4}} = x^{2}$, pour $x \geq 0$.
+
+## Solution
+
+::: {.reponse}
+**Réponse.** (a) Règle du quotient ; $f_1(x) = x^{2} - 1$ et $f_1'(x) = 2x$, pour $x \neq 0$. (b) Chain rule ; $f_2(x) = x^{2}$ et $f_2'(x) = 2x$, pour $x > 0$. (c) Chain rule ; $f_3(x) = 3x$ et $f_3'(x) = 3$, sur $\mathbb{R}$. (d) Règle de Leibniz ; $f_4(x) = x^{2}$ et $f_4'(x) = 2x$, pour $x \geq 0$.
+:::
+
+::: {.details}
+Chaque simplification est valable seulement sur le domaine initial de la fonction.
+
+(a) $\dfrac{x^{3} - x}{x} = x^{2} - 1$ pour $x \neq 0$ : on a divisé par $x$, donc $0$ reste exclu.
+
+(b) $e^{2\ln(x)} = x^{2}$ n'a de sens que pour $x > 0$, car $\ln(x)$ n'est défini que pour $x > 0$.
+
+(c) $\ln\left(e^{3x}\right) = 3x$ pour tout réel $x$, car $e^{3x} > 0$.
+
+(d) $\sqrt{x} \cdot \sqrt{x^{3}} = x^{2}$ pour $x \geq 0$, car les racines imposent $x \geq 0$.
+:::
+
+## Piège
+
+Une erreur fréquente consiste à donner le domaine de la fonction simplifiée, par exemple $\mathbb{R}$ pour $x^{2}$ en (b) et en (d). La simplification ne change pas le problème : le domaine reste celui de l'expression de départ.
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O5"}
+Une étudiante a calculé les dérivées suivantes. Pour chacune, écris si elle est correcte. Si elle est fausse, nomme la règle qui n'a pas été respectée et corrige le calcul.
+
+(a) $\left(\dfrac{x^{2} + 1}{x}\right)' = \dfrac{2x}{1} = 2x$
+(b) $\left(\sqrt{2x}\right)' = \dfrac{1}{2\sqrt{2x}}$
+(c) $\big(\ln(3x)\big)' = \dfrac{1}{x}$
+(d) $\big(x \cdot e^{2x}\big)' = e^{2x} + 2x\,e^{2x}$
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Règle du quotient : application*, *Chain rule : deux transmissions successives* et *Cinq contrôles systématiques*.
+
+## Indice 2
+
+*Question à te poser.*
+
+Quelle est la nature algébrique de chaque expression, et donc quelle règle l'étudiante aurait-elle dû appliquer ?
+
+## Indice 3
+
+*Étape.*
+
+Refais chaque dérivée avec la règle qui correspond à la dernière opération. Pour (c), tu peux aussi écrire $\ln(3x) = \ln(3) + \ln(x)$, pour $x > 0$.
+
+## Solution
+
+::: {.reponse}
+**Réponse.** (a) Faux ; (b) faux ; (c) correct ; (d) correct.
+:::
+
+::: {.details}
+(a) La règle du quotient n'a pas été respectée : l'étudiante a écrit le quotient des dérivées. Correction : $\left(\dfrac{x^{2} + 1}{x}\right)' = \dfrac{2x \cdot x - (x^{2} + 1)}{x^{2}} = \dfrac{x^{2} - 1}{x^{2}}$. On peut aussi simplifier d'abord : $x + \dfrac{1}{x}$, de dérivée $1 - \dfrac{1}{x^{2}}$.
+
+(b) La chain rule n'a pas été respectée : il manque la dérivée de la fonction intérieure $2x$. Correction : $\left(\sqrt{2x}\right)' = \dfrac{2}{2\sqrt{2x}} = \dfrac{1}{\sqrt{2x}}$.
+
+(c) $\big(\ln(3x)\big)' = \dfrac{1}{3x} \cdot 3 = \dfrac{1}{x}$ : le calcul est correct.
+
+(d) Par la règle de Leibniz et la chain rule, $\big(x \cdot e^{2x}\big)' = e^{2x} + x \cdot 2e^{2x}$ : le calcul est correct.
+:::
+
+## Piège
+
+En (c), une erreur fréquente consiste à juger le résultat faux parce que le facteur $3$ a « disparu » : il est simplifié par la dérivée de la fonction intérieure. Une valeur simple permet de contrôler : en $x = 1$, la pente de $\ln(3x)$ vaut $1$.
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O6"}
+Le métabolisme de base d'un mammifère, c'est-à-dire l'énergie qu'il dépense au repos, dépend de sa masse. La loi de Kleiber le modélise par
+$$B(m) = 70 \cdot m^{3/4},$$
+où $m$ est la masse, en kg, et $B(m)$ le métabolisme de base, en kcal par jour.[^kleiber-r8]
+
+(a) Calcule $B'(m)$.
+(b) Calcule $B(16)$, $B'(16)$, $B(81)$ et $B'(81)$, avec leur unité. Écris en une phrase ce que signifie $B'(81)$.
+(c) Montre que $B'(m) = \dfrac{3}{4} \cdot \dfrac{B(m)}{m}$. Pour un mammifère donné, un kilogramme de plus coûte-t-il plus ou moins d'énergie que la moyenne de ses kilogrammes ?
+
+[^kleiber-r8]: M. Kleiber, *The Fire of Life: An Introduction to Animal Energetics*, Wiley, 1961 : métabolisme de base de $70\,m^{0{,}75}$ kcal par jour. Voir aussi M. Kleiber, « Body size and metabolic rate », *Physiological Reviews*, 27(4), 1947, p. 511–541. https://doi.org/10.1152/physrev.1947.27.4.511 (consulté le 17 novembre 2026).
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Puissances : une seule règle, des domaines distincts* et *Retour à la réponse biologique*.
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Quelle est la dérivée de $m^{3/4}$ ?
+(b) Que valent $16^{1/4}$ et $81^{1/4}$ ? Quelle est l'unité de $B'$ ?
+(c) Que représente le quotient $\dfrac{B(m)}{m}$ ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Applique $(m^{\alpha})' = \alpha \cdot m^{\alpha - 1}$ avec $\alpha = \tfrac{3}{4}$.
+(b) Utilise $16^{1/4} = 2$, donc $16^{3/4} = 8$, et $81^{1/4} = 3$, donc $81^{3/4} = 27$.
+(c) Écris $m^{-1/4} = \dfrac{m^{3/4}}{m}$.
+
+## Solution
+
+::: {.reponse}
+**Réponse (a).** $B'(m) = 52{,}5 \cdot m^{-1/4} = \dfrac{52{,}5}{m^{1/4}}$.
+:::
+
+::: {.details}
+$B'(m) = 70 \cdot \dfrac{3}{4} \cdot m^{3/4 - 1} = 52{,}5 \cdot m^{-1/4}$.
+:::
+
+::: {.reponse}
+**Réponse (b).** $B(16) = 560$ kcal par jour, $B'(16) = 26{,}25$ kcal par jour et par kg, $B(81) = 1890$ kcal par jour et $B'(81) = 17{,}5$ kcal par jour et par kg. Pour un mammifère de $81$ kg, chaque kilogramme supplémentaire augmente le métabolisme de base d'environ $17{,}5$ kcal par jour.
+:::
+
+::: {.details}
+$B(16) = 70 \cdot 8 = 560$ et $B'(16) = \dfrac{52{,}5}{2} = 26{,}25$ ; $B(81) = 70 \cdot 27 = 1890$ et $B'(81) = \dfrac{52{,}5}{3} = 17{,}5$. L'unité de $B'$ est celle de $B$, des kcal par jour, divisée par celle de $m$, des kg.
+:::
+
+::: {.reponse}
+**Réponse (c).** $B'(m) = \dfrac{3}{4} \cdot \dfrac{B(m)}{m}$ : un kilogramme de plus coûte moins d'énergie que la moyenne des kilogrammes du mammifère, $25\,\%$ de moins.
+:::
+
+::: {.details}
+$\dfrac{3}{4} \cdot \dfrac{B(m)}{m} = \dfrac{3}{4} \cdot \dfrac{70 \cdot m^{3/4}}{m} = 52{,}5 \cdot m^{-1/4} = B'(m)$.
+
+Le quotient $\dfrac{B(m)}{m}$ est le métabolisme moyen par kilogramme, par exemple $\dfrac{1890}{81} \approx 23{,}3$ kcal par jour et par kg pour $81$ kg. La dérivée $B'(81) = 17{,}5$ en vaut les trois quarts.
+:::
+
+## Piège
+
+En (b), une erreur fréquente consiste à confondre $B'(81)$ et $\dfrac{B(81)}{81}$ : le premier est le coût d'un kilogramme supplémentaire, le second le coût moyen d'un kilogramme.
+
+Une autre erreur consiste à donner à $B'$ l'unité de $B$, des kcal par jour.
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Renforcement|2|O2"}
+Soit la fonction $f(x) = x^{2} \cdot e^{-x}$.
+
+(a) Calcule $f'(x)$, et écris-la sous forme factorisée.
+(b) En quels points du graphe de $f$ la tangente est-elle horizontale ?
+(c) Écris l'équation de la tangente au graphe de $f$ au point d'abscisse $1$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Règle du produit : deux contributions*, *Exponentielle composée : un taux proportionnel à la quantité* et *Cinq contrôles systématiques*.
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Quelle est la nature algébrique de $f(x)$ ?
+(b) Que vaut la pente d'une tangente horizontale ?
+(c) Quelles sont la pente et le point de contact de la tangente ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Applique la règle de Leibniz à $x^{2}$ et $e^{-x}$, puis mets $x \cdot e^{-x}$ en évidence.
+(b) Résous $f'(x) = 0$, en sachant que $e^{-x} > 0$.
+(c) Calcule $f(1)$ et $f'(1)$, puis écris $y = f(1) + f'(1)(x - 1)$.
+
+## Solution
+
+::: {.reponse}
+**Réponse (a).** $f'(x) = x(2 - x) \cdot e^{-x}$.
+:::
+
+::: {.details}
+$f'(x) = 2x \cdot e^{-x} + x^{2} \cdot \left(-e^{-x}\right) = (2x - x^{2}) \cdot e^{-x} = x(2 - x) \cdot e^{-x}$.
+:::
+
+::: {.reponse}
+**Réponse (b).** Aux points $(0\,;\,0)$ et $\left(2\,;\,4e^{-2}\right)$.
+:::
+
+::: {.details}
+Comme $e^{-x} > 0$, $f'(x) = 0$ si et seulement si $x = 0$ ou $x = 2$. On calcule $f(0) = 0$ et $f(2) = 4e^{-2}$.
+:::
+
+::: {.reponse}
+**Réponse (c).** $y = \dfrac{x}{e}$.
+:::
+
+::: {.details}
+$f(1) = e^{-1}$ et $f'(1) = 1 \cdot 1 \cdot e^{-1} = e^{-1}$. La tangente a pour équation $y = e^{-1} + e^{-1}(x - 1) = e^{-1} \cdot x$.
+:::
+
+## Piège
+
+Une erreur fréquente consiste à oublier le signe moins de $\left(e^{-x}\right)' = -e^{-x}$, ce qui donne $f'(x) = (2x + x^{2}) \cdot e^{-x}$ et une seule tangente horizontale.
+
+En (b), une autre erreur consiste à chercher les solutions de $e^{-x} = 0$ : cette équation n'en a pas.
+:::
+:::

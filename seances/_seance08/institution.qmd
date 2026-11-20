@@ -1,0 +1,39 @@
+---
+title: "Institutionnalisation — méthode & auto-évaluation"
+subtitle: "Séance 8 · ce qu'on retient"
+---
+
+## Les méthodes qu'on dégage ensemble
+
+À la fin du socle, la confrontation puis la correction de l'exercice S.2 dégagent la méthode pour **dériver une expression en suivant sa structure** :
+
+- **reconnaître** l'opération effectuée en dernier quand on calcule $f(x)$ : elle donne la première règle à appliquer ;
+- **décomposer** l'expression en morceaux, et simplifier si cela enlève une difficulté, sans élargir le domaine ;
+- **dériver** avec la règle de l'opération extérieure, puis chaque morceau ;
+- **simplifier** le résultat, puis le **contrôler** : domaine, valeur simple, signe des pentes.
+
+En fin de séance, la confrontation puis la correction de l'exercice de transfert T.1 dégagent la méthode pour **dériver un modèle et interpréter le taux** :
+
+- **repérer** la grandeur, la variable de dérivation, les paramètres et leurs unités ;
+- **écrire** le modèle à partir de la loi, s'il n'est pas donné ;
+- **dériver** en suivant la structure de l'expression, avec la chain rule si la variable est dans un exposant ou dans une fonction trigonométrique ;
+- **écrire** l'unité de la dérivée, puis **interpréter** son signe et sa valeur dans une phrase.
+
+Ces méthodes rejoignent ta **[boîte à outils](../methode.qmd)** : elles resserviront à chaque séance. Tu y
+trouveras aussi deux autres méthodes de la séance 8 : dériver une composée avec la chain rule, et contrôler une dérivée.
+
+## Auto-évaluation — coche ce que tu sais faire
+
+Sois honnête : c'est pour *toi*, pas pour une note. Les cases suivent les **objectifs** de la séance.
+
+- [ ] **O1** — retrouver ou utiliser les dérivées des fonctions élémentaires, avec leurs domaines de validité ;
+- [ ] **O2** — reconnaître la structure extérieure d'une expression à dériver et appliquer linéarité, produit, quotient et chaîne ;
+- [ ] **O3** — dériver une expression composée en explicitant les fonctions intermédiaires ;
+- [ ] **O4** — simplifier sans élargir silencieusement le domaine initial ;
+- [ ] **O5** — détecter une dérivée impossible par le domaine, les unités, le signe, une valeur simple ou le graphe ;
+- [ ] **O6** — interpréter un taux composé avec sa variable, son signe et son unité.
+
+::: {.callout-important appearance="simple"}
+Tu coches **moins de la moitié** des cases ? Ce n'est pas un échec — c'est le signal d'aller à la
+**remédiation** (une séance chaque semaine pour reprendre les bases).
+:::

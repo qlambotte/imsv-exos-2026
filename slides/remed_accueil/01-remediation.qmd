@@ -105,18 +105,19 @@ Code : OBMKFUU
 :::
 :::
 
-Un seul code, **six thèmes** :
+Un seul code, **sept thèmes** :
 
 :::: {.columns}
 ::: {.column width="50%"}
 - **La logique**
 - **Les vecteurs**
 - **Les fonctions**
+- **Les modèles**
 :::
 ::: {.column width="50%"}
 - **La trigonométrie**
-- **Les modèles**
 - **Les dérivées**
+- **Le calcul différentiel**
 :::
 ::::
 
@@ -137,6 +138,7 @@ Chaque QCM comporte de sept à neuf questions, avec une seule réponse correcte.
 | La trigonométrie | angles associés, sinus, cosinus, tangente | [Ouvrir le deck](../remed_trigo/01-remediation.html) |
 | Les modèles | exponentiel, logarithmique, périodique, demi-vie | [Ouvrir le deck](../remed_modeles/01-remediation.html) |
 | Les dérivées | limites, continuité, taux de variation, dérivée | [Ouvrir le deck](../remed_derivees/01-remediation.html) |
+| Le calcul différentiel | règles de dérivation, chain rule, contrôles, taux | [Ouvrir le deck](../remed_calcul/01-remediation.html) |
 
 ## Comment ça se passe {#mecanisme}
 

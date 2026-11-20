@@ -1,0 +1,5 @@
+::: {.seance-meta}
+**Thème.** Dérivées élémentaires et linéarité, règle de Leibniz et règle du quotient, chain rule (exponentielles et logarithmes en base quelconque compris), choix de la première règle, simplification avant dérivation, contrôles d'une dérivée, dérivée d'un modèle en contexte.
+
+**Théorie associée :** IMSV-8, *« Calcul différentiel »*.
+:::

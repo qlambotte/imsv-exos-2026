@@ -1,0 +1,20 @@
+---
+title: "Séance 8 — Calcul différentiel"
+description: "Calcul différentiel"
+order: 8
+nom: "[Calcul différentiel](methodes/seance08.html)"
+correction: "✅ en ligne"
+filters:
+  - ../../methode.lua
+---
+
+::: {.content-visible when-format="html"}
+::: {.dl}
+<details class="dl-menu">
+<summary>Télécharger (PDF)</summary>
+<a href="../../pdf/feuille-seance08.pdf" download>Feuille à compléter — séance 8 (PDF)</a>
+</details>
+:::
+:::
+
+{{< include _corrige-seance08.qmd >}}

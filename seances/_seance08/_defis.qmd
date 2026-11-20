@@ -1,0 +1,67 @@
+<!-- DÉFIS : page optionnelle, pour celles et ceux qui trouvent les exercices trop faciles.
+     VERSION 2 (énoncés validés le 19/11/2026 ; indice et réponse rédigés).
+     Chaque défi est plus corsé que le transfert, reste dans les notions et la notation du cours, et demande
+     plusieurs étapes ou un choix de méthode que l'énoncé n'indique pas.
+     Titre : « Exercice|Défi|niveau|Ox » (numéro D.1, D.2… automatique).
+     Pas de solution rédigée : un seul onglet « Indice » (une phrase complète), puis « Réponse » (une phrase complète).
+     Faisable SANS calculatrice. Réponses vérifiées par script (hors dépôt).
+     D.1 = retrouver une fonction dont on connaît la dérivée (Leibniz + identification) ; D.2 = dérivée de x^x (réécriture avec e et ln) ;
+     D.3 = dérivées itérées de x e^{-x} (lien avec la séance 7). -->
+
+::: {.callout-note appearance="simple"}
+Les défis sont **optionnels**. Ils s'adressent à celles et ceux qui maîtrisent déjà le socle : tu peux les faire en séance, à la place des exercices du socle que tu sais déjà résoudre, ou à la maison. Ils restent dans les notions et les notations de la séance, mais ils demandent plusieurs étapes et un choix de méthode que l'énoncé n'indique pas. Chaque défi propose un seul indice et la réponse finale, sans solution rédigée : c'est à toi de construire le raisonnement et de contrôler ta réponse.
+:::
+
+::: {.callout-caution .exo title="Exercice|Défi|3|O2"}
+Détermine les réels $a$ et $b$ tels que la fonction $f(x) = (a\,x + b) \cdot e^{2x}$ vérifie $f'(x) = (4x + 1) \cdot e^{2x}$ pour tout réel $x$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Dérive $(a\,x + b) \cdot e^{2x}$ avec la règle de Leibniz, mets $e^{2x}$ en évidence, puis identifie les coefficients de $x$ et les termes constants avec ceux de $4x + 1$.
+
+## Réponse
+
+$f'(x) = (2a\,x + a + 2b) \cdot e^{2x}$, donc $2a = 4$ et $a + 2b = 1$ : on obtient $a = 2$ et $b = -\dfrac{1}{2}$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Défi|3|O3"}
+Soit la fonction $f(x) = x^{x}$, définie pour $x > 0$. Ni la règle de la puissance $x^{n}$, ni celle de l'exponentielle $a^{x}$ ne s'appliquent. Calcule $f'(x)$, puis écris l'équation de la tangente au graphe de $f$ au point d'abscisse $1$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Pour $x > 0$, écris $x^{x} = e^{x \cdot \ln(x)}$, puis applique la chain rule avec la fonction intérieure $x \cdot \ln(x)$, qui se dérive par la règle de Leibniz.
+
+## Réponse
+
+$f'(x) = \big(\ln(x) + 1\big) \cdot x^{x}$ ; comme $f(1) = 1$ et $f'(1) = 1$, la tangente au point d'abscisse $1$ a pour équation $y = x$.
+
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Défi|3|O2"}
+Soit la fonction $f(x) = x \cdot e^{-x}$. Calcule $f'(x)$, $f''(x)$ et $f^{(3)}(x)$, puis conjecture une expression de $f^{(n)}(x)$ pour tout entier $n \geq 1$. Vérifie que ton expression donne bien $f^{(n+1)}(x)$ quand on dérive $f^{(n)}(x)$.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice
+
+Chaque dérivée est de la forme $(\text{polynôme du premier degré}) \cdot e^{-x}$ : par la règle de Leibniz, $\big((p\,x + q) \cdot e^{-x}\big)' = (p - p\,x - q) \cdot e^{-x}$. Observe le signe et le terme constant à chaque étape.
+
+## Réponse
+
+$f'(x) = (1 - x) \cdot e^{-x}$, $f''(x) = (x - 2) \cdot e^{-x}$, $f^{(3)}(x) = (3 - x) \cdot e^{-x}$ et, pour tout $n \geq 1$, $f^{(n)}(x) = (-1)^{n} \cdot (x - n) \cdot e^{-x}$ ; en dérivant cette expression, on obtient $(-1)^{n} \cdot (1 - x + n) \cdot e^{-x} = (-1)^{n+1} \cdot \big(x - (n + 1)\big) \cdot e^{-x}$.
+
+:::
+:::

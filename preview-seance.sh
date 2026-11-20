@@ -6,6 +6,9 @@
 #   bash preview-seance.sh 5 transfert --no-browser
 #   bash preview-seance.sh 6 methodes   # les cartes méthode de la séance (seances/_methodes-seanceNN.qmd)
 #
+# Sans page, l'aperçu rend toutes les pages de la séance, y compris la page des cartes méthode,
+# et une barre de navigation permet de passer de l'une à l'autre.
+#
 # Le dossier de la séance (seances/seanceNN ou seances/_seanceNN) est recopié dans un dossier
 # temporaire, avec les filtres, le thème et les includes, et un _quarto.yml minimal y est créé.
 # Quarto rend donc dans ce dossier temporaire : aucun déchet (.quarto/, *_files/, *.html) dans le
@@ -111,6 +114,27 @@ sync_once() {
 }
 FIRST=1 sync_once
 
+# Page d'aperçu des cartes méthode (absente du dépôt : elle n'existe que dans le dossier temporaire).
+if [ -f "$DIR/_methodes-seance$NN.qmd" ]; then
+  cat > "$DIR/methodes.qmd" <<QMD
+---
+title: "Méthodes de la séance $NN — aperçu"
+filters:
+  - ../../methode.lua
+---
+
+{{< include _methodes-seance$NN.qmd >}}
+QMD
+fi
+
+# Barre de navigation : toutes les pages de la séance présentes, dans l'ordre du parcours,
+# puis les cartes méthode.
+NAV=""
+for p in index socle transfert supplementaires defis institution methodes; do
+  if [ -f "$DIR/$p.qmd" ]; then NAV="$NAV
+      - $p.qmd"; fi
+done
+
 # Mêmes réglages HTML que le livre (_quarto.yml de la racine), sans la structure « book ».
 # Type « website » : toutes les pages de la séance sont rendues et les liens .qmd → .html résolus.
 cat > "$DIR/_quarto.yml" <<YML
@@ -120,6 +144,8 @@ project:
     - "*.pdf"
 website:
   title: "Séance $NN — aperçu"
+  navbar:
+    left:$NAV
 lang: fr
 format:
   html:
@@ -138,19 +164,6 @@ format:
     html-math-method: mathml
     fig-cap-location: bottom
 YML
-
-# Page d'aperçu des cartes méthode (absente du dépôt : elle n'existe que dans le dossier temporaire).
-if [ -f "$DIR/_methodes-seance$NN.qmd" ]; then
-  cat > "$DIR/methodes.qmd" <<QMD
----
-title: "Méthodes de la séance $NN — aperçu"
-filters:
-  - ../../methode.lua
----
-
-{{< include _methodes-seance$NN.qmd >}}
-QMD
-fi
 
 # Boucle de synchronisation en arrière-plan, arrêtée avec le preview.
 # Elle refait aussi le PDF des énoncés quand un fragment, une figure ou le filtre a changé.

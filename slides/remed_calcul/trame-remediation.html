@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Trame — Remédiation IMSV — Le calcul différentiel</title>
+<style>
+  @page { size: A4 portrait; margin: 10mm 11mm; }
+  * { box-sizing: border-box; color: #000; background: transparent; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  html { padding-right: .4mm; }
+  body { font-family: "Liberation Sans", Arial, "DejaVu Sans", sans-serif; font-size: 8.6pt; line-height: 1.28; }
+  h1 { font-size: 13.5pt; margin: 0 0 1mm; }
+  h2 { font-size: 10.5pt; margin: 4mm 0 1.5mm; padding-bottom: .6mm; border-bottom: 1.6pt solid #000; }
+  p { margin: 0 0 1.4mm; }
+  .meta { width: 100%; border-collapse: collapse; margin: 1.5mm 0 0; }
+  .meta td { border: .8pt solid #000; padding: 1mm 1.6mm; vertical-align: top; }
+  .meta td.l { font-weight: 700; width: 24mm; }
+  table.g { width: 100%; border-collapse: collapse; margin: 0 0 1.5mm; }
+  table.g th, table.g td { border: .8pt solid #000; padding: .9mm 1.4mm; vertical-align: top; text-align: left; }
+  table.g th { font-weight: 700; border-bottom: 1.6pt solid #000; }
+  table.g td.c, table.g th.c { text-align: center; }
+  table.g tr { page-break-inside: avoid; }
+  .nw { white-space: nowrap; }
+  .b { font-weight: 700; }
+  .i { font-style: italic; }
+  .blank { height: 6.5mm; }
+  .box { border: 1.6pt solid #000; padding: 1.2mm 2mm; margin: 0 0 1.5mm; }
+  .dbl { border: 1.6pt double #000; }
+  .pb { page-break-before: always; }
+  ul { margin: 0 0 1.5mm 4mm; padding: 0; }
+  li { margin: 0 0 .6mm; }
+  .small { font-size: 7.8pt; }
+  table.t1 { font-size: 7.6pt; line-height: 1.2; }
+  table.t1 th, table.t1 td { padding: .6mm 1.2mm; }
+</style>
+</head>
+<body>
+<h1>Trame — Remédiation IMSV · Le calcul différentiel (séance 8)</h1>
+<table class="meta"><tr><td class="l">Date</td><td>À COMPLÉTER</td><td class="l">Effectif attendu</td><td>À COMPLÉTER</td></tr><tr><td class="l">Format</td><td>☐ présentiel &nbsp; ☐ distanciel (Teams) — À COMPLÉTER</td><td class="l">Durée</td><td>60 min (hypothèse de travail, à confirmer)</td></tr><tr><td class="l">Wooclap mur</td><td>Code : XELAEPI</td><td class="l">Wooclap QCM</td><td>Code : OBMKFUU (en autonomie ; thème à ajouter à l'événement)</td></tr><tr><td class="l">Decks</td><td colspan="3">01-remediation.html · 02-annexe.html</td></tr></table>
+<h2>1. Déroulé minute par minute</h2>
+<table class="g t1"><tr><th class="nw">Min</th><th>Durée</th><th>Étape</th><th>Ce que je dis</th><th>Ce que je montre</th><th>Fait</th></tr>
+<tr><td class="nw">0–1</td><td class="c">1</td><td class="b">Accueil</td><td>« Un seul thème aujourd'hui : le calcul différentiel (séance 8). QCM, puis on revoit ce qu'il faut savoir, puis on reprend ce qui a été moins réussi, puis tu cherches des exercices. »</td><td>« Par où commencer ? »</td><td class="c">☐</td></tr>
+<tr><td class="nw">1–13</td><td class="c">12</td><td class="b">QCM Wooclap</td><td>« Seul·e, sans discuter. Neuf questions, une seule réponse correcte. » Je ne commente aucune question. Je lance le minuteur.</td><td>« Pas encore fait le QCM ? » (code, QR, minuteur 12:00)</td><td class="c">☐</td></tr>
+<tr><td class="nw">13–15</td><td class="c">2</td><td class="b">Dérivées élémentaires et domaines</td><td>Réécrire en puissance avant de dériver ; le domaine de f′ n'est jamais plus grand que celui de f. Exemple √x : dérivée 1/(2√x) sur ℝ⁺₀.</td><td>« Dérivées élémentaires et domaines »</td><td class="c">☐</td></tr>
+<tr><td class="nw">15–17</td><td class="c">2</td><td class="b">Linéarité, produit et quotient</td><td>Deux contributions pour un produit ; f′g − fg′ sur g² pour un quotient. Exemple x² · ln(x).</td><td>« Linéarité, produit et quotient »</td><td class="c">☐</td></tr>
+<tr><td class="nw">17–19</td><td class="c">2</td><td class="b">Composition et chain rule</td><td>Intérieure, extérieure, f′(g(x)) · g′(x). Sur un graphe : la pente de f se lit en g(a). Les taux se multiplient.</td><td>« Composition et chain rule »</td><td class="c">☐</td></tr>
+<tr><td class="nw">19–20</td><td class="c">1</td><td class="b">Première règle, simplifier</td><td>L'opération extérieure donne la première règle. Simplifier sans élargir le domaine : (x² − 9)/(x − 3), x ≠ 3.</td><td>« Choisir la première règle, simplifier sans changer le domaine »</td><td class="c">☐</td></tr>
+<tr><td class="nw">20–21</td><td class="c">1</td><td class="b">Cinq contrôles d'une dérivée</td><td>Domaine, unité, signe des pentes, valeur simple, graphe ; un contrôle raté suffit à rejeter.</td><td>« Cinq contrôles d'une dérivée »</td><td class="c">☐</td></tr>
+<tr><td class="nw">21–22</td><td class="c">1</td><td class="b">Interpréter un taux composé</td><td>Instant, sens, valeur, unité. Ne pas confondre C(0) et C′(0).</td><td>« Interpréter un taux composé »</td><td class="c">☐</td></tr>
+<tr><td class="nw">22–24</td><td class="c">2</td><td class="b">Appli chain rule</td><td>« Que vaut g(a) ? Où faut-il lire la pente de f ? » Faire prédire avant de lire la note.</td><td>« Joue avec la chain rule »</td><td class="c">☐</td></tr>
+<tr><td class="nw">24–34</td><td class="c">10</td><td class="b">Corrections ciblées</td><td>Lire les résultats Wooclap, appliquer les seuils (section 2). « Voici les questions les moins réussies. » Corriger dans l'ordre des moins réussies.</td><td>« Où aller selon les résultats », puis les slides Q concernées</td><td class="c">☐</td></tr>
+<tr><td class="nw">34–56</td><td class="c">22</td><td class="b">Exercices</td><td>« Choisis dans le tableau les exercices des questions que tu as ratées. Recherche sur papier, la solution rédigée est dans l'annexe. » Rappel : R.n = renforcement de la séance 8 ; S.n = socle de la séance 8. Passer dans les rangs en posant des questions, sans donner la solution.</td><td>« Exercices à réaliser pour consolider » (minuteur 20:00), puis les exercices</td><td class="c">☐</td></tr>
+<tr><td class="nw">56–60</td><td class="c">4</td><td class="b">Questions, clôture</td><td>Traiter les questions du mur les plus votées. « Les solutions rédigées sont dans le deck Annexe. Pas de réponse écrite aux questions du mur. »</td><td>« Pour la suite »</td><td class="c">☐</td></tr>
+</table>
+<h2 class="pb">2. Seuils de décision</h2>
+<p>Pour chaque question du QCM, d'après le pourcentage de bonnes réponses :</p>
+<table class="g"><tr><th>Résultat</th><th>Décision</th><th>Temps</th></tr><tr><td class="nw">≥ 80 %</td><td>Question acquise. Je donne la réponse en une phrase, sans projeter la correction. Les exercices de la ligne restent facultatifs.</td><td class="nw">≈ 20 s</td></tr><tr><td class="nw">60–79 %</td><td>Correction courte : je projette la correction et je lis seulement le diagnostic du distracteur le plus choisi. Exercices de la ligne conseillés.</td><td class="nw">≈ 2 min</td></tr><tr><td class="nw">&lt; 60 %</td><td>Correction complète : tous les distracteurs, retour à la slide de notions clés correspondante. Exercices de la ligne à faire en priorité.</td><td class="nw">≈ 4 min</td></tr></table>
+<p>Budget : 10 min. Si plus de deux questions sont sous 60 %, je corrige les deux moins réussies et je renvoie les autres au tableau d'exercices et à l'annexe.</p>
+<p>Les questions de cette remédiation sont nouvelles : il n'existe pas de pourcentages de référence. Elles sont distinctes de celles du QCM Moodle de la séance 8.</p>
+<h2>3. Résultats du QCM à remplir</h2>
+<p>Répondants : ………… &nbsp;&nbsp; Distracteur le plus choisi : lettre ou début de l'énoncé.</p>
+<table class="g t1"><tr><th>Question</th><th>Sujet</th><th>% bonne réponse</th><th>Distracteur le plus choisi (et %)</th><th class="c">≥ 80</th><th class="c">60–79</th><th class="c">&lt; 60</th><th class="c">Corrigée</th></tr>
+<tr><td class="b">C1</td><td>Dérivée élémentaire et domaine</td><td class="blank"></td><td></td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td></tr>
+<tr><td class="b">C2</td><td>Règle de Leibniz</td><td class="blank"></td><td></td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td></tr>
+<tr><td class="b">C3</td><td>Règle du quotient</td><td class="blank"></td><td></td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td></tr>
+<tr><td class="b">C4</td><td>Chain rule et exponentielle</td><td class="blank"></td><td></td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td></tr>
+<tr><td class="b">C5</td><td>Chain rule et logarithme</td><td class="blank"></td><td></td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td></tr>
+<tr><td class="b">C6</td><td>Simplifier sans élargir le domaine</td><td class="blank"></td><td></td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td></tr>
+<tr><td class="b">C7</td><td>Contrôler une dérivée</td><td class="blank"></td><td></td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td></tr>
+<tr><td class="b">C8</td><td>Interpréter un taux</td><td class="blank"></td><td></td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td></tr>
+<tr><td class="b">C9</td><td>Chain rule à partir de valeurs</td><td class="blank"></td><td></td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td><td class="c">☐</td></tr>
+</table>
+<p>Réserve (annexe) : questions utilisées ?</p>
+<table class="g t1"><tr><th>Réserve</th><th>Sujet</th><th class="c">Utilisée</th><th>Remplace</th></tr>
+<tr><td class="b">CR1</td><td>Chain rule et cosinus</td><td class="c">☐</td><td></td></tr>
+<tr><td class="b">CR2</td><td>Exponentielle en base quelconque</td><td class="c">☐</td><td></td></tr>
+<tr><td class="b">CR3</td><td>Valeur et pente lues sur un graphe</td><td class="c">☐</td><td></td></tr>
+</table>
+<h2 class="pb">4. QCM → exercices à réaliser, et écarts de couverture</h2>
+<p>Exercices de renforcement (R.n) et du socle (S.n) de la séance 8, repris tels quels du site (état du 19/11/2026).</p>
+<table class="g t1"><tr><th>QCM</th><th>Notion</th><th>Exercices</th><th>Couverture</th></tr>
+<tr><td class="b">C1</td><td>Dérivée élémentaire et domaine</td><td class="nw">S.1 · R.1 · R.2</td><td>Couvert : dérivées élémentaires et domaines (S.1, R.1), linéarité (R.2).</td></tr>
+<tr><td class="b">C2</td><td>Règle de Leibniz</td><td class="nw">S.2 · R.3</td><td>Couvert : produit (S.2 f, R.3 a b), avec mise en facteur.</td></tr>
+<tr><td class="b">C3</td><td>Règle du quotient</td><td class="nw">S.2 · R.3(c)(d) · R.7(a)</td><td>Couvert : quotient (S.2 g h, R.3 c d), quotient mal dérivé à repérer (R.7 a).</td></tr>
+<tr><td class="b">C4</td><td>Chain rule et exponentielle</td><td class="nw">S.3 · R.4</td><td>Couvert : chain rule avec puissance, racine, exponentielle (S.3, R.4).</td></tr>
+<tr><td class="b">C5</td><td>Chain rule et logarithme</td><td class="nw">S.3 · R.4(d) · R.5(b)</td><td>Couvert : chain rule avec logarithme (S.3 f₃, R.4 d, R.5 b).</td></tr>
+<tr><td class="b">C6</td><td>Simplifier sans élargir le domaine</td><td class="nw">S.2 (k) · R.6</td><td>Couvert : simplification et domaine (S.2 k, R.6). Écart. Aucun exercice ne simplifie un logarithme d'un produit.</td></tr>
+<tr><td class="b">C7</td><td>Contrôler une dérivée</td><td class="nw">S.4 · S.6 · R.7</td><td>Couvert : association fonction et dérivée (S.4), erreurs de règles (S.6, R.7). Écart. Le contrôle par l'unité n'est travaillé que dans les transferts.</td></tr>
+<tr><td class="b">C8</td><td>Interpréter un taux</td><td class="nw">S.7 · R.8 · R.9</td><td>Couvert : dérivée d'un modèle et interprétation (S.7, R.8), tangente (R.9).</td></tr>
+<tr><td class="b">C9</td><td>Chain rule à partir de valeurs</td><td class="nw">S.5 · R.5</td><td>Couvert : chain rule et règle de Leibniz lues sur des graphes (S.5), composées emboîtées (R.5).</td></tr>
+<tr><td class="b">CR1</td><td>Chain rule et cosinus (réserve)</td><td class="nw">S.3 · R.4(e)</td><td>Couvert.</td></tr>
+<tr><td class="b">CR2</td><td>Exponentielle en base quelconque (réserve)</td><td class="nw">S.3 (f₄) · R.1</td><td>Couvert.</td></tr>
+<tr><td class="b">CR3</td><td>Valeur et pente lues sur un graphe (réserve)</td><td class="nw">S.4 · S.5</td><td>Couvert.</td></tr>
+</table>
+<h2>5. Points de vigilance</h2>
+<ul><li>Valeurs des questions du QCM : choisies pour les questions, sans donnée réelle. Les exercices sont ceux du site ; R.8 reprend la loi de Kleiber citée dans son énoncé.</li><li>Notation : celle des slides IMSV-8 (règle de Leibniz, chain rule, fonction intérieure et extérieure, Dom(f′)).</li><li>L'appli « Joue avec la chain rule » fonctionne hors ligne (tout est dans le deck) ; les flèches du clavier règlent le curseur sans changer de slide.</li><li>Les énoncés et solutions des exercices sont générés depuis les fragments de la séance 8 : à régénérer si le site change.</li></ul>
+<h2>6. Questions du mur, à trier</h2>
+<table class="g"><tr><th class="c">Votes</th><th>Question</th><th class="c">Traitée</th></tr><tr><td class="blank"></td><td></td><td class="c">☐</td></tr><tr><td class="blank"></td><td></td><td class="c">☐</td></tr><tr><td class="blank"></td><td></td><td class="c">☐</td></tr><tr><td class="blank"></td><td></td><td class="c">☐</td></tr></table>
+</body>
+</html>

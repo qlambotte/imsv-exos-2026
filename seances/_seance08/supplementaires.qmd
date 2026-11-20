@@ -1,0 +1,9 @@
+---
+title: "Exercices supplémentaires"
+filters:
+  - ../../exercice.lua
+---
+
+{{< include _download.qmd >}}
+
+{{< include _supplementaires.qmd >}}

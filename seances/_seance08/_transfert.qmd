@@ -1,0 +1,234 @@
+<!-- TRANSFERT : appliquer les savoir-faire du socle à un contexte nouveau (sciences de la vie, données réelles sourcées). 35 minutes, puis 15 minutes de correction de T.1 et de méthode 2.
+     VERSION 3 (énoncés validés le 19/11/2026 ; indices et solutions rédigés). Retours du 17/11 : modèle de T.1 à trouver, ancien T.3 (surface corporelle) retiré.
+     Durées visées (sans calculatrice) : T.1 10 min (corrigé en commun) · T.2 9 min · T.3 9 min = 28 min.
+     T.1 = l'exercice corrigé ensemble juste après le transfert (méthode 2 « Dériver un modèle par rapport à sa variable », sur la croissance d'E. coli) :
+     en tête, pour que tous l'atteignent ; indices et réponses finales (sans « Je veux plus de détails ») ; les détails sont donnés lors de la correction.
+     Numéro AUTOMATIQUE. Faisable SANS calculatrice. Sources : notes de bas de page. Résultats vérifiés par script (hors dépôt). -->
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O6"}
+Dans un bouillon de culture à $37$ °C, la bactérie *Escherichia coli* double son effectif environ toutes les $20$ minutes.[^ecoli-t1] Une culture contient $1000$ bactéries au départ. On note $N(t)$ le nombre de bactéries, où $t$ est le temps écoulé, en minutes. On donne $\ln(2) \approx 0{,}69$.
+
+(a) Écris l'expression de $N(t)$.
+(b) Calcule $N'(t)$, et écris son unité.
+(c) Calcule $N(60)$ et $N'(60)$. Écris en une phrase ce que signifie $N'(60)$.
+(d) Montre que le quotient $\dfrac{N'(t)}{N(t)}$ ne dépend pas de $t$. Écris en une phrase ce qu'il signifie.
+
+[^ecoli-t1]: G. Sezonov, D. Joseleau-Petit, R. D'Ari, « *Escherichia coli* Physiology in Luria-Bertani Broth », *Journal of Bacteriology*, 189(23), 2007, p. 8746–8749 : temps de doublement de $20$ minutes dans le bouillon LB, repris dans BioNumbers, BNID 103514. https://bionumbers.hms.harvard.edu/bionumber.aspx?id=103514 (consulté le 17 novembre 2026). L'effectif de départ est une valeur choisie.
+:::
+
+::: {.callout-note appearance="simple"}
+L'exercice **T.1** est corrigé ensemble en séance, juste après le temps consacré au transfert. Cherche-le seul·e et repère l'endroit exact où tu bloques. Les coups de pouce ci-dessous donnent les indices et les réponses finales ; les détails seront donnés lors de la correction.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Exponentielle en base quelconque* et *Exponentielle composée : un taux proportionnel à la quantité*.
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Combien de fois l'effectif a-t-il doublé après $t$ minutes ?
+(b) Quelle est la fonction intérieure de $2^{t/20}$, et quelle est la dérivée de $2^{y}$ ?
+(c) Que valent $2^{60/20}$ et $\ln(2)$ ?
+(d) Quel facteur apparaît à la fois dans $N(t)$ et dans $N'(t)$ ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Après $20$ minutes, l'effectif est multiplié par $2$ ; après $40$ minutes, par $2^{2}$ ; après $t$ minutes, il a doublé $\tfrac{t}{20}$ fois.
+(b) Écris $N'(t) = 1000 \cdot \ln(2) \cdot 2^{t/20} \cdot \left(\dfrac{t}{20}\right)'$.
+(c) Utilise $2^{3} = 8$ et $\ln(2) \approx 0{,}69$.
+(d) Divise $N'(t)$ par $N(t)$ et simplifie par $1000 \cdot 2^{t/20}$.
+
+## Solution
+
+::: {.reponse}
+**Réponse (a).** $N(t) = 1000 \cdot 2^{t/20}$.
+:::
+
+::: {.reponse}
+**Réponse (b).** $N'(t) = 50\ln(2) \cdot 2^{t/20}$, en bactéries par minute.
+:::
+
+::: {.reponse}
+**Réponse (c).** $N(60) = 8000$ bactéries et $N'(60) \approx 276$ bactéries par minute : $60$ minutes après le début, la culture gagne environ $276$ bactéries par minute.
+:::
+
+::: {.reponse}
+**Réponse (d).** $\dfrac{N'(t)}{N(t)} = \dfrac{\ln(2)}{20} \approx 0{,}0345$ par minute : à chaque instant, la culture augmente d'environ $3{,}45\,\%$ de son effectif par minute.
+:::
+
+## Piège
+
+En (a), une erreur fréquente consiste à écrire $N(t) = 1000 \cdot 2^{20t}$ ou $N(t) = 1000 \cdot 2t$ : le nombre de doublements après $t$ minutes est $\tfrac{t}{20}$, et la croissance est exponentielle, pas linéaire.
+
+En (b), une autre erreur consiste à appliquer la règle des puissances, $\tfrac{t}{20} \cdot 2^{t/20 - 1}$, ou à oublier le facteur $\tfrac{1}{20}$ de la chain rule.
+
+En (c), une autre erreur consiste à confondre $N(60)$, un nombre de bactéries, et $N'(60)$, un nombre de bactéries par minute.
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|2|O2"}
+L'éthanol est éliminé par le foie à une vitesse qui dépend de sa concentration dans le sang : elle augmente avec la concentration, mais ne dépasse jamais une valeur maximale. On la modélise par
+$$v(C) = \frac{0{,}24 \cdot C}{0{,}08 + C},$$
+où $C$ est la concentration d'éthanol dans le sang, en g/L, et $v(C)$ la vitesse à laquelle cette concentration diminue, en g/L par heure.[^ethanol-t2]
+
+(a) Calcule $v'(C)$.
+(b) Calcule $v'(0{,}08)$ et $v'(0{,}72)$, avec leur unité. Écris en une phrase ce que signifie chacun de ces deux nombres.
+(c) Calcule $v(0{,}72)$. Explique pourquoi, au-delà de quelques dixièmes de gramme par litre, on peut dire que le foie élimine « à peu près la même quantité d'éthanol par heure ».
+
+[^ethanol-t2]: N. H. G. Holford, « Clinical pharmacokinetics of ethanol », *Clinical Pharmacokinetics*, 13(5), 1987, p. 273–292 : à vitesse maximale, la concentration diminuerait de $230$ mg/L par heure, et la vitesse vaut la moitié de ce maximum pour une concentration d'environ $80$ mg/L. https://doi.org/10.2165/00003088-198713050-00001 (consulté le 17 novembre 2026). La vitesse maximale est arrondie à $0{,}24$ g/L par heure.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Règle du quotient : application*, *Cinq contrôles systématiques* et *Retour à la réponse biologique*.
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Quels sont le numérateur et le dénominateur de $v(C)$, et quelles sont leurs dérivées par rapport à $C$ ?
+(b) Quelle est l'unité de $v$ divisée par l'unité de $C$ ?
+(c) Que vaut $v(0{,}72)$ comparé à $0{,}24$, et que dit $v'(0{,}72)$ de la façon dont $v$ change quand $C$ augmente ?
+
+## Indice 3
+
+*Étape.*
+
+(a) Pose $u(C) = 0{,}24 \cdot C$ et $w(C) = 0{,}08 + C$, avec $u'(C) = 0{,}24$ et $w'(C) = 1$, puis écris $\dfrac{u' \cdot w - u \cdot w'}{w^{2}}$.
+(b) Calcule $(0{,}08 + 0{,}08)^{2} = 0{,}0256$ et $(0{,}08 + 0{,}72)^{2} = 0{,}64$.
+(c) Calcule $\dfrac{0{,}24 \cdot 0{,}72}{0{,}8}$.
+
+## Solution
+
+::: {.reponse}
+**Réponse (a).** $v'(C) = \dfrac{0{,}0192}{(0{,}08 + C)^{2}}$.
+:::
+
+::: {.details}
+$v$ est le quotient de $u(C) = 0{,}24 \cdot C$ par $w(C) = 0{,}08 + C$, avec $u'(C) = 0{,}24$ et $w'(C) = 1$. Par la règle du quotient,
+$$v'(C) = \frac{0{,}24 \cdot (0{,}08 + C) - 0{,}24 \cdot C \cdot 1}{(0{,}08 + C)^{2}} = \frac{0{,}24 \cdot 0{,}08}{(0{,}08 + C)^{2}} = \frac{0{,}0192}{(0{,}08 + C)^{2}}.$$
+:::
+
+::: {.reponse}
+**Réponse (b).** $v'(0{,}08) = 0{,}75$ par heure et $v'(0{,}72) = 0{,}03$ par heure. À $0{,}08$ g/L, la vitesse d'élimination augmente de $0{,}75$ g/L par heure pour chaque g/L de concentration supplémentaire ; à $0{,}72$ g/L, elle n'augmente plus que de $0{,}03$ g/L par heure pour chaque g/L supplémentaire.
+:::
+
+::: {.details}
+On remplace $C$ dans l'expression de $v'(C)$.
+
+1. $v'(0{,}08) = \dfrac{0{,}0192}{0{,}16^{2}} = \dfrac{0{,}0192}{0{,}0256} = 0{,}75$.
+2. $v'(0{,}72) = \dfrac{0{,}0192}{0{,}8^{2}} = \dfrac{0{,}0192}{0{,}64} = 0{,}03$.
+3. L'unité de $v'$ est l'unité de $v$, des g/L par heure, divisée par l'unité de $C$, des g/L : c'est l'unité « par heure », notée h$^{-1}$.
+
+Les deux dérivées sont positives : la vitesse d'élimination augmente toujours avec la concentration, mais cette augmentation est $25$ fois plus faible à $0{,}72$ g/L qu'à $0{,}08$ g/L.
+:::
+
+::: {.reponse}
+**Réponse (c).** $v(0{,}72) = 0{,}216$ g/L par heure, soit $90\,\%$ de la vitesse maximale. Au-delà de quelques dixièmes de g/L, la dérivée $v'$ est très faible : la vitesse d'élimination change très peu avec la concentration et reste proche de $0{,}2$ g/L par heure.
+:::
+
+::: {.details}
+On calcule $v(0{,}72) = \dfrac{0{,}24 \cdot 0{,}72}{0{,}8} = 0{,}24 \cdot 0{,}9 = 0{,}216$ g/L par heure.
+
+Comme $v'(C)$ diminue quand $C$ augmente, et vaut déjà $0{,}03$ par heure à $0{,}72$ g/L, une variation de concentration de quelques dixièmes de g/L ne change la vitesse que de quelques millièmes de g/L par heure. La vitesse est donc presque constante, entre $0{,}2$ et $0{,}24$ g/L par heure : le foie élimine à peu près la même quantité d'éthanol par heure.
+:::
+
+## Piège
+
+En (a), une erreur fréquente consiste à écrire le quotient des dérivées, $\dfrac{0{,}24}{1} = 0{,}24$, ce qui donnerait une vitesse qui augmente toujours au même rythme.
+
+En (b), une autre erreur consiste à donner à $v'$ l'unité de $v$, des g/L par heure : il faut encore diviser par l'unité de $C$.
+
+En (c), une autre erreur consiste à confondre « $v'$ est petite » et « $v$ est petite » : à $0{,}72$ g/L, la vitesse d'élimination est grande, mais elle ne change presque plus.
+:::
+:::
+
+::: {.callout-caution .exo title="Exercice|Transfert|3|O6"}
+La température interne du corps humain varie au cours de la journée : elle est la plus basse au petit matin et la plus haute en fin d'après-midi, avec un écart d'environ $0{,}5$ °C.[^temperature-t4] On la modélise, comme à la séance 6, par
+$$T(t) = 37 + 0{,}25 \cdot \cos\left(\frac{2\pi}{24}\,(t - 17)\right),$$
+où $t$ est l'heure de la journée, en heures, et $T(t)$ la température, en °C. On donne $\pi \approx 3$.
+
+(a) Calcule $T'(t)$.
+(b) Calcule $T'(17)$, $T'(11)$ et $T'(23)$, avec leur unité. Écris en une phrase ce que signifie chacun de ces trois nombres.
+(c) À quelle heure la température augmente-t-elle le plus vite ? Justifie à partir de l'expression de $T'(t)$.
+
+[^temperature-t4]: H. K. Walker, W. D. Hall, J. W. Hurst (éd.), *Clinical Methods: The History, Physical, and Laboratory Examinations*, 3e éd., Butterworths, 1990, chapitre 218 « Temperature » : les variations journalières peuvent atteindre $0{,}25$ à $0{,}5$ °C ; le minimum survient vers 4 h et le maximum vers 18 h. https://www.ncbi.nlm.nih.gov/books/NBK331/ (consulté le 17 novembre 2026). Le modèle place le maximum à 17 h et le minimum à 5 h, car une fonction cosinus impose $12$ heures entre les deux.
+:::
+
+::: {.aides}
+::: {.panel-tabset}
+
+## Indice 1
+
+Retourne à la théorie du cours : *Sinus et cosinus : les radians comptent* et *Chain rule : deux transmissions successives*.
+
+## Indice 2
+
+*Question à te poser.*
+
+(a) Quelle est la fonction intérieure du cosinus, et quelle est sa dérivée par rapport à $t$ ?
+(b) Que vaut le sinus en $0$, en $-\tfrac{\pi}{2}$ et en $\tfrac{\pi}{2}$ ?
+(c) Pour quelle valeur du sinus l'expression de $T'(t)$ est-elle la plus grande ?
+
+## Indice 3
+
+*Étape.*
+
+(a) La fonction intérieure est $g(t) = \dfrac{2\pi}{24}(t - 17)$, de dérivée $\dfrac{2\pi}{24} = \dfrac{\pi}{12}$ ; écris $T'(t) = 0{,}25 \cdot \big(-\sin(g(t))\big) \cdot \dfrac{\pi}{12}$.
+(b) Calcule $g(17) = 0$, $g(11) = -\dfrac{\pi}{2}$ et $g(23) = \dfrac{\pi}{2}$.
+(c) Cherche l'heure $t$ entre $0$ et $24$ pour laquelle $\sin\left(\dfrac{\pi}{12}(t - 17)\right) = -1$.
+
+## Solution
+
+::: {.reponse}
+**Réponse (a).** $T'(t) = -\dfrac{\pi}{48} \cdot \sin\left(\dfrac{2\pi}{24}\,(t - 17)\right)$, en °C par heure.
+:::
+
+::: {.details}
+$T$ est la somme de la constante $37$ et de $0{,}25$ fois une composée. La fonction intérieure est $g(t) = \dfrac{2\pi}{24}(t - 17)$, de dérivée $g'(t) = \dfrac{2\pi}{24} = \dfrac{\pi}{12}$ ; la fonction extérieure est le cosinus, de dérivée $-\sin$. Par la chain rule,
+$$T'(t) = 0 + 0{,}25 \cdot \left(-\sin\big(g(t)\big)\right) \cdot \frac{\pi}{12} = -\frac{\pi}{48} \cdot \sin\big(g(t)\big).$$
+:::
+
+::: {.reponse}
+**Réponse (b).** $T'(17) = 0$ °C par heure, $T'(11) = \dfrac{\pi}{48} \approx 0{,}06$ °C par heure et $T'(23) = -\dfrac{\pi}{48} \approx -0{,}06$ °C par heure. À $17$ h, la température ne varie pas : elle est à son maximum. À $11$ h, elle augmente d'environ $0{,}06$ °C par heure. À $23$ h, elle diminue d'environ $0{,}06$ °C par heure.
+:::
+
+::: {.details}
+On calcule la fonction intérieure, puis le sinus.
+
+1. $g(17) = 0$ et $\sin(0) = 0$, donc $T'(17) = 0$.
+2. $g(11) = \dfrac{\pi}{12} \cdot (-6) = -\dfrac{\pi}{2}$ et $\sin\left(-\dfrac{\pi}{2}\right) = -1$, donc $T'(11) = \dfrac{\pi}{48} \approx \dfrac{3}{48} = 0{,}0625$.
+3. $g(23) = \dfrac{\pi}{12} \cdot 6 = \dfrac{\pi}{2}$ et $\sin\left(\dfrac{\pi}{2}\right) = 1$, donc $T'(23) = -\dfrac{\pi}{48} \approx -0{,}0625$.
+
+L'unité est celle de $T$, des °C, divisée par celle de $t$, des heures.
+:::
+
+::: {.reponse}
+**Réponse (c).** À $11$ h.
+:::
+
+::: {.details}
+Comme $-\dfrac{\pi}{48} < 0$, $T'(t)$ est la plus grande quand $\sin\big(g(t)\big)$ est la plus petite, c'est-à-dire égale à $-1$. Cela se produit quand $g(t) = -\dfrac{\pi}{2}$, soit $\dfrac{\pi}{12}(t - 17) = -\dfrac{\pi}{2}$, donc $t - 17 = -6$ et $t = 11$. La valeur suivante, $g(t) = \dfrac{3\pi}{2}$, donne $t = 35$, qui n'est pas une heure de la journée.
+
+À $11$ h, la température augmente à la vitesse maximale de $\dfrac{\pi}{48} \approx 0{,}06$ °C par heure, six heures avant son maximum.
+:::
+
+## Piège
+
+En (a), une erreur fréquente consiste à oublier le facteur $\dfrac{2\pi}{24}$ de la chain rule, ou à écrire $\big(\cos(y)\big)' = \sin(y)$, sans le signe moins.
+
+En (b), une autre erreur consiste à conclure que la température est nulle à $17$ h parce que $T'(17) = 0$ : c'est sa vitesse de variation qui est nulle.
+
+En (c), une autre erreur consiste à répondre $17$ h : c'est l'heure où la température est la plus haute, pas celle où elle augmente le plus vite.
+:::
+:::
