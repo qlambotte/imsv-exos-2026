@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Socle — exercices routiniers – IMSV — Exercices</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../seances/seance08/transfert.html" rel="next">
+<link href="../../seances/seance08/index.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-73b0ff3878a4e6fc3716dc69a6aaefa3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ab9500b3187b176806e51e3d42d861b0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<script>
+// Applique le thème mémorisé AVANT le rendu (évite le clignotement clair→sombre).
+(function () {
+  try {
+    var t = localStorage.getItem('imsv-theme');
+    if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+})();
+</script>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seances/seance08/index.html">Séance 8 — Calcul différentiel</a></li><li class="breadcrumb-item"><a href="../../seances/seance08/socle.html"><span class="chapter-title">Socle — exercices routiniers</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">IMSV — Exercices</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Recherche"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bienvenue</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance01/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 1 — Langage et raisonnement</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance01/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance02/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 2 — Calcul fiable et trigonométrie</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance02/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance03/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 3 — Équations, proportions et géométrie analytique</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance03/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance04/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 4 — Vecteurs et systèmes de coordonnées</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance04/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance04/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance04/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance04/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance05/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 5 — Fonctions et représentations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance05/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance05/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance05/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance05/defis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Défis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance05/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance06/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 6 — Modèles polynomiaux, exponentiels, logarithmiques et périodiques</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance06/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance06/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance06/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance06/defis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Défis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance06/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance07/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 7 — Variations, limites et dérivées</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance07/socle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance07/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance07/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance07/defis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Défis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance07/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/seance08/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Séance 8 — Calcul différentiel</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance08/socle.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Socle — exercices routiniers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance08/transfert.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Transfert — problèmes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance08/supplementaires.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercices supplémentaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance08/defis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Défis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/seance08/institution.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Institutionnalisation — méthode &amp; auto-évaluation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../seances/methode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Boîte à outils</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 1 — Langage et raisonnement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 2 — Calcul fiable et trigonométrie</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 3 — Équations, proportions et géométrie analytique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance04.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 4 — Vecteurs et systèmes de coordonnées</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance05.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 5 — Fonctions et représentations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance06.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 6 — Modèles polynomiaux, exponentiels, logarithmiques et périodiques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance07.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 7 — Variations, limites et dérivées</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seances/methodes/seance08.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Séance 8 — Calcul différentiel</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seances/seance08/index.html">Séance 8 — Calcul différentiel</a></li><li class="breadcrumb-item"><a href="../../seances/seance08/socle.html"><span class="chapter-title">Socle — exercices routiniers</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Socle — exercices routiniers</span></h1>
+<p class="subtitle lead">Séance 8 · à faire à ton rythme</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="dl">
+<details class="dl-menu">
+<summary>
+Télécharger (PDF · hors-ligne)
+</summary>
+<a href="../../pdf/seance08-enonces.pdf">Énoncés seuls (PDF)</a> <a href="../../pdf/seance08-complet.pdf">Énoncés + coups de pouce &amp; corrections (PDF)</a> <a href="../../pdf/seance08-offline.html" download="">Corrections hors-ligne — 1 fichier (à garder)</a>
+</details>
+</div>
+<div class="callout callout-style-simple callout-tip callout-titled" title="À lire d'abord">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>À lire d’abord
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cherche au brouillon <strong>d’abord</strong>. N’hésite pas à résoudre les exercices avec tes voisin.e.s.</p>
+<p><strong>Où trouver de l’aide.</strong> Sous chaque énoncé, le menu <strong>Coups de pouce</strong> contient, dans l’ordre : l’indice 1 (la théorie à relire), l’indice 2 (une question à te poser), l’indice 3 (une étape à effectuer), la solution rédigée, puis les pièges. Chaque sous-question a ses propres indices. Ouvre-les <strong>dans l’ordre</strong> : la solution est le <strong>dernier</strong> recours. Les <strong>fiches de méthode</strong> se trouvent dans la <strong>boîte à outils</strong> du site et sur la feuille à compléter. Sur la feuille imprimée, le QR code mène aux coups de pouce. Si tu es encore bloqué·e après l’indice 3, <strong>appelle un·e assistant·e</strong>.</p>
+</div>
+</div>
+<p>Les exercices du <strong>socle</strong> sont des exercices routiniers, pour installer les automatismes. Résous-les à ton rythme. Si tu n’arrives pas au bout du socle lors de la séance, ce n’est pas grave: tu peux le poursuivre à domicile avec les coups de pouce et la solution finale.</p>
+<!-- SOCLE = LE NOYAU, à faire par tous en séance : 35 minutes, puis 15 minutes de correction de S.2 et de méthode 1.
+     VERSION 3 (énoncés validés le 19/11/2026 ; indices et solutions rédigés). Retours du 17/11 : S.1 et S.2 fusionnés,
+     énoncés moins guidés, deux exercices graphiques ajoutés (S.4, S.5), ancien S.5 (première règle) retiré, contrôle par le modèle (séance 7) retiré de S.6.
+     Durées visées (sans calculatrice) : S.1 6 min · S.2 7 min (corrigé en commun) · S.3 6 min · S.4 4 min · S.5 5 min · S.6 3 min · S.7 4 min = 35 min.
+     S.2 = l'exercice corrigé ensemble juste après le socle (méthode 1 « Dériver une expression en suivant sa structure ») :
+     indices et réponses finales (sans « Je veux plus de détails ») ; les détails sont donnés lors de la correction.
+     Pour les autres : Indice 1 = théorie, Indice 2 = question, Indice 3 = étape, puis Solution (Réponse + Explication) et Piège.
+     Faisable SANS calculatrice. Numéro AUTOMATIQUE. Résultats vérifiés par script (hors dépôt). Figures : img/figs.py.
+     Notations du cours IMSV-8 : f'(x), Dom(f'), règle de Leibniz, règle du quotient, chain rule, fonction intérieure / extérieure.
+     Objectifs : voir index.qmd (O1 à O6, AAV d'IMSV-8). -->
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|1|O1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S1"></span>✎ <strong>Exercice S.1</strong> <a class="exo-hash" href="#exercice-S1" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O1 · ★☆☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Calcule la dérivée de chacune des fonctions suivantes, et donne le domaine de cette dérivée.</li>
+</ol>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>4</mn><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>5</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>7</mn><mspace width="2.0em"></mspace><msub><mi>f</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mfrac><mspace width="2.0em"></mspace><msub><mi>f</mi><mn>3</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><msqrt><mi>x</mi></msqrt><mo>−</mo><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><annotation encoding="application/x-tex">f_1(x) = 4x^{3} - 5x^{2} + 7 \qquad f_2(x) = \frac{2}{x^{3}} \qquad f_3(x) = 3\sqrt{x} - \frac{1}{x}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>4</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>x</mi><msqrt><mi>x</mi></msqrt><mspace width="2.0em"></mspace><msub><mi>f</mi><mn>5</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><msup><mi>e</mi><mi>t</mi></msup><mo>−</mo><mn>2</mn><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>3</mn><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f_4(x) = x\sqrt{x} \qquad f_5(t) = 5e^{t} - 2\ln(t) + 3\cos(t)</annotation></semantics></math></p>
+<ol start="2" type="a">
+<li>Calcule <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>3</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f_3'(4)</annotation></semantics></math>.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Retourne à la théorie du cours : <em>Dérivées élémentaires : table de référence</em>, <em>Puissances : une seule règle, des domaines distincts</em> et <em>Linéarité</em>.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><em>Question à te poser.</em></p>
+<ol type="a">
+<li>Chaque terme est-il une puissance de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>, une exponentielle, un logarithme ou une fonction trigonométrique, multiplié par une constante ? Pour quelles valeurs de la variable la dérivée obtenue est-elle définie ?</li>
+<li>Quelle expression de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>f</mi><mn>3</mn><mo>′</mo></msubsup><annotation encoding="application/x-tex">f_3'</annotation></semantics></math> as-tu obtenue en (a) ?</li>
+</ol>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><em>Étape.</em></p>
+<ol type="a">
+<li>Réécris <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><msup><mi>x</mi><mrow><mi>−</mi><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">f_2(x) = 2x^{-3}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>3</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><msup><mi>x</mi><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup><mo>−</mo><msup><mi>x</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">f_3(x) = 3x^{1/2} - x^{-1}</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>4</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>x</mi><mrow><mn>3</mn><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">f_4(x) = x^{3/2}</annotation></semantics></math>, puis applique <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>x</mi><mi>α</mi></msup><msup><mo stretchy="false" form="postfix">)</mo><mo>′</mo></msup><mo>=</mo><mi>α</mi><mo>⋅</mo><msup><mi>x</mi><mrow><mi>α</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(x^{\alpha})' = \alpha \cdot x^{\alpha - 1}</annotation></semantics></math> terme à terme.</li>
+<li>Remplace <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>4</mn><annotation encoding="application/x-tex">4</annotation></semantics></math> dans <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>3</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>3</mn><mrow><mn>2</mn><msqrt><mi>x</mi></msqrt></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mstyle></mrow><annotation encoding="application/x-tex">f_3'(x) = \dfrac{3}{2\sqrt{x}} + \dfrac{1}{x^{2}}</annotation></semantics></math>, en utilisant <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mn>4</mn></msqrt><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\sqrt{4} = 2</annotation></semantics></math>.</li>
+</ol>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="reponse">
+<p><strong>Réponse (a).</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>1</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>12</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>10</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">f_1'(x) = 12x^{2} - 10x</annotation></semantics></math> sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="double-struck">ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>2</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mstyle displaystyle="true"><mfrac><mn>6</mn><msup><mi>x</mi><mn>4</mn></msup></mfrac></mstyle></mrow><annotation encoding="application/x-tex">f_2'(x) = -\dfrac{6}{x^{4}}</annotation></semantics></math> sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="double-struck">ℝ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\mathbb{R}_0</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>3</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>3</mn><mrow><mn>2</mn><msqrt><mi>x</mi></msqrt></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mstyle></mrow><annotation encoding="application/x-tex">f_3'(x) = \dfrac{3}{2\sqrt{x}} + \dfrac{1}{x^{2}}</annotation></semantics></math> sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi mathvariant="double-struck">ℝ</mi><mn>0</mn><mo>+</mo></msubsup><annotation encoding="application/x-tex">\mathbb{R}^+_0</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>4</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>3</mn><mn>2</mn></mfrac></mstyle><msqrt><mi>x</mi></msqrt></mrow><annotation encoding="application/x-tex">f_4'(x) = \dfrac{3}{2}\sqrt{x}</annotation></semantics></math> sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="double-struck">ℝ</mi><mo>+</mo></msup><annotation encoding="application/x-tex">\mathbb{R}^+</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>5</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><msup><mi>e</mi><mi>t</mi></msup><mo>−</mo><mstyle displaystyle="true"><mfrac><mn>2</mn><mi>t</mi></mfrac></mstyle><mo>−</mo><mn>3</mn><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f_5'(t) = 5e^{t} - \dfrac{2}{t} - 3\sin(t)</annotation></semantics></math> sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi mathvariant="double-struck">ℝ</mi><mn>0</mn><mo>+</mo></msubsup><annotation encoding="application/x-tex">\mathbb{R}^+_0</annotation></semantics></math>.</p>
+</div>
+<details class="imsv-details"><summary>Je veux plus de détails</summary><div class="imsv-expl">
+<p>On dérive terme à terme (linéarité), en gardant les coefficients constants, et on lit le domaine dans la table de référence.</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>1</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>4</mn><mo>⋅</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>5</mn><mo>⋅</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>0</mn><mo>=</mo><mn>12</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>10</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">f_1'(x) = 4 \cdot 3x^{2} - 5 \cdot 2x + 0 = 12x^{2} - 10x</annotation></semantics></math> ; un polynôme se dérive sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="double-struck">ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><msup><mi>x</mi><mrow><mi>−</mi><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">f_2(x) = 2x^{-3}</annotation></semantics></math>, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>2</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>3</mn><mo stretchy="false" form="postfix">)</mo><msup><mi>x</mi><mrow><mi>−</mi><mn>4</mn></mrow></msup><mo>=</mo><mi>−</mi><mstyle displaystyle="true"><mfrac><mn>6</mn><msup><mi>x</mi><mn>4</mn></msup></mfrac></mstyle></mrow><annotation encoding="application/x-tex">f_2'(x) = 2 \cdot (-3)x^{-4} = -\dfrac{6}{x^{4}}</annotation></semantics></math>, qui n’existe pas en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">m</mi></mrow><mo stretchy="false" form="prefix">(</mo><msubsup><mi>f</mi><mn>2</mn><mo>′</mo></msubsup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi mathvariant="double-struck">ℝ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\mathrm{Dom}(f_2') = \mathbb{R}_0</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>3</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><msup><mi>x</mi><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup><mo>−</mo><msup><mi>x</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">f_3(x) = 3x^{1/2} - x^{-1}</annotation></semantics></math>, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>3</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><mo>⋅</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><msup><mi>x</mi><mrow><mi>−</mi><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup><mo>+</mo><msup><mi>x</mi><mrow><mi>−</mi><mn>2</mn></mrow></msup><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>3</mn><mrow><mn>2</mn><msqrt><mi>x</mi></msqrt></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mstyle></mrow><annotation encoding="application/x-tex">f_3'(x) = 3 \cdot \dfrac{1}{2}x^{-1/2} + x^{-2} = \dfrac{3}{2\sqrt{x}} + \dfrac{1}{x^{2}}</annotation></semantics></math>. Il faut <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x \geq 0</annotation></semantics></math> pour la racine et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x \neq 0</annotation></semantics></math> pour les divisions : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">m</mi></mrow><mo stretchy="false" form="prefix">(</mo><msubsup><mi>f</mi><mn>3</mn><mo>′</mo></msubsup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msubsup><mi mathvariant="double-struck">ℝ</mi><mn>0</mn><mo>+</mo></msubsup></mrow><annotation encoding="application/x-tex">\mathrm{Dom}(f_3') = \mathbb{R}^+_0</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>4</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>x</mi><mo>⋅</mo><msup><mi>x</mi><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup><mo>=</mo><msup><mi>x</mi><mrow><mn>3</mn><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">f_4(x) = x \cdot x^{1/2} = x^{3/2}</annotation></semantics></math>, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>4</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>3</mn><mn>2</mn></mfrac></mstyle><msup><mi>x</mi><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>3</mn><mn>2</mn></mfrac></mstyle><msqrt><mi>x</mi></msqrt></mrow><annotation encoding="application/x-tex">f_4'(x) = \dfrac{3}{2}x^{1/2} = \dfrac{3}{2}\sqrt{x}</annotation></semantics></math>. Cette expression est définie pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x \geq 0</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">m</mi></mrow><mo stretchy="false" form="prefix">(</mo><msubsup><mi>f</mi><mn>4</mn><mo>′</mo></msubsup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi mathvariant="double-struck">ℝ</mi><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">\mathrm{Dom}(f_4') = \mathbb{R}^+</annotation></semantics></math>. C’est le cas « dépend de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math> » de la table : pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mstyle displaystyle="false"><mfrac><mn>3</mn><mn>2</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\alpha = \tfrac{3}{2}</annotation></semantics></math>, le domaine contient <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>5</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><msup><mi>e</mi><mi>t</mi></msup><mo>−</mo><mn>2</mn><mo>⋅</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>t</mi></mfrac></mstyle><mo>+</mo><mn>3</mn><mo>⋅</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mo>−</mo><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f_5'(t) = 5e^{t} - 2 \cdot \dfrac{1}{t} + 3 \cdot \big(-\sin(t)\big)</annotation></semantics></math> ; le terme <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\ln(t)</annotation></semantics></math> impose <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t &gt; 0</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">m</mi></mrow><mo stretchy="false" form="prefix">(</mo><msubsup><mi>f</mi><mn>5</mn><mo>′</mo></msubsup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msubsup><mi mathvariant="double-struck">ℝ</mi><mn>0</mn><mo>+</mo></msubsup></mrow><annotation encoding="application/x-tex">\mathrm{Dom}(f_5') = \mathbb{R}^+_0</annotation></semantics></math>.</li>
+</ol>
+</div></details>
+<div class="reponse">
+<p><strong>Réponse (b).</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>3</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>13</mn><mn>16</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">f_3'(4) = \dfrac{13}{16}</annotation></semantics></math>.</p>
+</div>
+<details class="imsv-details"><summary>Je veux plus de détails</summary><div class="imsv-expl">
+<p>On remplace <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>4</mn><annotation encoding="application/x-tex">4</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>3</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>3</mn><mrow><mn>2</mn><mo>⋅</mo><mn>2</mn></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>16</mn></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>12</mn><mn>16</mn></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>16</mn></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>13</mn><mn>16</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">f_3'(4) = \dfrac{3}{2 \cdot 2} + \dfrac{1}{16} = \dfrac{12}{16} + \dfrac{1}{16} = \dfrac{13}{16}</annotation></semantics></math>.</p>
+</div></details>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p>En (a), une erreur fréquente consiste à écrire <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mstyle displaystyle="true"><mfrac><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mfrac></mstyle><mo stretchy="true" form="postfix">)</mo></mrow><mo>′</mo></msup><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>2</mn><mrow><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\left(\dfrac{2}{x^{3}}\right)' = \dfrac{2}{3x^{2}}</annotation></semantics></math>, en dérivant le dénominateur seul. Il faut d’abord écrire <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msup><mi>x</mi><mrow><mi>−</mi><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2x^{-3}</annotation></semantics></math>.</p>
+<p>Une autre erreur consiste à changer le signe de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>x</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">-\dfrac{1}{x}</annotation></semantics></math> dans le mauvais sens : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><msup><mi>x</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>′</mo></msup><mo>=</mo><mi>+</mi><msup><mi>x</mi><mrow><mi>−</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\left(-x^{-1}\right)' = +x^{-2}</annotation></semantics></math>.</p>
+<p>Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>5</mn></msub><annotation encoding="application/x-tex">f_5</annotation></semantics></math>, une autre erreur consiste à oublier que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>′</mo></msup><mo>=</mo><mi>−</mi><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\big(\cos(t)\big)' = -\sin(t)</annotation></semantics></math>, ce qui donne <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mn>3</mn><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">+3\sin(t)</annotation></semantics></math> au lieu de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>3</mn><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">-3\sin(t)</annotation></semantics></math>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S2"></span>✎ <strong>Exercice S.2</strong> <a class="exo-hash" href="#exercice-S2" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O2 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En identifiant la nature algébrique<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> de l’expression analytique de chaque fonction, calcule sa dérivée. Simplifie le résultat.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><msup><mi>e</mi><mi>x</mi></msup><mspace width="2.0em"></mspace><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>3</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">f(x) = \left(x^{2} + 1\right) \cdot e^{x} \qquad g(x) = \frac{2x + 1}{x - 3}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><mi>x</mi></mfrac><mspace width="2.0em"></mspace><mi>k</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>4</mn><mi>x</mi></mrow><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">h(x) = \frac{\sin(x)}{x} \qquad k(x) = \frac{x^{3} - 4x}{x - 2}</annotation></semantics></math></p>
+<p>Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>, précise le domaine de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> et celui de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>k</mi><mo>′</mo></msup><annotation encoding="application/x-tex">k'</annotation></semantics></math>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>L’exercice <strong>S.2</strong> est corrigé ensemble en séance, juste après le temps consacré au socle. Cherche-le seul·e et repère l’endroit exact où tu bloques. Les coups de pouce ci-dessous donnent les indices et les réponses finales ; les détails seront donnés lors de la correction.</p>
+</div>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Retourne à la théorie du cours : <em>Choisir la première règle</em>, <em>Règle du produit : deux contributions</em>, <em>Règle du quotient : application</em> et <em>Simplifier pour enlever une difficulté, sans changer le problème</em>.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Quelle est la dernière opération effectuée quand on calcule <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(x)</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(x)</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h(x)</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">k(x)</annotation></semantics></math> ? Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>, peut-on simplifier la fraction, et pour quelles valeurs de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> cette simplification est-elle permise ?</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p><em>Étape.</em></p>
+<p>Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>, pose <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">u(x) = x^{2} + 1</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">v(x) = e^{x}</annotation></semantics></math>, puis écris <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>=</mo><msup><mi>u</mi><mo>′</mo></msup><mo>⋅</mo><mi>v</mi><mo>+</mo><mi>u</mi><mo>⋅</mo><msup><mi>v</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">f' = u' \cdot v + u \cdot v'</annotation></semantics></math>. Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>, écris <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mstyle displaystyle="true"><mfrac><mi>u</mi><mi>v</mi></mfrac></mstyle><mo stretchy="true" form="postfix">)</mo></mrow><mo>′</mo></msup><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi>u</mi><mo>′</mo></msup><mo>⋅</mo><mi>v</mi><mo>−</mo><mi>u</mi><mo>⋅</mo><msup><mi>v</mi><mo>′</mo></msup></mrow><msup><mi>v</mi><mn>2</mn></msup></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\left(\dfrac{u}{v}\right)' = \dfrac{u' \cdot v - u \cdot v'}{v^{2}}</annotation></semantics></math>. Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>, factorise le numérateur : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>4</mn><mi>x</mi><mo>=</mo><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x^{3} - 4x = x(x - 2)(x + 2)</annotation></semantics></math>.</p>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<div class="reponse">
+<p><strong>Réponses.</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><msup><mi>e</mi><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">f'(x) = (x + 1)^{2} \cdot e^{x}</annotation></semantics></math> sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="double-struck">ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mstyle displaystyle="true"><mfrac><mn>7</mn><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">g'(x) = -\dfrac{7}{(x - 3)^{2}}</annotation></semantics></math> sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">ℝ</mi><mo>\</mo><mo stretchy="false" form="prefix">{</mo><mn>3</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathbb{R} \setminus \{3\}</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>x</mi><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><msup><mi>x</mi><mn>2</mn></msup></mfrac></mstyle></mrow><annotation encoding="application/x-tex">h'(x) = \dfrac{x\cos(x) - \sin(x)}{x^{2}}</annotation></semantics></math> sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="double-struck">ℝ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\mathbb{R}_0</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">m</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi mathvariant="double-struck">ℝ</mi><mo>\</mo><mo stretchy="false" form="prefix">{</mo><mn>2</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathrm{Dom}(k) = \mathbb{R} \setminus \{2\}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">k(x) = x^{2} + 2x</annotation></semantics></math> pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≠</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x \neq 2</annotation></semantics></math>, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>k</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">k'(x) = 2x + 2</annotation></semantics></math> sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">ℝ</mi><mo>\</mo><mo stretchy="false" form="prefix">{</mo><mn>2</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathbb{R} \setminus \{2\}</annotation></semantics></math>.</p>
+</div>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<p>Une erreur fréquente consiste à dériver chaque facteur séparément : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mi>e</mi><mi>x</mi></msup><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>′</mo></msup><mo>=</mo><mn>2</mn><mi>x</mi><mo>⋅</mo><msup><mi>e</mi><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">\big((x^{2} + 1) \cdot e^{x}\big)' = 2x \cdot e^{x}</annotation></semantics></math>. La dérivée d’un produit a deux contributions.</p>
+<p>Une autre erreur consiste à écrire la dérivée d’un quotient comme le quotient des dérivées, par exemple <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>2</mn><mn>1</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">g'(x) = \dfrac{2}{1}</annotation></semantics></math>, ou à inverser l’ordre au numérateur, ce qui donne <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mstyle displaystyle="true"><mfrac><mn>7</mn><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">+\dfrac{7}{(x - 3)^{2}}</annotation></semantics></math>.</p>
+<p>Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>, une autre erreur consiste à donner <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">m</mi></mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>k</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi mathvariant="double-struck">ℝ</mi></mrow><annotation encoding="application/x-tex">\mathrm{Dom}(k') = \mathbb{R}</annotation></semantics></math> après la simplification : on a divisé par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x - 2</annotation></semantics></math>, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> reste exclu.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S3"></span>✎ <strong>Exercice S.3</strong> <a class="exo-hash" href="#exercice-S3" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O3 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En identifiant la nature algébrique<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> de l’expression analytique de chaque fonction, calcule sa dérivée.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo>−</mo><mn>2</mn><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>3</mn></msup><mspace width="2.0em"></mspace><msub><mi>f</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>9</mn></mrow></msqrt><mspace width="2.0em"></mspace><msub><mi>f</mi><mn>3</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">f_1(x) = (5 - 2x)^{3} \qquad f_2(x) = \sqrt{x^{2} + 9} \qquad f_3(x) = \ln\left(x^{2} + 4\right)</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>4</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mn>2</mn><mrow><mn>3</mn><mi>x</mi></mrow></msup><mspace width="2.0em"></mspace><msub><mi>f</mi><mn>5</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>x</mi><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn><mi>x</mi></mrow></msup></mrow><annotation encoding="application/x-tex">f_4(x) = 2^{3x} \qquad f_5(x) = x \cdot e^{-2x}</annotation></semantics></math></p>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-5" role="tab" aria-controls="tabset-3-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>Retourne à la théorie du cours : <em>Reconnaître des fonctions imbriquées</em>, <em>Chain rule : deux transmissions successives</em> et <em>Exponentielle en base quelconque</em>.</p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Pour chaque fonction, quelle opération est effectuée en dernier ? S’il s’agit d’une composée, quelle est la fonction intérieure et quelle est la fonction extérieure ?</p>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p><em>Étape.</em></p>
+<p>Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>2</mn></msub><annotation encoding="application/x-tex">f_2</annotation></semantics></math>, la fonction intérieure est <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">g(x) = x^{2} + 9</annotation></semantics></math> et la fonction extérieure est <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mi>y</mi></msqrt><annotation encoding="application/x-tex">\sqrt{y}</annotation></semantics></math> : écris <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>2</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><msqrt><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow></mfrac></mstyle><mo>⋅</mo><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f_2'(x) = \dfrac{1}{2\sqrt{g(x)}} \cdot g'(x)</annotation></semantics></math>. Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>4</mn></msub><annotation encoding="application/x-tex">f_4</annotation></semantics></math>, la fonction extérieure est <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mi>y</mi></msup><annotation encoding="application/x-tex">2^{y}</annotation></semantics></math>, de dérivée <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mn>2</mn><mi>y</mi></msup></mrow><annotation encoding="application/x-tex">\ln(2) \cdot 2^{y}</annotation></semantics></math>. Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>5</mn></msub><annotation encoding="application/x-tex">f_5</annotation></semantics></math>, la dernière opération est un produit.</p>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<div class="reponse">
+<p><strong>Réponses.</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>1</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>6</mn><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo>−</mo><mn>2</mn><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f_1'(x) = -6(5 - 2x)^{2}</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>2</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>x</mi><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>9</mn></mrow></msqrt></mfrac></mstyle></mrow><annotation encoding="application/x-tex">f_2'(x) = \dfrac{x}{\sqrt{x^{2} + 9}}</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>3</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">f_3'(x) = \dfrac{2x}{x^{2} + 4}</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>4</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mn>2</mn><mrow><mn>3</mn><mi>x</mi></mrow></msup></mrow><annotation encoding="application/x-tex">f_4'(x) = 3\ln(2) \cdot 2^{3x}</annotation></semantics></math> ; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>5</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>2</mn><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn><mi>x</mi></mrow></msup></mrow><annotation encoding="application/x-tex">f_5'(x) = (1 - 2x) \cdot e^{-2x}</annotation></semantics></math>.</p>
+</div>
+<details class="imsv-details"><summary>Je veux plus de détails</summary><div class="imsv-expl">
+<p>Pour chaque composée, on écrit la fonction intérieure <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>, puis on applique <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>f</mi><mo>∘</mo><mi>g</mi><msup><mo stretchy="false" form="postfix">)</mo><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>f</mi><mo>′</mo></msup><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>⋅</mo><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(f \circ g)'(x) = f'\big(g(x)\big) \cdot g'(x)</annotation></semantics></math>.</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mo>−</mo><mn>2</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">g(x) = 5 - 2x</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">g'(x) = -2</annotation></semantics></math>, fonction extérieure <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>y</mi><mn>3</mn></msup><annotation encoding="application/x-tex">y^{3}</annotation></semantics></math>. Donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>1</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo>−</mo><mn>2</mn><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>6</mn><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo>−</mo><mn>2</mn><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f_1'(x) = 3(5 - 2x)^{2} \cdot (-2) = -6(5 - 2x)^{2}</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>2</mn></msub><annotation encoding="application/x-tex">f_2</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">g(x) = x^{2} + 9</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">g'(x) = 2x</annotation></semantics></math>, fonction extérieure <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mi>y</mi></msqrt><annotation encoding="application/x-tex">\sqrt{y}</annotation></semantics></math>. Donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>2</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>2</mn><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>9</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>x</mi><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>9</mn></mrow></msqrt></mfrac></mstyle></mrow><annotation encoding="application/x-tex">f_2'(x) = \dfrac{2x}{2\sqrt{x^{2} + 9}} = \dfrac{x}{\sqrt{x^{2} + 9}}</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>3</mn></msub><annotation encoding="application/x-tex">f_3</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">g(x) = x^{2} + 4</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">g'(x) = 2x</annotation></semantics></math>, fonction extérieure <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\ln(y)</annotation></semantics></math>. Donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>3</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn></mrow></mfrac></mstyle><mo>⋅</mo><mn>2</mn><mi>x</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">f_3'(x) = \dfrac{1}{x^{2} + 4} \cdot 2x = \dfrac{2x}{x^{2} + 4}</annotation></semantics></math>. Comme <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x^{2} + 4 &gt; 0</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>3</mn></msub><annotation encoding="application/x-tex">f_3</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>f</mi><mn>3</mn><mo>′</mo></msubsup><annotation encoding="application/x-tex">f_3'</annotation></semantics></math> sont définies sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="double-struck">ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>4</mn></msub><annotation encoding="application/x-tex">f_4</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">g(x) = 3x</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">g'(x) = 3</annotation></semantics></math>, fonction extérieure <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mi>y</mi></msup><annotation encoding="application/x-tex">2^{y}</annotation></semantics></math>. Donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>4</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mn>2</mn><mrow><mn>3</mn><mi>x</mi></mrow></msup><mo>⋅</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">f_4'(x) = \ln(2) \cdot 2^{3x} \cdot 3</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>5</mn></msub><annotation encoding="application/x-tex">f_5</annotation></semantics></math> est le produit de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn><mi>x</mi></mrow></msup><annotation encoding="application/x-tex">e^{-2x}</annotation></semantics></math> : la règle de Leibniz donne <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>5</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mi>x</mi><mo>⋅</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn><mi>x</mi></mrow></msup><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">f_5'(x) = 1 \cdot e^{-2x} + x \cdot \big(e^{-2x}\big)'</annotation></semantics></math>. Par la chain rule, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn><mi>x</mi></mrow></msup><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>′</mo></msup><mo>=</mo><mi>−</mi><mn>2</mn><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn><mi>x</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\big(e^{-2x}\big)' = -2e^{-2x}</annotation></semantics></math>, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>5</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn><mi>x</mi></mrow></msup><mo>−</mo><mn>2</mn><mi>x</mi><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn><mi>x</mi></mrow></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>2</mn><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn><mi>x</mi></mrow></msup></mrow><annotation encoding="application/x-tex">f_5'(x) = e^{-2x} - 2x \cdot e^{-2x} = (1 - 2x) \cdot e^{-2x}</annotation></semantics></math>.</li>
+</ol>
+</div></details>
+</div>
+<div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
+<p>Une erreur fréquente consiste à oublier de multiplier par la dérivée de la fonction intérieure, par exemple à écrire <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>1</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo>−</mo><mn>2</mn><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f_1'(x) = 3(5 - 2x)^{2}</annotation></semantics></math> ou <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mn>3</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">f_3'(x) = \dfrac{1}{x^{2} + 4}</annotation></semantics></math>.</p>
+<p>Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>4</mn></msub><annotation encoding="application/x-tex">f_4</annotation></semantics></math>, une autre erreur consiste à appliquer la règle des puissances, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mn>2</mn><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(3x) \cdot 2^{3x - 1}</annotation></semantics></math> : la variable est dans l’exposant, la règle à utiliser est celle de l’exponentielle en base quelconque.</p>
+<p>Pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>5</mn></msub><annotation encoding="application/x-tex">f_5</annotation></semantics></math>, une autre erreur consiste à traiter toute l’expression comme une composée, et à oublier le terme <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn><mi>x</mi></mrow></msup></mrow><annotation encoding="application/x-tex">1 \cdot e^{-2x}</annotation></semantics></math> du produit.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O5">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S4"></span>✎ <strong>Exercice S.4</strong> <a class="exo-hash" href="#exercice-S4" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O5 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La première ligne représente trois fonctions A, B et C. La seconde ligne représente leurs dérivées, dans le désordre. Associe chaque fonction à sa dérivée, et justifie chaque association par ce que tu lis sur les graphiques.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/s-associer.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:15cm" alt="Six graphiques. Première ligne : A, une parabole tournée vers le bas de sommet (0 ; 2) ; B, une courbe croissante qui monte de plus en plus lentement et se rapproche de y = 2 ; C, une courbe qui descend, remonte entre x = −1 et x = 1, puis redescend. Seconde ligne : 1, une parabole tournée vers le bas de sommet (0 ; 1), qui coupe l'axe horizontal en −1 et en 1 ; 2, une courbe positive décroissante qui se rapproche de 0 ; 3, une droite décroissante qui passe par l'origine."></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>Retourne à la théorie du cours : <em>Associer une fonction à sa dérivée, sans formule</em> et <em>Cinq contrôles systématiques</em>.</p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Sur quels intervalles chaque fonction est-elle croissante ou décroissante, et en quels points sa tangente est-elle horizontale ? Quel graphe de la seconde ligne est positif, négatif et nul aux mêmes endroits ?</p>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<p><em>Étape.</em></p>
+<p>Pour A, note que la tangente est horizontale en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math>, que A monte à gauche de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> et descend à droite. Cherche le graphe de la seconde ligne qui s’annule seulement en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>, positif à gauche et négatif à droite.</p>
+</div>
+<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
+<div class="reponse">
+<p><strong>Réponse.</strong> A–3, B–2, C–1.</p>
+</div>
+<details class="imsv-details"><summary>Je veux plus de détails</summary><div class="imsv-expl">
+<p>On compare le signe des pentes de chaque fonction au signe de chaque dérivée proposée.</p>
+<ol type="1">
+<li>A est croissante sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">]</mo><mo>−</mo><mi>∞</mi><mo>,</mo><mspace width="0.167em"></mspace><mn>0</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">]-\infty,\,0]</annotation></semantics></math>, décroissante sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mspace width="0.167em"></mspace><mo>+</mo><mi>∞</mi><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">[0,\,+\infty[</annotation></semantics></math>, avec une tangente horizontale en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math>. Sa dérivée est positive, nulle en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>, puis négative : c’est le graphe 3.</li>
+<li>B est croissante partout, et ses tangentes sont de moins en moins inclinées quand <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> augmente. Sa dérivée est positive et décroît vers <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> : c’est le graphe 2.</li>
+<li>C est décroissante, puis croissante entre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">x = -1</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x = 1</annotation></semantics></math>, puis décroissante, avec des tangentes horizontales en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">x = -1</annotation></semantics></math> et en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x = 1</annotation></semantics></math>. Sa dérivée est négative, positive sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">]</mo><mo>−</mo><mn>1</mn><mo>,</mo><mspace width="0.167em"></mspace><mn>1</mn><mo stretchy="false" form="prefix">[</mo></mrow><annotation encoding="application/x-tex">]-1,\,1[</annotation></semantics></math>, puis négative, et elle s’annule en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math> et en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> : c’est le graphe 1.</li>
+</ol>
+</div></details>
+</div>
+<div id="tabset-4-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-5-tab">
+<p>Une erreur fréquente consiste à associer A au graphe 1, parce que les deux graphes ont la forme d’une parabole tournée vers le bas. La dérivée ne reproduit pas la forme de la fonction : elle donne le signe et la valeur des pentes.</p>
+<p>Une autre erreur consiste à lire la hauteur de la courbe au lieu de sa pente, par exemple à dire que la dérivée de B est négative pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&lt;</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">x &lt; -1</annotation></semantics></math>, parce que B est négative à cet endroit.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S5"></span>✎ <strong>Exercice S.5</strong> <a class="exo-hash" href="#exercice-S5" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O3 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Les graphes des fonctions <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math> (à gauche) et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> (à droite) sont formés de segments de droite.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/s-graphes.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:15cm" alt="Deux graphiques côte à côte. À gauche, le graphe de g relie les points (0 ; 0), (2 ; 4) et (6 ; 2). À droite, le graphe de f relie les points (0 ; 3), (3 ; 0) et (6 ; 3)."></p>
+</figure>
+</div>
+<ol type="a">
+<li>On pose <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p(x) = f(x) \cdot g(x)</annotation></semantics></math>. Calcule <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>p</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p'(1)</annotation></semantics></math>.</li>
+<li>On pose <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>f</mi><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h(x) = f\big(g(x)\big)</annotation></semantics></math>. Calcule <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h'(1)</annotation></semantics></math>.</li>
+<li>On pose <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>g</mi><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">k(x) = g\big(f(x)\big)</annotation></semantics></math>. Calcule <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>k</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">k'(4)</annotation></semantics></math>.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-4" role="tab" aria-controls="tabset-5-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-5" role="tab" aria-controls="tabset-5-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p>Retourne à la théorie du cours : <em>Règle du produit : deux contributions</em> pour (a), et <em>Chain rule : deux transmissions successives</em> pour (b) et (c).</p>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<p><em>Question à te poser.</em></p>
+<ol type="a">
+<li>Quelles valeurs et quelles pentes de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> et de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math> faut-il lire, et en quel point ?</li>
+<li>En quel point faut-il lire la pente de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> : en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> ou en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(1)</annotation></semantics></math> ?</li>
+<li>En quel point faut-il lire la pente de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math> ?</li>
+</ol>
+</div>
+<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<p><em>Étape.</em></p>
+<ol type="a">
+<li>Lis <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(1)</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(1)</annotation></semantics></math>, puis calcule les pentes des segments qui passent par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x = 1</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f'(1)</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g'(1)</annotation></semantics></math>.</li>
+<li>Lis <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">g(1) = 2</annotation></semantics></math>, puis la pente du segment de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> au point d’abscisse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>.</li>
+<li>Lis <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(4)</annotation></semantics></math>, puis la pente du segment de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math> au point d’abscisse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(4)</annotation></semantics></math>.</li>
+</ol>
+</div>
+<div id="tabset-5-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-4-tab">
+<div class="reponse">
+<p><strong>Réponse (a).</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>p</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">p'(1) = 2</annotation></semantics></math>.</p>
+</div>
+<details class="imsv-details"><summary>Je veux plus de détails</summary><div class="imsv-expl">
+<p>Par la règle de Leibniz, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>p</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p'(1) = f'(1) \cdot g(1) + f(1) \cdot g'(1)</annotation></semantics></math>.</p>
+<p>On lit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">f(1) = 2</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">g(1) = 2</annotation></semantics></math>. Le segment de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> qui relie <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mspace width="0.167em"></mspace><mo>;</mo><mspace width="0.167em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0\,;\,3)</annotation></semantics></math> à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mspace width="0.167em"></mspace><mo>;</mo><mspace width="0.167em"></mspace><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(3\,;\,0)</annotation></semantics></math> a une pente de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="false"><mfrac><mrow><mn>0</mn><mo>−</mo><mn>3</mn></mrow><mrow><mn>3</mn><mo>−</mo><mn>0</mn></mrow></mfrac></mstyle><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">\tfrac{0 - 3}{3 - 0} = -1</annotation></semantics></math>, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">f'(1) = -1</annotation></semantics></math>. Le segment de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math> qui relie <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mspace width="0.167em"></mspace><mo>;</mo><mspace width="0.167em"></mspace><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0\,;\,0)</annotation></semantics></math> à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mspace width="0.167em"></mspace><mo>;</mo><mspace width="0.167em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2\,;\,4)</annotation></semantics></math> a une pente de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="false"><mfrac><mn>4</mn><mn>2</mn></mfrac></mstyle><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\tfrac{4}{2} = 2</annotation></semantics></math>, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">g'(1) = 2</annotation></semantics></math>.</p>
+<p>Donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>p</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mn>2</mn><mo>+</mo><mn>2</mn><mo>⋅</mo><mn>2</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">p'(1) = (-1) \cdot 2 + 2 \cdot 2 = 2</annotation></semantics></math>.</p>
+</div></details>
+<div class="reponse">
+<p><strong>Réponse (b).</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">h'(1) = -2</annotation></semantics></math>.</p>
+</div>
+<details class="imsv-details"><summary>Je veux plus de détails</summary><div class="imsv-expl">
+<p>Par la chain rule, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>f</mi><mo>′</mo></msup><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>⋅</mo><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h'(1) = f'\big(g(1)\big) \cdot g'(1)</annotation></semantics></math>.</p>
+<p>On lit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">g(1) = 2</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">g'(1) = 2</annotation></semantics></math>. Au point d’abscisse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> suit le segment de pente <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">f'(2) = -1</annotation></semantics></math>. Donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mn>2</mn><mo>=</mo><mi>−</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">h'(1) = (-1) \cdot 2 = -2</annotation></semantics></math>.</p>
+</div></details>
+<div class="reponse">
+<p><strong>Réponse (c).</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>k</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">k'(4) = 2</annotation></semantics></math>.</p>
+</div>
+<details class="imsv-details"><summary>Je veux plus de détails</summary><div class="imsv-expl">
+<p>Par la chain rule, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>k</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>g</mi><mo>′</mo></msup><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>⋅</mo><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">k'(4) = g'\big(f(4)\big) \cdot f'(4)</annotation></semantics></math>.</p>
+<p>Le segment de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> qui relie <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mspace width="0.167em"></mspace><mo>;</mo><mspace width="0.167em"></mspace><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(3\,;\,0)</annotation></semantics></math> à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mspace width="0.167em"></mspace><mo>;</mo><mspace width="0.167em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(6\,;\,3)</annotation></semantics></math> a une pente de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> : on lit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(4) = 1</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f'(4) = 1</annotation></semantics></math>. Au point d’abscisse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math> suit le segment de pente <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">g'(1) = 2</annotation></semantics></math>. Donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>k</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">k'(4) = 2 \cdot 1 = 2</annotation></semantics></math>.</p>
+</div></details>
+</div>
+<div id="tabset-5-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-5-tab">
+<p>En (a), une erreur fréquente consiste à multiplier les pentes, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">f'(1) \cdot g'(1) = -2</annotation></semantics></math> : la dérivée d’un produit n’est pas le produit des dérivées.</p>
+<p>En (b) et (c), une autre erreur consiste à lire la pente de la fonction extérieure au même point que la fonction intérieure, par exemple <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f'(1)</annotation></semantics></math> au lieu de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>=</mo><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f'\big(g(1)\big) = f'(2)</annotation></semantics></math>. Ici, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f'(1) = f'(2)</annotation></semantics></math>, ce qui cache l’erreur en (b) ; en (c), lire <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">g'(4) = -\tfrac{1}{2}</annotation></semantics></math> au lieu de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">g'(1) = 2</annotation></semantics></math> donne une réponse fausse.</p>
+<p>Une autre erreur consiste à lire une valeur au lieu d’une pente, par exemple <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(2) = 1</annotation></semantics></math> au lieu de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">f'(2) = -1</annotation></semantics></math>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O5">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S6"></span>✎ <strong>Exercice S.6</strong> <a class="exo-hash" href="#exercice-S6" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O5 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un étudiant a calculé les dérivées suivantes. Pour chacune, écris si elle est correcte. Si elle est fausse, nomme la règle qui n’a pas été respectée et corrige le calcul.</p>
+<ol type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mi>x</mi><mo>⋅</mo><msup><mi>e</mi><mi>x</mi></msup><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>′</mo></msup><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">\big(x \cdot e^{x}\big)' = e^{x}</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><msup><mi>e</mi><msup><mi>x</mi><mn>2</mn></msup></msup><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>′</mo></msup><mo>=</mo><msup><mi>e</mi><msup><mi>x</mi><mn>2</mn></msup></msup></mrow><annotation encoding="application/x-tex">\big(e^{x^{2}}\big)' = e^{x^{2}}</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mstyle><mo stretchy="true" form="postfix">)</mo></mrow><mo>′</mo></msup><mo>=</mo><mi>−</mi><mstyle displaystyle="true"><mfrac><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\left(\dfrac{1}{x^{2}}\right)' = -\dfrac{2}{x^{3}}</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>′</mo></msup><mo>=</mo><mn>3</mn><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\big(\sin(3x)\big)' = 3\cos(3x)</annotation></semantics></math></li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-4" role="tab" aria-controls="tabset-6-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-5" role="tab" aria-controls="tabset-6-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p>Retourne à la théorie du cours : <em>Règle du produit : deux contributions</em>, <em>Chain rule : deux transmissions successives</em> et <em>Puissances : une seule règle, des domaines distincts</em>.</p>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p><em>Question à te poser.</em></p>
+<p>Quelle est la nature algébrique de chaque expression, et donc quelle règle l’étudiant aurait-il dû appliquer ?</p>
+</div>
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<p><em>Étape.</em></p>
+<p>Refais chaque dérivée avec la règle qui correspond à la dernière opération, puis compare ton résultat à celui de l’étudiant.</p>
+</div>
+<div id="tabset-6-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-4-tab">
+<div class="reponse">
+<p><strong>Réponse.</strong> (a) Faux ; (b) faux ; (c) correct ; (d) correct.</p>
+</div>
+<details class="imsv-details"><summary>Je veux plus de détails</summary><div class="imsv-expl">
+<p>On identifie la dernière opération de chaque expression, puis on refait le calcul.</p>
+<ol type="a">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><msup><mi>e</mi><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">x \cdot e^{x}</annotation></semantics></math> est un produit, et la règle de Leibniz n’a pas été respectée : l’étudiant a dérivé <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> et multiplié par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mi>x</mi></msup><annotation encoding="application/x-tex">e^{x}</annotation></semantics></math>, sans le second terme. Correction : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mi>x</mi><mo>⋅</mo><msup><mi>e</mi><mi>x</mi></msup><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>′</mo></msup><mo>=</mo><mn>1</mn><mo>⋅</mo><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><mi>x</mi><mo>⋅</mo><msup><mi>e</mi><mi>x</mi></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mi>e</mi><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">\big(x \cdot e^{x}\big)' = 1 \cdot e^{x} + x \cdot e^{x} = (1 + x) \cdot e^{x}</annotation></semantics></math>.</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><msup><mi>x</mi><mn>2</mn></msup></msup><annotation encoding="application/x-tex">e^{x^{2}}</annotation></semantics></math> est une composée, et la chain rule n’a pas été respectée : il manque la dérivée de la fonction intérieure <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>x</mi><mn>2</mn></msup><annotation encoding="application/x-tex">x^{2}</annotation></semantics></math>. Correction : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><msup><mi>e</mi><msup><mi>x</mi><mn>2</mn></msup></msup><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>′</mo></msup><mo>=</mo><msup><mi>e</mi><msup><mi>x</mi><mn>2</mn></msup></msup><mo>⋅</mo><mn>2</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">\big(e^{x^{2}}\big)' = e^{x^{2}} \cdot 2x</annotation></semantics></math>.</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mstyle><mo>=</mo><msup><mi>x</mi><mrow><mi>−</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\dfrac{1}{x^{2}} = x^{-2}</annotation></semantics></math>, donc <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>x</mi><mrow><mi>−</mi><mn>2</mn></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>′</mo></msup><mo>=</mo><mi>−</mi><mn>2</mn><msup><mi>x</mi><mrow><mi>−</mi><mn>3</mn></mrow></msup><mo>=</mo><mi>−</mi><mstyle displaystyle="true"><mfrac><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\left(x^{-2}\right)' = -2x^{-3} = -\dfrac{2}{x^{3}}</annotation></semantics></math> : le calcul est correct.</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sin(3x)</annotation></semantics></math> est une composée de fonction intérieure <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">3x</annotation></semantics></math> : <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>′</mo></msup><mo>=</mo><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\big(\sin(3x)\big)' = \cos(3x) \cdot 3</annotation></semantics></math>. Le calcul est correct.</p></li>
+</ol>
+</div></details>
+</div>
+<div id="tabset-6-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-5-tab">
+<p>Une erreur fréquente consiste à vérifier un résultat en refaisant la même erreur, par exemple à juger (b) correct parce que « l’exponentielle est sa propre dérivée ». Cette propriété vaut pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mi>x</mi></msup><annotation encoding="application/x-tex">e^{x}</annotation></semantics></math>, pas pour <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><annotation encoding="application/x-tex">e^{g(x)}</annotation></semantics></math>.</p>
+<p>Une autre erreur consiste à juger (c) faux parce que le signe est négatif : une fonction décroissante sur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi mathvariant="double-struck">ℝ</mi><mn>0</mn><mo>+</mo></msubsup><annotation encoding="application/x-tex">\mathbb{R}^+_0</annotation></semantics></math>, comme <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mstyle><annotation encoding="application/x-tex">\dfrac{1}{x^{2}}</annotation></semantics></math>, a une dérivée négative sur cet intervalle.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="exo callout callout-style-default callout-caution no-icon callout-titled" title="Exercice|Socle|2|O6">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Mise en garde</span><span class="exo-anchor" id="exercice-S7"></span>✎ <strong>Exercice S.7</strong> <a class="exo-hash" href="#exercice-S7" title="Lien vers cet exercice">#</a><span class="exo-meta">Socle · O6 · ★★☆</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Après une injection intramusculaire, la concentration d’un médicament dans le sang est modélisée par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn><mspace width="0.167em"></mspace><mi>t</mi><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">C(t) = 10\,t \cdot e^{-t/2}</annotation></semantics></math>, où <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math> est le temps écoulé depuis l’injection, en heures, et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C(t)</annotation></semantics></math> la concentration, en mg/L.</p>
+<ol type="a">
+<li>Calcule <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C'(t)</annotation></semantics></math>, et écris son unité.</li>
+<li>Calcule <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C'(0)</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C'(2)</annotation></semantics></math>, puis écris le signe de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C'(4)</annotation></semantics></math>. Écris en une phrase ce que chacun de ces résultats signifie pour la concentration.</li>
+</ol>
+</div>
+</div>
+<div class="aides">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">Indice 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">Indice 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false" href="">Indice 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-4" role="tab" aria-controls="tabset-7-4" aria-selected="false" href="">Solution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-5" role="tab" aria-controls="tabset-7-5" aria-selected="false" href="">Piège</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<p>Retourne à la théorie du cours : <em>Règle du produit : deux contributions</em>, <em>Exponentielle composée : un taux proportionnel à la quantité</em> et <em>Retour à la réponse biologique</em>.</p>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<p><em>Question à te poser.</em></p>
+<ol type="a">
+<li>Quelle est la nature algébrique de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C(t)</annotation></semantics></math> ? Quelle est l’unité d’une dérivée par rapport au temps ?</li>
+<li>Que signifie une dérivée positive, nulle ou négative pour la concentration ?</li>
+</ol>
+</div>
+<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<p><em>Étape.</em></p>
+<ol type="a">
+<li>Pose <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn><mi>t</mi></mrow><annotation encoding="application/x-tex">u(t) = 10t</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">v(t) = e^{-t/2}</annotation></semantics></math>, avec <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>v</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">v'(t) = -\dfrac{1}{2}e^{-t/2}</annotation></semantics></math>, puis mets <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">e^{-t/2}</annotation></semantics></math> en évidence.</li>
+<li>Remplace <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>4</mn><annotation encoding="application/x-tex">4</annotation></semantics></math> dans le facteur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2 - t)</annotation></semantics></math>, en sachant que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">e^{-t/2} &gt; 0</annotation></semantics></math>.</li>
+</ol>
+</div>
+<div id="tabset-7-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-4-tab">
+<div class="reponse">
+<p><strong>Réponse (a).</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">C'(t) = 5(2 - t) \cdot e^{-t/2}</annotation></semantics></math>, en mg/L par heure.</p>
+</div>
+<details class="imsv-details"><summary>Je veux plus de détails</summary><div class="imsv-expl">
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C(t)</annotation></semantics></math> est le produit de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn><mi>t</mi></mrow><annotation encoding="application/x-tex">u(t) = 10t</annotation></semantics></math> par <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">v(t) = e^{-t/2}</annotation></semantics></math>.</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>u</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">u'(t) = 10</annotation></semantics></math> et, par la chain rule, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>v</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup><mo>⋅</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">v'(t) = e^{-t/2} \cdot \left(-\dfrac{1}{2}\right)</annotation></semantics></math>.</li>
+<li>Par la règle de Leibniz, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup><mo>+</mo><mn>10</mn><mi>t</mi><mo>⋅</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mo>−</mo><mn>5</mn><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup><mo>=</mo><mn>5</mn><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">C'(t) = 10 \cdot e^{-t/2} + 10t \cdot \left(-\dfrac{1}{2}\right)e^{-t/2} = (10 - 5t) \cdot e^{-t/2} = 5(2 - t) \cdot e^{-t/2}</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C'(t)</annotation></semantics></math> s’exprime dans l’unité de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> divisée par l’unité de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math> : en mg/L par heure.</li>
+</ol>
+</div></details>
+<div class="reponse">
+<p><strong>Réponse (b).</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">C'(0) = 10</annotation></semantics></math> mg/L par heure, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">C'(2) = 0</annotation></semantics></math> mg/L par heure et <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">C'(4) &lt; 0</annotation></semantics></math>. Juste après l’injection, la concentration augmente de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10</mn><annotation encoding="application/x-tex">10</annotation></semantics></math> mg/L par heure ; à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">t = 2</annotation></semantics></math> h, elle cesse d’augmenter ; à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">t = 4</annotation></semantics></math> h, elle diminue.</p>
+</div>
+<details class="imsv-details"><summary>Je veux plus de détails</summary><div class="imsv-expl">
+<p>On utilise <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">C'(t) = 5(2 - t) \cdot e^{-t/2}</annotation></semantics></math>, où <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">e^{-t/2} &gt; 0</annotation></semantics></math> : le signe de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C'(t)</annotation></semantics></math> est celui de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>−</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">2 - t</annotation></semantics></math>.</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mo>⋅</mo><mn>2</mn><mo>⋅</mo><msup><mi>e</mi><mn>0</mn></msup><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">C'(0) = 5 \cdot 2 \cdot e^{0} = 10</annotation></semantics></math> : au moment de l’injection, la concentration augmente à la vitesse de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10</mn><annotation encoding="application/x-tex">10</annotation></semantics></math> mg/L par heure.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mo>⋅</mo><mn>0</mn><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">C'(2) = 5 \cdot 0 \cdot e^{-1} = 0</annotation></semantics></math> : à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">t = 2</annotation></semantics></math> h, la tangente est horizontale ; la concentration passe d’une phase de hausse à une phase de baisse.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn></mrow></msup><mo>=</mo><mi>−</mi><mn>10</mn><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn></mrow></msup><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">C'(4) = 5 \cdot (-2) \cdot e^{-2} = -10e^{-2} &lt; 0</annotation></semantics></math> : à <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">t = 4</annotation></semantics></math> h, la concentration diminue.</li>
+</ol>
+</div></details>
+</div>
+<div id="tabset-7-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-5-tab">
+<p>En (a), une erreur fréquente consiste à oublier le facteur <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">-\dfrac{1}{2}</annotation></semantics></math> de la chain rule, ce qui donne <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mo>+</mo><mn>10</mn><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">C'(t) = (10 + 10t) \cdot e^{-t/2}</annotation></semantics></math>, toujours positive : une concentration qui ne diminue jamais après une injection est un résultat à contrôler.</p>
+<p>En (b), une autre erreur consiste à interpréter <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">C'(2) = 0</annotation></semantics></math> comme « la concentration est nulle ». C’est la vitesse de variation qui est nulle ; la concentration vaut <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>20</mn><msup><mi>e</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">C(2) = 20e^{-1}</annotation></semantics></math> mg/L.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Terminé avant la fin ? Passe au <strong><a href="../../seances/seance08/transfert.html">Transfert</a></strong>.</p>
+</div>
+</div>
+</div>
+
+
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>La nature algébrique d’une expression est l’opération effectuée en dernier quand on calcule sa valeur : somme, différence, produit, quotient ou composée. Elle détermine la première règle de dérivation à appliquer.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>La nature algébrique d’une expression est l’opération effectuée en dernier quand on calcule sa valeur : somme, différence, produit, quotient ou composée. Elle détermine la première règle de dérivation à appliquer.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script>
+// Aides (indices / solution / piège) : repliées dans un menu « Coups de pouce ».
+//   - au départ : on ne voit que le bouton  ▶ COUPS DE POUCE  (les onglets sont cachés) ;
+//   - au clic : le bouton passe à  ▼ COUPS DE POUCE  et les onglets apparaissent,
+//     l'onglet « Indice 1 » étant affiché par défaut (comportement natif des tabs) ;
+//   - reclic sur le bouton : tout se referme.
+(function () {
+  function build(a) {
+    if (a.dataset.aidesWired) return;
+    a.dataset.aidesWired = '1';
+    var panel = a.querySelector('.panel-tabset');
+    if (!panel) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'aides-toggle';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span class="aides-caret">▶</span> Coups de pouce';
+    a.insertBefore(btn, a.firstChild);
+    btn.addEventListener('click', function () {
+      var open = a.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      a.querySelector('.aides-caret').textContent = open ? '▼' : '▶';
+    });
+  }
+  function setup() { document.querySelectorAll('.aides').forEach(build); }
+  document.addEventListener('DOMContentLoaded', function () {
+    setup();
+    setTimeout(setup, 100);
+  });
+})();
+</script>
+<script>
+// Outils à côté du titre (comme « bookup ») : GitHub · Téléchargement · Thème clair/sombre · crayon d'écriture.
+(function () {
+  // >>> À COMPLÉTER : URL du dépôt GitHub du projet <<<
+  var GITHUB_URL = "https://github.com/qlambotte/imsv-exos-2026";
+
+  var SVG = {
+    github: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
+    download: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a.75.75 0 0 1 .75.75v6.44l1.97-1.97a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 1.06-1.06l1.97 1.97V1.75A.75.75 0 0 1 8 1zM2.75 12a.75.75 0 0 1 .75.75v.75a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-.75a.75.75 0 0 1 1.5 0v.75A2 2 0 0 1 12 15.5H4a2 2 0 0 1-2-2v-.75a.75.75 0 0 1 .75-.75z"/></svg>',
+    sun: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 4.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM8 0a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1A.75.75 0 0 1 8 0zm0 13a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1A.75.75 0 0 1 8 13zM16 8a.75.75 0 0 1-.75.75h-1a.75.75 0 0 1 0-1.5h1A.75.75 0 0 1 16 8zM3 8a.75.75 0 0 1-.75.75h-1a.75.75 0 0 1 0-1.5h1A.75.75 0 0 1 3 8zm10.66-5.66a.75.75 0 0 1 0 1.06l-.7.7a.75.75 0 1 1-1.06-1.06l.7-.7a.75.75 0 0 1 1.06 0zM4.1 11.9a.75.75 0 0 1 0 1.06l-.7.7a.75.75 0 0 1-1.06-1.06l.7-.7a.75.75 0 0 1 1.06 0zm9.56 1.76a.75.75 0 0 1-1.06 0l-.7-.7a.75.75 0 1 1 1.06-1.06l.7.7a.75.75 0 0 1 0 1.06zM4.1 4.1a.75.75 0 0 1-1.06 0l-.7-.7a.75.75 0 0 1 1.06-1.06l.7.7a.75.75 0 0 1 0 1.06z"/></svg>',
+    moon: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278z"/></svg>'
+  };
+
+  function makeTool(tag, cls, html, title) {
+    var el = document.createElement(tag);
+    el.className = 'imsv-tool ' + (cls || '');
+    el.setAttribute('title', title);
+    el.setAttribute('aria-label', title);
+    el.innerHTML = html;
+    return el;
+  }
+
+  function build() {
+    var host = document.querySelector('.sidebar-tools-main');
+    if (!host) {
+      var title = document.querySelector('#quarto-sidebar .sidebar-title');
+      if (!title) return;
+      host = document.createElement('div');
+      host.className = 'sidebar-tools-main';
+      title.appendChild(host);
+    }
+    if (host.dataset.imsvTools) return;
+    host.dataset.imsvTools = '1';
+
+    // 1) GitHub
+    var gh = makeTool('a', '', SVG.github, 'Code source (GitHub)');
+    gh.setAttribute('href', GITHUB_URL);
+    gh.setAttribute('target', '_blank');
+    gh.setAttribute('rel', 'noopener');
+
+    // 2) Téléchargement — repris du menu présent dans le corps de la page
+    //    (uniquement sur les pages qui ont des PDF : séances).
+    var bodyMenu = document.querySelector('.dl .dl-menu') || document.querySelector('.dl-menu');
+    var dlWrap = null;
+    if (bodyMenu && bodyMenu.querySelectorAll('a').length) {
+      dlWrap = makeTool('div', 'imsv-dl', SVG.download, 'Télécharger les PDF');
+      var menu = document.createElement('div');
+      menu.className = 'imsv-dl-menu';
+      menu.hidden = true;
+      var head = document.createElement('div');
+      head.className = 'imsv-dl-head';
+      head.textContent = 'Télécharger';
+      menu.appendChild(head);
+      bodyMenu.querySelectorAll('a').forEach(function (a) {
+        var link = document.createElement('a');
+        link.href = a.getAttribute('href');
+        link.textContent = a.textContent;
+        menu.appendChild(link);
+      });
+      var container = document.querySelector('.dl');
+      if (container) container.hidden = true;      // on masque le menu du corps (doublon)
+      dlWrap.appendChild(menu);
+      dlWrap.addEventListener('click', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        menu.hidden = !menu.hidden;
+      });
+      document.addEventListener('click', function () { menu.hidden = true; });
+      menu.addEventListener('click', function (e) { e.stopPropagation(); });
+    }
+
+    // 3) Thème clair / sombre
+    function isDark() { return document.documentElement.getAttribute('data-theme') === 'dark'; }
+    var themeBtn = makeTool('button', '', isDark() ? SVG.sun : SVG.moon,
+                            isDark() ? 'Passer en thème clair' : 'Passer en thème sombre');
+    themeBtn.type = 'button';
+    themeBtn.addEventListener('click', function () {
+      var dark = !isDark();
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      try { localStorage.setItem('imsv-theme', dark ? 'dark' : 'light'); } catch (e) {}
+      themeBtn.innerHTML = dark ? SVG.sun : SVG.moon;
+      themeBtn.setAttribute('title', dark ? 'Passer en thème clair' : 'Passer en thème sombre');
+    });
+
+    host.appendChild(gh);
+    if (dlWrap) host.appendChild(dlWrap);
+    host.appendChild(themeBtn);
+  }
+
+  // Crayon d'écriture (js/annot.js) : sur grand écran, à côté du bouton de thème ;
+  // sur petit écran (menu latéral replié), en bas à gauche.
+  var grand = window.matchMedia('(min-width: 992px)');
+  function accrocher() {
+    var host = document.querySelector('.sidebar-tools-main');
+    var el = document.querySelector('.an-barre');
+    if (!el) return;
+    if (grand.matches && host) {
+      if (host.lastElementChild !== el) host.appendChild(el);
+      el.classList.add('dans-outils');
+    } else {
+      if (el.parentNode !== document.body) document.body.appendChild(el);
+      el.classList.remove('dans-outils');
+    }
+  }
+  window.imsvAccrocher = accrocher;             // appelé quand annot.js est chargé
+  if (grand.addEventListener) grand.addEventListener('change', accrocher);
+
+  document.addEventListener('DOMContentLoaded', function () {
+    build();
+    accrocher();
+    [100, 400, 1200].forEach(function (t) { setTimeout(function () { build(); accrocher(); }, t); });
+  });
+})();
+</script>
+<script>
+// Outil d'écriture (crayon ✎ et « Brouillon » sous chaque exercice) : js/annot.js,
+// copie de l'outil des cours du secondaire. Chargé par rapport à la racine du site.
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var s = document.createElement('script');
+  s.src = (m ? m.getAttribute('content') : '') + 'js/annot.js';
+  s.onload = function () { if (window.imsvAccrocher) window.imsvAccrocher(); };
+  document.body.appendChild(s);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/qlambotte\.github\.io\/imsv-exos-2026\/prof\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../seances/seance08/index.html" class="pagination-link" aria-label="Séance 8 — Calcul différentiel">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Séance 8 — Calcul différentiel</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../seances/seance08/transfert.html" class="pagination-link" aria-label="Transfert — problèmes">
+        <span class="nav-page-text"><span class="chapter-title">Transfert — problèmes</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>IMSV — Faculté des Sciences et Faculté de Médecine, Pharmacie et sciences Biomédicales, UMONS</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Énoncés et correctif des exercices</p>
+</div>
+    <div class="nav-footer-right">
+<p>© Quentin Lambotte · FMPB · UMONS</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
