@@ -37,7 +37,7 @@ minute ; $2^{t}$ doublerait chaque minute ; $1000 + 50t$ est une croissance lin�
 - ( ) $1000\ln(2) \cdot 2^{t/20}$
 - ( ) $50 \cdot 2^{t/20}$
 
-**Justification :** exponentielle en base $2$ et chain rule : $1000 \cdot \ln(2) \cdot 2^{t/20} \cdot \tfrac{1}{20}$. Le deuxième choix applique la
+**Justification :** exponentielle en base $2$ et chain rule : $1000 \cdot \ln(2) \cdot 2^{t/20} \cdot \tfrac{1}{20} = 50\ln(2) \cdot 2^{t/20} \approx 34{,}5 \cdot 2^{t/20}$. Le deuxième choix applique la
 règle des puissances à une exponentielle ; le troisième oublie le facteur $\tfrac{1}{20}$ de la fonction intérieure ; le dernier
 oublie $\ln(2)$.
 
@@ -48,16 +48,16 @@ oublie $\ln(2)$.
 **Type Wooclap :** QCM · réponse unique
 
 **Énoncé à coller :**
-> Avec $\ln(2) \approx 0{,}69$, que vaut $N'(60)$ ?
+> Que vaut la valeur exacte de $N'(60)$ ?
 
 **Choix :**
-- (X) environ $276$ bactéries par minute
+- (X) $400\ln(2)$ bactéries par minute
 - ( ) $8000$ bactéries
-- ( ) environ $276$ bactéries
+- ( ) $400\ln(2)$ bactéries
 - ( ) $400$ bactéries par minute
 
-**Justification :** $N'(60) = 50 \cdot 0{,}69 \cdot 2^{3} = 276$, en bactéries par minute. Le distracteur $8000$ est $N(60)$, une valeur ;
-le troisième oublie l'unité d'une vitesse ; $400$ est le taux moyen entre $60$ et $80$ minutes, $\tfrac{16\,000 - 8000}{20}$.
+**Justification :** $N'(60) = 50\ln(2) \cdot 2^{3} = 400\ln(2) \approx 276$, en bactéries par minute. Le distracteur $8000$ est $N(60)$, une valeur ;
+le troisième oublie l'unité d'une vitesse ; $400$ oublie le facteur $\ln(2)$, et c'est aussi le taux moyen entre $60$ et $80$ minutes, $\tfrac{16\,000 - 8000}{20}$.
 
 ---
 
@@ -69,12 +69,12 @@ le troisième oublie l'unité d'une vitesse ; $400$ est le taux moyen entre $60$
 > Que vaut le quotient $\dfrac{N'(t)}{N(t)}$ ?
 
 **Choix :**
-- (X) environ $0{,}0345$ par minute, quel que soit $t$
+- (X) $\dfrac{\ln(2)}{20}$ par minute, quel que soit $t$
 - ( ) $\dfrac{1}{20} = 0{,}05$ par minute
 - ( ) $2$
 - ( ) Il augmente avec $t$, car $N$ augmente.
 
-**Justification :** $\dfrac{N'(t)}{N(t)} = \dfrac{\ln(2)}{20} \approx 0{,}0345$ : la culture augmente d'environ $3{,}45\,\%$ de son effectif par minute,
+**Justification :** $\dfrac{N'(t)}{N(t)} = \dfrac{\ln(2)}{20} \approx 0{,}0345$ : la culture augmente de $\dfrac{\ln(2)}{20} \approx 3{,}45\,\%$ de son effectif par minute,
 à chaque instant. Le distracteur $\tfrac{1}{20}$ oublie $\ln(2)$ ; $2$ est le facteur de doublement ; le dernier confond la vitesse
 $N'(t)$, qui augmente, et le taux relatif, qui est constant.
 

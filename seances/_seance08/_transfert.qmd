@@ -10,7 +10,7 @@ Dans un bouillon de culture à $37$ °C, la bactérie *Escherichia coli* double 
 
 (a) Écris l'expression de $N(t)$.
 (b) Calcule $N'(t)$, et écris son unité.
-(c) Calcule $N(60)$ et $N'(60)$. Écris en une phrase ce que signifie $N'(60)$.
+(c) Calcule $N(60)$ et la valeur exacte de $N'(60)$. Écris en une phrase ce que signifie $N'(60)$.
 (d) Montre que le quotient $\dfrac{N'(t)}{N(t)}$ ne dépend pas de $t$. Écris en une phrase ce qu'il signifie.
 
 [^ecoli-t1]: G. Sezonov, D. Joseleau-Petit, R. D'Ari, « *Escherichia coli* Physiology in Luria-Bertani Broth », *Journal of Bacteriology*, 189(23), 2007, p. 8746–8749 : temps de doublement de $20$ minutes dans le bouillon LB, repris dans BioNumbers, BNID 103514. https://bionumbers.hms.harvard.edu/bionumber.aspx?id=103514 (consulté le 17 novembre 2026). L'effectif de départ est une valeur choisie.
@@ -33,7 +33,7 @@ Retourne à la théorie du cours : *Exponentielle en base quelconque* et *Expone
 
 (a) Combien de fois l'effectif a-t-il doublé après $t$ minutes ?
 (b) Quelle est la fonction intérieure de $2^{t/20}$, et quelle est la dérivée de $2^{y}$ ?
-(c) Que valent $2^{60/20}$ et $\ln(2)$ ?
+(c) Que vaut $2^{60/20}$ ? Quelle est la valeur exacte de $N'(60)$, puis sa valeur approchée avec $\ln(2) \approx 0{,}69$ ?
 (d) Quel facteur apparaît à la fois dans $N(t)$ et dans $N'(t)$ ?
 
 ## Indice 3
@@ -42,7 +42,7 @@ Retourne à la théorie du cours : *Exponentielle en base quelconque* et *Expone
 
 (a) Après $20$ minutes, l'effectif est multiplié par $2$ ; après $40$ minutes, par $2^{2}$ ; après $t$ minutes, il a doublé $\tfrac{t}{20}$ fois.
 (b) Écris $N'(t) = 1000 \cdot \ln(2) \cdot 2^{t/20} \cdot \left(\dfrac{t}{20}\right)'$.
-(c) Utilise $2^{3} = 8$ et $\ln(2) \approx 0{,}69$.
+(c) Utilise $2^{3} = 8$ et garde $\ln(2)$ pour la valeur exacte, puis remplace $\ln(2)$ par $0{,}69$ pour la valeur approchée.
 (d) Divise $N'(t)$ par $N(t)$ et simplifie par $1000 \cdot 2^{t/20}$.
 
 ## Solution
@@ -52,15 +52,15 @@ Retourne à la théorie du cours : *Exponentielle en base quelconque* et *Expone
 :::
 
 ::: {.reponse}
-**Réponse (b).** $N'(t) = 50\ln(2) \cdot 2^{t/20}$, en bactéries par minute.
+**Réponse (b).** $N'(t) = 50\ln(2) \cdot 2^{t/20} \approx 34{,}5 \cdot 2^{t/20}$, en bactéries par minute.
 :::
 
 ::: {.reponse}
-**Réponse (c).** $N(60) = 8000$ bactéries et $N'(60) \approx 276$ bactéries par minute : $60$ minutes après le début, la culture gagne environ $276$ bactéries par minute.
+**Réponse (c).** $N(60) = 8000$ bactéries et $N'(60) = 400\ln(2) \approx 276$ bactéries par minute : $60$ minutes après le début, la culture gagne $400\ln(2) \approx 276$ bactéries par minute.
 :::
 
 ::: {.reponse}
-**Réponse (d).** $\dfrac{N'(t)}{N(t)} = \dfrac{\ln(2)}{20} \approx 0{,}0345$ par minute : à chaque instant, la culture augmente d'environ $3{,}45\,\%$ de son effectif par minute.
+**Réponse (d).** $\dfrac{N'(t)}{N(t)} = \dfrac{\ln(2)}{20} \approx 0{,}0345$ par minute : à chaque instant, la culture augmente de $\dfrac{\ln(2)}{20} \approx 3{,}45\,\%$ de son effectif par minute.
 :::
 
 ## Piège

@@ -27,6 +27,65 @@ format:
     include-after-body: ../seance01/annotate.html
 ---
 
+## Annonce {.annonce background-color="#ffffff"}
+
+::: {.ann-wrap}
+
+::: {.ann-haut}
+![](img/annonce-umons.png){.ann-logo}
+
+![](img/annonce-photo.jpg){.ann-photo}
+:::
+
+::: {.ann-corps}
+::: {.ann-texte}
+**Participation à une recherche :**
+
+**Choix d'orientation et motivation à s'engager dans des études scientifiques**
+
+Quand ? Jusqu'au 30/11/26
+
+Durée ? Environ 15 minutes
+
+Où ? QR code ou lien :
+
+[forms.cloud.microsoft/e/MDU6pXraXu](https://forms.cloud.microsoft/e/MDU6pXraXu?origin=lprLink){.ann-lien}
+
+::: {.minuteur data-minutes="10"}
+{{< include ../seance01/_minuteur.md >}}
+:::
+:::
+
+![](img/annonce-qr.png){.ann-qr}
+:::
+
+![](img/annonce-fmpb.jpg){.ann-fmpb}
+
+:::
+
+::: notes
+Annonce avant de commencer : questionnaire de recherche de la faculté (orientation et motivation), environ 15 minutes, ouvert jusqu'au 30/11/26. Laisser le QR code affiché et lancer le minuteur de 10 minutes pour que les étudiants répondent. Slide reprise de Questionnaire_orientation_et_motivation-FMBP-novembre2026.pptx.
+:::
+
+```{=html}
+<style>
+.reveal .annonce h2 { display: none; }
+.reveal .annonce .ann-wrap { position: relative; height: 740px; }
+.reveal .annonce .ann-haut { display: flex; align-items: center; gap: 40px; height: 230px; }
+.reveal .annonce .ann-logo { height: 105px; margin: 0; }
+.reveal .annonce .ann-photo { height: 230px; margin: 0; flex: 1; object-fit: cover; }
+.reveal .annonce .ann-corps { display: flex; align-items: center; gap: 40px; margin-top: 30px; }
+.reveal .annonce .ann-texte { flex: 1; font-size: .85em; line-height: 1.35; }
+.reveal .annonce .ann-texte p { margin: .35em 0; }
+.reveal .annonce .ann-texte p:nth-child(-n+2) { color: #c8102e; font-size: 1.15em; }
+.reveal .annonce .ann-qr { height: 380px; margin: 0; }
+.reveal .annonce .ann-lien { font-size: .8em; }
+.reveal .annonce .ann-fmpb { position: absolute; right: 0; bottom: 0; height: 80px; margin: 0; }
+.reveal .annonce .ann-texte .et-timer { margin-top: .5em; font-size: .85em; }
+.reveal .annonce .ann-qr { height: 340px; }
+</style>
+```
+
 # Échauffement {.divider background-color="#14304a"}
 
 ## Les questions
@@ -38,7 +97,7 @@ format:
 
 **Q2** [[Rappel]{.obj}]{style="float:right"} — soient $f(x) = x^{2}$ et $g(x) = 3x + 1$ ; que vaut $f\big(g(x)\big)$ ?
 
-**Q3** [[Rappel]{.obj}]{style="float:right"} — mets $x \cdot e^{x}$ en évidence dans $2x \cdot e^{x} + x^{2} \cdot e^{x}$.
+**Q3** [[Rappel]{.obj}]{style="float:right"} — factorise $2x \cdot e^{x} + x^{2} \cdot e^{x}$.
 ::::
 :::::
 
@@ -48,7 +107,7 @@ format:
 **Vote sur Wooclap**
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : JLTDCIP
 :::
 ::::
 
@@ -86,7 +145,7 @@ Pour $x > 0$, écris $\dfrac{1}{x\sqrt{x}}$ sous la forme d'une puissance de $x$
 ::: aretenir
 $x\sqrt{x} = x^{1} \cdot x^{1/2} = x^{3/2}$, donc $\dfrac{1}{x\sqrt{x}} = x^{-3/2}$.
 
-On peut alors dériver avec une seule règle : $\left(x^{-3/2}\right)' = -\dfrac{3}{2}\,x^{-5/2}$.
+Cette réécriture permet rapidement de calculer la dérivée de $x\sqrt{x}$.
 :::
 
 ::: notes
@@ -102,7 +161,6 @@ Soient $f(x) = x^{2}$ et $g(x) = 3x + 1$. Que vaut $f\big(g(x)\big)$ ?
 ::: aretenir
 $f$ reçoit $g(x)$ et l'élève au carré : $f\big(g(x)\big) = (3x + 1)^{2}$.
 
-$g$ est la **fonction intérieure**, $f$ la **fonction extérieure** : c'est le vocabulaire de la chain rule.
 :::
 
 ::: notes
@@ -111,27 +169,25 @@ Erreurs classiques : $3x^{2} + 1$ (c'est $g(f(x))$), $(3x + 1) \cdot x^{2}$ (pro
 
 ## Q3 [[Rappel]{.obj}]{style="float:right"}
 
-Mets $x \cdot e^{x}$ en évidence dans $2x \cdot e^{x} + x^{2} \cdot e^{x}$.
+Factorise $2x \cdot e^{x} + x^{2} \cdot e^{x}$.
 
 . . .
 
 ::: aretenir
 $2x \cdot e^{x} + x^{2} \cdot e^{x} = x \cdot e^{x} \cdot (2 + x)$.
-
-C'est exactement la dérivée de $x^{2} \cdot e^{x}$ par la règle de Leibniz, une fois simplifiée.
 :::
 
 ::: notes
 Erreurs classiques : $3x^{2}e^{x}$ (termes non semblables additionnés), $(2x + x^{2})e^{2x}$ (exponentielles additionnées), $2x^{3}e^{x}$ (produit au lieu de somme).
 :::
 
-# Socle — 35 minutes {.divider background-color="#14304a"}
+# Socle — 30 minutes {.divider background-color="#14304a"}
 
 ::: notes
 Lancer le socle. Annoncer que l'exercice S.2 sera corrigé ensemble juste après le socle : chacun doit l'avoir cherché seul et repérer l'endroit exact où il bloque.
 :::
 
-## Au travail {.travail .sans-jauge data-minutes="35"}
+## Au travail {.travail .sans-jauge data-minutes="30"}
 
 {{< include ../seance01/_travail.md >}}
 
@@ -160,7 +216,7 @@ Pour $k$, précise le domaine de $k$ et celui de $k'$.
 **Vote sur Wooclap**.
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : ECACCOZ
 :::
 ::::
 
@@ -172,7 +228,7 @@ Code : À COMPLÉTER
 :::::::::::::::
 
 ::: notes
-Une question Wooclap par fonction (les choix sont dans wooclap-S2.md). On corrige d'abord la fonction où les votes sont les plus partagés, probablement $g$ (ordre du numérateur) ou $k$ (domaine après simplification).
+Une question Wooclap par fonction (les choix sont dans wooclap-S2.md). Ordre de correction : le produit $f$, le quotient $g$ en détail, le quotient $h$ « de la même manière », puis $k$ après simplification.
 :::
 
 ## S.2 — le produit $f$ [[O2]{.obj}]{style="float:right"}
@@ -203,48 +259,68 @@ $f(x) = \left(x^{2} + 1\right) \cdot e^{x}$
 **Contrôle** : $f'(x) \geq 0$ partout, et $f$ est bien croissante ; $f'(-1) = 0$ : tangente horizontale en $x = -1$.
 :::
 
-## S.2 — les quotients $g$ et $h$ [[O2]{.obj}]{style="float:right"} {.smaller}
+## S.2 — le quotient $g$ [[O2]{.obj}]{style="float:right"} {.smaller}
 
-$\left(\dfrac{u}{v}\right)' = \dfrac{u' \cdot v - u \cdot v'}{v^{2}}$, là où $v \neq 0$.
-
-. . .
-
-[1]{.step} $g(x) = \dfrac{2x + 1}{x - 3}$ : $u' = 2$, $v' = 1$, donc $g'(x) = \dfrac{2(x - 3) - (2x + 1)}{(x - 3)^{2}} = \dfrac{-7}{(x - 3)^{2}}$, pour $x \neq 3$.
+$g(x) = \dfrac{2x + 1}{x - 3}$
 
 . . .
 
-[2]{.step} $h(x) = \dfrac{\sin(x)}{x}$ : $u' = \cos(x)$, $v' = 1$, donc $h'(x) = \dfrac{x\cos(x) - \sin(x)}{x^{2}}$, pour $x \neq 0$.
+[1]{.step} **Reconnaître** : un **quotient** → $\left(\dfrac{u}{v}\right)' = \dfrac{u' \cdot v - u \cdot v'}{v^{2}}$, là où $v \neq 0$.
+
+. . .
+
+[2]{.step} **Décomposer** : $u(x) = 2x + 1$, $u'(x) = 2$ ; $v(x) = x - 3$, $v'(x) = 1$.
+
+. . .
+
+[3]{.step} **Dériver** : $g'(x) = \dfrac{2 \cdot (x - 3) - (2x + 1) \cdot 1}{(x - 3)^{2}}$.
+
+. . .
+
+[4]{.step} **Simplifier** : $g'(x) = \dfrac{2x - 6 - 2x - 1}{(x - 3)^{2}} = -\dfrac{7}{(x - 3)^{2}}$, sur $\mathbb{R} \setminus \{3\}$.
 
 . . .
 
 ::: aretenir
-**Piège 1 : le quotient des dérivées.** $g'(x) \neq \dfrac{2}{1}$ et $h'(x) \neq \cos(x)$.
-
-**Piège 2 : l'ordre du numérateur.** $u' \cdot v$ **moins** $u \cdot v'$ : l'inverser donne $+\dfrac{7}{(x - 3)^{2}}$.
-
-**Contrôle** : $g'(x) < 0$ sur chaque intervalle du domaine ; $g$ décroît de part et d'autre de l'asymptote $x = 3$.
+**Pièges** : le quotient des dérivées, $\tfrac{2}{1}$ ; l'ordre du numérateur inversé, qui donne $+\tfrac{7}{(x - 3)^{2}}$. **Contrôle** : $g' < 0$, et $g$ décroît de part et d'autre de $x = 3$.
 :::
 
-## S.2 — simplifier $k$ sans changer le domaine [[O4]{.obj}]{style="float:right"}
+## S.2 — le quotient $h$, de la même manière [[O2]{.obj}]{style="float:right"}
+
+$h(x) = \dfrac{\sin(x)}{x}$ se dérive de la même manière : $u(x) = \sin(x)$, $u'(x) = \cos(x)$ ; $v(x) = x$, $v'(x) = 1$.
+
+. . .
+
+$$h'(x) = \frac{\cos(x) \cdot x - \sin(x) \cdot 1}{x^{2}} = \frac{x\cos(x) - \sin(x)}{x^{2}}, \quad \text{sur } \mathbb{R}_0.$$
+
+::: notes
+Ne pas refaire toutes les étapes : renvoyer à la correction de $g$ et laisser les étudiants comparer leur résultat. Même pièges : $h'(x) \neq \cos(x)$, et l'ordre du numérateur.
+:::
+
+## S.2 — la fonction $k$, après simplification [[O4]{.obj}]{style="float:right"}
 
 $k(x) = \dfrac{x^{3} - 4x}{x - 2}$, définie sur $\mathbb{R} \setminus \{2\}$.
 
 . . .
 
-[1]{.step} On factorise : $x^{3} - 4x = x\left(x^{2} - 4\right) = x(x - 2)(x + 2)$.
+[1]{.step} **Reconnaître** : un quotient, mais le numérateur se factorise : $x^{3} - 4x = x(x - 2)(x + 2)$. On **simplifie** d'abord, pour $x \neq 2$ : $k(x) = x(x + 2) = x^{2} + 2x$. La dernière opération est maintenant une **somme** → linéarité.
 
 . . .
 
-[2]{.step} Pour $x \neq 2$, on simplifie par $x - 2$ : $k(x) = x(x + 2) = x^{2} + 2x$.
+[2]{.step} **Décomposer** : $x^{2}$, de dérivée $2x$ ; $2x$, de dérivée $2$.
 
 . . .
 
-[3]{.step} Donc $k'(x) = 2x + 2$, sur $\mathbb{R} \setminus \{2\}$.
+[3]{.step} **Dériver** : $k'(x) = 2x + 2$.
+
+. . .
+
+[4]{.step} **Domaine** : on a divisé par $x - 2$, donc $k'(x) = 2x + 2$ sur $\mathbb{R} \setminus \{2\}$.
 
 . . .
 
 ::: aretenir
-**Piège : $\mathrm{Dom}(k') = \mathbb{R}$.** On a divisé par $x - 2$ : la valeur $2$ reste exclue. Simplifier enlève une difficulté **sans changer le problème**, donc sans changer le domaine.
+**Piège : $\mathrm{Dom}(k') = \mathbb{R}$.** La valeur $2$ reste exclue : simplifier enlève une difficulté **sans changer le problème**, donc sans changer le domaine.
 :::
 
 ## La carte « Dériver une expression en suivant sa structure » {.smaller}
@@ -313,13 +389,13 @@ Cette fiche rejoint ta **boîte à outils** sur le site.
 {{< include ../seance01/_minuteur.md >}}
 :::
 
-# Transfert — 35 minutes {.divider background-color="#14304a"}
+# Transfert — 30 minutes {.divider background-color="#14304a"}
 
 ::: notes
 Commencer par T.1, qui sera corrigé ensemble à la fin du transfert : chacun doit l'avoir cherché seul. Les autres exercices (T.2 et T.3) se font avec les coups de pouce du site.
 :::
 
-## Au travail {.travail .sans-jauge data-minutes="35"}
+## Au travail {.travail .sans-jauge data-minutes="30"}
 
 {{< include ../seance01/_travail.md >}}
 
@@ -335,7 +411,7 @@ Quinze minutes : environ 8 minutes de correction, puis 7 minutes pour la carte �
 ::::: {.column width="58%"}
 Dans un bouillon de culture à $37$ °C, *Escherichia coli* double son effectif environ toutes les $20$ minutes. Une culture contient $1000$ bactéries au départ ; $t$ est en minutes. On donne $\ln(2) \approx 0{,}69$.
 
-\(a) Écris $N(t)$. \(b) Calcule $N'(t)$. \(c) Calcule $N(60)$ et $N'(60)$. \(d) Que vaut $\dfrac{N'(t)}{N(t)}$ ?
+\(a) Écris $N(t)$. \(b) Calcule $N'(t)$. \(c) Calcule $N(60)$ et la valeur exacte de $N'(60)$. \(d) Que vaut $\dfrac{N'(t)}{N(t)}$ ?
 :::::
 
 ::::::::::: {.column .outils-serres width="42%"}
@@ -344,7 +420,7 @@ Dans un bouillon de culture à $37$ °C, *Escherichia coli* double son effectif 
 **Vote sur Wooclap**.
 
 ::: wc-lien
-Code : À COMPLÉTER
+Code : UBHYRRI
 :::
 ::::
 
@@ -370,7 +446,7 @@ Source dans l'énoncé de T.1 (Sezonov et al. 2007, BioNumbers BNID 103514). Une
 . . .
 
 [3]{.step} **Dériver** : la variable est dans l'exposant → exponentielle en base $2$ et chain rule, de fonction intérieure $\tfrac{t}{20}$ :
-$$N'(t) = 1000 \cdot \ln(2) \cdot 2^{t/20} \cdot \frac{1}{20} = 50\ln(2) \cdot 2^{t/20}.$$
+$$N'(t) = 1000 \cdot \ln(2) \cdot 2^{t/20} \cdot \frac{1}{20} = 50\ln(2) \cdot 2^{t/20} \approx 34{,}5 \cdot 2^{t/20}.$$
 
 . . .
 
@@ -384,16 +460,16 @@ $$N'(t) = 1000 \cdot \ln(2) \cdot 2^{t/20} \cdot \frac{1}{20} = 50\ln(2) \cdot 2
 
 . . .
 
-[2]{.step} $N'(60) = 50 \cdot 0{,}69 \cdot 8 = 276$ bactéries par minute.
+[2]{.step} $N'(60) = 50\ln(2) \cdot 2^{3} = 400\ln(2) \approx 400 \cdot 0{,}69 = 276$ bactéries par minute.
 
 . . .
 
-[3]{.step} **Interpréter** : $60$ minutes après le début, la culture gagne environ $276$ bactéries **par minute**.
+[3]{.step} **Interpréter** : $60$ minutes après le début, la culture gagne $400\ln(2) \approx 276$ bactéries **par minute**.
 
 . . .
 
 ::: aretenir
-**Piège : confondre $N(60)$ et $N'(60)$.** $8000$ est un effectif ; $276$ est une vitesse. **Contrôle** : les taux moyens sur $[40,\,60]$ et sur $[60,\,80]$ valent $200$ et $400$ bactéries par minute, et $276$ est bien entre les deux.
+**Piège : confondre $N(60)$ et $N'(60)$.** $8000$ est un effectif ; $400\ln(2)$ est une vitesse. La valeur exacte garde $\ln(2)$ ; $276$ est la valeur approchée obtenue avec $\ln(2) \approx 0{,}69$. **Contrôle** : les taux moyens sur $[40,\,60]$ et sur $[60,\,80]$ valent $200$ et $400$ bactéries par minute, et $400\ln(2) \approx 276$ est bien entre les deux.
 :::
 
 ## T.1 (d) [[O6]{.obj}]{style="float:right"}
@@ -402,7 +478,7 @@ $$N'(t) = 1000 \cdot \ln(2) \cdot 2^{t/20} \cdot \frac{1}{20} = 50\ln(2) \cdot 2
 
 . . .
 
-[2]{.step} Ce quotient ne dépend pas de $t$ : à chaque instant, la culture augmente d'environ $3{,}45\,\%$ de son effectif par minute.
+[2]{.step} Ce quotient ne dépend pas de $t$ : à chaque instant, la culture augmente de $\dfrac{\ln(2)}{20} \approx 3{,}45\,\%$ de son effectif par minute.
 
 . . .
 

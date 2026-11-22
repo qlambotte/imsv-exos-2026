@@ -14,9 +14,9 @@ from pathlib import Path
 A_COMPLETER = "À COMPLÉTER"
 
 CODES = {
-    "qr-echauffement": A_COMPLETER,   # wooclap-echauffement.md
-    "qr-socle": A_COMPLETER,          # wooclap-S2.md
-    "qr-transf": A_COMPLETER,         # wooclap-T1.md
+    "qr-echauffement": "JLTDCIP",   # wooclap-echauffement.md
+    "qr-socle": "ECACCOZ",          # wooclap-S2.md
+    "qr-transf": "UBHYRRI",         # wooclap-T1.md
 }
 OUT = Path(__file__).parent / "img"
 OUT.mkdir(exist_ok=True)

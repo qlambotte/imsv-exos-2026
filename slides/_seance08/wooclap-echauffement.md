@@ -4,7 +4,7 @@ Un seul événement Wooclap, trois questions **QCM à réponse unique**, dans l'
 Les distracteurs correspondent aux erreurs classiques. Durée visée : 4 à 5 minutes sur papier
 pour les trois questions, puis le vote. Les questions figurent uniquement dans les slides.
 Les trois questions portent sur des prérequis de la séance 8 : écrire une expression comme une puissance
-de $x$, composer deux fonctions et mettre un facteur en évidence.
+de $x$, composer deux fonctions et factoriser.
 
 ---
 
@@ -46,12 +46,12 @@ $(3x + 1)^{2} = 9x^{2} + 1$, sans le double produit. Cette question prépare la 
 
 ---
 
-## Q3 — Mettre en évidence
+## Q3 — Factoriser
 
 **Type Wooclap :** QCM · réponse unique
 
 **Énoncé à coller :**
-> Que vaut $2x \cdot e^{x} + x^{2} \cdot e^{x}$, une fois $x \cdot e^{x}$ mis en évidence ?
+> Factorise $2x \cdot e^{x} + x^{2} \cdot e^{x}$.
 
 **Choix :**
 - (X) $x(2 + x) \cdot e^{x}$
